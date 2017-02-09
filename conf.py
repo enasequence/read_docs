@@ -45,8 +45,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'training_modules'
-copyright = u'2017, Marc B Rossello'
+project = u'ENA Training Modules'
+copyright = u'2017, European Nucleotide Archive (ENA)'
 author = u'Marc B Rossello'
 
 # The version info for the project you're documenting, acts as replacement for
