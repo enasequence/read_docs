@@ -82,7 +82,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'classic'
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
 # remove if causing issues. forces globaltoc.html
