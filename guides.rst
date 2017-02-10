@@ -8,3 +8,4 @@ Guides and Walkthroughs
    mod_02
    mod_03
    mod_04
+   mod_05
