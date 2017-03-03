@@ -20,7 +20,7 @@ If 'Invalid file checksum' appears in your emailed error report
     mbr_depth_minus_05.bam | Invalid file checksum | a2becdf04ab799c4e208de6161b470b3 | 341165746 | 20-DEC-2016 14:00:46 | ERR1766407
 
 
-File checksum refers to a hash function that can be performed on a file to create a unique string. When you upload a file to our ftp server it may not get transferred 100%. In this case we will have a corrupted or truncated file which is no good. To check this we can calculate the hash function. If it is different from the hash function of the original file before you uploaded it then we can be sure the file on our server is complete. You can read this page on `Wikipedia <https://en.wikipedia.org/wiki/Cryptographic_hash_function>`_ for more information about hash functions. 
+File checksum refers to a hash function that can be performed on a file to create a unique string. When you upload a file to our ftp server it may not get transferred 100%. In this case we will have a corrupted or truncated file which is no good. To check this we can calculate the hash function. If it is different from the hash function of the original file before you uploaded it then we can be sure the file on our server is not 100% complete. You can read this page on `Wikipedia <https://en.wikipedia.org/wiki/Cryptographic_hash_function>`_ for more information about hash functions. 
 
 We use the MD5 hash algorithm which you can perform easily with Linux or Mac command line on your local read files:
 
