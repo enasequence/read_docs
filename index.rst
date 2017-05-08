@@ -9,7 +9,8 @@ ENA: Guidelines and Tips
 .. toctree::
    :maxdepth: 2
 
-   guides
+   interactive
+   programmatic
    tips
 
 .. Extra
