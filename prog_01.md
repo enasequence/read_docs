@@ -1,7 +1,5 @@
 # Module 1: Create a Study
 
-*under construction*
-
 ## The Study Object
 
 Objects such as a study or a sample, are stored in the ENA in XML form like this:
@@ -98,10 +96,35 @@ From the same directory containing files sub.xml snd project.xml run CURL as abo
 <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
 <RECEIPT receiptDate="2017-05-09T16:58:08.634+01:00" submissionFile="sub.xml" success="true">
    <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
-   <SUBMISSION accession="ERA912529" alias="cheese" />
+   <Submission accession="ERA912529" alias="cheese" />
    <MESSAGES>
       <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
    </MESSAGES>
    <ACTIONS>ADD</ACTIONS>
 </RECEIPT>
 ```
+
+It is possible to use a browser to register the XML files instead of using cURL at the command line. See [here](https://www-test.ebi.ac.uk/ena/submit/restsubmit.html).
+ 
+![Submission web form](images/prog_01_p02.png) 
+
+Simply use the study row and the submission row to browse and navigate to the project.xml file and the sub.xml file respectively and then add your Webin account and password in the Username and password fields before clicking submit. You should receive the receipt in the browser window.
+
+## The Receipt XML
+
+Note the info message in the receipt
+```xml
+<INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+```
+It is advisable to run your submissions through the ENA test server where changes are not permanent and are erased every 24 hours. If you are happy with the result of the submission you can run the CURL command again, but this time on the production server. Simply change the part in the URL from `/www-test.ebi.ac.uk` to `/www.ebi.ac.uk` and remove the **-k** flag:
+
+```bash
+curl -F "SUBMISSION=@sub.xml" -F "PROJECT=@project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20PASSWORD"
+```
+
+To know if the submission was successful look in the first line of the `<RECEIPT>` block. The attribute **success** will have value **true** or value **false**. If the attribute is false then the submission did not succeed. If this is the case check the rest of the receipt for error messages and after making corrections, try the submission again. If the success attribute is true then the submission was successful. The receipt will contain the accession numbers of the objects that you have submitted. In the case of an ENA study/project this is likely to be the accession that you will be including in a publication.
+
+```xml
+   <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
+```
+ 
