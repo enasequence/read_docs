@@ -5,3 +5,5 @@ Tips and FAQs
    :maxdepth: 4
 
    error_notif
+   file_prep
+

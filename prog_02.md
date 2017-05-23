@@ -24,12 +24,14 @@ For this example I chose sequence type *rRNA gene* and then navigated to the pag
 
 The downloaded file is called something like "Sequence-ERT000002-5697110325950293078.tsv". Take note of the ERT number which in this example is `ERT000002`. It represents the sequence type (rRNA gene in this case). This is required later - the system needs to know the sequence type so that it can create the right EMBL file from the TSV. To fill in the TSV you can use a spreadsheet editor. Each row in the tsv is a separate sequence record. The last column is for the sequence and the others are for annotation fields. It is a bit like a FASTA except that the header and sequence are on one line instead of two and the fields are tab separated.
 
-### Step 3: Upload the TSV to your FTP directory
+### Step 3: Upload the TSV file to your FTP directory
+
+After submission, the TSV file will be accessed from your Webin FTP directory (all accounts have some space on the ENA FTP server for this purpose) for processing. So before going any further you need to upload the TSV to your ftp directory. A full set of instructions can be found [here](http://www.ebi.ac.uk/ena/about/sra_data_up). You also need to provide the MD5 checksum for the TSV file. This can be done in the next step (by adding it to the analysis xml object) or you can do it now by uploading a complimentary checksum file in addition to the TSV file. So if your tsv is called ethylomonas.tsv.gz the file with the checksum in it is called ethylomonas.tsv.gz.md5.
 
 
 ### Step 4: Prepare the Analysis XML file
 
-The TSV is sent to ENA processing using the XML REST API. Create an analysis object to wrap the tsv. Note that the analysis references a study (see step 1 above) and the tsv file, and the ERT number. In this example I changed the name of the tsv but you do not have to. 
+The TSV file is registered/submitted using the ENA XML REST API. Create an analysis object in as an XML file. Note that this analysis references a study (see step 1 above) and the tsv file (which by now should be sitting in your Webin ftp directory. The analysis object also references the ERT number. In this example I changed the name of the tsv that was accessed in step 2 above. But you do not have to. 
 
 ```xml
 <?xml version = '1.0' encoding = 'UTF-8'?>
