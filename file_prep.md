@@ -69,7 +69,7 @@ There are other possible validation errors. For example we may not be able to un
 This is the final step before the submission. Instructions for this are well detailed already:
 [http://www.ebi.ac.uk/ena/about/sra_data_upload](http://www.ebi.ac.uk/ena/about/sra_data_upload)
 
-Remember to upload the checksum file in addition to the data file unless you are going to register the checksum at submission time or you are using the ENA file uploader instead. Here is a basic example of using FTP to upload a data file called 'eg_01.fq.bz2' and its md5 file 'eg_01.fq.bz2'. The example is using the Terminal application in the Mac operating system. See above link for more detailed instructions.
+Remember to upload the checksum file in addition to the data file unless you are going to register the checksum at submission time or you are using the ENA file uploader instead. Here is a basic example of using FTP to upload a data file called 'eg_01.fq.bz2' and its md5 file 'eg_01.fq.bz2.md5'. The example is using the Terminal application in the Mac operating system. See above link for more detailed instructions.
 
 ```
 user_01$ ftp webin.ebi.ac.uk
