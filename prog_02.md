@@ -4,7 +4,10 @@ Annotated sequences can be any number of sequences that are assembled from short
 
 ![annotated sequences](images/prog_02_p01.png)
 
-This is a guide for programmatic submission of annotated sequences. This submission route is useful for automating your submissions if you expect to be submitting large numbers of sequences at regular intervals. For one off or small scale submissions you are encouraged to use [Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions) instead. The ENA metadata model uses various objects to hold information and group other objects together. Annotated sequences are wrapped in an analysis object. The other objects are frequently used in read data submission and whole genome submissions. The analysis object can point to a study and samples. It is not necessary to regsiter a sample object for an annotated sequence submission, but you should have a study available before you submit the analysis/annotated sequence. Studys are used to group other objects together. You may well use the study again in the future to submit additional data types including read data and whole genomes. A study can package together all elements of a typical publication.
+
+#### The analysis object 
+
+This is a guide for programmatic submission of annotated sequences. This submission route is useful for automating your submissions if you expect to be submitting large numbers of sequences at regular intervals. For one off or small scale submissions you are encouraged to use [Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions) instead. The ENA metadata model uses various objects to hold information and group other objects together. Annotated sequences are wrapped in an analysis object. The other objects are frequently used in read data submission and whole genome submissions. The analysis object can point to a study and samples. It is not necessary to register a sample object for an annotated sequence submission, but you should have a study available before you submit the analysis/annotated sequence. Studys are used to group other objects together. You may well use the study again in the future to submit additional data types including read data and whole genomes. A study can package together all elements of a typical publication.
 
 ![annotated sequences](images/prog_02_p04.png)
 
