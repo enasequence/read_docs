@@ -86,4 +86,31 @@ If you don't have an XML file containing the study you can copy the public versi
 
 The submitted version is much shorter and I even removed the unique alias because now that the object has an accession number the server will not need both alias and accession number to realise the identity of the object that is being overwritten.
 
-If your study is not public yet and you do not have it in XML format you can try using the submit/drop-box/ REST endpoint.
+#### ERP version
+
+If your study is not public yet and you do not have it in XML format you can try using the submit/drop-box/ REST [endpoint](https://www.ebi.ac.uk/ena/submit/drop-box). Log in to here with your Webin id and password and click on 'STUDY'. You will see a list of studies submitted from your account and you can view the XML for each by selecting the study and then clicking 'xml'
+ 
+![rest endpoint](images/prog_04_p02.png)
+
+![xml study](images/prog_04_p03.png)
+
+Studies obtained from this resource are actually different (you may have noticed). Previously a study in the read domain had an accession like this *ERP000001* whereas a project object (used for registering genome assemblies among other things) would have an accession like this *PRJEB0001*. We no longer distinguish between the 2 objects officially and we expose the PRJEB type more while the ERP type is kept for legacy reasons. You can edit either the PRJEB type or the ERP type and most attributes will be carried over to the other one. Similarly when you create a PRJEB type project then an ERP project is created automatically (and vice versa). 
+
+## Step 2: Create a submission XML file
+
+As with submitting a new project (see <a href="./prog_01.html">module 1</a>), a submission object is required to accompany the study XML for updating an existing project object too. You may have this from a previous submission or update but it is also very quick to create.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION alias="cheese_update" center_name="">
+   <ACTIONS>
+      <ACTION>
+         <MODIFY source="project.xml" schema="project"/>
+      </ACTION>
+   </ACTIONS>
+</SUBMISSION>
+```
+
+
+
+
