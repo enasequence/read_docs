@@ -127,4 +127,4 @@ To know if the submission was successful look in the first line of the `<RECEIPT
 ```xml
    <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
 ```
- 
+
