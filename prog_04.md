@@ -1,7 +1,5 @@
 # Module 4: Update a Study using REST API
 
-*under construction*
-
 Editing studies in the ENA using the REST API is an almost identical process to the submitting a new one. The first step is to obtain the original study in XML format. This step alone can be tricky if you did not submit the project using the REST API to begin with. Note that [Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions) has good study editing functionality already:
 
 ![Webin project edit](images/prog_04_p01.png)
@@ -98,7 +96,7 @@ Studies obtained from this resource are actually different (you may have noticed
 
 ## Step 2: Create a submission XML file
 
-As with submitting a new project (see <a href="./prog_01.html">module 1</a>), a submission object is required to accompany the study XML for updating an existing project object too. You may have this from a previous submission or update but it is also very quick to create.
+As with submitting a new study (see <a href="./prog_01.html">module 1</a>), a submission object is required to accompany the study XML for updating an existing study object too. You may have this from a previous submission or update but it is also very quick to create.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -110,6 +108,31 @@ As with submitting a new project (see <a href="./prog_01.html">module 1</a>), a 
    </ACTIONS>
 </SUBMISSION>
 ```
+
+Make sure that you give the submission object a unique alias (which can be any string) and fill in the center_name for your account (you can find this in the "my account details" drop down from inside [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home). 
+
+If you are updating the 'ERP' version of the project (see <a href="#erp-version">above</a>) you also need to specify this in the submission XML by changing ` schema="project"` to `schema="study"` because the ERP style objects use a different schema.
+
+The important part of this submission object is the `<MODIFY>` tag. Contrast this with the tag used to submit an object for the first time (<a href="./prog_01.html#create-a-submission-xml">in module 1</a>) which is `<ADD>`. This tells the REST server that we are updating an existing object instead of adding a new one.
+
+## Make the edit and send to ENA
+
+Now you can make changes to the study object contained in the XML file. For example as a test, you might try modifying the title or the description. 
+
+The final step is identical to submitting a study for the first time in <a href="./prog_01.html#send-the-xml-files-to-ena">module 1</a>. You will send the submission xml and the study xml to the ENA REST server using **cURL** or the [webform](https://www.ebi.ac.uk/ena/submit/restsubmit.html) and you should receive a receipt in XML format. If the receipt contains `success="true"` then your edit will have been committed to the database. If not, check the error message(s), correct and repeat.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2017-07-17T13:22:11.020+01:00" submissionFile="sub.xml" success="true">
+    <PROJECT accession="PRJEB14252" alias="ena-STUDY-klanvin-03-06-2016-07:54:42:301-120"
+        status="PUBLIC"/>
+    <SUBMISSION accession="" alias="cheese_update"/>
+    <ACTIONS>MODIFY</ACTIONS>
+</RECEIPT>
+```
+
+
 
 
 
