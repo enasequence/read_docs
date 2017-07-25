@@ -122,6 +122,8 @@ It is advisable to run your submissions through the ENA test server where change
 curl -F "SUBMISSION=@sub.xml" -F "PROJECT=@project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20PASSWORD"
 ```
 
+If you are using the <a href="https://www-test.ebi.ac.uk/ena/submit/restsubmit.html">webform</a> instead of cURL at the command line you will get the receipt XML displayed in your browser. Similarly, to submit via webform to the production server, change the part in the webform URL from `/www-test.ebi.ac.uk` to `/www.ebi.ac.uk`.
+
 To know if the submission was successful look in the first line of the `<RECEIPT>` block. The attribute **success** will have value **true** or value **false**. If the attribute is false then the submission did not succeed. If this is the case check the rest of the receipt for error messages and after making corrections, try the submission again. If the success attribute is true then the submission was successful. The receipt will contain the accession numbers of the objects that you have submitted. In the case of an ENA study/project this is likely to be the accession that you will be including in a publication.
 
 ```xml

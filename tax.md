@@ -1,7 +1,5 @@
 # Taxonomic classifications for your samples
 
-**under construction**
-
 ## The Tax database
 
 Every ENA sample object should have a taxonomic classification. The INSDC maintains a database of all unique taxonomy classifications known to us and you should apply one from this database when you create your samples. Each classification has a unique id and this is expanded to show the scientific name and common name of the organism when the sample is viewed.

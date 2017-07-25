@@ -1,7 +1,5 @@
 # Module 5: Submitting Sample objects
 
-*under construction*
-
 <!-- ERP013173,ERS979764 -->
 <!--mention how to find tax ids and link to an FAQ of environmental tax ids-->
 
@@ -17,7 +15,7 @@ Here is one of the samples
 <?xml version="1.0" encoding="US-ASCII"?>
 <SAMPLE_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd">
-  <SAMPLE alias="MT5176" center_name="MHH">
+  <SAMPLE alias="MT5176" center_name="">
     <TITLE>human gastric microbiota, mucosal</TITLE>
     <SAMPLE_NAME>
       <TAXON_ID>1284369</TAXON_ID>
@@ -136,7 +134,7 @@ The main attraction for using the REST API to submit samples (and other objects)
 
 ```
 
-## Some points about the sample XML file
+## Two more points about the sample XML file
 
 ### XML Schema
 
@@ -161,4 +159,45 @@ Note the sample_name block from the <a href="#what-does-the-xml-file-look-like">
     </SAMPLE_NAME>
 ```
 
-Taxon, scientific name and common name are ways of classifying the organism of the sample. The 3 fields are referencing the same node in our taxonomic database so you do not need to include all 3. Including the unique taxon_id is sufficient and the other fields will be added automatically after the sample is submitted and archived.
+Taxon, scientific name and common name are ways of classifying the organism of the sample. The 3 fields are referencing the same node in our taxonomic database so you do not need to include all 3. Including the unique taxon_id is sufficient and the other fields will be added automatically after the sample is submitted and archived. To find the correct taxonomic information for your organism including taxon_id and scientific_name see <a href="tax.html">here</a>.
+
+## Submitting the XML files
+
+The procedure for submitting XML files is outlined in <a href="prog_01.html#send-the-xml-files-to-ena">module 1</a>. Module 1 describes submitting a study object but the process for sample submission is the same. The submission XML file should look something like this (assuming the samples are in another XML called "samp.xml". Also remember to apply the correct centre name for your Webin account. The alias can be any unique string.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION alias="MT5176_submission" center_name="">
+   <ACTIONS>
+      <ACTION>
+         <ADD source="samp.xml" schema="sample"/>
+      </ACTION>
+   </ACTIONS>
+</SUBMISSION>
+
+```
+
+Assuming that the above submission XML is saved in a file called "sub.xml" a cURL statement to send the XMLs to the ENA REST **TEST** server will look like this:
+
+```bash
+curl -k -F "SUBMISSION=@sub.xml" -F "SAMPLE=@samp.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20PASSWORD" 
+```
+
+The cURL command will return a receipt in XML formatting containing the accession numbers, or if accession numbers were not administered because there was a problem/error then you will get a list of errors to work through before trying again.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2017-07-25T16:07:50.248+01:00" submissionFile="sub.xml" success="true">
+    <SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">
+        <EXT_ID accession="SAMEA104174130" type="biosample"/>
+    </SAMPLE>
+    <SUBMISSION accession="ERA979927" alias="MT5176_submission"/>
+    <MESSAGES>
+        <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+    </MESSAGES>
+    <ACTIONS>ADD</ACTIONS>
+</RECEIPT>
+```
+
+The receipt can be quite large so you may prefer to redirect the cURL output to a file, for example "receipt.xml".
