@@ -25,7 +25,7 @@ Submitters using REST API will apply the taxonomic information to the sample obj
 
 Submitters using the REST API to programmatically submit samples in XML format can use the taxonomy database look up to find what tax id they need to apply to their sample using these REST endpoints:
 
-1. If you know the scientific name of the organism you can find the taxonomy id with this endpoint `www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`. Simply append the scientific name to the URL. You can use a browser or use cURL at the command line (the "see URL" program available on Linux and Mac). 
+If you know the scientific name of the organism you can find the taxonomy id with this endpoint `www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`. Simply append the scientific name to the URL. You can use a browser or use cURL at the command line (the "see URL" program available on Linux and Mac). Note the use of `%20` to represent a space character. This is URL encoding and you may find the commands do not work unless you replace space characters with `%20`
 
 ```bash
 > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/Leptonycteris%20nivalis"
@@ -45,7 +45,7 @@ Submitters using the REST API to programmatically submit samples in XML format c
 ]
 ```
 
-2. You can do the same with the common name. Use endpoint `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/` and append the name
+You can do the same with the common name. Use endpoint `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/` and append the name
 
 ```bash
 > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/golden%20arrow%20poison%20frog"
@@ -65,7 +65,7 @@ Submitters using the REST API to programmatically submit samples in XML format c
 ]
 ```
 
-3. If you do not know the scientific name or the common name but you have an idea, you can use this *suggest* endpoint `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/`
+If you do not know the scientific name or the common name but you have an idea, you can use this *suggest* endpoint `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/`
 
 ```bash
 > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/curry"
@@ -86,6 +86,20 @@ Submitters using the REST API to programmatically submit samples in XML format c
 In each case above a JSON document is outputted and you will be looking for the *taxId* field. Outputting JSON format will help you to automate the call if appropriate.
 
 ## Environmental taxonomic classifications
+
+Every sample object in the ENA must have a taxonomic classification assigned to it. Of course environmental samples typically collected for metagenomic studies can not have a single organism identifier because they represent an environment with an unknown variety and number of organisms. For this purpose we have entries in the taxonomic database to apply exclusively to environmental samples. You can search for these terms using the methods described above - they tend to have "metagenome" as part of the scientific name.
+
+```bash
+curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%20meta"
+[
+  {
+    "taxId": "1477400",
+    "scientificName": "marsupial metagenome",
+    "displayName": "marsupial metagenome"
+  }
+```
+
+To have an idea of what environmental sample names are available, below is a list. This list is not regularly updated so it may be worth trying the *suggest-for-submission* look up method described <a href="#rest-access-to-the-tax-database">above</a> to see if you can find one that better represents your environmental samples. The following terms go in the scientific name field of the sample object. To find the tax id use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint) . For example you can paste the following into your browser to find the tax id for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`
 
 <div style="height:300px;width:500px;border:1px solid;overflow:auto;">
 Generic
