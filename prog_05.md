@@ -20,7 +20,7 @@ Here is one of the samples
     <SAMPLE_NAME>
       <TAXON_ID>1284369</TAXON_ID>
       <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
-      <COMMON_NAME>human</COMMON_NAME>
+      <COMMON_NAME></COMMON_NAME>
     </SAMPLE_NAME>
     <SAMPLE_ATTRIBUTES>
       <SAMPLE_ATTRIBUTE>
@@ -155,11 +155,13 @@ Note the sample_name block from the <a href="#what-does-the-xml-file-look-like">
     <SAMPLE_NAME>
       <TAXON_ID>1284369</TAXON_ID>
       <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
-      <COMMON_NAME>human</COMMON_NAME>
+      <COMMON_NAME></COMMON_NAME>
     </SAMPLE_NAME>
 ```
 
-Taxon, scientific name and common name are ways of classifying the organism of the sample. The 3 fields are referencing the same node in our taxonomic database so you do not need to include all 3. Including the unique taxon_id is sufficient and the other fields will be added automatically after the sample is submitted and archived. To find the correct taxonomic information for your organism including taxon_id and scientific_name see <a href="tax.html">here</a>.
+Taxon, scientific name and common name are ways of classifying the organism of the sample. Except in this case the source sample is environmental and represents an unknown variety and quantity of organisms. Because every sample still needs a taxonomic classification we have specific environmental terms in our taxonomy database typically used for metagenomic studies. More about these <a href="tax.html#environmental-taxonomic-classifications">here</a>.
+
+Taxon, scientific name and common name are referencing the same node in our taxonomic database so you do not need to include all 3. Including the unique taxon_id is sufficient and the other fields will be added automatically after the sample is submitted and archived. To find the correct taxonomic information for your organism including taxon_id and scientific_name see <a href="tax.html">here</a>.
 
 ## Submitting the XML files
 
