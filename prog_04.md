@@ -1,6 +1,6 @@
 # Module 4: Update a Study using REST API
 
-Editing studies in the ENA using the REST API is an almost identical process to the submitting a new one. The first step is to obtain the original study in XML format. This step alone can be tricky if you did not submit the project using the REST API to begin with. Note that [Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions) has good study editing functionality already:
+Editing studies in the ENA using the REST API is an almost identical process to submitting a new one. The first step is to obtain the original study in XML format. This step alone can be tricky if you did not submit the project using the REST API to begin with. Note that [Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions) has good study editing functionality already:
 
 ![Webin project edit](images/prog_04_p01.png)
 
