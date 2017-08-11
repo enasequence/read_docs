@@ -100,9 +100,9 @@ You will likely be submitting many experiments and many runs. As with <a href="p
 </EXPERIMENT_SET>
 ```
 
-In the abvoe scenario there are 4 runs and 2 experiments. The first 2 runs are pointing to the first experiment and the second 2 to the second experiment. All other lines have been omitted for clarity.
+In the above scenario there are 4 runs and 2 experiments. The first 2 runs are pointing to the first experiment and the second 2 to the second experiment. All other lines have been omitted for clarity.
 
-## The pointers
+### The pointers
 
 The run points to the experiment. The pointer looks like this
 
