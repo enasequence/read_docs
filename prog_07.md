@@ -290,7 +290,9 @@ As mentioned, review the original study submission module to know the submission
 ```
 
 A cURL command would look something like this
-`curl -k -F "SUBMISSION=@sub.xml" -F "EXPERIMENT=@exp.xml" -F "RUN=@run.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-0000%20__PASSWORD__"`
+```bash
+curl -k -F "SUBMISSION=@sub.xml" -F "EXPERIMENT=@exp.xml" -F "RUN=@run.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-0000%20__PASSWORD__"`
+```
 
 And the receipt should look something like this
 
