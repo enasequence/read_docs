@@ -1,7 +1,5 @@
 # Module 8: Updating Experiment and Run objects using REST API
 
-*under construction*
-
 <!-- ERX2149955 ERR2092732  -->
 
 Editing existing experiments in the ENA using the REST API is an almost identical process to submitting new experiment objects by XML REST API. This is outlined in <a href="prog_07.html">module 7</a> of this section and it is necessary to review module 7 before following this tutorial which is shortened to avoid repeating the same information. There are also similarities to updating other ENA objects such as samples and study so where necessary, previous examples will be referred to. 
