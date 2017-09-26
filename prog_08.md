@@ -113,3 +113,4 @@ Example of XML receipt returned
 
 ```
 More information on XML receipts can be found in <a href="prog_01.html#the-receipt-xml">module 1</a> of this section.
+

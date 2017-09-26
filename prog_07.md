@@ -4,7 +4,7 @@
 
 ## A word about pointers
 
-The interactive [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) submission system has an option for creating run and experiment objects ("submit reads and experiments": <a href="mod_01.html">mod 1</a> and <a href="mod_04.html">mod 2</a>) This interactive GUI provides a single spreadsheet template for both run and experiment objects: 1 row = 1 run, which points to 1 experiment object. This is the first time we are submitting objects in the programmatic modules that have pointers to other objects (because so far, an ENA study object does not have a pointer and neither does an ENA sample object).
+The interactive [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) submission system has an option for creating run and experiment objects ("submit reads and experiments": <a href="mod_01.html">mod 1</a> and <a href="mod_04.html">mod 4</a>) This interactive GUI provides a single spreadsheet template for both run and experiment objects: 1 row = 1 run, which points to 1 experiment object. This is the first time we are submitting objects in the programmatic modules that have pointers to other objects (because so far, an ENA study object does not have a pointer and neither does an ENA sample object).
 
 ![data_model_1](images/prog_07_p01.png)
 

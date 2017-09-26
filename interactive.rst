@@ -9,3 +9,4 @@ Interactive Submissions
    mod_03
    mod_04
    mod_05
+   mod_06

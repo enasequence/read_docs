@@ -38,3 +38,4 @@ This is the step for registering the files that you have uploaded to your person
 8. This is the final step. If errors are reported you can remove the loaded table (use the cross that has appeared in step 7), then make your edits tot eh tsv spreadsheet and try again (from step 7). If you need to send the tsv spreadsheet to ENA help desk for troubleshooting (as mentioned in step 6), ensure that the project and samples are already submitted (module 2_ and 3_) so that the ENA officer can focus only on the step that is failing.
 
 .. _2: mod_02.html
+
