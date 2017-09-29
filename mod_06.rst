@@ -1,9 +1,9 @@
-===========================
-Genome Assembly Submissions
-===========================
+=====================================
+Module 6: Genome Assembly Submissions
+=====================================
 
-Genome assemblies including metagenomes can be submitted to the European Nucleotide Archive (ENA) through the interactive Webin service. Note that this service supports submission of large number of assemblies.
-Genome assemblies submissions include plasmids, organelles, complete virus genomes, viral segments/replicons, bacteriophages, prokaryotic or eukaryotic genomes in any assembly layer (contigs/scaffolds/chromosomes). 
+Genome assemblies including metagenomes can be submitted to the European Nucleotide Archive (ENA) through the interactive Webin service. Note that this service supports the submission of a large number of assemblies.
+Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons, bacteriophages, prokaryotic or eukaryotic genomes in any assembly layer (contigs/scaffolds/chromosomes). 
 
 Introduction
 ============
@@ -34,7 +34,7 @@ Files must be uploaded to your Webin account ftp site. Please see details `here 
 During the submission process in the ENA interactive Webin service, the interface will automatically indicate the files to be uploaded based on your answer to a short multiple choice questionaire (3 questions). Please answer the questions carefully and be sure to upload the right files. This is a critical step for your submission to be completed automatically.
 
 **Submit the Assembly.**
-Once you succesfully submit your assembly, you will see a Webin a confirmation page in your browser; submission account's holders will also receive a confirmation email providing a unique identifier for each submitted assembly (ERZXXXXXX). This identifier should be used to contact us for any further query related to the submission. The ERZXXXXXX must not be used in the sequence citation paper. Accession numbers to be used for publication purposes are described `here <http://www.ebi.ac.uk/ena/about/citing-ena-data>`_.
+Once you successfully submit your assembly, you will see in Webin a confirmation page in your browser; submission account holders will also receive a confirmation email providing a unique identifier for each submitted assembly (ERZXXXXXX). This identifier should be used to contact us for any further query related to the submission. The ERZXXXXXX must not be used in the sequence citation paper. Accession numbers to be used for publication purposes are described `here <http://www.ebi.ac.uk/ena/about/citing-ena-data>`_.
 
 
 
@@ -118,8 +118,8 @@ Part 5
 
 .. image:: images/AS_part5.png
 
-This is the confirmation page you will get once your assembly has been succesfully received at ENA (although not processed yet). A confirmation email will be also sent to all submission account's holders. 
+Once your assembly has been successfully received at ENA (although not processed yet), you will see in your browser a confirmation page similar to the one above. A confirmation email will be also sent to all submission account holders. 
 
-This submission confirmation means that the sequences, functional annotation if applicable, study and sample information, assembly information, etc will be processed all together in order to conform the final genome assembly to be displayed in the database accoding to the release date specified in the study. If no errors are detected, submission account's holders will receive in few days an automatic email with the sequence accession numbers. Otherwise, the account holders will be contacted by email to make the necessary corrections. Please note that the error processing is done manually and may take longer than expected. Please take that in consideration if you have a publication deadline. We strongly suggest to make all efforts to follow up these instructions closely in order to complete your assembly submission automatically. You're wellcome to contact us prior submission if you need so (datasubs@ebi.ac.uk). 
+This submission confirmation means that the sequences, functional annotation if applicable, study and sample information, assembly information, etc. will be processed all together in order for the final genome assembly to be displayed in the database according to the release date specified in the study. If no errors are detected, submission account holders will receive in few days an automatic email with the sequence accession numbers. Otherwise, the account holders will be contacted by email to make the necessary corrections. Please note that the error processing is done manually and may take longer than expected. Please take that into consideration if you have a publication deadline. We strongly suggest our submitters to make all efforts to follow up these instructions closely in order to complete your assembly submission automatically. You are welcome to contact us prior submission if you need to do so (datasubs@ebi.ac.uk). 
 
 Thank you for submitting to ENA.
