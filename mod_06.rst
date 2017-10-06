@@ -16,6 +16,7 @@ The following picture illustrates the stages of the genome assembly submission p
 
 
 .. image:: images/Assembly_steps.png
+
 -----------------------------------------------------------------------------------------------------------
 
 **Register the Study.**
@@ -72,7 +73,7 @@ Part 3
 
   QUESTION 1: *Are the sequences assembled into chromosomes or replicons?* The chromosomes do not need to be fully sequenced, there can be assembly gaps. If you have assembled plasmids, organelles, bacteriophage genomes or viral segments, please submit them as 'chromosomes' by answering YES to this question. 
 
-  QUESTION 2: *Does the assembly contain scaffolds or chromsomes described using an AGP file?* If you have an AGP file mapping either scaffolds from contigs (scaffold AGP) or chromosomes from scaffolds (chromosome AGP), you should submit them as such and we will build the corresponding sequences(s).
+  QUESTION 2: *Does the assembly contain scaffolds or chromsomes described using an AGP file?* If you have an AGP file mapping either scaffolds from contigs (scaffold AGP) or chromosomes from scaffolds (chromosome AGP), you should submit them as such and we will build the corresponding sequence(s).
 
   QUESTION 3: *Are the sequences functionally annotated?* You need to provide information about the existence of functional annotation. This will determine if a Fasta file or a EMBL flat file should be submitted.
 
