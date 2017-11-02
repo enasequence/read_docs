@@ -328,9 +328,9 @@ Remember that anything submitted to the test server at www-test.ebi.ac.uk will n
 Metadata Standards for Experiments and Runs
 ===========================================
 
-The ENA is involved in some minimum information standards for various project collaborations and sequencing fields. Even if you are not a member of one of these you can still use them as a guideline for increasing the quality of annotation of your experiment (and run) objects towards more interpretable and reproducible publications.
+The ENA is involved with minimum information standards for various project collaborations and sequencing fields. Even if you are not a member of one of these you can still use them as a guideline for increasing the quality of annotation of your experiment (and run) objects towards more interpretable and reproducible publications.
 
 .. toctree::
    :maxdepth: 3
 
-   exp_01.md
+   exp_01
