@@ -10,4 +10,6 @@ Interactive Submissions
    mod_04
    mod_05
    mod_06
-   mod_07
+   resubmission
+   assemb_upd
+   reuploading
