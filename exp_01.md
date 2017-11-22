@@ -84,6 +84,20 @@ For some platforms like Illumina, the read length is not variable and it is buil
 
 This tag is in the `<SPOT_DESCRIPTOR>` block. If you have added this yourself you can include the spot length to it but in most cases submitted files are stripped of all technical elements and a basic spot descriptor is added automatically. In this case the spot length is applied automatically after the submission when the corresponding read file is parsed and had its statistics calculated. For platforms producing variable length reads then no spot length is applied. See <a href="rst_prog_7.html#the-spot-descriptor">here</a> for more information on the spot descriptor block in the experiment object.
 
++ RNA fraction
+
+```xml
+<EXPERIMENT_ATTRIBUTES>
+    <EXPERIMENT_ATTRIBUTE>
+        <TAG>RNA Fraction</TAG>
+        <VALUE>total chromatin</VALUE>
+    </EXPERIMENT_ATTRIBUTE>
+</EXPERIMENT_ATTRIBUTES>
+```
+
+Declaring the RNA fractions can also be useful for interpreting results. This field can be applied as tag-value attribute.
+
+
 
 ### RNA-Seq Run attributes to include in your run objects
 
@@ -91,6 +105,7 @@ For RNA-seq runs it is worth having these fields present:
 
 + number of reads in file
 + sequencing date
++ sequencing location latitude/longitude
 
 The number of reads in each read file is automatically calculated from your submitted files and added to the live version of the run object in the ENA. The ENA can not parse all file types so you can still add these fields as attributes in case the ENA can not reflect the original submitted file precisely how you would expect it to.
 
@@ -105,10 +120,19 @@ For example:
 </RUN_ATTRIBUTES>
 ```
 
-An attribute for sequencing date already exists in the schema for the run object. The attribute is called **run_date** and it is part of the main `<RUN>` tag. It uses xs:dateTime format. You can also use **run_centre** attribute if the sequencing was outsourced and is different from the **center_name** used in the study and sample objects.
+An attribute for sequencing date already exists in the schema for the run object. The attribute is called **run_date** and it is part of the main `<RUN>` tag. It uses xs:dateTime format. Also use **run_centre** attribute. If the sequencing was outsourced and is different from the **center_name** used in the study and sample objects then this should be clear but if it was not outsourced and the run centre is identical to the study centre it is still worth making that clear.
 
 For example:
 
 ```xml
 <RUN alias="60min_Rep1" run_center="EBI"  run_date="2002-05-30T09:00:00">
+```
+
+Finally, the exact coordinates of the sequencing centre can reveal a lot more than a sequencing centre acronym so this is recommended too. Apply it as a run attribute:
+
+```xml
+<RUN_ATTRIBUTE>
+   <TAG>sequencing location latitude/longitude</TAG>
+   <VALUE>52.08,0.19</VALUE>
+</RUN_ATTRIBUTE> 
 ```
