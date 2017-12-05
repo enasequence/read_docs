@@ -12,6 +12,8 @@ The structure of the analysis object is laid out in this <a href="ftp://ftp.sra.
 
 Like the run object, the analysis object has a `<FILES>` block. The analysis and the run both serve the same purpose which is to wrap a file for archiving. A run typically represents a next generation sequencing read file [pair] where as an analysis can be used to archive any other kind of file. Many different file types are recorded in the schema and limitations on maximum and minimum occurrences of different elements (such as `<FILE>`) are not restricted like they are for other schemas. This is because of the variety of ways an analysis object can be used- it is the most flexible of all the metadata objects. Instead, most validation will happen outside of the schema. To apply validation to your analysis (or any other object) you can use the `VALIDATE` action in your submission xml.
 
+#### example submission xml for analysis 
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <SUBMISSION_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -87,7 +89,10 @@ The most distinguishing part of an analysis obect is contained in the `<ANALYSIS
 
 ![analysis_type](images/prog_09_p03.png)
 
-Some of these analysis types were created for the latest interactive submission system to make use of a common submission portal across the entire spectrum ENA data types. This is useful because using the REST API you can automate submissions that would, in older submission systems, require a dedicated purpose built pipeline or would have to be submitted manually using a GUI web application.
+Some of these analysis types were created for the latest interactive submission system to make use of a common submission portal across the entire spectrum ENA data types. This is useful because using the REST API you can automate submissions that would, in older submission systems, require a dedicated purpose built pipeline or would have to be submitted manually using a GUI web application. This is the case for *sequence_assembly* and *sequence_flatfile*. The other analysis types are used for annotation files, interpretted datafiles, and even raw data that is not technically raw read data because only raw read data should be contained in ENA run ojects. For the rest of this module we will look at examples for some of the analysis types that you can submit.
+
+## Genome Submission 
+
 
 
 
