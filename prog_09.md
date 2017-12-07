@@ -310,3 +310,113 @@ curl -k -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.a
     <ACTIONS>HOLD</ACTIONS>
 </RECEIPT>
 ```
+
+## Reference Alignment File
+
+<!-- ERZ407246 -->
+
+Analysis type `<REFERENCE_ALIGNMENT>` is for submitting a BAM alignment file. BAM files can be submitted as ENA run objects but in that case they should be demultiplexed, raw and may or may not make use of the alignment capacity of the BAM format. Where as this analysis type is for taking existing ENA runs that you may or may not own and aligning them to a reference sequence (which is usually in the ENA already). Genome building services internal and external to EBI often align the raw data found in the ENA to reference genomes so that they can improve their representation of the genomes and genes in question. They can submit the alignment file back to the ENA for added value.
+
+Here is an example analysis XML for submitting an alignment file
+
+```xml
+<?xml version="1.0" encoding="US-ASCII"?>
+<ANALYSIS_SET>
+    <ANALYSIS alias="AD0370_C_alignment" analysis_center="EBI"
+        analysis_date="2014-10-22T00:00:00.0Z" center_name="EBI">
+        <TITLE>The Anopheles gambiae 1000 Genomes Project - Phase 1 - Alignment - Crosses</TITLE>
+        <DESCRIPTION>Sequence alignments from the AR3 data release from the Anopheles 1000 genomes
+            project. Aligments are in bam format and are presented for each of the 80 A. gambiae
+            specimens comprising parents and progeny of four crosses.</DESCRIPTION>
+        <STUDY_REF accession="ERP020641"/>
+        <SAMPLE_REF accession="ERS150992" label="AD0370-C"/>
+        <RUN_REF accession="ERR178314" label="8149_4_48"/>
+        <RUN_REF accession="ERR178374" label="8177_1_48"/>
+        <RUN_REF accession="ERR178386" label="8177_2_48"/>
+        <ANALYSIS_TYPE>
+            <REFERENCE_ALIGNMENT>
+                <ASSEMBLY>
+                    <STANDARD accession="GCA_000005575.1"/>
+                </ASSEMBLY>
+            </REFERENCE_ALIGNMENT>
+        </ANALYSIS_TYPE>
+        <FILES>
+            <FILE checksum="bafe0ed9be5c0f8515cdc4ac514d24af" checksum_method="MD5"
+                filename="AD0370_C.bam" filetype="bam"/>
+        </FILES>
+        <ANALYSIS_ATTRIBUTES>
+            <ANALYSIS_ATTRIBUTE>
+                <TAG>Aligner</TAG>
+                <VALUE>bwa v0.6.2-r126</VALUE>
+            </ANALYSIS_ATTRIBUTE>
+        </ANALYSIS_ATTRIBUTES>
+    </ANALYSIS>
+</ANALYSIS_SET>
+```
+
+Make sure to add your own alias, centre name, title, description, sample and run pointers. The file should be <a href="file_prep.html">uploaded</a> to your ftp directory ahead of the submission. In the example above the BAM file aligns reads from 3 ENA runs to the reference genome GCA_000005575. The BAM file has 3 read group tags defined in its header that represent each ENA run
+
+```
+@RG	ID:8149_4_48	PL:ILLUMINA	PU:8149_4_48	LB:AD0370_C_5557918	DS:
+AGPED1	SM:AD0370-C	CN:SC
+@RG	ID:8177_1_48	PL:ILLUMINA	PU:8177_1_48	LB:AD0370_C_5557918	DS:
+AGPED1	SM:AD0370-C	CN:SC
+@RG	ID:8177_2_48	PL:ILLUMINA	PU:8177_2_48	LB:AD0370_C_5557918	DS:
+AGPED1	SM:AD0370-C	CN:SC
+```
+
+The source runs are therefore traceable because read group tag id '8149_4_48' refers to ENA run ERR178314 because of this line in the XML.
+
+```xml
+<RUN_REF acession="ERR178314" label="8149_4_48"/>
+```
+
+All 3 runs are mapped to their read group ids. There is also a sample id in the BAM file 'AD0370-C'. All 3 read groups are derived from the same source sample and this is also reflected in the ENA under sample 'ERS150992'. The analysis points to a study/project too. This is mandatory and if you own the study where the source runs are stored you can add the analysis to that study but if you are aligning runs from some other project you should create your own study to house your analysis objects. 
+
+There is a single reference sequence declared in the BAM file header
+
+```
+@HD	VN:1.4	GO:none	SO:coordinate
+@SQ	SN:2L	LN:49364325	UR:http://www.vectorbase.org/content/anopheles-gamb
+iae-pestchromosomesagamp3fagz	AS:AgamP3	M5:a4da4bafa82830c0a418c5a42138377b
+	SP:Anopheles gambiae
+```
+
+The BAM file has called the reference sequence "AgamP3". All coordinates in the file relate to this sequence. This too has been mapped to an ENA accession in the interest of reproducibility and traceability. 
+
+```xml
+<ASSEMBLY>
+    <STANDARD accession="GCA_000005575.1"/>
+</ASSEMBLY>
+```
+
+There is no label attribute to specify that GCA_000005575 corresponds to "AgamP3" but there is no other reference sequence mentioned in the BAM file so it is not ambiguous. The `<ASSEMBLY>` block is used to reference a whole assembly. A whole assembly often consists of independent sequences such as chromosomes, scaffolds, or simply a set of contigs. The BAM file in the example uses coordinates against the assembly as a whole but if your BAM file has multiple @SQ lines relating to lower level sequences you can map these using sequence blocks:
+
+```
+<SEQUENCE accession="!contig accession goes here!" label="!name of that contig as it appears in BAM file!"/>
+```
+
+See how the <a href="#sequence-variation-file">variation analysis</a> has made use of `<SEQUENCE>` blocks. You can use `<SEQUENCE>` blocks in the same way when submitting an alignment analysis object.
+
+The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
+
+```bash
+curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2017-12-07T15:48:17.814Z" submissionFile="sub.xml" success="true">
+     <ANALYSIS accession="ERZ481487" alias="AD0370_C_alignment" status="PRIVATE"/>
+     <SUBMISSION accession="ERA1152287" alias="analysis_sub_071217_b"/>
+     <MESSAGES>
+          <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+          <INFO>Submission has been committed.</INFO>
+          <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+     </MESSAGES>
+     <ACTIONS>ADD</ACTIONS>
+     <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
+```
+
