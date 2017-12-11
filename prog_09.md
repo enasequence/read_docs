@@ -1,7 +1,5 @@
 # Module 9: Adding interpreted data
 
-***under construction***
-
 The ENA is primarily an archive for raw and experimental sequence data but in addition to that it is possible to add interpreted data that you have derived from the raw data. While we have discussed different metadata objects from studies and samples to runs and experiments, the *analysis* object is available for archiving supplementary and interpreted data files within a study. The analysis object can be used to provide extra value and reproducibility to your study. Moreover, the analysis object has been extended recently to also represent traditional EMBL sequence files and genomes. This has enabled a more flexible and unified submission system that was initially limited to the submission of next generation raw read sequence data. <a href="prog_02.html#the-analysis-object">Submitting EMBL sequences as analysis objects</a> is mostly done behind the scenes when using the <a href="https://www.ebi.ac.uk/ena/submit/sra/#home">interactive submission system</a> but you can take advantage of this submission route more directly if you need to create a submission pipeline or if you need to automate a part of your ENA submission that you do often enough. 
 
 ## Characteristics of the analysis object
@@ -137,7 +135,7 @@ Remember that the above analysis XML is an example. You must provide your own al
 
 Every file that is required for the single genome gets its own `FILE` block. Notice how the type of file is declared using the attribute "**filetype**". For example: `<FILE filename="c_hominis/cryptosporidium.embl.gz" filetype="chromosome_flatfile"`. You can find the list of accepted file types <a href="#file-types-available">above</a>. This list may not be up to date so you can also check with the official <a href="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd">analysis schema document</a>.
 
-Subsequent genomes can be submitted at the same time but they must each be constructed as a separate `ANALYSIS` block. The `<FILES>` block should only contain the files required for a single genome.
+Subsequent genomes can be submitted at the same time but they must each be constructed as a separate `ANALYSIS` block. The `<FILES>` block should only contain the files required for a single genome. <a name=bulk_anal></a>
  
 ```xml
 <ANALYSIS_SET>
@@ -159,7 +157,7 @@ Subsequent genomes can be submitted at the same time but they must each be const
 Make sure to accompany the analysis XML with a submission XML like the one <a href="#example-submission-xml-for-analysis">above</a> and create a cURL command like the one below. For more details on cURL commands and submission XMLs see the <a href="prog_01.html">first module</a>, which takes you through the submission of a simple study object.
 
 ```bash
-curl -k -F "SUBMISSION=@sub_anal.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20PASSWORD"
+curl -F "SUBMISSION=@sub_anal.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20PASSWORD"
 ```
 Remember to exchange the string 'Webin-XXXX' with your Webin account id and the string 'PASSWORD' with the correct password for that account.
 If successful you will receive a receipt in XML format that looks like the below.
@@ -292,7 +290,7 @@ This means that when the id '19933_4#3' is used in the interpreted file (in the 
 The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
 
 ```bash
-curl -k -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
 ```
 
 ```xml
@@ -322,8 +320,8 @@ Here is an example analysis XML for submitting an alignment file
 ```xml
 <?xml version="1.0" encoding="US-ASCII"?>
 <ANALYSIS_SET>
-    <ANALYSIS alias="AD0370_C_alignment" analysis_center="EBI"
-        analysis_date="2014-10-22T00:00:00.0Z" center_name="EBI">
+    <ANALYSIS alias="AD0370_C_alignment" analysis_center=""
+        analysis_date="2014-10-22T00:00:00.0Z" center_name="">
         <TITLE>The Anopheles gambiae 1000 Genomes Project - Phase 1 - Alignment - Crosses</TITLE>
         <DESCRIPTION>Sequence alignments from the AR3 data release from the Anopheles 1000 genomes
             project. Aligments are in bam format and are presented for each of the 80 A. gambiae
@@ -420,3 +418,176 @@ curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.u
 </RECEIPT>
 ```
 
+## Optical Mapping Data
+
+<!-- ERZ370270 -->
+
+Analysis type `<GENOME_MAP>` is for submitting optical mapping data from the BioNano platform (for example). While the 'bnx' files are a raw form of output from the optical mapping machines we use the analysis object to capture these because ENA run objects are exclusively for sequence runs. 
+
+Here is an example analysis XML for submitting an optical mapping file
+
+```xml
+<?xml version="1.0" encoding="US-ASCII"?>
+<ANALYSIS_SET>
+    <ANALYSIS alias="es_omd" center_name="">
+        <TITLE>Euclidium syriacum BioNano Optical Mapping data</TITLE>
+        <DESCRIPTION>Euclidium syriacum Optical Mapping data produced by BioNano Genomics Irys System</DESCRIPTION>
+        <STUDY_REF accession="ERP018601"/>        
+        <SAMPLE_REF accession="ERS1436420"/>      
+        <ANALYSIS_TYPE>
+            <GENOME_MAP>
+                <PROGRAM>IrysView</PROGRAM>
+                <PLATFORM>BioNano</PLATFORM>
+            </GENOME_MAP>
+        </ANALYSIS_TYPE>
+        <FILES>
+            <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
+        </FILES>
+        <ANALYSIS_ATTRIBUTES/>
+    </ANALYSIS>
+</ANALYSIS_SET>
+```
+
+Make sure to add your own alias, centre name, title, description, and sample pointer. The file should be <a href="file_prep.html">uploaded</a> to your ftp directory ahead of the submission. The file can be compressed but it is not mandatory. ENA will accept these file suffixes for `filetype="BioNano_native"`: .bnx,.cmap,.xmap,.smap,.coord 
+
+You should create a sample object in the ENA ahead of time to represent each source material so that you can point your optical mapping data to it now. If the source sample already exists (may be you have applied read data to it or a genome to it) then use the existing sample. For every additional source sample that you have mapping data for a separate analysis object should be submitted. So all your analysis objects can appear in the same XML file at submission time but each should point to a single sample and have a single `<FILE>` block (as described <a href="#bulk_anal">here</a>).
+
+
+You also need a study to add this analysis too. Use an appropriate existing study (if you own one) or create one beforehand. 
+
+The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
+
+```bash
+curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2017-12-08T14:18:38.479Z" submissionFile="sub.xml" success="true">
+    <ANALYSIS accession="ERZ481413" alias="es_omd" status="PRIVATE"/>
+    <SUBMISSION accession="ERA1153105" alias="analysis_sub_071217"/>
+    <MESSAGES>
+        <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        <INFO>Submission has been committed.</INFO>
+        <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+    </MESSAGES>
+    <ACTIONS>ADD</ACTIONS>
+    <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
+```
+
+## Annotation Submission
+
+<!-- ERZ251144 -->
+
+Analysis type `<SEQUENCE_ANNOTATION>` is for submitting annotation files. These are usually tab files (comma or tab delimited spreadsheet tables) but can some times take other <a href="#file-types-available">forms</a>. Examples include gene count and OTU tables from metagenomic studies.
+
+Here is an example analysis XML for submitting a tab file
+
+```xml
+<?xml version="1.0" encoding="US-ASCII"?>
+<ANALYSIS_SET>
+    <ANALYSIS alias="YF3059" center_name="" analysis_center=""
+        analysis_date="2015-12-28T00:00:00">
+        <TITLE>Y chromosome sequence STR analysis using lobSTR</TITLE>
+        <DESCRIPTION>Y chromosome sequence STR analysis using lobSTR</DESCRIPTION>
+        <STUDY_REF accession="ERP011288"/>
+        <SAMPLE_REF accession="ERS1023190"/>
+        <RUN_REF accession="ERR1198112"/>
+        <ANALYSIS_TYPE>
+            <SEQUENCE_ANNOTATION/>
+        </ANALYSIS_TYPE>
+        <FILES>
+            <FILE filename="STR_for_YF03059_20151228.tab.gz" filetype="tab" checksum_method="MD5"
+                checksum="9f2976d079c10b111669b32590d1eb3e"/>
+        </FILES>
+    </ANALYSIS>
+</ANALYSIS_SET>
+```
+
+Make sure to add your own alias, centre name, title, description, sample and run pointers. The file should be <a href="file_prep.html">uploaded</a> to your ftp directory ahead of the submission. In this example the source run and sample for the interpretted file are added so that the file is potentially reproducible. The analysis points to a study/project too. This is mandatory and if you own the study where the source runs are stored you can add the analysis to that study but if you are analysing runs from some other project you should create your own study to house your analysis objects.
+
+The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
+
+```bash
+curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2017-12-08T16:35:06.765Z" submissionFile="sub.xml" success="true">
+    <ANALYSIS accession="ERZ481415" alias="YF3059" status="PRIVATE"/>
+    <SUBMISSION accession="ERA1153108" alias="analysis_sub_071217_b"/>
+    <MESSAGES>
+        <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        <INFO>Submission has been committed.</INFO>
+        <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+    </MESSAGES>
+    <ACTIONS>ADD</ACTIONS>
+    <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
+```
+
+### Pac Bio Methylation Files
+
+<!-- https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?analysis=SRZ049716 -->
+
+Analysis type `<SEQUENCE_ANNOTATION>` is more flexible than some of the other analysis types and can be used for submission of different data types before or instead of adding a new analysis type to the central schema. Pac Bio sequencing machines produce sequence data as hdf5 files which are normally submitted as a set of files (1 x bas.h5, 3 x bax.h5, 1 x metadata.xml) per run. Pac bio machines can also produce methylation data, usually consisting of a set of 3 files per run: modifications.csv, motif_summary.csv and motifs.gff. While the hdf5 files should be submitted as run objects, the methylation files can be submitted as a `<SEQUENCE_ANNOTATION>` analysis because there is no specific analysis type for methylation data.
+
+Here is an example analysis XML for submitting a methylation files
+
+```xml
+<?xml version="1.0" encoding="US-ASCII"?>
+<ANALYSIS_SET>
+    <ANALYSIS alias="08-1736" center_name="" analysis_center=""
+        analysis_date="2014-10-15T00:00:00">
+        <TITLE>Epigenomic analysis of Salmonella enterica 08-1736 from PacBio RS base-incorporation
+            kinetic data</TITLE>
+        <DESCRIPTION>Single-molecule read technologies allow for detection of epigenomic base
+            modifications during routine sequencing by analysis of kinetic data during the reaction,
+            including the duration between base incorporations at the elongation site (the
+            "inter-pulse duration.") Methylome data associated with a closed de- novo bacterial
+            genome of Salmonella enterica subsp. enterica serovar 4,5,12, i- str. 08-1736 was
+            produced and submitted to the Gene Expression Omnibus.</DESCRIPTION>
+        <STUDY_REF accession="SRP026480"/>
+        <SAMPLE_REF accession="SRS454371"/>
+        <ANALYSIS_TYPE>
+            <SEQUENCE_ANNOTATION/>
+        </ANALYSIS_TYPE>
+        <FILES>
+            <FILE filename="data-motifs.gff.gz" filetype="gff" checksum_method="MD5"
+                checksum="7fd0cf4f550fd836758bfc242894a8fe"/>
+            <FILE filename="data-motif_summary.csv.gz" filetype="tab" checksum_method="MD5"
+                checksum="28e36d2792991de13aee0f377b774523"/>
+            <FILE filename="data-modifications.csv.gz" filetype="tab" checksum_method="MD5"
+                checksum="cebce127ade5bc04b0846b205151cbc9"/>
+        </FILES>
+    </ANALYSIS>
+</ANALYSIS_SET>
+```
+
+Make sure to add your own alias, centre name, title, description, sample and run pointers. The 3 files should be <a href="file_prep.html">uploaded</a> to your ftp directory ahead of the submission. Note how there are 3 `<FILE>` blocks, one for each of the files that make up methylation submission (2 x TAB and 1 x GFF). As with previous analysis objects you should add the analysis to a study (it can be the same one as the raw sequence data if you own it) and you should reference a source sample. Every additional set of 3 x files (if you have done methylation measurements multiple times or for additional samples) should each be archived in their <a href="#bulk_anal">own</a> analysis object.
+
+The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
+
+```bash
+curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
+<RECEIPT receiptDate="2017-12-08T16:35:06.765Z" submissionFile="sub.xml" success="true">
+    <ANALYSIS accession="ERZ481431" alias="08-1736" status="PRIVATE"/>
+    <SUBMISSION accession="ERA1153200" alias="analysis_sub_111217"/>
+    <MESSAGES>
+        <INFO>All objects in this submission are set to private status (HOLD).</INFO>
+        <INFO>Submission has been committed.</INFO>
+        <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+    </MESSAGES>
+    <ACTIONS>ADD</ACTIONS>
+    <ACTIONS>HOLD</ACTIONS>
+</RECEIPT>
+```
