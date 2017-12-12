@@ -1,6 +1,8 @@
 Module 4: Add Read files
 ************************
 
+This module describes how you can register your NGS read files (as run objects) and link them to a study and their source sample objects. First you must upload the NGS read files to your ENA ftp directory (you have one with your account). `Here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_ are your options for uploading the read files.
+
 Part 1
 ======
 
