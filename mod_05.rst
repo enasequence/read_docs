@@ -8,19 +8,18 @@ The interactive web based GUI (Webin) has some support for editing existing obje
 Sample Edit
 ===========
 
-A sample group is an internal concept (do not quote sample group ids in any publications) which groups together samples for one purpose: so that you can edit them in bulk. The only way to ensure a collection of samples is in the same group is by submitting them at the same time (during the same submission event). If you need to edit samples in bulk but they are not in the same sample group you can use the REST API (more details to come).
+Unfortunately it is not yet possible to edit existing samples using a webform or by uploading the same type of spreadsheet file that you used for the original submission of your samples. You may remember bulk editing options that were available previously but these were discontinued because they were not stable. Additional editing functionality should be developed in the not too distant future.
 
-First choose a sample from the sample tab or a sample group from the sample group tab. Click the 'edit' button for that sample/group. You will come to a screen like this:
+For now you can use the edit button alongside any sample that you want to make edits too.
 
 .. image:: images/mod_05_p02.png
 
-1. The left panel is used to select the sample that you would like to edit. Even if you selected a single sample from the sample tab the whole group will still be displayed.
-2. This is another way to select the sample that you would like to edit: you can go through the list one by one.
-3. It is not possible to add or remove samples from a group, or to change the associated checklist, but you can add/remove fields from the previously selected checklist
-4. The right hand panel expands whichever sample you have selected in step 1. You can change the content of the fields using this panel.
-5. These little boxes are clickable. Click on this box to copy the content of the field to all the other samples in the sample group (for fields that are common to all samples).
-6. When you have completed your edits click save.
-7. Warning! Although you can download a spreadsheet you cannot yet upload it again so you cannot use this option to edit samples yet. It can be useful to obtain a spreadsheet similar to the one that you used to submit the samples in the first place. Editing by tsv spreadsheet should be possible in the future.
+You will see an XML rendition of the sample. This is how the ENA stores its sample objects and you can edit this document directly. Not all edits will be permitted. When you click 'save' the sample will be validated and if all is well you will see a message stating **"All modifications saved"**. Otherwise an error will be reported and you can fix this and try the modification again. The sample alias (an attribute found in the `<SAMPLE>` tag) can not be changed because this was initially set up as the unique id for the sample. However you can change the title, description, and most of the sample attributes.
+
+.. image:: images/mod_05_p02_b.png
+
+This method for editing existing samples is useful for one-off edits but it is not feasible for editing many samples in bulk. For this you can use the programmatic method which is outlined `here <prog_06.html>`_. 
+
 
 Study Edit
 ==========
