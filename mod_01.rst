@@ -12,13 +12,18 @@ The majority of submissions to the ENA begin `here <https://www.ebi.ac.uk/ena/su
 3. If you have not already, create sample objects to represent your source material. Complete this step before going on to step 4. Module 3_ describes this step in more detail.
 4. This step combines multiple steps from above but it is preferable to split the job up (so that you have already registered a study and some samples). During this step you will be registering NGS read files but before you can do this you must upload the NGS read files to your ENA ftp directory (you have one with your account). `Here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_ are your options for uploading the read files. After you have uploaded the NGS read files use this step to create run and experiment objects. Module 4_ describes this step in more detail. This step will link everything together under the project created in step 2 according to this metadata model:
 
-Experiment and run objects associate read files to their source sample and a study so that all 4 object types are then connected. This means that sample objects do not belong to any studies until experiment objects are created.
+* Experiment and run objects associate read files to their source sample and a study so that all 4 object types are then connected. This means that sample objects do not belong to any studies until experiment objects are created (see image on right).
 
 
 .. image:: images/mod_01_p02.png
    :scale: 60
    :align: right
 
+5. Genome submissions require a study and a sample so after step 2 and 3, if you have assembled genomes to submit you can go to Module 6_.
+6. Transcriptome assembly submissions also require a project and samples to be submitted (step 2 and 3 above). The source NGS read data should also be made available to support the transcriptome assembly (step 4 above). After that go to Module 10_ to submit a TSA.
+
 .. _2: mod_02.html
 .. _3: mod_03.html
 .. _4: mod_04.html
+.. _6: mod_06.html
+.. _10: mod_10.html
