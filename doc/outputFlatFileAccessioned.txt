@@ -1,0 +1,143 @@
+ID   HAHT01000001; SV 1; linear; transcribed RNA; TSA; XXX; 418 BP.
+XX
+AC   HAHT01000001;
+XX
+PR   Project:PRJEB15860;
+XX
+DE   TSA: Hickmania troglodytes, contig RL2Htroglodytes_s12134
+XX
+KW   Transcriptome Shotgun Assembly; TSA.
+XX
+OS   Hickmania troglodytes
+OC   unclassified sequences.
+XX
+RN   [1]
+RA   Cleland I.;
+RT   ;
+RL   Submitted (18-DEC-2017) to the INSDC.
+RL   EBI, EBI Hinxton, United Kingdom
+XX
+DR   BioSample; SAMEA4501351.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..418
+FT                   /organism="Hickmania troglodytes"
+FT                   /mol_type="transcribed RNA"
+FT                   /lat_lon="41.4545 S 145.3123 E"
+FT                   /collection_date="2011"
+FT                   /db_xref="taxon:489260"
+FT   CDS             31..381
+FT                   /transl_table=1
+FT                   /product="U26-Austrotoxin-Ht1a_1"
+FT                   /translation="MMKLLLCLALCAISLSQASITDRKAAYEELSDATSFFKNVVDSAV
+FT                   SGEEARKGKCIEKHHECTNDRANCCTSVMFQYKCKCYNIVHDNGTTKERCACKLPMGKQ
+FT                   AVEKLLGFALSK"
+XX
+SQ   Sequence 418 BP; 130 A; 82 C; 99 G; 107 T; 0 other;
+     gtttggctgt ttcaagatag cagaaaaatc atgatgaaat tacttttgtg ccttgcatta        60
+     tgcgccattt ccttgtccca ggcttcgatt acagatagga aggctgctta tgaagaactt       120
+     tcagatgcta ctagcttttt caaaaatgta gtggactccg cagtatcagg agaagaagca       180
+     aggaaaggca aatgcatcga gaaacaccat gaatgcacca acgacagagc caattgctgc       240
+     acttcggtga tgttccaata caaatgcaag tgctacaata tagtacatga taacggaacg       300
+     accaaagaga ggtgtgcatg caagttgccc atgggaaaac aagctgttga gaaattgttg       360
+     gggttcgctt tgagcaaata aacagtgtcg tccctatttg aggccccgtt tacatggc         418
+//
+ID   HAHT01000002; SV 1; linear; transcribed RNA; TSA; XXX; 430 BP.
+XX
+AC   HAHT01000002;
+XX
+PR   Project:PRJEB15860;
+XX
+DE   TSA: Hickmania troglodytes, contig RL2Htroglodytes_rep_c2607
+XX
+KW   Transcriptome Shotgun Assembly; TSA.
+XX
+OS   Hickmania troglodytes
+OC   unclassified sequences.
+XX
+RN   [1]
+RA   Cleland I.;
+RT   ;
+RL   Submitted (18-DEC-2017) to the INSDC.
+RL   EBI, EBI Hinxton, United Kingdom
+XX
+DR   BioSample; SAMEA4501351.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..430
+FT                   /organism="Hickmania troglodytes"
+FT                   /mol_type="transcribed RNA"
+FT                   /lat_lon="41.4545 S 145.3123 E"
+FT                   /collection_date="2011"
+FT                   /db_xref="taxon:489260"
+FT   CDS             8..385
+FT                   /transl_table=1
+FT                   /product="U17-Austrotoxin-Ht1a_1"
+FT                   /translation="MKVFMCLALLSALVIVTQASSDEIEQAGYLSADWDSFLNATSEID
+FT                   WNAVKDEINDKLNNRNKCTGKGCGVGVLLQTNLLHQTSLLYAVLVDVVVVVVVEVVDPS
+FT                   NRSSCQDKLXALAQPENSKSQ"
+XX
+SQ   Sequence 430 BP; 132 A; 91 C; 96 G; 109 T; 2 other;
+     gctcaaaatg aaagttttca tgtgcttagc tctcttgtct gccttggtga tcgtcaccca        60
+     agcttcatca gatgagattg aacaagctgg ttatctttct gctgattggg attcatttct       120
+     aaacgcaact tccgagatag actggaatgc agttaaagat gaaattaacg ataagctgaa       180
+     caatcgaaac aagtgtactg gaaaaggctg cggggtaggc gtcctcctgc aaacaaacct       240
+     cctccaccaa acaagcctac tatacgccgt cctggtggac gtggtggtcg tggtggtcgt       300
+     agaggtcgta gatccatcga atagatcatc ttgccaagac aaattrkaag ctttggccca       360
+     gcccgaaaat tcaaaatctc aatgacgcaa aaggaaatac gttgtaaagc aagattgaat       420
+     taataaagct                                                              430
+//
+ID   HAHT01000003; SV 1; linear; transcribed RNA; TSA; XXX; 831 BP.
+XX
+AC   HAHT01000003;
+XX
+PR   Project:PRJEB15860;
+XX
+DE   TSA: Hickmania troglodytes, contig RL2Htroglodytes_dn_rep_c14
+XX
+KW   Transcriptome Shotgun Assembly; TSA.
+XX
+OS   Hickmania troglodytes
+OC   unclassified sequences.
+XX
+RN   [1]
+RA   Cleland I.;
+RT   ;
+RL   Submitted (18-DEC-2017) to the INSDC.
+RL   EBI, EBI Hinxton, United Kingdom
+XX
+DR   BioSample; SAMEA4501351.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..831
+FT                   /organism="Hickmania troglodytes"
+FT                   /mol_type="transcribed RNA"
+FT                   /lat_lon="41.4545 S 145.3123 E"
+FT                   /collection_date="2011"
+FT                   /db_xref="taxon:489260"
+FT   CDS             381..728
+FT                   /transl_table=1
+FT                   /product="U35-Austrotoxin-Ht1a_1"
+FT                   /translation="MKVILCLALFAFSLSYALNIEEKAAFDNLLEGFGSPNEEEARQKQ
+FT                   CILRTHECTNNRHGCCRGEYMKDDCTCFYAEKTDPKAKDVEVCSCQQPWLSKALETAVR
+FT                   LYLKTKKWLPG"
+XX
+SQ   Sequence 831 BP; 275 A; 157 C; 180 G; 219 T; 0 other;
+     cacgcacgtg cgactagctt ttgcccggga tttctcttcg cttctcgact gaggagcaag        60
+     gtttcaacag gtcccctcag tgtttgaagt ttggagccga aaattcttcc ttcgtctaaa       120
+     gcgcttttgg ctatagagga aaatcagcta taaattgcat tcgatatttt tgcaaataga       180
+     tatataaagg gaaatggaac cataccaatg ggacaacaga gtgagatttg tcgtaaggtt       240
+     catgtatgat actgataata acggatacct tgacatgtat gattttgagt gcctggcttt       300
+     gaaacacacg atagaccagg ggctatttct ttgcaaagtg tctaaggttt tgctgtgtca       360
+     agataaaaca gcaagccacg atgaaggtta ttttgtgtct tgctctcttt gcattctccc       420
+     tttcgtatgc tttgaacata gaagaaaaag ctgcatttga caatctttta gaaggctttg       480
+     gttcccctaa cgaggaagag gcaagacaga aacagtgcat tctccgaacc cacgagtgca       540
+     cgaacaacag gcatggctgc tgtagaggag aatatatgaa agacgactgc acttgctttt       600
+     acgctgagaa aacggatccc aaagccaagg acgtagaagt gtgctcttgc cagcaaccgt       660
+     ggttaagtaa agcactcgaa accgctgtaa gattgtatct gaagactaaa aagtggctcc       720
+     ctggctaaac attcctgcac aatgacatgc gtatgcaatg aaaaatttgc aaaatgtgaa       780
+     taaaaattat tcaaattcaa aaaaagtaaa aaaaaaaaaa aaaaaaaaaa a                831
+//
