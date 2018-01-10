@@ -4,7 +4,7 @@
 
 Every ENA sample object should have a taxonomic classification. The INSDC maintains a database of all unique taxonomy classifications known to us and you should apply one from this database when you create your samples. Each classification has a unique id and this is expanded to show the scientific name and common name of the organism when the sample is viewed.
 
-The [interactive submission service](https://www.ebi.ac.uk/ena/submit/sra/#home) has a look up table which you can use before you download the spreadsheet template so that you already know what taxonomy identifications to apply when you are creating your samples offline.
+The [interactive submission service](https://www.ebi.ac.uk/ena/submit/sra/#home) has a look up table which you can use before you download the spreadsheet template so that you already know what taxonomy identifications to apply when you are creating your samples offline (step 8 in <a href="mod_01.html">module 1</a>). There is also a look up <a href="https://www.ebi.ac.uk/ena/data/warehouse/search?portal=taxon">here</a>, in the taxon domain of the ENA advanced search.
 
 ![webin_tax_look_up](images/tips_p01.png)
 
@@ -97,7 +97,7 @@ curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%
   }
 ```
 
-To have an idea of what environmental sample names are available, below is a list. This list is not regularly updated so it may be worth trying the *suggest-for-submission* look up method described <a href="#rest-access-to-the-tax-database">above</a> to see if you can find one that better represents your environmental samples. The following terms go in the scientific name field of the sample object. To find the tax id use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint) . For example you can paste the following into your browser to find the tax id for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`
+To have an idea of what environmental sample names are available, below is a list. 
 
 <div style="height:300px;width:500px;border:1px solid;overflow:auto;">
 Generic
@@ -394,3 +394,10 @@ organismal metagenomes sub nodes
     zebrafish metagenome
 
 </div>
+
+This list is not updated so you should check the <a href="https://www.ebi.ac.uk/ena/data/view/Taxon:408169">ENA tax portal</a> for the most recent additions. Click on the *Tax tree* tab and click the '+' icons to expand the categories:
+
+![metagenome](images/tax_p01.png)
+
+ These environmental terms go in the scientific name field of the sample object. To find the tax id use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint). For example you can paste the following into your browser to find the tax id for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`. 
+
