@@ -19,11 +19,11 @@ The reports can also be conveniently explored using the [Webin programmatic subm
 
 Production service URL:
 
-https://www.ebi.ac.uk/ena/submit/report
+<https://www.ebi.ac.uk/ena/submit/report>
 
 Test service URL:
 
-https://wwwdev.ebi.ac.uk/ena/submit/report
+<ttps://wwwdev.ebi.ac.uk/ena/submit/report>
 
 ## Authentication
 
@@ -33,4 +33,4 @@ Authentication is done using basic HTTP authentication with Webin submission acc
 
 The service endpoints are documented using Swagger:
 
-https://www.ebi.ac.uk/ena/submit/report/swagger-ui.html
+<https://www.ebi.ac.uk/ena/submit/report/swagger-ui.html>
