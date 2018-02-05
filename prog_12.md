@@ -162,3 +162,7 @@ cb25.NA_108     III
 ## Stage 3: Validate and submit the files
 
 Files are validated, uploaded and submitted using the [ENA validator](tool_01.md). 
+
+## Validation rules
+
+TODO (from Google docs)
