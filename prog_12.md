@@ -1,52 +1,51 @@
-# Module 12: Genome Assembly Submissions
+# Module 12: Genome Assembly Submissions 
+
+## Introduction
 
 Genome assemblies including metagenomes can be submitted to the European Nucleotide Archive (ENA) 
-using the [ENA validator](tool_01.md) command line program. 
+using the [Webin command line submission interface](tool_01.md). 
 
 Genome assembly submissions include plasmids, organelles, 
 complete virus genomes, viral segments/replicons, bacteriophages, 
 prokaryotic or eukaryotic genomes.
  
 A genome assembly consists of:
-
 - General assembly information
-   - Study reference
-   - Sample reference
-   - Assembly name
-   - TODO
-- Contig sequences
-- Scaffold sequences
-- Chromosome sequences
-- Unlocalised sequences
+   - Study accession or unique name (alias)
+   - Sample accession or unique name (alias)
+   - Assembly program
+   - Sequencing platform
+   - Minimum gap length
+   - Molecule type (genomic DNA)
+   - Coverage
+- Contig sequences (if any)
+- Scaffold sequences (if any)
+- Chromosome sequences (if any)
+- Unlocalised sequences (if any)
 - Functional annotation (optional)
 
-Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids and viral segments/replicons.
+Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids and viral segments.
 
 ## Introduction
 
 The following picture illustrates the stages of the genome assembly submission process:
 
 ---    
-![Submission process](images/validator_01.png)
+![Submission process](images/webin-cli_01.png)
 ---
 
-## Stage 1: Register study and sample
+## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a study and a sample. 
-Both must be pre-reqistered before the submission can be validated.
+Each submission must be associated with a pre-registered study and a sample. The study and sample 
+accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
 
-Please note that genome assemblies except metagenomes must be uniquely identified 
-by a study and a sample.
-
-### Register the study
- 
-To register one or more studies please follow either the interactive or programmatic study submission guidelines. 
-
-### Register the sample
-  
-To register one or more samples please follow the interactive or programmatic sample submission guidelines.
+Genome assemblies except metagenomes are uniquely identified by a study and a sample. When assemblies
+are updated they must be re-submitted with the same study and sample as in the original submission.
 
 ## Stage 2: Prepare the files
+
+The set of files that are part of the submission are specified using a manifest file.
+The manifest file is specified using the `-manifest=<filename>` option.
 
 A genome assembly submission consists of the following files:
 
@@ -58,47 +57,99 @@ A genome assembly submission consists of the following files:
 - 0-1 chromosome list file
 - 0-1 unlocalised list file
 
-All sequences must be identified by a unique name that is provided in the fasta, AGP or flat files.
+### Sequence names
 
-It is essential that the sequence names are unique and used consistently between files. For example, the 
-chromosome list file must refer to the chromosome sequences being submitted in Fasta, AGP or flat files 
-using the unique name. Similarly, an AGP file must refer to scaffolds or contigs using the unique names.
+Sequences must have a unique name that is provided in the fasta, AGP or flat files. 
+It is essential that the sequence names are unique and used consistently between files. 
+
+For example, the chromosome list file must refer to the chromosome sequences using the unique names. 
+Similarly, an AGP file must refer to scaffolds or contigs using the unique names.
 
 ### Manifest file
 
-TODO
+The manifest file has two columns separated by a colon (or a tab):
+- File type: case insensitive file type.   
+- File path: the path to the file.
+
+For example, the following manifest file represents a genome assembly consisting of an info file 
+and a fasta file:
+
+```
+INFO:genome.info.gz
+FASTA:genome.fasta.gz
+``` 
+
+The following case-insensitive file types are supported for genome assemblies:
+
+- INFO: assembly info file
+- FASTA: sequences in fasta format.
+- FLATFILE: sequences in EMBL-Bank flat file format. 
+- AGP: Sequences in [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) format.
+- CHROMOSOME_LIST: list of chromosomes.
+- UNLOCALISED_LIST: list of unlocalised sequences.
 
 ### Assembly info file
 
-TODO
+The assembly info file is a text file (USASCII7) containing general assembly information.
+
+The file has two columns separated by a colon:
+- Field name
+- Field value
+
+The following fields must be provided:
+- STUDY: Study accession or unique name (alias) 
+- SAMPLE: Sample accession or unique name (alias)
+- ASSEMBLYNAME: The unique assembly name.
+- COVERAGE: The assembly coverage.
+- PROGRAM: The assembly program.
+- PLATFORM: The sequencing platform.
+
+The following fields can be optionally provided:
+
+- MINGAPLENTH: Minimum length of consecutive Ns to be considered a gap.
+- MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA'.
+
+An example of an assembly info file:
+
+```
+STUDY:TODO
+SAMPLE:TODO
+ASSEMBLYNAME:TODO
+COVERAGE:TODO
+PROGRAM:TODO
+PLATFORM:TODO
+MINGAPLENTH:TODO
+MOLECULETYPE:genomic DNA
+```
 
 ### Fasta file
 
 Unannotated sequences should be submitted as a Fasta file.
 
-The sequence name is extracted from the fasta header. For example the following sequence has name 'contig1':
+The sequence name is extracted from the fasta header. For example the following header 
+contains the name 'contig1':
 
 `>contig1`
 
 ### AGP file
 
-Scaffolds or chromosomes can be described using an AGP. For more information about the AGP file format refer to the 
-[AGP 2.0 specification](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/).
+Scaffolds or chromosomes constructed from contigs or scaffolds, respectively, can be submitted using 
+an [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) file.
 
 ### Flat file	
 
-Annotated sequences must be submitted as an EMBL-Bank flat file.
+Annotated sequences must be submitted using an EMBL-Bank flat file.
 
-The entry name is extracted from the AC * line . The entry name must be prefixed with a '_'.
-For example the following sequence has name 'contig1':
+The sequence name is extracted from the AC * line and must be prefixed with a '_'.
+For example the following AC * line defines name 'contig1':
 
 `AC * _contig1`
 
 ### Chromosome list file
 
-This file must be provided when the submission includes assembled chromosomes. 
+The chromosome list file must be provided when the submission contains assembled chromosomes. 
 
-The chromosome list file is a tab separated text file (USASCII7) containing the following columns:
+The file is a tab separated text file (USASCII7) containing the following columns:
 
 - OBJECT_NAME (first column): The unique sequence name.
 - CHROMOSOME_NAME (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment qualifiers in the EMBL-Bank flat files.
@@ -130,7 +181,7 @@ and procaryotic chromosomes and plasmids in the cytoplasm.
     - Hydrogenosome
     - Chromatophore
 
-An example chromosome list file:
+An example of a chromosome list file:
 
 ```
 chr01 I Chromosome
@@ -144,12 +195,12 @@ chr04	IV	Chromosome
 This file should be provided when the submission includes chromosomes with unlocalised sequences.
 
 Unlocalised sequences are contigs or scaffolds that are associated with a specific chromosome but 
-their order and orientation is unknown. 
+their order and orientation is unknown.
 
 The unlocalised list file is a tab separated text file (USASCII7) containing the following columns: 
 
-- OBJECT_NAME: the unique sequence name.
-- CHROMOSOME_NAME: the unique chromosome name associated with this sequence.
+- OBJECT_NAME (first column): the unique sequence name.
+- CHROMOSOME_NAME (second column): the unique chromosome name associated with this sequence.
 
 An example unlocalised list file:
 
@@ -161,8 +212,49 @@ cb25.NA_108     III
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [ENA validator](tool_01.md). 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](tool_01.md). 
+Please refer to the [Webin command line submission interface](tool_01.md) documentation for more information 
+about the submission process.
 
 ## Validation rules
 
-TODO (from Google docs)
+### Sample and study validation
+
+- Sample and study (BioProject) pair must be unique for an assembly (except metagenomes).
+- Sample taxonomic classification must be species level or below (or equivalent) within the NCBI taxonomy.
+
+### Assembly name validation
+
+Assembly names must:
+- match the pattern: ^z[A-Za-z0-9 _\-\.#\]*$
+- be shorter than 100 characters
+    
+### Chromosome name validation
+    
+Chromosome names must:
+- match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9_\-\.#\]*$
+- be shorter than 33 characters
+- not contain any of the following as part of their name (case insensitive): 
+    - 'chr'
+    - 'chrm'
+    - 'chrom'
+    - 'chromosome'
+    - 'linkage group'
+    - 'linkage-group'
+    - 'linkage_group'
+    - 'plasmid'
+- be unique within an assembly
+
+### Sequence validation rules
+
+Sequences must:
+- have unique names within an assembly
+- be at least 20bp long
+- not have terminal Ns
+- consist of bases: 'a','c','g','t','u','b','d','h','k','m','n','r','s','v','w','y'
+
+### Assembly updates
+
+Assembly updates must:
+- use the same sample and study pair as was used in the initial assembly submission.
+- not have any chromosomes removed
