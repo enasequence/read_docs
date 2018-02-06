@@ -24,7 +24,7 @@ Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids an
 
 ## Introduction
 
-The following picture illustrates the stages of the genome assembly submission process:
+The following picture illustrates the stages of the transcriptome assembly submission process:
 
 ---    
 ![Submission process](images/webin-cli_01.png)
@@ -35,23 +35,17 @@ The following picture illustrates the stages of the genome assembly submission p
 Each submission must be associated with a pre-registered study and a sample. The study and sample 
 accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
 
-Genome assemblies except metagenomes are uniquely identified by a study and a sample. When assemblies
-are updated they must be re-submitted with the same study and sample as in the original submission.
-
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission are specified using a manifest file.
 The manifest file is specified using the `-manifest=<filename>` option.
 
-A genome assembly submission consists of the following files:
+A transcriptome assembly submission consists of the following files:
 
 - 1 manifest file
 - 1 assembly info file
 - 0-1 fasta files
-- 0-1 AGP files
 - 0-1 flat files
-- 0-1 chromosome list file
-- 0-1 unlocalised list file
 
 ### Sequence names
 
@@ -64,33 +58,30 @@ Similarly, an AGP file must refer to scaffolds or contigs using the unique names
 ### Manifest file
 
 The manifest file has two columns separated by a colon (or a tab):
-- File type: case insensitive file type.   
-- File path: the path to the file.
+- File type (first column): case insensitive file type   
+- File path (second column): the path to the file
 
-For example, the following manifest file represents a genome assembly consisting of an info file 
+For example, the following manifest file represents a transcriptome assembly consisting of an info file 
 and a fasta file:
 
 ```
-INFO:genome.info.gz
-FASTA:genome.fasta.gz
+INFO:transcriptome.info.gz
+FASTA:transcriptome.fasta.gz
 ``` 
 
-The following case-insensitive file types are supported for genome assemblies:
+The following case-insensitive file types are supported for transcriptome assemblies:
 
 - INFO: assembly info file
 - FASTA: sequences in fasta format.
 - FLATFILE: sequences in EMBL-Bank flat file format. 
-- AGP: Sequences in [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) format.
-- CHROMOSOME_LIST: list of chromosomes.
-- UNLOCALISED_LIST: list of unlocalised sequences.
 
 ### Assembly info file
 
 The assembly info file is a text file (USASCII7) containing general assembly information.
 
 The file has two columns separated by a colon:
-- Field name
-- Field value
+- Field name (first column)
+- Field value (second column)
 
 The following fields must be provided:
 - STUDY: Study accession or unique name (alias) 

@@ -16,7 +16,7 @@ A genome assembly consists of:
    - Assembly program
    - Sequencing platform
    - Minimum gap length
-   - Molecule type (genomic DNA)
+   - Molecule type (genomic DNA, genomic RNA or viral cRNA)
    - Coverage
 - Contig sequences (if any)
 - Scaffold sequences (if any)
@@ -68,8 +68,8 @@ Similarly, an AGP file must refer to scaffolds or contigs using the unique names
 ### Manifest file
 
 The manifest file has two columns separated by a colon (or a tab):
-- File type: case insensitive file type.   
-- File path: the path to the file.
+- File type (first column): case insensitive file type   
+- File path (second column): the path to the file
 
 For example, the following manifest file represents a genome assembly consisting of an info file 
 and a fasta file:
@@ -93,8 +93,8 @@ The following case-insensitive file types are supported for genome assemblies:
 The assembly info file is a text file (USASCII7) containing general assembly information.
 
 The file has two columns separated by a colon:
-- Field name
-- Field value
+- Field name (first column)
+- Field value (second column)
 
 The following fields must be provided:
 - STUDY: Study accession or unique name (alias) 
@@ -106,7 +106,7 @@ The following fields must be provided:
 
 The following fields can be optionally provided:
 
-- MINGAPLENTH: Minimum length of consecutive Ns to be considered a gap.
+- MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap.
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA'.
 
 An example of an assembly info file:
@@ -118,7 +118,7 @@ ASSEMBLYNAME:TODO
 COVERAGE:TODO
 PROGRAM:TODO
 PLATFORM:TODO
-MINGAPLENTH:TODO
+MINGAPLENGTH:TODO
 MOLECULETYPE:genomic DNA
 ```
 
@@ -256,5 +256,5 @@ Sequences must:
 ### Assembly updates
 
 Assembly updates must:
-- use the same sample and study pair as was used in the initial assembly submission.
-- not have any chromosomes removed
+- use the same sample and study pair as was used in the initial assembly submission
+- not remove any chromosomes
