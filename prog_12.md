@@ -82,11 +82,11 @@ FASTA:genome.fasta.gz
 The following case-insensitive file types are supported for genome assemblies:
 
 - INFO: assembly info file
-- FASTA: sequences in fasta format.
-- FLATFILE: sequences in EMBL-Bank flat file format. 
-- AGP: Sequences in [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) format.
-- CHROMOSOME_LIST: list of chromosomes.
-- UNLOCALISED_LIST: list of unlocalised sequences.
+- FASTA: sequences in fasta format
+- FLATFILE: sequences in EMBL-Bank flat file format
+- AGP: Sequences in [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) format
+- CHROMOSOME_LIST: list of chromosomes
+- UNLOCALISED_LIST: list of unlocalised sequences
 
 ### Assembly info file
 
@@ -99,10 +99,10 @@ The file has two columns separated by a colon:
 The following fields must be provided:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
-- ASSEMBLYNAME: The unique assembly name.
-- COVERAGE: The assembly coverage.
-- PROGRAM: The assembly program.
-- PLATFORM: The sequencing platform.
+- ASSEMBLYNAME: The unique assembly name
+- COVERAGE: The assembly coverage
+- PROGRAM: The assembly program
+- PLATFORM: The sequencing platform
 
 The following fields can be optionally provided:
 

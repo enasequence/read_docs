@@ -11,16 +11,7 @@ A transcriptome assembly consists of:
    - Sample accession or unique name (alias)
    - Assembly program
    - Sequencing platform
-   - Minimum gap length
-   - Molecule type (genomic DNA)
-   - Coverage
-- Contig sequences (if any)
-- Scaffold sequences (if any)
-- Chromosome sequences (if any)
-- Unlocalised sequences (if any)
 - Functional annotation (optional)
-
-Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids and viral segments.
 
 ## Introduction
 
@@ -49,11 +40,7 @@ A transcriptome assembly submission consists of the following files:
 
 ### Sequence names
 
-Sequences must have a unique name that is provided in the fasta, AGP or flat files. 
-It is essential that the sequence names are unique and used consistently between files. 
-
-For example, the chromosome list file must refer to the chromosome sequences using the unique names. 
-Similarly, an AGP file must refer to scaffolds or contigs using the unique names.
+Sequences must have a unique name that is provided in the fasta or flat files. 
 
 ### Manifest file
 
@@ -72,8 +59,8 @@ FASTA:transcriptome.fasta.gz
 The following case-insensitive file types are supported for transcriptome assemblies:
 
 - INFO: assembly info file
-- FASTA: sequences in fasta format.
-- FLATFILE: sequences in EMBL-Bank flat file format. 
+- FASTA: sequences in fasta format
+- FLATFILE: sequences in EMBL-Bank flat file format 
 
 ### Assembly info file
 

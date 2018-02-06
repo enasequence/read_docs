@@ -12,7 +12,7 @@ The following types of submissions are supported:
 - genome assemblies
 - transcriptome assemblies
 
-The type of the submission is specified using the `<context>` command line option:
+The type of the submission is specified using the `-context` command line option:
 - `-context='genome'` 
 - `-context='transcriptome'` 
 
@@ -35,8 +35,8 @@ The manifest file is specified using the `-manifest=<filename>` option.
 ### Manifest file format
 
 The manifest file in a text file (USASCII7) with two columns separated by a colon (or a tab):
-- File type: case insensitive file type.   
-- File path: the path to the file.
+- File type (first column): case insensitive file type.   
+- File path (second column): the path to the file.
 
 For example, the following manifest file represents a genome assembly consisting of an info file and a fasta file:
 
@@ -49,12 +49,12 @@ FASTA:genome.fasta.gz
 
 The following case-insensitive file types are supported within a manifest file:
 
-- INFO (all submissions): An info file consists of tab-separated key value pairs.
-- FASTA (genome and transcriptome assemblies): Sequences in fasta format.
-- FLATFILE (genome and transcriptome assemblies): Sequences in EMBL-Bank flat file format. 
-- AGP (genome assemblies): See [Genome Assembly Submissions](prog_12.md).
-- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](prog_12.md).
-- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](prog_12.md).
+- INFO: An info file containing tab-separated key value pairs
+- FASTA (genome and transcriptome assemblies): Sequences in fasta format
+- FLATFILE (genome and transcriptome assemblies): Sequences in EMBL-Bank flat file format 
+- AGP (genome assemblies): See [Genome Assembly Submissions](prog_12.md)
+- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](prog_12.md)
+- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](prog_12.md)
 
 ## Stage 3: Validate and submit the files
 
@@ -93,7 +93,7 @@ they may be retrieved from the [Webin reports service](prog_10.md).
 
 The latest version of the Webin command line submission interface can be downloaded from: 
 
-<https://mvnrepository.com/artifact/uk.ac.ebi.ena.sequence/webin-cli>
+TODO
 
 The program requires Java 1.8 or a newer which can be downloaded from: 
 
@@ -117,8 +117,8 @@ The command line `<options>` are explained below.
     - `-context='transcriptome'` 
 - `-userName`: the Webin submission account name.
 - `-password`: the Webin submission account password.
+- `-manifest`: the manifest file name.
 - `-outputDir`: the root directory where validated files are written. 
-- `-validate`: validates files. Files must be validated before they can be uploaded or submitted.
+- `-validate`: validate files. Files must be validated before they can be uploaded or submitted.
 - `-upload`: upload validated files. Files must be uploaded before they can be submitted.
 - `-submit`: submit uploaded files.
-- `-manifest`: the manifest file name.
