@@ -1,9 +1,9 @@
-# Module 12: Genome Assembly Submissions 
+# Module 2: Genome Assembly Submissions 
 
 ## Introduction
 
 Genome assemblies including metagenomes can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](tool_01.md). 
+using the [Webin command line submission interface](cli_01.md). 
 
 Genome assembly submissions include plasmids, organelles, 
 complete virus genomes, viral segments/replicons, bacteriophages, 
@@ -212,8 +212,8 @@ cb25.NA_108     III
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](tool_01.md). 
-Please refer to the [Webin command line submission interface](tool_01.md) documentation for more information 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.md). 
+Please refer to the [Webin command line submission interface](cli_01.md) documentation for more information 
 about the submission process.
 
 ## Validation rules

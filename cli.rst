@@ -4,4 +4,6 @@ Tools
 .. toctree::
    :maxdepth: 2
 
-   tool_01
+   cli_01
+   cli_02
+   cli_03

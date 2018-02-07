@@ -11,7 +11,7 @@ ENA: Guidelines and Tips
 
    interactive
    programmatic
-   tools
+   cli
    tips
 
 .. Extra

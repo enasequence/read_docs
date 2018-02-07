@@ -52,9 +52,9 @@ The following case-insensitive file types are supported within a manifest file:
 - INFO: An info file containing tab-separated key value pairs
 - FASTA (genome and transcriptome assemblies): Sequences in fasta format
 - FLATFILE (genome and transcriptome assemblies): Sequences in EMBL-Bank flat file format 
-- AGP (genome assemblies): See [Genome Assembly Submissions](prog_12.md)
-- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](prog_12.md)
-- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](prog_12.md)
+- AGP (genome assemblies): See [Genome Assembly Submissions](cli_02.md)
+- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.md)
+- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.md)
 
 ## Stage 3: Validate and submit the files
 

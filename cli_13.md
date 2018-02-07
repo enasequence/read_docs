@@ -1,9 +1,9 @@
-# Module 13: Transcriptome Assembly Submissions
+# Module 3: Transcriptome Assembly Submissions
 
 ## Introduction
 
 Transcriptome assemblies can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](tool_01.md). 
+using the [Webin command line submission interface](cli_01.md). 
  
 A transcriptome assembly consists of:
 - General assembly information
@@ -107,8 +107,8 @@ For example the following AC * line defines name 'contig1':
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](tool_01.md). 
-Please refer to the [Webin command line submission interface](tool_01.md) documentation for more information 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.md). 
+Please refer to the [Webin command line submission interface](cli_01.md) documentation for more information 
 about the submission process.
 
 ## Validation rules
