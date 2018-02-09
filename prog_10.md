@@ -23,7 +23,7 @@ Production service URL:
 
 Test service URL:
 
-<ttps://wwwdev.ebi.ac.uk/ena/submit/report>
+<https://wwwdev.ebi.ac.uk/ena/submit/report>
 
 ## Authentication
 
