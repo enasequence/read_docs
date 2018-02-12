@@ -67,7 +67,7 @@ Similarly, an AGP file must refer to scaffolds or contigs using the unique names
 
 ### Manifest file
 
-The manifest file has two columns separated by a colon (or a tab):
+The manifest file has two columns separated by a tab (or any whitespace characters):
 - File type (first column): case insensitive file type   
 - File path (second column): the path to the file
 
@@ -75,8 +75,8 @@ For example, the following manifest file represents a genome assembly consisting
 and a fasta file:
 
 ```
-INFO:genome.info.gz
-FASTA:genome.fasta.gz
+INFO    genome.info.gz
+FASTA   genome.fasta.gz
 ``` 
 
 The following case-insensitive file types are supported for genome assemblies:
@@ -92,7 +92,7 @@ The following case-insensitive file types are supported for genome assemblies:
 
 The assembly info file is a text file (USASCII7) containing general assembly information.
 
-The file has two columns separated by a colon:
+The file has two columns  separated by a tab (or any whitespace characters):
 - Field name (first column)
 - Field value (second column)
 
@@ -112,14 +112,14 @@ The following fields can be optionally provided:
 An example of an assembly info file:
 
 ```
-STUDY:TODO
-SAMPLE:TODO
-ASSEMBLYNAME:TODO
-COVERAGE:TODO
-PROGRAM:TODO
-PLATFORM:TODO
-MINGAPLENGTH:TODO
-MOLECULETYPE:genomic DNA
+STUDY   TODO
+SAMPLE   TODO
+ASSEMBLYNAME   TODO
+COVERAGE   TODO
+PROGRAM   TODO
+PLATFORM   TODO
+MINGAPLENGTH   TODO
+MOLECULETYPE   genomic DNA
 ```
 
 ### Fasta file

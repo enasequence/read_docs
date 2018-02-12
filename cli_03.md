@@ -44,7 +44,7 @@ Sequences must have a unique name that is provided in the fasta or flat files.
 
 ### Manifest file
 
-The manifest file has two columns separated by a colon (or a tab):
+The manifest file has two columns separated by a tab (or any whitespace characters):
 - File type (first column): case insensitive file type   
 - File path (second column): the path to the file
 
@@ -52,8 +52,8 @@ For example, the following manifest file represents a transcriptome assembly con
 and a fasta file:
 
 ```
-INFO:transcriptome.info.gz
-FASTA:transcriptome.fasta.gz
+INFO    transcriptome.info.gz
+FASTA   transcriptome.fasta.gz
 ``` 
 
 The following case-insensitive file types are supported for transcriptome assemblies:
@@ -66,7 +66,7 @@ The following case-insensitive file types are supported for transcriptome assemb
 
 The assembly info file is a text file (USASCII7) containing general assembly information.
 
-The file has two columns separated by a colon:
+The file has two columns separated by a tab (or any whitespace characters):
 - Field name (first column)
 - Field value (second column)
 
@@ -80,11 +80,11 @@ The following fields must be provided:
 An example of an assembly info file:
 
 ```
-STUDY:TODO
-SAMPLE:TODO
-ASSEMBLYNAME:TODO
-PROGRAM:TODO
-PLATFORM:TODO
+STUDY   TODO
+SAMPLE  TODO
+ASSEMBLYNAME    TODO
+PROGRAM TODO
+PLATFORM    TODO
 ```
 
 ### Fasta file

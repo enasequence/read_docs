@@ -34,15 +34,15 @@ The manifest file is specified using the `-manifest=<filename>` option.
 
 ### Manifest file format
 
-The manifest file in a text file (USASCII7) with two columns separated by a colon (or a tab):
+The manifest file in a text file (USASCII7) with two columns separated by a tab (or any whitespace characters):
 - File type (first column): case insensitive file type.   
 - File path (second column): the path to the file.
 
 For example, the following manifest file represents a genome assembly consisting of an info file and a fasta file:
 
 ```
-INFO:genome.info.gz
-FASTA:genome.fasta.gz
+INFO    genome.info.gz
+FASTA   genome.fasta.gz
 ``` 
 
 ### Manifest file types
