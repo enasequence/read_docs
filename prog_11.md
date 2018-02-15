@@ -1,6 +1,6 @@
-# Module 11: Webin programmatic submission portal
+# Module 11: Webin reports and programmatic submission portal
 
-Webin programmatic submission portal is a simple interactive web interface which supports:
+Webin reports and programmatic submission portal is a simple interactive web interface which supports:
 
 * Submission of XML metadata objects
 * Update of XML metadata objects
