@@ -93,7 +93,7 @@ they may be retrieved from the [Webin reports service](prog_10.md).
 
 The latest version of the Webin command line submission interface can be downloaded from: 
 
-TODO
+https://github.com/enasequence/webin-cli/releases
 
 The program requires Java 1.8 or a newer which can be downloaded from: 
 
