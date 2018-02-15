@@ -26,8 +26,6 @@ A genome assembly consists of:
 
 Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids and viral segments.
 
-## Introduction
-
 The following picture illustrates the stages of the genome assembly submission process:
 
 ---    

@@ -13,8 +13,6 @@ A transcriptome assembly consists of:
    - Sequencing platform
 - Functional annotation (optional)
 
-## Introduction
-
 The following picture illustrates the stages of the transcriptome assembly submission process:
 
 ---    
