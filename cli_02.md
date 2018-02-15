@@ -28,9 +28,7 @@ Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids an
 
 The following picture illustrates the stages of the genome assembly submission process:
 
----    
 ![Submission process](images/webin-cli_01.png)
----
 
 ## Stage 1: Pre-register study and sample
 

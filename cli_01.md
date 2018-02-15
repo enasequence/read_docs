@@ -18,9 +18,7 @@ The type of the submission is specified using the `-context` command line option
 
 The following picture illustrates the stages of the submission process:
 
----    
 ![Submission process](images/webin-cli_01.png)
----
 
 ## Stage 1: Pre-register study and sample
 
