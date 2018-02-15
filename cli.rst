@@ -1,4 +1,4 @@
-Tools
+Command Line Submissions
 =======================
 
 .. toctree::
