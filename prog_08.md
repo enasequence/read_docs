@@ -92,7 +92,7 @@ After making the necessary edit to the experiment objects use the same method to
 Example cURL command (to the test server)
 
 ```bash
-curl -k -F "SUBMISSION=@sub.xml" -F "EXPERIMENT=@exp.xml" -F "RUN=@run.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20___PASSWORD____"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "EXPERIMENT=@exp.xml" -F "RUN=@run.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 Example of XML receipt returned
