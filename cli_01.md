@@ -50,9 +50,9 @@ The following case-insensitive file types are supported within a manifest file:
 - INFO: An info file containing tab-separated key value pairs
 - FASTA (genome and transcriptome assemblies): Sequences in fasta format
 - FLATFILE (genome and transcriptome assemblies): Sequences in EMBL-Bank flat file format 
-- AGP (genome assemblies): See [Genome Assembly Submissions](cli_02.md)
-- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.md)
-- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.md)
+- AGP (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
+- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
+- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
 
 ## Stage 3: Validate and submit the files
 
@@ -85,7 +85,7 @@ can be used in citations:
 
 Genome assembly and sequence accession(s) are assigned only after the submission 
 has been processed and archived by ENA. Submitters will receive these accession numbers by e-mail or 
-they may be retrieved from the [Webin reports service](prog_10.md).
+they may be retrieved from the [Webin reports service](prog_10.html).
 
 ## Download the program
 

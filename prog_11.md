@@ -4,7 +4,7 @@ Webin XML and reports portal is a simple interactive web interface which support
 
 * Submission of XML metadata objects
 * Update of XML metadata objects
-* Reports from the [Webin reports service](prog_10.md)
+* Reports from the [Webin reports service](prog_10.html)
 
 ## Service URL
 
