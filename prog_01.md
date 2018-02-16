@@ -88,8 +88,15 @@ CURL is a Linux/Unix command line program which you can use to send the XMLs to 
 curl -k -F "SUBMISSION=@sub.xml" -F "PROJECT=@project.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20PASSWORD"
 ```
 
-From the same directory containing files sub.xml snd project.xml run CURL as above. You must exchange `Webin-NNN` with your Webin account id and `PASSWORD` for your account password. The `%20` is URL encoding for a space character. Leave these in place. After running the command above a receipt in XML format is returned. It will look like the one below (it won't be line wrapped but you can copy and paste it or redirect the CURL output to a separate file.
+From the same directory containing files sub.xml and project.xml run CURL as above. You must exchange `Webin-NNN` with your Webin account id and `PASSWORD` for your account password. The `%20` is URL encoding for a space character. Leave these in place. After running the command above a receipt in XML format is returned. It will look like the one below (it won't be line wrapped but you can copy and paste it or redirect the CURL output to a separate file.
 
+You can also use this method:
+
+```bash
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "PROJECT=@project.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
+```
+
+Where the username is the Webin account ID (Webin-NNNN) and password is your Webin account password (from when the Webin account was registered).
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
