@@ -160,6 +160,15 @@ Make sure to accompany the analysis XML with a submission XML like the one <a hr
 curl -F "SUBMISSION=@sub_anal.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20PASSWORD"
 ```
 Remember to exchange the string 'Webin-XXXX' with your Webin account id and the string 'PASSWORD' with the correct password for that account.
+
+You can also use the `-u username:password` convention:
+
+```bash
+curl -u username:password -F "SUBMISSION=@sub_anal.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
+```
+
+Where the username is the Webin account ID (Webin-NNNN) and password is the Webin account password.
+
 If successful you will receive a receipt in XML format that looks like the below.
 
 ```xml
@@ -290,7 +299,7 @@ This means that when the id '19933_4#3' is used in the interpreted file (in the 
 The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
 
 ```bash
-curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 ```xml
@@ -399,7 +408,7 @@ See how the <a href="#sequence-variation-file">variation analysis</a> has made u
 The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
 
 ```bash
-curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 ```xml
@@ -458,7 +467,7 @@ You also need a study to add this analysis too. Use an appropriate existing stud
 The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
 
 ```bash
-curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 ```xml
@@ -511,7 +520,7 @@ Make sure to add your own alias, centre name, title, description, sample and run
 The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
 
 ```bash
-curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 ```xml
@@ -573,7 +582,7 @@ Make sure to add your own alias, centre name, title, description, sample and run
 The submission XML will look similar to the one <a href="#example-submission-xml-for-analysis">above</a>. The cURL command used and the receipt returned are below (apply your own account id and password and file names).
 
 ```bash
-curl -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20__password__"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 ```xml
