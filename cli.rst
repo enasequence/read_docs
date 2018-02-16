@@ -1,5 +1,5 @@
 Command Line Submissions
-=======================
+========================
 
 .. toctree::
    :maxdepth: 2

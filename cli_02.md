@@ -3,7 +3,7 @@
 ## Introduction
 
 Genome assemblies including metagenomes can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](cli_01.md). 
+using the [Webin command line submission interface](cli_01.html). 
 
 Genome assembly submissions include plasmids, organelles, 
 complete virus genomes, viral segments/replicons, bacteriophages, 
