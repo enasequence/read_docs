@@ -182,7 +182,7 @@ The procedure for submitting XML files is outlined in <a href="prog_01.html#send
 Assuming that the above submission XML is saved in a file called "sub.xml" a cURL statement to send the XMLs to the ENA REST **TEST** server will look like this:
 
 ```bash
-curl -k -F "SUBMISSION=@sub.xml" -F "SAMPLE=@samp.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20PASSWORD" 
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "SAMPLE=@samp.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/" 
 ```
 
 The cURL command will return a receipt in XML formatting containing the accession numbers, or if accession numbers were not administered because there was a problem/error then you will get a list of errors to work through before trying again.
