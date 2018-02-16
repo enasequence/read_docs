@@ -213,7 +213,7 @@ The important part of this submission object is the `<MODIFY>` tag. Contrast thi
 Now you can make the necessary changes to the samples. The final step is identical to submitting the samples for the first time in <a href="prog_05.html#submitting-the-xml-files">module 5</a>. You will send the submission xml file and the sample xml file to the ENA REST server using **cURL** or the [webform](https://www-test.ebi.ac.uk/ena/submit/restsubmit.html) and you should receive a receipt in XML format. If the receipt contains `success="true"` then your edit will have been committed to the database. If not, check the error message(s), correct and repeat.
 
 ```bash
-curl -k -F "SUBMISSION=@sub.xml" -F "SAMPLE=@samp.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-000%20password"
+curl -u username:password -F "SUBMISSION=@sub.xml" -F "SAMPLE=@samp.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 ```xml

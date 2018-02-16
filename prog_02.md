@@ -108,7 +108,7 @@ Please note the following.
   * Your cURL command will look something like this
 
 ```bash
-curl -k -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-NNN%20PASSWORD"
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
   * If you are using the webform instead of cURL in Linux or Mac operating systems, use the analysis row and the submission row to browse and navigate to the analysis.xml file and the submission.xml file respectively
