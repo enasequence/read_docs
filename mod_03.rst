@@ -1,11 +1,20 @@
-Module 3: Register Source Samples
-*********************************
+Module 3: Register a Sample
+***************************
 
+Samples represent the source material that has been sequenced. A sample may be connected to read, assembly and various
+types of interpreted data. Samples provide much of the context and value to the data that they are associated with.
 
-Part 1
-======
+Step 1: Select the sample checklist
+===================================
 
-This is the first (of 3) sample registration stages. See module 1_ if you do not know where to access these forms.
+This is the first (of 3) sample registration steps.
+
+Please see module 1_ how to access this form.
+
+ENA provides sample checklists which define all the mandatory and recommended attributes for specific types of samples.
+By declaring that you would like to register your samples using a specific checklist you are enabling the samples to be
+validated for correctness at submission time and are making it easier for other services to find and access the sample
+attribute information.
 
 1. First, go and get your spreadsheet template. This option takes you to the next webform, but you can come back to this first webform at the end to upload your prepared spreadsheet template (step 4).
 
@@ -16,12 +25,12 @@ This is the first (of 3) sample registration stages. See module 1_ if you do not
 
 2. Find a checklist that suits your type of sample. A checklist comprises of a list of attributes that are required to annotate your samples. A well annotated sample is more searchable in the ENA browser and your data will get more exposure.
 3. Now move on to (`Part 2`_) to create the sample template.  
-4. (step 4 is in the previous image) Use this option if you have created your samples as a spreadsheet file from a previous session. When you upload the completed spreadsheet the service will jump you to (`Part 3`_) and it will have used the spreadsheet you auto-populate the webform.
+4. (step 4 is shown in the first image) Use this option if you have created your samples as a spreadsheet file from a previous session. When you upload the completed spreadsheet the service will jump you to (`Part 3`_) and it will have used the spreadsheet you auto-populate the webform.
 
 .. _1: mod_01.html
 
-Part 2
-======
+Step 2: Select the checklist fields
+===================================
 
 .. image:: images/mod_03_p02_a.png
 
@@ -30,7 +39,7 @@ Part 2
 .. image:: images/mod_03_p02_b.png
 
 
-This is the second (of 3) sample registration stages.
+This is the second (of 3) sample registration steps.
 
 1. Take a look at the list of attributes. Some will be mandatory, others are recommended. Every checked item in the list appears as a field in the webform `Part 3`_ or as a column in the spreadsheet file that you can download in step 3 below. Please select or deselect the fields as appropriate. Remember that the more fields you can provide the more you are enabling your users to make accurate interpretations of your study.
 2. You can create additional attributes that do not exist in the checklist. However in most cases you should find what you need among the default checklist fields.
@@ -40,12 +49,12 @@ This is the second (of 3) sample registration stages.
 
 
 
-Part 3
-======
+Step 3: Edit and submit samples
+===============================
 
 .. image:: images/mod_03_p03.png
 
-This is the final (of 3) sample registration forms.  This form appears after uploading a spreadsheet into the form in `Part 1`_ step 3, or directly from the form in `Part 2`_ if you have not used a the spreadsheet file and intend to type directly into the webform
+This is the final (of 3) sample registration steps.  This form appears after uploading a spreadsheet into the form in `Part 1`_ step 3, or directly from the form in `Part 2`_ if you have not used a the spreadsheet file and intend to type directly into the webform
 
 1. If you have uploaded a spreadsheet file, the number of rows correspond to the number of samples (you can skip this step). If you have not used a spreadsheet you can specify how many samples are going to be added to this webform (they will be partially filled out using the template that you set up from the previous webform).
 2. These basic sample details may already be filled from the uploaded spreadsheet. If not you will notice that the webform has provided unique names for each sample but if you did not provide a prefix in the previous form they will be named 1 to n, so you should change these and make them more meaningful! You are looking at a single sample in this webform (and its annotation values), to move between the other samples in this submission use the buttons in step 3. 

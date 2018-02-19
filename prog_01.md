@@ -2,10 +2,11 @@
 
 ## The Study Object
 
-Objects such as a study (also referred to as a project) are stored in the ENA in XML form like this:
+A study (also referred to as a project) object is submitted in XML format like this:
 
 ```xml
-<?xml version = '1.0' encoding = 'UTF-8'?><PROJECT_SET>
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<PROJECT_SET>
    <PROJECT alias="iranensis_wgs" center_name="HKI JENA" accession="PRJEB5932">
       <NAME>WGS Streptomyces iranensis</NAME>
       <TITLE>Whole-genome sequencing of Streptomyces iranensis</TITLE>
@@ -32,6 +33,11 @@ Objects such as a study (also referred to as a project) are stored in the ENA in
 </PROJECT_SET>
 ```
 
+You can register one or more studies at the same time by using one `<PROJECT></PROJECT>` block for each study.
+
+The study XML format is defined by a [XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd).
+Studies can also be submitted using an [alternative XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.project.xsd).
+
 Creating objects in XML format is not always necessary. The Webin submission tool can create a study from a <a href="./mod_02.html">webform</a>. 
 However, you will find that in some cases there is more flexibility in creating submittable XML objects yourself. 
 
@@ -47,7 +53,7 @@ as a first step towards learning to submit ENA objects.
 
 ## Create the Study XML
 
-Below is an example XML for submitting a study. Change the XML by entering your own information and save it as a file, for example "project.xml".
+Below is an example XML for submitting a study. Change the XML by entering your own information and save it as a file, for example `project.xml`.
 
 ```xml
 <?xml version = '1.0' encoding = 'UTF-8'?>
@@ -66,12 +72,13 @@ In your file "project.xml" change the value of `alias` to be a unique name.
 You may need this unique name to refer to your study when adding other objects to it. 
 It can be a short acronym but it should be meaningful and memorable in some way.
 
-Within the `<DESCRIPTION></DESCRIPTION>` block add an abstract detailing the project including any information that may be useful for someone to interpret your project correctly. Within the `<TITLE></TITLE>` block add a descriptive title. 
+Within the `<DESCRIPTION></DESCRIPTION>` block add an abstract detailing the project including any information that may be 
+useful for someone to interpret your project correctly. Within the `<TITLE></TITLE>` block add a descriptive title. 
 
 ## Create a Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call the file "sub.xml" for this purpose. 
+Let's call this file `sub.xml`. 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -137,7 +144,7 @@ or you can look at the receipt XML:
 
 To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
 
-The attribute **success** will have value **true** or value **false**. If the attribute 
+The attribute `success` will have value `true` or `false`. If the value 
 is false then the submission did not succeed. In this case check the rest of 
 the receipt for error messages and after making corrections, try the submission again. 
 
@@ -146,18 +153,21 @@ contain the accession numbers of the objects that you have submitted. In the cas
 an ENA study this is likely to be the accession that you will be including in a 
 publication.
 
+### Accession numbers in the Receipt XML
+
+Webin will report an accession number for the study that starts with PRJEB.
+ 
 ```xml
    <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
 ```
-
-Webin will report an accession number for the study that starts with PRJEB. This accession number is called 
-the BioProject accession and is typically used in journal publications. The study will also be assigned an 
-alternative accession number that starts with ERP. This accession number is called the SRA (Sequence Read Archive) 
-study accession.
+ 
+This accession number is called the BioProject accession and is typically used in journal publications. The study will
+also be assigned an alternative accession number that starts with ERP. This accession number is called the SRA 
+(Sequence Read Archive) study accession.
 
 ## Test and production services
 
-Note the info message in the receipt:
+Note the message in the receipt:
 ```xml
 <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 ```
@@ -165,7 +175,7 @@ Note the info message in the receipt:
 It is advisable to first test your submissions using the Webin test service where changes are not permanent 
 and are erased every 24 hours. 
 
-Once you are happy with the result of the submission you can use the CURL command again, 
+Once you are happy with the result of the submission you can use the CURL command again 
 but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
 `www.ebi.ac.uk`:
 
