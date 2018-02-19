@@ -25,6 +25,14 @@ The following picture illustrates the stages of the submission process:
 Each submission must be associated with a pre-registered study and a sample. The study and sample 
 accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
 
+Instructions for interactive submitters:
+- [Register a Study](mod_02.html)
+- [Register a Sample](mod_03.html)
+
+Instructions for programmatic submitters:
+- [Register a Study](prog_01.html)
+- [Register a Sample](prog_05.html)
+
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission must be specified using a manifest file.

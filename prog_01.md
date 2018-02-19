@@ -72,7 +72,7 @@ It can be a short acronym but it should be meaningful and memorable in some way.
 Within the `<DESCRIPTION></DESCRIPTION>` block add an abstract detailing the project including any information that may be 
 useful for someone to interpret your project correctly. Within the `<TITLE></TITLE>` block add a descriptive title. 
 
-## Create a Submission XML
+## Create the Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
 Let's call this file `sub.xml`. 

@@ -166,7 +166,7 @@ Below is an example XML for submitting a sample. Change the XML by entering your
 </SAMPLE_SET>
 ```
 
-## Create a Submission XML
+## Create the Submission XML
 
 To submit a sample or any other object(s), you need an accompanying submission XML in a separate file. 
 Let's call this file `sub.xml`. 
