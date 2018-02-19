@@ -79,7 +79,9 @@ You can register one or more samples at the same time by using one `<SAMPLE></SA
 The sample XML format is defined by a [XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd).
 
 Samples represent the source material that has been sequenced. A sample may be connected to read, assembly and various
-types of interpreted data. Samples provide much of the context and value to the data that they are associated with. 
+types of interpreted data. Samples provide much of the context and value to the data that they are associated with.
+
+![ENA Data Model](images/webin_data_model_sample.png) 
 
 Most of the sample information comes in the form of `<TAG>` and `<VALUE>` pairs that belong in `<SAMPLE_ATTRIBUTE>`
 blocks. You can have any number of `<SAMPLE_ATTRIBUTE>` blocks in your samples.

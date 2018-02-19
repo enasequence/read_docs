@@ -43,13 +43,10 @@ However, you will find that in some cases there is more flexibility in creating 
 
 Do consider using the interactive Webin submission tool to create a study and then adding the other objects programmatically. It is fine to mix and match submission routes and you may find that programmatic submission is better suited to repetitive submission tasks, of which study creation is not normally one.
 
-<!-- [webform](/mod_02.html) does not work -->
-
 A study is used to group other objects together, so we will look into creating a study
 as a first step towards learning to submit ENA objects.
 
-![ENA Data Model](images/prog_01_p01.png) <!-- {:height="100px" width="100px"}  does not work. if no need to resize it's fine. had to explicitly resize image-->
-<!-- <img src="_images/prog_01_p01.png" width="300" height="250" align="middle"/> problem: size adjustment works but sphinx does not copy over new image when it is not called using markdown syntax. also align="middle" does not work -->
+![ENA Data Model](images/webin_data_model_study.png) 
 
 ## Create the Study XML
 
