@@ -1,4 +1,4 @@
-# Module 1: Create a Study
+# Module 1: Register a Study
 
 ## The Study Object
 
@@ -149,6 +149,11 @@ publication.
 ```xml
    <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
 ```
+
+Webin will report an accession number for the study that starts with PRJEB. This accession number is called 
+the BioProject accession and is typically used in journal publications. The study will also be assigned an 
+alternative accession number that starts with ERP. This accession number is called the SRA (Sequence Read Archive) 
+study accession.
 
 ## Test and production services
 
