@@ -68,32 +68,28 @@ Validation is done using the `-validate` command line option. Validated files ar
 uploaded using the `-upload` option to the submitter specific private file upload area 
 in webin.ebi.ac.uk and finally submitted using the `-submit` option.
 
+The `-validate` must be completed successfully before the validated files can 
+be uploaded and submitted. Please refer to the following documents for
+validation rules:
+- [Genome Assembly Submissions](cli_02.html)
+- [Transcriptome Assembly Submissions](cli_03.html)
+
 All three options can be given at the same time `-validate -upload -submit` or
 individual stages can be re-run in case of any errors. 
 
-Validated and uploaded files are organised into `<context>/<name>` directory structure where 
-`<name>` is the submitter provided unique assembly name. The location of the directory structure
-can be specified using the `-outputDir` option.
+Validated files are written into a local directory `<outputDir>/<context>/<name>`.
+The `<outputDir>` is specified using the `-outputDir` option. The `<context>` is
+specified using the `-context` option and the `<name>` is the submitter provided unique 
+name specified in the `info` file (e.g. genome or transcriptome assembly name). This directory
+structure is preserved when uploading the validated files using the 
+`-upload` option to the remote private Webin upload area.  Once the files have been uploaded
+they should be submitted using the `-submit` option.
 
-## Genome and transcriptome assembly accessions
-
-Once a genome or transcriptome assembly has been submitted an analysis (ERZ) accession is
-assigned and returned to the submitter. 
-
-The ERZ accession should not be used in permanent public citations to the submission. However, ERZ
-accessions can be used in Webin submission services when referring to the submission. 
-
-Genome and transcriptome assemblies are associated with the following accessions that
-can be used in citations:
-
-- Study accession (PRJ*)
-- Sample accession (SAM*)
-- Genome assembly accession (GCA*)
-- Sequence accession(s)
-
-Genome assembly and sequence accession(s) are assigned only after the submission 
-has been processed and archived by ENA. Submitters will receive these accession numbers by e-mail or 
-they may be retrieved from the [Webin reports service](prog_10.html).
+Once the submission is complete an accession number is immediately returned to the
+submitter by the Webin command line submission interface. Please refer to the following
+documents for advice which long term stable accession numbers can be used in publications:
+- [Genome Assembly Submissions](cli_02.html)
+- [Transcriptome Assembly Submissions](cli_03.html)
 
 ## Download the program
 

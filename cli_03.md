@@ -22,6 +22,14 @@ The following picture illustrates the stages of the transcriptome assembly submi
 Each submission must be associated with a pre-registered study and a sample. The study and sample 
 accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
 
+Instructions for interactive submitters:
+- [Register a Study](mod_02.html)
+- [Register a Sample](mod_03.html)
+
+Instructions for programmatic submitters:
+- [Register a Study](prog_01.html)
+- [Register a Sample](prog_05.html)
+
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission are specified using a manifest file.
@@ -34,9 +42,15 @@ A transcriptome assembly submission consists of the following files:
 - 0-1 fasta files
 - 0-1 flat files
 
+The following files are mandatory:
+
+- 1 manifest file must be provided.
+- 1 assembly info file must be provided.
+- 1 fasta or 1 flat file must be provided.
+
 ### Sequence names
 
-Sequences must have a unique name that is provided in the fasta or flat files. 
+Sequences must have a unique name within the submission that is provided in the fasta or flat files. 
 
 ### Manifest file
 
@@ -106,6 +120,26 @@ For example the following AC * line defines name 'contig1':
 Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.html). 
 Please refer to the [Webin command line submission interface](cli_01.html) documentation for more information 
 about the submission process.
+
+## Assigned accession numbers
+
+Once the transcriptome assembly has been submitted a analysis (ERZ) accession number is immediately assigned and 
+returned to the submitter by the Webin command line submission interface. 
+
+The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the 
+Webin submission service. For example, the submitter can retrieve the assigned sequence accessions 
+from the [Webin XML and reports portal](prog_11.html) or from the [Webin reports service](prog_10.html) using
+the ERZ accession number.
+
+For transcriptome assemblies, long term stable accession numbers that can be used in publications are:
+
+- Study accession (PRJ) assigned at time of study registration.
+- Sample accession (SAM) assigned at time of study registration.
+- Sequence accession(s) assigned once the transcriptome assembly submission has been fully processed by ENA.
+
+Submitters can retrieve the sequence accession numbers from the [Webin XML and reports portal](prog_11.html) 
+or from the [Webin reports service](prog_10.html). These accession numbers are also send to the submitters by
+e-mail.
 
 ## Validation rules
 

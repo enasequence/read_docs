@@ -38,6 +38,14 @@ accessions or unique names (aliases) are provided in an `info` file associated w
 Genome assemblies except metagenomes are uniquely identified by a study and a sample. When assemblies
 are updated they must be re-submitted with the same study and sample as in the original submission.
 
+Instructions for interactive submitters:
+- [Register a Study](mod_02.html)
+- [Register a Sample](mod_03.html)
+
+Instructions for programmatic submitters:
+- [Register a Study](prog_01.html)
+- [Register a Sample](prog_05.html)
+
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission are specified using a manifest file.
@@ -53,13 +61,22 @@ A genome assembly submission consists of the following files:
 - 0-1 chromosome list file
 - 0-1 unlocalised list file
 
+The following files are mandatory:
+
+- 1 manifest file must be provided.
+- 1 assembly info file must be provided.
+- 1 fasta or 1 flat file must be provided.
+- If there are AGP sequences then 1 AGP file must be provided.
+- If there are chromosomes then 1 chromosome list file must be provided.
+- If there are unlocalised sequences then 1 unlocalised list file must be provided. 
+
 ### Sequence names
 
-Sequences must have a unique name that is provided in the fasta, AGP or flat files. 
+Sequences must have a unique name within the submission that is provided in the fasta, AGP or flat files. 
 It is essential that the sequence names are unique and used consistently between files. 
 
-For example, the chromosome list file must refer to the chromosome sequences using the unique names. 
-Similarly, an AGP file must refer to scaffolds or contigs using the unique names.
+For example, the chromosome list file must refer to the chromosome sequences using the unique sequence names. 
+Similarly, an AGP file must refer to scaffolds or contigs using the unique sequence names.
 
 ### Manifest file
 
@@ -95,8 +112,8 @@ The file has two columns  separated by a tab (or any whitespace characters):
 The following fields must be provided:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
-- ASSEMBLYNAME: The unique assembly name
-- COVERAGE: The assembly coverage
+- ASSEMBLYNAME: The unique assembly name.
+- COVERAGE: The estimated sequencing depth of coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
 
@@ -104,6 +121,8 @@ The following fields can be optionally provided:
 
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap.
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA'.
+
+Please see further below for validation rules affecting some of these fields.
 
 An example of an assembly info file:
 
@@ -211,6 +230,27 @@ cb25.NA_108     III
 Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.html). 
 Please refer to the [Webin command line submission interface](cli_01.html) documentation for more information 
 about the submission process.
+
+## Assigned accession numbers
+
+Once the genome assembly has been submitted a analysis (ERZ) accession number is immediately assigned and returned to the 
+submitter by the Webin command line submission interface. 
+
+The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the 
+Webin submission service. For example, the submitter can retrieve the assigned genome assembly and sequence accessions 
+from the [Webin XML and reports portal](prog_11.html) or from the [Webin reports service](prog_10.html) using
+the ERZ accession number.
+
+For genome assemblies, long term stable accession numbers that can be used in publications are:
+
+- Study accession (PRJ) assigned at time of study registration.
+- Sample accession (SAM) assigned at time of study registration.
+- Sequence accession(s) assigned once the genome assembly submission has been fully processed by ENA.
+- Genome assembly accession (GCA) assigned once the genome assembly has been fully processed by ENA.
+
+Submitters can retrieve the genome and sequence accession numbers from the [Webin XML and reports portal](prog_11.html) 
+or from the [Webin reports service](prog_10.html). These accession numbers are also send to the submitters by
+e-mail.
 
 ## Validation rules
 
