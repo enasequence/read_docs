@@ -78,6 +78,9 @@ You can register one or more samples at the same time by using one `<SAMPLE></SA
 
 The sample XML format is defined by a [XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd).
 
+Samples can also be registered using the [Interactive Webin submission service](mod_03.html). However, you may find that 
+in some cases there is more flexibility in creating submittable XML objects yourself. 
+
 Samples represent the source material that has been sequenced. A sample may be connected to read, assembly and various
 types of interpreted data. Samples provide much of the context and value to the data that they are associated with.
 

@@ -38,10 +38,8 @@ You can register one or more studies at the same time by using one `<PROJECT></P
 The study XML format is defined by a [XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd).
 Studies can also be submitted using an [alternative XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.project.xsd).
 
-Creating objects in XML format is not always necessary. The Webin submission tool can create a study from a <a href="./mod_02.html">webform</a>. 
-However, you will find that in some cases there is more flexibility in creating submittable XML objects yourself. 
-
-Do consider using the interactive Webin submission tool to create a study and then adding the other objects programmatically. It is fine to mix and match submission routes and you may find that programmatic submission is better suited to repetitive submission tasks, of which study creation is not normally one.
+Studies can also be registered using the [Interactive Webin submission service](mod_02.html). However, you may find that 
+in some cases there is more flexibility in creating submittable XML objects yourself. 
 
 A study is used to group other objects together, so we will look into creating a study
 as a first step towards learning to submit ENA objects.
