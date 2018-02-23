@@ -20,7 +20,7 @@ The majority of submissions to the ENA begin `here <https://www.ebi.ac.uk/ena/su
    :align: right
 
 5. Genome submissions require a study and a sample so after step 2 and 3, if you have assembled genomes to submit you can go to Module 6_.
-6. Transcriptome assembly submissions also require a project and samples to be submitted (step 2 and 3 above). The source NGS read data should also be made available to support the transcriptome assembly (step 4 above). After that go to Module 10_ to submit a TSA.
+6. Transcriptome assembly (TSA) submissions also require a project and samples to be submitted (step 2 and 3 above). The source NGS read data should also be made available to support the transcriptome assembly (step 4 above). After that go to Module 10_ to submit a TSA.
 7. This step is for isolated sequences, for example coding genes and rRNA sequences. More information `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_
 8. When submitting sample objects (as in step 3 above) you need to apply a taxonomic classification. Thus your organism (or environmental sample classification) must be registered with a tax id. Use this option to check that your organism has a tax id and if not you can request one from the same webform. For more information about taxonomy there is a section in the FAQ_ that may be useful.
 
