@@ -1,8 +1,8 @@
 Module 10: Transcriptome Assembly Submission
 ********************************************
 
-Part 1: Data Files needed For TSA
-=================================
+Part 1: Data Files needed For Transcriptome Assembly (TSA)
+==========================================================
 
 .. image:: images/mod_10_p01.png
 
