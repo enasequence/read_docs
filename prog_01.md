@@ -35,8 +35,8 @@ A study (also referred to as a project) object is submitted in XML format like t
 
 You can register one or more studies at the same time by using one `<PROJECT></PROJECT>` block for each study.
 
-The study XML format is defined by a [XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd).
-Studies can also be submitted using an [alternative XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.project.xsd).
+The study XML format is defined by the [ENA.project.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd) XML schema.
+Studies can also be submitted using the [SRA.study.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd) XML schema.
 
 Studies can also be registered using the [Interactive Webin submission service](mod_02.html). However, you may find that 
 in some cases there is more flexibility in creating submittable XML objects yourself. 
@@ -63,7 +63,7 @@ Below is an example XML for submitting a study. Change the XML by entering your 
 </PROJECT_SET>
 ```
 
-In your file "project.xml" change the value of `alias` to be a unique name. 
+In your file `project.xml` change the value of `alias` to be a unique name. 
 You may need this unique name to refer to your study when adding other objects to it. 
 It can be a short acronym but it should be meaningful and memorable in some way.
 

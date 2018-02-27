@@ -76,7 +76,7 @@ A sample object is submitted in XML format like this:
 
 You can register one or more samples at the same time by using one `<SAMPLE></SAMPLE>` block for each sample.
 
-The sample XML format is defined by a [XML schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd).
+The sample XML format is defined by the [SRA.sample.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd) XML schema.
 
 Samples can also be registered using the [Interactive Webin submission service](mod_03.html). However, you may find that 
 in some cases there is more flexibility in creating submittable XML objects yourself. 
