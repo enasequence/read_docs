@@ -1,4 +1,4 @@
-# Module 6: Updating Sample objects using REST API
+# Module 6: Update a Sample
 
 <!-- ERA980084 -->
 
@@ -170,14 +170,14 @@ You can login to this service, navigate to the sample you need to collect and th
 Unlike using the ENA browser you can not provide a range or comma separated list of accession numbers in the URL but since you have the use of targeted URLs you can script multiple calls together and concatonate afterwards.
 
 ```bash
-curl "https://Webin-0000:password@www.ebi.ac.uk/ena/submit/drop-box/samples/ERS1835108?format=xml" >> samp.xml 
+curl "https://Webin-0000:password@www.ebi.ac.uk/ena/submit/drop-box/samples/ERS1835108?format=xml" >> sample.xml 
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  3191  100  3191    0     0  12603      0 --:--:-- --:--:-- --:--:-- 12612
 ```
 
 ```
-cat samp.xml 
+cat sample.xml 
 <SAMPLE_SET>
    <SAMPLE accession="ERS1835108" alias="16S_ArcMicro_NICE15_1"
            center_name="CIIMAR - Interdisciplinary Centre of Marine and Environmental Research">
@@ -187,97 +187,38 @@ cat samp.xml
 
 ```
 
-The resulting file (for example, 'samp.xml') will need some editing but not much. For instance all `<SAMPLE>` blocks need to be contained in a single `<SAMPLE_SET>` block (as described <a href="prog_05.html#submitting-many-samples-simultaneously">here</a>) 
+The resulting file (for example, `sample.xml`) will need some editing but not much. For instance all `<SAMPLE>` blocks need to be contained in a single `<SAMPLE_SET>` block (as described <a href="prog_05.html#submitting-many-samples-simultaneously">here</a>) 
 
-## Step 2: Create a submission XML file
+## Step 2: Create the submission XML
 
-As with <a href="prog_04.html#step-2-create-a-submission-xml-file">study update</a> and sample submission, a submission object is required to accompany the XML file containing the samples that you obtained from the previous step. You may have this from a previous submission or update but it is also very quick to create one
+To update the sample, you need an accompanying submission XML in a separate file. Let's call this file `submission.xml`.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<SUBMISSION alias="arctic_ocean_sample_updates" center_name="">
+```xml 
+ <?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION>
    <ACTIONS>
       <ACTION>
-         <MODIFY source="samp.xml" schema="sample"/>
+         <MODIFY/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
 ```
+ 
+The submission XML declares one or more Webin submission service actions. In this case 
+the action is `<MODIFY/>` which is used to update existing objects. 
+The XMLs can be submitted programmatically, using CURL on command line or using the 
+[Webin XML and reports portal](prog_11.html). 
 
-Make sure that you give the submission object a unique alias (which can be any string) and fill in the center_name for your account (you can find this in the “my account details” drop down from inside [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home)).
+## Step 3: Submit the XMLs
 
-The important part of this submission object is the `<MODIFY>` tag. Contrast this with the tag used to submit the sample objects for the first time (<a href="prog_05.html">in module 5</a>) which is `<ADD>`. This tells the REST server that we are updating an existing object instead of adding a new one.
+The final step is identical to submitting a sample for the first time. The only difference is in the 
+contents of the `sample.xml` and `submission.xml` files. 
 
-## Step 3: Make the edit and send to ENA
-
-Now you can make the necessary changes to the samples. The final step is identical to submitting the samples for the first time in <a href="prog_05.html#submitting-the-xml-files">module 5</a>. You will send the submission xml file and the sample xml file to the ENA REST server using **cURL** or the [webform](https://www-test.ebi.ac.uk/ena/submit/restsubmit.html) and you should receive a receipt in XML format. If the receipt contains `success="true"` then your edit will have been committed to the database. If not, check the error message(s), correct and repeat.
-
-```bash
-curl -u username:password -F "SUBMISSION=@sub.xml" -F "SAMPLE=@samp.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
+Please refer to [Register a Sample](prog_5.html) for further XML submission instructions. 
+Note that the returned Receipt XML will contain the `MODIFY` action rather that the `ADD` action:
+ 
+ ```
+    ...
+    <ACTIONS>MODIFY</ACTIONS>
+    ...
 ```
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-07-31T16:20:52.075+01:00" submissionFile="sub.xml" success="true">
-     <SAMPLE accession="ERS1835108" alias="16S_ArcMicro_NICE15_1" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176090" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835109" alias="16S_ArcMicro_NICE15_2" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176091" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835110" alias="16S_ArcMicro_NICE15_3" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176092" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835111" alias="16S_ArcMicro_NICE15_4" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176093" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835112" alias="16S_ArcMicro_NICE15_5" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176094" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835113" alias="16S_ArcMicro_NICE15_6" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176095" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835114" alias="16S_ArcMicro_NICE15_7" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176096" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835115" alias="16S_ArcMicro_NICE15_8" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176097" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835116" alias="16S_ArcMicro_NICE15_9" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176098" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835117" alias="18S_ArcMicro_NICE15_1" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176099" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835118" alias="18S_ArcMicro_NICE15_2" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176100" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835119" alias="18S_ArcMicro_NICE15_3" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176101" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835120" alias="18S_ArcMicro_NICE15_4" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176102" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835121" alias="18S_ArcMicro_NICE15_5" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176103" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835122" alias="18S_ArcMicro_NICE15_6" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176104" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835123" alias="18S_ArcMicro_NICE15_7" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176105" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835124" alias="18S_ArcMicro_NICE15_8" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176106" type="biosample"/>
-     </SAMPLE>
-     <SAMPLE accession="ERS1835125" alias="18S_ArcMicro_NICE15_9" status="PUBLIC">
-          <EXT_ID accession="SAMEA104176107" type="biosample"/>
-     </SAMPLE>
-     <SUBMISSION accession="" alias="arctic_ocean_sample_updates"/>
-     <MESSAGES/>
-     <ACTIONS>MODIFY</ACTIONS>
-</RECEIPT>
-```
-
-Note the use of the test server in the example above. More details are in <a href="prog_01.html#the-receipt-xml">module 1</a>. To run the update for real use `www.ebi.ac.uk` instead of `www-test.ebi.ac.uk` and remove the **k** flag.
