@@ -30,7 +30,7 @@ Some parts of the study object can be edited. You can change the release date or
 
 1. Login to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and find the studies tab.
 2. If you have a long list of studies you can search for one by name or accession. This functionality exists in the other tabs too.
-3. If your study is confidential you can change the release date by clicking on the pencil icon. A calendar will open so that you can navigate to required date. To release the study simply select the current date/present day. Releasing a study will cause all the data associated to that study to be released as well. Upon releasing a study various stages are set in motion:
+3. If your study is confidential you can change the release date by clicking on the pencil icon. A calendar will open so that you can navigate to the required date. To release the study simply select the current date/present day. Releasing a study will cause all the data associated to that study to be released as well. Upon releasing a study various stages are set in motion:
 
 	- Moving read files and sequence files from our confidential archive to the public servers
 	- Indexing and rendering the study and its affiliated objects so that they can be linked-to and visualised in the ENA browser
