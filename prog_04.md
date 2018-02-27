@@ -14,7 +14,7 @@ If you used REST API to submit the study in the first place you can use the XML 
 
 If you don't have an XML file containing the study you can copy the public version by using __&display=xml__ at the end of the study page. For example, `http://www.ebi.ac.uk/ena/data/view/PRJEB5932&display=xml`. Note that the web version has additional blocks that are not part of the original XML as well as parts that have been added automatically and can be cleaned up for the purpose of updating (besides, they will be added again automatically). For example the below web version XML can be cleaned up so that it looks like submitted version that follows it.
 
-#### Web Version
+### Web Version
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -67,7 +67,7 @@ If you don't have an XML file containing the study you can copy the public versi
 </ROOT>
 ```
 
-#### Submitted version
+### Submitted version
 ```xml
 <?xml version="1.0" encoding="US-ASCII"?>
 <PROJECT_SET>
@@ -86,7 +86,7 @@ If you don't have an XML file containing the study you can copy the public versi
 
 The submitted version is much shorter and I even removed the unique alias because now that the object has an accession number the server will not need both alias and accession number to realise the identity of the object that is being overwritten.
 
-#### ERP version
+### ERP version
 
 If your study is not public yet and you do not have it in XML format you can try using the submit/drop-box/ REST [endpoint](https://www.ebi.ac.uk/ena/submit/drop-box). Log in to here with your Webin id and password and click on 'STUDY'. You will see a list of studies submitted from your account and you can view the XML for each by selecting the study and then clicking 'xml'
  
@@ -96,46 +96,36 @@ If your study is not public yet and you do not have it in XML format you can try
 
 Studies obtained from this resource are actually different (you may have noticed). Previously a study in the read domain had an accession like this *ERP000001* whereas a project object (used for registering genome assemblies among other things) would have an accession like this *PRJEB0001*. We no longer distinguish between the 2 objects officially and we expose the PRJEB type more while the ERP type is kept for legacy reasons. You can edit either the PRJEB type or the ERP type and most attributes will be carried over to the other one. Similarly when you create a PRJEB type project then an ERP project is created automatically (and vice versa). 
 
-## Step 2: Create a submission XML file
+## Step 2: Create the submission XML
 
-As with submitting a new study (see <a href="./prog_01.html">module 1</a>), a submission object is required to accompany the study XML for updating an existing study object too. You may have this from a previous submission or update but it is also very quick to create.
+To update the study, you need an accompanying submission XML in a separate file. Let's call this file `submission.xml`.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<SUBMISSION alias="cheese_update" center_name="">
+```xml 
+ <?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION>
    <ACTIONS>
       <ACTION>
-         <MODIFY source="project.xml" schema="project"/>
+         <MODIFY/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
 ```
+ 
+The submission XML declares one or more Webin submission service actions. In this case 
+the action is `<MODIFY/>` which is used to update existing objects. 
+The XMLs can be submitted programmatically, using CURL on command line or using the 
+[Webin XML and reports portal](prog_11.html). 
 
-Make sure that you give the submission object a unique alias (which can be any string) and fill in the center_name for your account (you can find this in the "my account details" drop down from inside [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home). 
+## Step 3: Submit the XMLs
 
-If you are updating the 'ERP' version of the project (see <a href="#erp-version">above</a>) you also need to specify this in the submission XML by changing ` schema="project"` to `schema="study"` because the ERP style objects use a different schema.
+The final step is identical to submitting a study for the first time. The only difference is in the 
+contents of the `project.xml` and `submission.xml` files. 
 
-The important part of this submission object is the `<MODIFY>` tag. Contrast this with the tag used to submit an object for the first time (<a href="./prog_01.html#create-a-submission-xml">in module 1</a>) which is `<ADD>`. This tells the REST server that we are updating an existing object instead of adding a new one.
-
-## Make the edit and send to ENA
-
-Now you can make changes to the study object contained in the XML file. For example as a test, you might try modifying the title or the description. 
-
-The final step is identical to submitting a study for the first time in <a href="./prog_01.html#send-the-xml-files-to-ena">module 1</a>. You will send the submission xml and the study xml to the ENA REST server using **cURL** or the [webform](https://www.ebi.ac.uk/ena/submit/restsubmit.html) and you should receive a receipt in XML format. If the receipt contains `success="true"` then your edit will have been committed to the database. If not, check the error message(s), correct and repeat.
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-07-17T13:22:11.020+01:00" submissionFile="sub.xml" success="true">
-    <PROJECT accession="PRJEB14252" alias="ena-STUDY-klanvin-03-06-2016-07:54:42:301-120"
-        status="PUBLIC"/>
-    <SUBMISSION accession="" alias="cheese_update"/>
+Please refer to [Register a Study](prog_1.html) for further XML submission instructions. 
+Note that the returned Receipt XML will contain the `MODIFY` action rather that the `ADD` action:
+ 
+ ```
+    ...
     <ACTIONS>MODIFY</ACTIONS>
-</RECEIPT>
+    ...
 ```
-
-
-
-
-
-

@@ -32,7 +32,7 @@ As with a TSV/annotation checklist submission (module 2), a project/study is req
 As with a TSV/annotation checklist submission, the sequence flat file must be compressed and uploaded to your Webin ftp directory. You may also need to calculate the MD5 checksum. Check <a href="./prog_02.html#step-3-upload-the-tsv-file-to-your-ftp-directory">here</a> and <a href="./file_prep.html">here</a> for instructions.
 In this example I have an ENA flat file called **Human_parvovirus_B19_entryupload.embl** which I have compressed to create file **Human_parvovirus_B19_entryupload.embl.gz**. The checksum of **Human_parvovirus_B19_entryupload.embl.gz** is `7138bf3320cad8d215b7e9930ded114b`.
 
-### Step 3: Create the analysis and submission XMLs
+### Step 3: Create the analysis XML
 
 First check how the analysis file was created in module 2 <a href="./prog_02.html#step-4-prepare-the-analysis-xml-file">step 4</a>
 
@@ -58,39 +58,103 @@ In this example the analysis file looks like this
 
 In this case there is no ERT number/checklist attribute because no TSV annotation checklist template is being used. Also the file type attribute is different: `filetype="flatfile"`. The title and description can be a brief description of what is presented in the sequence flat file. Make sure to add all your own attributes and field values as the above is only for example purposes.
 
-The submission XML in this example looks like this:
+### Step 4: Create the submission XML
+
+To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
+Let's call this file `submission.xml`. 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<SUBMISSION alias="entry_upload_Human_parvovirus_B19" center_name="EBI">
+<SUBMISSION>
    <ACTIONS>
       <ACTION>
-         <ADD source="analysis.xml" schema="analysis"/>
+         <ADD/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
 ```
 
-As in module 2 <a href="./prog_02.html#step-5-prepare-a-submission-xml-file">step 5</a>, the next step is to complete a submission XML file. Provide a unique alias for the submission object and reference the file containing the analysis object (in this case I called it 'analysis.xml').
+The submission XML declares one or more Webin submission service actions. 
+In this case the action is `<ADD/>` which is used to submit new objects. 
 
-### Step 4: Send both XMLs to ENA using REST API
+The XMLs can be submitted programmatically, using CURL on command line or 
+using the [Webin XML and reports portal](prog_11.html).
 
-This step is the same as module 2 <a href="prog_02.html#step-6-send-the-xmls-to-ena-through-the-rest-api">step 6</a>.
+### Step 5: Submit the XMLs
 
-Use cURL or the web form to send the XMLs to ENA and register the flat file submission. Use the test server first and if successful and you are happy with the receipt proceed to submit to the production server.
+CURL is a Linux/Unix command line program which you can use to send the `analysis.xml` and `submission.xml`
+to the Webin submission service.
 
-In this example I obtained the following receipt
+```bash
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+```
+
+Please provide your Webin submission account credentials using the `username` and `password`.
+
+After running the command above a receipt XML is returned. It will look like the one below:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-05-08T12:51:53.601+01:00" submissionFile="submission.xml" success="true">
+<RECEIPT receiptDate="2017-05-05T15:28:38.557+01:00" submissionFile="submission.xml" success="true">
    <ANALYSIS accession="ERZ408000" alias="Human_parvovirus_B19_entryupload" status="PRIVATE" />
-   <SUBMISSION accession="ERA911540" alias="entry_upload" />
+   <SUBMISSION accession="ERA911540" alias="entry_upload_Human_parvovirus_B19" />
+   <MESSAGES>
+      <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+   </MESSAGES>
    <ACTIONS>ADD</ACTIONS>
 </RECEIPT>
 ```
 
-In this example the analysis received accession ERZ408000 and the submission received accession ERA911540. You will not need the submission accession, whereas the analysis accession may be useful if you need to enquire about the progress of the submission. After the sequence entries are processed they will be accessioned and you will receive the accession (or accession range if multiple sequences were in the flat file) via the email address that is registered with your Webin account. Do not quote the analysis accession in any publication, always quote the sequence accessions (which come later by email). You can also quote the project/study accession, especially if you have used the project to group several submissions across different domains.
+### Submit the XMLs using Webin XML and reports portal
+
+XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
+Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
+to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
+
+### The Receipt XML
+
+To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
+
+The attribute `success` will have value `true` or `false`. If the value 
+is false then the submission did not succeed. In this case check the rest of 
+the receipt for error messages and after making corrections, try the submission again. 
+
+If the success attribute is true then the submission was successful. The receipt will 
+contain the accession numbers of the objects that you have submitted.
+
+### Accession numbers in the Receipt XML
+
+In this example the analysis received accession ERZ408000 and the submission received accession ERA911540. 
+You will not need the submission accession, whereas the analysis accession may be useful if you need to 
+enquire about the progress of the submission. 
+
+After the sequence entries are processed they will be accessioned and you will receive the accession 
+(or accession range if multiple sequences were submitted) via the email address that is registered 
+with your Webin account. Do not quote the analysis accession in any publication, always quote the 
+sequence accessions (which come later by email). You can also quote the study (project) accession,
+especially if you have used the study to group several submissions together.
+
+### Test and production services
+
+Note the message in the receipt:
+```xml
+<INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+```
+
+It is advisable to first test your submissions using the Webin test service where changes are not permanent 
+and are erased every 24 hours. 
+
+Once you are happy with the result of the submission you can use the CURL command again 
+but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
+`www.ebi.ac.uk`:
+
+```bash
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+```
+
+Similarly, if you are using the [Webin XML and reports portal](prog_11.html) change the URL from 
+`wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
+
 
 
