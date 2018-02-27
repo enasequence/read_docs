@@ -73,7 +73,7 @@ useful for someone to interpret your project correctly. Within the `<TITLE></TIT
 ## Create the Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call this file `sub.xml`. 
+Let's call this file `submission.xml`. 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -94,11 +94,11 @@ using the [Webin XML and reports portal](prog_11.html).
 
 ## Submit the XMLs using CURL 
 
-CURL is a Linux/Unix command line program which you can use to send the `project.xml` and `sub.xml`
+CURL is a Linux/Unix command line program which you can use to send the `project.xml` and `submission.xml`
 to the Webin submission service.
 
 ```bash
-curl -u username:password -F "SUBMISSION=@sub.xml" -F "PROJECT=@project.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@project.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 Please provide your Webin submission account credentials using the `username` and `password`.
@@ -108,9 +108,9 @@ After running the command above a receipt XML is returned. It will look like the
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-05-09T16:58:08.634+01:00" submissionFile="sub.xml" success="true">
+<RECEIPT receiptDate="2017-05-09T16:58:08.634+01:00" submissionFile="submission.xml" success="true">
    <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
-   <Submission accession="ERA912529" alias="cheese" />
+   <SUBMISSION accession="ERA912529" alias="cheese" />
    <MESSAGES>
       <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
    </MESSAGES>
@@ -120,20 +120,9 @@ After running the command above a receipt XML is returned. It will look like the
 
 ## Submit the XMLs using Webin XML and reports portal
 
-The XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
- 
-![Webin XML and reports portal](images/webin_portal_study.png) 
-
-Please login using your Webin submission account credentials. 
-Then simply browse to the `project.xml` and `sub.xml` files and click submit. 
-
-You can see the receipt in the browser window either in a tabular format:
-
-![Webin XML and reports portal](images/webin_portal_study2.png)
-
-or you can look at the receipt XML:
-
-![Webin XML and reports portal](images/webin_portal_study3.png)
+XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
+Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
+to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
 
 ## The Receipt XML
 
@@ -175,7 +164,7 @@ but this time using the production service. Simply change the part in the URL fr
 `www.ebi.ac.uk`:
 
 ```bash
-curl -u username:password -F "SUBMISSION=@sub.xml" -F "PROJECT=@project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 Similarly, if you are using the [Webin XML and reports portal](prog_11.html) change the URL from 

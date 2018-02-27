@@ -172,7 +172,7 @@ Below is an example XML for submitting a sample. Change the XML by entering your
 ## Create the Submission XML
 
 To submit a sample or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call this file `sub.xml`. 
+Let's call this file `submission.xml`. 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -193,11 +193,11 @@ using the [Webin XML and reports portal](prog_11.html).
 
 ## Submit the XMLs using CURL 
 
-CURL is a Linux/Unix command line program which you can use to send the `sample.xml` and `sub.xml`
+CURL is a Linux/Unix command line program which you can use to send the `sample.xml` and `submission.xml`
 to the Webin submission service.
 
 ```bash
-curl -u username:password -F "SUBMISSION=@sub.xml" -F "SAMPLE=@sample.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 Please provide your Webin submission account credentials using the `username` and `password`.
@@ -207,7 +207,7 @@ After running the command above a receipt XML is returned. It will look like the
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-07-25T16:07:50.248+01:00" submissionFile="sub.xml" success="true">
+<RECEIPT receiptDate="2017-07-25T16:07:50.248+01:00" submissionFile="submission.xml" success="true">
     <SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">
         <EXT_ID accession="SAMEA104174130" type="biosample"/>
     </SAMPLE>
@@ -221,10 +221,9 @@ After running the command above a receipt XML is returned. It will look like the
 
 ## Submit the XMLs using Webin XML and reports portal
 
-The XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
-
-Please refer to [Register a Study](prog_01.html) to see how the service can be used to submit a
-study. The sample submission process is identical except for the type of XML being submitted.
+XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
+Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
+to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
 
 ## The Receipt XML
 
@@ -272,7 +271,7 @@ but this time using the production service. Simply change the part in the URL fr
 `www.ebi.ac.uk`:
 
 ```bash
-curl -u username:password -F "SUBMISSION=@sub.xml" -F "SAMPLE=@sample.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
 Similarly, if you are using the [Webin XML and reports portal](prog_11.html) change the URL from 
