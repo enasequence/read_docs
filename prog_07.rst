@@ -19,18 +19,17 @@ The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.sra.ebi.a
 XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
 
-
 The XML schemas define the structure of the XMLs and provide controlled vocabularies for many elements. 
 For example `LIBRARY_STRATEGY` and `PLATFORM` element values are restricted by enumerations defined in
 the schemas.
 
-.. image:: images/webin_data_model_read.png
-
 Relationships between objects
 ==============================
 
-Both the run and experiment are associated with other objects.
- 
+Both run and experiment are associated with other objects.
+
+.. image:: images/webin_data_model_read.png
+
 It is common to create many libraries for a single source sample. An experiment points to a sample 
 to allow us to record this relationship.
 
@@ -51,15 +50,15 @@ Because samples are linked to studies through experiments, the model also allows
 A run points to the experiment it is part of using the `<EXPERIMENT_REF>` element.
 This can be done either by using an accession:
 
-```
-<EXPERIMENT_REF accession="ERX123456"/>`
-```
+.. code-block:: xml
+
+    <EXPERIMENT_REF accession="ERX123456"/>
 
 or a name within the submitter's account:
  
-```
-<EXPERIMENT_REF refname="exp_mantis_religiosa"/>`
-```
+.. code-block:: xml
+
+    <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
 
 Above, the `refname` refers to the submitter provided name (alias) of the experiment. 
 
@@ -108,14 +107,14 @@ then simply enter the file name in the Run XML when referring to it:
 
 .. code-block:: xml
 
-<FILE filename="mantis_religiosa_R1.fastq.gz" ... />
+    <FILE filename="mantis_religiosa_R1.fastq.gz" ... />
 
 If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix prefix the file name
 with the name of the subdirectory:
 
 .. code-block:: xml
 
-<FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
+    <FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
 
 Instructions on how to upload files to the Webin upload areas can be found
 `here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
