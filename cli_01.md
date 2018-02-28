@@ -150,3 +150,15 @@ and the `<name>` is the unique name provided in the info file.
 - The `upload` directory contains validated files to be uploaded to the Webin upload area using the `-upload` option.
 - The `submit` directory contains the XMLs created by the `-submit` option including submitted Analysis XML
 and Receipt XML.
+
+## Validation reports
+
+If the `-validate` action fails for any reason then validation reports are written into directory: 
+
+`<context>/<name>/validate`
+
+The validation reports correspond to the input files with an added suffix `.report`. 
+
+For example, a validated file `assembly.info` will have a corresponding validation report 
+`assembly.info.report`, and a validated fasta file `assembly.fasta`  will have a corresponding validation 
+report `assembly.fasta.report`.
