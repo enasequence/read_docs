@@ -10,7 +10,7 @@ Programmatic Submissions
    prog_04
    prog_05
    prog_06
-   rst_prog_7
+   prog_07
    prog_08
    prog_09
    prog_10

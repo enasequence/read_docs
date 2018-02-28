@@ -1,4 +1,4 @@
-# Module 8: Updating Experiment and Run objects using REST API
+# Module 8: Update sequence read metadata
 
 <!-- ERX2149955 ERR2092732  -->
 
@@ -67,50 +67,36 @@ or
 
 Where *sample_name* is the alias of the sample object.
 
-## Step 2: Create a submission XML file
+## Step 2: Create the submission XML
 
-In this example we will update an experiment set and a run set at the same time. It is not common to do this because normally you will only be interested in one kind of edit. To update just a set of runs or experiments (and not both) remove the appropriate `<ACTION>` from the submission XML. In this example the run set is in a file called run.xml and the experiment set is in a file called exp.xml. Please see the <a href="prog_06.html#step-2-create-a-submission-xml-file">sample module</a> for more information as the update process is the same for all objects.
+To update the experiment or run, you need an accompanying submission XML in a separate file. Let's call this file `submission.xml`.
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<SUBMISSION alias="pointer_edits" center_name="">
+```xml 
+ <?xml version="1.0" encoding="UTF-8"?>
+<SUBMISSION>
    <ACTIONS>
       <ACTION>
-         <MODIFY source="exp.xml" schema="experiment"/>
-      </ACTION>
-      <ACTION>
-         <MODIFY source="run.xml" schema="run"/>
+         <MODIFY/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
 ```
+ 
+The submission XML declares one or more Webin submission service actions. In this case 
+the action is `<MODIFY/>` which is used to update existing objects. 
+The XMLs can be submitted programmatically, using CURL on command line or using the 
+[Webin XML and reports portal](prog_11.html). 
 
-## Step 3: Make the edit and send to ENA
+## Step 3: Submit the XMLs
 
-After making the necessary edit to the experiment objects use the same method to register the update as you would for a <a href="prog_07.html#the-submission-and-the-receipt">new submission</a> of experiments and runs. This process is also discussed in some detail in the original <a href="prog_01.html#send-the-xml-files-to-ena">study submission module</a>.
+The final step is identical to submitting an experiment or run for the first time. 
+The only difference is in the contents of the `experiment.xml`, `run.xml` and `submission.xml` files. 
 
-Example cURL command (to the test server)
-
-```bash
-curl -u username:password -F "SUBMISSION=@sub.xml" -F "EXPERIMENT=@exp.xml" -F "RUN=@run.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/"
+Please refer to [Submit sequence reads](prog_07.html) for further XML submission instructions. 
+Note that the returned Receipt XML will contain the `MODIFY` action rather that the `ADD` action:
+ 
+ ```
+    ...
+    <ACTIONS>MODIFY</ACTIONS>
+    ...
 ```
-
-Example of XML receipt returned
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-08-15T15:56:08.077+01:00" submissionFile="sub.xml" success="true">
-     <EXPERIMENT accession="ERX123456" alias="saliva_lib_01" status="PUBLIC"/>
-     <RUN accession="ERR123456" alias="saliva_lib_01_run" status="PUBLIC"/>
-     <SUBMISSION accession="" alias="pointer_edits"/>
-     <MESSAGES>
-          <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
-     </MESSAGES>
-     <ACTIONS>MODIFY</ACTIONS>
-     <ACTIONS>MODIFY</ACTIONS>
-</RECEIPT>
-
-```
-More information on XML receipts can be found in <a href="prog_01.html#the-receipt-xml">module 1</a> of this section.
-
