@@ -1,4 +1,4 @@
-# Module 7: Submit sequence reads
+Module 7: Submit sequence reads
 *********************************
 
 The Experiment and Run Objects
@@ -25,32 +25,31 @@ For example `LIBRARY_STRATEGY` and `PLATFORM` element values are restricted by e
 the schemas.
 
 .. image:: images/webin_data_model_read.png
-  
+
 Relationships between objects
 ==============================
 
 Both the run and experiment are associated with other objects.
  
 It is common to create many libraries for a single source sample. An experiment points to a sample 
-to allow us to record this relationship between experiments and samples.
+to allow us to record this relationship.
 
 It is also common to have multiple lanes for a single experiment. A run points to an experiment 
-to allow us to record this relationship between the objects.
+to allow us to record this relationship.
 
 This model allows:
 
-1. one or more runs in one experiment
-2. one or more experiments in one study (by this rule, multiple runs and samples may also occur in one study)
-3. one or more experiments for one sample (by this rule, one sample can exist in multiple studies)
+1. one or more runs in an experiment
+2. one or more experiments in a study
+3. one or more experiments for a sample
+
+Because samples are linked to studies through experiments, the model also allows:
+
+4. any number of samples in a study
+5. any number of studies for a sample
 
 A run points to the experiment it is part of using the `<EXPERIMENT_REF>` element.
-
-An experiment points to the study it is part of using the `<STUDY_REF>` element.
-Additionally, an experiment is linked to the sample object representing the sequenced source material 
-through the `<SAMPLE_DESCRIPTOR>` element. This means that the study and sample objects are connected 
-to each other via the experiment object. 
-
-A run can point to an experiment by using either an accession:
+This can be done either by using an accession:
 
 ```
 <EXPERIMENT_REF accession="ERX123456"/>`
@@ -64,14 +63,18 @@ or a name within the submitter's account:
 
 Above, the `refname` refers to the submitter provided name (alias) of the experiment. 
 
-If the experiment is being created in the same submission as the run then the `accession` attribute can't be used 
+If the experiment is being created in the same submission as the run then the `accession` attribute can't be used
 as an experiment accession has not been assigned yet. Had the experiment been submitted
 previously then the `accession` attribute could have been used. When referring to experiments in other
 submission accounts the `accession` attribute must be used as names can be ambiguous between
 submitters.
 
-Same principles with `refname` and `accession` attributes apply to all references between objects
-including experiment references to studies and samples.  
+The same principle with `refname` and `accession` attributes applies to all references between objects
+including experiment references to studies and samples.
+
+An experiment points to the study it is part of using the `<STUDY_REF>` element
+and to the sample which has provided the source material using the `<SAMPLE_DESCRIPTOR>` element.
+In both cases, either an accession or a name can be used in the reference.
 
 Metadata standards
 ==================
@@ -89,17 +92,30 @@ publications.
 Supported data formats
 ======================
 
-Please refer to `Supported read data formats <format_01.html>`_.
+Please see `Read data formats <format_01.html>`_.
 
 Upload data files
 =================
 
 Data files must exist in your Webin upload area at the time when a run XML is being submitted. Once the
-run XML has been submitted the data files will be moved from the Webin upload area into the archive.
+run has been submitted the data files will be moved from the Webin upload area into the archive.
 
-You can upload the data file to the root directory of your Webin upload area or you can create directories
-and upload the files there. If the files are uploaded to the root directory then simply use the file names 
-without any prefix. 
+You can upload your data files to the root directory of your upload area or you can create subdirectories
+and upload your files there.
+
+If the files are uploaded to the root directory
+then simply enter the file name in the Run XML when referring to it:
+
+.. code-block:: xml
+
+<FILE filename="mantis_religiosa_R1.fastq.gz" ... />
+
+If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix prefix the file name
+with the name of the subdirectory:
+
+.. code-block:: xml
+
+<FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
 
 Instructions on how to upload files to the Webin upload areas can be found
 `here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
@@ -107,13 +123,12 @@ Instructions on how to upload files to the Webin upload areas can be found
 Create the Run and Experiment XML
 =================================
 
-Below is an example of an Illumina HiSeq 2000 experiment sequence reads being submitted in Fastq format.
+Below is an example of an Illumina HiSeq 2000 paired end reads being submitted in Fastq format.
 
-The experiment is pointing to a pre-registered sample using the sample’s accession and to a 
-pre-registered study using the study's accession. 
+The experiment points to a pre-registered sample and study using their accessions.
 
 The run is being submitted at the same time as the experiment and must point to the experiment
-it belongs to using the experiment's alias. 
+using the experiment's alias.
 
 Experiment XML:
 
@@ -172,7 +187,7 @@ Run XML:
     </RUN_SET>
 
 You can submit several experiments and runs at the same time by using multiple 
-`<EXPERIMENT></EXPERIMENT>` and `<RUN></RUN>` blocks.
+`<EXPERIMENT>` and `<RUN>` blocks.
 
 Experiment XML:
 
@@ -182,10 +197,9 @@ Experiment XML:
     <EXPERIMENT_SET>
      <EXPERIMENT alias="exp_01">
      ...
-     ...
      </EXPERIMENT>
-     <EXPERIMENT alias="exp_02">
      ...
+     <EXPERIMENT alias="exp_05">
      ...
      </EXPERIMENT>
     </EXPERIMENT_SET>
@@ -199,16 +213,18 @@ Run XML:
      <RUN alias="run_01">
        <EXPERIMENT_REF refname="exp_01"/>
          <DATA_BLOCK>
-         ...
-         ...
+             <FILES>
+             ...
+             </FILES>
          </DATA_BLOCK>
      </RUN>
      ...
      <RUN alias="run_05">
-       <EXPERIMENT_REF refname="exp_01"/>
+       <EXPERIMENT_REF refname="exp_05"/>
          <DATA_BLOCK>
-         ...
-         ...
+             <FILES>
+             ...
+             </FILES>
          </DATA_BLOCK>
      </RUN>
     </RUN_SET>
@@ -224,7 +240,7 @@ The `<FILES>` block in the run XML references the data files that are being subm
 part of the run.
 
 To check the integrity of the file transfer an md5 checksum must be provided for each file. 
-You can provide this by using the `checksum_method="MD5"` and `checksum=""` attributes in the `<FILE>` element, 
+You can provide this by using the `checksum_method="MD5"` and `checksum` attributes in the `<FILE>` element,
 or you can provide the MD5 checksum in file `<file>.md5` in the same folder as the corresponding data
 file `<file>`. 
 
@@ -233,7 +249,8 @@ Experiment XML: library information
 
 The experiment contains a `<LIBRARY_DESCRIPTOR>` block in order to capture
 basic library information within the `<LIBRARY_STRATEGY>`, `<LIBRARY_SOURCE>` and `<LIBRARY_SELECTION>`
-elements.
+elements. These are controlled value fields and the permitted values are listed in the
+`SRA.experiment.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd>`_ XML Schema.
 
 .. code-block:: xml
 
@@ -289,7 +306,7 @@ single ended experiment using the `<SINGLE>` element:
 Create the Submission XML
 ==========================
 
-To submit an experiment, a run or any other object(s), you need an accompanying submission XML in a separate file. 
+To submit experiments or runs, you need an accompanying submission XML in a separate file.
 Let's call this file `submission.xml`. 
 
 .. code-block:: xml
@@ -307,9 +324,10 @@ The submission XML declares one or more Webin submission service actions.
 In this case the action is `<ADD/>` which is used to submit new objects. 
 
 The XMLs can be submitted programmatically, using CURL on command line or 
-using the `Webin XML and reports portal](prog_11.html).
+using the `Webin XML and reports portal <prog_11.html>`_.
 
-## Submit the XMLs using CURL 
+Submit the XMLs using CURL
+==========================
 
 CURL is a Linux/Unix command line program which you can use to send the `experiment.xml`, `run.xml` and `submission.xml`
 to the Webin submission service.
@@ -339,8 +357,8 @@ After running the command above a receipt XML is returned. It will look like the
 Submit the XMLs using Webin XML and reports portal
 ==================================================
 
-XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
-Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
+XMLs can also be submitted interactively using the `Webin XML and reports portal <prog_11.html>`_.
+Please refer to the `Webin XML and reports portal <prog_11.html>`_ document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
 
 The Receipt XML
@@ -377,5 +395,5 @@ but this time using the production service. Simply change the part in the URL fr
 
     curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@experiment.xml" -F "RUN=@run.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
-Similarly, if you are using the `Webin XML and reports portal < prog_11.html>`_ change the URL from 
+Similarly, if you are using the `Webin XML and reports portal <prog_11.html>`_ change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
