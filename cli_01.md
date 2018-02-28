@@ -137,11 +137,14 @@ files will not be archived.
 
 ## Output directory structure 
 
-An output directory must be specific to the Webin command line submission interface
+An output directory can be specific to the Webin command line submission interface
 using the `-outputDir` option. This directory will have the following subdirectories:
 - `<context>/<name>/validate`
 - `<context>/<name>/upload`
 - `<context>/<name>/submit`
+
+If the `-outputDir` option is not specified then the directory in which the
+`-manifest` file is used as the output directory.  
 
 The `<context>` is the submission type provided using the `-context` option
 and the `<name>` is the unique name provided in the info file.
