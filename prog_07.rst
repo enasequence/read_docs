@@ -1,5 +1,5 @@
-Module 7: Submit sequence reads
-*********************************
+Module 7: Submit sequence reads using Experiments and Runs
+**********************************************************
 
 The Experiment and Run Objects
 ==============================
