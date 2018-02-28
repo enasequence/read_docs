@@ -11,16 +11,16 @@ an experiment object represents the library solution that is created from the sa
 and set up to run on a sequencing instrument. Thus the experiment object contains 
 details about sequencing platform and library protocols. 
 
-A run object is used to submit read data files to the archive and can be thought to 
-represent a lane on an sequencing machine, or in case of pooled samples, represent the 
-demultiplexed reads for one sample.
+A run object is used to attach sequence read data to experiments and can be likened to
+a lane (or equivalent) on an sequencing machine. If the original lane is pooled then a run
+object may represent the demultiplexed reads for one source sample.
 
 The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd>`_
 XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
 
 The XML schemas define the structure of the XMLs and provide controlled vocabularies for many elements. 
-For example `LIBRARY_STRATEGY` and `PLATFORM` element values are restricted by enumerations defined in
+For example, `PLATFORM` (sequencing platform) element values are restricted by enumerations defined in
 the schemas.
 
 Relationships between objects
@@ -30,11 +30,16 @@ Both run and experiment are associated with other objects.
 
 .. image:: images/webin_data_model_read.png
 
-It is common to create many libraries for a single source sample. An experiment points to a sample 
-to allow us to record this relationship.
+It is common to have multiple libraries and sequencing experiments for a single source sample.
+The experiment points to the sample rather than the other way around so that several experiments
+can be added to one sample (not necessarily at the same time) without having to update the sample object.
 
-It is also common to have multiple lanes for a single experiment. A run points to an experiment 
-to allow us to record this relationship.
+It is also common to have multiple lanes for a single sequencing experiment. For example, you can sequence
+the same library on multiple lanes (runs) to obtain deeper coverage or to create technical replicates.
+A run points to an experiment to allow us to record this relationship.
+
+An experiment points to a study and is considered to be part of it. Studies are used to
+group together experiments to allow them to be cited together in a publication.
 
 This model allows:
 
@@ -46,6 +51,10 @@ Because samples are linked to studies through experiments, the model also allows
 
 4. any number of samples in a study
 5. any number of studies for a sample
+
+It is typical to pre-register samples ahead of submitting sequence read or
+other data, but do not assume that the samples belong to a study until
+data has been submitted to connect the two together!
 
 A run points to the experiment it is part of using the `<EXPERIMENT_REF>` element.
 This can be done either by using an accession:
@@ -62,18 +71,22 @@ or a name within the submitter's account:
 
 Above, the `refname` refers to the submitter provided name (alias) of the experiment. 
 
-If the experiment is being created in the same submission as the run then the `accession` attribute can't be used
-as an experiment accession has not been assigned yet. Had the experiment been submitted
-previously then the `accession` attribute could have been used. When referring to experiments in other
-submission accounts the `accession` attribute must be used as names can be ambiguous between
-submitters.
+If the run is submitted at the same time as the experiment then the `accession` attribute
+can't be used to refer to the experiment as the experiment accession has not been assigned yet.
+Had the experiment been submitted previously then the `accession` attribute could have been used.
 
-The same principle with `refname` and `accession` attributes applies to all references between objects
+When referring to experiments in other submission accounts, for example in a collaborators account,
+the `accession` attribute must be used. Names can be ambiguous between submission accounts as
+many other submitted objects could share the same name.
+
+These principles with `refname` and `accession` attributes applies to all references between objects
 including experiment references to studies and samples.
 
 An experiment points to the study it is part of using the `<STUDY_REF>` element
 and to the sample which has provided the source material using the `<SAMPLE_DESCRIPTOR>` element.
-In both cases, either an accession or a name can be used in the reference.
+In both cases, either an accession or a name can be used in the reference. If you are using the
+`accession` attribute you can use both ERP amd PRJ accessions when referring
+to studies and both ERS and SAM accessions when referring to samples.
 
 Metadata standards
 ==================
