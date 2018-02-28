@@ -315,6 +315,32 @@ single ended experiment using the `<SINGLE>` element:
     </LIBRARY_LAYOUT>
     ...
 
+
+Experiment and Run XML: attributes
+-----------------------------------
+
+Additional annotation can be provided for experiments and runs using attributes in
+the XMLs.
+
+In experiment XML these attributes are captured using the `EXPERIMENT_ATTRIBUTE` block:
+
+.. code-block:: xml
+
+    <EXPERIMENT_ATTRIBUTE>
+       <TAG>library preparation date</TAG>
+       <VALUE>2010-08</VALUE>
+    </EXPERIMENT_ATTRIBUTE>
+
+In run XML these attributes are captured using the `RUN_ATTRIBUTE` block which is identical
+to the `EXPERIMENT_ATTRIBUTE` except for the name.
+
+Annotations using attribute blocks should fit the type of object.
+For an experiment object you would expect annotations related to the library solution and
+for a run object you would expect annotations related to the NGS machine run.
+
+Please refer to the metadata standards section in this module for information about
+recommended experiment and run attributes.
+
 Create the Submission XML
 ==========================
 
