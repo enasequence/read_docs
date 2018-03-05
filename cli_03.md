@@ -11,6 +11,7 @@ A transcriptome assembly consists of:
    - Sample accession or unique name (alias)
    - Assembly program
    - Sequencing platform
+- Sequences
 - Functional annotation (optional)
 
 The following picture illustrates the stages of the transcriptome assembly submission process:
