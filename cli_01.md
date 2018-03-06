@@ -87,7 +87,7 @@ using the `-submit` option. The webin command line submission interface creates 
 XMLs on behalf of the submitter. These XMLs and the Receipt XML containing accession numbers 
 are written into the `<outputDir>/<context>/<name>/submit` directory.
 
-In above, the `<outputDir>` is specified using the `-outputDir` option, the `<context>` is
+In above, the `<outputDir>` can be specified using the `-outputDir` option, the `<context>` is
 specified using the `-context` option, and the `<name>` is the submitter provided unique 
 name specified in the `info` file (e.g. genome or transcriptome assembly name). 
 
@@ -165,3 +165,8 @@ The validation reports correspond to the input files with an added suffix `.repo
 For example, a validated file `assembly.info` will have a corresponding validation report 
 `assembly.info.report`, and a validated fasta file `assembly.fasta`  will have a corresponding validation 
 report `assembly.fasta.report`.
+
+Messages which can't be attributed to a specific input file will be written to both standard out and 
+in the following file:  
+
+`<context>/<name>/validate/webin-cli.report`
