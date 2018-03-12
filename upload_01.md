@@ -1,13 +1,13 @@
-# Upload data files
+# Data Uploads
 
 You must upload data files into your private Webin file upload area
 at EMBL-EBI before you can submit the files through the Webin submission services. 
 
-## Local data files
+## Keep local copies
 
 Always keep a local copy of the uploaded files until the files have been successfully 
 submitted and archived. The Webin file upload area is a temporary transit area which is not backed 
-up and any files residing on the area are subject to our fair use policy (see below).
+up and any files on the area are subject to our fair use policy (see below).
 
 ## Fair use policy
 
@@ -103,7 +103,7 @@ Your command should look similar to this:
 ascp -QT -l300M -L- <file(s)> <Webin-N>@webin.ebi.ac.uk:.
  ```
 
-The `-l300M` option sets the upload speed limit to 30MB/s. You may wish to lower this value to 
+The `-l300M` option sets the upload speed limit to 300MB/s. You may wish to lower this value to 
 increase the reliability of the transfer.
 
 The `-L-` option is for printing logs out while transferring,
@@ -115,11 +115,12 @@ The `<Webin-N>` is your Webin submission account name.
 ### Using Webin File Uploader
 
 Files can be uploaded using the Webin File Uploader, a Java web start application 
-downloadable from [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/) which 
+downloadable from [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/):
+
+![Webin File Uploader](images/webin_file_upload_01.png) 
 
 1. [Download the Webin File Uploader](http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp)  
-2. Launch the application. See further instructions for Mac users below.
-![Webin File Uploader](images/webin_file_upload_01.png)
+2. Launch the application (Mac users please see further instructions below),
 3. Enter your Webin use r name in the `Username` field.
 4. Enter your Webin password in the `Password` field. 
 5. Browse into the local `Upload Directory` containing the data files you wish to upload using the `...` button. 
@@ -216,11 +217,11 @@ b26854779ea34e0bc3f47219e6e079e6 a.fastq.gz
 
 There are several ways to provide a file MD5 checksum to Webin:
 
-1. If you are using the [Webin File Uploader](http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp)
+1. If you are using the Webin File Uploader
 then the MD5 checksum will be computed automatically for each file and stored in a MD5 checksum file. 
-2. If you are using the [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/) you can provide
+2. If you are using the Interactive Webin then you can provide
 the MD5 checksum in the submission spreadsheet for each file.
-3. You can also store and upload the MD5 checksum in a separate file. The MD5 checksum file must have the 
+3. You can also store and upload the MD5 checksum in a separate file. This MD5 checksum file must have the 
 same name as the uploaded data file with a additional `.md5` suffix at the end. 
 
 In Linux or Mac the MD5 checksum file can be created by using the `md5sum` command line program, for example:
@@ -249,7 +250,7 @@ There are two possible reasons for this error.
 You can check if you accidentally provided a wrong MD5 checksum by computing the checksum for your
 local copy of the uploaded file and comparing it against the MD5 checksum which you originally provided. 
 If these MD5 checksums are different then you can upload a new MD5 checksum file or change the MD5 
-checksum using [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/)
+checksum using [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/):
 
 ![Webin change checksum](images/webin_md5_change.png)
 
