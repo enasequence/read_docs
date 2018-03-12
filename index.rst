@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-ENA: Guidelines and Tips
+ENA: Guidelines and Tutorials
 ************************
 
 .. toctree::
@@ -13,6 +13,7 @@ ENA: Guidelines and Tips
    programmatic
    cli
    formats
+   upload
    tips
 
 .. Extra
