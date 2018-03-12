@@ -1,4 +1,4 @@
-Data formats
+Data Formats
 ========================
 
 .. toctree::
