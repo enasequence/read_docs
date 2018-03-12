@@ -1,4 +1,4 @@
-Data formats
+Data Uploads
 ========================
 
 .. toctree::
