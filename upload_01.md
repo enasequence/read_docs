@@ -54,7 +54,7 @@ linux and Mac users.
 
 1. Open a terminal and type `ftp webin.ebi.ac.uk`.
 2. Enter the username and password  associated with your Webin submission account.
-3. Type bin to use binary mode.
+3. Type `bin` to use binary mode.
 4. Type `ls` command to check the content of your drop box.
 5. Type `prompt` to switch off confirmation for each file uploaded.
 6. Use `mput` command to upload files.
@@ -67,7 +67,7 @@ linux and Mac users.
 3. Type `ftp`
 4. Type `open webin.ebi.ac.uk`
 5. Enter the username and password associated with your Webin submission account.
-6. Type bin to use binary mode.
+6. Type `bin` to use binary mode.
 7. Type `ls` command to check the content of your drop box.
 8. Type `prompt` to switch off confirmation for each file uploaded.
 9. Use `mput` command to upload files.
