@@ -27,8 +27,8 @@ The circled numbers in the image correspond to the numbered items below that pro
    Module 6_ describes this step in more detail.
 7. Use the **Submit other assembled and annotated sequences** option to submit coding genes, rRNA sequences and other
    annotated sequences. More information about this step is available `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_.
-8. Use the **Taxonomy Check/Request ** option to check that your samples have a recognized taxonomic classification
-   or to register new ones. You must provide an organism or environmental taxonomic classification for each submitted sample.
+8. Use the **Taxonomy Check/Request ** option to check that your samples have recognized taxonomic classifications
+   or to register new ones. You must provide a taxonomic classification for each submitted sample.
    For more information about taxonomy there is a section in the FAQ_ that may be useful.
 
 .. _2: mod_02.html
@@ -40,4 +40,4 @@ The circled numbers in the image correspond to the numbered items below that pro
 Metadata model
 =================
 
-The full metadata model is described in `Metadata model <meta_01.html>_.
+The full metadata model is described in `Metadata model <meta_01.html>`_.
