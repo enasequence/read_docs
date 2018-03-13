@@ -1,13 +1,15 @@
 Module 1: Submission Options
 ****************************
 
+## Interactive Webin
+
 Submissions to ENA can be made using the `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ submission service.
 
 The Interactive Webin supports the following submission options:
 
 .. image:: images/mod_01_p01.png
 
-The numbers below correspond to the circled numbers in the image.
+The circled numbers in the image correspond to the numbered items below that provide further details for each submission option.
 
 1. Log in using your webin submission account credentials and go to the **New Submission** tab.
 2. If you have not done so already, **register a study** using this option. Module 2_ describes this step in more detail.
@@ -32,3 +34,8 @@ For more information about taxonomy there is a section in the FAQ_ that may be u
 .. _6: mod_06.html
 .. _10: mod_10.html
 .. _FAQ: tax.html
+
+## Metadata model
+
+Each XML type corresponds to a equivalent meta data object (please see
+[Metadata model](meta_01.html)).

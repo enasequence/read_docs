@@ -12,6 +12,7 @@ ENA: Guidelines and Tutorials
    interactive
    programmatic
    cli
+   meta
    formats
    upload
    tips
