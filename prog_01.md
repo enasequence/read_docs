@@ -89,8 +89,8 @@ curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@experi
 
 ## Metadata model
 
-Each XML type corresponds to a equivalent meta data object (please see  
-[Metadata model](meta_01.html)).
+Each XML type corresponds to a equivalent meta data object.
+The full metadata model is described in [Metadata model](meta_01.html).
 
 ## Identifying objects
 

@@ -2,13 +2,15 @@
 
 ## Introduction
 
-Submissions made through Webin are reresented through a number of metadata objects.
+Submissions made through Webin are represented using a number of different metadata objects.
 For example, a publication is typically associated with a `study (project)`, sequenced
-source material is represented using `samples`, and sequecing experiment details
-are captured by the `experiment` object. Note that data files are also submitted by 
+source material is represented using `samples`, and sequencing experiment details
+are captured by the `experiment` object. 
+
+Note that data files are also submitted by 
 associating them with metadata objects. Sequence read data is associated with run 
 objects while other data files are associated with analysis objects. The full 
-metadata model with associations between different objects is illustrated below.
+metadata model with relationships between the different types of objects is illustrated below.
 
 ## Metadata model
 
