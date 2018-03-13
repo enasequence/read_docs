@@ -1,4 +1,4 @@
-Register Submission Account
+Registration
 ===========================
 
 .. toctree::
