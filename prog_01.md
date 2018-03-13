@@ -280,4 +280,4 @@ It is advisable to first test your submissions using the Webin test service wher
 permanent and are erased every 24 hours. 
 
 Once you are happy with the result of the submission you can use production service. 
-Simply change the part in the URL from `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`:
+Simply change the part in the URL from `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
