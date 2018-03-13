@@ -9,6 +9,7 @@ ENA: Guidelines and Tutorials
 .. toctree::
    :maxdepth: 2
 
+   reg
    interactive
    programmatic
    cli

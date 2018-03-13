@@ -1,4 +1,4 @@
-Metadata model
+Metadata Model
 =======================
 
 .. toctree::
