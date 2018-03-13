@@ -2,11 +2,11 @@
 
 <!-- ERA980084 -->
 
-Editing existing samples in the ENA using the REST API is an almost identical process to submitting new sample objects by XML REST API. This is outlined in <a href="prog_05.html">module 5</a> of this section and it is necessary to review module 5 before following this tutorial as it is shortened to avoid repeating the same information. 
+Editing existing samples in the ENA using the REST API is an almost identical process to submitting new sample objects by XML REST API. This is outlined in <a href="prog_03.html">module 5</a> of this section and it is necessary to review module 5 before following this tutorial as it is shortened to avoid repeating the same information. 
 
 ## Halfway editing: Sample XML, one at a time 
 
-The interactive [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) submission system provides some editing capacity for your existing ENA samples. Guidelines for using this webform based editor are <a href="mod_05.html#sample-edit">here</a>. Samples are stored in the ENA as XML objects and you may find that some edits that are not possible to do from the webform editor (purple rectangle below) **are** possible to do by editing the XML version of the sample directly. You can access the XML version of the sample from the same place as the webform editor (see the <a href="mod_05.html#sample-edit">sample edit module</a>). Using the 'edit XML' tab (red oval) you can change most of the field values in the SAMPLE_ATTRIBUTES block, for example 'collection_date', as in the example below (green arrow). Remember to click 'save' (blue oval) when you are happy with the changes. Validation will be applied according to which checklist is being used for that sample (more on checklists <a href="prog_05.html#apply-an-ena-minimum-information-standard-checklist-to-your-samples">here</a>). If successful you will see a confirmation message but if there is a problem the changes will not be saved and you can try again.
+The interactive [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) submission system provides some editing capacity for your existing ENA samples. Guidelines for using this webform based editor are <a href="mod_05.html#sample-edit">here</a>. Samples are stored in the ENA as XML objects and you may find that some edits that are not possible to do from the webform editor (purple rectangle below) **are** possible to do by editing the XML version of the sample directly. You can access the XML version of the sample from the same place as the webform editor (see the <a href="mod_05.html#sample-edit">sample edit module</a>). Using the 'edit XML' tab (red oval) you can change most of the field values in the SAMPLE_ATTRIBUTES block, for example 'collection_date', as in the example below (green arrow). Remember to click 'save' (blue oval) when you are happy with the changes. Validation will be applied according to which checklist is being used for that sample (more on checklists <a href="prog_03.html#apply-an-ena-minimum-information-standard-checklist-to-your-samples">here</a>). If successful you will see a confirmation message but if there is a problem the changes will not be saved and you can try again.
 
 ![webform_xml](images/prog_06_p01.png)
 
@@ -164,7 +164,7 @@ If your samples are not public yet then there is a REST endpoint that you can us
  
 [https://www.ebi.ac.uk/ena/submit/drop-box](https://www.ebi.ac.uk/ena/submit/drop-box)
 
-You can login to this service, navigate to the sample you need to collect and the select the 'xml' option. This process is described in <a href="prog_04.html#erp-version">module 4</a> for studies but you can do the same for samples. This method can take URLs similar to when browsing the public domain but because this resource contains confidential objects that are tied to your account as well as the public ones you must provide access credentials (*Webin-0000* to be replaced with account id, *password* to be replaced with your password, and *ERS000000* to be replaced with accession number of a sample in your account:
+You can login to this service, navigate to the sample you need to collect and the select the 'xml' option. This process is described in <a href="prog_05.html#erp-version">module 4</a> for studies but you can do the same for samples. This method can take URLs similar to when browsing the public domain but because this resource contains confidential objects that are tied to your account as well as the public ones you must provide access credentials (*Webin-0000* to be replaced with account id, *password* to be replaced with your password, and *ERS000000* to be replaced with accession number of a sample in your account:
 `https://Webin-0000:password@www.ebi.ac.uk/ena/submit/drop-box/samples/ERS1835108?format=xml`
 
 Unlike using the ENA browser you can not provide a range or comma separated list of accession numbers in the URL but since you have the use of targeted URLs you can script multiple calls together and concatonate afterwards.
@@ -187,7 +187,7 @@ cat sample.xml
 
 ```
 
-The resulting file (for example, `sample.xml`) will need some editing but not much. For instance all `<SAMPLE>` blocks need to be contained in a single `<SAMPLE_SET>` block (as described <a href="prog_05.html#submitting-many-samples-simultaneously">here</a>) 
+The resulting file (for example, `sample.xml`) will need some editing but not much. For instance all `<SAMPLE>` blocks need to be contained in a single `<SAMPLE_SET>` block (as described <a href="prog_03.html#submitting-many-samples-simultaneously">here</a>) 
 
 ## Step 2: Create the submission XML
 

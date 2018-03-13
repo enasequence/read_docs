@@ -1,6 +1,6 @@
 # Module 9: Adding interpreted data
 
-The ENA is primarily an archive for raw and experimental sequence data but in addition to that it is possible to add interpreted data that you have derived from the raw data. While we have discussed different metadata objects from studies and samples to runs and experiments, the *analysis* object is available for archiving supplementary and interpreted data files within a study. The analysis object can be used to provide extra value and reproducibility to your study. Moreover, the analysis object has been extended recently to also represent traditional EMBL sequence files and genomes. This has enabled a more flexible and unified submission system that was initially limited to the submission of next generation raw read sequence data. <a href="prog_02.html#the-analysis-object">Submitting EMBL sequences as analysis objects</a> is mostly done behind the scenes when using the <a href="https://www.ebi.ac.uk/ena/submit/sra/#home">interactive submission system</a> but you can take advantage of this submission route more directly if you need to create a submission pipeline or if you need to automate a part of your ENA submission that you do often enough. 
+The ENA is primarily an archive for raw and experimental sequence data but in addition to that it is possible to add interpreted data that you have derived from the raw data. While we have discussed different metadata objects from studies and samples to runs and experiments, the *analysis* object is available for archiving supplementary and interpreted data files within a study. The analysis object can be used to provide extra value and reproducibility to your study. Moreover, the analysis object has been extended recently to also represent traditional EMBL sequence files and genomes. This has enabled a more flexible and unified submission system that was initially limited to the submission of next generation raw read sequence data. <a href="prog_04.html#the-analysis-object">Submitting EMBL sequences as analysis objects</a> is mostly done behind the scenes when using the <a href="https://www.ebi.ac.uk/ena/submit/sra/#home">interactive submission system</a> but you can take advantage of this submission route more directly if you need to create a submission pipeline or if you need to automate a part of your ENA submission that you do often enough. 
 
 ## Characteristics of the analysis object
 
@@ -78,7 +78,7 @@ See how it is possible to do some analysis on raw data that is available in the 
 
 ### 3: The analysis has attributes
 
-Like all other objects discussed in this section the analysis should carry a unique alias attribute and its title and description elements should be used to provide as much context as possible. Then the `<ANALYSIS_ATTRIBUTES>` block, which is the final block in a complete `<ANALYSIS>` element, can be used for more specific annotation including the use of standardised terms if you are submitting on behalf of a collaborating body that has agreed to annotate to certain specifications. To see attributes block in use, see the <a href="prog_05.html#what-does-the-xml-file-look-like">sample module</a>. 
+Like all other objects discussed in this section the analysis should carry a unique alias attribute and its title and description elements should be used to provide as much context as possible. Then the `<ANALYSIS_ATTRIBUTES>` block, which is the final block in a complete `<ANALYSIS>` element, can be used for more specific annotation including the use of standardised terms if you are submitting on behalf of a collaborating body that has agreed to annotate to certain specifications. To see attributes block in use, see the <a href="prog_03.html#what-does-the-xml-file-look-like">sample module</a>. 
 
 ![attributes](images/prog_09_p02.png)
 
@@ -154,7 +154,7 @@ Subsequent genomes can be submitted at the same time but they must each be const
 </ANALYSIS_SET>
 ```
 
-Make sure to accompany the analysis XML with a submission XML like the one <a href="#example-submission-xml-for-analysis">above</a> and create a cURL command like the one below. For more details on cURL commands and submission XMLs see the <a href="prog_01.html">first module</a>, which takes you through the submission of a simple study object.
+Make sure to accompany the analysis XML with a submission XML like the one <a href="#example-submission-xml-for-analysis">above</a> and create a cURL command like the one below. For more details on cURL commands and submission XMLs see the <a href="prog_02.html">first module</a>, which takes you through the submission of a simple study object.
 
 ```bash
 curl -F "SUBMISSION=@sub_anal.xml" -F "ANALYSIS=@anal.xml" "https://www-test.ebi.ac.uk/ena/submit/drop-box/submit/?auth=ENA%20Webin-XXXX%20PASSWORD"

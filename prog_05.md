@@ -1,278 +1,131 @@
-# Module 5: Register a Sample
+# Module 4: Update a Study
 
-## The Sample Object
+Updating study XMLs is an almost identical process to submitting a new one. 
+The first step is to obtain the original study in XML format. This step
+alone can be tricky if you did not submit the project using the REST API to begin with. Note that [Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions) has good study editing functionality already:
 
-A sample object is submitted in XML format like this: 
+![Webin project edit](images/prog_05_p01.png)
+
+However, learning to use the REST API with a simple project object can pave the way for submitting and updating more complicated objects such as samples, experiments and runs. Also for making edits in bulk (to many projects) the ENA REST API is more feasible than Webin.
+
+## Step 1: Get hold of the study in XML format
+
+If you used REST API to submit the study in the first place you can use the XML files that you used previously.
+
+If you don't have an XML file containing the study you can copy the public version by using __&display=xml__ at the end of the study page. For example, `http://www.ebi.ac.uk/ena/data/view/PRJEB5932&display=xml`. Note that the web version has additional blocks that are not part of the original XML as well as parts that have been added automatically and can be cleaned up for the purpose of updating (besides, they will be added again automatically). For example the below web version XML can be cleaned up so that it looks like submitted version that follows it.
+
+### Web Version
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<SAMPLE_SET>
-  <SAMPLE alias="MT5176" center_name="">
-    <TITLE>human gastric microbiota, mucosal</TITLE>
-    <SAMPLE_NAME>
-      <TAXON_ID>1284369</TAXON_ID>
-      <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
-      <COMMON_NAME></COMMON_NAME>
-    </SAMPLE_NAME>
-    <SAMPLE_ATTRIBUTES>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>investigation type</TAG>
-        <VALUE>mimarks-survey</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>sequencing method</TAG>
-        <VALUE>pyrosequencing</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>collection date</TAG>
-        <VALUE>2010</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>host body site</TAG>
-        <VALUE>Mucosa of stomach</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>human-associated environmental package</TAG>
-        <VALUE>human-associated</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>geographic location (latitude)</TAG>
-        <VALUE>1.81</VALUE>
-    	<UNITS>DD</UNITS>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>geographic location (longitude)</TAG>
-        <VALUE>-78.76</VALUE>
-    	<UNITS>DD</UNITS>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-	    <TAG>geographic location (country and/or sea)</TAG>
-    	<VALUE>Colombia</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>geographic location (region and locality)</TAG>
-        <VALUE>Tumaco</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>environment (biome)</TAG>
-        <VALUE>coast</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>environment (feature)</TAG>
-        <VALUE>human-associated habitat</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>environment (material)</TAG>
-        <VALUE>gastric biopsy</VALUE>
-      </SAMPLE_ATTRIBUTE>
-      <SAMPLE_ATTRIBUTE>
-        <TAG>ENA-CHECKLIST</TAG>
-        <VALUE>ERC000014</VALUE>
-      </SAMPLE_ATTRIBUTE>
-    </SAMPLE_ATTRIBUTES>
-  </SAMPLE>
-</SAMPLE_SET>
+<ROOT request="PRJEB14252&amp;display=xml">
+<PROJECT alias="ena-STUDY-klanvin-03-06-2016-07:54:42:301-120" center_name="klanvin" accession="PRJEB14252" first_public="2016-08-02+01:00">
+     <IDENTIFIERS>
+          <PRIMARY_ID>PRJEB14252</PRIMARY_ID>
+          <SECONDARY_ID>ERP015887</SECONDARY_ID>
+          <SUBMITTER_ID namespace="klanvin">ena-STUDY-klanvin-03-06-2016-07:54:42:301-120</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <NAME>Cheddar cheese</NAME>
+     <TITLE>Characterization of Microbial Diversity and Chemical Properties of Cheddar Cheese Prepared from Heat-treated Milk</TITLE>
+     <DESCRIPTION>This study aimed to characterize the interaction of microbial diversity and chemical properties of Cheddar cheese after three different heat treatments of milk; low temperature/long time (LTLT), thermization, and high temperature/short time (HTST). Cheese obtained from LTLT-treated milk (LC) and thermized milk (TC) .... </DESCRIPTION>
+     <SUBMISSION_PROJECT>
+          <SEQUENCING_PROJECT>
+               <LOCUS_TAG_PREFIX>BN8055</LOCUS_TAG_PREFIX>
+          </SEQUENCING_PROJECT>
+     </SUBMISSION_PROJECT>
+     <PROJECT_LINKS>
+          <PROJECT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMISSION</DB>
+                    <ID>ERA645775</ID>
+               </XREF_LINK>
+          </PROJECT_LINK>
+          <PROJECT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-FASTQ-FILES</DB>
+                    <ID><![CDATA[http://www.ebi.ac.uk/ena/data/warehouse/filereport?accession=PRJEB14252&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+               </XREF_LINK>
+          </PROJECT_LINK>
+          <PROJECT_LINK>
+               <XREF_LINK>
+                    <DB>ENA-SUBMITTED-FILES</DB>
+                    <ID><![CDATA[http://www.ebi.ac.uk/ena/data/warehouse/filereport?accession=PRJEB14252&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+               </XREF_LINK>
+          </PROJECT_LINK>
+     </PROJECT_LINKS>
+     <PROJECT_ATTRIBUTES>
+          <PROJECT_ATTRIBUTE>
+               <TAG>ENA-FIRST-PUBLIC</TAG>
+               <VALUE>2016-08-02</VALUE>
+          </PROJECT_ATTRIBUTE>
+          <PROJECT_ATTRIBUTE>
+               <TAG>ENA-LAST-UPDATE</TAG>
+               <VALUE>2016-06-03</VALUE>
+          </PROJECT_ATTRIBUTE>
+     </PROJECT_ATTRIBUTES>
+</PROJECT>
+</ROOT>
 ```
 
-You can register one or more samples at the same time by using one `<SAMPLE></SAMPLE>` block for each sample.
-
-The sample XML format is defined by the [SRA.sample.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd) XML schema.
-
-Samples can also be registered using the [Interactive Webin submission service](mod_03.html). However, you may find that 
-in some cases there is more flexibility in creating submittable XML objects yourself. 
-
-Samples represent the source material that has been sequenced. A sample may be connected to read, assembly and various
-types of interpreted data. Samples provide much of the context and value to the data that they are associated with.
-
-![ENA Data Model](images/webin_data_model_sample.png) 
-
-Most of the sample information comes in the form of `<TAG>` and `<VALUE>` pairs that belong in `<SAMPLE_ATTRIBUTE>`
-blocks. You can have any number of `<SAMPLE_ATTRIBUTE>` blocks in your samples.
-
-Most submitters will want to use attributes that are recognised by ENA as these are better indexed for searching and
-filtering. For this purpose, it is recommended that submitters use ENA sample checklist attributes whenever possible. 
-You can also use a combination of your own attributes with those recognised by ENA.
-
-## The Sample Checklists
-
-ENA provides sample checklists which define all the mandatory and recommended attributes for specific types of samples. 
-By declaring that you would like to register your samples using a specific checklist you are enabling the samples to 
-be validated for correctness at submission time and are making it easier for other services to find and access 
-the sample attribute information.
-  
+### Submitted version
 ```xml
-<SAMPLE_ATTRIBUTE>
-<TAG>ENA-CHECKLIST</TAG>
-<VALUE>ERC000014</VALUE>
-</SAMPLE_ATTRIBUTE>
+<?xml version="1.0" encoding="US-ASCII"?>
+<PROJECT_SET>
+  <PROJECT center_name="klanvin" accession="PRJEB14252">
+    <NAME>Cheddar cheese</NAME>
+    <TITLE>Characterization of Microbial Diversity and Chemical Properties of Cheddar Cheese Prepared from Heat-treated Milk</TITLE>
+    <DESCRIPTION>This study aimed to characterize the interaction of microbial diversity and chemical properties of Cheddar cheese after three different heat treatments of milk; low temperature/long time (LTLT), thermization, and high temperature/short time (HTST). Cheese obtained from LTLT-treated milk (LC) and thermized milk (TC) .... </DESCRIPTION>
+    <SUBMISSION_PROJECT>
+      <SEQUENCING_PROJECT>
+	<LOCUS_TAG_PREFIX>BN8055</LOCUS_TAG_PREFIX>
+      </SEQUENCING_PROJECT>
+    </SUBMISSION_PROJECT>
+  </PROJECT>
+</PROJECT_SET>
 ```
+
+The submitted version is much shorter and I even removed the unique alias because now that the object has an accession number the server will not need both alias and accession number to realise the identity of the object that is being overwritten.
+
+### ERP version
+
+If your study is not public yet and you do not have it in XML format you can try using the submit/drop-box/ REST [endpoint](https://www.ebi.ac.uk/ena/submit/drop-box). Log in to here with your Webin id and password and click on 'STUDY'. You will see a list of studies submitted from your account and you can view the XML for each by selecting the study and then clicking 'xml'
  
-The sample with the above `SAMPLE_ATTRIBUTE` will be validated using the checklist `ERC000014`. The checklist is 
-defined using the `ENA-CHECKLIST` attribute. 
- 
-Note that the checklist is defined using a `SAMPLE_ATTRIBUTE` block and that the checklist defines 
-the other `SAMPLE_ATTRIBUTE` blocks.
+![rest endpoint](images/prog_05_p02.png)
 
-If you do not define a checklist then the samples will be validated against the ENA default checklist 
-[ERC000011](https://www.ebi.ac.uk/ena/data/view/ERC000011). This checklist has virtually no mandatory 
-fields but contains many optional attributes that can help you to annotate your samples 
-to the highest possible standard.
+![xml study](images/prog_05_p03.png)
 
-You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/submit/checklists). For example, the 
-checklist [ERC000014](http://www.ebi.ac.uk/ena/data/view/ERC000014) represents the 
-GSC MIxS annotation standard for human associated source samples. 
+Studies obtained from this resource are actually different (you may have noticed). Previously a study in the read domain had an accession like this *ERP000001* whereas a project object (used for registering genome assemblies among other things) would have an accession like this *PRJEB0001*. We no longer distinguish between the 2 objects officially and we expose the PRJEB type more while the ERP type is kept for legacy reasons. You can edit either the PRJEB type or the ERP type and most attributes will be carried over to the other one. Similarly when you create a PRJEB type project then an ERP project is created automatically (and vice versa). 
 
-The checklists are defined using XML. These XMLs are available by appending `&display=xml` 
-to the URL for retriving a specific checklist. For example, the XML for 
-checklist ERC000014 can be retrieved using the following URL: [http://www.ebi.ac.uk/ena/data/view/ERC000014&display=xml](http://www.ebi.ac.uk/ena/data/view/ERC000014&display=xml)
+## Step 2: Create the submission XML
 
-##  The Taxonomic Classification
+To update the study, you need an accompanying submission XML in a separate file. Let's call this file `submission.xml`.
 
-Note the `<SAMPLE_NAME>` block from the example above:
-
-```xml
-    <SAMPLE_NAME>
-      <TAXON_ID>1284369</TAXON_ID>
-      <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
-      <COMMON_NAME></COMMON_NAME>
-    </SAMPLE_NAME>
-```
-
-You can provide any one of the taxon id (`<TAXON_ID>`), scientific name (`<SCIENTIFIC_NAME>`) or common name 
-(`<COMMON_NAME>`). The other fields of the three will be added automatically when the sample is submitted. 
-
-Taxon id, scientific name and common name are ways of classifying the sample organism using the NCBI taxonomy database
-terms. In this example, the sample source is environmental (`stomach metagenome`) and represents an unknown variety and quantity of organisms. 
-Note that metagenomes use specific environmental terms. 
-
-More information about finding the correct taxonomic classification
-for your samples is available [here](tax.html).
-
-## Create the Sample XML
-
-Below is an example XML for submitting a sample. Change the XML by entering your own information and save it as a file, for example `sample.xml`.
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<SAMPLE_SET>
-  <SAMPLE alias="MT5176">
-    <TITLE>human gastric microbiota, mucosal</TITLE>
-    <SAMPLE_NAME>
-      <TAXON_ID>1284369</TAXON_ID>
-    </SAMPLE_NAME>
-    <SAMPLE_ATTRIBUTES>   
-      <SAMPLE_ATTRIBUTE>
-        <TAG>collection date</TAG>
-        <VALUE>2010</VALUE>
-      </SAMPLE_ATTRIBUTE>   
-  </SAMPLE>
-</SAMPLE_SET>
-```
-
-## Create the Submission XML
-
-To submit a sample or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call this file `submission.xml`. 
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
+```xml 
+ <?xml version="1.0" encoding="UTF-8"?>
 <SUBMISSION>
    <ACTIONS>
       <ACTION>
-         <ADD/>
+         <MODIFY/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
 ```
+ 
+The submission XML declares one or more Webin submission service actions. In this case 
+the action is `<MODIFY/>` which is used to update existing objects. 
+The XMLs can be submitted programmatically, using CURL on command line or using the 
+[Webin XML and reports portal](prog_11.html). 
 
-The submission XML declares one or more Webin submission service actions. 
-In this case the action is `<ADD/>` which is used to submit new objects. 
+## Step 3: Submit the XMLs
 
-The XMLs can be submitted programmatically, using CURL on command line or 
-using the [Webin XML and reports portal](prog_11.html).
+The final step is identical to submitting a study for the first time. The only difference is in the 
+contents of the `project.xml` and `submission.xml` files. 
 
-## Submit the XMLs using CURL 
-
-CURL is a Linux/Unix command line program which you can use to send the `sample.xml` and `submission.xml`
-to the Webin submission service.
-
-```bash
-curl -u username:password -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+Please refer to [Register a Study](prog_1.html) for further XML submission instructions. 
+Note that the returned Receipt XML will contain the `MODIFY` action rather that the `ADD` action:
+ 
+ ```
+    ...
+    <ACTIONS>MODIFY</ACTIONS>
+    ...
 ```
-
-Please provide your Webin submission account credentials using the `username` and `password`.
-
-After running the command above a receipt XML is returned. It will look like the one below:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-07-25T16:07:50.248+01:00" submissionFile="submission.xml" success="true">
-    <SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">
-        <EXT_ID accession="SAMEA104174130" type="biosample"/>
-    </SAMPLE>
-    <SUBMISSION accession="ERA979927" alias="MT5176_submission"/>
-    <MESSAGES>
-        <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
-    </MESSAGES>
-    <ACTIONS>ADD</ACTIONS>
-</RECEIPT>
-```
-
-## Submit the XMLs using Webin XML and reports portal
-
-XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
-Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
-to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
-
-## The Receipt XML
-
-To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
-
-The attribute `success` will have value `true` or `false`. If the value 
-is false then the submission did not succeed. In this case check the rest of 
-the receipt for error messages and after making corrections, try the submission again. 
-
-If the success attribute is true then the submission was successful. The receipt will 
-contain the accession numbers of the objects that you have submitted.
-
-### Accession numbers in the Receipt XML
-
-Webin will report an accession number for the sample that starts with SAMEA. 
-
-```xml
-<SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">
-    <EXT_ID accession="SAMEA104174130" type="biosample"/>
-</SAMPLE>
-</RECEIPT>
-```
-
-This accession number is called the BioSample accession and is typically used in journal 
-publications. The sample will also be assigned an alternative accession number that starts with 
-ERS. This accession number is called the SRA (Sequence Read Archive) sample accession.
-
-```xml
-<SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">
-</SAMPLE>
-```
-
-## Test and production services
-
-Note the message in the receipt:
-```xml
-<INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
-```
-
-It is advisable to first test your submissions using the Webin test service where changes are not permanent 
-and are erased every 24 hours. 
-
-Once you are happy with the result of the submission you can use the CURL command again 
-but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
-`www.ebi.ac.uk`:
-
-```bash
-curl -u username:password -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-```
-
-Similarly, if you are using the [Webin XML and reports portal](prog_11.html) change the URL from 
-`wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.

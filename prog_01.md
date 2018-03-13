@@ -1,171 +1,258 @@
-# Module 1: Register a Study
+# Module 1: Submission Options
 
-## The Study Object
+## Introduction
 
-A study (also referred to as a project) object is submitted in XML format like this:
+Submissions of different types can be made using XML through the programmatic
+Webin submission service.
 
-```xml
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<PROJECT_SET>
-   <PROJECT alias="iranensis_wgs" center_name="HKI JENA" accession="PRJEB5932">
-      <NAME>WGS Streptomyces iranensis</NAME>
-      <TITLE>Whole-genome sequencing of Streptomyces iranensis</TITLE>
-      <DESCRIPTION>The genome sequence of Streptomyces iranensis (DSM41954) was obtained using Illumina HiSeq2000. The genome was assembled using a hybrid assembly approach based on Velvet and Newbler. The resulting genome has been annotated with a specific focus on secondary metabolite gene clusters.</DESCRIPTION>
-      <SUBMISSION_PROJECT>
-         <SEQUENCING_PROJECT>
-            <LOCUS_TAG_PREFIX>SIRAN</LOCUS_TAG_PREFIX>
-         </SEQUENCING_PROJECT>
-         <ORGANISM>
-            <TAXON_ID>576784</TAXON_ID>
-            <SCIENTIFIC_NAME>Streptomyces iranensis</SCIENTIFIC_NAME>
-            <CULTIVAR>DSM41954</CULTIVAR>
-         </ORGANISM>
-      </SUBMISSION_PROJECT>
-      <PROJECT_LINKS>
-         <PROJECT_LINK>
-            <XREF_LINK>
-               <DB>PUBMED</DB>
-               <ID>25035323</ID>
-            </XREF_LINK>
-         </PROJECT_LINK>
-      </PROJECT_LINKS>
-   </PROJECT>
-</PROJECT_SET>
-```
+A receipt XML with accession numbers is provided upon successful submission. Any
+validation or other errors will be written in the receipt XML as well.
 
-You can register one or more studies at the same time by using one `<PROJECT></PROJECT>` block for each study.
+## Production and test services
 
-The study XML format is defined by the [ENA.project.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd) XML schema.
-Studies can also be submitted using the [SRA.study.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd) XML schema.
+There are two programmatic Webin submission services. One for test submissions
+and another for production submissions:
 
-Studies can also be registered using the [Interactive Webin submission service](mod_02.html). However, you may find that 
-in some cases there is more flexibility in creating submittable XML objects yourself. 
+- Test service URL: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/
+- Production service URL: https://www.ebi.ac.uk/ena/submit/drop-box/submit/
 
-A study is used to group other objects together, so we will look into creating a study
-as a first step towards learning to submit ENA objects.
+The test service is recreated from the full content of the production service every day at
+03.00 GMT/BST. Therefore, any submissions made to the test service will be removed
+by the following day.
 
-![ENA Data Model](images/webin_data_model_study.png) 
+When you are using the test service the receipt XML will contain the following message:
 
-## Create the Study XML
-
-Below is an example XML for submitting a study. Change the XML by entering your own information and save it as a file, for example `project.xml`.
-
-```xml
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<PROJECT_SET>
-   <PROJECT alias="cheddar_cheese">
-      <TITLE>Characterisation of Microbial Diversity and Chemical Properties of Cheddar Cheese Prepared from Heat-treated Milk</TITLE>
-      <DESCRIPTION>This study aimed to characterise the interaction of microbial diversity and chemical properties of Cheddar cheese after three different heat treatments of milk</DESCRIPTION>
-      <SUBMISSION_PROJECT>
-         <SEQUENCING_PROJECT/>
-      </SUBMISSION_PROJECT>
-   </PROJECT>
-</PROJECT_SET>
-```
-
-In your file `project.xml` change the value of `alias` to be a unique name. 
-You may need this unique name to refer to your study when adding other objects to it. 
-It can be a short acronym but it should be meaningful and memorable in some way.
-
-Within the `<DESCRIPTION></DESCRIPTION>` block add an abstract detailing the project including any information that may be 
-useful for someone to interpret your project correctly. Within the `<TITLE></TITLE>` block add a descriptive title. 
-
-## Create the Submission XML
-
-To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call this file `submission.xml`. 
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<SUBMISSION>
-   <ACTIONS>
-      <ACTION>
-         <ADD/>
-      </ACTION>
-   </ACTIONS>
-</SUBMISSION>
-```
-
-The submission XML declares one or more Webin submission service actions. 
-In this case the action is `<ADD/>` which is used to submit new objects. 
-
-The XMLs can be submitted programmatically, using CURL on command line or 
-using the [Webin XML and reports portal](prog_11.html).
-
-## Submit the XMLs using CURL 
-
-CURL is a Linux/Unix command line program which you can use to send the `project.xml` and `submission.xml`
-to the Webin submission service.
-
-```bash
-curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@project.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
-```
-
-Please provide your Webin submission account credentials using the `username` and `password`.
-
-After running the command above a receipt XML is returned. It will look like the one below:
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="receipt.xsl"?>
-<RECEIPT receiptDate="2017-05-09T16:58:08.634+01:00" submissionFile="submission.xml" success="true">
-   <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
-   <SUBMISSION accession="ERA912529" alias="cheese" />
-   <MESSAGES>
-      <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
-   </MESSAGES>
-   <ACTIONS>ADD</ACTIONS>
-</RECEIPT>
-```
-
-## Submit the XMLs using Webin XML and reports portal
-
-XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
-Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
-to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
-
-## The Receipt XML
-
-To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
-
-The attribute `success` will have value `true` or `false`. If the value 
-is false then the submission did not succeed. In this case check the rest of 
-the receipt for error messages and after making corrections, try the submission again. 
-
-If the success attribute is true then the submission was successful. The receipt will 
-contain the accession numbers of the objects that you have submitted. In the case of 
-an ENA study this is likely to be the accession that you will be including in a 
-publication.
-
-### Accession numbers in the Receipt XML
-
-Webin will report an accession number for the study that starts with PRJEB.
- 
-```xml
-   <PROJECT accession="PRJEB20767" alias="cheddar_cheese" status="PRIVATE" />
-```
- 
-This accession number is called the BioProject accession and is typically used in journal publications. The study will
-also be assigned an alternative accession number that starts with ERP. This accession number is called the SRA 
-(Sequence Read Archive) study accession.
-
-## Test and production services
-
-Note the message in the receipt:
 ```xml
 <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 ```
 
-It is advisable to first test your submissions using the Webin test service where changes are not permanent 
-and are erased every 24 hours. 
+It is advisable to first test your submissions using the Webin test service before
+establising an automated submission pipeline.
 
-Once you are happy with the result of the submission you can use the CURL command again 
-but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
-`www.ebi.ac.uk`:
+## Upload data files
 
-```bash
-curl -u username:password -F "SUBMISSION=@submission.xml" -F "PROJECT=@project.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+Data files must be uploaded into a submitter specific private Webin file upload area
+before they can be submitted. Always keep a local copy of the uploaded files
+until the files have been successfully submitted and archived. The Webin file
+upload area is a temporary transit area which is not backed up and subject to
+a fair use policy. 
+
+Once uploaded, data files are submitted by referring to them from Run XML or Analysis XML. 
+Run XML is used for used for sequence read submissions while Analysis XML is used 
+for other types of submissions (e.g. genome assemblies).
+
+More information of uploading data files and our the fair use policy is available [here](upload__01.html).
+
+## Submission protocol
+
+Submissions are made through the secure HTTPS protocol using POST multipart/form-data
+according to RFC1867.
+
+## Authentication method
+
+Webin user name and password must be provided using basic HTTP authentication.
+
+When using curl the user name and password are provided using the `-u` option:
+
+```
+curl -u username:password
 ```
 
-Similarly, if you are using the [Webin XML and reports portal](prog_11.html) change the URL from 
-`wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
+## Types of XML
+
+The type of each submitted XML file must be specified at time of submission.
+
+When using curl each XML file is submitted using the '-F' option:
+
+```
+-F "XMLTYPE=@FILENAME"
+```
+
+where the `XMLTYPE` is one of:
+
+- `SUBMISSION` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Submission.xsd))
+- `STUDY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Study.xsd))
+- `SAMPLE` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Sample.xsd))
+- `EXPERIMENT` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Experiment.xsd))
+- `RUN` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Run.xsd))
+- `ANALYSIS` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Analysis.xsd))
+- `DAC` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.dac.xsd))
+- `POLICY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.policy.xsd))
+- `DATASET` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.dataset.xsd))
+- `PROJECT` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd))
+
+Below is an example of a sequence read data submission to the Webin test service:
+
+```
+curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@experiment.xml" -F "RUN=@run.xml" "https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/"
+```
+
+## Metadata model
+
+Each XML type corresponds to a equivalent meta data object:
+
+![Webin medata model](webin_data_model_full.png)
+
+- **Submission**: A submission contains submission actions to be performed by the archive. A submission can add more objects to the 
+archive, update already submitted objects or make objects publicly available. 
+- **Study**: A study (project) groups together data submitted to the archive. A study accession is typically used
+when citing data submitted to ENA. Note that all associated data and other objects are made public when the study is released.
+- **Sample**: A sample contains information about the sequenced source material. Samples are typically associated with 
+checklists, which define the fields used to annotate the samples.
+- **Experiment**: An experiment contain information about a sequencing experiment including library and 
+instrument details.
+- **Run**: A run is part of an experiment and refers to data files containing sequence reads.
+- **Analysis**: An analysis contains secondary analysis results derived from sequence reads (e.g. a genome assembly),
+- **EGA DAC**: An European Genome-phenome Archive (EGA) data access committee (DAC) is required for authorized access submissions.
+- **EGA Policy**: An European Genome-phenome Archive (EGA) data access policy is required for authorized access submissions.
+- **EGA Dataset**: An European Genome-phenome Archive (EGA) data set is required for authorized access submissions.
+
+## Identifying objects
+
+Each submitted object is uniquely identified within a submission account using the `alias` attribute. 
+Once an object has been submitted no other object of the same type can use the same alias within the 
+submission account. Objects can refer to other objects within a submission account by either alias or 
+the assigned accession number.
+
+## Identifying submitters
+
+The `center_name` attribute defines the submitting institution. The center name is automatically
+assigned from submission account details except for broker accounts. Brokers
+should provide a center name which reflects the institute where the data was generated. For brokers,
+the `broker_name` field is automatically assigned at time of submission.
+
+## Submission XML
+
+Each submission should contain a submission XML file which defines the submission actions.
+The most commonly used submission actions are listed below.
+
+### Submission XML: submit new objects
+
+The `ADD` action is used when submitting new objects. A corresponding submission XML
+will look like:
+
+```
+<SUBMISSION>
+     <ACTIONS>
+         <ACTION>
+             <ADD/>
+         </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+### Submission XML: submit studies with release date
+
+If no release date is provided then submitted studies and any associated objects
+will be publicly released two years after the study submission.
+
+A release date can be provided for studies by using the `HOLD` action together with the `ADD` action: 
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <ADD/>
+        </ACTION>
+        <ACTION>
+            <HOLD HoldUntilDate="TODO: release date"/>
+        </ACTION>                            
+    </ACTIONS>
+</SUBMISSION>
+```
+
+The `HoldUntilDate` specifies the public release date of any studies submitted within the submission. 
+This can be at most two years in the future.
+
+### Submission XML: make study public
+
+A study can be made immediately public by using `RELEASE` action with the study accession number:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+         <ACTION>
+              <RELEASE target="TODO: study accession"/>
+         </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+### Submission XML: update existing object
+
+The `MODIFY` action is used when updating existing objects. A corresponding submission XML
+will look like:
+
+```
+<SUBMISSION>
+     <ACTIONS>
+         <ACTION>
+             <MODIFY/>
+         </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+### Submission XML: validate objects
+
+The `VALIDATE` action is used when validating a submission without actually creating or
+updating any objects. It can be used together with the `ADD` action (default):
+
+```
+<SUBMISSION>
+     <ACTIONS>
+         <ACTION>
+             <ADD/>
+         </ACTION>
+         <ACTION>
+             <VALIDATE/>
+         </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+Or with the `MODIFY` action:
+
+```
+<SUBMISSION>
+     <ACTIONS>
+         <ACTION>
+             <MODIFY/>
+         </ACTION>
+         <ACTION>
+             <VALIDATE/>
+         </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+## Receipt XML
+
+Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.receipt.xsd))
+is returned. 
+
+If the submission was successful then the returned XML contains `/RECEIPT/@success="true"`.
+
+If there were any errors then the XML contains `/RECEIPT/@success="false"`.
+
+An example of a successful run submission:
+
+```
+<RECEIPT receiptDate="2014-12-02T16:06:20.871Z" success="true">
+    <RUN accession="ERR049536" alias="run_1" status="PRIVATE"/>
+    <SUBMISSION accession="ERA390457" alias="submission_1"/>
+    <ACTIONS>ADD</ACTIONS>
+</RECEIPT>
+```
+
+If the submission was not succesfull the Receipt XML will contain the error messages within `MESSAGES` block:
+
+```
+<RECEIPT receiptDate="2014-12-02T16:06:20.871Z" success="false">
+   ...
+   <MESSAGES>
+      <ERROR>This is an error message.</ERROR>
+   </MESSAGES>
+   ...
+</RECEIPT>
+```

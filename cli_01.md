@@ -30,8 +30,8 @@ Instructions for interactive submitters:
 - [Register a Sample](mod_03.html)
 
 Instructions for programmatic submitters:
-- [Register a Study](prog_01.html)
-- [Register a Sample](prog_05.html)
+- [Register a Study](prog_02.html)
+- [Register a Sample](prog_03.html)
 
 ## Stage 2: Prepare the files
 

@@ -15,7 +15,8 @@ In this case, the ENA genome assembly pipeline has failed because of errors at t
 
 How to reupload the files?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-Please find the instructions `here <https://www.ebi.ac.uk/ena/submit/uploading-data-files>`_.
+Please find the instructions `here <upload_01.html>`_.
+
 
 When you reupload files, the files must have *the same name* than in the original submission and must also be *gz compressed*. If one of these requirement are not satisfied, the automatic pipeline won't be able to recognise and process the new uploaded files.
 
