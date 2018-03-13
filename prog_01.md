@@ -13,8 +13,8 @@ validation or other errors will be written in the receipt XML as well.
 There are two programmatic Webin submission services. One for test submissions
 and another for production submissions:
 
-- Test service URL: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/
-- Production service URL: https://www.ebi.ac.uk/ena/submit/drop-box/submit/
+- Test service URL: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit
+- Production service URL: https://www.ebi.ac.uk/ena/submit/drop-box/submit
 
 The test service is recreated from the full content of the production service every day at
 03.00 GMT/BST. Therefore, any submissions made to the test service will be removed
@@ -41,7 +41,7 @@ Once uploaded, data files are submitted by referring to them from Run XML or Ana
 Run XML is used for used for sequence read submissions while Analysis XML is used 
 for other types of submissions (e.g. genome assemblies).
 
-More information of uploading data files and our the fair use policy is available [here](upload__01.html).
+More information of uploading data files and our the fair use policy is available [here](upload_01.html).
 
 ## Submission protocol
 
@@ -70,12 +70,12 @@ When using curl each XML file is submitted using the '-F' option:
 
 where the `XMLTYPE` is one of:
 
-- `SUBMISSION` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Submission.xsd))
-- `STUDY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Study.xsd))
-- `SAMPLE` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Sample.xsd))
-- `EXPERIMENT` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Experiment.xsd))
-- `RUN` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Run.xsd))
-- `ANALYSIS` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.Analysis.xsd))
+- `SUBMISSION` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.submission.xsd))
+- `STUDY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd))
+- `SAMPLE` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd))
+- `EXPERIMENT` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd))
+- `RUN` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd))
+- `ANALYSIS` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd))
 - `DAC` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.dac.xsd))
 - `POLICY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.policy.xsd))
 - `DATASET` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.dataset.xsd))
@@ -91,7 +91,7 @@ curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@experi
 
 Each XML type corresponds to a equivalent meta data object:
 
-![Webin medata model](webin_data_model_full.png)
+![Webin medata model](images/webin_data_model_full.png)
 
 - **Submission**: A submission contains submission actions to be performed by the archive. A submission can add more objects to the 
 archive, update already submitted objects or make objects publicly available. 
@@ -144,7 +144,7 @@ will look like:
 ### Submission XML: submit studies with release date
 
 If no release date is provided then submitted studies and any associated objects
-will be publicly released two years after the study submission.
+will be publicly released two years after the date of study submission.
 
 A release date can be provided for studies by using the `HOLD` action together with the `ADD` action: 
 
@@ -172,7 +172,7 @@ A study can be made immediately public by using `RELEASE` action with the study 
 <SUBMISSION>
     <ACTIONS>
          <ACTION>
-              <RELEASE target="TODO: study accession"/>
+              <RELEASE target="TODO: study accession number"/>
          </ACTION>
     </ACTIONS>
 </SUBMISSION>
@@ -231,9 +231,16 @@ Or with the `MODIFY` action:
 Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.receipt.xsd))
 is returned. 
 
-If the submission was successful then the returned XML contains `/RECEIPT/@success="true"`.
+To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
 
-If there were any errors then the XML contains `/RECEIPT/@success="false"`.
+The attribute `success` will have value `true` or `false`. If the value 
+is false then the submission did not succeed. In this case check the rest of 
+the receipt for error messages and after making corrections, try the submission again. 
+
+If the success attribute is true then the submission was successful. The receipt will 
+contain the accession numbers of the objects that you have submitted. In the case of 
+a study submission this is likely to be the accession that you will be including in a 
+publication.
 
 An example of a successful run submission:
 
@@ -245,7 +252,11 @@ An example of a successful run submission:
 </RECEIPT>
 ```
 
-If the submission was not succesfull the Receipt XML will contain the error messages within `MESSAGES` block:
+Above, the assigned run accession number `ERR049536` is provided in the `accession` attribute 
+within the `RUN` block.  
+
+If the submission was not successful the Receipt XML will contain the error messages within
+the `MESSAGES` block:
 
 ```
 <RECEIPT receiptDate="2014-12-02T16:06:20.871Z" success="false">
@@ -256,3 +267,17 @@ If the submission was not succesfull the Receipt XML will contain the error mess
    ...
 </RECEIPT>
 ```
+
+### Test and production services
+
+When using the test submission service the following message is included into the receipt:
+
+```xml
+<INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
+```
+
+It is advisable to first test your submissions using the Webin test service where changes are not 
+permanent and are erased every 24 hours. 
+
+Once you are happy with the result of the submission you can use production service. 
+Simply change the part in the URL from `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`:
