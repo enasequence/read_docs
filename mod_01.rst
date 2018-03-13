@@ -35,7 +35,6 @@ The circled numbers in the image correspond to the numbered items below that pro
 .. _3: mod_03.html
 .. _4: mod_04.html
 .. _6: mod_06.html
-.. _10: mod_10.html
 .. _FAQ: tax.html
 
 Metadata model

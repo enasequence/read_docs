@@ -13,4 +13,3 @@ Interactive Submissions
    resubmission
    assemb_upd
    reuploading
-   mod_10
