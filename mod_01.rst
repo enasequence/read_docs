@@ -1,28 +1,30 @@
 Module 1: Submission Options
 ****************************
 
+Submissions to ENA can be made using the `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ submission service.
 
-The majority of submissions to the ENA begin `here <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+The Interactive Webin supports the following submission options:
 
 .. image:: images/mod_01_p01.png
 
+The numbers below correspond to the circled numbers in the image.
 
-1. Log in and access “new submission” tab
-2. If you have not already, create a study using this option. Complete this step BEFORE going on to step 3. Module 2_ describes this step in more detail.
-3. If you have not already, create sample objects to represent your source material. Complete this step before going on to step 4. Module 3_ describes this step in more detail.
-4. This step combines multiple steps from above but it is preferable to split the job up (so that you have already registered a study and some samples). During this step you will be registering NGS read files but before you can do this you must upload the NGS read files to your ENA ftp directory (you have one with your account). `Here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_ are your options for uploading the read files. After you have uploaded the NGS read files use this step to create run and experiment objects. Module 4_ describes this step in more detail. This step will link everything together under the project created in step 2 according to this metadata model:
-
-* Experiment and run objects associate read files to their source sample and a study so that all 4 object types are then connected. This means that sample objects do not belong to any studies until experiment objects are created (see image on right).
-
-
-.. image:: images/mod_01_p02.png
-   :scale: 60
-   :align: right
-
-5. Genome submissions require a study and a sample so after step 2 and 3, if you have assembled genomes to submit you can go to Module 6_.
-6. Transcriptome assembly (TSA) submissions also require a project and samples to be submitted (step 2 and 3 above). The source NGS read data should also be made available to support the transcriptome assembly (step 4 above). After that go to Module 10_ to submit a TSA.
-7. This step is for isolated sequences, for example coding genes and rRNA sequences. More information `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_
-8. When submitting sample objects (as in step 3 above) you need to apply a taxonomic classification. Thus your organism (or environmental sample classification) must be registered with a tax id. Use this option to check that your organism has a tax id and if not you can request one from the same webform. For more information about taxonomy there is a section in the FAQ_ that may be useful.
+1. Log in using your webin submission account credentials and go to the **New Submission** tab.
+2. If you have not done so already, **register a study** using this option. Module 2_ describes this step in more detail.
+3. If you have not done so already, **register samples** using this option. Module 3_ describes this step in more detail.
+4. Use this option to **submit sequence reads and experiments**. You can register a study and samples as part of this workflow
+but we recommended that you pre-register your study and samples. Note that you must first upload your sequence read data files
+into your private Webin upload area (see `Data Uploads <upload_01.html>`_) before the files can be submitted here.
+Module 4_ describes this step in more detail.
+5. Use this option to **submit genome assemblies**. You can register a study and samples as part of this workflow
+but we recommend that you pre-register your study and samples.  Note that you must first upload your genome assembly data files
+into your private Webin upload area (see `Data Uploads <upload_01.html>`_) before the files can be submitted here.
+Module 6_ describes this step in more detail.
+7. Use this option to **submit other assembled and annotated sequences** for example coding genes and rRNA sequences.
+More information about this step is available `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_.
+8. You must apply an organism or environmental taxonomic classification to submitted samples. Use this option to check
+that your samples have a recognized taxonomic classification or to request new ones.
+For more information about taxonomy there is a section in the FAQ_ that may be useful.
 
 .. _2: mod_02.html
 .. _3: mod_03.html
