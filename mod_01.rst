@@ -14,22 +14,22 @@ The circled numbers in the image correspond to the numbered items below that pro
 
 1. Log in using your webin submission account credentials and go to the **New Submission** tab.
 2. Use the **Register study (project)** option to register new studies used to group submitted information together.
-Module 2_ describes this step in more detail.
+   Module 2_ describes this step in more detail.
 3. Use the **Register samples** option to register new samples used to describe the sequenced source material.
-Module 3_ describes this step in more detail.
+   Module 3_ describes this step in more detail.
 4. Use the **Submit sequence reads and experiments** option to submit sequence reads with associated experimental information.
-You can register a study and samples as part of this workflow but we recommended that you pre-register your study and samples.
-Note that you must first upload your sequence read data files into your private Webin upload area (see `Data Uploads <upload_01.html>`_)
-before the files can be submitted here. Module 4_ describes this step in more detail.
+   You can register a study and samples as part of this workflow but we recommended that you pre-register your study and samples.
+   Note that you must first upload your sequence read data files into your private Webin upload area (see `Data Uploads <upload_01.html>`_)
+   before the files can be submitted here. Module 4_ describes this step in more detail.
 5. Use the **Submit genome assemblies** option to submit assembled genomes. You can register a study and samples as part of this workflow
-but we recommend that you pre-register your study and samples.  Note that you must first upload your genome assembly data files
-into your private Webin upload area (see `Data Uploads <upload_01.html>`_) before the files can be submitted here.
-Module 6_ describes this step in more detail.
+   but we recommend that you pre-register your study and samples.  Note that you must first upload your genome assembly data files
+   into your private Webin upload area (see `Data Uploads <upload_01.html>`_) before the files can be submitted here.
+   Module 6_ describes this step in more detail.
 7. Use the **Submit other assembled and annotated sequences** option to submit coding genes, rRNA sequences and other
-annotated sequences. More information about this step is available `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_.
+   annotated sequences. More information about this step is available `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_.
 8. Use the **Taxonomy Check/Request ** option to check that your samples have a recognized taxonomic classification
-or to register new ones. You must provide an organism or environmental taxonomic classification for each submitted sample.
-For more information about taxonomy there is a section in the FAQ_ that may be useful.
+   or to register new ones. You must provide an organism or environmental taxonomic classification for each submitted sample.
+   For more information about taxonomy there is a section in the FAQ_ that may be useful.
 
 .. _2: mod_02.html
 .. _3: mod_03.html
