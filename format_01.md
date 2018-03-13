@@ -1,4 +1,4 @@
-# Read data formats
+# Module 1: Read data formats
 
 We recommend that read data is either submitted in BAM or CRAM format. However,
 read data can be submitted in several standard and platform specific formats.
