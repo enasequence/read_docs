@@ -1,4 +1,4 @@
-# Module 3: Flat File upload - Submit an ENA Supported Sequence File
+# Module 12: Flat File upload - Submit an ENA Supported Sequence File
 
 Annotated sequence entries are stored in the ENA as ENA supported sequence files. [Here](http://www.ebi.ac.uk/ena/data/view/KU963029&display=text) is an example of an HLA gene in ENA supported format. It is a text file that is computer readable due to the 2 character line beginnings (ID, AC, DE ...). The ENA browser renders the text file into a friendlier and more graphical [view](http://www.ebi.ac.uk/ena/data/view/KU963029) but the computer readable version is still available so that automatic pipelines down stream of the ENA can download and parse large numbers of sequence entries.
 

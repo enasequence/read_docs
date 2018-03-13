@@ -1,4 +1,4 @@
-# Module 5: Register a Sample
+# Module 3: Register a Sample
 
 ## The Sample Object
 

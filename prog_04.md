@@ -1,4 +1,4 @@
-# Module 2: Submit an Annotated Sequence
+# Module 4: Submit an Annotated Sequence
 
 Annotated sequences can be any number of sequences that are assembled from shorter reads or sequenced using Sanger capillary sequencing. They can be annotated with features such as coding domains, introns, exons, non coding RNA etc. Typical sequences submitted to the ENA are rRNA genes, single CDS genomic DNA sequences, MHC genes, mRNA and many more. Most submitters will use the [interactive WebIn Submission system](https://www.ebi.ac.uk/ena/submit/sra/#submissions) to submit these types of sequences:
 

@@ -1,4 +1,4 @@
-# Module 4: Update a Study
+# Module 5: Update a Study
 
 Updating study XMLs is an almost identical process to submitting a new one. 
 The first step is to obtain the original study in XML format. This step

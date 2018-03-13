@@ -1,4 +1,4 @@
-# Module 1: Register a Study
+# Module 2: Register a Study
 
 ## The Study Object
 
