@@ -219,6 +219,103 @@ Or with the `MODIFY` action:
 </SUBMISSION>
 ```
 
+### Submission XML: cancel objects
+
+Pre-publication private objects can be cancelled by all submitters.
+
+To cancel objects, you must use the `CANCEL` action in the submission XML.
+
+The `CANCEL` action should point to the object that is being cancelled. Please note 
+that the `CANCEL` action will be propagated from studies to all associated experiments 
+ and analyses, and from experiments to all associated runs.
+
+Below is an example of a submission XML used to cancel objects:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <CANCEL target="TODO: object accession number">
+        </ACTION>
+    </ACTIONS> 
+</SUBMISSION> 
+```
+
+### Submission XML: suppress objects
+
+Public objects may be suppressed by some brokers.
+
+To suppress objects, you must use the `SUPPRESS` action in the submission XML.
+
+The `SUPPRESS` action should point to the object that is being suppressed. Please 
+note that `SUPPRESS` action will be propagated from studies to all associated 
+experiments and analyses, and from experiments to all associated runs.
+
+It is possible to temporarily suppress an object by providing a `HoldUntilDate`.
+
+Below is an example of a submission XML used to permanently suppress objects:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <SUPPRESS target="TODO: object accession number">
+        </ACTION>
+    </ACTIONS> 
+</SUBMISSION> 
+```
+
+Below is an example of a submission XML used to temporarily suppress an object 
+until 1st of January 2019 after which the object will become public again:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <SUPPRESS target="TODO: object accession number"" HoldUntilDate="2019-01-01">
+        </ACTION>
+    </ACTIONS> 
+</SUBMISSION> 
+```
+
+### Submission XML: kill objects
+
+Public objects may be killed by some brokers.
+
+To kill objects, you must use the `KILL` action in the submission XML.
+
+The `KILL` action should point to the object that is being killed. Please note 
+that `KILL` action will be propagated from studies to all associated experiments
+and analyses, and from experiments to all associated runs.
+
+It is possible to temporarily kill an object by providing a `HoldUntilDate`.
+
+Below is an example of a submission XML used to permanently kill objects:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <KILL target="TODO: object accession number">
+        </ACTION>
+    </ACTIONS>
+</SUBMISSION> 
+```
+
+Below is an example of a submission XML used to temporarily kill an object
+until 1st of January 2019 after which the object will become public again:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <KILL target="TODO: object accession number"" HoldUntilDate="2019-01-01"> 
+        </ACTION> 
+    </ACTIONS> 
+</SUBMISSION> 
+``` 
+
+
 ## Receipt XML
 
 Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.receipt.xsd))
