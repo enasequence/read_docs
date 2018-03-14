@@ -17,8 +17,8 @@ The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.sra.ebi.a
 XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
 
-Relationships between objects
-==============================
+Object relationships
+====================
 
 Both run and experiment are associated with other objects.
 
@@ -31,15 +31,15 @@ An experiment is assocated with a sample. It is common to have multiple librarie
 and sequencing experiments for a single sample. Experiments point to samples to
 allow sharing of sample information between multiple experiments.
 
-A summary of object relationships is:
+To summarise object relationships:
 
-1. One or more runs are part of an experiment
-2. One or more experiments are part of a study
-3. One or more experiments are associated with a sample
+1. One or more runs are part of an experiment.
+2. One or more experiments are part of a study.
+3. One or more experiments are associated with a sample.
 
 It is common to pre-register samples ahead of submitting sequence reads.
-Note that samples and studies are associated with each other only
-through experiments (or analyses).
+Note that samples and studies will be associated with each only after
+experiments have been submitted.
 
 Run XML: part of experiment
 ---------------------------
@@ -113,16 +113,19 @@ publications.
 Supported data formats
 ======================
 
-Please see `Read data formats <format_01.html>`_.
+Please see `Read Data Formats <format_01.html>`_.
 
 Upload data files
 =================
 
-Data files must exist in your Webin upload area at the time when a run XML is being submitted. Once the
-run has been submitted the data files will be moved from the Webin upload area into the archive.
+Please see `Data Uploads <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
 
-You can upload your data files to the root directory of your upload area or you can create subdirectories
-and upload your files there.
+You must have uploaded data files into your Webin upload area before you can
+submit them using a run XML. Once the run has been submitted the data files
+will be moved from the Webin upload area into the archive.
+
+You can upload your data files to the root directory of your upload area or you can
+create subdirectories and upload your files there.
 
 If the files are uploaded to the root directory
 then simply enter the file name in the Run XML when referring to it:
@@ -131,14 +134,12 @@ then simply enter the file name in the Run XML when referring to it:
 
     <FILE filename="mantis_religiosa_R1.fastq.gz" ... />
 
-If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix prefix the file name
+If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix the file name
 with the name of the subdirectory:
 
 .. code-block:: xml
 
     <FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
-
-You can find instructions on how to upload files to your Webin upload area `here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
 
 Create Run and Experiment XML
 =============================
