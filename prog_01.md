@@ -171,7 +171,7 @@ A study can be made immediately public by using `RELEASE` action with the study 
 </SUBMISSION>
 ```
 
-### Submission XML: update existing object
+### Submission XML: update existing objects
 
 The `MODIFY` action is used when updating existing objects. A corresponding submission XML
 will look like:
@@ -184,6 +184,31 @@ will look like:
          </ACTION>
     </ACTIONS>
 </SUBMISSION>
+```
+
+Checklist for preparing an object for update:
+
+- The new XML for the object must either contain the original alias or the assigned accession.
+- If you provide an alias then it must be given exactly as in the initial submission.
+- If you provide an accession then it must be the accession number assigned to the object 
+in the initial submission.
+- Run XML objects can't be updated to point to different data files.
+- Analysis XML objects can't be updated to point to different data files.
+
+Below is an extract of an study XML which contains an accession number:
+
+```
+<STUDY accession="ERP000011">
+   ...       
+</SAMPLE>
+ ```
+
+Below is an extract of an study XML which contains an alias:
+
+```
+<STUDY alias="study1">
+   ...       
+</SAMPLE>
 ```
 
 ### Submission XML: validate objects
