@@ -1,5 +1,5 @@
-Module 1: Submission Options
-****************************
+Module 1: Interactive Submission Options
+****************************************
 
 Introduction
 ============

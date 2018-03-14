@@ -1,4 +1,4 @@
-# Module 1: Submission Options
+# Module 1: Programmatic Submission Options
 
 ## Introduction
 
@@ -383,7 +383,22 @@ the `MESSAGES` block:
 </RECEIPT>
 ```
 
-### Test and production services
+## Retrieving submitted XMLs
+
+Submitted XMLs can be retrieved from the submission service using the assigned 
+accession numbers. This can be a helpful, for example, as a starting point for making
+modifications to the submitted objects.
+
+Please substitute `<accession>` with the assigned accession number in the URLs below:
+
+- Project XML: `https://www.ebi.ac.uk/ena/submit/drop-box/projects/<accession>?format=html`
+- Study XML: `https://www.ebi.ac.uk/ena/submit/drop-box/studies/<accession>?format=xml`
+- Sample XML: `https://www.ebi.ac.uk/ena/submit/drop-box/samples/<accession>?format=xml`
+- Run XML: `https://www.ebi.ac.uk/ena/submit/drop-box/runs/<accession>?format=xml`
+- Experiment XML: `https://www.ebi.ac.uk/ena/submit/drop-box/experiments/<accession>?format=xml`
+- Analysis XML: `https://www.ebi.ac.uk/ena/submit/drop-box/analyses/<accession>?format=xml`
+
+## Test and production services
 
 When using the test submission service the following message is included into the receipt:
 

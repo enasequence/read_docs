@@ -174,7 +174,7 @@ Experiment XML:
                        <PAIRED NOMINAL_LENGTH="250" NOMINAL_SDEV="30"/>
                    </LIBRARY_LAYOUT>
                    <LIBRARY_CONSTRUCTION_PROTOCOL>Messenger RNA (mRNA) was isolated using the Dynabeads mRNA Purification Kit (Invitrogen, Carlsbad Ca. USA) and then sheared using divalent cations at 72*C. These cleaved RNA fragments were transcribed into first-strand cDNA using II Reverse Transcriptase (Invitrogen, Carlsbad Ca. USA) and N6 primer (IDT). The second-strand cDNA was subsequently synthesized using RNase H (Invitrogen, Carlsbad Ca. USA) and DNA polymerase I (Invitrogen, Shanghai China). The double-stranded cDNA then underwent end-repair, a single `A? base addition, adapter ligati on, and size selection on anagarose gel (250 * 20 bp). At last, the product was indexed and PCR amplified to finalize the library prepration for the paired-end cDNA.</LIBRARY_CONSTRUCTION_PROTOCOL>
-                  </LIBRARY_DESCRIPTOR>
+               </LIBRARY_DESCRIPTOR>
            </DESIGN>
            <PLATFORM>
                <ILLUMINA>
