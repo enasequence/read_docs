@@ -28,7 +28,7 @@ using the production service.
 Registration
 ============
 
-If you have not submitted to Webin before please [register a submission account](reg_01.html).
+If you have not submitted to Webin before please `register a submission account <reg_01.html>`_.
 
 Submitting
 ==========
