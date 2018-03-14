@@ -7,7 +7,7 @@ using the [Webin command line submission interface](cli_01.html).
 
 Genome assembly submissions include plasmids, organelles, 
 complete virus genomes, viral segments/replicons, bacteriophages, 
-prokaryotic or eukaryotic genomes.
+prokaryotic and eukaryotic genomes.
  
 A genome assembly consists of:
 - General assembly information
@@ -137,93 +137,9 @@ MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
 ```
 
-### Fasta file
+### Other files
 
-Unannotated sequences should be submitted as a Fasta file.
-
-The sequence name is extracted from the fasta header. For example the following header 
-contains the name 'contig1':
-
-`>contig1`
-
-### AGP file
-
-Scaffolds or chromosomes constructed from contigs or scaffolds, respectively, can be submitted using 
-an [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) file.
-
-### Flat file	
-
-Annotated sequences must be submitted using an EMBL-Bank flat file.
-
-The sequence name is extracted from the AC * line and must be prefixed with a '_'.
-For example the following AC * line defines name 'contig1':
-
-`AC * _contig1`
-
-### Chromosome list file
-
-The chromosome list file must be provided when the submission contains assembled chromosomes. 
-
-The file is a tab separated text file (USASCII7) containing the following columns:
-
-- OBJECT_NAME (first column): The unique sequence name.
-- CHROMOSOME_NAME (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment qualifiers in the EMBL-Bank flat files.
-- CHROMOSOME_TYPE (third column):
-    - chromosome
-    - plasmid
-    - linkage_group
-    - monopartite
-    - segmented
-    - multipartite  
-- CHROMOSOME_LOCATION (optional fourth column). By default eukaryotic chromosomes will be assumed to reside in the nucleus 
-and procaryotic chromosomes and plasmids in the cytoplasm.
-    - Macronuclear
-    - Nucleomorph
-    - Mitochondrion
-    - Kinetoplast
-    - Chloroplast
-    - Chromoplast
-    - Plastid
-    - Virion
-    - Phage
-    - Proviral
-    - Prophage
-    - Viroid
-    - Cyanelle
-    - Apicoplast
-    - Leucoplast
-    - Proplastid
-    - Hydrogenosome
-    - Chromatophore
-
-An example of a chromosome list file:
-
-```
-chr01 I Chromosome
-chr02 II Chromosome
-chr03 III	Chromosome
-chr04	IV	Chromosome
-```   
-    
-### Unlocalised list file
-
-This file should be provided when the submission includes chromosomes with unlocalised sequences.
-
-Unlocalised sequences are contigs or scaffolds that are associated with a specific chromosome but 
-their order and orientation is unknown.
-
-The unlocalised list file is a tab separated text file (USASCII7) containing the following columns: 
-
-- OBJECT_NAME (first column): the unique sequence name.
-- CHROMOSOME_NAME (second column): the unique chromosome name associated with this sequence.
-
-An example unlocalised list file:
-
-```
-cb25.NA_084     III
-cb25.NA_093     III
-cb25.NA_108     III
-```   
+Other genome assembly data files are described in [Genome Assembly Data Formats](format_02.html). 
 
 ## Stage 3: Validate and submit the files
 
