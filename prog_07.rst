@@ -1,27 +1,21 @@
 Module 7: Submit sequence reads
 *******************************
 
-The Experiment and Run Objects
-==============================
+Introduction
+============
 
 Sequence read data is submitted using experiment and run XMLs.
 
-Just like a sample object represents the source material that is sequenced, 
-an experiment object represents the library solution that is created from the sample 
-and set up to run on a sequencing instrument. Thus the experiment object contains 
-details about sequencing platform and library protocols. 
+An experiment object represents the library solution that is created from a sample
+and used in a sequencing experiment. The experiment object contains details about the
+sequencing platform and library protocols.
 
-A run object is used to attach sequence read data to experiments and can be likened to
-a lane (or equivalent) on an sequencing machine. If the original lane is pooled then a run
-object may represent the demultiplexed reads for one source sample.
+A run object represents a lane (or equivalent) on an sequencing machine
+and is used to attach sequence read data to experiments.
 
 The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd>`_
 XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
-
-The XML schemas define the structure of the XMLs and provide controlled vocabularies for many elements. 
-For example, `PLATFORM` (sequencing platform) element values are restricted by enumerations defined in
-the schemas.
 
 Relationships between objects
 ==============================
@@ -30,31 +24,25 @@ Both run and experiment are associated with other objects.
 
 .. image:: images/webin_data_model_read.png
 
-It is common to have multiple libraries and sequencing experiments for a single source sample.
-The experiment points to the sample rather than the other way around so that several experiments
-can be added to one sample (not necessarily at the same time) without having to update the sample object.
+An experiment is part of a study. Studies are used to group together experiments to
+allow them to be cited together in a publication.
 
-It is also common to have multiple lanes for a single sequencing experiment. For example, you can sequence
-the same library on multiple lanes (runs) to obtain deeper coverage or to create technical replicates.
-A run points to an experiment to allow us to record this relationship.
+An experiment is assocated with a sample. It is common to have multiple libraries
+and sequencing experiments for a single sample. Experiments point to samples to
+allow sharing of sample information between multiple experiments.
 
-An experiment points to a study and is considered to be part of it. Studies are used to
-group together experiments to allow them to be cited together in a publication.
+A summary of object relationships is:
 
-This model allows:
+1. One or more runs are part of an experiment
+2. One or more experiments are part of a study
+3. One or more experiments are associated with a sample
 
-1. one or more runs in an experiment
-2. one or more experiments in a study
-3. one or more experiments for a sample
+It is common to pre-register samples ahead of submitting sequence reads.
+Note that samples and studies are associated with each other only
+through experiments (or analyses).
 
-Because samples are linked to studies through experiments, the model also allows:
-
-4. any number of samples in a study
-5. any number of studies for a sample
-
-It is typical to pre-register samples ahead of submitting sequence read or
-other data, but do not assume that the samples belong to a study until
-data has been submitted to connect the two together!
+Run XML: part of experiment
+---------------------------
 
 A run points to the experiment it is part of using the `<EXPERIMENT_REF>` element.
 This can be done either by using an accession:
@@ -82,11 +70,32 @@ many other submitted objects could share the same name.
 These principles with `refname` and `accession` attributes applies to all references between objects
 including experiment references to studies and samples.
 
-An experiment points to the study it is part of using the `<STUDY_REF>` element
-and to the sample which has provided the source material using the `<SAMPLE_DESCRIPTOR>` element.
-In both cases, either an accession or a name can be used in the reference. If you are using the
+Experiment XML: part of study
+-----------------------------
+
+An experiment points to the study it is part of using the `<STUDY_REF>` element. In
+the example below this reference is made using an accession number:
+
+.. code-block:: xml
+
+    <STUDY_REF accession="ERP123456"/>
+
+Either an `accession` or a `refname` (alias) can be used in the reference. If you are using the
 `accession` attribute you can use both ERP amd PRJ accessions when referring
-to studies and both ERS and SAM accessions when referring to samples.
+to studies.
+
+Experiment XML: associated with sample
+--------------------------------------
+
+An experiment points to the sample it is associated with using the `<SAMPLE_DESCRIPTOR>` element.
+In the example below this reference is made using an accession number:
+
+.. code-block:: xml
+
+    <SAMPLE_DESCRIPTOR accession="SRS462875"/>
+
+Either an `accession` or a `refname` (alias) can be used in the reference. If you are using the
+`accession` attribute you can use both ERS and SAM accessions when referring to samples.
 
 Metadata standards
 ==================
@@ -129,18 +138,19 @@ with the name of the subdirectory:
 
     <FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
 
-Instructions on how to upload files to the Webin upload areas can be found
-`here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
+You can find instructions on how to upload files to your Webin upload area `here <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
 
-Create the Run and Experiment XML
-=================================
+Create Run and Experiment XML
+=============================
+
+Run and Experiment XML: paired fastq
+------------------------------------
 
 Below is an example of an Illumina HiSeq 2000 paired end reads being submitted in Fastq format.
 
 The experiment points to a pre-registered sample and study using their accessions.
 
-The run is being submitted at the same time as the experiment and must point to the experiment
-using the experiment's alias.
+The run points to the experiment using the experiment's alias.
 
 Experiment XML:
 
@@ -242,7 +252,8 @@ Run XML:
     </RUN_SET>
 
 
-Change the XMLs by entering your own information and save it in two files, for example `experiment.xml` and `run.xml`.
+Change the XMLs by entering your own information and save it in two files, for example `experiment.xml`
+and `run.xml`.
 
 Change the value of `alias` to be a unique name. You will need the unique name for example to refer to your 
 experiment when adding run objects to it. An alias can be a short acronym but it should be meaningful 
@@ -254,7 +265,49 @@ part of the run.
 To check the integrity of the file transfer an md5 checksum must be provided for each file. 
 You can provide this by using the `checksum_method="MD5"` and `checksum` attributes in the `<FILE>` element,
 or you can provide the MD5 checksum in file `<file>.md5` in the same folder as the corresponding data
-file `<file>`. 
+file `<file>`.
+
+Run XML: BAM
+------------
+
+Below is an example of a RUN XML when reads are submitted in BAM format. Please
+note that `filetype` has been set to `bam`.
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <RUN_SET>
+        <RUN alias="run_mantis_religiosa" center_name="">
+            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <DATA_BLOCK>
+                <FILES>
+                    <FILE filename="mantis_religiosa_R1.bam" filetype="bam"
+                        checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
+                </FILES>
+            </DATA_BLOCK>
+        </RUN>
+    </RUN_SET>
+
+Run XML: CRAM
+--------------
+
+Below is an example of a RUN XML when reads are submitted in CRAM format. Please
+note that `filetype` has been set to `cram`.
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <RUN_SET>
+        <RUN alias="run_mantis_religiosa" center_name="">
+            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <DATA_BLOCK>
+                <FILES>
+                    <FILE filename="mantis_religiosa_R1.cram" filetype="cram"
+                        checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
+                </FILES>
+            </DATA_BLOCK>
+        </RUN>
+    </RUN_SET>
 
 Experiment XML: library information
 -----------------------------------
