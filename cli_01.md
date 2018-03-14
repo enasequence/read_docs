@@ -2,10 +2,17 @@
 
 ## Introduction
 
-The Webin command line submission interface can be used to validate, upload and submit files 
-to the European Nucleotide Archive (ENA). 
+Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin submission
+service and the Webin command line submission service. 
 
-Webin submission account credentials are required to use the Webin command line submission interface.
+This module gives an introduction to the Webin command line submission interface
+used to validate, upload and submit files to the European Nucleotide Archive (ENA). 
+
+## Registration
+
+If you have not submitted to Webin before please [register a submission account](reg_01.html).
+
+## Submission process
 
 The following types of submissions are supported:
 

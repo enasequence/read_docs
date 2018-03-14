@@ -2,11 +2,19 @@
 
 ## Introduction
 
+Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin submission
+service and the Webin command line submission service. This module gives an introduction to the
+programmatic Webin submission service.
+
 Submissions of different types can be made using XML through the programmatic
 Webin submission service.
 
 A receipt XML with accession numbers is provided upon successful submission. Any
 validation or other errors will be written in the receipt XML as well.
+
+## Registration
+
+If you have not submitted to Webin before please [register a submission account](reg_01.html).
 
 ## Production and test services
 
