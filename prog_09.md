@@ -18,7 +18,7 @@ XML Schema.
 
 Analysis object is associated with other objects.
 
-![Webin data model](images/webin_data_model_read.png)
+![Webin data model](images/webin_data_model_analysis.png)
 
 Most analyses are part of a study. Studies are used to group together analyses to
 allow them to be cited together in a publication.
