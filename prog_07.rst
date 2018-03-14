@@ -1,5 +1,5 @@
-Module 7: Submit sequence reads
-*******************************
+Module 7: Submit read data
+**************************
 
 Introduction
 ============
