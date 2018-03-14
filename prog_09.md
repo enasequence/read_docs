@@ -1,4 +1,4 @@
-# Module 9: Submit analysis data
+# Module 9: Submit Analysis Data
 
 ## Introduction
 
@@ -18,7 +18,7 @@ XML Schema.
 
 Analysis object is associated with other objects.
 
-.. image:: images/webin_data_model_read.png
+![Webin data model](images/webin_data_model_read.png)
 
 Most analyses are part of a study. Studies are used to group together analyses to
 allow them to be cited together in a publication.
@@ -26,10 +26,12 @@ allow them to be cited together in a publication.
 Many analyses are assocated with a sample. Analyses point to samples to
 allow sharing of sample information between multiple experiments.
 
-To summarise object relationships:
+To summarise main object relationships:
 
 2. One or more analyses may be part of a study.
 3. One or more analyses may be associated with a sample.
+
+Additionally, analyses may refer to experiments and runs.
 
 ## Analysis XML: part of study
 
@@ -48,17 +50,13 @@ or a name within the submitter's account:
 
 ## Analysis XML: associated with sample
 
-An analysis can be associated with one or more samples using the `<SAMPLE_REF>` element,
-for example:
-
-```
-<SAMPLE_REF accession="ERS123456"/>
-```
+An analysis can be associated with one or more samples using the `<SAMPLE_REF>` element
+either using an accession or alias to refer to the sample.
 
 ## Analysis XML: associated with experiment and run
 
 An analysis can also be associated with any number of experiments or runs using the `<EXPERIMENT_REF>` 
-and `<RUN_REF>` elements.
+and `<RUN_REF>` elements. Again, either an accession or alias can be used in the reference.
 
 See how it is possible to analyze data that is available in the ENA, archive the results 
 and link back to the sequence reads used in the analysis. This is already being done by many
@@ -86,10 +84,10 @@ submission service further restricts the use of these file types for specific an
 ## Analysis XML: analysis types
 
 The most distinguishing part of an analysis obect is contained in the `<ANALYSIS_TYPE>` block. 
-Whatever element this block contains dictates what the analysis should contain and 
+Whatever element this block contains dictates the type of data the analysis should contain and 
 how it will be validated by ENA after it is submitted.
 
-The most commonly used analysis types are `SEQUENCE_ASSEMBLY` used for genome assemblies 
+Examples of commonly used analysis types are `SEQUENCE_ASSEMBLY` used for genome assemblies 
 and `SEQUENCE_VARIATION` used by European Variation Archive (EVA) for VCF variations.
 
 ## Analysis XML: attributes
@@ -101,8 +99,6 @@ the XML:
        <TAG>library preparation date</TAG>
        <VALUE>2010-08</VALUE>
     </ANALYSIS_ATTRIBUTE>
-
----------------------- TODO -------------------------------------------------
 
 ## Genome Submission 
 
