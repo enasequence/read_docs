@@ -403,7 +403,6 @@ Let's call this file `submission.xml`.
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <SUBMISSION>
        <ACTIONS>
           <ACTION>
@@ -463,9 +462,7 @@ is false then the submission did not succeed. In this case check the rest of
 the receipt for error messages and after making corrections, try the submission again. 
 
 If the success attribute is true then the submission was successful. The receipt will 
-contain the accession numbers of the objects that you have submitted. In the case of 
-an ENA study this is likely to be the accession that you will be including in a 
-publication.
+contain the accession numbers of the objects that you have submitted.
 
 Test and production services
 =============================
