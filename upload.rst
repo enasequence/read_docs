@@ -1,4 +1,4 @@
-Data Uploads
+Data Upload
 ========================
 
 .. toctree::

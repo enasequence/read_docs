@@ -118,7 +118,7 @@ Please see `Read Data Formats <format_01.html>`_.
 Upload data files
 =================
 
-Please see `Data Uploads <http://www.ebi.ac.uk/ena/about/sra_data_upload>`_.
+Please see `Data Upload <upload_01.html>`_.
 
 You must have uploaded data files into your Webin upload area before you can
 submit them using a run XML. Once the run has been submitted the data files

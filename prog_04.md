@@ -28,7 +28,7 @@ study accession (ERP or PRJ) or the assigned individual sequence accessions.
 
 Each row in the submitted file corresponds to one sequence. Each sequence
 will be assigned an individual sequence accession. The sequences from one
-submission will share a contiguos range of sequece accession numbers. 
+submission will share a contiguous range of sequece accession numbers. 
 
 The sequence accessions will be assigned only when the submission has been fully
 processed by ENA. This will happen some time after the submission has been made.
@@ -67,7 +67,7 @@ different sequence. The last column is for the sequence and the others are for a
 
 ## Step 3: Upload the TSV file
 
-Please see [Data Uploads](http://www.ebi.ac.uk/ena/about/sra_data_upload).
+Please see [Data Upload](upload_01.html).
 
 You must gz compress and upload the TSV file into your Webin upload area before you can
 submit it using analysis XML. Once the analysis has been submitted the TSV file

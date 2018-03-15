@@ -1,4 +1,4 @@
-# Module 12: Submit Annotated Flat File
+# Module 12: Submit Annotated Flat Files
 
 Annotated sequences can be submitted in flat file format using Analysis XML.
 
@@ -48,7 +48,7 @@ you should register a new study:
 
 ## Step 2: Upload data files
 
-Please see [Data Uploads](http://www.ebi.ac.uk/ena/about/sra_data_upload).
+Please see [Data Upload](upload_01.html).
 
 You must upload gz compressed flat files into your Webin upload area before you can
 submit them using analysis XML. Once the analysis has been submitted the files

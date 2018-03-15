@@ -1,4 +1,4 @@
-# Module 1: Data Uploads
+# Module 1: Data Upload
 
 You must upload data files into your private Webin file upload area
 at EMBL-EBI before you can submit the files through the Webin submission services. 

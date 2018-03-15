@@ -54,7 +54,7 @@ In the example above the data file to be submitted is called 'eg_01.fq.bz2'
 It is a compressed version on the original 'file eg_01.fq'. Compressing large files is advantageous because it takes less time to transfer them and this increases the likelihood of a complete transfer without corruption.
 The MD5 checksum of file 'eg_01.fq.bz2' is contained in file 'eg_01.fq.bz2.md5'. ENA requires the checksum that you have calculated so that we can compare it to the one that we calculate once the file is on our ftp server. So you can upload this **checksum file** in addition to the data file and our system will find it. As long as you abide by the naming convention XXX.md5 where XXX is the name of the data file and XXX.md5 is a text file containing the MD5 checksum ENA will understand. 
 
-This is not the only way to register the checksum for a data file. When you come to submit the uploaded data file you will find that you can include the 32 character checksum string in with the submission metadata. If you do include the checksums in with the metadata at submission time then you do not have to accompany each data file with an md5 file at upload time. Also note that the ENA file uploader (one of the [upload options](http://www.ebi.ac.uk/ena/about/sra_data_upload) available) will automatically create an MD5 file for every data file that it uploads and it will deposit this MD5 file (using the naming convention discussed) along with the data file on the ftp server. That means that you do not need to provide MD5 checksums in the metadata at submission time if you have used the ENA file uploader.
+This is not the only way to register the checksum for a data file. When you come to submit the uploaded data file you will find that you can include the 32 character checksum string in with the submission metadata. If you do include the checksums in with the metadata at submission time then you do not have to accompany each data file with an md5 file at upload time. Also note that the ENA file uploader (one of the [upload options](upload_01.html) available) will automatically create an MD5 file for every data file that it uploads and it will deposit this MD5 file (using the naming convention discussed) along with the data file on the ftp server. That means that you do not need to provide MD5 checksums in the metadata at submission time if you have used the ENA file uploader.
 
 You can not pool checksums from several data files into a single md5 file. The ENA file processing system will not be able to interpret this. Each file must have its own md5 file (if you are choosing to register it that way)
 
@@ -67,7 +67,7 @@ There are other possible validation errors. For example we may not be able to un
 ## Step 3: Uploading the file
 
 This is the final step before the submission. Instructions for this are well detailed already:
-[http://www.ebi.ac.uk/ena/about/sra_data_upload](http://www.ebi.ac.uk/ena/about/sra_data_upload)
+[Data Upload](upload_01.html)
 
 Remember to upload the checksum file in addition to the data file unless you are going to register the checksum at submission time or you are using the ENA file uploader instead. Here is a basic example of using FTP to upload a data file called 'eg_01.fq.bz2' and its md5 file 'eg_01.fq.bz2.md5'. The example is using the Terminal application in the Mac operating system. See above link for more detailed instructions.
 

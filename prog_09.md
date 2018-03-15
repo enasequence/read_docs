@@ -99,7 +99,7 @@ the XML:
          
 ## Upload data files
 
-Please see [Data Uploads](http://www.ebi.ac.uk/ena/about/sra_data_upload).
+Please see [Data Upload](upload_01.html).
 
 You must have uploaded data files into your Webin upload area before you can
 submit them using an analysis XML. Once the analysis has been submitted the data files

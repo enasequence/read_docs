@@ -46,11 +46,11 @@ The circled numbers in the image correspond to the numbered items below that pro
    Module 3_ describes this step in more detail.
 4. Use the **Submit sequence reads and experiments** option to submit sequence reads with associated experimental information.
    You can register a study and samples as part of this workflow but we recommended that you pre-register your study and samples.
-   Note that you must first upload your sequence read data files into your private Webin upload area (see `Data Uploads <upload_01.html>`_)
+   Note that you must first upload your sequence read data files into your private Webin upload area (see `Data Upload <upload_01.html>`_)
    before the files can be submitted here. Module 4_ describes this step in more detail.
 5. Use the **Submit genome assemblies** option to submit assembled genomes. You can register a study and samples as part of this workflow
    but we recommend that you pre-register your study and samples.  Note that you must first upload your genome assembly data files
-   into your private Webin upload area (see `Data Uploads <upload_01.html>`_) before the files can be submitted here.
+   into your private Webin upload area (see `Data Upload <upload_01.html>`_) before the files can be submitted here.
    Module 6_ describes this step in more detail.
 7. Use the **Submit other assembled and annotated sequences** option to submit coding genes, rRNA sequences and other
    annotated sequences. More information about this step is available `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_.
