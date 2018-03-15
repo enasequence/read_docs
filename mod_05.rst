@@ -18,7 +18,7 @@ You will see an XML rendition of the sample. This is how the ENA stores its samp
 
 .. image:: images/mod_05_p02_b.png
 
-This method for editing existing samples is useful for one-off edits but it is not feasible for editing many samples in bulk. For this you can use the programmatic method which is outlined `here <prog_06.html>`_. 
+This method for editing existing samples is useful for one-off edits but it is not feasible for editing many samples in bulk. For this you can use the programmatic method which is outlined `here <prog_07.html>`_.
 
 
 Study Edit

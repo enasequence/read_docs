@@ -1,4 +1,4 @@
-# Module 5: Update an Experiment or a Run
+# Module 8: Update an Experiment or a Run
 
 The main difference between programmatically creating new experiment and runs 
 and updating existing ones is that the `MODIFY` action should be used instead of the `ADD` action:

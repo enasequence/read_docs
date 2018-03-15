@@ -1,4 +1,4 @@
-Module 7: Submit Read Data
+Module 4: Submit Read Data
 **************************
 
 Introduction
