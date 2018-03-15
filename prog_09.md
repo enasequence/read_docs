@@ -236,7 +236,7 @@ The '19933_4#3' is the name for the sample used in the VCF file.
 Analysis type `<REFERENCE_ALIGNMENT>` is for submitting read alignments.
 
 Please note that the reads used in the alignment should already have been submitted following 
-instructions in [Submit Read Data](prog_7.html).
+instructions in [Submit Read Data](prog_07.html).
 
 Read alignment analyses must be associated with a study and can be assocated with
 one or more samples. The analyses may also point to sequencing experiments or runs
@@ -305,7 +305,7 @@ iae-pestchromosomesagamp3fagz	AS:AgamP3	M5:a4da4bafa82830c0a418c5a42138377b
 	SP:Anopheles gambiae
 ```
 
-The analysis XML associated the assembly and the reference sequence with ENA accessions 
+The analysis XML associates the assembly and the reference sequence with ENA accessions 
 using the `label` and `accession` attributes: 
 
 ```
@@ -319,7 +319,7 @@ using the `label` and `accession` attributes:
 </ANALYSIS_TYPE>
 ```
 
-## BioNano maps 
+### BioNano maps 
 
 Analysis type `<GENOME_MAP>` is for submitting BioNano optical map data to ENA.
 
