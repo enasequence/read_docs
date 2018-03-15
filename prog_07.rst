@@ -141,8 +141,8 @@ with the name of the subdirectory:
 
     <FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
 
-Create Run and Experiment XML
-=============================
+Create the Run and Experiment XML
+=================================
 
 Run and Experiment XML: paired fastq
 ------------------------------------
@@ -396,7 +396,7 @@ Please refer to the metadata standards section in this module for information ab
 recommended experiment and run attributes.
 
 Create the Submission XML
-==========================
+=========================
 
 To submit experiments or runs, you need an accompanying submission XML in a separate file.
 Let's call this file `submission.xml`. 

@@ -6,7 +6,10 @@ This section includes tools and services that can compliment or assist submissio
 EMBL Sequence Files
 ===================
 
-EMBL sequence files are formatted sequence files that contain a nucleotide sequence, annotation, publishing information and resource links. During some submission streams a FASTA file or a spreadsheet file is received and we automatically process them into EMBL files so that we can archive them and mirror them to INSDC collaborators. However in other cases you can create the EMBL files and submit them directly. This can be the case for `Genome Assembly Submissions <mod_06.html>`_ and `Submit an Annotated Sequence <prog_04.html>`_.
+EMBL sequence files are formatted sequence files that contain a nucleotide sequence, annotation, publishing information
+and resource links. During some submission streams a FASTA file or a spreadsheet file is received and we automatically
+process them into EMBL files so that we can archive them and mirror them to INSDC collaborators. However in other cases
+you can create the EMBL files and submit them directly.
 
 Artemis_
    Functional annotation can be submitted using EMBL sequence files that conform to the INSDC feature table format. We recommend that functional annotation is prepared using Artemis. Further information about features and qualifiers is available `here <https://www.ebi.ac.uk/ena/WebFeat/>`_.

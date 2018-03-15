@@ -1,47 +1,66 @@
-# Module 12: Flat File upload - Submit an ENA Supported Sequence File
+# Module 12: Submit Annotated Flat File
 
-Annotated sequence entries are stored in the ENA as ENA supported sequence files. [Here](http://www.ebi.ac.uk/ena/data/view/KU963029&display=text) is an example of an HLA gene in ENA supported format. It is a text file that is computer readable due to the 2 character line beginnings (ID, AC, DE ...). The ENA browser renders the text file into a friendlier and more graphical [view](http://www.ebi.ac.uk/ena/data/view/KU963029) but the computer readable version is still available so that automatic pipelines down stream of the ENA can download and parse large numbers of sequence entries.
+Annotated sequences can be submitted in flat file format using Analysis XML.
 
-## Create your own ENA supported sequence file
+In most cases it is not necessary to use flat files because
+[Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) provides spreadsheet templates for various types of 
+annotated sequences. This allows you to submit tab separated files (TSV) which you can fill in using a 
+spreadsheet editor. 
+You can see the types of sequences with support for spreadsheet submissions here:
+[http://www.ebi.ac.uk/ena/submit/annotation-checklists](http://www.ebi.ac.uk/ena/submit/annotation-checklists).
+Please do not submit flat files for any of these sequence types. 
 
-In most cases it is not necessary to submit an ENA supported sequence file because the interactive tool [Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) provides spreadsheet templates for various types of sequences so that you can submit using a tab separated file (TSV) which you can fill in using any spreadsheet editor. These are called 'annotation checklists'. After the submission via Webin or via <a href="./prog_04.html">programmatic REST API</a> the TSV is converted into an ENA supported sequence file (or 'flat file') and validated before accessions are delivered. 
+Some annotated sequences can't be submitted using tab separated file (TSV) submissions.
+For example, the [HLA gene](http://www.ebi.ac.uk/ena/data/view/KU963029&display=text) has multiple
+exons and this is difficult to describe in a spreadsheet. Typically the more complicated sequences
+with multiple and repeating features are the ones which must be submitted using flat files.
 
-Not all sequence types are available as a TSV spreadsheet template/annotation checklist. For instance the HLA gene above has multiple exons and this is difficult for us to turn into a template. Typically the more complicated sequences with multiple and repeating features are the hardest to make into TSV templates. For these types of sequences you can create an ENA supported sequence file yourself and submit it to the ENA using the programmatic REST API (this is submission by "flat file upload", previously "entry upload").
-
-For a list of sequence types that are available as annotation checklists (TSV spreadsheets) see here:
-[http://www.ebi.ac.uk/ena/submit/annotation-checklists](http://www.ebi.ac.uk/ena/submit/annotation-checklists)
-
-Please do not use submission by flat file for any sequence type listed on the above webpage. The spreadsheet/annotation checklist submission route is more robust because we do the file conversion.
-
-For examples of ENA flat files that are not available for submission using annotation checklists/TSV see here:
+You can see examples of types of sequences submitted using flat files here:
 [http://www.ebi.ac.uk/ena/submit/entry-upload-templates](http://www.ebi.ac.uk/ena/submit/entry-upload-templates) 
 
-Pay close attention to how the flat files are formatted. Use the web page above to construct your sequence flat file. This will be submitted by flat file upload. As with a TSV/annotation checklist submission (module 2) you need to create an analysis object in XML format to wrap the ENA flat file. Please check <a href="./prog_04.html#the-analysis-object">module 2: Analysis object</a> for more information.  To see how the analysis object and the sequence entries will be accessioned please refer to <a href="./prog_04.html#a-word-about-accession-numbers">module 2: A word about Accession Numbers</a>
+## Object relationships
 
+Annotated sequence are submitted using Analysis XML and are required to be 
+part of a study.
 
-## Submission by Flat File Upload
+![annotated sequences](images/webin_data_model_analysis.png)
 
-Submitting an ENA flat file is the same as submitting a tab separated file, so much of the detail is in <a href="./prog_04.html">module 2</a>). The main difference is that for tsv spreadsheet submissions the tab/tsv file is converted to an ENA flat file and then validation is applied. For a submission by flat file upload, the conversion is omitted because the file is already in the ENA supported format. The system will try to validate your ENA flat file after only minimal processing. There is a little more opportunity for error but this can be remedied by following the [guidelines](http://www.ebi.ac.uk/ena/submit/entry-upload-templates) closely.
+Studies are used to group other objects together and are typically used across multiple analyses and experiments.
 
-### Step 1: Create a project
+## Accession numbers
 
-As with a TSV/annotation checklist submission (module 2), a project/study is required. If you already have a study you can add your annotated sequence entries to it. If not, create one first. Use either the <a href="./mod_02.html">interactive submission route</a> or the <a href="./prog_02.html">programmatic submission route</a> to do this. Note the project accession number when you receive it.
+The analysis XML will be assigned an ERZ accession at time of submission. However, this
+accession is never used when citing the submission. Instead, refer to your data either using the
+study accession (ERP or PRJ) or the assigned individual sequence accessions.
 
-### Step 2: Compress and upload the sequence flat file
+The sequence accessions will be assigned only when the submission has been fully
+processed by ENA. This will happen some time after the submission has been made.
+The sequence accessions will be send to you by e-mail and are also available 
+through the [Webin XML and reports portal](prog_11.html). 
 
-As with a TSV/annotation checklist submission, the sequence flat file must be compressed and uploaded to your Webin ftp directory. You may also need to calculate the MD5 checksum. Check <a href="./prog_04.html#step-3-upload-the-tsv-file-to-your-ftp-directory">here</a> and <a href="./file_prep.html">here</a> for instructions.
-In this example I have an ENA flat file called **Human_parvovirus_B19_entryupload.embl** which I have compressed to create file **Human_parvovirus_B19_entryupload.embl.gz**. The checksum of **Human_parvovirus_B19_entryupload.embl.gz** is `7138bf3320cad8d215b7e9930ded114b`.
+## Step 1: Register a study
 
-### Step 3: Create the analysis XML
+If you have already registered a study then you can add your new analysis to it. If not then
+you should register a new study:
 
-First check how the analysis file was created in module 2 <a href="./prog_04.html#step-4-prepare-the-analysis-xml-file">step 4</a>
+- [Register a new study using interactive Webin](mod_02.html)
+- [Register a new study using programmatic Webin](prog_02.html)
 
-In this example the analysis file looks like this
+## Step 2: Upload data files
+
+Please see [Data Uploads](http://www.ebi.ac.uk/ena/about/sra_data_upload).
+
+You must upload gz compressed flat files into your Webin upload area before you can
+submit them using analysis XML. Once the analysis has been submitted the files
+will be moved from the Webin upload area into the archive.
+
+## Step 3: Create Analysis XML
+
+Here is an example of an analysis XML:
 
 ```xml
-<?xml version = '1.0' encoding = 'UTF-8'?>
 <ANALYSIS_SET>
-   <ANALYSIS alias="Human_parvovirus_B19_entryupload" center_name="EBI">
+   <ANALYSIS alias="Human_parvovirus_B19_entryupload">
       <TITLE>Human parvovirus B19 isolate IRB_1_2008 NS1 and VP1 unique region genes, partial cds</TITLE>
       <DESCRIPTION>Human parvovirus B19 isolate IRB_1_2008 NS1 and VP1 unique region genes, partial cds</DESCRIPTION>
       <STUDY_REF accession="PRJEBXXXX">
@@ -56,15 +75,17 @@ In this example the analysis file looks like this
 </ANALYSIS_SET>
 ```
 
-In this case there is no ERT number/checklist attribute because no TSV annotation checklist template is being used. Also the file type attribute is different: `filetype="flatfile"`. The title and description can be a brief description of what is presented in the sequence flat file. Make sure to add all your own attributes and field values as the above is only for example purposes.
+Note the file type attribute: `filetype="flatfile"`. 
 
-### Step 4: Create the submission XML
+Remember that the above analysis XML is an example. You must provide your own details
+in the analysis XML. 
+
+## Step 4: Create the Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
 Let's call this file `submission.xml`. 
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
 <SUBMISSION>
    <ACTIONS>
       <ACTION>
@@ -80,7 +101,7 @@ In this case the action is `<ADD/>` which is used to submit new objects.
 The XMLs can be submitted programmatically, using CURL on command line or 
 using the [Webin XML and reports portal](prog_11.html).
 
-### Step 5: Submit the XMLs
+## Step 5: Submit the XMLs
 
 CURL is a Linux/Unix command line program which you can use to send the `analysis.xml` and `submission.xml`
 to the Webin submission service.
@@ -122,18 +143,6 @@ the receipt for error messages and after making corrections, try the submission 
 
 If the success attribute is true then the submission was successful. The receipt will 
 contain the accession numbers of the objects that you have submitted.
-
-### Accession numbers in the Receipt XML
-
-In this example the analysis received accession ERZ408000 and the submission received accession ERA911540. 
-You will not need the submission accession, whereas the analysis accession may be useful if you need to 
-enquire about the progress of the submission. 
-
-After the sequence entries are processed they will be accessioned and you will receive the accession 
-(or accession range if multiple sequences were submitted) via the email address that is registered 
-with your Webin account. Do not quote the analysis accession in any publication, always quote the 
-sequence accessions (which come later by email). You can also quote the study (project) accession,
-especially if you have used the study to group several submissions together.
 
 ### Test and production services
 
