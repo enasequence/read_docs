@@ -5,21 +5,13 @@
 A study (also referred to as a project) object is submitted in XML format like this:
 
 ```xml
-<?xml version = '1.0' encoding = 'UTF-8'?>
 <PROJECT_SET>
-   <PROJECT alias="iranensis_wgs" center_name="HKI JENA" accession="PRJEB5932">
+   <PROJECT alias="iranensis_wgs">
       <NAME>WGS Streptomyces iranensis</NAME>
       <TITLE>Whole-genome sequencing of Streptomyces iranensis</TITLE>
       <DESCRIPTION>The genome sequence of Streptomyces iranensis (DSM41954) was obtained using Illumina HiSeq2000. The genome was assembled using a hybrid assembly approach based on Velvet and Newbler. The resulting genome has been annotated with a specific focus on secondary metabolite gene clusters.</DESCRIPTION>
       <SUBMISSION_PROJECT>
-         <SEQUENCING_PROJECT>
-            <LOCUS_TAG_PREFIX>SIRAN</LOCUS_TAG_PREFIX>
-         </SEQUENCING_PROJECT>
-         <ORGANISM>
-            <TAXON_ID>576784</TAXON_ID>
-            <SCIENTIFIC_NAME>Streptomyces iranensis</SCIENTIFIC_NAME>
-            <CULTIVAR>DSM41954</CULTIVAR>
-         </ORGANISM>
+         <SEQUENCING_PROJECT/>
       </SUBMISSION_PROJECT>
       <PROJECT_LINKS>
          <PROJECT_LINK>
@@ -51,7 +43,6 @@ as a first step towards learning to submit ENA objects.
 Below is an example XML for submitting a study. Change the XML by entering your own information and save it as a file, for example `project.xml`.
 
 ```xml
-<?xml version = '1.0' encoding = 'UTF-8'?>
 <PROJECT_SET>
    <PROJECT alias="cheddar_cheese">
       <TITLE>Characterisation of Microbial Diversity and Chemical Properties of Cheddar Cheese Prepared from Heat-treated Milk</TITLE>
@@ -76,7 +67,6 @@ To submit a study or any other object(s), you need an accompanying submission XM
 Let's call this file `submission.xml`. 
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
 <SUBMISSION>
    <ACTIONS>
       <ACTION>
