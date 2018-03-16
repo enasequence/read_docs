@@ -76,7 +76,7 @@ When using curl each XML file is submitted using the '-F' option:
 -F "XMLTYPE=@FILENAME"
 ```
 
-where the `XMLTYPE` is one of:
+where the `XMLTYPE` is one of the following POST parameters:
 
 - `SUBMISSION` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.submission.xsd))
 - `STUDY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd))
@@ -340,6 +340,39 @@ until 1st of January 2019 after which the object will become public again:
 </SUBMISSION> 
 ``` 
 
+### Submission actions without submission XML
+
+Some submission actions can be defined using the `ACTION` POST parameter.
+In this case, the submission XML is not required. 
+
+If both the `ACTION` parameter and submission XML is provided then the 
+submission XML will be ignored.
+
+You can use one of the following actions:
+
+- `ACTION=ADD`
+- `ACTION=MODIFY`
+- `ACTION=VALIDATE,ADD` (same as `ACTION=VALIDATE`)
+- `ACTION=VALIDATE,MODIFY`
+
+The actions have the same effect as in the submission XML:
+
+- `ADD`: Submit new objects into the archive.
+- `MODIFY`: Modify existing objects in the archive.
+- `VALIDATE,ADD`: Validate a new object without actually creating it.
+- `VALIDATE,MODIFY`: Validate an update of an existing object without actually updating it.
+
+In addition, the `HOLD_DATE` POST parameter can be used to define a public release date for a new study. 
+
+For example, submit a new analysis: 
+```
+curl -u username:password -F "ACTION=ADD" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" -F "ANALYSIS=@analysis.xml"
+```
+
+or submit a new study with a public release date:
+```
+curl -u username:password -F "HOLD_DATE=31-11-2019"  -F "ACTION=ADD" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" -F "PROJECT=@project.xml"
+```
 
 ## Receipt XML
 
