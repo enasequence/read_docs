@@ -157,7 +157,6 @@ Experiment XML:
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <EXPERIMENT_SET>
        <EXPERIMENT alias="exp_mantis_religiosa">
            <TITLE>The 1KITE project: evolution of insects</TITLE>
@@ -194,7 +193,6 @@ Run XML:
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
             <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
@@ -216,7 +214,6 @@ Experiment XML:
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <EXPERIMENT_SET>
      <EXPERIMENT alias="exp_01">
      ...
@@ -231,7 +228,6 @@ Run XML:
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <RUN_SET>
      <RUN alias="run_01">
        <EXPERIMENT_REF refname="exp_01"/>
@@ -276,7 +272,6 @@ note that `filetype` has been set to `bam`.
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
             <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
@@ -297,7 +292,6 @@ note that `filetype` has been set to `cram`.
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
             <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
