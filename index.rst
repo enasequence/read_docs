@@ -16,6 +16,7 @@ ENA: Guidelines and Tutorials
    meta
    formats
    upload
+   tools
    tips
 
 .. Extra
