@@ -11,18 +11,15 @@ The validator is changed frequently. Please check every few weeks if a new versi
 
 The latest version of the validator can be downloaded from: 
 
-https://github.com/enasequence/sequencetools/releases
+<https://github.com/enasequence/sequencetools/releases>
 
 The program is a self executing Java jar file: `embl-api-validator-<version>.jar` (for example: `embl-api-validator-1.0.0.jar`).
 
 It requires Java 1.8 or newer which can be downloaded from:
 
-https://java.com/en/download
+<https://java.com/en/download>
 
-The latest version of the validator is also available from Maven:
-
-https://mvnrepository.com/artifact/uk.ac.ebi.ena.sequence/embl-api-validator
-
+The latest version of the validator is also available from [Maven](https://mvnrepository.com/artifact/uk.ac.ebi.ena.sequence/embl-api-validator)
 together with the following additional jar files:
 - `embl-api-core`: flat file reader, data model and writer
 - `embl-api-ff`: flat file validator and fixer

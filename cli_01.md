@@ -108,7 +108,7 @@ documents for advice which long term stable accession numbers can be used in pub
 
 The latest version of the Webin command line submission interface can be downloaded from: 
 
-https://github.com/enasequence/webin-cli/releases
+<https://github.com/enasequence/webin-cli/releases>
 
 The program requires Java 1.8 or newer which can be downloaded from: 
 
