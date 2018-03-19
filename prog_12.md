@@ -2,10 +2,11 @@
 
 Annotated sequences can be submitted in flat file format using Analysis XML.
 
-In most cases it is not necessary to use flat files because
+In most cases it is not necessary to submit annotated sequences using flat files because
 [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) provides spreadsheet templates for various types of 
-annotated sequences. This allows you to submit tab separated files (TSV) which you can fill in using a 
-spreadsheet editor. 
+annotation. This allows you to submit tab separated files (TSV) which you can fill in using a 
+spreadsheet editor.
+ 
 You can see the types of sequences with support for spreadsheet submissions here:
 [http://www.ebi.ac.uk/ena/submit/annotation-checklists](http://www.ebi.ac.uk/ena/submit/annotation-checklists).
 Please do not submit flat files for any of these sequence types. 
@@ -16,7 +17,7 @@ exons and this is difficult to describe in a spreadsheet. Typically the more com
 with multiple and repeating features are the ones which must be submitted using flat files.
 
 You can see examples of types of sequences submitted using flat files here:
-[http://www.ebi.ac.uk/ena/submit/entry-upload-templates](http://www.ebi.ac.uk/ena/submit/entry-upload-templates) 
+[http://www.ebi.ac.uk/ena/submit/entry-upload-templates](http://www.ebi.ac.uk/ena/submit/entry-upload-templates)
 
 ## Object relationships
 
@@ -46,15 +47,20 @@ you should register a new study:
 - [Register a new study using interactive Webin](mod_02.html)
 - [Register a new study using programmatic Webin](prog_02.html)
 
-## Step 2: Upload data files
+## Step 2: Validate flat files
+
+Please validate your sequence flat files before submission using the 
+[ENA flat file validator](tools_02.html).
+
+## Step 3: Upload flat files
 
 Please see [Data Upload](upload_01.html).
 
-You must upload gz compressed flat files into your Webin upload area before you can
+You must gz compress and upload flat files into your Webin upload area before you can
 submit them using analysis XML. Once the analysis has been submitted the files
 will be moved from the Webin upload area into the archive.
 
-## Step 3: Create Analysis XML
+## Step 4: Create Analysis XML
 
 Here is an example of an analysis XML:
 
@@ -80,7 +86,7 @@ Note the file type attribute: `filetype="flatfile"`.
 Remember that the above analysis XML is an example. You must provide your own details
 in the analysis XML. 
 
-## Step 4: Create the Submission XML
+## Step 5: Create the Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
 Let's call this file `submission.xml`. 
@@ -101,7 +107,7 @@ In this case the action is `<ADD/>` which is used to submit new objects.
 The XMLs can be submitted programmatically, using CURL on command line or 
 using the [Webin XML and reports portal](prog_11.html).
 
-## Step 5: Submit the XMLs
+## Step 6: Submit the XMLs
 
 CURL is a Linux/Unix command line program which you can use to send the `analysis.xml` and `submission.xml`
 to the Webin submission service.
