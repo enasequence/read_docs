@@ -178,13 +178,13 @@ e-mail.
 ### Assembly name validation
 
 Assembly names must:
-- match the pattern: ^z[A-Za-z0-9 _\-\.#\]*$
+- match the pattern: ^[A-Za-z0-9][A-Za-z0-9 _#\-\.]*$
 - be shorter than 100 characters
-    
+           
 ### Chromosome name validation
     
 Chromosome names must:
-- match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9_\-\.#\]*$
+- match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9_#\-\.]*$
 - be shorter than 33 characters
 - not contain any of the following as part of their name (case insensitive): 
     - 'chr'
