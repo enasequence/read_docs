@@ -77,3 +77,17 @@ The validator produces the following reports:
 CDS translation errors include a detailed translation report.
 - `VAL_INFO.txt`: info and warning messages
 - `VAL_FIXES.txt`: fixes applied in the "fix" mode (you will not be using this)
+
+## Proxy servers
+
+If your organisation uses a https proxy you can set the following Java properties to instruct
+the validator to use them:
+
+- https.proxyHost
+- https.proxyPort
+
+For example:
+
+```
+java -Dhttps.proxyHost=proxy.com -Dhttps.proxyPort=8080 -jar embl-api-validator-1.0.0..jar -r *.txt
+``` 

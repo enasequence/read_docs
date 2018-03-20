@@ -177,3 +177,28 @@ Messages which can't be attributed to a specific input file will be written to b
 in the following file:  
 
 `<context>/<name>/validate/webin-cli.report`
+
+## Proxy servers
+
+If your organisation uses a https proxy you can set the following Java properties to instruct
+the webin-cli to use them:
+
+- https.proxyHost
+- https.proxyPort
+
+For example:
+
+```
+java -Dhttps.proxyHost=proxy.com -Dhttps.proxyPort=8080 -jar webin-cli-<version>.jar <options>
+``` 
+
+Similarly, if your organisation uses a ftp proxy you can set the following properties:
+
+- ftp.proxyHost
+- ftp.proxyPort
+
+For example:
+
+```
+java -Dftp.proxyHost=proxy.com -Dftp.proxyPort=8080 -jar webin-cli-<version>.jar <options>
+``` 
