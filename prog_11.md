@@ -44,6 +44,28 @@ or you can look at the receipt XML:
 
 ## Reports
 
+## Run files
+
+The `Run files` reports lists all run files submitted through your
+submission account.
+
+![Webin XML and reports portal](images/webin_portal_run_files.png)
+
+The `Archive status` column value becomes `File archived`
+once the file has been incorporated into the archive. Any pre-archival 
+file validation errors are also shown in this column. 
+
+## Analysis files
+
+The `Analysis files` reports lists all analysis files submitted through your
+submission account.
+
+![Webin XML and reports portal](images/webin_portal_analysis_files.png)
+
+The `Archive status` column value becomes `File archived`
+once the file has been incorporated into the archive. Any pre-archival 
+file validation errors are also shown in this column. 
+
 ### Unsubmitted files
 
 Uploading a file to the Webin file upload area is not sufficient for inclusion into the archive. 
