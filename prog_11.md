@@ -41,3 +41,18 @@ You can see the receipt in the browser window either in a tabular format:
 or you can look at the receipt XML:
 
 ![Webin XML and reports portal](images/webin_portal_study3.png)
+
+## Reports
+
+### Unsubmitted files
+
+Uploading a file to the Webin file upload area is not sufficient for inclusion into the archive. 
+The file must also be submitted through the Webin submission service either as a run or analysis.
+
+The Webin file upload area is a temporary transit area. Any unsubmitted files are subject 
+to be removed according to [ENA fair use policy](upload_01.html) after some time.
+
+The unsubmitted file report shows uploaded files scheduled to be removed unless
+submitted by the expiration date.
+
+![Webin XML and reports portal](images/webin_portal_unsubmitted_files.png)
