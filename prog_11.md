@@ -44,7 +44,7 @@ or you can look at the receipt XML:
 
 ## Reports
 
-## Run files
+### Run files
 
 The `Run files` reports lists all run files submitted through your
 submission account.
@@ -55,7 +55,7 @@ The `Archive status` column value becomes `File archived`
 once the file has been incorporated into the archive. Any pre-archival 
 file validation errors are also shown in this column. 
 
-## Analysis files
+### Analysis files
 
 The `Analysis files` reports lists all analysis files submitted through your
 submission account.
