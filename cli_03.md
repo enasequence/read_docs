@@ -34,7 +34,7 @@ Instructions for programmatic submitters:
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission are specified using a manifest file.
-The manifest file is specified using the `-manifest=<filename>` option.
+The manifest file is specified using the `-manifest <filename>` option.
 
 A transcriptome assembly submission consists of the following files:
 

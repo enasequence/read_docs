@@ -20,8 +20,8 @@ The following types of submissions are supported:
 - transcriptome assemblies
 
 The type of the submission is specified using the `-context` command line option:
-- `-context='genome'` 
-- `-context='transcriptome'` 
+- `-context genome` 
+- `-context transcriptome`  
 
 The following picture illustrates the stages of the submission process:
 
@@ -43,7 +43,7 @@ Instructions for programmatic submitters:
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission must be specified using a manifest file.
-The manifest file is specified using the `-manifest=<filename>` option.
+The manifest file is specified using the `-manifest <filename>` option.
 
 ### Manifest file format
 
@@ -128,8 +128,8 @@ The command line `<options>` are explained below.
 ## Command line options
 
 - `-context`: the submission type: 
-    - `-context='genome'` 
-    - `-context='transcriptome'` 
+    - `-context genome` 
+    - `-context transcriptome` 
 - `-userName`: the Webin submission account name.
 - `-password`: the Webin submission account password.
 - `-manifest`: the manifest file name.
