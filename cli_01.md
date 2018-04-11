@@ -69,32 +69,28 @@ The following case-insensitive file types are supported within a manifest file:
 - CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
 - UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
 
-## Stage 3: Validate, upload and submit files
+## Stage 3: Validate and submit files
 
-Validation is done using the `-validate` command line option. Validated files are 
-uploaded using the `-upload` option to the submitter specific Webin file upload area 
-in webin.ebi.ac.uk and finally submitted using the `-submit` option.
+You can validate your files using the `-validate` command line option. Note that 
+the `-submit` option must be used to submit the validated files.
 
-The `-validate` must be completed successfully before the validated files can 
-be uploaded and submitted. Please refer to the following documents for
+You can submit your files using the `-submit` command line option. Before
+being submitted your files will be validated and uploaded to your 
+private Webin file upload area in webin.ebi.ac.uk.
+
+Please refer to the following documents for
 validation rules:
 - [Genome Assembly Submissions](cli_02.html)
 - [Transcriptome Assembly Submissions](cli_03.html)
 
-All three options can be given at the same time `-validate -upload -submit` or
-individual stages can be re-run in case of any errors. 
-
 Validation error reports are written into the `<outputDir>/<context>/<name>/validate` directory.
 
-Successfully validated files are written into the `<outputDir>/<context>/<name>/upload` directory.
-This directory is uploaded with the `-upload` option to the remote Webin upload area.  
+The webin command line submission interface creates and submits XMLs for you. These XMLs and 
+the Receipt XML containing accession numbers are written into the `<outputDir>/<context>/<name>/submit` 
+directory. This directory also contains the file manifest that refers to the files that are
+part of the submission.
 
-Once validated files have been uploaded using the `-upload` option they must be submitted 
-using the `-submit` option. The webin command line submission interface creates and submits 
-XMLs on behalf of the submitter. These XMLs and the Receipt XML containing accession numbers 
-are written into the `<outputDir>/<context>/<name>/submit` directory.
-
-In above, the `<outputDir>` can be specified using the `-outputDir` option, the `<context>` is
+The `<outputDir>` can be specified using the `-outputDir` option, the `<context>` is
 specified using the `-context` option, and the `<name>` is the submitter provided unique 
 name specified in the `info` file (e.g. genome or transcriptome assembly name). 
 
@@ -134,9 +130,8 @@ The command line `<options>` are explained below.
 - `-password`: the Webin submission account password.
 - `-manifest`: the manifest file name.
 - `-outputDir`: directory for output files. 
-- `-validate`: validate files. Files must be validated before they can be uploaded or submitted.
-- `-upload`: upload validated files. Files must be uploaded before they can be submitted.
-- `-submit`: submit uploaded files.
+- `-validate`: validates the files defined in the manifest file.
+- `-submit`: validates and submits the files defined in the manifest file.
 - `-test`: use Webin test service instead of the production service. Please note that the
 Webin upload area is shared between test and production services, and that test submission
 files will not be archived.
@@ -147,7 +142,6 @@ files will not be archived.
 An output directory can be specific to the Webin command line submission interface
 using the `-outputDir` option. This directory will have the following subdirectories:
 - `<context>/<name>/validate`
-- `<context>/<name>/upload`
 - `<context>/<name>/submit`
 
 If the `-outputDir` option is not specified then the directory in which the
@@ -157,9 +151,9 @@ The `<context>` is the submission type provided using the `-context` option
 and the `<name>` is the unique name provided in the info file.
 
 - The `validate` directory contains the validation reports created using the `-validate` option. 
-- The `upload` directory contains validated files to be uploaded to the Webin upload area using the `-upload` option.
-- The `submit` directory contains the XMLs created by the `-submit` option including submitted Analysis XML
-and Receipt XML.
+- The `submit` directory contains the XMLs created by the `-submit` option including the
+Receipt XML. This directory also contains the file manifest that refers to the files that are
+part of the submission.
 
 ## Validation reports
 
