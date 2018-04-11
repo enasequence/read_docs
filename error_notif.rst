@@ -56,7 +56,7 @@ Remember the file processing pipeline cycles through all files that are flagged 
 
 If you don't remember registering the MD5 checksum for each file when you submitted it, it would have happened in one of 3 ways:
 
-1. Our file uploader `tool <http://www.ebi.ac.uk/ena/submit/uploading-data-files#webin_uploader>`_ calculates the MD5 checksum automatically for any file that you upload. It then deposits the 'XXX.md5' file itself
+1. `Webin File Uploader <upload_01.html>`_ calculates the MD5 checksum automatically for any file that you upload. It then deposits the 'XXX.md5' file itself
 2. You registered the MD5 checksum using the tsv columns during submission time. (module 4, :ref:`part 2 <mod_04_part_02>`, step 5). This method is the most common source of wrongly registered checksums. Most other times it is sufficient to re upload the file and assume the registered checksum is correct.
 3. You uploaded 'XXX.md5' checksum files along with the XXX read files.
 

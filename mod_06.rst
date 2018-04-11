@@ -26,10 +26,21 @@ You must provide a description of your sequencing study. For this, please follow
 You must describe the physical sequenced sample providing the associated metadata (organism, strain, collection date, etc). This is done by using the appropiate sample checklist. To register a sample, please follow `here <http://ena-docs.readthedocs.io/en/latest/>`_ either the interactive Webin or the programmatic Webin sample submission guidelines. Note that the study and the sample are independent objects in the ENA metamodel and are only coupled once sequences are submitted.
 
 **Prepare the files.**
-You must prepare the files in a specific format in order for them to be processed by the genome assembly pipeline. This `page <http://www.ebi.ac.uk/ena/submit/genome-assembly-file-formats/>`_ details the genome assembly file formats to be used. In addition, please note that all the files must be gz compressed. Providing the correct format is a critical step for your submission to be completed automatically. 
+
+You must prepare your files in a specific format in order for them to be processed by the genome assembly pipeline.
+
+Please see `Genome Assembly Data Formats <format_02.html>`_ for the file formats used for genome assembly submissions.
+
+Note that all the files must be gz compressed. Providing the correct format is a critical step for your submission to
+be completed automatically.
 
 **Upload files.**
-Files must be uploaded to your Webin account ftp site. Please see details `here <http://www.ebi.ac.uk/ena/submit/uploading-data-files>`_ about how to upload the files. If you have issues with this step, please contact your IT department. We do not provide IT support unless there are issues at our end.
+
+You must upload data files into your Webin upload area before you can submit them
+using Webin. Once the files have been submitted they will be moved from the Webin upload
+area into the archive.
+
+Please see `Data Upload <upload_01.html>`_ for full details on how to upload data files.
 
 **Define the Assembly.**
 During the submission process in the ENA interactive Webin service, the interface will automatically indicate the files to be uploaded based on your answer to a short multiple choice questionaire (3 questions). Please answer the questions carefully and be sure to upload the right files. This is a critical step for your submission to be completed automatically.
@@ -77,7 +88,7 @@ Part 3
 
   QUESTION 3: *Are the sequences functionally annotated?* You need to provide information about the existence of functional annotation. This will determine if a Fasta file or a EMBL flat file should be submitted.
 
-2. If your assembly contains assembled chromosomes, there will be an additional question to determine if you plan to submit unlocalised sequences. Unlocalised sequences are contigs or scaffolds that are associated with a specific chromosome but their order and orientation is unknown. The format of the unlocalised list file is detailed `here <http://www.ebi.ac.uk/ena/submit/genome-assembly-file-formats/>`_. 
+2. If your assembly contains assembled chromosomes, there will be an additional question to determine if you plan to submit unlocalised sequences. Unlocalised sequences are contigs or scaffolds that are associated with a specific chromosome but their order and orientation is unknown.
 
 3. You must provide here the accession number (ERSXXXXXX) of the sample to be associated with this assembly. You can also provide the unique name (or alias) of the sample.
 
