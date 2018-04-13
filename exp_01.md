@@ -82,7 +82,7 @@ For some platforms like Illumina, the read length is not variable and it is buil
 <SPOT_LENGTH>36</SPOT_LENGTH>
 ```
 
-This tag is in the `<SPOT_DESCRIPTOR>` block. If you have added this yourself you can include the spot length to it but in most cases submitted files are stripped of all technical elements and a basic spot descriptor is added automatically. In this case the spot length is applied automatically after the submission when the corresponding read file is parsed and had its statistics calculated. For platforms producing variable length reads then no spot length is applied. See <a href="rst_prog_7.html#the-spot-descriptor">here</a> for more information on the spot descriptor block in the experiment object.
+This tag is in the `<SPOT_DESCRIPTOR>` block. If you have added this yourself you can include the spot length to it but in most cases submitted files are stripped of all technical elements and a basic spot descriptor is added automatically. In this case the spot length is applied automatically after the submission when the corresponding read file is parsed and had its statistics calculated. For platforms producing variable length reads then no spot length is applied. 
 
 + RNA fraction
 
