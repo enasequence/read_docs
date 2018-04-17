@@ -2,7 +2,9 @@
 
 We recommend that read data is either submitted in BAM or CRAM format. However,
 read data can be submitted in several standard and platform specific formats.
-Please note that reads must always be de-multiplexed into separate files prior submission.
+Reads should always be de-multiplexed into separate files prior submission.
+
+Single cell data submissions should be make using BAM or CRAM format.
 
 ## Standard formats
 

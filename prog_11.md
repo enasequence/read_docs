@@ -44,9 +44,63 @@ or you can look at the receipt XML:
 
 ## Reports
 
+### Studies
+
+The `Studies` report lists all studies submitted through your
+submission account.
+
+![Webin XML and reports portal](images/webin_portal_studies.png)
+
+The `Release date` shows when the study and any associated data
+will be made public. If the `Release date` is in the future
+then the `Status` will be `Private`. The status will become `Public`
+once the the study release date expires.
+
+In the above example, the status of the study is `Cancelled`. This
+means that that study has been withdrawn before making it public.
+Studies that are withdrawn after they have become public have
+either `Suppressed` or `Killed` status.
+
+### Samples
+
+The `Samples` report lists all samples submitted through your
+submission account.
+
+![Webin XML and reports portal](images/webin_portal_samples.png)
+
+Like studies all samples have a `Status`. Note that samples
+are automatically made public when data referring to them
+is made public.
+
+### Runs
+
+The `Runs` report lists all sequence read experiments submitted through your
+submission account.
+
+![Webin XML and reports portal](images/webin_portal_runs.png)
+
+Sequence read experiments are defined using run and experiment metadata
+objects. Data files are associated with runs while experiments
+link runs to studies and samples. 
+
+Run and experiment are automatically made public when 
+the study they are part of is made public.
+
+### Analyses
+
+The `Analyses` report lists all analyses submitted through your
+submission account.
+
+![Webin XML and reports portal](images/webin_portal_analyses.png)
+
+Analyses can be of many different types. Many analyses are automatically made 
+public when the study they are part of is made public. Some analyses
+will always be kept private while their data is made available
+through other services.
+
 ### Run files
 
-The `Run files` reports lists all run files submitted through your
+The `Run files` report lists all run files submitted through your
 submission account.
 
 ![Webin XML and reports portal](images/webin_portal_run_files.png)
@@ -57,7 +111,7 @@ file validation errors are also shown in this column.
 
 ### Analysis files
 
-The `Analysis files` reports lists all analysis files submitted through your
+The `Analysis files` report lists all analysis files submitted through your
 submission account.
 
 ![Webin XML and reports portal](images/webin_portal_analysis_files.png)
@@ -65,6 +119,35 @@ submission account.
 The `Archive status` column value becomes `File archived`
 once the file has been incorporated into the archive. Any pre-archival 
 file validation errors are also shown in this column. 
+
+### Run process
+
+The `Run process` report lists the processing status of runs submitted through your
+submission account.  
+
+![Webin XML and reports portal](images/webin_portal_run_process.png)
+
+When the `Process status` is `COMPLETED` then the run has
+been successfully processed by the archive. Note that submitted
+files may be archived and available for download without them
+being succesfully processed. In this case derived file
+products, such as archive generated Fastq files, may
+be missing.
+
+### Analysis process
+
+The `Analysis process` report lists the processing status of analyses submitted through your
+submission account.  
+
+![Webin XML and reports portal](images/webin_portal_analysis_process.png)
+
+When the `Process status` is `COMPLETED` then the analysis has
+been successfully processed by the archive. In the above example, the status of the
+analysis is `CANCELLED`. This means that that analysis processing has been 
+cancelled and will no longer be attempted.
+
+If any sequence accessions are assigned as part of the analysis processing
+then they will be listed in the `Sequence accession` column.
 
 ### Unsubmitted files
 
