@@ -26,7 +26,7 @@ start with the CRAM file name and end up with the .crai suffix (e.g. 'a.cram.cra
 
 ### BAM format
 
-Submitted CRAM files must be readable with [Samtools](http://www.htslib.org/).
+Submitted BAM files must be readable with [Samtools](http://www.htslib.org/).
 
 BAM file names are required to end up with the .bam suffix (e.g. 'a.bam').
 
