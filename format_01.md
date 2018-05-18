@@ -1,10 +1,26 @@
 # Module 1: Read Data Formats
 
-We recommend that read data is either submitted in BAM or CRAM format. However,
-read data can be submitted in several standard and platform specific formats.
-Reads should always be de-multiplexed into separate files prior submission.
+## Single cell read data
 
-Single cell data submissions should be make using BAM or CRAM format.
+Single cell read data must be submitted in the `BAM` or `CRAM` format using
+the following tags specified in the [SAM Optional Fields Specification](https://samtools.github.io/hts-specs/SAMtags.pdf): 
+- CB: Cell identifier
+- CR: Cellular barcode sequence bases (uncorrected)
+- CY: Phred quality of the cellular barcode sequence in the CR tag 
+
+## Other read data
+
+We recommend that all read data is submitted in the `BAM` or `CRAM` format. 
+However, please note that a variety of other data formats are supported as well.
+
+## Sample de-multiplexing
+
+Reads for different samples should be submitted using separate files. The
+only exception is when a `BAM` or `CRAM` file contains reads for a large 
+number of samples intented to be always analysed together. In this case
+the sample associated with the read file should describe the sample
+group while the `BAM` or `CRAM` file should identify the sample 
+for each read.
 
 ## Standard formats
 
@@ -26,7 +42,7 @@ start with the CRAM file name and end up with the .crai suffix (e.g. 'a.cram.cra
 
 ### BAM format
 
-Submitted CRAM files must be readable with [Samtools](http://www.htslib.org/).
+Submitted BAM files must be readable with [Samtools](http://www.htslib.org/).
 
 BAM file names are required to end up with the .bam suffix (e.g. 'a.bam').
 
