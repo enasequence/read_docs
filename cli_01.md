@@ -128,6 +128,7 @@ The command line `<options>` are explained below.
     - `-context transcriptome` 
 - `-userName`: the Webin submission account name.
 - `-password`: the Webin submission account password.
+- `-centerName`: the center name of the submitter (mandatory for broker accounts).
 - `-manifest`: the manifest file name.
 - `-outputDir`: directory for output files. 
 - `-validate`: validates the files defined in the manifest file.
