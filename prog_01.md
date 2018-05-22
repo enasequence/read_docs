@@ -342,30 +342,22 @@ until 1st of January 2019 after which the object will become public again:
 
 ### Submission actions without submission XML
 
-Some submission actions can be defined using the `ACTION` POST parameter.
-In this case, the submission XML is not required. 
+Some submission actions can be defined using the `ACTION` POST parameter. 
+If the `ACTION` parameter is provided then the submission XML 
+will be ignored.
 
-If both the `ACTION` parameter and submission XML is provided then the 
-submission XML will be ignored.
+You can use the following actions in place of submission XML:
 
-You can use one of the following actions:
+- `ACTION=ADD`: create new objects in the archive 
+- `ACTION=MODIFY`: update existing objects in the archive
+- `ACTION=VALIDATE` (same as `ACTION=VALIDATE,ADD`)
+- `ACTION=VALIDATE,ADD`: validate new objects without creating them
+- `ACTION=VALIDATE,MODIFY`: validate update of existing objects without updating them
 
-- `ACTION=ADD`
-- `ACTION=MODIFY`
-- `ACTION=VALIDATE,ADD` (same as `ACTION=VALIDATE`)
-- `ACTION=VALIDATE,MODIFY`
+In addition, you can use the following POST parameters with the `ACTION` parameter:
 
-The actions have the same effect as in the submission XML:
-
-- `ADD`: Submit new objects into the archive.
-- `MODIFY`: Modify existing objects in the archive.
-- `VALIDATE,ADD`: Validate a new object without actually creating it.
-- `VALIDATE,MODIFY`: Validate an update of an existing object without actually updating it.
-
-In addition, the following POST parameters are supported:
-
-- `HOLD_DATE` can be used to define a public release date for a new study or sample
-- `CENTER_NAME` must be used by brokers to define the submitting center name  
+- `HOLD_DATE`: set the public release date for a new study or sample
+- `CENTER_NAME`: set the submitting center name (mandatory for brokers)  
 
 For example, submit a new analysis: 
 ```
