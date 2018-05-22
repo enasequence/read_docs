@@ -362,7 +362,10 @@ The actions have the same effect as in the submission XML:
 - `VALIDATE,ADD`: Validate a new object without actually creating it.
 - `VALIDATE,MODIFY`: Validate an update of an existing object without actually updating it.
 
-In addition, the `HOLD_DATE` POST parameter can be used to define a public release date for a new study. 
+In addition, the following POST parameters are supported:
+
+- `HOLD_DATE` can be used to define a public release date for a new study or sample
+- `CENTER_NAME` must be used by brokers to define the submitting center name  
 
 For example, submit a new analysis: 
 ```
