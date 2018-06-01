@@ -82,10 +82,10 @@ and procaryotic chromosomes and plasmids in the cytoplasm.
 An example of a chromosome list file:
 
 ```
-chr01 I Chromosome
-chr02 II Chromosome
-chr03 III	Chromosome
-chr04	IV	Chromosome
+chr01 1 Chromosome
+chr02 2 Chromosome
+chr03 3	Chromosome
+chr04	4	Chromosome
 ```   
     
 ## Unlocalised list file
