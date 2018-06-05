@@ -7,3 +7,5 @@ Command Line Submissions
    cli_01
    cli_02
    cli_03
+   cli_04
+   cli_05

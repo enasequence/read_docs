@@ -21,7 +21,8 @@ The following types of submissions are supported:
 
 The type of the submission is specified using the `-context` command line option:
 - `-context genome` 
-- `-context transcriptome`  
+- `-context transcriptome`
+- `-context sequence`   
 
 The following picture illustrates the stages of the submission process:
 
@@ -125,7 +126,8 @@ The command line `<options>` are explained below.
 
 - `-context`: the submission type: 
     - `-context genome` 
-    - `-context transcriptome` 
+    - `-context transcriptome`
+    - `-context sequence`      
 - `-userName`: the Webin submission account name.
 - `-password`: the Webin submission account password.
 - `-centerName`: the center name of the submitter (mandatory for broker accounts).

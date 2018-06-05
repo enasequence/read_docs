@@ -3,7 +3,7 @@
 ## Introduction
 
 Transcriptome assemblies can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](cli_01.html). 
+using the [Webin command line submission interface](cli_01.html)  with `-context transcriptome` option. 
  
 A transcriptome assembly consists of:
 - General assembly information
