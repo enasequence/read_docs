@@ -124,7 +124,7 @@ The command line `<options>` are explained below.
 
 ## Command line options
 
-- `-context`: the submission type: 
+- `-context`: the   submission type: 
     - `-context genome` 
     - `-context transcriptome`
     - `-context sequence`      
@@ -138,6 +138,9 @@ The command line `<options>` are explained below.
 - `-test`: use Webin test service instead of the production service. Please note that the
 Webin upload area is shared between test and production services, and that test submission
 files will not be archived.
+- `-ascp`: use Aspera Cli instead of FTP file transfer, if available. Aspera Cli 
+should be installed and path to executable "ascp" should be in PATH variable.
+- `-version`: prints the version number of the program and exists.
 - `-help`: detailed information about the different options.
 
 ## Output directory structure 
@@ -199,3 +202,14 @@ For example:
 ```
 java -Dftp.proxyHost=proxy.com -Dftp.proxyPort=8080 -jar webin-cli-<version>.jar <options>
 ``` 
+
+### Using Aspera instead of FTP to upload files
+
+By default the Webin command line interface will use FTP to upload files to the 
+webin.ebi.ac.uk server. Alternatively, you may use the Aspera protocol by installing
+[Aspera Cli](https://downloads.asperasoft.com/en/downloads/62) and specifying the
+`-ascp` option.
+
+Please note that that the folder containing the `ascp` command line program
+must be included in the PATH variable. The `ascp` command can be found from
+the `cli/bin` directory of the downloaded and expanded Aspera Cli archive file.

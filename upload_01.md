@@ -92,10 +92,10 @@ then download the portable version of FileZilla.
 Aspera is a commercial file transfer protocol that may provide better transfer speeds than
 FTP over long distances. For short distance file transfers we recommend the use of FTP.
 
-Download Aspera ascp command line client from [here](http://downloads.asperasoft.com/connect2/). 
+Download Aspera Cli from [here](https://downloads.asperasoft.com/en/downloads/62). 
 
-Please select the correct operating system. The ascp command line client is distributed as part of 
-the aspera connect high-performance transfer browser plug-in.
+Please select the correct operating system. The `ascp` command line client is distributed as part of 
+the Aspera Cli in the `cli/bin` folder.
 
 Your command should look similar to this:
 
