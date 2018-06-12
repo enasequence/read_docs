@@ -4,10 +4,8 @@ Module 1: Interactive Submission Options
 Introduction
 ============
 
-Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin
-submission service and the Webin command line submission service.
-
-This module gives an introduction to the interactive Webin submission service.
+| This guide will introduce you to submitting data interactively through your browser.
+| Please refer to the `contents page <index.rst>`_ for guidance on submitting programmatically or via command line
 
 Production and test services
 ============================
