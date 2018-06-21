@@ -7,7 +7,7 @@ annotation makes your data more searchable.
 
 There are three steps to registering your sample(s).
 
-.. Step 1:
+.. _Step 1:
 
 Step 1: Select the sample checklist
 ===================================
@@ -31,7 +31,7 @@ attribute information.
 .. image:: images/mod_03_p01_b.png
 
 .. _Module 1: mod_01.html
-.. Step 2:
+.. _Step 2:
 
 Step 2: Select the checklist fields
 ===================================
@@ -52,7 +52,7 @@ Step 2: Select the checklist fields
 5. In this form, enter any details which will be the same for all your Samples. They can be edited individually later.
    Click next when you have finished.
 
-.. Step 3:
+.. _Step 3:
 
 Step 3: Edit and submit samples
 ===============================
