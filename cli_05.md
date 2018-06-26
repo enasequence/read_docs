@@ -1,5 +1,9 @@
 # Module 5: Annotated sequence flat file submissions
 
+Planned to be supported in Q3 2018.
+
+<!---
+
 ## Introduction
 
 Annotated sequence flat files can be submitted to the European Nucleotide Archive (ENA) 
@@ -100,3 +104,5 @@ For sequences, long term stable accession numbers that can be used in publicatio
 Submitters can retrieve the sequence accession numbers from the [Webin XML and reports portal](prog_11.html) 
 or from the [Webin reports service](prog_10.html). These accession numbers are also send to the submitters by
 e-mail.
+
+-->
