@@ -38,17 +38,17 @@ Step 2: Select the checklist fields
 
 .. image:: images/mod_03_p02_a.png
 
-|
-
-.. image:: images/mod_03_p02_b.png
-
-
 1. Here, you can view the attributes in your chosen checklist. You can see which are optional and which are mandatory.
 2. You can add more attributes if there are important details not already covered by the checklist.
 3. The checklist can be downloaded in a format which you can edit as a spreadsheet. We recommend this since it allows
    you to more easily register multiple samples in a single submission and is more durable than a web form.
    See `Step 1`_ to submit your spreadsheet.
 4. Click next when you have finished customising your checklist.
+
+.. image:: images/mod_03_p02_b.png
+
+
+
 5. In this form, enter any details which will be the same for all your Samples. They can be edited individually later.
    Click next when you have finished.
 
