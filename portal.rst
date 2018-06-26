@@ -1,4 +1,4 @@
-Portal
+Submission Portal
 =======================
 
 .. toctree::

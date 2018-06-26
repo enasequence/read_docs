@@ -1,4 +1,4 @@
-Reports
+Submission Reports
 =======================
 
 .. toctree::
