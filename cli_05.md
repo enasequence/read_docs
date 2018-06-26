@@ -1,8 +1,8 @@
 # Module 5: Annotated sequence flat file submissions
 
-Currently supported through the [Webin interactive submission interface](mod_01.html).
+Currently supported through the [Webin programmatic submission interface](prog_12.html).
 
-Planned to be supported in 2018 through the [Webin programmatic submission interface](prog_12.html).
+Planned to be supported in 2018 through the [Webin command line submission interface](cli_01.html).
 
 <!---
 
