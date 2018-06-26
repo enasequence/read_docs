@@ -1,6 +1,8 @@
 # Module 4: Annotated sequence spreadsheet submissions
 
-Planned to be supported in Q3 2018.
+Currently supported through the [Webin interactive submission interface](mod_01.html).
+
+Planned to be supported in 2018 through the [Webin command line submission interface](cli_01.html).
 
 <!---
 

@@ -1,6 +1,8 @@
 # Module 5: Annotated sequence flat file submissions
 
-Planned to be supported in Q3 2018.
+Currently supported through the [Webin interactive submission interface](mod_01.html).
+
+Planned to be supported in 2018 through the [Webin programmatic submission interface](prog_12.html).
 
 <!---
 
