@@ -79,28 +79,35 @@ NAME   TODO
 
 ### Tab-separated (tsv) spreadsheet
 
-Please download and fill an empty tab-separated (tsv) spreadsheet template
-from [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/): 
+Please download and fill a tab-separated (tsv) spreadsheet template
+from the [Webin submission portal](portal_01.html):
 
-- Step 1: Choose 'submit other assembled and annotated sequences' option and click 'Next'.
+[https://www.ebi.ac.uk/ena/submit/webin](https://www.ebi.ac.uk/ena/submit/webin)
 
-![Download empty template file_step_1](images/webin_submit_annotated_sequences_01.png)
+- Step 1: Expand the 'Download spreadsheet template for annotated sequences' option from the 'Submit' page.
 
-- Step 2: Select the study for your sequences and click 'Next'.
+![Download sequence template spreadsheet step_1](images/webin_submit_annotated_sequences_01.png)
 
-![Download empty template file_step_2](images/webin_submit_annotated_sequences_02.png)
+- Step 2: Press the 'Start' button.
 
-- Step 3: Click 'Select Checklist' option.
+![Download sequence template spreadsheet step_2](images/webin_submit_annotated_sequences_02.png)
 
-![Download empty template file_step_3](images/webin_submit_annotated_sequences_03.png)
+- Step 3: Select the most appropriate checklist group.
 
-- Step 4: Choose the checklist and  click 'Next'.
+![Download sequence template spreadsheet step_3](images/webin_submit_annotated_sequences_03.png)
 
-![Download empty template file_step_4](images/webin_submit_annotated_sequences_04.png)
+- Step 4: Select the most appropriate checklist.
 
-- Step 5: Choose the checklist fields and click 'Download Template Spreadsheet'.
+![Download sequence template spreadsheet step_4](images/webin_submit_annotated_sequences_04.png)
 
-![Download empty template file_step_5](images/webin_submit_annotated_sequences_05.png)
+- Step 5: Select the checklist fields and click 'Next' at the botton of the page.
+
+![Download sequence template spreadsheet step_5](images/webin_submit_annotated_sequences_05.png)
+
+- Step 6: Click 'Download' button to download the spreadsheet template.
+
+![Download sequence template spreadsheet step_6](images/webin_submit_annotated_sequences_06.png)
+
 
 ## Stage 3: Validate and submit the files
 
