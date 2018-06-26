@@ -24,7 +24,7 @@ Step 1
 1. Select the study you wish to submit your data to.
    You may only add data to one study in each submission.
 2. Click next to proceed to the next step, where you can register samples.
-   It is recommended that you do this in advance, for which guidance can be found in `Module 3 <mod_03.html>`_.
+   It is recommended that you do this in advance, for which guidance can be found in the section `Sample Registration <mod_03.html>`_.
    If you have already registered your samples, click 'Skip'.
 
 Step 2
