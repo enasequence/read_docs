@@ -30,11 +30,17 @@ Unfortunately, this is not a service we provide.
 If you need evidence of your submission for reviewers, forward them the email confirming your successful submission, or ask them to contact us, CC-ing you.
 
 
-I Need To Delete Or Suppress A Study - Can I?
----------------------------------------------
-These are not operations you can perform yourself.
-You should contact datasubs@ebi.ac.uk and provide an explanation of the issue, along with the accession(s) to be suppressed/deleted.
-The action will be handled by an ENA curator.
+I Need To Remove My Confidential Study
+--------------------------------------
+If you have registered objects in the database which you wish to have removed, we can cancel them if they are not yet public.
+Contact datasubs@ebi.ac.uk with an explanation of the issue and we will handle the deletion for you.
+Please be very clear about which accessions should be removed, especially if you only want to have a few objects removed from the study.
 
-If you are requesting a suppression, provide a new release date.
-If you are requesting a deletion, please be very clear about exactly which objects and accessions in your study you wish to have deleted.
+
+I Need To Remove My Public Study
+--------------------------------
+If your study is public and needs to be removed from the database on a permanent or temporary basis, you must contact datasubs@ebi.ac.uk and provide an explanation of the issue, along with the accession(s) to be suppressed.
+This action is completed by a curator at your request.
+
+If your suppression will be temporary, please provide a new release date.
+You can read more about INSDC data availability levels `here <https://www.ebi.ac.uk/ena/about/data-availability-policy>`_.
