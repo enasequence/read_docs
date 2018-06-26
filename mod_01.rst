@@ -36,22 +36,20 @@ When you come to make a new submission, you will have the following options:
 .. image:: images/mod_01_p01.png
 
 1. Access the above image by logging into your Webin submission account and going to the **New Submission** tab.
-2. Use the **Register study (project)** option to register new studies. `Module 2`_ describes this step in more detail.
-3. Use the **Register samples** option to register new samples. `Module 3`_ describes this step in more detail.
-4. Use the **Submit sequence reads and experiments** option to submit sequence reads with associated experimental information.
-   `Module 4`_ describes this step in more detail.
-5. Use the **Submit genome assemblies** option to submit assembled genomes. `Module 6`_ describes this step in more detail.
-6. Use the **Submit other assembled and annotated sequences** option to submit coding genes, rRNA sequences and other
-   annotated sequences. More information about this step is available `here <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_.
-7. Use the **Taxonomy Check/Request** option to check that your samples have recognized taxonomic classifications
+2. Use the **`Register study (project)`_** option to register new studies.
+3. Use the **`Register samples`_** option to register new samples.
+4. Use the **`Submit sequence reads and experiments`_** option to submit sequence reads with associated experimental information.
+5. Use the **`Submit genome assemblies`_** option to submit assembled genomes.
+6. Use the **`Submit other assembled and annotated sequences <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_** option to submit coding genes, rRNA sequences and other
+   annotated sequences.
+7. Use the **`Taxonomy Check/Request`_** option to check that your samples have recognized taxonomic classifications
    or to register new ones. You must provide a taxonomic classification for each submitted sample.
-   For more information about taxonomy see our FAQ_.
 
-.. _Module 2: mod_02.html
-.. _Module 3: mod_03.html
-.. _Module 4: mod_04.html
-.. _Module 6: mod_06.html
-.. _FAQ: tax.html
+.. _Register study (project): mod_02.html
+.. _Register samples: mod_03.html
+.. _Submit sequence reads and experiments: mod_04.html
+.. _Submit genome assemblies: mod_06.html
+.. Taxonomy Check/Request: tax.html
 
 Metadata model
 =================
