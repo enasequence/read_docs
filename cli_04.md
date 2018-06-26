@@ -82,7 +82,7 @@ NAME   TODO
 Please download and fill a tab-separated (tsv) spreadsheet template
 from the [Webin submission portal](portal_01.html):
 
-https://www.ebi.ac.uk/ena/submit/webin
+[https://www.ebi.ac.uk/ena/submit/webin](https://www.ebi.ac.uk/ena/submit/webin)
 
 - Step 1: Expand the 'Download spreadsheet template for annotated sequences' option from the 'Submit' page.
 
