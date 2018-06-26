@@ -49,7 +49,7 @@ When you come to make a new submission, you will have the following options:
 .. _Register samples: mod_03.html
 .. _Submit sequence reads and experiments: mod_04.html
 .. _Submit genome assemblies: mod_06.html
-.. Taxonomy Check/Request: tax.html
+.. _Taxonomy Check/Request: tax.html
 
 Metadata model
 =================
