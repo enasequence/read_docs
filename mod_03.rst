@@ -12,7 +12,7 @@ There are three steps to registering your sample(s).
 Step 1: Select the sample checklist
 ===================================
 
-Please see `Module 1`_ for how to access this form.
+Please see `Interactive Submission Options`_ for how to access this form.
 
 ENA provides sample checklists which define a set of mandatory and recommended attributes for different types of samples.
 By declaring that you would like to register your samples using a specific checklist you are enabling the samples to be
@@ -30,7 +30,7 @@ attribute information.
 
 .. image:: images/mod_03_p01_b.png
 
-.. _Module 1: mod_01.html
+.. Interactive Submission Options: mod_01.html
 .. _Step 2:
 
 Step 2: Select the checklist fields
@@ -38,17 +38,17 @@ Step 2: Select the checklist fields
 
 .. image:: images/mod_03_p02_a.png
 
-|
-
-.. image:: images/mod_03_p02_b.png
-
-
 1. Here, you can view the attributes in your chosen checklist. You can see which are optional and which are mandatory.
 2. You can add more attributes if there are important details not already covered by the checklist.
 3. The checklist can be downloaded in a format which you can edit as a spreadsheet. We recommend this since it allows
    you to more easily register multiple samples in a single submission and is more durable than a web form.
    See `Step 1`_ to submit your spreadsheet.
 4. Click next when you have finished customising your checklist.
+
+.. image:: images/mod_03_p02_b.png
+
+
+
 5. In this form, enter any details which will be the same for all your Samples. They can be edited individually later.
    Click next when you have finished.
 
