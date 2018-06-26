@@ -13,6 +13,8 @@ ENA: Guidelines and Tutorials
    interactive
    programmatic
    cli
+   portal
+   report
    meta
    formats
    upload

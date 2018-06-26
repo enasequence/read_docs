@@ -40,10 +40,6 @@ An annotated sequence spreadsheet submission consists of the following files:
 - 1 info file
 - 1 tab-separated (tsv) spreadsheet containing the sequences and functional annotation
 
-### Sequence names
-
-Sequences must be uniquely numbered in the ENTRYNUMBER column starting from 1.
-
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
