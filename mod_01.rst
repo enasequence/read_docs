@@ -35,14 +35,14 @@ When you come to make a new submission, you will have the following options:
 
 .. image:: images/mod_01_p01.png
 
-1. Access the above image by logging into your Webin submission account and going to the **New Submission** tab.
-2. Use the **`Register study (project)`_** option to register new studies.
-3. Use the **`Register samples`_** option to register new samples.
-4. Use the **`Submit sequence reads and experiments`_** option to submit sequence reads with associated experimental information.
-5. Use the **`Submit genome assemblies`_** option to submit assembled genomes.
-6. Use the **`Submit other assembled and annotated sequences <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_** option to submit coding genes, rRNA sequences and other
+1. Access the above image by logging into your Webin submission account and going to the 'New Submission' tab.
+2. Use the `Register study (project)`_ option to register new studies.
+3. Use the `Register samples`_ option to register new samples.
+4. Use the `Submit sequence reads and experiments`_ option to submit sequence reads with associated experimental information.
+5. Use the `Submit genome assemblies`_ option to submit assembled genomes.
+6. Use the `Submit other assembled and annotated sequences <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_ option to submit coding genes, rRNA sequences and other
    annotated sequences.
-7. Use the **`Taxonomy Check/Request`_** option to check that your samples have recognized taxonomic classifications
+7. Use the `Taxonomy Check/Request`_ option to check that your samples have recognised taxonomic classifications
    or to register new ones. You must provide a taxonomic classification for each submitted sample.
 
 .. _Register study (project): mod_02.html

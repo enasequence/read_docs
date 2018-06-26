@@ -19,4 +19,4 @@ Have a look at an `example <http://www.ebi.ac.uk/ena/data/view/PRJEB1234>`_ of a
 
 .. image:: images/mod_02_p01.png
 
-.. Interactive Submission Options: mod_01.html
+.. _Interactive Submission Options: mod_01.html
