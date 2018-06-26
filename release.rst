@@ -14,15 +14,7 @@ You can edit the release date of a study from within your Webin account:
 In the 'Studies' tab, find the study you wish to change and click the pencil icon adjacent to its current release date.
 You can move the date to be sooner or later as required.
 
-
-I Need To Delete Or Suppress A Study - Can I?
----------------------------------------------
-These are not operations you can perform yourself.
-You should contact datasubs@ebi.ac.uk and provide an explanation of the issue, along with the accession(s) to be suppressed/deleted.
-The action will be handled by an ENA curator.
-
-If you are requesting a deletion, please be very clear about exactly which objects and accessions you wish to have deleted.
-If you are requesting a suppression, provide a new release date.
+.. image:: images/release_p01.png
 
 
 I Released My Study, Why Can't Find It In The Public Database?
@@ -36,3 +28,13 @@ Can I Make My Study Partially Available?
 ----------------------------------------
 Unfortunately, this is not a service we provide.
 If you need evidence of your submission for reviewers, forward them the email confirming your successful submission, or ask them to contact us, CC-ing you.
+
+
+I Need To Delete Or Suppress A Study - Can I?
+---------------------------------------------
+These are not operations you can perform yourself.
+You should contact datasubs@ebi.ac.uk and provide an explanation of the issue, along with the accession(s) to be suppressed/deleted.
+The action will be handled by an ENA curator.
+
+If you are requesting a suppression, provide a new release date.
+If you are requesting a deletion, please be very clear about exactly which objects and accessions in your study you wish to have deleted.
