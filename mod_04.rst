@@ -2,7 +2,7 @@ Module 4: Add Read Files
 ************************
 
 Read files are represented in the database as run objects which point to the file location in an FTP directory.
-Runs also point to experiments, which describe the library preparation protocol and point to the sample and study for the data, as described in the below image:
+Runs also point to experiments, which describe the library preparation protocol and themselves point to the sample and study for the data, as described in the below image:
 
 .. image:: images/mod_01_p02.png
    :scale: 45
@@ -34,7 +34,7 @@ Step 2
 
 In this step, you will register the files you uploaded so that they may be archived.
 
-1. Choose the type of file you will be submitting.
+1. Choose the type of file(s) you will be submitting.
 2. Fill out the fields to provide a description of your experiment.
 3. The 'Sample Reference Suggestions' dropdown contains the aliases of any samples you registered in the previous step.
    If you didn't register your samples this way, it will be empty and you should manually enter a sample alias in the 'Sample Reference' field.

@@ -30,7 +30,7 @@ attribute information.
 
 .. image:: images/mod_03_p01_b.png
 
-.. Interactive Submission Options: mod_01.html
+.. _Interactive Submission Options: mod_01.html
 .. _Step 2:
 
 Step 2: Select the checklist fields
@@ -61,7 +61,7 @@ Step 3: Edit and submit samples
 
 This screen allows you to edit samples individually. It is also where you will be directed if you submit via spreadsheet.
 
-1. You can add more samples here to your submission here. They must use the same checklist.
+1. You can add more samples to your submission here. They must use the same checklist.
 2. All your samples are listed here. The unique name is shown, along with an icon to indicate whether it is valid or not.
    Click the red cross to delete a sample entirely.
 3. Use these buttons to move between samples.

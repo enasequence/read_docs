@@ -16,6 +16,8 @@ You can move the date to be sooner or later as required.
 
 .. image:: images/release_p01.png
 
+This is how you should release your data when ready.
+
 
 I Released My Study, Why Can't I Find It In The Public Database?
 ----------------------------------------------------------------
