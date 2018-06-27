@@ -12,7 +12,7 @@ There are three steps to registering your sample(s).
 Step 1: Select the sample checklist
 ===================================
 
-Please see :ref:`Interactive Submission Options` for how to access this form.
+Please see `Interactive Submission Options`_ for how to access this form.
 
 ENA provides sample checklists which define a set of mandatory and recommended attributes for different types of samples.
 By declaring that you would like to register your samples using a specific checklist you are enabling the samples to be
@@ -61,7 +61,7 @@ Step 3: Edit and submit samples
 
 This screen allows you to edit samples individually. It is also where you will be directed if you submit via spreadsheet.
 
-1. You can add more samples here to your submission here. They must use the same checklist.
+1. You can add more samples to your submission here. They must use the same checklist.
 2. All your samples are listed here. The unique name is shown, along with an icon to indicate whether it is valid or not.
    Click the red cross to delete a sample entirely.
 3. Use these buttons to move between samples.
