@@ -55,7 +55,7 @@ However, single and paired reads are accepted as Fastq files that meet the follo
 - Both ASCII and space delimitered decimal encoding of quality scores are supported. We will automatically detect the Phred quality offset of either 33 or 64.
 - No technical reads (adapters, linkers, barcodes) are allowed.
 - Single reads must be submitted using a single Fastq file and can be submitted with or without read names.
-- Paired reads must split and submitted using either one or two Fastq files. The read names must have a suffix identifying the first and second read from the pair, for example '/1' and '/2' (regular expression for the reads: "^@([a-zA-Z0-9_-]+:[0-9]+:[a-zA-Z0-9]+:[0-9]+:[0-9]+:[0-9-]+:[0-9-]+) ([12]):[YN]:[0-9]*[02468]:[ACGTN]+$").
+- Paired reads must be submitted using two Fastq files. The read names must have a suffix identifying the first and second read from the pair, for example '/1' and '/2' (regular expression for the reads: "^@([a-zA-Z0-9_-]+:[0-9]+:[a-zA-Z0-9]+:[0-9]+:[0-9]+:[0-9-]+:[0-9-]+) ([12]):[YN]:[0-9]*[02468]:[ACGTN]+$").
 - The first line for each read must start with '@'.
 - The base calls and quality scores must be separated by a line starting with '+'.
 - The Fastq files must be compressed using gzip or bzip2.
