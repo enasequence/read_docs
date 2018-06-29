@@ -16,8 +16,8 @@ Before you register the run and experiment objects, you should have completed th
 
 To start your read submission, log in to your Webin account and select the 'Submit sequence reads and experiments' radial in the 'New Submission' tab.
 
-Step 1
-======
+Step 1: Choose A Study To Add To
+================================
 
 .. image:: images/mod_04_p01.png
 
@@ -27,8 +27,8 @@ Step 1
    It is recommended that you do this in advance, for which guidance can be found in the section `Sample Registration <mod_03.html>`_.
    If you have already registered your samples, click 'Skip'.
 
-Step 2
-======
+Step 2: Describe Your Experiments
+=================================
 
 .. image:: images/mod_04_p02.png
 

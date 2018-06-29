@@ -9,7 +9,7 @@ There are three steps to registering your sample(s).
 
 .. _Step 1:
 
-Step 1: Select the sample checklist
+Step 1: Select A Sample Checklist
 ===================================
 
 Please see `Interactive Submission Options`_ for how to access this form.
@@ -33,7 +33,7 @@ attribute information.
 .. _Interactive Submission Options: mod_01.html
 .. _Step 2:
 
-Step 2: Select the checklist fields
+Step 2: Select The Checklist Fields
 ===================================
 
 .. image:: images/mod_03_p02_a.png
@@ -54,7 +54,7 @@ Step 2: Select the checklist fields
 
 .. _Step 3:
 
-Step 3: Edit and submit samples
+Step 3: Edit And Submit Samples
 ===============================
 
 .. image:: images/mod_03_p03.png
