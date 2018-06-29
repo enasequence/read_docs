@@ -8,3 +8,4 @@ Tips and FAQs
    error_notif
    file_prep
    tax
+   umbrella
