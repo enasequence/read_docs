@@ -9,8 +9,8 @@ Please note that umbrella studies can only be created and updated from the comma
 
 Decide which of the following scenarios best describes your need and follow the relevant guidance:
 
-- I have existing studies I would like to group together under an umbrella TODO:Add link
-- I have an umbrella already and would like to add child studies to it TODO:Add link
+- I have existing studies I would like to group together under an umbrella: `Grouping Studies Under An Umbrella`_
+- I have an umbrella already and would like to add child studies to it: `Adding Children To An Umbrella`_
 
 In either case, you will need to create two XML files, then submit them to us with a curl command.
 If you wish to test your submission, specify the URL of the test service in your curl command: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/
@@ -54,7 +54,7 @@ umbrella.xml:
         </PROJECT>
     </PROJECT_SET>
 
-Edit ``umbrella.xml`` to contain the following information:
+Edit umbrella.xml to contain the following information:
 
 - Centre name
 - Alias (a unique, informative name for your project)
@@ -64,20 +64,20 @@ Edit ``umbrella.xml`` to contain the following information:
 
 You can add more child projects by inserting more <RELATED_PROJECT> blocks, or you can remove a block if you only wish to add one project at this time.
 
-When you are satisfied with the changes you have made to ``umbrella.xml`` you should run the following command from the directory in which both XML files are located:
+When you are satisfied with the changes you have made to umbrella.xml you should run the following command from the directory in which both XML files are located:
 
 .. code-block:: shell
 
     curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
-You must edit the command to include your Webin account ID and password.
-You can make a practice submission to our test server before your final submission if are unsure of the process.
-To do this, change the URL at the end to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command as normal.
-
-You will receive a receipt in XML form.
-You should note the 'success' attribute which will be true or false to indicate success or failure of your submission.
-If the submission was successful, the receipt will also contain the accessions of your project.
-These begin 'ERP' and 'PRJEB'.
+| You must edit the command to include your Webin account ID and password.
+  You can make a practice submission to our test server before your final submission if are unsure of the process.
+  To do this, change the URL at the end to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command as normal.
+| You will receive a receipt in XML form.
+  You should note the 'success' attribute which will be true or false to indicate success or failure of your submission.
+  If the submission was successful, the receipt will also contain the accessions of your project.
+  These begin 'ERP' and 'PRJEB'.
+  The receipt for a failed submission will contain error messages which will advise you on how to fix your submission.
 
 Adding Children To An Umbrella
 ------------------------------
@@ -100,7 +100,7 @@ update.xml
 umbrella_modified.xml
 #####################
 
-The file ``umbrella_modified.xml`` should be a copy of the XML already in existence for your umbrella study, except that it contains additional <CHILD_PROJECT> blocks to specify the accessions to be added.
+The file umbrella_modified.xml should be a copy of the XML already in existence for your umbrella study, except that it contains additional <CHILD_PROJECT> blocks to specify the accessions to be added.
 
 When you are satisfied with the updates to your umbrella project XML file, submit via curl:
 
@@ -108,9 +108,9 @@ When you are satisfied with the updates to your umbrella project XML file, submi
 
     curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
-Edit the command to include your Webin account ID and password.
-You can make a practice submission to our test server before you submit to the production server if you want to test your files.
-To do this, change the URL at the end of the command to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command.
-You will receive a receipt in XML form.
-Note the 'success' attribute in this receipt, which will read true or false to indicate whether your submission was accepted.
-If the submission failed, there will be specific error messages to advise you of the problem.
+| Edit the command to include your Webin account ID and password.
+  You can make a practice submission to our test server before you submit to the production server if you want to test your files.
+  To do this, change the URL at the end of the command to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command.
+| You will receive a receipt in XML form.
+  Note the 'success' attribute in this receipt, which will read true or false to indicate whether your submission was accepted.
+  If the submission failed, there will be specific error messages to advise you of the problem.
