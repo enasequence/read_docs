@@ -25,9 +25,7 @@ The following picture illustrates the stages of the annotated sequence spreadshe
 
 ## Stage 1: Pre-register study
 
-Each submission must be associated with a pre-registered study. The study  
-accession or unique name (alias) is provided in an `info` file associated 
-with the submission. 
+Each submission must be associated with a pre-registered study.
 
 Instructions for interactive submitters:
 - [Register a Study](mod_02.html)
@@ -43,44 +41,44 @@ The manifest file is specified using the `-manifest <filename>` option.
 An annotated sequence spreadsheet submission consists of the following files:
 
 - 1 manifest file
-- 1 info file
+- 0-1 info files
 - 1 tab-separated (tsv) spreadsheet containing the sequences and functional annotation
 
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-- File type (first column): case insensitive file type   
-- File path (second column): the path to the file
+- Field name (first column): case insensitive field name   
+- Field value (second column): field value
 
-The following case-insensitive file types are supported for annotated sequence spreadsheet submissions:
+The following metadata fields are supported in the manifest file:
 
-- INFO: assembly info file
+- STUDY: Study accession or unique name (alias)
+- NAME: Unique name for the submission 
+
+The following file name fields are supported in the manifest file:
+
 - TAB: tab-separated (tsv) spreadsheet containing the sequences and functional annotation 
 
-For example, the following manifest file represents one submission:
+For example, the following manifest file represents a submission:
 
 ```
-INFO    sequences.info.gz
+STUDY   TODO
+NAME   TODO
 TAB    sequences.tsv.gz
 ``` 
 
 ### Info file
 
-The info file is a text file (USASCII7) containing information common to all sequences.
+You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 
-The file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column)
-- Field value (second column)
+When a separate info file is used then the manifest file must contain the `INFO` 
+field pointing to the info file. 
 
-The following fields must be provided:
-- STUDY: Study accession or unique name (alias)
-- NAME: Unique name for the submission 
-
-An example of an info file:
+For example, the following manifest file represents a submission:
 
 ```
-STUDY   TODO
-NAME   TODO
+INFO    sequences.info
+TAB    sequences.tsv.gz
 ```
 
 ### Tab-separated (tsv) spreadsheet

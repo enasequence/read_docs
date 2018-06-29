@@ -18,11 +18,13 @@ The following types of submissions are supported:
 
 - genome assemblies
 - transcriptome assemblies
+- annotated sequences
+- reads
 
 The type of the submission is specified using the `-context` command line option:
 - `-context genome` 
 - `-context transcriptome`
-- `-context sequence`   
+- `-context reads`    
 
 The following picture illustrates the stages of the submission process:
 
@@ -30,8 +32,7 @@ The following picture illustrates the stages of the submission process:
 
 ## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a pre-registered study and a sample. The study and sample 
-accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
+Each submission must be associated with a pre-registered study and a sample. 
 
 Instructions for interactive submitters:
 - [Register a Study](mod_02.html)
@@ -48,27 +49,81 @@ The manifest file is specified using the `-manifest <filename>` option.
 
 ### Manifest file format
 
-The manifest file in a text file (USASCII7) with two columns separated by a tab (or any whitespace characters):
-- File type (first column): case insensitive file type.   
-- File path (second column): the path to the file.
+The manifest file has two columns separated by a tab (or any whitespace characters):
+- Field name (first column): case insensitive field name   
+- Field value (second column): field value
 
-For example, the following manifest file represents a genome assembly consisting of an info file and a fasta file:
+The manifest file contains metadata fields and file name fields.
+
+Examples of metadata fields are study and sample references:
 
 ```
-INFO    genome.info.gz
+STUDY   Study accession or unique name (alias) 
+SAMPLE   Sample accession or unique name (alias)
+```
+
+The file name field format is:
+
+```
+<file type>  <file name> 
+```
+
+An example of a file name field is:
+
+```
+FASTA   genome.fasta.gz 
+```
+
+For example, the following manifest file represents a genome assembly consisting of contigs 
+provided in one fasta file:
+
+```
+STUDY   TODO
+SAMPLE   TODO
+ASSEMBLYNAME   TODO
+COVERAGE   TODO
+PROGRAM   TODO
+PLATFORM   TODO
+MINGAPLENGTH   TODO
+MOLECULETYPE   genomic DNA
 FASTA   genome.fasta.gz
 ``` 
 
 ### Manifest file types
 
-The following case-insensitive file types are supported within a manifest file:
+Please refer to individual modules for supported file types.
 
-- INFO: An info file containing tab-separated key value pairs
-- FASTA (genome and transcriptome assemblies): Sequences in fasta format
-- FLATFILE (genome and transcriptome assemblies): Sequences in EMBL-Bank flat file format 
-- AGP (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
-- CHROMOSOME_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
-- UNLOCALISED_LIST (genome assemblies): See [Genome Assembly Submissions](cli_02.html)
+Sequence based submission support the following formats:
+
+- FASTA: Sequences in fasta format
+- FLATFILE: Sequences in EMBL-Bank flat file format 
+
+The following additional formats are supported for [genome assembly submissions](cli_02.html):
+
+- AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
+- CHROMOSOME_LIST: list of chromosomes
+- UNLOCALISED_LIST: list of unlocalised sequences
+
+The following formats are supported for [read submissions](cli_06.html):
+ 
+- BAM: BAM file 
+- CRAM: CRAM file
+- FASTQ: fastq file
+
+### Info file
+
+You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
+
+When a separate info file is used then the manifest file must contain the `INFO` 
+field pointing to the info file. 
+
+For example, the following manifest file represents a genome assembly consisting of contigs 
+provided in one fasta file:
+
+```
+INFO   assembly.info
+FASTA   genome.fasta.gz
+```
 
 ## Stage 3: Validate and submit files
 
@@ -79,10 +134,7 @@ You can submit your files using the `-submit` command line option. Before
 being submitted your files will be validated and uploaded to your 
 private Webin file upload area in webin.ebi.ac.uk.
 
-Please refer to the following documents for
-validation rules:
-- [Genome Assembly Submissions](cli_02.html)
-- [Transcriptome Assembly Submissions](cli_03.html)
+Please refer to individual modules for validation rules.
 
 Validation error reports are written into the `<outputDir>/<context>/<name>/validate` directory.
 
@@ -92,14 +144,12 @@ directory. This directory also contains the file manifest that refers to the fil
 part of the submission.
 
 The `<outputDir>` can be specified using the `-outputDir` option, the `<context>` is
-specified using the `-context` option, and the `<name>` is the submitter provided unique 
-name specified in the `info` file (e.g. genome or transcriptome assembly name). 
+specified using the `-context` option, and the `<name>` is a submitter provided unique 
+name specified in the `manifest` or `info` file. 
 
 Once the submission is complete an accession number is immediately returned to the
-submitter by the Webin command line submission interface. Please refer to the following
-documents for advice which long term stable accession numbers can be used in publications:
-- [Genome Assembly Submissions](cli_02.html)
-- [Transcriptome Assembly Submissions](cli_03.html)
+submitter by the Webin command line submission interface. Please refer to individual modules for advice which 
+long term stable accession numbers can be used in publications.
 
 ## Download the program
 
@@ -127,12 +177,14 @@ The command line `<options>` are explained below.
 - `-context`: the   submission type: 
     - `-context genome` 
     - `-context transcriptome`
-    - `-context sequence`      
+    - `-context sequence`
+    - `-context reads`
 - `-userName`: the Webin submission account name.
 - `-password`: the Webin submission account password.
 - `-centerName`: the center name of the submitter (mandatory for broker accounts).
 - `-manifest`: the manifest file name.
-- `-outputDir`: directory for output files. 
+- `-outputDir`: directory for output files.
+- `-inputDir`: input directory for files declared in manifest file. 
 - `-validate`: validates the files defined in the manifest file.
 - `-submit`: validates and submits the files defined in the manifest file.
 - `-test`: use Webin test service instead of the production service. Please note that the
@@ -154,7 +206,7 @@ If the `-outputDir` option is not specified then the directory in which the
 `-manifest` file is used as the output directory.  
 
 The `<context>` is the submission type provided using the `-context` option
-and the `<name>` is the unique name provided in the info file.
+and the `<name>` is the unique name provided in the manifest or info file.
 
 - The `validate` directory contains the validation reports created using the `-validate` option. 
 - The `submit` directory contains the XMLs created by the `-submit` option including the
@@ -169,8 +221,7 @@ If the `-validate` action fails for any reason then validation reports are writt
 
 The validation reports correspond to the input files with an added suffix `.report`. 
 
-For example, a validated file `assembly.info` will have a corresponding validation report 
-`assembly.info.report`, and a validated fasta file `assembly.fasta`  will have a corresponding validation 
+For example, a validated fasta file `assembly.fasta` will have a corresponding validation 
 report `assembly.fasta.report`.
 
 Messages which can't be attributed to a specific input file will be written to both standard out and 

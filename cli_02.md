@@ -32,8 +32,7 @@ The following picture illustrates the stages of the genome assembly submission p
 
 ## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a pre-registered study and a sample. The study and sample 
-accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
+Each submission must be associated with a pre-registered study and a sample. 
 
 Genome assemblies except metagenomes are uniquely identified by a study and a sample. When assemblies
 are updated they must be re-submitted with the same study and sample as in the original submission.
@@ -54,7 +53,7 @@ The manifest file is specified using the `-manifest <filename>` option.
 A genome assembly submission consists of the following files:
 
 - 1 manifest file
-- 1 assembly info file
+- 0-1 info files
 - 0-1 fasta files
 - 0-1 AGP files
 - 0-1 flat files
@@ -64,7 +63,6 @@ A genome assembly submission consists of the following files:
 The following files are mandatory:
 
 - 1 manifest file must be provided.
-- 1 assembly info file must be provided.
 - 1 fasta or 1 flat file must be provided.
 - If there are AGP sequences then 1 AGP file must be provided.
 - If there are chromosomes then 1 chromosome list file must be provided.
@@ -81,50 +79,32 @@ Similarly, an AGP file must refer to scaffolds or contigs using the unique seque
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-- File type (first column): case insensitive file type   
-- File path (second column): the path to the file
+- Field name (first column): case insensitive field name   
+- Field value (second column): field value
 
-For example, the following manifest file represents a genome assembly consisting of an info file 
-and a fasta file:
+The following metadata fields are supported in the manifest file:
 
-```
-INFO    genome.info.gz
-FASTA   genome.fasta.gz
-``` 
-
-The following case-insensitive file types are supported for genome assemblies:
-
-- INFO: assembly info file
-- FASTA: sequences in fasta format
-- FLATFILE: sequences in EMBL-Bank flat file format
-- AGP: Sequences in [AGP](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/) format
-- CHROMOSOME_LIST: list of chromosomes
-- UNLOCALISED_LIST: list of unlocalised sequences
-
-### Assembly info file
-
-The assembly info file is a text file (USASCII7) containing general assembly information.
-
-The file has two columns  separated by a tab (or any whitespace characters):
-- Field name (first column)
-- Field value (second column)
-
-The following fields must be provided:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
-- ASSEMBLYNAME: The unique assembly name.
-- COVERAGE: The estimated sequencing depth of coverage
+- ASSEMBLYNAME: Unique assembly name
+- COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
-
-The following fields can be optionally provided:
-
-- MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap.
-- MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA'.
+- MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
+- MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
 
 Please see further below for validation rules affecting some of these fields.
 
-An example of an assembly info file:
+The following file name fields are supported in the manifest file:
+
+- FASTA: sequences in fasta format
+- FLATFILE: sequences in EMBL-Bank flat file format
+- AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
+- CHROMOSOME_LIST: list of chromosomes
+- UNLOCALISED_LIST: list of unlocalised sequences
+
+For example, the following manifest file represents a genome assembly consisting of contigs 
+provided in one fasta file:
 
 ```
 STUDY   TODO
@@ -135,6 +115,22 @@ PROGRAM   TODO
 PLATFORM   TODO
 MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
+FASTA   genome.fasta.gz
+``` 
+
+### Info file
+
+You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
+
+When a separate info file is used then the manifest file must contain the `INFO` 
+field pointing to the info file. 
+
+For example, the following manifest file represents a genome assembly consisting of contigs 
+provided in one fasta file:
+
+```
+INFO   assembly.info
+FASTA   genome.fasta.gz
 ```
 
 ### Other files

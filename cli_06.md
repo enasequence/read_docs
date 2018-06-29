@@ -54,7 +54,7 @@ The manifest file has two columns separated by a tab (or any whitespace characte
 - Field name (first column): case insensitive field name   
 - Field value (second column): field value
 
-The following metadata fields are supported:
+The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
@@ -67,11 +67,11 @@ The following metadata fields are supported:
 - LIBRARY_SELECTION: [See permitted values](#selection)
 - LIBRARY_STRATEGY: [See permitted values](#strategy)
 
-The following data file fields are supported:
+The following file name fields are supported in the manifest file:
 
-- BAM: Single BAM file name
-- CRAM: Single CRAM file name
-- FASTQ: Single fastq file name
+- BAM: Single BAM file
+- CRAM: Single CRAM file
+- FASTQ: Single fastq file
 
 For example, the following manifest file represents a paired Fastq submission:
 
@@ -90,8 +90,7 @@ FASTQ read2.fastq.gz
 
 ### Info file
 
-You can also provide a separate info file that contains the metadata fields 
-listed above. The info file has the same format as the manifest file.
+You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 
 When a separate info file is used then the manifest file must contain the `INFO` 
 field pointing to the info file. 

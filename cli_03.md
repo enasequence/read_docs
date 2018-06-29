@@ -20,8 +20,7 @@ The following picture illustrates the stages of the transcriptome assembly submi
 
 ## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a pre-registered study and a sample. The study and sample 
-accessions or unique names (aliases) are provided in an `info` file associated with the submission. 
+Each submission must be associated with a pre-registered study and a sample. 
 
 Instructions for interactive submitters:
 - [Register a Study](mod_02.html)
@@ -39,14 +38,13 @@ The manifest file is specified using the `-manifest <filename>` option.
 A transcriptome assembly submission consists of the following files:
 
 - 1 manifest file
-- 1 assembly info file
+- 0-1 info files
 - 0-1 fasta files
 - 0-1 flat files
 
 The following files are mandatory:
 
 - 1 manifest file must be provided.
-- 1 assembly info file must be provided.
 - 1 fasta or 1 flat file must be provided.
 
 ### Sequence names
@@ -56,39 +54,24 @@ Sequences must have a unique name within the submission that is provided in the 
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-- File type (first column): case insensitive file type   
-- File path (second column): the path to the file
+- Field name (first column): case insensitive field name   
+- Field value (second column): field value
 
-For example, the following manifest file represents a transcriptome assembly consisting of an info file 
-and a fasta file:
+The following metadata fields are supported in the manifest file:
 
-```
-INFO    transcriptome.info.gz
-FASTA   transcriptome.fasta.gz
-``` 
-
-The following case-insensitive file types are supported for transcriptome assemblies:
-
-- INFO: assembly info file
-- FASTA: sequences in fasta format
-- FLATFILE: sequences in EMBL-Bank flat file format 
-
-### Assembly info file
-
-The assembly info file is a text file (USASCII7) containing general assembly information.
-
-The file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column)
-- Field value (second column)
-
-The following fields must be provided:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: The unique assembly name.
 - PROGRAM: The assembly program.
 - PLATFORM: The sequencing platform.
 
-An example of an assembly info file:
+The following file name fields are supported in the manifest file:
+
+- FASTA: sequences in fasta format
+- FLATFILE: sequences in EMBL-Bank flat file format 
+
+For example, the following manifest file represents a genome assembly consisting of transcripts 
+provided in one fasta file:
 
 ```
 STUDY   TODO
@@ -96,6 +79,22 @@ SAMPLE  TODO
 ASSEMBLYNAME    TODO
 PROGRAM TODO
 PLATFORM    TODO
+FASTA   transcriptome.fasta.gz
+``` 
+
+### Info file
+
+You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
+
+When a separate info file is used then the manifest file must contain the `INFO` 
+field pointing to the info file. 
+
+For example, the following manifest file represents a genome assembly consisting of transcripts 
+provided in one fasta file:
+
+```
+INFO   transcriptome.info
+FASTA   transcriptome.fasta.gz
 ```
 
 ### Fasta file
