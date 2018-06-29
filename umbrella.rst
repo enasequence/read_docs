@@ -20,8 +20,7 @@ Grouping Studies Under An Umbrella
 
 To group your studies under an umbrella, you will need to create two XML files.
 
-submission.xml:
-###############
+**submission.xml:**
 
 .. code-block:: xml
 
@@ -33,8 +32,7 @@ submission.xml:
         </ACTIONS>
     </SUBMISSION>
 
-umbrella.xml:
-#############
+**umbrella.xml:**
 
 .. code-block:: xml
 
@@ -84,8 +82,7 @@ Adding Children To An Umbrella
 
 If you have already created an umbrella study and want to add child studies to it, create the following XML files.
 
-update.xml:
-###########
+**update.xml:**
 
 .. code-block:: xml
 
@@ -97,8 +94,7 @@ update.xml:
         </ACTIONS>
     </SUBMISSION>
 
-umbrella_modified.xml:
-######################
+**umbrella_modified.xml:**
 
 The file umbrella_modified.xml should be a copy of the XML already in existence for your umbrella study, except that it contains additional <CHILD_PROJECT> blocks to specify the accessions to be added.
 
