@@ -1,7 +1,7 @@
 Umbrella Studies
 ================
 
-Umbrella Studies are study objects in the ENA which provide hierarchal grouping of other studies.
+Umbrella Studies are study objects in the ENA which provide a hierarchal grouping of other studies.
 This is useful for grouping together any separate-but-related data you have, especially where the datasets will have different release dates.
 The release dates of the umbrella and its children are independent of each other.
 
@@ -21,6 +21,7 @@ Grouping Studies Under An Umbrella
 To group your studies under an umbrella, you will need to create two XML files.
 
 submission.xml:
+###############
 
 .. code-block:: xml
 
@@ -33,6 +34,7 @@ submission.xml:
     </SUBMISSION>
 
 umbrella.xml:
+#############
 
 .. code-block:: xml
 
@@ -52,7 +54,7 @@ umbrella.xml:
         </PROJECT>
     </PROJECT_SET>
 
-Edit umbrella.xml to contain the following information:
+Edit ``umbrella.xml`` to contain the following information:
 
 - Centre name
 - Alias (a unique, informative name for your project)
@@ -62,7 +64,7 @@ Edit umbrella.xml to contain the following information:
 
 You can add more child projects by inserting more <RELATED_PROJECT> blocks, or you can remove a block if you only wish to add one project at this time.
 
-When you are satisfied with the changes you have made to umbrella.xml you should run the following command from the directory in which both XML files are located:
+When you are satisfied with the changes you have made to ``umbrella.xml`` you should run the following command from the directory in which both XML files are located:
 
 .. code-block:: shell
 
@@ -70,7 +72,7 @@ When you are satisfied with the changes you have made to umbrella.xml you should
 
 You must edit the command to include your Webin account ID and password.
 You can make a practice submission to our test server before your final submission if are unsure of the process.
-To do this, change the URL at to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command as normal.
+To do this, change the URL at the end to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command as normal.
 
 You will receive a receipt in XML form.
 You should note the 'success' attribute which will be true or false to indicate success or failure of your submission.
@@ -81,3 +83,34 @@ Adding Children To An Umbrella
 ------------------------------
 
 If you have already created an umbrella study and want to add child studies to it, create the following XML files.
+
+update.xml
+##########
+
+.. code-block:: xml
+
+    <SUBMISSION>
+         <ACTIONS>
+             <ACTION>
+                 <MODIFY/>
+             </ACTION>
+        </ACTIONS>
+    </SUBMISSION>
+
+umbrella_modified.xml
+#####################
+
+The file ``umbrella_modified.xml`` should be a copy of the XML already in existence for your umbrella study, except that it contains additional <CHILD_PROJECT> blocks to specify the accessions to be added.
+
+When you are satisfied with the updates to your umbrella project XML file, submit via curl:
+
+.. code-block:: shell
+
+    curl -u Username:Password -F "SUBMISSION=@update.xml" -F "PROJECT=@umbrella_modified.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+Edit the command to include your Webin account ID and password.
+You can make a practice submission to our test server before you submit to the production server if you want to test your files.
+To do this, change the URL at the end of the command to https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/ then run the command.
+You will receive a receipt in XML form.
+Note the 'success' attribute in this receipt, which will read true or false to indicate whether your submission was accepted.
+If the submission failed, there will be specific error messages to advise you of the problem.
