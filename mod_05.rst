@@ -16,7 +16,7 @@ To edit a sample, find it in the list (note the search box) and click the 'Edit'
 Your sample will be shown as an XML document which you can edit directly.
 Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file.
 General XML errors and specific errors defined by us are prevented in this way.
-Note that not all fields can be edited: the sample alias and accession are immutable, and if you remove an attribute which is required by the specified checklist, this will not be allowed.
+Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to remove an attribute which is required by the specified checklist.
 
 .. image:: images/mod_05_p02_b.png
 
