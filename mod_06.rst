@@ -53,7 +53,7 @@ Accession numbers to be used for publication purposes are described `here <http:
 Submitting a Genome Assembly Using the ENA Interactive Webin Service
 ====================================================================
 
-New submitters are required to register a `Webin submission account <http://www.ebi.ac.uk/ena/submit/register-submission-account>`_.
+New submitters are required to register a `Webin submission account <reg_01.html>`_.
 Once you have an ENA Webin account, please log in to the `submission service <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and follow the below instructions to submit a genome assembly.
 
 Step 1: Begin a New Submission
