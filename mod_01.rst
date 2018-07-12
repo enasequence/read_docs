@@ -36,7 +36,7 @@ When submitting new data to us, the following workflow is recommended:
 1. Register a Study
 2. Register Samples
 3. Upload Read Files
-4. Register Read Files
+4. Submit Read Files
 
 When you come to make a new submission, you will have the options described below.
 Follow the links for specific guidance on each submission activity.
