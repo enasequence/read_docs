@@ -206,3 +206,16 @@ Sequences must:
 Assembly updates must:
 - use the same sample and study pair as was used in the initial assembly submission
 - not remove any chromosomes
+
+## Automatic fixes
+
+### CDS feature
+
+- Feature location is made 5' partial if the /codon_start is 2 or 3.
+- Feature location is made 5' partial if the /translation does not start with a start codon.
+- Feature location is made 3' partial if the /translation does not end with a stop codon.
+- Feature location is made 3' and 5' partial if the location span is not a multiple of three.
+- Feature location has 3' partiality removed if the /translation ends with a stop codon.
+- Feature is made /pseudo and the /translation is removed if the /translation contains internal stop codons.	
+	
+	
