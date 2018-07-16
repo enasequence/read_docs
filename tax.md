@@ -21,9 +21,9 @@ Submitters using REST API will apply the taxonomic information to the sample obj
 
 ## REST access to the tax database
 
-Submitters using the REST API to programmatically submit samples in XML format can use the taxonomy database look up to find what tax id they need to apply to their sample using these REST endpoints:
+Submitters using the REST API to programmatically submit samples in XML format can use the taxonomy database look up to find what tax ID they need to apply to their sample using these REST endpoints:
 
-If you know the scientific name of the organism you can find the taxonomy id with this endpoint `www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`. Simply append the scientific name to the URL. You can use a browser or use cURL at the command line (the "see URL" program available on Linux and Mac). Note the use of `%20` to represent a space character. This is URL encoding and you may find the commands do not work unless you replace space characters with `%20`
+If you know the scientific name of the organism you can find the taxonomy ID with this endpoint `www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`. Simply append the scientific name to the URL. You can use a browser or use cURL at the command line (the "see URL" program available on Linux and Mac). Note the use of `%20` to represent a space character. This is URL encoding and you may find the commands do not work unless you replace space characters with `%20`
 
 ```bash
 > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/Leptonycteris%20nivalis"
@@ -399,5 +399,5 @@ This list is not updated so you should check the <a href="https://www.ebi.ac.uk/
 
 ![metagenome](images/tax_p01.png)
 
- These environmental terms go in the scientific name field of the sample object. To find the tax id use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint). For example you can paste the following into your browser to find the tax id for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`. 
+ These environmental terms go in the scientific name field of the sample object. To find the tax ID use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint). For example you can paste the following into your browser to find the tax ID for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`. 
 

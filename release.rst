@@ -23,6 +23,7 @@ I Released My Study, Why Can't I Find It In The Public Database?
 ----------------------------------------------------------------
 After a study is made public, it can take up to 48 hours for your data to be searchable in the public database.
 Please take this into consideration if you have a strict deadline by which your data must be public.
+Note that the processes which are taking place in this time are automated, and we are not able to intervene in order to expedite the release of your data.
 If after 48 hours your data remain confidential, please contact datasubs@ebi.ac.uk
 
 
