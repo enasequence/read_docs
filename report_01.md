@@ -1,4 +1,4 @@
-# Module 1: Webin reports service
+# Module 1: Webin Reports Service
 
 The Webin reports service is a collection of RESTful JSON endpoints used to retrieve information
 about metadata objects and data files submitted through the Webin submission services.
@@ -29,7 +29,7 @@ Test service URL:
 
 Authentication is done using basic HTTP authentication with Webin submission account credentials.
 
-## Service endpoints
+## Service Endpoints
 
 The service endpoints are documented using Swagger:
 
