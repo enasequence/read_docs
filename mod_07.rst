@@ -18,7 +18,8 @@ If you upload a replacement for a previously submitted file, be sure that the ne
 Updating Genome Assemblies
 ==========================
 
-In this case,
+## TODO: Briefly describe situations in which updates are appropriate
+
 If you need to change the details of the study or sample but not the assembly itself, please view the `Sample and Study update page <mod_05.html>`_.
 
 | Edits to the study itself could take the form of adding, removing or modifying sequences or their annotations.
@@ -50,7 +51,8 @@ Preparing Files For Assembly Updates
 Resubmitting Genome Assemblies
 ==============================
 
-In this case, there will have been some problem with your assembly.
+## TODO: Briefly describe situations in which resubmission is necessary
+
 You will have identified this for yourself, or the ENA will have contacted you about it.
 In either case, the original submission must be cancelled before you can resubmit.
 This should be requested via datasubs@ebi.ac.uk and you should await confirmation that it has been completed before you begin your resubmission.
