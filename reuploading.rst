@@ -4,7 +4,7 @@ Module 9: Reuploading Genome Assembly Files
 
 There are different reasons to reupload new genome assembly submission files.
 
-Scenario 1: You realised that the submitted files were wrong
+Scenario 1: You realised that the submitted files are incorrect
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If for any reason you may need to change the files of a submission already done, you must contact us before. We may need to cancel the original submission and you may need to resubmit. Please note that after a submission is done and you got an analysis accession number (ERZxxxxxx), you must not reupload new files because they will not be taken in account by the automatic pipeline.
 
