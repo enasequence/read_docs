@@ -24,29 +24,27 @@ If you need to change the details of the study or sample but not the assembly it
 
 | Edits to the study itself could take the form of adding, removing or modifying sequences or their annotations.
 | The general procedure involves repeating your submission, as described in the `Assembly Submission guide <mod_06.html>`_.
-  As you do this, be sure to do the following
+  As you do this, be sure to consider the following
 
 - Use the same Study and Sample accessions as in the original submission
 - Use the same entry name as in the original submission
 - Use a different assembly name in the new submission
 
-| We recommend you download the submitted flat files from us and modify these for your submission.
+| If you follow the above instructions, our pipeline will recognise your submission as an update of the original assembly and process it as such.
+| We recommend you modify the submitted flat files and use these for your submission.
   If your assembly is public, you can download these yourself.
   If it is private, you can request a copy by emailing datasubs@ebi.ac.uk making sure to include your submission account ID and any relevant accessions.
-| If you follow the above instructions, our pipeline will recognise your submission as an update of the original assembly and process it as such.
 
 
 Preparing Files For Assembly Updates
 ------------------------------------
 
-| If you are changing the annotation of your assembly, submit a flat file with the same sequence and the new annotation together.
-| Your accession numbers will not be changed.
-
-| If you are changing the sequence of your assembly, submit all the involved sequences, not just the new ones.
-| You will receive new accession numbers formatted to indicate that this is a new build of an old assembly.
-
-| If you are adding chromosomes to an assembly which contains only chromosomes, submit only the chromosome sequences to be added.
-| The new sequence will be included under the same assembly accession (GCA_XXXXXXXX).
+- If you are **changing the annotation** of your assembly, submit a flat file with the same sequence and the new annotation together.
+  Your accession numbers will not be changed.
+- If you are **changing the sequence** of your assembly, submit all the involved sequences, not just the new ones.
+  You will receive new accession numbers formatted to indicate that this is a new build of an old assembly.
+- If you are **adding chromosomes** to an assembly which contains only chromosomes, submit only the chromosome sequences to be added.
+  The new sequence will be included under the same assembly accession (GCA_XXXXXXXX).
 
 Resubmitting Genome Assemblies
 ==============================
