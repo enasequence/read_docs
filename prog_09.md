@@ -102,7 +102,7 @@ Note that the analysis object also references the ERT number in the `FILE` block
 Remember that the above analysis XML is an example. You must provide your own details
 in the analysis XML. 
 
-## Create the Submission XML
+## Step 5: Create the Submission XML
 
 To submit analyses, you need an accompanying submission XML in a separate file.
 Let's call this file `submission.xml`. 
