@@ -2,7 +2,7 @@ Tips and FAQs
 =============
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
 
    release
    error_notif
