@@ -4,8 +4,8 @@ Tips and FAQs
 .. toctree::
    :maxdepth: 2
 
-   release
-   error_notif
-   file_prep
-   tax
-   umbrella
+   faq_release
+   faq_run_error
+   faq_file_prep
+   faq_taxonomy
+   faq_umbrella
