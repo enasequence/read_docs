@@ -1,6 +1,6 @@
-============================
-Error Notifications: Samples
-============================
+=======================================
+Submission Error Notifications: Samples
+=======================================
 
 Samples are objects in the ENA database which describe biological material from which nucleic acids were extracted for sequencing.
 Common errors experienced when attempting to submit samples are discussed here.
