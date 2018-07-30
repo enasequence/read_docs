@@ -2,7 +2,7 @@
 Submission Error Notifications: Samples
 =======================================
 
-Samples are objects in the ENA database which describe biological material from which nucleic acids were extracted for sequencing.
+Samples are objects in the ENA database which describe biological material used in sequencing experiments.
 Common errors experienced when attempting to submit samples are discussed here.
 
 
@@ -17,6 +17,6 @@ Object Being Added Already Exists In Submission Account
 
 .. image:: faq_sample_error_p01.png
 
-| Enter an informative name here, as you made need to use the alias in the future and it cannot be changed after submission.
+| Enter an informative name here, as you may need to use the alias in the future and it cannot be changed after submission.
 
 | Note that if you register a sample and then have it deleted, the alias still cannot be reused.
