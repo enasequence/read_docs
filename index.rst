@@ -19,7 +19,7 @@ ENA: Guidelines and Tutorials
    formats
    upload
    tools
-   tips
+   faq_toc
 
 .. Extra
 .. *****
