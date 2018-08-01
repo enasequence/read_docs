@@ -1,6 +1,6 @@
-# Module 8: Update an Experiment or a Run
+# Module 8: Update an Experiment or Run
 
-The main difference between programmatically creating new experiment and runs 
+The main difference between programmatically creating new experiment and runs
 and updating existing ones is that the `MODIFY` action should be used instead of the `ADD` action:
 
 ```
@@ -13,20 +13,20 @@ and updating existing ones is that the `MODIFY` action should be used instead of
 </SUBMISSION>
 ```
 
-Please note that the new experiment or run XML must either contain the original alias or the 
+Please note that the new experiment or run XML must either contain the original alias or the
 assigned accession number for the correct object to be updated.
 
-Detailed advice on how to programmatically update XMLs 
-including instructions for retrieving previously submitted XMLs can be 
+Detailed advice on how to programmatically update XMLs
+including instructions for retrieving previously submitted XMLs can be
 found in [Programmatic Submission Options](prog_01.html).
-Experiment and run XMLs can also be manually edited using the 
+Experiment and run XMLs can also be manually edited using the
 [Webin XML and reports portal](prog_11.html).
 
-## Reasons for updating experiment XML
+## Reasons for Updating Experiment XML
 
 Typical reasons for updating experiment XMLs include:
 
-- Change the library descriptor: 
+- Change the library descriptor:
 
 ```
 <LIBRARY_DESCRIPTOR>
@@ -62,7 +62,7 @@ Typical reasons for updating experiment XMLs include:
 </EXPERIMENT_ATTRIBUTE>
 ```
 
-## Reasons for updating run XML
+## Reasons for Updating Run XML
 
 Most common reason for updating run XMLs is to change the file `checksum`:
 
@@ -71,6 +71,6 @@ Most common reason for updating run XMLs is to change the file `checksum`:
     checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
 ```
 
-You may need to change the `checksum` attribute for a file 
-when a file has failed to be archived because of a mismatch 
-between the provided and computed MD5 checksums. 
+You may need to change the `checksum` attribute for a file
+when a file has failed to be archived because of a mismatch
+between the provided and computed MD5 checksums.

@@ -1,6 +1,6 @@
-# Taxonomic classifications for your samples
+# Taxonomic Classifications for Your Samples
 
-## The Tax database
+## The Tax Database
 
 Every ENA sample object should have a taxonomic classification. The INSDC maintains a database of all unique taxonomy classifications known to us and you should apply one from this database when you create your samples. Each classification has a unique id and this is expanded to show the scientific name and common name of the organism when the sample is viewed.
 
@@ -19,7 +19,7 @@ Submitters using REST API will apply the taxonomic information to the sample obj
 ```
 
 
-## REST access to the tax database
+## REST Access to the Tax Database
 
 Submitters using the REST API to programmatically submit samples in XML format can use the taxonomy database look up to find what tax ID they need to apply to their sample using these REST endpoints:
 
@@ -83,7 +83,7 @@ If you do not know the scientific name or the common name but you have an idea, 
 
 In each case above a JSON document is outputted and you will be looking for the *taxId* field. Outputting JSON format will help you to automate the call if appropriate.
 
-## Environmental taxonomic classifications
+## Environmental Taxonomic Classifications
 
 Every sample object in the ENA must have a taxonomic classification assigned to it. Of course environmental samples typically collected for metagenomic studies can not have a single organism identifier because they represent an environment with an unknown variety and number of organisms. For this purpose we have entries in the taxonomic database to apply exclusively to environmental samples. You can search for these terms using the methods described above - they tend to have "metagenome" as part of the scientific name.
 
@@ -97,7 +97,7 @@ curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%
   }
 ```
 
-To have an idea of what environmental sample names are available, below is a list. 
+To have an idea of what environmental sample names are available, below is a list.
 
 <div style="height:300px;width:500px;border:1px solid;overflow:auto;">
 Generic
@@ -113,7 +113,7 @@ Generic
 
 Specific
 
-ecological metagenomes sub nodes 
+ecological metagenomes sub nodes
 
     activated carbon metagenome
     activated sludge metagenome
@@ -399,5 +399,4 @@ This list is not updated so you should check the <a href="https://www.ebi.ac.uk/
 
 ![metagenome](images/tax_p01.png)
 
- These environmental terms go in the scientific name field of the sample object. To find the tax ID use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint). For example you can paste the following into your browser to find the tax ID for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`. 
-
+ These environmental terms go in the scientific name field of the sample object. To find the tax ID use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint). For example you can paste the following into your browser to find the tax ID for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`.

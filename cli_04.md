@@ -1,4 +1,4 @@
-# Module 4: Annotated sequence spreadsheet submissions
+# Module 4: Annotated Sequence Spreadsheet Submissions
 
 Currently supported through the [Webin interactive submission interface](mod_01.html).
 
@@ -8,10 +8,10 @@ Planned to be supported in 2018 through the [Webin command line submission inter
 
 ## Introduction
 
-Annotated sequences (e.g. 16S rRNA genes) can be submitted to the European Nucleotide Archive (ENA) 
-as tab-separated (tsv) spreadsheets using the [Webin command line submission interface](cli_01.html) 
-with `-context sequence` option. 
- 
+Annotated sequences (e.g. 16S rRNA genes) can be submitted to the European Nucleotide Archive (ENA)
+as tab-separated (tsv) spreadsheets using the [Webin command line submission interface](cli_01.html)
+with `-context sequence` option.
+
 An annotated sequence submission consists of:
 - General sequence information
    - Study accession or unique name (alias)
@@ -53,11 +53,11 @@ The manifest file has two columns separated by a tab (or any whitespace characte
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
-- NAME: Unique name for the submission 
+- NAME: Unique name for the submission
 
 The following file name fields are supported in the manifest file:
 
-- TAB: tab-separated (tsv) spreadsheet containing the sequences and functional annotation 
+- TAB: tab-separated (tsv) spreadsheet containing the sequences and functional annotation
 
 For example, the following manifest file represents a submission:
 
@@ -65,14 +65,14 @@ For example, the following manifest file represents a submission:
 STUDY   TODO
 NAME   TODO
 TAB    sequences.tsv.gz
-``` 
+```
 
 ### Info file
 
 You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 
-When a separate info file is used then the manifest file must contain the `INFO` 
-field pointing to the info file. 
+When a separate info file is used then the manifest file must contain the `INFO`
+field pointing to the info file.
 
 For example, the following manifest file represents a submission:
 
@@ -115,17 +115,17 @@ from the [Webin submission portal](portal_01.html):
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.html). 
-Please refer to the [Webin command line submission interface](cli_01.html) documentation for more information 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.html).
+Please refer to the [Webin command line submission interface](cli_01.html) documentation for more information
 about the submission process.
 
 ## Assigned accession numbers
 
-Once the sequences have been submitted an analysis (ERZ) accession number is immediately assigned and 
-returned to the submitter by the Webin command line submission interface. 
+Once the sequences have been submitted an analysis (ERZ) accession number is immediately assigned and
+returned to the submitter by the Webin command line submission interface.
 
-The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the 
-Webin submission service. For example, the submitter can retrieve the assigned sequence accessions 
+The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the
+Webin submission service. For example, the submitter can retrieve the assigned sequence accessions
 from the [Webin XML and reports portal](prog_11.html) or from the [Webin reports service](prog_10.html) using
 the ERZ accession number.
 
@@ -134,7 +134,7 @@ For sequences, long term stable accession numbers that can be used in publicatio
 - Study accession (PRJ) assigned at time of study registration.
 - Sequence accession(s) assigned once the submission has been fully processed by ENA.
 
-Submitters can retrieve the sequence accession numbers from the [Webin XML and reports portal](prog_11.html) 
+Submitters can retrieve the sequence accession numbers from the [Webin XML and reports portal](prog_11.html)
 or from the [Webin reports service](prog_10.html). These accession numbers are also send to the submitters by
 e-mail.
 

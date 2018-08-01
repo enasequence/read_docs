@@ -3,17 +3,17 @@
 ## Introduction
 
 Previously we have discussed different metadata objects from studies and samples to runs and
-experiments, and explained how experiments and runs are used to include sequence read data 
+experiments, and explained how experiments and runs are used to include sequence read data
 into the archive.
 
 Similarly, the `analysis` object is associated with studies and samples and can be
-used to include data of various other types into the archive, for example, 
+used to include data of various other types into the archive, for example,
 genome and transcriptome assemblies.
 
 The analysis XML format is defined by [SRA.analysis.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd)
-XML Schema. 
+XML Schema.
 
-## Object relationships
+## Object Relationships
 
 Analysis object is associated with other objects.
 
@@ -32,7 +32,7 @@ To summarise main object relationships:
 
 Additionally, analyses may refer to experiments and runs.
 
-## Analysis XML: part of study
+## Analysis XML: Part of Study
 
 An analysis points to the study it is part of using the `<STUDY_REF>` element.
 This can be done either by using an accession:
@@ -47,24 +47,24 @@ or a name within the submitter's account:
 <STUDY_REF refname="mantis_religiosa"/>
 ```
 
-## Analysis XML: associated with sample
+## Analysis XML: Associated With Sample
 
 An analysis can be associated with one or more samples using the `<SAMPLE_REF>` element
 either using an accession or alias to refer to the sample.
 
-## Analysis XML: associated with experiment and run
+## Analysis XML: Associated With Experiment and Run
 
-An analysis can be associated with any number of experiments or runs using the `<EXPERIMENT_REF>` 
+An analysis can be associated with any number of experiments or runs using the `<EXPERIMENT_REF>`
 and `<RUN_REF>` elements. Again, either an accession or alias can be used in the reference.
 
-This makes it possible to analyse reads available in the ENA, submit the 
-results as a new analysis XML, and link the analysis XML back to the sequence reads used 
+This makes it possible to analyse reads available in the ENA, submit the
+results as a new analysis XML, and link the analysis XML back to the sequence reads used
 for the analysis.
 
-## Analysis XML: the `<FILES>` block
+## Analysis XML: the `<FILES>` Block
 
-Like the run object, the analysis object has a `<FILES>` block. The analysis and the run XML both serve the same 
-main purpose which is to submit data files into the archive. However, while a run always represents sequence reads, 
+Like the run object, the analysis object has a `<FILES>` block. The analysis and the run XML both serve the same
+main purpose which is to submit data files into the archive. However, while a run always represents sequence reads,
 an analysis can be used to archive many different types of data.
 
 For example, a genome assembly (`SEQUENCE_ASSEMBLY`) analysis type allows contigs to be submitted as a `fasta` file:
@@ -76,18 +76,18 @@ For example, a genome assembly (`SEQUENCE_ASSEMBLY`) analysis type allows contig
 </FILES>
 ```
 
-Note that the XML schema restricts the file types which can be provided in the `filetype` attribute. 
+Note that the XML schema restricts the file types which can be provided in the `filetype` attribute.
 
 The Webin submission service further limits the use of these file types for specific analysis
 purposes.
 
-## Analysis XML: analysis types
+## Analysis XML: Analysis Types
 
-The most distinguishing part of an analysis object is contained in the `<ANALYSIS_TYPE>` block. 
-The content of this block determines the type of data the analysis should contain and 
+The most distinguishing part of an analysis object is contained in the `<ANALYSIS_TYPE>` block.
+The content of this block determines the type of data the analysis should contain and
 how it will be validated by ENA after it has been submitted.
 
-## Analysis XML: attributes
+## Analysis XML: Attributes
 
 Additional annotation can be provided for analyses using `ANALYSIS_ATTRIBUTE` elements in
 the XML:
@@ -96,8 +96,8 @@ the XML:
        <TAG>library preparation date</TAG>
        <VALUE>2010-08</VALUE>
     </ANALYSIS_ATTRIBUTE>
-         
-## Upload data files
+
+## Upload Data Files
 
 Please see [Data Upload](upload_01.html).
 
@@ -131,15 +131,15 @@ types of analyses.
 
 Analysis type `<SEQUENCE_ASSEMBLY>` is for submitting genome assemblies to ENA.
 
-Genome assemblies must be associated with a study and sample. Except for metagenomes, 
+Genome assemblies must be associated with a study and sample. Except for metagenomes,
 the study and sample should be uniquely associated with a genome assembly. Updated
 versions of the a genome should use the same study and sample as the initial assembly.
 
 Which data files are required is dependent on the level of assembly (see
 [Genome Assembly Data Formats](format_02.html)).
 
-In the example below there are four files which make up the genome assembly submission: 
-cryptosporidium.embl.gz, crypto.agp.gz, chromosome.txt.gz and unassigned_list.txt.gz: 
+In the example below there are four files which make up the genome assembly submission:
+cryptosporidium.embl.gz, crypto.agp.gz, chromosome.txt.gz and unassigned_list.txt.gz:
 
 ```xml
 <ANALYSIS_SET>
@@ -172,7 +172,7 @@ cryptosporidium.embl.gz, crypto.agp.gz, chromosome.txt.gz and unassigned_list.tx
 ```
 
 Remember that the above analysis XML is an example. You must provide your own details
-in the analysis XML. 
+in the analysis XML.
 
 ### Sequence Variation
 
@@ -220,7 +220,7 @@ The VCF file maps variant calls according to there position in a reference.  The
 ##contig=<ID=Y,length=59373566>
 ```
 
-The header refers to a contig called '1' and the analysis XML is used to associate the contig '1' with 
+The header refers to a contig called '1' and the analysis XML is used to associate the contig '1' with
 the ENA sequence 'CM000663'.  
 
 In the same way, samples can be associated with ENA accessions using the `label` attribute in `<SAMPLE_REF>`:
@@ -235,7 +235,7 @@ The '19933_4#3' is the name for the sample used in the VCF file.
 
 Analysis type `<REFERENCE_ALIGNMENT>` is for submitting read alignments.
 
-Please note that the reads used in the alignment should already have been submitted following 
+Please note that the reads used in the alignment should already have been submitted following
 instructions in [Submit Read Data](prog_04.html).
 
 Read alignment analyses must be associated with a study and can be assocated with
@@ -251,7 +251,7 @@ as in the following example:
             project. Aligments are in bam format and are presented for each of the 80 A. gambiae
             specimens comprising parents and progeny of four crosses.</DESCRIPTION>
         <STUDY_REF accession="ERP020641"/>
-        <SAMPLE_REF accession="ERS150992" label="AD0370-C""/>
+        <SAMPLE_REF accession="ERS150992" label="AD0370-C"/>
         <RUN_REF accession="ERR178314" label="8149_4_48"/>
         <RUN_REF accession="ERR178374" label="8177_1_48"/>
         <RUN_REF accession="ERR178386" label="8177_2_48"/>
@@ -283,13 +283,13 @@ and has three read group tags defined in its header that each represent one run:
 The alignments are associated with the original sequence reads using `label` and `accession`
 attributes in `RUN_REF` element:
 
-```
+```xml
 <RUN_REF accession="ERR178314" label="8149_4_48"/>
 <RUN_REF accession="ERR178374" label="8177_1_48"/>
 <RUN_REF accession="ERR178386" label="8177_2_48"/>
 ```
 
-All three read groups are derived from the same sample which is associated to the `SAMPLE_REF` 
+All three read groups are derived from the same sample which is associated to the `SAMPLE_REF`
 using the `label` attribute:
 
 ```
@@ -305,10 +305,10 @@ iae-pestchromosomesagamp3fagz	AS:AgamP3	M5:a4da4bafa82830c0a418c5a42138377b
 	SP:Anopheles gambiae
 ```
 
-The analysis XML associates the assembly and the reference sequence with ENA accessions 
-using the `label` and `accession` attributes: 
+The analysis XML associates the assembly and the reference sequence with ENA accessions
+using the `label` and `accession` attributes:
 
-```
+```xml
 <ANALYSIS_TYPE>
     <REFERENCE_ALIGNMENT>
         <ASSEMBLY>
@@ -319,7 +319,7 @@ using the `label` and `accession` attributes:
 </ANALYSIS_TYPE>
 ```
 
-### BioNano maps 
+### BioNano Maps
 
 Analysis type `<GENOME_MAP>` is for submitting BioNano optical map data to ENA.
 
@@ -359,7 +359,7 @@ For full details of the BioNano data files please refer to [Bionano Solve](https
 
 ### Sequence Annotation
 
-Analysis type `<SEQUENCE_ANNOTATION>` is for submitting sequence annotation files. 
+Analysis type `<SEQUENCE_ANNOTATION>` is for submitting sequence annotation files.
 These are usually tab files. Examples include gene count and OTU tables from metagenomic studies.
 
 Sequence annotation analyses must be associated with a study and at most one sample.
@@ -385,11 +385,12 @@ Here is an example of an analysis XML:
 </ANALYSIS_SET>
 ```
 
-### PacBio Methylation Data
+#### PacBio Methylation Data
 
-Analysis type `<SEQUENCE_ANNOTATION>` can also be used to submit PacBio methylation data.
+The analysis type `<SEQUENCE_ANNOTATION>` is appropriate for the submission of PacBio methylation data.
 
-PacBio methylation data usually consisting of a set of three files: modifications.csv, motif_summary.csv and motifs.gff.
+PacBio methylation data usually consists of a set of three files: modifications.csv, motif_summary.csv and motifs.gff.
+To learn more about what these files are and how to generate them, please refer to [PacBio's own documentation on the subject](https://github.com/PacificBiosciences/Bioinformatics-Training/wiki/Methylome-Analysis-Technical-Note#output-files).
 
 Here is an example of an analysis XML:
 
@@ -424,7 +425,7 @@ Here is an example of an analysis XML:
 ## Create the Submission XML
 
 To submit analyses, you need an accompanying submission XML in a separate file.
-Let's call this file `submission.xml`. 
+Let's call this file `submission.xml`.
 
 ```
 <SUBMISSION>
@@ -436,13 +437,13 @@ Let's call this file `submission.xml`.
 </SUBMISSION>
 ```
 
-The submission XML declares one or more Webin submission service actions. 
-In this case the action is `<ADD/>` which is used to submit new objects. 
+The submission XML declares one or more Webin submission service actions.
+In this case the action is `<ADD/>` which is used to submit new objects.
 
-The XMLs can be submitted programmatically, using CURL on command line or 
+The XMLs can be submitted programmatically, using CURL on command line or
 using the `Webin XML and reports portal <prog_11.html>`_.
 
-## Submit the XMLs using CURL
+## Submit the XMLs Using CURL
 
 CURL is a Linux/Unix command line program which you can use to send the `analysis.xml` and `submission.xml`
 to the Webin submission service.
@@ -468,24 +469,24 @@ After running the command above a receipt XML is returned. It will look like the
 </RECEIPT>
 ```
 
-## Submit the XMLs using Webin XML and reports portal
+## Submit the XMLs Using Webin XML and Reports Portal
 
 XMLs can also be submitted interactively using the [Webin XML and reports portal](prog_11.html).
 Please refer to the [Webin XML and reports portal](prog_11.html) document for an example how
-to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
+to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ## The Receipt XML
 
-To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
+To know if the submission was successful look in the first line of the `<RECEIPT>` block.
 
-The attribute `success` will have value `true` or `false`. If the value 
-is false then the submission did not succeed. In this case check the rest of 
-the receipt for error messages and after making corrections, try the submission again. 
+The attribute `success` will have value `true` or `false`. If the value
+is false then the submission did not succeed. In this case check the rest of
+the receipt for error messages and after making corrections, try the submission again.
 
-If the success attribute is true then the submission was successful. The receipt will 
+If the success attribute is true then the submission was successful. The receipt will
 contain the accession numbers of the objects that you have submitted.
 
-## Test and production services
+## Test and Production Services
 
 Note the message in the receipt:
 
@@ -493,11 +494,11 @@ Note the message in the receipt:
 <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 ```
 
-It is advisable to first test your submissions using the Webin test service where changes are not permanent 
-and are erased every 24 hours. 
+It is advisable to first test your submissions using the Webin test service where changes are not permanent
+and are erased every 24 hours.
 
-Once you are happy with the result of the submission you can use the CURL command again 
-but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
+Once you are happy with the result of the submission you can use the CURL command again
+but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to
 `www.ebi.ac.uk`:
 
 ```

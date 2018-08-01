@@ -1,4 +1,4 @@
-# Module 1: Webin submissions portal
+# Module 1: Webin Submissions Portal
 
 Webin submissions portal is a simple interactive web interface which supports:
 
@@ -21,19 +21,19 @@ Test service URL:
 
 Please use your Webin submission account credentials to login into the service.
 
-![Webin XML and reports portal](images/webin_portal_login.png) 
+![Webin XML and reports portal](images/webin_portal_login.png)
 
 ## Submit XMLs
 
 Once you have logged in you can use the default page to submit XMLs to Webin.
 
-In the example below, one or more studies are being submitted using a project XML (`project.xml`) and a 
-submission XML (`sub.xml`). The project XML contains the study details while the submission XML 
-defines the submission actions. 
- 
-![Webin XML and reports portal](images/webin_portal_study.png) 
+In the example below, one or more studies are being submitted using a project XML (`project.xml`) and a
+submission XML (`sub.xml`). The project XML contains the study details while the submission XML
+defines the submission actions.
 
-To submit, simply browse to the `project.xml` and `sub.xml` files and click submit. 
+![Webin XML and reports portal](images/webin_portal_study.png)
+
+To submit, simply browse to the `project.xml` and `sub.xml` files and click submit.
 
 You can see the receipt in the browser window either in a tabular format:
 
@@ -82,9 +82,9 @@ submission account.
 
 Sequence read experiments are defined using run and experiment metadata
 objects. Data files are associated with runs while experiments
-link runs to studies and samples. 
+link runs to studies and samples.
 
-Run and experiment are automatically made public when 
+Run and experiment are automatically made public when
 the study they are part of is made public.
 
 ### Analyses
@@ -94,12 +94,12 @@ submission account.
 
 ![Webin XML and reports portal](images/webin_portal_analyses.png)
 
-Analyses can be of many different types. Many analyses are automatically made 
+Analyses can be of many different types. Many analyses are automatically made
 public when the study they are part of is made public. Some analyses
 will always be kept private while their data is made available
 through other services.
 
-### Run files
+### Run Files
 
 The `Run files` report lists all run files submitted through your
 submission account.
@@ -107,10 +107,10 @@ submission account.
 ![Webin XML and reports portal](images/webin_portal_run_files.png)
 
 The `Archive status` column value becomes `File archived`
-once the file has been incorporated into the archive. Any pre-archival 
-file validation errors are also shown in this column. 
+once the file has been incorporated into the archive. Any pre-archival
+file validation errors are also shown in this column.
 
-### Analysis files
+### Analysis Files
 
 The `Analysis files` report lists all analysis files submitted through your
 submission account.
@@ -118,10 +118,10 @@ submission account.
 ![Webin XML and reports portal](images/webin_portal_analysis_files.png)
 
 The `Archive status` column value becomes `File archived`
-once the file has been incorporated into the archive. Any pre-archival 
-file validation errors are also shown in this column. 
+once the file has been incorporated into the archive. Any pre-archival
+file validation errors are also shown in this column.
 
-### Run process
+### Run Process
 
 The `Run process` report lists the processing status of runs submitted through your
 submission account.  
@@ -144,7 +144,7 @@ submission account.
 
 When the `Process status` is `COMPLETED` then the analysis has
 been successfully processed by the archive. In the above example, the status of the
-analysis is `CANCELLED`. This means that that analysis processing has been 
+analysis is `CANCELLED`. This means that that analysis processing has been
 cancelled and will no longer be attempted.
 
 If any sequence accessions are assigned as part of the analysis processing
@@ -152,10 +152,10 @@ then they will be listed in the `Sequence accession` column.
 
 ### Unsubmitted files
 
-Uploading a file to the Webin file upload area is not sufficient for inclusion into the archive. 
+Uploading a file to the Webin file upload area is not sufficient for inclusion into the archive.
 The file must also be submitted through the Webin submission service either as a run or analysis.
 
-The Webin file upload area is a temporary transit area. Any unsubmitted files are subject 
+The Webin file upload area is a temporary transit area. Any unsubmitted files are subject
 to be removed according to [ENA fair use policy](upload_01.html).
 
 The unsubmitted file report shows uploaded files scheduled to be removed unless
