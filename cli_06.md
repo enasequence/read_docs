@@ -46,7 +46,7 @@ A sequence read submission consists of the following files:
 
 - 1 manifest file
 - 0-1 info file
-- 1 BAM file, 1 CRAM file, or 1-2 Fasta files
+- 1 BAM file, 1 CRAM file, or 1-2 Fastq files
 
 ### Manifest file
 
