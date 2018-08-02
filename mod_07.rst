@@ -12,7 +12,7 @@ The procedures described here can involve several manual steps on the part of EN
 Therefore, if you are performing an update or resubmission, expect to be in contact with us and allow some time for the completion of this process.
 
 Should you need to reupload files, review our `Data Upload <upload_01.html>`_ guide.
-If you upload a replacement for a previously submitted file, be sure that the new filename is identical to the old.
+If you upload a replacement for a previously submitted file, be sure that the new filename is identical to the old one.
 
 
 Updating Genome Assemblies
@@ -20,18 +20,18 @@ Updating Genome Assemblies
 
 ## TODO: Briefly describe situations in which updates are appropriate
 
-If you need to change the details of the study or sample but not the assembly itself, please view the `Sample and Study update page <mod_05.html>`_.
+If you need to change the details of the study or sample, but not the assembly itself, please view the `Sample and Study update page <mod_05.html>`_.
 
-| Edits to the study itself could take the form of adding, removing or modifying sequences or their annotations.
+| Edits to the assembly itself could take the form of adding, removing or modifying sequences or their annotations.
 | The general procedure involves repeating your submission, as described in the `Assembly Submission guide <mod_06.html>`_.
-  As you do this, be sure to consider the following
+  As you do this, be sure to consider the following:
 
-- Use the same Study and Sample accessions as in the original submission
+- Use the same study and sample accessions as in the original submission
 - Use the same entry name as in the original submission
 - Use a different assembly name in the new submission
 
 | If you follow the above instructions, our pipeline will recognise your submission as an update of the original assembly and process it as such.
-| We recommend you modify the submitted flat files and use these for your submission.
+| We recommend you modify the submitted flat files and use these for your update submission.
   If your assembly is public, you can download these yourself.
   If it is private, you can request a copy by emailing datasubs@ebi.ac.uk making sure to include your submission account ID and any relevant accessions.
 
@@ -56,4 +56,4 @@ In either case, the original submission must be cancelled before you can resubmi
 This should be requested via datasubs@ebi.ac.uk and you should await confirmation that it has been completed before you begin your resubmission.
 
 When you are resubmitting, you should proceed as directed in the `Genome Assembly Submission <mod_06.html>`_ section with the mistakes omitted.
-You should use the same study and samples registered for the first submission.
+You should use the same study and samples which you registered for the first submission.
