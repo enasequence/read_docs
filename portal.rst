@@ -1,4 +1,4 @@
-Webin Submissions Portal
+Submissions Portal
 =======================
 
 .. toctree::
