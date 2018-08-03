@@ -20,4 +20,4 @@ Detailed advice on how to programmatically update studies using XML
 including instructions for retrieving previously submitted Study XMLs can be 
 found in [Programmatic Submission Options](prog_01.html).
 Study XMLs can also be manually edited using the 
-[Webin XML and reports portal](prog_11.html).
+[Webin submissions portal](prog_11.html).

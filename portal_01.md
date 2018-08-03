@@ -21,7 +21,7 @@ Test service URL:
 
 Please use your Webin submission account credentials to login into the service.
 
-![Webin XML and reports portal](images/webin_portal_login.png)
+![Webin submissions portal](images/webin_portal_login.png)
 
 ## Submit XMLs
 
@@ -31,17 +31,17 @@ In the example below, one or more studies are being submitted using a project XM
 submission XML (`sub.xml`). The project XML contains the study details while the submission XML
 defines the submission actions.
 
-![Webin XML and reports portal](images/webin_portal_study.png)
+![Webin submissions portal](images/webin_portal_study.png)
 
 To submit, simply browse to the `project.xml` and `sub.xml` files and click submit.
 
 You can see the receipt in the browser window either in a tabular format:
 
-![Webin XML and reports portal](images/webin_portal_study2.png)
+![Webin submissions portal](images/webin_portal_study2.png)
 
 or you can look at the receipt XML:
 
-![Webin XML and reports portal](images/webin_portal_study3.png)
+![Webin submissions portal](images/webin_portal_study3.png)
 
 ## Reports
 
@@ -50,7 +50,7 @@ or you can look at the receipt XML:
 The `Studies` report lists all studies submitted through your
 submission account.
 
-![Webin XML and reports portal](images/webin_portal_studies.png)
+![Webin submissions portal](images/webin_portal_studies.png)
 
 The `Release date` shows when the study and any associated data
 will be made public. If the `Release date` is in the future
@@ -67,7 +67,7 @@ either `Suppressed` or `Killed` status.
 The `Samples` report lists all samples submitted through your
 submission account.
 
-![Webin XML and reports portal](images/webin_portal_samples.png)
+![Webin submissions portal](images/webin_portal_samples.png)
 
 Like studies all samples have a `Status`. Note that samples
 are automatically made public when data referring to them
@@ -78,7 +78,7 @@ is made public.
 The `Runs` report lists all sequence read experiments submitted through your
 submission account.
 
-![Webin XML and reports portal](images/webin_portal_runs.png)
+![Webin submissions portal](images/webin_portal_runs.png)
 
 Sequence read experiments are defined using run and experiment metadata
 objects. Data files are associated with runs while experiments
@@ -92,7 +92,7 @@ the study they are part of is made public.
 The `Analyses` report lists all analyses submitted through your
 submission account.
 
-![Webin XML and reports portal](images/webin_portal_analyses.png)
+![Webin submissions portal](images/webin_portal_analyses.png)
 
 Analyses can be of many different types. Many analyses are automatically made
 public when the study they are part of is made public. Some analyses
@@ -104,7 +104,7 @@ through other services.
 The `Run files` report lists all run files submitted through your
 submission account.
 
-![Webin XML and reports portal](images/webin_portal_run_files.png)
+![Webin submissions portal](images/webin_portal_run_files.png)
 
 The `Archive status` column value becomes `File archived`
 once the file has been incorporated into the archive. Any pre-archival
@@ -115,7 +115,7 @@ file validation errors are also shown in this column.
 The `Analysis files` report lists all analysis files submitted through your
 submission account.
 
-![Webin XML and reports portal](images/webin_portal_analysis_files.png)
+![Webin submissions portal](images/webin_portal_analysis_files.png)
 
 The `Archive status` column value becomes `File archived`
 once the file has been incorporated into the archive. Any pre-archival
@@ -126,7 +126,7 @@ file validation errors are also shown in this column.
 The `Run process` report lists the processing status of runs submitted through your
 submission account.  
 
-![Webin XML and reports portal](images/webin_portal_run_process.png)
+![Webin submissions portal](images/webin_portal_run_process.png)
 
 When the `Process status` is `COMPLETED` then the run has
 been successfully processed by the archive. Note that submitted
@@ -140,7 +140,7 @@ be missing.
 The `Analysis process` report lists the processing status of analyses submitted through your
 submission account.  
 
-![Webin XML and reports portal](images/webin_portal_analysis_process.png)
+![Webin submissions portal](images/webin_portal_analysis_process.png)
 
 When the `Process status` is `COMPLETED` then the analysis has
 been successfully processed by the archive. In the above example, the status of the
@@ -161,4 +161,4 @@ to be removed according to [ENA fair use policy](upload_01.html).
 The unsubmitted file report shows uploaded files scheduled to be removed unless
 submitted by the expiration date.
 
-![Webin XML and reports portal](images/webin_portal_unsubmitted_files.png)
+![Webin submissions portal](images/webin_portal_unsubmitted_files.png)
