@@ -20,7 +20,7 @@ Detailed advice on how to programmatically update XMLs
 including instructions for retrieving previously submitted XMLs can be
 found in [Programmatic Submission Options](prog_01.html).
 Experiment and run XMLs can also be manually edited using the
-[Webin XML and reports portal](prog_11.html).
+[Webin submissions portal](prog_11.html).
 
 ## Reasons for Updating Experiment XML
 
