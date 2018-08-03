@@ -1,13 +1,13 @@
-=======================================
-Submission Error Notifications: Samples
-=======================================
+===============================
+Common Sample Submission Errors
+===============================
 
 Samples are objects in the ENA database which describe biological material used in sequencing experiments.
 Common errors experienced when attempting to submit samples are discussed here.
 
 
-Object Being Added Already Exists In Submission Account
-=======================================================
+Error: Object Being Added Already Exists In Submission Account
+==============================================================
 
 | This error indicates that a sample alias in your submission has previously been used.
   The sample alias must uniquely identify the sample among all samples submitted in your Webin account.

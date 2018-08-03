@@ -1,6 +1,6 @@
-====================================
-Submission Error Notifications: Runs
-====================================
+============================
+Common Run Submission Errors
+============================
 
 | Runs are objects in the ENA database which wrap read files of types such as FASTQ and BAM.
 | Before they can be submitted, these files must be uploaded to your Webin account's FTP directory.
@@ -15,7 +15,7 @@ Submission Error Notifications: Runs
 | Find the error you are receiving in the subsections below for advice on how to fix the error.
 
 
-ERROR: Invalid File Checksum
+Error: Invalid File Checksum
 ============================
 
 | If this error occurs, you will receive an email containing something similar to the below:
@@ -63,7 +63,7 @@ Wrong MD5 Value Registered: Register a New One
   View our pages on `Programmatic Run Updates <prog_08.html>`_ to learn more about this.
 
 
-ERROR: Number Of Lines Is Not A Multiple Of Four
+Error: Number Of Lines Is Not A Multiple Of Four
 ================================================
 
 | This error is specific to FASTQ files: each entry in such a file should comprise exactly four lines.
@@ -92,7 +92,7 @@ ERROR: Number Of Lines Is Not A Multiple Of Four
     See the 'Invalid File Checksum' section above for information on this.
 
 
-ERROR: File Integrity Check Failed
+Error: File Integrity Check Failed
 ==================================
 
 | Submitted files are checked to confirm they can be unpacked.
