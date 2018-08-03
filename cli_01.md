@@ -12,6 +12,50 @@ used to validate, upload and submit files to the European Nucleotide Archive (EN
 
 If you have not submitted to Webin before please [register a submission account](reg_01.html).
 
+## Download the Program
+
+The latest version of the Webin command line submission interface can be downloaded from:
+
+<https://github.com/enasequence/webin-cli/releases>
+
+The program requires Java 1.8 or newer which can be downloaded from:
+
+<https://java.com/en/download/>
+
+## Using the Program
+
+The  Webin command line submission interface is a self-executing Java jar file and is
+run using the `java` command:
+
+`java -jar webin-cli-<version>.jar <options>`
+
+The `<version>` is the version number of the program.
+
+The command line `<options>` are explained below.
+
+## Command Line Options
+
+- `-context`: the   submission type:
+    - `-context genome`
+    - `-context transcriptome`
+    - `-context sequence`
+    - `-context reads`
+- `-userName`: the Webin submission account name.
+- `-password`: the Webin submission account password.
+- `-centerName`: the center name of the submitter (mandatory for broker accounts).
+- `-manifest`: the manifest file name.
+- `-outputDir`: directory for output files.
+- `-inputDir`: input directory for files declared in manifest file.
+- `-validate`: validates the files defined in the manifest file.
+- `-submit`: validates and submits the files defined in the manifest file.
+- `-test`: use Webin test service instead of the production service. Please note that the
+Webin upload area is shared between test and production services, and that test submission
+files will not be archived.
+- `-ascp`: use Aspera Cli instead of FTP file transfer, if available. Aspera Cli
+should be installed and path to executable "ascp" should be in PATH variable.
+- `-version`: prints the version number of the program and exists.
+- `-help`: detailed information about the different options.
+
 ## Submission Process
 
 The following types of submissions are supported:
@@ -150,50 +194,6 @@ name specified in the `manifest` or `info` file.
 Once the submission is complete an accession number is immediately returned to the
 submitter by the Webin command line submission interface. Please refer to individual modules for advice which
 long term stable accession numbers can be used in publications.
-
-## Download the Program
-
-The latest version of the Webin command line submission interface can be downloaded from:
-
-<https://github.com/enasequence/webin-cli/releases>
-
-The program requires Java 1.8 or newer which can be downloaded from:
-
-<https://java.com/en/download/>
-
-## Using the Program
-
-The  Webin command line submission interface is a self-executing Java jar file and is
-run using the `java` command:
-
-`java -jar webin-cli-<version>.jar <options>`
-
-The `<version>` is the version number of the program.
-
-The command line `<options>` are explained below.
-
-## Command Line Options
-
-- `-context`: the   submission type:
-    - `-context genome`
-    - `-context transcriptome`
-    - `-context sequence`
-    - `-context reads`
-- `-userName`: the Webin submission account name.
-- `-password`: the Webin submission account password.
-- `-centerName`: the center name of the submitter (mandatory for broker accounts).
-- `-manifest`: the manifest file name.
-- `-outputDir`: directory for output files.
-- `-inputDir`: input directory for files declared in manifest file.
-- `-validate`: validates the files defined in the manifest file.
-- `-submit`: validates and submits the files defined in the manifest file.
-- `-test`: use Webin test service instead of the production service. Please note that the
-Webin upload area is shared between test and production services, and that test submission
-files will not be archived.
-- `-ascp`: use Aspera Cli instead of FTP file transfer, if available. Aspera Cli
-should be installed and path to executable "ascp" should be in PATH variable.
-- `-version`: prints the version number of the program and exists.
-- `-help`: detailed information about the different options.
 
 ## Output Directory Structure
 
