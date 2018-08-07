@@ -46,8 +46,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ENA Training Modules'
-copyright = u'2017, European Nucleotide Archive (ENA)'
-author = u'Marc B Rossello'
+copyright = u'2017-2018, European Nucleotide Archive (ENA). Licensed under the Apache License 2.0.'
+author = u'The European Nucleotide Archive (ENA) team.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
