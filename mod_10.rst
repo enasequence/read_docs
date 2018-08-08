@@ -18,13 +18,13 @@ Submitting Via Spreadsheet
 | To begin, `log in to your Webin account <https://www.ebi.ac.uk/ena/submit/sra/#home>`_, navigate to the 'New Submission' tab and select 'Submit other assembled and annotated sequences'.
 | On the next screen, select the study you wish to submit to (or use the 'Create a new study' link).
 
-.. image:: images/mod_08_p01.png
+.. image:: images/mod_10_p01.png
 
 | On the following screen, note the 'Submit Completed Spreadsheet' button.
   You will return here to submit your spreadsheet once it is completed.
 | For now, use the 'Select Checklist' button, then browse the list of available checklists and their descriptions.
 
-.. image:: images/mod_08_p02.png
+.. image:: images/mod_10_p02.png
 
 | Next, you can select extra fields to add to your spreadsheet.
   Doing this will give more context to your data and help other users to understand it.
@@ -52,12 +52,12 @@ Step 1: Select and Customise a Checklist
 | Browse the list of available checklists.
   A description is available for each one.
 
-.. image:: images/mod_08_p02.png
+.. image:: images/mod_10_p02.png
 
 | You can select extra fields to add to your spreadsheet at this point.
   These extra fields give your data more context and help other users understand it.
 
-.. image:: images/mod_08_p03.png
+.. image:: images/mod_10_p03.png
 
 
 Step 2: Fill Out Shared Details
@@ -67,7 +67,7 @@ Step 2: Fill Out Shared Details
   This information will be used to populate the form for each sequence you add to this submission.
 | None of these fields are mandatory at this stage, and you will be able to edit their content on an individual basis later.
 
-.. image:: images/mod_08_p04.png
+.. image:: images/mod_10_p04.png
 
 
 Step 3: Fill Out Individual Details
@@ -76,7 +76,7 @@ Step 3: Fill Out Individual Details
 In this final step, you should fill out the details for each sequence individually.
 Depending on how you completed the previous step, some fields will be filled already.
 
-.. image:: images/mod_08_p05.png
+.. image:: images/mod_10_p05.png
 
 Use the '+Add' button to increase the amount of sequences, using the adjacent field to specify how many sequences to add.
 In the box below, you can move between different sequences using the checks on the left.
