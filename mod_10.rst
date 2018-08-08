@@ -24,7 +24,7 @@ Submitting Via Spreadsheet
   You will return here to submit your spreadsheet once it is completed.
 | For now, use the 'Select Checklist' button, then browse the list of available checklists and their descriptions.
 
-.. image:: images/mod_08_02.png
+.. image:: images/mod_08_p02.png
 
 | Next, you can select extra fields to add to your spreadsheet.
   Doing this will give more context to your data and help other users to understand it.
@@ -40,7 +40,7 @@ Submitting Via Spreadsheet
 Non-Spreadsheet Submission
 ==========================
 
-| Submitting without a spreadsheet can be convenient if you have a small number (>3) to submit.
+| Submitting without a spreadsheet can be convenient if you have a small number of sequences (>3) to submit.
 
 
 Step 1: Select and Customise a Checklist
