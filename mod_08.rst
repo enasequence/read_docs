@@ -3,14 +3,14 @@ Module 8: Interactive Submission of Annotated Sequences
 =======================================================
 
 | Submitting a new annotated sequence entry can be done interactively through Webin.
-  Be sure to `register a study <mod_02.html>`_ before you begin if you have not already done so.
-| Interactive submission of annotated sequences requires you to fill out a checklist of information about your sequence.
+  Ensure you `register a study <mod_02.html>`_ before you begin if you have not already done so.
+| Interactive submission of annotated sequences requires you to select a checklist and fill out a spreadsheet of information about your sequence.
   Please view the available `Annotation Checklists <https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_ and pick out a suitable one in advance.
-  If there is not an appropriate checklist, you will need to `submit a flatfile programmatically via REST <http://ena-docs.readthedocs.io/en/latest/prog_09.html>`_.
+  If there is no appropriate checklist available, you will need to create a flatfile and `submit programmatically via REST <http://ena-docs.readthedocs.io/en/latest/prog_12.html>`_.
 
 In overview, the workflow is as follows:
 
-1. Select and customise a checklist to model your sequence
+1. Select and customise a checklist which describes your sequence
 2. Describe details shared by all sequences to be submitted
 3. Describe each sequence individually
 4. Submit your sequences for validation
@@ -34,10 +34,10 @@ A description is available for each one.
 .. image:: images/mod_08_p02.png
 
 | You can select extra fields to add to your spreadsheet at this point.
-  These extra fields make your entry more informative and help future users understand your data.
+  These extra fields give your data more context and help other users understand your data.
 | You can use the 'Download Template Spreadsheet' button to get the checklist as a TSV file.
   This can be filled out offline and submitted from the page shown in Step 1.
-  Completing your submission this way allows you to save your work and easily make changes if something is incorrect.
+  We recommend using this method if you have more than one sequence to submit.
 
 .. image:: images/mod_08_p03.png
 
@@ -73,4 +73,4 @@ Step 4: Submit Your Sequences
 
 When you have entered all the information you wish to and all of the sequences show green ticks indicating that they are correctly filled out, click 'Submit' to have your submission validated.
 If your sequences fail validation, you will be informed of this here.
-Otherwise, if your submission is successful, you will be shown a confirmation page and given accession numbers.
+Otherwise, if your submission is successful, a confirmation page will appear and you will later receive an email with your accession numbers.
