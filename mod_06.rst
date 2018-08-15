@@ -64,7 +64,7 @@ Step 1: Begin a New Submission
 1. After logging in, go to the New Submission tab and select the 'Submit genome assemblies' option.
 2. Click 'Next' to continue.
 
-Part 2: Study and Sample
+Step 2: Study and Sample
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/AS_part2.png
@@ -76,7 +76,7 @@ Part 2: Study and Sample
    If you registered your samples in advance, click 'Skip'.
    Otherwise, proceed with the `sample registration process <mod_03.html>`_.
 
-Part 3: Define Your Assembly
+Step 3: Define Your Assembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/AS_part3.png
@@ -116,7 +116,7 @@ Part 3: Define Your Assembly
 
 7. Once all the above information is provided, please proceed to the next step.
 
-Part 4: Add More Assemblies
+Step 4: Add More Assemblies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/AS_part4.png
@@ -134,7 +134,7 @@ On this page you will be able to add more assemblies with similar information.
 4. Once all fields are complete and labelled with green ticks, you will be able to submit the assembly/assemblies by clicking the 'Submit' button.
    The system will validate the information provided at this stage and display an error message if there are errors to be corrected.
 
-Part 5: Finishing Up
+Step 5: Finishing Up
 ~~~~~~~~~~~~~~~~~~~~
 
 .. image:: images/AS_part5.png
