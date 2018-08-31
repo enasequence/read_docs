@@ -145,4 +145,4 @@ A confirmation email will be also sent to all of your account's named contacts.
 After they are received, your files must still undergo processing before they are ready for release.
 It is possible that errors will be detected at this stage, so please allow plenty of time for your submission if you have a publication deadline to keep.
 Even if there are no errors, the duration of processing will vary with the volume of assembly submissions.
-Once your assembly has finished processing, you can release it by following the instructions in our `Data Release FAQ <release.html>`_.
+Once your assembly has finished processing, you can release it by following the instructions in our `Data Release FAQ <faq_release.html>`_.
