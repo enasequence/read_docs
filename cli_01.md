@@ -29,6 +29,10 @@ run using the `java` command:
 
 `java -jar webin-cli-<version>.jar <options>`
 
+for example:
+
+`java -jar webin-cli-1.3.0.jar <options>`
+
 The `<version>` is the version number of the program.
 
 The command line `<options>` are explained below.
