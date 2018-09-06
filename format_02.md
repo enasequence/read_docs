@@ -13,6 +13,8 @@ Genome assembly data files contain:
 - Unlocalised sequences (if any)
 - Functional annotation (optional)
 
+Submission of single records that represent all of the unplaced scaffolds, or all of the scaffolds that belong to a particular chromosome but are not localized to a specific position on the chromosome, are not accepted. These records do not represent biological objects and should therefore be submitted split into individual records for each scaffold.
+
 You can use the following file formats to submit genome assemblies:
 
 - `Fasta file`: Unannotated sequences should be submitted as a Fasta file.
