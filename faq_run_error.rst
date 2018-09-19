@@ -84,7 +84,7 @@ You will receive an email resembling the below if this error occurs:
 The Problem
 -----------
 
-| This error is specific to FASTQ files: each entry in such a file should comprise exactly four lines.
+| This error is specific to FASTQ files: each entry in such a file should comprise exactly four lines, none of which should be blank.
   If this is not the case, then the file is either inappropriately formatted or has been corrupted during upload.
 
 The Solution
@@ -94,7 +94,7 @@ The Solution
 
 .. code-block:: bash
 
-    > zcat MCONS1_R1.fq.gz | wc -l
+    > zcat MCONS1_R1.fq.gz | grep '[^[:space:]]' | wc -l
 
 | This command will output the amount of lines in the file.
 | If it is divisible by four, it is likely the file was corrupted during upload and should be reuploaded.
