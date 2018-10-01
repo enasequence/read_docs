@@ -243,3 +243,20 @@ FASTQ read2.fastq.gz
 - Targeted-Capture: Enrichment of a targeted subset of loci.
 - Tethered Chromatin Conformation Capture: 
 - OTHER: Library strategy not listed.
+
+## CRAM file validation
+
+### Reference sequence validation
+
+Reference sequences in CRAM files are required to exists in ENA's CRAM reference registry.
+
+The Webin command line submission interface maintains two file based caches
+to avoid unnecessary calls to the registry:
+1. Cache for reference sequence checksums
+2. Cache for reference sequences
+
+The cache for reference sequence checksums is stored in the `$HOME/.webin-cli/cram-ref-info` directory,
+where `$HOME` is the home directory for the user executing the program.
+ 
+The cache for reference sequences is configured using the `REF_PATH` and `REF_CACHE` environmental 
+variables as in [samtools](http://www.htslib.org/doc/samtools.html).
