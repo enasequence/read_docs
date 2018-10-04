@@ -158,7 +158,7 @@ The following formats are supported for [read submissions](cli_06.html):
 - CRAM: CRAM file
 - FASTQ: fastq file
 
-### Info File
+#### Info File (for backward compability only)
 
 You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 
@@ -193,7 +193,7 @@ part of the submission.
 
 The `<outputDir>` can be specified using the `-outputDir` option, the `<context>` is
 specified using the `-context` option, and the `<name>` is a submitter provided unique
-name specified in the `manifest` or `info` file.
+name specified in the `manifest` file.
 
 Once the submission is complete an accession number is immediately returned to the
 submitter by the Webin command line submission interface. Please refer to individual modules for advice which
@@ -210,7 +210,7 @@ If the `-outputDir` option is not specified then the directory in which the
 `-manifest` file is used as the output directory.  
 
 The `<context>` is the submission type provided using the `-context` option
-and the `<name>` is the unique name provided in the manifest or info file.
+and the `<name>` is the unique name provided in the manifest file.
 
 - The `validate` directory contains the validation reports created using the `-validate` option.
 - The `submit` directory contains the XMLs created by the `-submit` option including the

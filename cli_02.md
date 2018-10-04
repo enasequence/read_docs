@@ -53,7 +53,6 @@ The manifest file is specified using the `-manifest <filename>` option.
 A genome assembly submission consists of the following files:
 
 - 1 manifest file
-- 0-1 info files
 - 0-1 fasta files
 - 0-1 AGP files
 - 0-1 flat files
@@ -117,21 +116,6 @@ MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
 FASTA   genome.fasta.gz
 ``` 
-
-### Info file
-
-You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
-
-When a separate info file is used then the manifest file must contain the `INFO` 
-field pointing to the info file. 
-
-For example, the following manifest file represents a genome assembly consisting of contigs 
-provided in one fasta file:
-
-```
-INFO   assembly.info
-FASTA   genome.fasta.gz
-```
 
 ### Other files
 

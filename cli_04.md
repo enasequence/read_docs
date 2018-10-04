@@ -41,7 +41,6 @@ The manifest file is specified using the `-manifest <filename>` option.
 An annotated sequence spreadsheet submission consists of the following files:
 
 - 1 manifest file
-- 0-1 info files
 - 1 tab-separated (tsv) spreadsheet containing the sequences and functional annotation
 
 ### Manifest file
@@ -64,20 +63,6 @@ For example, the following manifest file represents a submission:
 ```
 STUDY   TODO
 NAME   TODO
-TAB    sequences.tsv.gz
-```
-
-### Info file
-
-You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
-
-When a separate info file is used then the manifest file must contain the `INFO`
-field pointing to the info file.
-
-For example, the following manifest file represents a submission:
-
-```
-INFO    sequences.info
 TAB    sequences.tsv.gz
 ```
 

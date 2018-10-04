@@ -45,7 +45,6 @@ The manifest file is specified using the `-manifest <filename>` option.
 A sequence read submission consists of the following files:
 
 - 1 manifest file
-- 0-1 info file
 - 1 BAM file, 1 CRAM file, or 1-2 Fastq files
 
 ### Manifest file
@@ -87,21 +86,6 @@ LIBRARY_STRATEGY WGS
 FASTQ read1.fastq.gz
 FASTQ read2.fastq.gz 
 ``` 
-
-### Info file
-
-You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
-
-When a separate info file is used then the manifest file must contain the `INFO` 
-field pointing to the info file. 
-
-For example, the following manifest file represents a paired Fastq submission:
-
-```
-INFO read.info
-FASTQ read1.fastq.gz
-FASTQ read2.fastq.gz 
-```
 
 ## Metadata validation
 
