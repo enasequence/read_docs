@@ -17,7 +17,9 @@ Before attempting to submit your data, do the following:
 - Familiarise yourself with the `Metadata Model <meta_01.html>`_
 - `Register a Submission Account <reg.html>`_
 - Make yourself aware of the different submission routes:
+
   + `Interactive submission <interactive.html>`_ using your browser is appropriate for submitting Studies and Samples
+  + `REST submission <programmatic.html>`_ using cURL to submit XML files is appropriate for submitting Studies and Samples
   + `Webin-CLI <cli.html>`_ is a bespoke ENA submission interface appropriate for submitting your reads and assemblies
 
 
