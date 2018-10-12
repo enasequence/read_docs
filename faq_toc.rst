@@ -10,3 +10,4 @@ Tips and FAQs
    faq_sample_error
    faq_umbrella
    faq_release
+   faq_metagenomes
