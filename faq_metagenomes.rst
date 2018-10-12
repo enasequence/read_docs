@@ -31,7 +31,7 @@ Sample Registration
 
 .. _Sample Checklist: https://www.ebi.ac.uk/ena/submit/checklists
 
-|
+
 | When submitting samples for metagenomic data, take care with the taxon ID: read data, primary metagenomes, and binned metagenomes (defined below) should reference an environmental sample.
   See the available environmental taxa in the `NCBI Taxonomy Browser`_.
 
@@ -48,7 +48,9 @@ Sample Registration
 
 2. Include a custom attribute named "sample derived from" with the value being the ERS accession of the environmental sample
 
-3. Propagate other sample attributes from the parent sample to the MAG sample as appropriate, e.g. "isolation_source", "sampling_station", "event_label", etc.
+3. Include a custom attribute named "isolation_source", with the value being the material the parent sample was isolated from, e.g. "soil" or "gut"
+
+4. Propagate other sample attributes from the parent sample to the MAG sample as appropriate, e.g. "sampling_station", "event_label", etc.
 
 
 Sequence Read Submission
