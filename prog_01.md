@@ -200,7 +200,7 @@ Below is an extract of an study XML which contains an accession number:
 ```
 <STUDY accession="ERP000011">
    ...       
-</SAMPLE>
+</STUDY>
  ```
 
 Below is an extract of an study XML which contains an alias:
@@ -208,7 +208,7 @@ Below is an extract of an study XML which contains an alias:
 ```
 <STUDY alias="study1">
    ...       
-</SAMPLE>
+</STUDY>
 ```
 
 ### Submission XML: validate objects
