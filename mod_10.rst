@@ -1,6 +1,6 @@
-========================================================
-Module 10: Interactive Submission of Annotated Sequences
-========================================================
+========================================
+Module 10: Annotated Sequence Submission
+========================================
 
 | Submitting a new annotated sequence entry can be done interactively through Webin.
   Ensure you `register a study <mod_02.html>`_ before you begin if you have not already done so.
