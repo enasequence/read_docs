@@ -138,7 +138,7 @@ Note the `<SAMPLE_NAME>` block from the example above:
     </SAMPLE_NAME>
 ```
 
-You can provide any one of the taxon id (`<TAXON_ID>`), scientific name (`<SCIENTIFIC_NAME>`) or common name 
+You must provide the taxon id (`<TAXON_ID>`) and can optionally provide the scientific name (`<SCIENTIFIC_NAME>`) or common name 
 (`<COMMON_NAME>`). The other fields of the three will be added automatically when the sample is submitted. 
 
 Taxon id, scientific name and common name are ways of classifying the sample organism using the NCBI taxonomy database
@@ -146,7 +146,7 @@ terms. In this example, the sample source is environmental (`stomach metagenome`
 Note that metagenomes use specific environmental terms. 
 
 More information about finding the correct taxonomic classification
-for your samples is available [here](tax.html).
+for your samples is available [here](faq_taxonomy.html).
 
 ## Create the Sample XML
 
@@ -176,10 +176,13 @@ Let's call this file `submission.xml`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<SUBMISSION>
+<SUBMISSION alias="MT5176_submission" center_name="YOUR CENTRE NAME" broker_name="EGA">
    <ACTIONS>
       <ACTION>
-         <ADD/>
+         <ADD source="MT5176" schema="sample"/>
+      </ACTION>
+      <ACTION>
+        <PROTECT/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
