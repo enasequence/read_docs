@@ -67,10 +67,13 @@ To submit a study or any other object(s), you need an accompanying submission XM
 Let's call this file `submission.xml`. 
 
 ```xml
-<SUBMISSION>
+<SUBMISSION alias="cheddar_cheese_submission" center_name="TODO: Your Centre Name" broker_name="EGA">
    <ACTIONS>
       <ACTION>
-         <ADD/>
+         <ADD source="cheddar_cheese" schema="study"/>
+      </ACTION>
+      <ACTION>
+        <PROTECT/>
       </ACTION>
    </ACTIONS>
 </SUBMISSION>
