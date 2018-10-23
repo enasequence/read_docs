@@ -39,7 +39,7 @@ Sequences extracted from mixed samples of anonymous organisms (metagenomic
 samples) where independent identification, such as culturing, has not been done
 are environmental samples by INSDC definition. The organism feature for these
 sequences should reference a taxon whose name starts with 'uncultured'. In
-addition, these should inclue the flag '/environmental sample' within the
+addition, these should include the flag '/environmental sample' within the
 source feature.
 
 Sequences should always be submitted on the forward strand. When submitting a
@@ -83,7 +83,7 @@ When you have prepared your flatfile, you will need to submit it using
 HLA Gene With Sequenced Introns
 ===============================
 
-HLA genes have strictly controlled formats in ENA falt files. Please adhere to
+HLA genes have strictly controlled formats in ENA flat files. Please adhere to
 the below conventions to avoid having your submission rejected.
 
 1. **{organism}** is a species-rank organism present in the database. Search
@@ -112,13 +112,86 @@ HLA gene with sequenced introns:
 
 .. code-block::
 
-    #TODO
+ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+XX
+AC   XXX;
+XX
+DE   {organism} {partial} {gene} gene for {product}, allele {allele}
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..{sequence length}
+FT                   /organism="{organism}"
+FT                   /mol_type="genomic DNA"
+FT   CDS             join(A..b,c..d,e..f,g..h,i..j,k..l,m..N)
+FT                   /codon_start={reading frame}
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT                   /product="{product}"
+FT                   /function="antigen presenting molecule"
+FT   exon            {a..b}
+FT                   /number=1
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   intron          {b+1..c-1}
+FT                   /number=1
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   exon            {c..d}
+FT                   /number=2
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   intron          {d+1..e-1}
+FT                   /number=2
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   exon            {e..f}
+FT                   /number=3
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   intron          {f+1..g-1}
+FT                   /number=3
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   exon            {g..h}
+FT                   /number=4
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   intron          {h+1..i-1}
+FT                   /number=4
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   exon            {i..j}
+FT                   /number=5
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   intron          {j+1..k-1}
+FT                   /number=5
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   exon            {k..l}
+FT                   /number=6
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   intron          {l+1..m-1}
+FT                   /number=6
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   exon            {m..n}
+FT                   /number=7
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+XX
+SQ
+{sequence}
+//
+
 
 
 HLA Gene With Unsequenced Introns
 =================================
 
-HLA genes have strictly controlled formats in ENA falt files. Please adhere to
+HLA genes have strictly controlled formats in ENA flat files. Please adhere to
 the below conventions to avoid having your submission rejected. When introns are
 unsequenced, exons should be concatenated in order with 100 Ns representing gaps
 of unknown length.
@@ -147,7 +220,68 @@ of unknown length.
 
 .. code-block::
 
-    #TODO
+ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+XX
+AC   XXX;
+XX
+DE   {organism} {partial} {gene} gene for {product}, allele {allele}
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   source          1..{sequence length}
+FT                   /organism="{organism}"
+FT                   /mol_type="genomic DNA"
+FT   CDS             join(A..b,b+101..c,c+101..d,d+101..e,e+101..f,f+101..g,g+101..H)
+FT                   /codon_start={reading frame}
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT                   /product="{product}"
+FT                   /function="antigen presenting molecule"
+FT   exon            {a..b}
+FT                   /number=1
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   gap             b+1..b+100
+FT                   /estimated_length=unknown
+FT   exon            {b+101..c}
+FT                   /number=2
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   gap             c+1..c+100
+FT                   /estimated_length=unknown
+FT   exon            {c+101..d}
+FT                   /number=3
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   gap             d+1..d+100
+FT                   /estimated_length=unknown
+FT   exon            {d+101..e}
+FT                   /number=4
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   gap             e+1..e+100
+FT                   /estimated_length=unknown
+FT   exon            {e+101..f}
+FT                   /number=5
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   gap             f+1..f+100
+FT                   /estimated_length=unknown
+FT   exon            {f+101..g}
+FT                   /number=6
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+FT   gap             g+1..g+100
+FT                   /estimated_length=unknown
+FT   exon            {g+101..h}
+FT                   /number=7
+FT                   /gene="{gene}"
+FT                   /allele="{allele}"
+XX
+SQ
+{sequence}
+//
+
 
 
 Bacterial Operon
@@ -174,22 +308,78 @@ features.
 9. **{sequence}** should be the sequence in IUPAC nucleotide characters,
    as described above
 10. Add or remove CDS blocks as required
-11. Advanced users: consider including other features, such as *promoter*, *-35_
-   signal* and *-10_signal*. See the `WebFeat page
-   <http://www.ebi.ac.uk/ena/WebFeat/>`_ for more information
+11. Advanced users: consider including other features, such as *promoter*,
+    *-35_signal* and *-10_signal*. See the `WebFeat page
+    <http://www.ebi.ac.uk/ena/WebFeat/>`_ for more information
 
 Optional features
 
 .. code-block::
 
-    #TODO
+    FT   promoter        a..l
+    FT                   /operon="{operon}"
+
+    FT   -35_signal      X..Y
+    FT                   /operon="{operon}"
+
+    FT   -10_signal      X..Y
+    FT                   /operon="{operon}
 
 
 Bacterial operon:
 
 .. code-block::
 
-    #TODO
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} {operon} operon, strain {strain}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /strain="{strain}"
+    FT                   /mol_type="genomic DNA"
+    FT   operon          a..l
+    FT                   /operon="{operon}"
+    FT   CDS             a..b
+    FT                   /codon_start={reading frame}
+    FT                   /transl_table=11
+    FT                   /operon="{operon}"
+    FT                   /gene="{gene1}"
+    FT                   /product="{product1}"
+    FT   CDS             c..d
+    FT                   /transl_table=11
+    FT                   /operon="{operon}"
+    FT                   /gene="{gene2}"
+    FT                   /product="{product2}"
+    FT   CDS             e..f
+    FT                   /transl_table=11
+    FT                   /operon="{operon}"
+    FT                   /gene="{gene3}"
+    FT                   /product="{product3}"
+    FT   CDS             g..h
+    FT                   /transl_table=11
+    FT                   /operon="{operon}"
+    FT                   /gene="{gene4}"
+    FT                   /product="{product4}"
+    FT   CDS             i..j
+    FT                   /transl_table=11
+    FT                   /operon="{operon}"
+    FT                   /gene="{gene5}"
+    FT                   /product="{product5}"
+    FT   CDS             k..l
+    FT                   /transl_table=11
+    FT                   /operon="{operon}"
+    FT                   /gene="{gene6}"
+    FT                   /product="{product6}"
+    XX
+    SQ
+    {sequence}
+    //
+
 
 
 Multi-Exon Gene
@@ -224,7 +414,7 @@ from the template.
 7. **{partial}** - delete if coding region is complete, otherwise just
    remove the curly brackets
 8. **{a to n}** are the exon/intron/CDS coordinates
-9. **{A to N}** are the coding region 5' and 3'coordinates, which may differ
+9. **{A to N}** are the coding region 5' and 3' coordinates, which may differ
    from exon coordinates due to UTR. If the start or stop codon is absent,
    please include partiality symbols, e.g. *<1..250* or *2917..>2960*
 10. Incompleteness of any features should be described using partiality symbols,
@@ -237,7 +427,81 @@ Multi-exon genes
 
 .. code-block::
 
-    #TODO
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} {partial} {gene} gene for {product}, {identifier} {ID}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /mol_type="genomic DNA"
+    FT                   /{identifier}="{ID}"
+    FT   CDS             join(A..b,c..d,e..f,g..h,i..j,k..l,m..N)
+    FT                   /codon_start={reading frame}
+    FT                   /gene="{gene}"
+    FT                   /product="{product}"
+    FT                   /allele="{allele}"
+    FT                   /function="{function}"
+    FT   exon            {a..b}
+    FT                   /number=1
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {b+1..c-1}
+    FT                   /number=1
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {c..d}
+    FT                   /number=2
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {d+1..e-1}
+    FT                   /number=2
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {e..f}
+    FT                   /number=3
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {f+1..g-1}
+    FT                   /number=3
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {g..h}
+    FT                   /number=4
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {h+1..i-1}
+    FT                   /number=4
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {i..j}
+    FT                   /number=5
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {j+1..k-1}
+    FT                   /number=5
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {k..l}
+    FT                   /number=6
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {l+1..m-1}
+    FT                   /number=6
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {m..n}
+    FT                   /number=7
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    XX
+    SQ
+    {sequence}
+    //
+
 
 
 Multi-Feature Region
@@ -293,7 +557,34 @@ Multi-feature region:
 
 .. code-block::
 
-    #TODO
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} {organelle} {partial} {gene1} gene, {gene2} gene, {gene3} gene and {short note}, {identifier} {ID}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /mol_type="genomic DNA"
+    FT                   /{identifier}="{ID}"
+    FT   CDS             a..b
+    FT                   /codon_start={reading frame}
+    FT                   /gene="{gene1}"
+    FT                   /product="{product1}"
+    FT   tRNA            c..d
+    FT                   /gene="{gene2}"
+    FT                   /product="{product2}"
+    FT   rRNA            e..f
+    FT                   /gene="{gene3}"
+    FT                   /product="{product3}"
+    FT   misc_feature    g..h
+    FT                   /note="{short note}"
+    SQ
+    {sequence}
+    //
+
 
 
 rDNA Region (ITS And rRNA Features)
@@ -324,58 +615,208 @@ This section provides a skeleton for that.
    (rRNA, misc_RNA) should be described using partiality symbols, e.g. *<1..250*
    or *2917..>2960*
 4. **{sequence}** should be the sequence in IUPAC nucleotide characters,
-    as described above
+   as described above
 5. Any of the feature blocks can be replicated/removed as required
 6. Please update the DE line to reflect the addition/removal of features
 
-rDNA region: 
+rDNA region:
 
 .. code-block::
 
-    #TODO
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} 18S rRNA gene, ITS1, 5.8S rRNA gene, ITS2 and 28S rRNA gene, {identifier} {ID}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /mol_type="genomic DNA"
+    FT                   /{identifier}="{ID}"
+    FT   rRNA            a..b
+    FT                   /gene="18S rRNA"
+    FT                   /product="18S ribosomal RNA"
+    FT   misc_RNA        b+1..c
+    FT                   /note="internal transcribed spacer 1, ITS1"
+    FT   rRNA            c+1..d
+    FT                   /gene="5.8S rRNA"
+    FT                   /product="5.8S ribosomal RNA"
+    FT   misc_RNA        d+1..e
+    FT                   /note="internal transcribed spacer 2, ITS2"
+    FT   rRNA            e+1..f
+    FT                   /gene="28S rRNA"
+    FT                   /product="28S ribosomal RNA"
+    SQ
+    {sequence}
+    //
+
 
 
 Precursor mRNA
 ==============
 
+Precursor mRNA can be submitted using an `annotation checklist
+<https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_ called "Single-CDS
+mRNA" but this does not annotation of features that arise from processing of the
+transcript, such as sig_peptide or mat_peptide features. To add these, you will
+need to prepare the file yourself with the template below.
+
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
    `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
-2. **{}**
-3. **{}**
-4. **{}**
-5. **{}**
-6. **{}**
-7. **{}**
-8. **{}**
-9. **{}**
-10. **{}**
-11. **{}**
+2. **{organelle}** with the value taken from the INSDC
+   `controlled vocabulary
+   <https://www.ebi.ac.uk/ena/WebFeat/qualifiers/organelle.html>`_.
+   The organelle should also be added to the DE line. Remove this entirely if
+   the sequence is of nuclear origin.
+3. **{identifier}** is a form of sample or organism identification. You must use
+   at least one from the below list and fill in the **{ID}** field with it.
+   Other qualifiers are available in `WebFeat
+   <https://www.ebi.ac.uk/ena/WebFeat/source.html>`_.
 
+   a. Isolate: any sample or isolate name
+   b. Strain: the strain of the sequenced organism
+   c. Clone: the clone name of the sequence
+   d. Note: the breed of a domesticate
+   e. Cultivar: a cultivated variety of a plant or fungus
+   f. Variety: a natural variety of a plant or fungus
+   g. Dev_stage: the developmental stage of the organism
+   h. Tissue_type: the tissue type sampled
+   i. Cell_type: the type sampled
+   j. Sex: the sex of the animal
+   k. Mating_type: the mating type of the prokaryote/lower eukaryote
+
+4. **{a to l}** are the feature coordinates. Incompleteness of any features
+   (CDS, sig_peptide, mat_peptide) should be described using partiality symbols,
+   e.g. *<1..250* or *2917..>2960*
+5. **{gene}** is the gene symbol, putative or official. It is optional, but
+   highly recommended. If you remove this line, also remove it from the DE line.
+6. **{precursor}** is the protein precursor name, and is mandatory
+7. **{reading frame}** should be 1 where the start codon is present, otherwise
+   1, 2 or 3 depending on the reading frame of the 5' partial coding sequence
+8. **{mat_peptide N}** is the name of the Nth mature peptide
+9. **{partial}** - delete if coding region is complete, otherwise just
+   remove the curly brackets
+10. **{sequence}** should be the sequence in IUPAC nucleotide characters,
+    as described above
+
+Precursor mRNA:
 
 .. code-block::
 
-    #TODO
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} {partial} mRNA for {precursor} ({gene} gene), {identifier} {ID}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /organelle="{organelle}"
+    FT                   /mol_type="genomic DNA"
+    FT                   /{identifier}="{ID}"
+    FT   CDS             a..b
+    FT                   /codon_start={reading frame}
+    FT                   /gene="{gene}"
+    FT                   /product="{precursor}"
+    FT   sig_peptide     e..f
+    FT                   /gene="{gene}"
+    FT   mat_peptide     g..h
+    FT                   /gene="{gene}"
+    FT                   /product="{mat_peptide 1}"
+    FT   mat_peptide     i..j
+    FT                   /gene="{gene}"
+    FT                   /product="{mat_peptide 2}"
+    FT   mat_peptide     k..l
+    FT                   /gene="{gene}"
+    FT                   /product="{mat_peptide 3}"
+    SQ
+    {sequence}
+    //
+
 
 
 Synthetic Construct
 ===================
 
-1. **{organism}** is a species-rank organism present in the database. Search
+| You should use this template if your sequence has been constructed synthetically
+  and includes artificial genes and vectors. The submitted sequence must have been
+  validated by nucleotide sequencing for acceptance.
+|
+| This annotation is made up of one or more source features, and generally
+  includes coding regions and various components described with misc_features.
+  If more than one source feature is used, the first should describe the
+  molecule as a whole and be labelled with the /focus qualifier. The molecule
+  type (/mol_type) for synthetic constructs is either "other DNA" or "other
+  RNA".
+|
+| The example below is for a gene which has been edited for preferential
+  expression in another organism. The first source describes the synthetic
+  nature, the second describes the origin of the sequence (of which there can be
+  many if parts are constructed from different organisms.
+
+1. **{other DNA or RNA}** refers to the molecule type, and also appears in the
+   ID line. Use *other DNA* or *other RNA* as the value as appropriate
+2. Note that the /focus source has organism name *synthetic construct*. This is
+   the standard taxon for this type of sequence. If you have named a vector
+   sequence specifically, e.g. *Cloning vector ABC*, you may use this in place
+   and a taxon will be added to the database according to NCBI Taxonomy's
+   operating procedures
+3. **{organism}** is a species-rank organism present in the database referring
+   to the originating organism. Search
    available taxa at
    `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
-2. **{}**
-3. **{}**
-4. **{}**
-5. **{}**
-6. **{}**
-7. **{}**
-8. **{}**
-9. **{}**
-10. **{}**
-11. **{}**
+4. **{a to h}** are the feature coordinates. Incompleteness of any features
+   (except source) should be described using partiality symbols, e.g. *<1..250*
+   or *2917..>2960*
+5. **{gene}** is the gene symbol, putative or official. It is optional, but
+   highly recommended. If you remove this line, also remove it from the DE line.
+6. **{product}** is the protein/product name. This is mandatory for CDS.
+7. **{table}** is the translation table under which the coding region is
+   translated. Learn more at the `Translation Tables
+   <https://www.ebi.ac.uk/ena/browse/translation-tables>`_ page
+8. **{short note 1}** should provide additional information on the promoter,
+   e.g. *Eu and SRalpha promoter*
+9. **{short note 2}** should provide additional information for the CDS, e.g.
+   *preferential codon usage changed for expression in {organism 2}*
+10. **{short note 3}** should support the miscellaneous feature, e.g.
+    *additional stop codon*
+11. **{sequence}** should be the sequence in IUPAC nucleotide characters,
+    as described above
 
+Synthetic construct:
 
 .. code-block::
 
-    #TODO
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   Synthetic construct for {organism} {gene} gene for {product}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="synthetic construct"
+    FT                   /mol_type="{other DNA or RNA}"
+    FT                   /focus
+    FT   source          a..b
+    FT                   /organism="{organism}"
+    FT                   /mol_type="other DNA"
+    FT   promoter        c..d
+    FT                   /note="{short note 1}"
+    FT   CDS             e..f
+    FT                   /transl_table={table}
+    FT                   /gene="{gene}"
+    FT                   /product="{product}"
+    FT                   /note="{short note 2}"
+    FT   misc_feature    g..h
+    FT                   /note="{short note 3}"
+    XX
+    SQ
+    {sequence}
+    //
