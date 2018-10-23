@@ -60,7 +60,7 @@ formed as artefacts of alignment are not allowed. If the gap covers an entire
 intron, then the corresponding intron block should be removed from the
 annotation.
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     FT   gap             {X..Y}
     FT                   /estimated_length={unknown or known}
@@ -110,81 +110,81 @@ the below conventions to avoid having your submission rejected.
 HLA gene with sequenced introns:
 
 
-.. code-block::
+\.\. code\-block:: flatfile
 
-ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
-XX
-AC   XXX;
-XX
-DE   {organism} {partial} {gene} gene for {product}, allele {allele}
-XX
-FH   Key             Location/Qualifiers
-FH
-FT   source          1..{sequence length}
-FT                   /organism="{organism}"
-FT                   /mol_type="genomic DNA"
-FT   CDS             join(A..b,c..d,e..f,g..h,i..j,k..l,m..N)
-FT                   /codon_start={reading frame}
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT                   /product="{product}"
-FT                   /function="antigen presenting molecule"
-FT   exon            {a..b}
-FT                   /number=1
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   intron          {b+1..c-1}
-FT                   /number=1
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   exon            {c..d}
-FT                   /number=2
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   intron          {d+1..e-1}
-FT                   /number=2
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   exon            {e..f}
-FT                   /number=3
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   intron          {f+1..g-1}
-FT                   /number=3
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   exon            {g..h}
-FT                   /number=4
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   intron          {h+1..i-1}
-FT                   /number=4
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   exon            {i..j}
-FT                   /number=5
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   intron          {j+1..k-1}
-FT                   /number=5
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   exon            {k..l}
-FT                   /number=6
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   intron          {l+1..m-1}
-FT                   /number=6
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   exon            {m..n}
-FT                   /number=7
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-XX
-SQ
-{sequence}
-//
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} {partial} {gene} gene for {product}, allele {allele}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /mol_type="genomic DNA"
+    FT   CDS             join(A..b,c..d,e..f,g..h,i..j,k..l,m..N)
+    FT                   /codon_start={reading frame}
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT                   /product="{product}"
+    FT                   /function="antigen presenting molecule"
+    FT   exon            {a..b}
+    FT                   /number=1
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {b+1..c-1}
+    FT                   /number=1
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {c..d}
+    FT                   /number=2
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {d+1..e-1}
+    FT                   /number=2
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {e..f}
+    FT                   /number=3
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {f+1..g-1}
+    FT                   /number=3
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {g..h}
+    FT                   /number=4
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {h+1..i-1}
+    FT                   /number=4
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {i..j}
+    FT                   /number=5
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {j+1..k-1}
+    FT                   /number=5
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {k..l}
+    FT                   /number=6
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   intron          {l+1..m-1}
+    FT                   /number=6
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   exon            {m..n}
+    FT                   /number=7
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    XX
+    SQ
+    {sequence}
+    //
 
 
 
@@ -218,69 +218,69 @@ of unknown length.
     as described above
 
 
-.. code-block::
+\.\. code\-block:: flatfile
 
-ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
-XX
-AC   XXX;
-XX
-DE   {organism} {partial} {gene} gene for {product}, allele {allele}
-XX
-FH   Key             Location/Qualifiers
-FH
-FT   source          1..{sequence length}
-FT                   /organism="{organism}"
-FT                   /mol_type="genomic DNA"
-FT   CDS             join(A..b,b+101..c,c+101..d,d+101..e,e+101..f,f+101..g,g+101..H)
-FT                   /codon_start={reading frame}
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT                   /product="{product}"
-FT                   /function="antigen presenting molecule"
-FT   exon            {a..b}
-FT                   /number=1
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   gap             b+1..b+100
-FT                   /estimated_length=unknown
-FT   exon            {b+101..c}
-FT                   /number=2
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   gap             c+1..c+100
-FT                   /estimated_length=unknown
-FT   exon            {c+101..d}
-FT                   /number=3
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   gap             d+1..d+100
-FT                   /estimated_length=unknown
-FT   exon            {d+101..e}
-FT                   /number=4
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   gap             e+1..e+100
-FT                   /estimated_length=unknown
-FT   exon            {e+101..f}
-FT                   /number=5
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   gap             f+1..f+100
-FT                   /estimated_length=unknown
-FT   exon            {f+101..g}
-FT                   /number=6
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-FT   gap             g+1..g+100
-FT                   /estimated_length=unknown
-FT   exon            {g+101..h}
-FT                   /number=7
-FT                   /gene="{gene}"
-FT                   /allele="{allele}"
-XX
-SQ
-{sequence}
-//
+    ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
+    XX
+    AC   XXX;
+    XX
+    DE   {organism} {partial} {gene} gene for {product}, allele {allele}
+    XX
+    FH   Key             Location/Qualifiers
+    FH
+    FT   source          1..{sequence length}
+    FT                   /organism="{organism}"
+    FT                   /mol_type="genomic DNA"
+    FT   CDS             join(A..b,b+101..c,c+101..d,d+101..e,e+101..f,f+101..g,g+101..H)
+    FT                   /codon_start={reading frame}
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT                   /product="{product}"
+    FT                   /function="antigen presenting molecule"
+    FT   exon            {a..b}
+    FT                   /number=1
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   gap             b+1..b+100
+    FT                   /estimated_length=unknown
+    FT   exon            {b+101..c}
+    FT                   /number=2
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   gap             c+1..c+100
+    FT                   /estimated_length=unknown
+    FT   exon            {c+101..d}
+    FT                   /number=3
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   gap             d+1..d+100
+    FT                   /estimated_length=unknown
+    FT   exon            {d+101..e}
+    FT                   /number=4
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   gap             e+1..e+100
+    FT                   /estimated_length=unknown
+    FT   exon            {e+101..f}
+    FT                   /number=5
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   gap             f+1..f+100
+    FT                   /estimated_length=unknown
+    FT   exon            {f+101..g}
+    FT                   /number=6
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    FT   gap             g+1..g+100
+    FT                   /estimated_length=unknown
+    FT   exon            {g+101..h}
+    FT                   /number=7
+    FT                   /gene="{gene}"
+    FT                   /allele="{allele}"
+    XX
+    SQ
+    {sequence}
+    //
 
 
 
@@ -314,7 +314,7 @@ features.
 
 Optional features
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     FT   promoter        a..l
     FT                   /operon="{operon}"
@@ -328,7 +328,7 @@ Optional features
 
 Bacterial operon:
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -425,7 +425,7 @@ from the template.
 
 Multi-exon genes
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -555,7 +555,7 @@ Multi-Feature Region
 
 Multi-feature region:
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -621,7 +621,7 @@ This section provides a skeleton for that.
 
 rDNA region:
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -704,7 +704,7 @@ need to prepare the file yourself with the template below.
 
 Precursor mRNA:
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -790,7 +790,7 @@ Synthetic Construct
 
 Synthetic construct:
 
-.. code-block::
+\.\. code\-block:: flatfile
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
