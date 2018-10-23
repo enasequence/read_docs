@@ -60,7 +60,7 @@ formed as artefacts of alignment are not allowed. If the gap covers an entire
 intron, then the corresponding intron block should be removed from the
 annotation.
 
-code-block:: flatfile
+::
 
     FT   gap             {X..Y}
     FT                   /estimated_length={unknown or known}
