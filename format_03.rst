@@ -110,7 +110,7 @@ the below conventions to avoid having your submission rejected.
 HLA gene with sequenced introns:
 
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -218,7 +218,7 @@ of unknown length.
     as described above
 
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -314,7 +314,7 @@ features.
 
 Optional features
 
-code-block:: flatfile
+::
 
     FT   promoter        a..l
     FT                   /operon="{operon}"
@@ -328,7 +328,7 @@ code-block:: flatfile
 
 Bacterial operon:
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -425,7 +425,7 @@ from the template.
 
 Multi-exon genes
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -555,7 +555,7 @@ Multi-Feature Region
 
 Multi-feature region:
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -621,7 +621,7 @@ This section provides a skeleton for that.
 
 rDNA region:
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -704,7 +704,7 @@ need to prepare the file yourself with the template below.
 
 Precursor mRNA:
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
@@ -790,7 +790,7 @@ Synthetic Construct
 
 Synthetic construct:
 
-code-block:: flatfile
+::
 
     ID   XXX; XXX; linear; XXX; XXX; XXX; XXX.
     XX
