@@ -6,7 +6,9 @@ Submitting Metagenomic Studies
 Introduction
 ============
 
-| Metagenomic studies can be among the most complex within ENA, due to the multiple layers of analyses which may be involved. This guide will give you an overview of how to structure your metadata, which will be essential to making  your work understood. You should refer to other pages on this site for guidance on the actual process of submitting. If you have questions, please direct them to datasubs@ebi.ac.uk
+| Metagenomic studies can be among the most complex within ENA, due to the multiple layers of analyses which may be involved.
+  This guide will give you an overview of how to structure your metadata, which will be essential to making  your work understood.
+  You should refer to other pages on this site for guidance on the actual process of submitting. If you have questions, please direct them to datasubs@ebi.ac.uk
 
 
 Prerequisites
@@ -28,8 +30,10 @@ Sample Registration
 
 | Samples describe the source material for a sequencing experiment.
   They are metadata objects which give essential context to your data.
-| Samples must always conform to a checklist.
+  You must therefore describe your samples to us before submitting the sequence data derived from them.
+| Samples must always conform to a checklist of attributes.
   View the full selection of these at the `Sample Checklist`_ page and choose the most specific one which is appropriate.
+  You can always add additional attributes to describe your sample in more detail.
 
 .. _Sample Checklist: https://www.ebi.ac.uk/ena/submit/checklists
 
@@ -48,18 +52,23 @@ Sample Registration
     | "This sample represents a MAG, binned/clustered from the metagenomic sample ERSXXXXX"
     | "This sample represents a MAG, binned/clustered from the metagenomic run ERRXXXXX"
 
-2. Include a custom attribute named "sample derived from" with the value being the ERS accession of the environmental sample
+2. Include a custom attribute named "sample derived from" with the value being either the ERS accession of the environmental sample or the ERR of the environmental reads
 
 3. Include a custom attribute named "isolation_source", with the value being the material the parent sample was isolated from, e.g. "soil" or "gut"
 
-4. Propagate other sample attributes from the parent sample to the MAG sample as appropriate, e.g. "sampling_station", "event_label", etc.
+4. Copy other sample attributes from the parent sample to the MAG sample as appropriate, e.g. "sampling_station", "event_label", etc.
+
+There are two ways to submit samples, for which you can find guides at the following links:
+
+- `Interactive Sample Submission <mod_03.html>`_
+- `Programmatic Sample Submission <prog_03.html>`_
 
 
 Sequence Read Submission
 ========================
 
 | Sequence reads should be submitted in the normal way, referencing an environmental sample as described above.
-| If you are not familiar with how to do this, see the `Webin-CLI submission guide <cli.html>`_.
+| If you are not familiar with how to do this, see the `Webin-CLI submission guide <cli.html>`_ and follow the Read Submission tutorial.
 
 
 Assembly Data Submission
@@ -73,4 +82,5 @@ Assembly Data Submission
 - Metagenome Assembled Genome (MAG): a single-taxon assembly drawn from a binned metagenome, asserted to closely represent an actual individual genome
 - Environmental Single Cell Amplified Genome (SAG): a genome assembly from environmental sampled single-cell DNA
 
-| Any assemblies you submit should fall into one of these categories
+| Any assemblies you submit should fall into one of these categories.
+  The submissions themselves should be done using `Webin-CLI <cli.html>`_.
