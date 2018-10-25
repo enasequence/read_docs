@@ -1,5 +1,5 @@
 =========================================================
-Module 5: Updating Samples, Studies, Experiments and Runs
+Module 5: Updating Studies, Samples, Experiments and Runs
 =========================================================
 
 The interactive submission interface supports some editing of your submitted objects.
