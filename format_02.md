@@ -86,8 +86,8 @@ An example of a chromosome list file:
 ```
 chr01 1 Chromosome
 chr02 2 Chromosome
-chr03 3	Chromosome
-chr04	4	Chromosome
+chr03 3 Chromosome
+chr04 4 Chromosome
 ```   
     
 ## Unlocalised list file
