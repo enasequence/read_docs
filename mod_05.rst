@@ -48,7 +48,7 @@ These include the release date, title, description and publication references.
 .. image:: images/mod_05_p04.png
 
 5. The short name for the study will be visible in search outputs and overview pages whereas the descriptive title and abstract will be presented in the study's public page.
-6. You can add the PMID of any papers related to your date.
+6. You can add the PMID of any papers related to your data.
    There will then be a link to the paper from your study's public page.
 7. Study attributes are optional tag-value pairs you can specify to add extra information or to make your study more searchable.
    For example, you could add a 'DOI' tag with your paper's DOI as the value.
