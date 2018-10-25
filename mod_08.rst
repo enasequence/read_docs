@@ -1,5 +1,5 @@
 ========================================
-Module 10: Annotated Sequence Submission
+Module 8: Annotated Sequence Submission
 ========================================
 
 | Submitting a new annotated sequence entry can be done interactively through Webin.
