@@ -1,5 +1,6 @@
+==========================
 Module 2: Register a Study
-**************************
+==========================
 
 This form is used to register a study (also referred to as a project). Studies are typically registered before any data is submitted.
 Data can be added to the study at any time. Please see `Interactive Submission Options`_ to learn how to access it. Fill it out and click 'Submit' to register your study and receive accession numbers.

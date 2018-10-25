@@ -1,5 +1,6 @@
+========================
 Module 4: Add Read Files
-************************
+========================
 
 Read files are represented in the database as run objects which point to the file location in an FTP directory.
 Runs also point to experiments, which describe the library preparation protocol and themselves point to the sample and study for the data, as described in the below image:

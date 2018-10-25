@@ -1,5 +1,6 @@
+========================================
 Module 5: Updates (Samples and Projects)
-****************************************
+========================================
 
 The interactive submission interface supports some editing of your submitted objects.
 Access these existing objects by clicking the relevant tab after logging in to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.

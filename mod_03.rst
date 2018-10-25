@@ -1,5 +1,6 @@
+===========================
 Module 3: Register a Sample
-***************************
+===========================
 
 Samples represent the source material that a sequencing library was produced from. A sample may be connected to reads,
 assemblies and various types of interpreted data. Samples add context to the data associated with them, and good sample
