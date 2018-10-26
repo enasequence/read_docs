@@ -2,7 +2,7 @@
 
 ## The Sample Object
 
-A sample object is submitted in XML format like this: 
+A sample object is submitted in XML format like this:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -78,52 +78,52 @@ You can register one or more samples at the same time by using one `<SAMPLE></SA
 
 The sample XML format is defined by the [SRA.sample.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd) XML schema.
 
-Samples can also be registered using the [Interactive Webin submission service](mod_03.html). However, you may find that 
-in some cases there is more flexibility in creating submittable XML objects yourself. 
+Samples can also be registered using the [Interactive Webin submission service](mod_03.html). However, you may find that
+in some cases there is more flexibility in creating submittable XML objects yourself.
 
 Samples represent the source material that has been sequenced. A sample may be connected to read, assembly and various
 types of interpreted data. Samples provide much of the context and value to the data that they are associated with.
 
-![ENA Data Model](images/webin_data_model_sample.png) 
+![ENA Data Model](images/webin_data_model_sample.png)
 
 Most of the sample information comes in the form of `<TAG>` and `<VALUE>` pairs that belong in `<SAMPLE_ATTRIBUTE>`
 blocks. You can have any number of `<SAMPLE_ATTRIBUTE>` blocks in your samples.
 
 Most submitters will want to use attributes that are recognised by ENA as these are better indexed for searching and
-filtering. For this purpose, it is recommended that submitters use ENA sample checklist attributes whenever possible. 
+filtering. For this purpose, it is recommended that submitters use ENA sample checklist attributes whenever possible.
 You can also use a combination of your own attributes with those recognised by ENA.
 
 ## The Sample Checklists
 
-ENA provides sample checklists which define all the mandatory and recommended attributes for specific types of samples. 
-By declaring that you would like to register your samples using a specific checklist you are enabling the samples to 
-be validated for correctness at submission time and are making it easier for other services to find and access 
+ENA provides sample checklists which define all the mandatory and recommended attributes for specific types of samples.
+By declaring that you would like to register your samples using a specific checklist you are enabling the samples to
+be validated for correctness at submission time and are making it easier for other services to find and access
 the sample attribute information.
-  
+
 ```xml
 <SAMPLE_ATTRIBUTE>
 <TAG>ENA-CHECKLIST</TAG>
 <VALUE>ERC000014</VALUE>
 </SAMPLE_ATTRIBUTE>
 ```
- 
-The sample with the above `SAMPLE_ATTRIBUTE` will be validated using the checklist `ERC000014`. The checklist is 
-defined using the `ENA-CHECKLIST` attribute. 
- 
-Note that the checklist is defined using a `SAMPLE_ATTRIBUTE` block and that the checklist defines 
+
+The sample with the above `SAMPLE_ATTRIBUTE` will be validated using the checklist `ERC000014`. The checklist is
+defined using the `ENA-CHECKLIST` attribute.
+
+Note that the checklist is defined using a `SAMPLE_ATTRIBUTE` block and that the checklist defines
 the other `SAMPLE_ATTRIBUTE` blocks.
 
-If you do not define a checklist then the samples will be validated against the ENA default checklist 
-[ERC000011](https://www.ebi.ac.uk/ena/data/view/ERC000011). This checklist has virtually no mandatory 
-fields but contains many optional attributes that can help you to annotate your samples 
+If you do not define a checklist then the samples will be validated against the ENA default checklist
+[ERC000011](https://www.ebi.ac.uk/ena/data/view/ERC000011). This checklist has virtually no mandatory
+fields but contains many optional attributes that can help you to annotate your samples
 to the highest possible standard.
 
-You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/submit/checklists). For example, the 
-checklist [ERC000014](http://www.ebi.ac.uk/ena/data/view/ERC000014) represents the 
-GSC MIxS annotation standard for human associated source samples. 
+You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/submit/checklists). For example, the
+checklist [ERC000014](http://www.ebi.ac.uk/ena/data/view/ERC000014) represents the
+GSC MIxS annotation standard for human associated source samples.
 
-The checklists are defined using XML. These XMLs are available by appending `&display=xml` 
-to the URL for retriving a specific checklist. For example, the XML for 
+The checklists are defined using XML. These XMLs are available by appending `&display=xml`
+to the URL for retriving a specific checklist. For example, the XML for
 checklist ERC000014 can be retrieved using the following URL: [http://www.ebi.ac.uk/ena/data/view/ERC000014&display=xml](http://www.ebi.ac.uk/ena/data/view/ERC000014&display=xml)
 
 ##  The Taxonomic Classification
@@ -138,15 +138,15 @@ Note the `<SAMPLE_NAME>` block from the example above:
     </SAMPLE_NAME>
 ```
 
-You can provide any one of the taxon id (`<TAXON_ID>`), scientific name (`<SCIENTIFIC_NAME>`) or common name 
-(`<COMMON_NAME>`). The other fields of the three will be added automatically when the sample is submitted. 
+You can provide any one of the taxon id (`<TAXON_ID>`), scientific name (`<SCIENTIFIC_NAME>`) or common name
+(`<COMMON_NAME>`). The other fields of the three will be added automatically when the sample is submitted.
 
 Taxon id, scientific name and common name are ways of classifying the sample organism using the NCBI taxonomy database
-terms. In this example, the sample source is environmental (`stomach metagenome`) and represents an unknown variety and quantity of organisms. 
-Note that metagenomes use specific environmental terms. 
+terms. In this example, the sample source is environmental (`stomach metagenome`) and represents an unknown variety and quantity of organisms.
+Note that metagenomes use specific environmental terms.
 
 More information about finding the correct taxonomic classification
-for your samples is available [here](tax.html).
+for your samples is available [here](faq_taxonomy.html).
 
 ## Create the Sample XML
 
@@ -171,8 +171,8 @@ Below is an example XML for submitting a sample. Change the XML by entering your
 
 ## Create the Submission XML
 
-To submit a sample or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call this file `submission.xml`. 
+To submit a sample or any other object(s), you need an accompanying submission XML in a separate file.
+Let's call this file `submission.xml`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -185,13 +185,13 @@ Let's call this file `submission.xml`.
 </SUBMISSION>
 ```
 
-The submission XML declares one or more Webin submission service actions. 
-In this case the action is `<ADD/>` which is used to submit new objects. 
+The submission XML declares one or more Webin submission service actions.
+In this case the action is `<ADD/>` which is used to submit new objects.
 
-The XMLs can be submitted programmatically, using CURL on command line or 
+The XMLs can be submitted programmatically, using CURL on command line or
 using the [Webin submissions portal](prog_11.html).
 
-## Submit the XMLs using CURL 
+## Submit the XMLs using CURL
 
 CURL is a Linux/Unix command line program which you can use to send the `sample.xml` and `submission.xml`
 to the Webin submission service.
@@ -223,22 +223,22 @@ After running the command above a receipt XML is returned. It will look like the
 
 XMLs can also be submitted interactively using the [Webin submissions portal](prog_11.html).
 Please refer to the [Webin submissions portal](prog_11.html) document for an example how
-to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
+to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ## The Receipt XML
 
-To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
+To know if the submission was successful look in the first line of the `<RECEIPT>` block.
 
-The attribute `success` will have value `true` or `false`. If the value 
-is false then the submission did not succeed. In this case check the rest of 
-the receipt for error messages and after making corrections, try the submission again. 
+The attribute `success` will have value `true` or `false`. If the value
+is false then the submission did not succeed. In this case check the rest of
+the receipt for error messages and after making corrections, try the submission again.
 
-If the success attribute is true then the submission was successful. The receipt will 
+If the success attribute is true then the submission was successful. The receipt will
 contain the accession numbers of the objects that you have submitted.
 
 ### Accession numbers in the Receipt XML
 
-Webin will report an accession number for the sample that starts with SAMEA. 
+Webin will report an accession number for the sample that starts with SAMEA.
 
 ```xml
 <SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">
@@ -247,8 +247,8 @@ Webin will report an accession number for the sample that starts with SAMEA.
 </RECEIPT>
 ```
 
-This accession number is called the BioSample accession and is typically used in journal 
-publications. The sample will also be assigned an alternative accession number that starts with 
+This accession number is called the BioSample accession and is typically used in journal
+publications. The sample will also be assigned an alternative accession number that starts with
 ERS. This accession number is called the SRA (Sequence Read Archive) sample accession.
 
 ```xml
@@ -263,16 +263,16 @@ Note the message in the receipt:
 <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 ```
 
-It is advisable to first test your submissions using the Webin test service where changes are not permanent 
-and are erased every 24 hours. 
+It is advisable to first test your submissions using the Webin test service where changes are not permanent
+and are erased every 24 hours.
 
-Once you are happy with the result of the submission you can use the CURL command again 
-but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
+Once you are happy with the result of the submission you can use the CURL command again
+but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to
 `www.ebi.ac.uk`:
 
 ```bash
 curl -u username:password -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
-Similarly, if you are using the [Webin submissions portal](prog_11.html) change the URL from 
+Similarly, if you are using the [Webin submissions portal](prog_11.html) change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
