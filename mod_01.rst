@@ -60,7 +60,7 @@ Follow the links for specific guidance on each submission activity.
 .. _Submit sequence reads and experiments: mod_04.html
 .. _uploaded your read files: upload_01.html
 .. _Submit genome assemblies: mod_06.html
-.. _Taxonomy Check/Request: tax.html
+.. _Taxonomy Check/Request: faq_taxonomy.html
 
 Metadata model
 =================
