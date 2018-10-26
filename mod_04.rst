@@ -40,9 +40,12 @@ In this step, you will register the files you uploaded so that they may be archi
 3. The 'Sample Reference Suggestions' dropdown contains the aliases of any samples you registered in the previous step.
    If you didn't register your samples this way, it will be empty and you should manually enter a sample alias in the 'Sample Reference' field.
 4. File names entered here must correspond exactly with the name of the file in your submission directory, including any subdirectories in which your file may exist.
-5. A checksum is a fingerprint of your file which will allow us to verify that it was uploaded without any corruption.
-   In Linux and Mac, you can generate this value from the command line by running the command 'md5' or 'md5sum' on the file.
-   Microsoft has a `support article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_ on performing this activity for Windows.
+5. A checksum is a 'fingerprint' of your file which will allow us to verify that it was uploaded without any corruption.
+
+   a. In Linux and Mac, you can generate this value from the command line by running the command 'md5' or 'md5sum' on the file.
+   b. Microsoft has a `support article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_ on performing this activity for Windows.
+   c. If you uploaded your files with the Webin File Uploader, a .md5 file will have been created for you and you should leave this field blank.
+
 6. If you are submitting many experiments, you may find it more convenient to download a template spreadsheet and enter your submission into this.
    Note that if you close the browser before you complete the submission, the details you have entered will be lost. A spreadsheet will help avoid this.
 7. Click the 'Upload Spreadsheet' button to upload a spreadsheet you have prepared.
