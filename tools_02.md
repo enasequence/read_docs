@@ -67,7 +67,7 @@ java -jar embl-api-validator-1.0.0..jar -r -fix -l 2 *.txt
 ## Validation Reports
 
 A summary output is shown on the console at the end of execution.
-This summary allows you to quickly seeif there were any errors in your files.
+This summary allows you to quickly see if there were any errors in your files.
 Full error reports are written to text files.
 
 Validation messages have three severities:
