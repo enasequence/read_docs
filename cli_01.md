@@ -20,7 +20,7 @@ used to validate, upload and submit files to the European Nucleotide Archive (EN
 - After all releases, we will endeavour to contact affected submitters who previously were unable to complete their submissions.
 - Minor and Major releases will be announced to ena-announce@ebi.ac.uk mailing list.
 - After Minor or Major releases, submitters will be asked to migrate to use this (or higher) version after a transition period.
-- After a Minor release, we will give at least two weeks notice for submitters to migrate to the new (or higher) version.
+- After a Minor release, we will give two weeks notice for submitters to migrate to the new (or higher) version.
 - After a Major release, we will give at least two months notice for submitters to migrate to the new (or higher) version.
 
 ## Registration
