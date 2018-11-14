@@ -8,6 +8,21 @@ service and the Webin command line submission service.
 This module gives an introduction to the Webin command line submission interface
 used to validate, upload and submit files to the European Nucleotide Archive (ENA).
 
+## Release policy
+
+- Webin-CLI uses standard three number semantic versioning.
+- Patch releases: the third digit is incremented by one after backward compatible bug fixes. For example, from 1.0.1 to 1.0.2.
+- Minor releases: the second digit is incremented by one after backward compatible new features. For example, from 1.0.1 to 1.1.0.
+- Major releases: changes that break backward compatibility result in the first digit being incremented. For example, from 1.0.1 to 2.0.0.
+- The definition of Webin-CLI backward compatibility is that there are no breaking changes to the command line usage or to the file formats.
+- All releases are made immediately after bugs have been fixed or new features have been added.
+- Releases are downloadable from: https://github.com/enasequence/webin-cli/releases.
+- After all releases, we will endeavour to contact affected submitters who previously were unable to complete their submissions.
+- Minor and Major releases will be announced to ena-announce@ebi.ac.uk mailing list.
+- After Minor or Major releases, submitters will be asked to migrate to use this (or higher) version after a transition period.
+- After a Minor release, we will give at least two weeks notice for submitters to migrate to the new (or higher) version.
+- After a Major release, we will give at least two months notice for submitters to migrate to the new (or higher) version.
+
 ## Registration
 
 If you have not submitted to Webin before please [register a submission account](reg_01.html).
