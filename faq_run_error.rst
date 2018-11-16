@@ -39,8 +39,8 @@ The Problem
 
 .. code-block:: bash
 
-	> md5sum mbr_depth_05.bam
-	594934819a1571f805ff299807431da4  mbr_depth_05.bam
+    > md5sum mbr_depth_05.bam
+    594934819a1571f805ff299807431da4  mbr_depth_05.bam
     > md5 mbr_depth_05.bam
     594934819a1571f805ff299807431da4  mbr_depth_05.bam
 
