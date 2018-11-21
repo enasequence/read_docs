@@ -87,7 +87,7 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY TYPE: 'clone or isolate' (default), 'primary metagenome', 
+- ASSEMBLY_TYPE: 'clone or isolate' (default), 'primary metagenome', 
 'binned metagenome', 'Metagenome-Assembled Genome (MAG)', 'Environmental Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
