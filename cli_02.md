@@ -14,6 +14,7 @@ A genome assembly consists of:
    - Study accession or unique name (alias)
    - Sample accession or unique name (alias)
    - Assembly program
+   - Assembly type (optional)
    - Sequencing platform
    - Minimum gap length
    - Molecule type (genomic DNA, genomic RNA or viral cRNA)
@@ -86,6 +87,8 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
+- ASSEMBLY TYPE: 'clone or isolate' (default), 'primary metagenome', 
+'binned metagenome', 'Metagenome-Assembled Genome (MAG)', 'Environmental Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
