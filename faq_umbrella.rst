@@ -66,7 +66,7 @@ When you are satisfied with the changes you have made to umbrella.xml you should
 
 .. code-block:: shell
 
-    curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+    curl -u Username:Password -F "SUBMISSION=@submission.xml" -F "PROJECT=@umbrella.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
 | You must edit the command to include your Webin account ID and password.
   You can make a practice submission to our test server before your final submission if are unsure of the process.
