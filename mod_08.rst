@@ -40,7 +40,7 @@ Submitting Via Spreadsheet
 Non-Spreadsheet Submission
 ==========================
 
-| Submitting without a spreadsheet can be convenient if you have a small number of sequences (>3) to submit.
+| Submitting without a spreadsheet can be convenient if you have a small number of sequences (<3) to submit.
 
 
 Step 1: Select and Customise a Checklist
