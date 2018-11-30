@@ -68,6 +68,9 @@ The following files are mandatory:
 - If there are chromosomes then 1 chromosome list file must be provided.
 - If there are unlocalised sequences then 1 unlocalised list file must be provided. 
 
+Please note if the assembly type is `primary metagenome` or `binned metagenome` then the submission may only consist
+of contigs submitted as a single Fasta file.
+
 ### Sequence names
 
 Sequences must have a unique name within the submission that is provided in the fasta, AGP or flat files. 
@@ -87,14 +90,21 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY_TYPE: 'clone or isolate' (default), 'primary metagenome', 
-'binned metagenome', 'Metagenome-Assembled Genome (MAG)', 'Environmental Single-Cell Amplified Genome (SAG)'
+- ASSEMBLY_TYPE: See below for supported assembly types
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
 
+#### Assembly types
+
+- clone or isolate (default): An assembly of reads from an isolated cultured organism, tissues, cells or a cell line.
+- primary metagenome: An original metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
+- binned metagenome: A set of contigs drawn from primary or unbinned metagenomes grouped into a single-taxon set.
+- Metagenome-Assembled Genome (MAG): A single-taxon assembly based on a binned metagenome asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
+- Environmental Single-Cell Amplified Genome (SAG): A genome assembly from amplified environmental sampled single-cell DNA.
+                                                       
 Please see further below for validation rules affecting some of these fields.
 
 The following file name fields are supported in the manifest file:
