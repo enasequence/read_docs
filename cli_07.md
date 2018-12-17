@@ -73,7 +73,7 @@ OR
 
 "This sample represents a MAG from the metagenomic run ERRXXXXX"
 
-If you would like to know more about why and how we use this additional information, you can find this [here](faq_taxonomy.html#metagenomic_sample_rules).
+If you would like to know more about why and how we use this additional information, you can find this [here](faq_metagenomes.html).
 
 The methods for submitting these studies follow the same process as any other study/sample submission. 
 Follow the links for more information.
