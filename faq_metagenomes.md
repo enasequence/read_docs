@@ -1,6 +1,6 @@
-# Rules for Submitting Metagenomic Sample
+# Rules for Submitting Metagenomic Samples
 
-Metagenomic studies involve assembling sequencing data sampled from an entire biomeall the way down to the individual species that were living in thatenvironment. As a result, there are some rules to regulate the way these samples are submitted to make the level of the assembly and original source of data as clear as possible.
+Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are some rules to regulate the way these samples are submitted to make the level of the assembly and original source of data as clear as possible.
 
 The image below shows the different levels of metagenomic studies.
 
@@ -81,24 +81,21 @@ Assembly quality : Single contiguous sequence without gaps or ambiguities with a
 
 **High-quality draft (SAG/MAG)**
 
-Assembly quality : Multiple fragments where gaps span repetitive regions. Presence of the 23S, 
-16S, and 5S rRNA genes and at least 18 tRNAs.
+Assembly quality : Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S, and 5S rRNA genes and at least 18 tRNAs.
 Completion : >90%
 Contamination : <5%
 
 
 **Medium-quality draft (SAG/MAG)**
 
-Assembly quality : Many fragments with little to no review of assembly other than reporting of 
-standard assembly statistics.
+Assembly quality : Many fragments with little to no review of assembly other than reporting of standard assembly statistics.
 Completion : ≥50%
 Contamination : <10%
 
 
 **Low-quality draft (SAG/MAG)**
 
-Assembly quality : Many fragments with little to no review of assembly other than reporting of 
-standard assembly statistics.
+Assembly quality : Many fragments with little to no review of assembly other than reporting of standard assembly statistics.
 Completion : <50%
 Contamination : <10%
 
