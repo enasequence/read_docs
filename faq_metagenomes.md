@@ -43,9 +43,9 @@ These attributes ensure that there is enough context to your **binned** sample t
 
 ## MAG or SAG assembly
 
-MAG or SAG assemblies involve assembling species specific groups of contigs to form a metagenome assembled genome of that species, originally derived from an environmental source. As the species is known and all the MAGs or SAGs will be assembled seperately, they should each have a species specific sample to represent the taxonomy of the assembled contigs.
+MAG or SAG assemblies involve assembling species specific groups of contigs to form a metagenome assembled genome of that species, originally derived from an environmental source. As the taxonomy is known and all the MAGs or SAGs will be assembled seperately, they should each be registered with as specific taxonomy as possible to best describe each assembly.
 
-This is why a MAG or SAG should be associated with a **species** sample. This also requires some extra rules so that the data can be correctly linked with the original environmental source (either the raw data runs or the **environmental** sample).
+This is why a MAG or SAG should be associated with a **MAG/SAG** sample. This also requires some extra rules so that the data can be correctly linked with the original environmental source (either the raw data runs or the **environmental** sample).
 
 When registering a MAG sample, please use the provided MIMAGs checklist, this will guide you through which attributes are mandatory to register a MAG.
 You will notice "sample derived from", "isolation source" and "metagenome source" attributes which explain the context of the data. Please see binned assemblies above for an explanation of these.
