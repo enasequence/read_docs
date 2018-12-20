@@ -11,7 +11,7 @@ A metagenome assembly consists of:
    - Study accession or unique name (alias)
    - **Environmetal** Sample accession or unique name (alias)
    - **Binned** Sample accession or unique name (alias) *for binned assemblies*
-   - **Species** Sample accession or unique name (alias) *for MAGs/SAGs*
+   - **MAG/SAG** Sample accession or unique name (alias) *for MAGs/SAGs*
    - Assembly program
    - Sequencing platform
    - Minimum gap length
@@ -59,11 +59,11 @@ be as specific in taxonomy as it can be and follow these additional [sample rule
 
 ### MAG or SAG assembly
 
-If you are submitting MAGs/SAGs then you will need to submit an additional **species** sample 
-for each assembly. This should be species level in taxonomy. MAG samples should use the specific 
+If you are submitting MAGs/SAGs then you will need to submit an additional **MAG/SAG** sample 
+for each assembly. This should be as speicific in taxonomy as it can be and use the specific 
 MIMAGs checklist. When registering a SAG sample, please contact datasubs@ebi.ac.uk for assistance.
 
-Please make sure these **species** samples correctly reference the original sample the data was 
+Please make sure these **MAG/SAG** samples correctly reference the original sample the data was 
 extracted from within the checklist using the mandatory "Sample derived from" attribute. You should also
 reference the **environmental** sample in the description as one of the following:
 
@@ -123,7 +123,7 @@ This assembly level only requires information on the sequences.
 ### MAG/SAG assembly
 
 This assembly level is for an assembly associated with a single species level taxon generated from a
-metagenomic sample/ single cell amplification sample. It should be submitted associated with a **species**
+metagenomic sample/ single cell amplification sample. It should be submitted associated with a **MAG/SAG**
 sample.
 
 Consists of the following files:
