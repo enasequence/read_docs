@@ -340,6 +340,25 @@ until 1st of January 2019 after which the object will become public again:
 </SUBMISSION> 
 ``` 
 
+### Submission XML: request a receipt XML
+
+The `RECEIPT` action can be used to request a receipt XML issued as a result of an `ADD` action
+that contains all the issued accession numbers. This is expecially useful in cases where the 
+submission request times out before it has as completed. The submission process will continue
+neverthless and the issued accession numbers can be later requested using the `RECEIPT` action. 
+
+```
+SUBMISSION_SET>
+    <SUBMISSION>
+        <ACTIONS>
+            <ACTION>
+                <RECEIPT target="submission alias or accessions"/>
+           </ACTION>          
+       </ACTIONS>
+    </SUBMISSION>
+</SUBMISSION_SET>
+```
+
 ### Submission actions without submission XML
 
 Some submission actions can be defined using the `ACTION` POST parameter. 
