@@ -8,6 +8,5 @@ Tips and FAQs
    faq_taxonomy
    faq_run_error
    faq_sample_error
-   faq_umbrella
    faq_release
    faq_metagenomes
