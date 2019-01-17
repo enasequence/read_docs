@@ -12,6 +12,7 @@ A transcriptome assembly consists of:
    - Sample accession or unique name (alias)
    - Assembly program
    - Sequencing platform
+   - Free text description of the transcriptome assembly (optional)   
 - Sequences
 - Functional annotation (optional)
 
@@ -75,6 +76,7 @@ The following metadata fields are supported in the manifest file:
 - ASSEMBLYNAME: The unique assembly name.
 - PROGRAM: The assembly program.
 - PLATFORM: The sequencing platform.
+- DESCRIPTION: Free text description of the transcriptome assembly (optional)
 
 The following file name fields are supported in the manifest file:
 

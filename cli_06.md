@@ -16,7 +16,8 @@ A sequence read submission consists of:
    - Library source
    - Library selection
    - Library strategy
-   - Insert size for paired reads (optional)
+   - Free text library description (optional)   
+   - Insert size for paired reads (optional)   
 - Read data file(s)
    - BAM file
    - CRAM file
@@ -65,6 +66,7 @@ The following metadata fields are supported in the manifest file:
 - LIBRARY_SOURCE: [See permitted values](#source)
 - LIBRARY_SELECTION: [See permitted values](#selection)
 - LIBRARY_STRATEGY: [See permitted values](#strategy)
+- DESCRIPTION: free text library description (optional) 
 
 The following file name fields are supported in the manifest file:
 

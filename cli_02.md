@@ -19,6 +19,7 @@ A genome assembly consists of:
    - Minimum gap length
    - Molecule type (genomic DNA, genomic RNA or viral cRNA)
    - Coverage
+   - Free text description of the genome assembly (optional)
 - Contig sequences (if any)
 - Scaffold sequences (if any)
 - Chromosome sequences (if any)
@@ -142,6 +143,7 @@ The following metadata fields are supported in the manifest file:
 - PLATFORM: The sequencing platform
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
+- DESCRIPTION: Free text description of the genome assembly (optional)
                                                    
 Please see further below for validation rules affecting some of these fields.
 

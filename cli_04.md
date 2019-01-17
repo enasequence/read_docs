@@ -16,6 +16,7 @@ An annotated sequence submission consists of:
 - General sequence information
    - Study accession or unique name (alias)
    - Unique name for the submission
+   - Free text description of the set of submitted sequences (optional)
 - Sequences
 - Functional annotation
 
@@ -53,6 +54,7 @@ The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
 - NAME: Unique name for the submission
+- DESCRIPTION: Free text description of the set of submitted sequences (optional)
 
 The following file name fields are supported in the manifest file:
 
