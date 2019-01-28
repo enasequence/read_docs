@@ -27,6 +27,10 @@ The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
 <meta_01.html>`_.
 
+
+--------------
+
+
 +---------------------------------+-------------+--------------+-----------+
 |                                 | Interactive | Programmatic | Webin-CLI |
 +---------------------------------+-------------+--------------+-----------+
@@ -68,19 +72,19 @@ It is also recommended that you familiarise yourself with our `metadata model
 +--------------------------+-------------+--------------+-----------+
 |                          | Interactive | Programmatic | Webin-CLI |
 +--------------------------+-------------+--------------+-----------+
-| Study                    |      ✅      |       ✅     |     ❌    |
+| Study                    |      Y      |       Y      |     N     |
 +--------------------------+-------------+--------------+-----------+
-| Sample                   |      ✅      |       ✅     |     ❌    |
+| Sample                   |      Y      |       Y      |     N     |
 +--------------------------+-------------+--------------+-----------+
-| Read Data                |      ✅      |       ✅     |     ❌    |
+| Read Data                |      Y      |       Y      |     N     |
 +--------------------------+-------------+--------------+-----------+
-| Assembly | Genome        |      ❌      |       ❌     |     ✅    |
+| Assembly | Genome        |      N      |       N      |     Y     |
 |          +---------------+-------------+--------------+-----------+
-|          | Transcriptome |      ❌      |       ❌     |     ✅    |
+|          | Transcriptome |      N      |       N      |     Y     |
 |          +---------------+-------------+--------------+-----------+
-|          | Template      |      ❌      |       ❌     |     ✅    |
+|          | Template      |      N      |       N      |     Y     |
 +----------+---------------+-------------+--------------+-----------+
-| Other Analyses           |      ❌      |       ✅     |     ❌    |
+| Other Analyses           |      N      |       Y      |     N     |
 +--------------------------+-------------+--------------+-----------+
 
 
