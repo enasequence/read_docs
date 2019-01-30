@@ -156,7 +156,7 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLYTYPE: 'primary metagenome', 'binned metagenome', 'Metagenome-Assembled Genome (MAG)', 
+- ASSEMBLY_TYPE: 'primary metagenome', 'binned metagenome', 'Metagenome-Assembled Genome (MAG)', 
 'Environmetal Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
@@ -178,7 +178,7 @@ provided in one fasta file:
 STUDY   TODO
 SAMPLE   TODO
 ASSEMBLYNAME   TODO
-ASSEMBLYTYPE   TODO
+ASSEMBLY_TYPE   TODO
 COVERAGE   TODO
 PROGRAM   TODO
 PLATFORM   TODO
