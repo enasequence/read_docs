@@ -31,8 +31,12 @@ The following standard file formats are accepted and transformed into Fastq prod
 
 ### CRAM format
 
-Submitted CRAM files must be readable with [Samtools](http://www.htslib.org/)
-and the reference sequences must exist in the CRAM Reference Registry.
+Each submitted CRAM file must:
+- be compatible with the [CRAM Format Specification](https://samtools.github.io/hts-specs/CRAMv3.pdf)
+- be readable with [Samtools](http://www.htslib.org/)
+- contain only reference sequences that exist in the CRAM Reference Registry
+- be submitted as a separate run
+- use the .cram file name suffix (e.g. 'a.cram')
 
 CRAM file names are required to end up with the .cram suffix (e.g. 'a.cram').
 
