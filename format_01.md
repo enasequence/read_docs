@@ -52,7 +52,7 @@ Each submitted BAM file must:
 - be submitted as a separate run
 - use the .bam file name suffix (e.g. 'a.bam')
 
-### PacBio BAM files
+#### PacBio BAM files
 
 We support the submission of the following types of PacBio BAM files:
 - subread BAM files (*.subreads.bam)
