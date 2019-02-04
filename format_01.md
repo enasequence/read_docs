@@ -42,9 +42,17 @@ start with the CRAM file name and end up with the .crai suffix (e.g. 'a.cram.cra
 
 ### BAM format
 
-Submitted BAM files must be readable with [Samtools](http://www.htslib.org/).
+Each submitted BAM file must:
+- be compatible with the [SAM/BAM Format Specification](http://samtools.github.io/hts-specs/SAMv1.pdf)
+- be readable with [Samtools](http://www.htslib.org/)
+- be submitted as a separate run
+- use the .bam file name suffix (e.g. 'a.bam')
 
-BAM file names are required to end up with the .bam suffix (e.g. 'a.bam').
+### PacBio BAM files
+
+We support the submission of the following types of PacBio BAM files:
+- subread BAM files (*.subreads.bam)
+- CCS read BAM files (*.ccs.bam)
 
 ### Fastq format
 
