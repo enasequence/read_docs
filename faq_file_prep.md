@@ -1,6 +1,8 @@
 # Preparing a File for Upload
 
-Most files submitted to the ENA need to be transferred to the ENA server in a process that is separate from the submission itself. When we talk about submissions we are usually talking about registering the metadata- the information about the file and about where it comes from. This metadata usually gets registered in the form of objects. For example a sample object represents the physical source material that is sampled for eventual sequencing. The file itself can be the result of sequencing the sample, such as the output of the sequencing machine. Having a separate transfer step means that files can be large and handled separately without interrupting or delaying the submission/registration steps. When data files are uploaded to the ENA ftp server the submission is not complete. There is usually more to come by way of this metadata registration. For instance, a read file submission requires project, sample, experiment, and run objects, while a whole genome FASTA file needs a sample and a project object. An annotated sequence submission requires at the very least a project object to belong to.
+For submissions using the interactive or RESTful submission services, it is necessary to transfer data files to ENA, after which they are formally submitted. Guidance on how to do this is given below.
+
+Please note that if you are submitting via Webin-CLI, you do not need to perform this upload step as it is handled for you by the program.
 
 Most files uploaded to the ENA ftp server need to be
 1. Compressed
@@ -8,29 +10,29 @@ Most files uploaded to the ENA ftp server need to be
 
 ## Step 1: Compress the File Using gzip or bzip2
 
-Files that are in a human readable text format (FastQ, FastA, VCF, tsv, csv ...) are compressed before uploading them to the ENA ftp server. Files that are not in a human readable text format like BAM, CRAM, SFF are already in a format that is efficient for transferring so additional compression is not required (the file will fail to validate if it is wrongly compressed). Also, with the exception of Oxford Nanopore files, do not tar archive any collections of files - each should be uploaded separately.
+Files that are in a human readable text format (FastQ, FastA, VCF, tsv, csv ...) are compressed before uploading them to the ENA FTP server. Files that are not in a human readable text format like BAM, CRAM, SFF are already in a format that is efficient for transferring so additional compression is not required (the file will fail to validate if it is wrongly compressed). Also, with the exception of Oxford Nanopore FAST5 files, do not tar archive any collections of files - each should be uploaded separately.
 
-If you are unsure about the format that your files should be in you can check [here](http://www.ebi.ac.uk/ena/submit/read-file-formats#standard_formats) for standard file formats and [here](http://www.ebi.ac.uk/ena/submit/read-file-formats#platform_specific_formats)  for platform specific formats.
+If you are unsure about the format that your files should be in, please view our [read data formats](https://ena-docs.readthedocs.io/en/latest/format_01.html) page. This includes advice on general read data formats, as well as information specific to platforms or sequencing applications.
 
-Tools used for compressing files are 3rd party so you can find out more about how to do this from outside the ENA (a simple web search should be sufficient). However here is a basic example of compressing a file from within a Mac operating system using the Terminal application.
+Tools for compressing files in gzip or bzip2 format are included in Linux and Mac distributions. Below is a simple example of the appropriate syntax for compressing a file named 'eg_01.fq':
 
 ```bash
-user_01$ ls *fq
-eg_01.fq
 user_01$ gzip eg_01.fq
-user_01$ ls *gz
-eg_01.fq.gz
-user_01$ gunzip eg_01.fq.gz
-user_01$ ls *fq
-eg_01.fq
-user_01$ bzip2 eg_01.fq
-user_01$ ls *bz2
-eg_01.fq.bz2
-user_01$
-
 ```
 
-In the above example the user has listed all files in the current directory that ends in 'fq' (there is one called 'eg_01.fq'). The user then compresses the file with 'gzip' command, then reverts it back to uncompressed form with 'gunzip' command. Next the user compresses the file with 'bzip2' command. Note that files that are compressed end in '.gz' or '.bz2' depending on what tool is used.
+The result of this would be a file named 'eg_01.fq.gz'. Files can always be decompressed later:
+
+```bash
+user_01$ gunzip eg_01.fq.gz
+```
+
+The `-k` flag can be used to retain the original file. This results in two files: the original uncompressed file and a compressed copy:
+
+```bash
+user_01$ gzip -k eg_01.fq.gz
+```
+
+For Windows users, 3rd party tools are available to accomplish this. The standard compression type used in Windows, ZIP, is not accepted in ENA submissions.
 
 ## Step 2: Calculate the MD5 Checksum for the File
 
