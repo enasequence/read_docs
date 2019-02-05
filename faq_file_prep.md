@@ -1,16 +1,18 @@
 # Preparing a File for Upload
 
-For submissions using the interactive or RESTful submission services, it is necessary to transfer data files to ENA, after which they are formally submitted. Guidance on how to do this is given below.
+For submissions using the interactive or RESTful submission services, it is necessary to transfer data files to ENA, after which you can formally submit them. Guidance on how to do this is given below.
 
 Please note that if you are submitting via Webin-CLI, you do not need to perform this upload step as it is handled for you by the program.
 
-Most files uploaded to the ENA ftp server need to be
+Most files uploaded to the ENA FTP server need to be:
 1. Compressed
 2. Have their MD5 checksum registered
 
 ## Step 1: Compress the File Using gzip or bzip2
 
-Files that are in a human readable text format (FastQ, FastA, VCF, tsv, csv ...) are compressed before uploading them to the ENA FTP server. Files that are not in a human readable text format like BAM, CRAM, SFF are already in a format that is efficient for transferring so additional compression is not required (the file will fail to validate if it is wrongly compressed). Also, with the exception of Oxford Nanopore FAST5 files, do not tar archive any collections of files - each should be uploaded separately.
+Files that are in a human readable text format (FastQ, FastA, VCF, tsv, csv ...) must be compressed before they are uploaded to the ENA FTP server. 
+Files that are not in a human readable text format like BAM, CRAM, SFF are already in a format that is efficient for transferring so additional compression is not required and should not be used.
+With the exception of Oxford Nanopore FAST5 files, do not tar archive any collections of files - each should be uploaded separately.
 
 If you are unsure about the format that your files should be in, please view our [read data formats](https://ena-docs.readthedocs.io/en/latest/format_01.html) page. This includes advice on general read data formats, as well as information specific to platforms or sequencing applications.
 
@@ -36,19 +38,30 @@ For Windows users, 3rd party tools are available to accomplish this. The standar
 
 ## Step 2: Calculate the MD5 Checksum for the File
 
-Md5 is a hash function that can be done on any file to create a 32 character string that is unique to that file ([see](https://en.wikipedia.org/wiki/MD5) the Wikipedia page on MD5). It is a bit like a fingerprint for the file. If the contents of the file change in any way the MD5 checksum will change as well. The file name *can* change without affecting the MD5 checksum because the calculation is done on the contents of the file only. The idea is that when you transfer your large file to us it may not get transferred 100%. If you tell us the MD5 checksum of the file that you have before it is uploaded and then we calculate the checksum of the file that has been uploaded to us we can tell if the upload was successful. If the checksum we calculate matches the one you provided then the transfer was a success.
+MD5 is a hash function that can be done on any file to create a 32 character string that is unique to that file. 
+It is a bit like a fingerprint for the file. If the contents of the file change in any way the MD5 checksum will change as well.
+The file name *can* change without affecting the MD5 checksum because the calculation is done on the contents of the file only. 
+We ask that users provide the MD5 value for their files so that we can recalculate it on a file we receive. This allows us to be sure the file has been uploaded in its entirety.
 
-Hash functions are a common way of testing file identity and integrity so you can find out more about how to do this from outside the ENA (a simple web search should be sufficient). However here is a basic example of calculating the checksum for a file called 'eg_01.fq.bz2' using the Terminal application within the Mac operating system.
+Functions for calculating MD5 value are included with Linux and Mac distributions. See below for an example of how this may be done:
 
 ```bash
-user_01$ md5 eg_01.fq.bz2
+user_01$ md5 eg_01.fq.gz
 MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
-user_01$ md5 eg_01.fq.bz2 > eg_01.fq.bz2.md5
-user_01$ cat eg_01.fq.bz2.md5
+user_01$ md5 eg_01.fq.gz > eg_01.fq.gz.md5
+```
+
+Note that the MD5 value for this file is `74f085a6f3dd8b2877b89fcb592c7f5c`. 
+The second command in the above box generates no output, because the user directs the output to a file with the same name as the compressed FASTQ file but with '.md5' appended.
+Creating and uploading a .md5 file is one way you can register your file's MD5 value.
+Sometimes the correct command is 'md5sum' instead of 'md5':
+
+```bash
+user_01$ md5sum eg_01.fq.gz
 MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
 ```
 
-In the above example the user uses command 'md5' to calculate the checksum for the file. In a Linux operating system this is equivalent to 'md5sum' command. Then the user does it again, but redirects the output to a file called 'eg_01.fq.bz2.md5'. Finally the user checks the contents of the new file. This is an md5 file and can be used to register the MD5 checksum of the original file with ENA.
+For Windows users, 3rd party tools can be found to carry out these checks.
 
 ### Registering the MD5 Checksum with ENA
 
