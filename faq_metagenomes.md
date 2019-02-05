@@ -14,7 +14,7 @@ This is why a primary assembly should be associated with the **environmental** s
 
 ## Binned metagenome assembly
 
-Binned assemblies involve seperating this assembled contig set into seperate taxonomically related groups.
+Binned assemblies involve separating this assembled contig set into separate taxonomically related groups.
 This means that, by associating your data with the same **environmental** sample, you will lose the  taxonomic information that describes these bins.
 
 This is why a binned assembly should be associated with a new **binned** sample. This requires some extra rules so the data can be correctly associated with the original environmental source (either the raw data runs or the **environmental** sample they were assembled from).

@@ -5,8 +5,8 @@
 Genome assemblies can be submitted to the European Nucleotide Archive (ENA) 
 using the [Webin command line submission interface](cli_01.html) with `-context genome` option. 
 
-As Metagenomic assemblies follow slightly different rules, please submit then using 
-these [guidelines](cli_07.html).
+As Metagenomic assemblies follow slightly different rules, please submit
+them following these [guidelines](cli_07.html).
 
 Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons, bacteriophages, prokaryotic and eukaryotic genomes.
  
@@ -14,6 +14,8 @@ A genome assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
    - Sample accession or unique name (alias)
+   - Assembly name
+   - Assembly type (optional)
    - Assembly program
    - Sequencing platform
    - Minimum gap length
@@ -137,7 +139,7 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY_TYPE: 'clone or isolate' for genome assemblies
+- ASSEMBLY_TYPE: 'clone or isolate' (default), ''primary metagenome', 'binned metagenome', 'Metagenome-Assembled Genome (MAG)','Environmetal Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
@@ -169,11 +171,23 @@ PLATFORM   TODO
 MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
 FASTA   genome.fasta.gz
-``` 
+```
 
 ### Other files
 
 Other genome assembly data files are described in [Genome Assembly Data Formats](format_02.html). 
+
+### Assembly types
+
+The following assembly types are supported:
+- clone or isolate (default): An assembly of reads from an isolated cultured organism, tissues, cells or a cell line.
+- primary metagenome: An original metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
+- binned metagenome: A set of contigs drawn from primary or unbinned metagenomes grouped into a single-taxon set.
+- Metagenome-Assembled Genome (MAG): A single-taxon assembly based on a binned metagenome asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
+- Environmental Single-Cell Amplified Genome (SAG): A genome assembly from amplified environmental sampled single-cell DNA.
+
+As Metagenomic assemblies follow slightly different rules, please submit
+them following these [guidelines](cli_07.html).
 
 ## Stage 3: Validate and submit the files
 
