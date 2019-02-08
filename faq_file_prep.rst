@@ -22,21 +22,22 @@ If you are unsure about the format that your files should be in, please view our
 
 Tools for compressing files in gzip or bzip2 format are included in Linux and Mac distributions. Below is a simple example of the appropriate syntax for compressing a file named 'eg_01.fq':
 
-```bash
-user_01$ gzip eg_01.fq
-```
+.. code_block:: bash
+
+    user_01$ gzip eg_01.fq
+
 
 The result of this would be a file named 'eg_01.fq.gz'. Files can always be decompressed later:
 
-```bash
-user_01$ gunzip eg_01.fq.gz
-```
+.. code_block:: bash
+    user_01$ gunzip eg_01.fq.gz
+
 
 The `-k` flag can be used to retain the original file. This results in two files: the original uncompressed file and a compressed copy:
 
-```bash
-user_01$ gzip -k eg_01.fq.gz
-```
+.. code_block:: bash
+    user_01$ gzip -k eg_01.fq.gz
+
 
 For Windows users, 3rd party tools are available to accomplish this. The standard compression type used in Windows, ZIP, is not accepted in ENA submissions.
 
@@ -51,21 +52,23 @@ We ask that users provide the MD5 value for their files so that we can recalcula
 
 Functions for calculating MD5 value are included with Linux and Mac distributions. See below for an example of how this may be done:
 
-```bash
-user_01$ md5 eg_01.fq.gz
-MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
-user_01$ md5 eg_01.fq.gz > eg_01.fq.gz.md5
-```
+.. code_block:: bash
+
+    user_01$ md5 eg_01.fq.gz
+    MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
+    user_01$ md5 eg_01.fq.gz > eg_01.fq.gz.md5
+
 
 Note that the MD5 value for this file is `74f085a6f3dd8b2877b89fcb592c7f5c`.
 The second command in the above box generates no output, because the user directs the output to a file with the same name as the compressed FASTQ file but with '.md5' appended.
 Creating and uploading a .md5 file is one way you can register your file's MD5 value.
 Sometimes the correct command is 'md5sum' instead of 'md5':
 
-```bash
-user_01$ md5sum eg_01.fq.gz
-MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
-```
+.. code_block:: bash
+
+    user_01$ md5sum eg_01.fq.gz
+    MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
+
 
 For Windows users, 3rd party tools can be found to carry out these checks.
 
@@ -73,9 +76,9 @@ For Windows users, 3rd party tools can be found to carry out these checks.
 Registering The MD5 Checksum With ENA
 -------------------------------------
 
-In the example above the data file to be submitted is called 'eg_01.fq.bz2'
-It is a compressed version on the original 'file eg_01.fq'. Compressing large files is advantageous because it takes less time to transfer them and this increases the likelihood of a complete transfer without corruption.
-The MD5 checksum of file 'eg_01.fq.bz2' is contained in file 'eg_01.fq.bz2.md5'. ENA requires the checksum that you have calculated so that we can compare it to the one that we calculate once the file is on our ftp server. So you can upload this **checksum file** in addition to the data file and our system will find it. As long as you abide by the naming convention XXX.md5 where XXX is the name of the data file and XXX.md5 is a text file containing the MD5 checksum ENA will understand.
+In the example above the data file to be submitted is called ``eg_01.fq.bz2``
+It is a compressed version on the original ``file eg_01.fq``. Compressing large files is advantageous because it takes less time to transfer them and this increases the likelihood of a complete transfer without corruption.
+The MD5 checksum of file ``eg_01.fq.bz2`` is contained in file ``eg_01.fq.bz2.md5``. ENA requires the checksum that you have calculated so that we can compare it to the one that we calculate once the file is on our ftp server. So you can upload this **checksum file** in addition to the data file and our system will find it. As long as you abide by the naming convention XXX.md5 where XXX is the name of the data file and XXX.md5 is a text file containing the MD5 checksum ENA will understand.
 
 This is not the only way to register the checksum for a data file. When you come to submit the uploaded data file you will find that you can include the 32 character checksum string in with the submission metadata. If you do include the checksums in with the metadata at submission time then you do not have to accompany each data file with an md5 file at upload time. Also note that the ENA file uploader (one of the [upload options](upload_01.html) available) will automatically create an MD5 file for every data file that it uploads and it will deposit this MD5 file (using the naming convention discussed) along with the data file on the ftp server. That means that you do not need to provide MD5 checksums in the metadata at submission time if you have used the ENA file uploader.
 
@@ -98,28 +101,28 @@ This is the final step before the submission. Instructions for this are well det
 
 Remember to upload the checksum file in addition to the data file unless you are going to register the checksum at submission time or you are using the ENA file uploader instead. Here is a basic example of using FTP to upload a data file called 'eg_01.fq.bz2' and its md5 file 'eg_01.fq.bz2.md5'. The example is using the Terminal application in the Mac operating system. See above link for more detailed instructions.
 
-```
-user_01$ ftp webin.ebi.ac.uk
-Connected to hh-webin.ebi.ac.uk.
-220 (vsFTPd 2.2.2)
-Name (webin.ebi.ac.uk:user_01): Webin-XXX
-331 Please specify the password.
-Password:
-230 Login successful.
-Remote system type is UNIX.
-Using binary mode to transfer files.
-ftp> mput eg_01.fq.bz2
-229 Entering Extended Passive Mode (|||42382|).
-150 Ok to send data.
-100% |********************************************************************************************************************************|    51       25.65 KiB/s    00:00 ETA
-226 Transfer complete.
-50000 bytes sent in 05:00 (1.57 KiB/s)
-ftp> mput eg_01.fq.bz2.md5
-229 Entering Extended Passive Mode (|||41642|).
-150 Ok to send data.
-100% |********************************************************************************************************************************|    54       48.20 KiB/s    00:00 ETA
-226 Transfer complete.
-54 bytes sent in 00:00 (1.92 KiB/s)
-ftp> bye
-221 Goodbye.
-```
+.. code_block:: bash
+
+    user_01$ ftp webin.ebi.ac.uk
+    Connected to hh-webin.ebi.ac.uk.
+    220 (vsFTPd 2.2.2)
+    Name (webin.ebi.ac.uk:user_01): Webin-XXX
+    331 Please specify the password.
+    Password:
+    230 Login successful.
+    Remote system type is UNIX.
+    Using binary mode to transfer files.
+    ftp> mput eg_01.fq.bz2
+    229 Entering Extended Passive Mode (|||42382|).
+    150 Ok to send data.
+    100% |********************************************************************************************************************************|    51       25.65 KiB/s    00:00 ETA
+    226 Transfer complete.
+    50000 bytes sent in 05:00 (1.57 KiB/s)
+    ftp> mput eg_01.fq.bz2.md5
+    229 Entering Extended Passive Mode (|||41642|).
+    150 Ok to send data.
+    100% |********************************************************************************************************************************|    54       48.20 KiB/s    00:00 ETA
+    226 Transfer complete.
+    54 bytes sent in 00:00 (1.92 KiB/s)
+    ftp> bye
+    221 Goodbye.
