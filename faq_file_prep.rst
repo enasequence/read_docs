@@ -18,7 +18,7 @@ Files that are in a human readable text format (FastQ, FastA, VCF, tsv, csv ...)
 Files that are not in a human readable text format like BAM, CRAM, SFF are already in a format that is efficient for transferring so additional compression is not required and should not be used.
 With the exception of Oxford Nanopore FAST5 files, do not tar archive any collections of files - each should be uploaded separately.
 
-If you are unsure about the format that your files should be in, please view our [read data formats](https://ena-docs.readthedocs.io/en/latest/format_01.html) page. This includes advice on general read data formats, as well as information specific to platforms or sequencing applications.
+If you are unsure about the format that your files should be in, please view our `read data formats <https://ena-docs.readthedocs.io/en/latest/format_01.html>`_ page. This includes advice on general read data formats, as well as information specific to platforms or sequencing applications.
 
 Tools for compressing files in gzip or bzip2 format are included in Linux and Mac distributions. Below is a simple example of the appropriate syntax for compressing a file named 'eg_01.fq':
 
@@ -59,7 +59,7 @@ Functions for calculating MD5 value are included with Linux and Mac distribution
     user_01$ md5 eg_01.fq.gz > eg_01.fq.gz.md5
 
 
-Note that the MD5 value for this file is `74f085a6f3dd8b2877b89fcb592c7f5c`.
+Note that the MD5 value for this file is ``74f085a6f3dd8b2877b89fcb592c7f5c``.
 The second command in the above box generates no output, because the user directs the output to a file with the same name as the compressed FASTQ file but with '.md5' appended.
 Creating and uploading a .md5 file is one way you can register your file's MD5 value.
 Sometimes the correct command is 'md5sum' instead of 'md5':
