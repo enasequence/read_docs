@@ -57,8 +57,18 @@ done using your Webin submission account name and password.
 Your username resembles 'Webin-XXXXX'. Register an account or reset your
 password at the [Webin login page](https://www.ebi.ac.uk/ena/submit/sra/#home).
 
+There are a number of ways to accomplish the upload, detailed below:
 
-General instructions for uploading files using a FTP client
+- `General Instructions For Uploading Files Using A FTP Client`_
+- `Using FTP Command Line Client On Linux/Mac`_
+- `Using FTP Command Line Client On Windows`_
+- `Using FileZilla On Windows`_
+- `Using Aspera ascp Command Line Program`_
+- `Using Webin File Uploader`_
+- `Using Windows File Explorer`_
+
+
+General Instructions For Uploading Files Using A FTP Client
 -----------------------------------------------------------
 
 1. Use your favourite ftp client. For example, `lftp` is a popular choice for
@@ -69,7 +79,7 @@ linux and Mac users.
 5. `Upload` files to your private Webin upload area.
 
 
-Using Ftp command line client on Linux/Mac
+Using FTP Command Line Client On Linux/Mac
 ------------------------------------------
 
 1. Open a terminal and type `ftp webin.ebi.ac.uk`.
@@ -82,7 +92,7 @@ Using Ftp command line client on Linux/Mac
 7. Use `bye` command to exit the ftp client.
 
 
-Using Ftp command line client on Windows
+Using FTP Command Line Client On Windows
 ----------------------------------------
 
 1. Use FTP command line client on Windows
@@ -99,7 +109,7 @@ Using Ftp command line client on Windows
 11. Use `exit` command to exit the command line interpreter.
 
 
-Using FileZilla on Windows
+Using FileZilla On Windows
 --------------------------
 
 1. Download and install [FileZilla](https://filezilla-project.org/).
@@ -117,7 +127,7 @@ Using FileZilla on Windows
 9. Once your transfer is successful, close the application.
 
 
-Using Aspera ascp command line program
+Using Aspera ascp Command Line Program
 --------------------------------------
 
 Aspera is a commercial file transfer protocol that may provide better transfer
@@ -206,8 +216,8 @@ Now select the `Open` button. This will launch the the Webin File Uploader
 application.
 
 
-Using Windows 7 Explorer
-------------------------
+Using Windows File Explorer
+---------------------------
 
 1. Right click `Computer` and select `Add a network location` from the menu
 
@@ -246,97 +256,25 @@ password and click `Log on`
 ![Windows 7 Explorer](images/windows_explorer_upload_08.png)
 
 
-File MD5 checksums
-==================
+File MD5 Checksums Value
+========================
 
 Large file transfers do not always complete successfully over the internet.
 
 An MD5 checksum can be computed for a file before and after transfer
-to verify that the file was transmitted successfully.
+to verify that the file was transmitted successfully. You must provide an MD5
+value for each file submitted to the archive. We will re-compute and verify the
+MD5 checksum to make sure that the file transfer was completed without any
+changes to the file contents.
 
-You must provide an MD5 checksum for each file submitted to the archive. We
-will re-compute and verify the MD5 checksum to make sure that the file transfer
-was completed without any changes to the file contents.
-
-To compute the checksum for a file in Linux or Mac you can use the `md5sum`
-command line program, for example:
-
-```
-md5sum a.fastq.gz
-```
-
-produces the following output containing the MD5 checksum for the file
-a.fastq.gz:
-
-```
-b26854779ea34e0bc3f47219e6e079e6 a.fastq.gz
-```
-
-There are several ways to provide a file MD5 checksum to Webin:
-
-1. If you are using the Webin File Uploader
-   then the MD5 checksum will be computed automatically for each file and
-   stored in a MD5 checksum file.
-2. If you are using the Interactive Webin then you can provide the MD5 checksum
-   in the submission spreadsheet for each file.
-3. You can also store and upload the MD5 checksum in a separate file. This MD5
-   checksum file must have the same name as the uploaded data file with an
-   additional `.md5` suffix at the end.
-
-In Linux or Mac the MD5 checksum file can be created by using the `md5sum`
-command line program, for example:
-
-```
-md5sum a.fastq.gz > a.fastq.gz.md5
-```
-
-produces `a.fastq.gz.md5` file with the MD5 checksum and the file name:
-
-```
-b26854779ea34e0bc3f47219e6e079e6 a.fastq.gz
-```
+Calculating this value is covered in `Preparing A File For Upload <###FIXME###>`_.
 
 
-File with invalid MD5 checksum
-------------------------------
+Invalid File Submissions
+------------------------
 
-If Webin detects a file with a MD5 checksum different from the one provided at
-time of submissions then you will receive an e-mail notification:
-
-![Webin error letter](images/webin_md5_error_letter.png)
-
-There are two possible reasons for this error.
-
-- Wrong MD5 checksum
-
-You can check if you accidentally provided a wrong MD5 checksum by computing
-the checksum for your local copy of the uploaded file and comparing it against
-the MD5 checksum which you originally provided. If these MD5 checksums are
-different then you can upload a new MD5 checksum file or change the MD5
-checksum using [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/):
-
-![Webin change checksum](images/webin_md5_change.png)
-
-- File was changed during transfer
-
-If you know that the MD5 checksum you provided at time of submission was
-correct then the file transfer was not successfully completed. In this case,
-please upload the file again exactly in the same location and with exactly the
-same name as before.
-
-
-File with invalid contents
---------------------------
-
-There is an additional situation when you may be required to upload your file
-again.
-
-Many file formats are subjected to a format check done by Webin. Any files that
-do not pass this validation are required to be replaced before the file is
-accepted into the permanent archive.
-
-For example, Webin insists that each submitted BAM file must be readable by
-[Samtools](http://www.htslib.org/). If this is not the case then please correct
-and re-upload the file exactly in the same location and with exactly the same
-name as before. Note that a new MD5 checksum must be provided as the file
-contents have changed.
+All files are subjected to a format check done by Webin. This does not occur
+until after you formally submit the files. You will generally be notified of
+this by email, and may be required to correct and reupload the file.
+Advice on this can be found in our `Common Run Submission Errors FAQ
+<faq_run_error.html>`_
