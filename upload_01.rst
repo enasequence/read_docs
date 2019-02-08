@@ -40,7 +40,7 @@ compressing a file named ``eg_01.fq``:
 
     gzip eg_01.fq
 
-The result of this would be a file named ``eg_01.fq.gz``.
+The result of this would be a compressed file named ``eg_01.fq.gz``.
 Files can always be decompressed later:
 
 .. code-block:: bash
@@ -66,12 +66,11 @@ MD5 is a function which can be applied to a file to create a 32 character
 string. This string is unique to the file and functions like a fingerprint: if
 the contents of the file change in any way the MD5 checksum will change as well.
 The file name can change without affecting the MD5 value because the calculation
- is done on the contents of the file only. You must provide the MD5 value for
- your files so that we can be sure they transferred successfully. This allows
- us to be sure the file has been uploaded in its entirety.
+is done on the contents of the file only. You must provide the MD5 value for
+your files so that we can be sure they transferred successfully and completely.
 
-This is not necessary if you are using Webin-CLI, as the program handles this
-for you behind the scenes.
+Calculating and registering an MD5 value is not necessary if you are using
+Webin-CLI, as the program handles this for you behind the scenes.
 
 Functions for calculating MD5 value are included with Linux and Mac
 distributions. Below you can see an example command, along with its output:
@@ -96,7 +95,7 @@ Sometimes the correct command is ``md5sum`` instead of ``md5``:
 
 .. code-block:: bash
 
-    user_01$ md5sum eg_01.fq.gz
+    md5sum eg_01.fq.gz
     MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
 
 For Windows users, 3rd party tools can be found to carry out these checks.
@@ -112,9 +111,9 @@ process.
 
 The Webin File Uploader is a program provided by ENA covered `here
 <upload_02.html>`_ which can be used to upload your files. It also
-automatically creates `.md5` files and uploads them for you.
+automatically creates ``.md5`` files and uploads them for you.
 
-If you make and upload your own `.md5` files, be sure it contains only the 32
+If you make and upload your own ``.md5`` file, be sure it contains only the 32
 digit MD5 value for a single file, and that its name matches the name of that
 file.
 
@@ -123,9 +122,10 @@ File Validation Errors
 ======================
 
 Improperly compressed files and incorrect MD5 values are two of the most common
-errors encountered when processing submitted read files. When this occurs, you
-are automatically notified by email. Guidance on fixing such errors is
-given in our `common run submission errors <faq_run_error.html>`_ page.
+errors encountered when processing submitted read files. Often, this happens
+because the file upload was incomplete. When this occurs, you are automatically
+notified by email. Guidance on fixing such errors is given in our `common run
+submission errors <faq_run_error.html>`_ page.
 
 
 Next Steps
@@ -134,4 +134,4 @@ Next Steps
 Once you have compressed your files and recorded their MD5 values in some way,
 proceed to upload them:
 
-`Data Upload Documentation <upload_02.html>`_.
+    `Data Upload Documentation <upload_02.html>`_.
