@@ -7,8 +7,9 @@ For submissions using the interactive or RESTful submission services, it is nece
 Please note that if you are submitting via Webin-CLI, you do not need to perform this upload step as it is handled for you by the program.
 
 Most files uploaded to the ENA FTP server need to be:
-1. Compressed
-2. Have their MD5 checksum registered
+
+  1. Compressed
+  2. Have their MD5 checksum registered
 
 
 Step 1: Compress The File Using gzip Or bzip2
@@ -22,20 +23,22 @@ If you are unsure about the format that your files should be in, please view our
 
 Tools for compressing files in gzip or bzip2 format are included in Linux and Mac distributions. Below is a simple example of the appropriate syntax for compressing a file named 'eg_01.fq':
 
-.. code_block:: bash
+.. code-block:: bash
 
     user_01$ gzip eg_01.fq
 
 
 The result of this would be a file named 'eg_01.fq.gz'. Files can always be decompressed later:
 
-.. code_block:: bash
+.. code-block:: bash
+
     user_01$ gunzip eg_01.fq.gz
 
 
 The `-k` flag can be used to retain the original file. This results in two files: the original uncompressed file and a compressed copy:
 
-.. code_block:: bash
+.. code-block:: bash
+
     user_01$ gzip -k eg_01.fq.gz
 
 
@@ -52,7 +55,7 @@ We ask that users provide the MD5 value for their files so that we can recalcula
 
 Functions for calculating MD5 value are included with Linux and Mac distributions. See below for an example of how this may be done:
 
-.. code_block:: bash
+.. code-block:: bash
 
     user_01$ md5 eg_01.fq.gz
     MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
@@ -64,7 +67,7 @@ The second command in the above box generates no output, because the user direct
 Creating and uploading a .md5 file is one way you can register your file's MD5 value.
 Sometimes the correct command is 'md5sum' instead of 'md5':
 
-.. code_block:: bash
+.. code-block:: bash
 
     user_01$ md5sum eg_01.fq.gz
     MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
@@ -101,7 +104,7 @@ This is the final step before the submission. Instructions for this are well det
 
 Remember to upload the checksum file in addition to the data file unless you are going to register the checksum at submission time or you are using the ENA file uploader instead. Here is a basic example of using FTP to upload a data file called 'eg_01.fq.bz2' and its md5 file 'eg_01.fq.bz2.md5'. The example is using the Terminal application in the Mac operating system. See above link for more detailed instructions.
 
-.. code_block:: bash
+.. code-block:: bash
 
     user_01$ ftp webin.ebi.ac.uk
     Connected to hh-webin.ebi.ac.uk.
