@@ -1,9 +1,12 @@
 =====================
-Module 1: Data Upload
+Module 2: Data Upload
 =====================
 
 You must upload data files into your private Webin file upload area at EMBL-EBI
 before you can submit the files through the Webin submission service.
+
+Please note that this is not necessary if you are using Webin-CLI, as it
+handles the upload process for you.
 
 
 Keep Local Copies
@@ -11,7 +14,7 @@ Keep Local Copies
 
 Always keep a local copy of the uploaded files until the files have been
 successfully submitted and archived. The Webin file upload area is a temporary
-transit area which is not backed up and any files on the area are subject to
+transit area which is not backed up. Any files on the area are subject to
 our fair use policy (see below).
 
 
@@ -73,7 +76,7 @@ General Instructions For Uploading Files Using A FTP Client
 -----------------------------------------------------------
 
 1. Use your favourite ftp client. For example, ``lftp`` is a popular choice for
-linux and Mac users.
+   linux and Mac users.
 2. Use ``binary mode`` for file transfers.
 3. Use ``webin.ebi.ac.uk`` as the target host.
 4. ``Login`` with your Webin username and password.
@@ -135,7 +138,7 @@ Aspera is a commercial file transfer protocol that may provide better transfer
 speeds than FTP over long distances. For short distance file transfers we
 recommend the use of FTP.
 
-Download Aspera Cli from
+Download Aspera CLI from
 `here <https://downloads.asperasoft.com/en/downloads/62>`_.
 
 Please select the correct operating system. The ``ascp`` command line client is
@@ -156,7 +159,7 @@ The ``-L-`` option is for printing logs out while transferring,
 The ``<file(s)>`` can be a file mask (e.g. ``*.cram``), a list of files or a
 single file.
 
-The ``<Webin-N>`` is your Webin submission account name.
+``<Webin-N>`` is your Webin submission account name.
 
 
 Using Webin File Uploader
@@ -186,8 +189,8 @@ application downloadable from
 9. Click on the ``Upload`` button.
 
 
-Instructions to Mac users
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Instructions For Mac Users
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 When downloading the application the following dialog box will be displayed:
 
@@ -244,7 +247,7 @@ field and click ``Next``
 .. image:: images/windows_explorer_upload_05.png
 
 Type a network location to show in Windows Explorer e.g. ``webin.ebi.ac.uk``
-click ``Next``
+then click ``Next``
 
 .. image:: images/windows_explorer_upload_06.png
 
@@ -269,7 +272,8 @@ value for each file submitted to the archive. We will re-compute and verify the
 MD5 checksum to make sure that the file transfer was completed without any
 changes to the file contents.
 
-Calculating this value is covered in `Preparing A File For Upload <###FIXME###>`_.
+Calculating this value is covered in `Preparing A File For Upload
+<upload_01.html>`_.
 
 
 Invalid File Submissions
