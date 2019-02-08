@@ -21,21 +21,21 @@ With the exception of Oxford Nanopore FAST5 files, do not tar archive any collec
 
 If you are unsure about the format that your files should be in, please view our `read data formats <https://ena-docs.readthedocs.io/en/latest/format_01.html>`_ page. This includes advice on general read data formats, as well as information specific to platforms or sequencing applications.
 
-Tools for compressing files in gzip or bzip2 format are included in Linux and Mac distributions. Below is a simple example of the appropriate syntax for compressing a file named 'eg_01.fq':
+Tools for compressing files in gzip or bzip2 format are included in Linux and Mac distributions. Below is a simple example of the appropriate syntax for compressing a file named ``eg_01.fq``:
 
 .. code-block:: bash
 
     user_01$ gzip eg_01.fq
 
 
-The result of this would be a file named 'eg_01.fq.gz'. Files can always be decompressed later:
+The result of this would be a file named ``eg_01.fq.gz``. Files can always be decompressed later:
 
 .. code-block:: bash
 
     user_01$ gunzip eg_01.fq.gz
 
 
-The `-k` flag can be used to retain the original file. This results in two files: the original uncompressed file and a compressed copy:
+The ``-k`` flag can be used to retain the original file. This results in two files: the original uncompressed file and a compressed copy:
 
 .. code-block:: bash
 
@@ -63,9 +63,9 @@ Functions for calculating MD5 value are included with Linux and Mac distribution
 
 
 Note that the MD5 value for this file is ``74f085a6f3dd8b2877b89fcb592c7f5c``.
-The second command in the above box generates no output, because the user directs the output to a file with the same name as the compressed FASTQ file but with '.md5' appended.
-Creating and uploading a .md5 file is one way you can register your file's MD5 value.
-Sometimes the correct command is 'md5sum' instead of 'md5':
+The second command in the above box generates no output, because the user directs the output to a file with the same name as the compressed FASTQ file but with ``.md5`` appended.
+Creating and uploading a ``.md5`` file is one way you can register your file's MD5 value.
+Sometimes the correct command is ``md5sum`` instead of ``md5``:
 
 .. code-block:: bash
 
@@ -81,9 +81,9 @@ Registering The MD5 Checksum With ENA
 
 In the example above the data file to be submitted is called ``eg_01.fq.bz2``
 It is a compressed version on the original ``file eg_01.fq``. Compressing large files is advantageous because it takes less time to transfer them and this increases the likelihood of a complete transfer without corruption.
-The MD5 checksum of file ``eg_01.fq.bz2`` is contained in file ``eg_01.fq.bz2.md5``. ENA requires the checksum that you have calculated so that we can compare it to the one that we calculate once the file is on our ftp server. So you can upload this **checksum file** in addition to the data file and our system will find it. As long as you abide by the naming convention XXX.md5 where XXX is the name of the data file and XXX.md5 is a text file containing the MD5 checksum ENA will understand.
+The MD5 checksum of file ``eg_01.fq.bz2`` is contained in file ``eg_01.fq.bz2.md5``. ENA requires the checksum that you have calculated so that we can compare it to the one that we calculate once the file is on our ftp server. So you can upload this **checksum file** in addition to the data file and our system will find it. As long as you abide by the naming convention ``XXX.md5`` where ``XXX`` is the name of the data file and ``XXX.md5`` is a text file containing the MD5 checksum ENA will understand.
 
-This is not the only way to register the checksum for a data file. When you come to submit the uploaded data file you will find that you can include the 32 character checksum string in with the submission metadata. If you do include the checksums in with the metadata at submission time then you do not have to accompany each data file with an md5 file at upload time. Also note that the ENA file uploader (one of the [upload options](upload_01.html) available) will automatically create an MD5 file for every data file that it uploads and it will deposit this MD5 file (using the naming convention discussed) along with the data file on the ftp server. That means that you do not need to provide MD5 checksums in the metadata at submission time if you have used the ENA file uploader.
+This is not the only way to register the checksum for a data file. When you come to submit the uploaded data file you will find that you can include the 32 character checksum string in with the submission metadata. If you do include the checksums in with the metadata at submission time then you do not have to accompany each data file with an md5 file at upload time. Also note that the ENA file uploader (one of the `upload options <upload_02.html>`_ available) will automatically create an MD5 file for every data file that it uploads and it will deposit this MD5 file (using the naming convention discussed) along with the data file on the ftp server. That means that you do not need to provide MD5 checksums in the metadata at submission time if you have used the ENA file uploader.
 
 You can not pool checksums from several data files into a single md5 file. The ENA file processing system will not be able to interpret this. Each file must have its own md5 file (if you are choosing to register it that way)
 

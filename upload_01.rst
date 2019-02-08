@@ -168,7 +168,7 @@ application downloadable from
 
 .. image:: images/webin_file_upload_01.png
 
-1. `Download the Webin File Uploader 
+1. `Download the Webin File Uploader
    <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
 2. Launch the application (Mac users please see further instructions below),
 3. Enter your Webin use r name in the ``Username`` field.
@@ -205,9 +205,9 @@ In this case please select ``OK``. This will save the WebinUploader.jnlp file
 to your default local download directory.
 
 In order to run the File Uploader application, open your file explorer and go
-to the directory where the WebinUploader.jnlp file has been saved.
+to the directory where the ``WebinUploader.jnlp`` file has been saved.
 
-While pressing the ``ctrl`` button, select the WebinUploader.jnlp file then
+While pressing the ``ctrl`` button, select the ``WebinUploader.jnlp`` file then
 select the ``open`` option.
 
 The following dialog will now be displayed:
@@ -221,7 +221,7 @@ application.
 Using Windows File Explorer
 ---------------------------
 
-1. Right click ``Computer`` and select ``Add a network location`` from the menu
+Right click ``Computer`` and select ``Add a network location`` from the menu
 
 .. image:: images/windows_explorer_upload_01.png
 
@@ -234,7 +234,7 @@ Select ``Choose a custom network location`` and click ``Next``
 .. image:: images/windows_explorer_upload_03.png
 
 Type ftp://webin.ebi.ac.uk in the ``Internet or network address`` field and
-click ```Next``
+click ``Next``
 
 .. image:: images/windows_explorer_upload_04.png
 
@@ -273,7 +273,7 @@ Calculating this value is covered in `Preparing A File For Upload <###FIXME###>`
 
 
 Invalid File Submissions
-------------------------
+========================
 
 All files are subjected to a format check done by Webin. This does not occur
 until after you formally submit the files. You will generally be notified of
