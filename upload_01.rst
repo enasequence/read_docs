@@ -6,7 +6,7 @@ You must upload data files into your private Webin file upload area at EMBL-EBI
 before you can submit the files through the Webin submission service.
 
 
-Keep local copies
+Keep Local Copies
 =================
 
 Always keep a local copy of the uploaded files until the files have been
@@ -15,7 +15,7 @@ transit area which is not backed up and any files on the area are subject to
 our fair use policy (see below).
 
 
-Fair use policy
+Fair Use Policy
 ===============
 
 ENA is a permanent and comprehensive data repository for public domain sequence
@@ -47,15 +47,16 @@ upload areas may have an impact on other Webin users and we are grateful for
 users' attention to this aspect of our fair use policy.
 
 
-Upload files
+Upload Files
 ============
 
 You will upload files to your private Webin file upload area using either FTP
-or Aspera protocol through the `webin.ebi.ac.uk` service. The authentication is
-done using your Webin submission account name and password.
+or Aspera protocol through the ``webin.ebi.ac.uk`` service. The authentication
+is done using your Webin submission account name and password.
 
 Your username resembles 'Webin-XXXXX'. Register an account or reset your
-password at the [Webin login page](https://www.ebi.ac.uk/ena/submit/sra/#home).
+password at the `Webin login page
+<https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
 
 There are a number of ways to accomplish the upload, detailed below:
 
@@ -71,25 +72,25 @@ There are a number of ways to accomplish the upload, detailed below:
 General Instructions For Uploading Files Using A FTP Client
 -----------------------------------------------------------
 
-1. Use your favourite ftp client. For example, `lftp` is a popular choice for
+1. Use your favourite ftp client. For example, ``lftp`` is a popular choice for
 linux and Mac users.
-2. Use `binary mode` for file transfers.
-3. Use `webin.ebi.ac.uk` as the target host.
-4. `Login` with your Webin username and password.
-5. `Upload` files to your private Webin upload area.
+2. Use ``binary mode`` for file transfers.
+3. Use ``webin.ebi.ac.uk`` as the target host.
+4. ``Login`` with your Webin username and password.
+5. ``Upload`` files to your private Webin upload area.
 
 
 Using FTP Command Line Client On Linux/Mac
 ------------------------------------------
 
-1. Open a terminal and type `ftp webin.ebi.ac.uk`.
+1. Open a terminal and type ``ftp webin.ebi.ac.uk``.
 2. Enter the username and password  associated with your Webin submission
    account.
-3. Type `bin` to use binary mode.
-4. Type `ls` command to check the content of your drop box.
-5. Type `prompt` to switch off confirmation for each file uploaded.
-6. Use `mput` command to upload files.
-7. Use `bye` command to exit the ftp client.
+3. Type ``bin`` to use binary mode.
+4. Type ``ls`` command to check the content of your drop box.
+5. Type ``prompt`` to switch off confirmation for each file uploaded.
+6. Use ``mput`` command to upload files.
+7. Use ``bye`` command to exit the ftp client.
 
 
 Using FTP Command Line Client On Windows
@@ -97,16 +98,16 @@ Using FTP Command Line Client On Windows
 
 1. Use FTP command line client on Windows
 2. Start the command line interpreter: press Win-R, type cmd, hit enter
-3. Type `ftp`
-4. Type `open webin.ebi.ac.uk`
+3. Type ``ftp``
+4. Type ``open webin.ebi.ac.uk``
 5. Enter the username and password associated with your Webin submission
    account.
-6. Type `bin` to use binary mode.
-7. Type `ls` command to check the content of your drop box.
-8. Type `prompt` to switch off confirmation for each file uploaded.
-9. Use `mput` command to upload files.
-10. Use `bye` command to exit the ftp client.
-11. Use `exit` command to exit the command line interpreter.
+6. Type ``bin`` to use binary mode.
+7. Type ``ls`` command to check the content of your drop box.
+8. Type ``prompt`` to switch off confirmation for each file uploaded.
+9. Use ``mput`` command to upload files.
+10. Use ``bye`` command to exit the ftp client.
+11. Use ``exit`` command to exit the command line interpreter.
 
 
 Using FileZilla On Windows
@@ -115,10 +116,10 @@ Using FileZilla On Windows
 1. Download and install [FileZilla](https://filezilla-project.org/).
    If you are not administrator of your computer then download the portable
    version of FileZilla.
-2. Use the binary mode: `Transfer menu -> Transfer Type -> Binary`.
-3. Use `webin.ebi.ac.uk` as the host.
+2. Use the binary mode: ``Transfer menu -> Transfer Type -> Binary``.
+3. Use ``webin.ebi.ac.uk`` as the host.
 4. Use your Webin username and password.
-5. Click `Quickconnect`.
+5. Click ``Quickconnect``.
 6. Search for the file(s) you want to upload using the tree on the left panel.
 7. Create directories in your drop box (if necessary) using the tree on the
    right panel.
@@ -137,8 +138,8 @@ recommend the use of FTP.
 Download Aspera Cli from
 [here](https://downloads.asperasoft.com/en/downloads/62).
 
-Please select the correct operating system. The `ascp` command line client is
-distributed as part of the Aspera Cli in the `cli/bin` folder.
+Please select the correct operating system. The ``ascp`` command line client is
+distributed as part of the Aspera Cli in the ``cli/bin`` folder.
 
 Your command should look similar to this:
 
@@ -146,15 +147,15 @@ Your command should look similar to this:
 ascp -QT -l300M -L- <file(s)> <Webin-N>@webin.ebi.ac.uk:.
  ```
 
-The `-l300M` option sets the upload speed limit to 300MB/s. You may wish to
+The ``-l300M`` option sets the upload speed limit to 300MB/s. You may wish to
 lower this value to increase the reliability of the transfer.
 
-The `-L-` option is for printing logs out while transferring,
+The ``-L-`` option is for printing logs out while transferring,
 
-The `<file(s)>` can be a file mask (e.g. `*.cram`), a list of files or a
+The ``<file(s)>`` can be a file mask (e.g. ``*.cram``), a list of files or a
 single file.
 
-The `<Webin-N>` is your Webin submission account name.
+The ``<Webin-N>`` is your Webin submission account name.
 
 
 Using Webin File Uploader
@@ -168,20 +169,20 @@ application downloadable from
 
 1. [Download the Webin File Uploader](http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp)
 2. Launch the application (Mac users please see further instructions below),
-3. Enter your Webin use r name in the `Username` field.
-4. Enter your Webin password in the `Password` field.
-5. Browse into the local `Upload Directory` containing the data files you wish
-   to upload using the `...` button. The list of all the files contained in the
-   selected directory will be displayed.
-6. Choose `Override` option if you wish to replace any existing files which
+3. Enter your Webin use r name in the ``Username`` field.
+4. Enter your Webin password in the ``Password`` field.
+5. Browse into the local ``Upload Directory`` containing the data files you
+   wish to upload using the ``...`` button. The list of all the files contained
+   in the selected directory will be displayed.
+6. Choose ``Override`` option if you wish to replace any existing files which
    have been previously uploaded.
-7. Choose `Upload Tree` option if you wish to preserve the directory structure
-   when uploading files to the Webin upload area. By default, the files will be
-   uploaded into the root directory
+7. Choose ``Upload Tree`` option if you wish to preserve the directory
+   structure when uploading files to the Webin upload area. By default, the
+   files will be uploaded into the root directory
 of your Webin upload area.
-8. Select the files to upload. You can use the `Select All` button to select
+8. Select the files to upload. You can use the ``Select All`` button to select
    all the files for upload.
-9. Click on the `Upload` button.
+9. Click on the ``Upload`` button.
 
 
 Instructions to Mac users
@@ -191,67 +192,67 @@ When downloading the application the following dialog box will be displayed:
 
 ![Webin File Uploader](images/webin_file_upload_02.png)
 
-Select the `Save File` option to save the WebinUploader.jnlp file to your local
-download directory.
+Select the ``Save File`` option to save the WebinUploader.jnlp file to your
+local download directory.
 
-If you selected the `Open with` option instead of the `Save File` option then
-the following dialog box will be displayed:
+If you selected the ``Open with`` option instead of the ``Save File`` option
+then the following dialog box will be displayed:
 
 ![Webin File Uploader](images/webin_file_upload_03.png)
 
-In this case please select `OK`. This will save the WebinUploader.jnlp file to
-your default local download directory.
+In this case please select ``OK``. This will save the WebinUploader.jnlp file
+to your default local download directory.
 
 In order to run the File Uploader application, open your file explorer and go
 to the directory where the WebinUploader.jnlp file has been saved.
 
-While pressing the `ctrl` button, select the WebinUploader.jnlp file then
-select the `open` option.
+While pressing the ``ctrl`` button, select the WebinUploader.jnlp file then
+select the ``open`` option.
 
 The following dialog will now be displayed:
 
 ![Webin File Uploader](images/webin_file_upload_04.png)
 
-Now select the `Open` button. This will launch the the Webin File Uploader
+Now select the ``Open`` button. This will launch the the Webin File Uploader
 application.
 
 
 Using Windows File Explorer
 ---------------------------
 
-1. Right click `Computer` and select `Add a network location` from the menu
+1. Right click ``Computer`` and select ``Add a network location`` from the menu
 
 ![Windows 7 Explorer](images/windows_explorer_upload_01.png)
 
-Click `Next`
+Click ``Next``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_02.png)
 
-Select `Choose a custom network location` and click `Next`
+Select ``Choose a custom network location`` and click ``Next``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_03.png)
 
-Type ftp://webin.ebi.ac.uk in the `Internet or netword address` field and
-click `Next`
+Type ftp://webin.ebi.ac.uk in the ``Internet or network address`` field and
+click ```Next``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_04.png)
 
-Unselect `Log on anonymously`, type your Webin user name in the `User name`
-field and click `Next`
+Unselect ``Log on anonymously``, type your Webin user name in the ``User name``
+field and click ``Next``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_05.png)
 
-Type a network location to show in Windows Explorer e.g. `webin.ebi.ac.uk`
-click `Next`
+Type a network location to show in Windows Explorer e.g. ``webin.ebi.ac.uk``
+click ``Next``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_06.png)
 
-Click `Finish`
+Click ``Finish``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_07.png)
 
 When using the new folder you will prompted for your Webin password. Type your
-password and click `Log on`
+password and click ``Log on``
 
 ![Windows 7 Explorer](images/windows_explorer_upload_08.png)
 
