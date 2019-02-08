@@ -99,7 +99,7 @@ the XML:
 
 ## Upload Data Files
 
-Please see [Data Upload](upload_01.html).
+Please see [Data Upload](upload.html).
 
 You must have uploaded data files into your Webin upload area before you can
 submit them using an analysis XML. Once the analysis has been submitted the data files

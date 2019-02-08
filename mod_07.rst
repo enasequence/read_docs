@@ -11,7 +11,7 @@ You may need to update or resubmit a genome assembly for a number of reasons, su
 The procedures described here can involve several manual steps on the part of ENA curators.
 Therefore, if you are performing an update or resubmission, expect to be in contact with us and allow some time for the completion of this process.
 
-Should you need to reupload files, review our `Data Upload <upload_01.html>`_ guide.
+Should you need to reupload files, review our `Data Upload <upload_02.html>`_ guide.
 If you upload a replacement for a previously submitted file, be sure that the new filename is identical to the old one.
 
 

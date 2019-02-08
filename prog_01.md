@@ -43,13 +43,13 @@ Data files must be uploaded into a submitter specific private Webin file upload 
 before they can be submitted. Always keep a local copy of the uploaded files
 until the files have been successfully submitted and archived. The Webin file
 upload area is a temporary transit area which is not backed up and subject to
-a fair use policy. 
+a fair use policy.
 
-Once uploaded, data files are submitted by referring to them from Run XML or Analysis XML. 
-Run XML is used for used for sequence read submissions while Analysis XML is used 
+Once uploaded, data files are submitted by referring to them from Run XML or Analysis XML.
+Run XML is used for used for sequence read submissions while Analysis XML is used
 for other types of submissions (e.g. genome assemblies).
 
-More information of uploading data files and our the fair use policy is available [here](upload_01.html).
+More information of uploading data files and our the fair use policy is available [here](upload_02.html).
 
 ## Submission protocol
 
@@ -102,9 +102,9 @@ The full metadata model is described in [Metadata model](meta_01.html).
 
 ## Identifying objects
 
-Each submitted object is uniquely identified within a submission account using the `alias` attribute. 
-Once an object has been submitted no other object of the same type can use the same alias within the 
-submission account. Objects can refer to other objects within a submission account by either alias or 
+Each submitted object is uniquely identified within a submission account using the `alias` attribute.
+Once an object has been submitted no other object of the same type can use the same alias within the
+submission account. Objects can refer to other objects within a submission account by either alias or
 the assigned accession number.
 
 ## Identifying submitters
@@ -139,7 +139,7 @@ will look like:
 If no release date is provided then submitted studies and any associated objects
 will be publicly released two years after the date of study submission.
 
-A release date can be provided for studies by using the `HOLD` action together with the `ADD` action: 
+A release date can be provided for studies by using the `HOLD` action together with the `ADD` action:
 
 ```
 <SUBMISSION>
@@ -154,7 +154,7 @@ A release date can be provided for studies by using the `HOLD` action together w
 </SUBMISSION>
 ```
 
-The `HoldUntilDate` specifies the public release date of any studies submitted within the submission. 
+The `HoldUntilDate` specifies the public release date of any studies submitted within the submission.
 This can be at most two years in the future.
 
 ### Submission XML: make study public
@@ -190,7 +190,7 @@ Checklist for preparing an object for update:
 
 - The new XML for the object must either contain the original alias or the assigned accession.
 - If you provide an alias then it must be given exactly as in the initial submission.
-- If you provide an accession then it must be the accession number assigned to the object 
+- If you provide an accession then it must be the accession number assigned to the object
 in the initial submission.
 - Run XML objects can't be updated to point to different data files.
 - Analysis XML objects can't be updated to point to different data files.
@@ -250,8 +250,8 @@ Pre-publication private objects can be cancelled by all submitters.
 
 To cancel objects, you must use the `CANCEL` action in the submission XML.
 
-The `CANCEL` action should point to the object that is being cancelled. Please note 
-that the `CANCEL` action will be propagated from studies to all associated experiments 
+The `CANCEL` action should point to the object that is being cancelled. Please note
+that the `CANCEL` action will be propagated from studies to all associated experiments
  and analyses, and from experiments to all associated runs.
 
 Below is an example of a submission XML used to cancel objects:
@@ -262,8 +262,8 @@ Below is an example of a submission XML used to cancel objects:
         <ACTION>
             <CANCEL target="TODO: object accession number">
         </ACTION>
-    </ACTIONS> 
-</SUBMISSION> 
+    </ACTIONS>
+</SUBMISSION>
 ```
 
 ### Submission XML: suppress objects
@@ -272,8 +272,8 @@ Public objects may be suppressed by some brokers.
 
 To suppress objects, you must use the `SUPPRESS` action in the submission XML.
 
-The `SUPPRESS` action should point to the object that is being suppressed. Please 
-note that `SUPPRESS` action will be propagated from studies to all associated 
+The `SUPPRESS` action should point to the object that is being suppressed. Please
+note that `SUPPRESS` action will be propagated from studies to all associated
 experiments and analyses, and from experiments to all associated runs.
 
 It is possible to temporarily suppress an object by providing a `HoldUntilDate`.
@@ -286,11 +286,11 @@ Below is an example of a submission XML used to permanently suppress objects:
         <ACTION>
             <SUPPRESS target="TODO: object accession number">
         </ACTION>
-    </ACTIONS> 
-</SUBMISSION> 
+    </ACTIONS>
+</SUBMISSION>
 ```
 
-Below is an example of a submission XML used to temporarily suppress an object 
+Below is an example of a submission XML used to temporarily suppress an object
 until 1st of January 2019 after which the object will become public again:
 
 ```
@@ -299,8 +299,8 @@ until 1st of January 2019 after which the object will become public again:
         <ACTION>
             <SUPPRESS target="TODO: object accession number"" HoldUntilDate="2019-01-01">
         </ACTION>
-    </ACTIONS> 
-</SUBMISSION> 
+    </ACTIONS>
+</SUBMISSION>
 ```
 
 ### Submission XML: kill objects
@@ -309,7 +309,7 @@ Public objects may be killed by some brokers.
 
 To kill objects, you must use the `KILL` action in the submission XML.
 
-The `KILL` action should point to the object that is being killed. Please note 
+The `KILL` action should point to the object that is being killed. Please note
 that `KILL` action will be propagated from studies to all associated experiments
 and analyses, and from experiments to all associated runs.
 
@@ -324,7 +324,7 @@ Below is an example of a submission XML used to permanently kill objects:
             <KILL target="TODO: object accession number">
         </ACTION>
     </ACTIONS>
-</SUBMISSION> 
+</SUBMISSION>
 ```
 
 Below is an example of a submission XML used to temporarily kill an object
@@ -334,18 +334,18 @@ until 1st of January 2019 after which the object will become public again:
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
-            <KILL target="TODO: object accession number"" HoldUntilDate="2019-01-01"> 
-        </ACTION> 
-    </ACTIONS> 
-</SUBMISSION> 
-``` 
+            <KILL target="TODO: object accession number"" HoldUntilDate="2019-01-01">
+        </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
 
 ### Submission XML: request a receipt XML
 
 The `RECEIPT` action can be used to request a receipt XML issued as a result of an `ADD` action
-that contains all the issued accession numbers. This is expecially useful in cases where the 
+that contains all the issued accession numbers. This is expecially useful in cases where the
 submission request times out before it has as completed. The submission process will continue
-neverthless and the issued accession numbers can be later requested using the `RECEIPT` action. 
+neverthless and the issued accession numbers can be later requested using the `RECEIPT` action.
 
 ```
 SUBMISSION_SET>
@@ -361,13 +361,13 @@ SUBMISSION_SET>
 
 ### Submission actions without submission XML
 
-Some submission actions can be defined using the `ACTION` POST parameter. 
-If the `ACTION` parameter is provided then the submission XML 
+Some submission actions can be defined using the `ACTION` POST parameter.
+If the `ACTION` parameter is provided then the submission XML
 will be ignored.
 
 You can use the following actions in place of submission XML:
 
-- `ACTION=ADD`: create new objects in the archive 
+- `ACTION=ADD`: create new objects in the archive
 - `ACTION=MODIFY`: update existing objects in the archive
 - `ACTION=VALIDATE` (same as `ACTION=VALIDATE,ADD`)
 - `ACTION=VALIDATE,ADD`: validate new objects without creating them
@@ -378,7 +378,7 @@ In addition, you can use the following POST parameters with the `ACTION` paramet
 - `HOLD_DATE`: set the public release date for a new study or sample
 - `CENTER_NAME`: set the submitting center name (mandatory for brokers)  
 
-For example, submit a new analysis: 
+For example, submit a new analysis:
 ```
 curl -u username:password -F "ACTION=ADD" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/" -F "ANALYSIS=@analysis.xml"
 ```
@@ -391,17 +391,17 @@ curl -u username:password -F "HOLD_DATE=31-11-2019"  -F "ACTION=ADD" "https://ww
 ## Receipt XML
 
 Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.receipt.xsd))
-is returned. 
+is returned.
 
-To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
+To know if the submission was successful look in the first line of the `<RECEIPT>` block.
 
-The attribute `success` will have value `true` or `false`. If the value 
-is false then the submission did not succeed. In this case check the rest of 
-the receipt for error messages and after making corrections, try the submission again. 
+The attribute `success` will have value `true` or `false`. If the value
+is false then the submission did not succeed. In this case check the rest of
+the receipt for error messages and after making corrections, try the submission again.
 
-If the success attribute is true then the submission was successful. The receipt will 
-contain the accession numbers of the objects that you have submitted. In the case of 
-a study submission this is likely to be the accession that you will be including in a 
+If the success attribute is true then the submission was successful. The receipt will
+contain the accession numbers of the objects that you have submitted. In the case of
+a study submission this is likely to be the accession that you will be including in a
 publication.
 
 An example of a successful run submission:
@@ -414,7 +414,7 @@ An example of a successful run submission:
 </RECEIPT>
 ```
 
-Above, the assigned run accession number `ERR049536` is provided in the `accession` attribute 
+Above, the assigned run accession number `ERR049536` is provided in the `accession` attribute
 within the `RUN` block.  
 
 If the submission was not successful the Receipt XML will contain the error messages within
@@ -432,7 +432,7 @@ the `MESSAGES` block:
 
 ## Retrieving submitted XMLs
 
-Submitted XMLs can be retrieved from the submission service using the assigned 
+Submitted XMLs can be retrieved from the submission service using the assigned
 accession numbers. This can be a helpful, for example, as a starting point for making
 modifications to the submitted objects.
 
@@ -453,8 +453,8 @@ When using the test submission service the following message is included into th
 <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 ```
 
-It is advisable to first test your submissions using the Webin test service where changes are not 
-permanent and are erased every 24 hours. 
+It is advisable to first test your submissions using the Webin test service where changes are not
+permanent and are erased every 24 hours.
 
-Once you are happy with the result of the submission you can use production service. 
+Once you are happy with the result of the submission you can use production service.
 Simply change the part in the URL from `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.

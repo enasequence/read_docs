@@ -41,7 +41,7 @@ Note that all the files must be gz compressed.
 You must upload your files into your Webin upload area before you can submit them.
 Once the files have been submitted they will be moved from the Webin upload
 area into the archive.
-Please see `Data Upload <upload_01.html>`_ for full details on how to upload data files.
+Please see `Data Upload <upload.html>`_ for full details on how to upload data files.
 
 **Define the Assembly.**
 During the submission process, the interface will automatically indicate the files to be uploaded based on your answers to a series of questions.

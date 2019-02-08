@@ -129,7 +129,7 @@ submission errors <faq_run_error.html>`_ page.
 
 
 Next Steps
-----------
+==========
 
 Once you have compressed your files and recorded their MD5 values in some way,
 proceed to upload them:

@@ -13,7 +13,7 @@ Before you register the run and experiment objects, you should have completed th
 
 - `Register a study <mod_02.html>`_
 - `Register a sample <mod_03.html>`_
-- `Upload your read files <upload_01.html>`_
+- `Upload your read files <upload.html>`_
 
 To start your read submission, log in to your Webin account and select the 'Submit sequence reads and experiments' radial in the 'New Submission' tab.
 

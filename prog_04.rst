@@ -52,12 +52,12 @@ This can be done either by using an accession:
     <EXPERIMENT_REF accession="ERX123456"/>
 
 or a name within the submitter's account:
- 
+
 .. code-block:: xml
 
     <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
 
-Above, the `refname` refers to the submitter provided name (alias) of the experiment. 
+Above, the `refname` refers to the submitter provided name (alias) of the experiment.
 
 If the run is submitted at the same time as the experiment then the `accession` attribute
 can't be used to refer to the experiment as the experiment accession has not been assigned yet.
@@ -100,8 +100,8 @@ Either an `accession` or a `refname` (alias) can be used in the reference. If yo
 Metadata standards
 ==================
 
-The ENA is involved with minimum information standards for various project collaborations and sequencing 
-fields. Even if you are not a member of one of these you can still use them as a guideline for increasing 
+The ENA is involved with minimum information standards for various project collaborations and sequencing
+fields. Even if you are not a member of one of these you can still use them as a guideline for increasing
 the quality of annotation of your experiment (and run) objects towards more interpretable and reproducible
 publications.
 
@@ -118,7 +118,7 @@ Please see `Read Data Formats <format_01.html>`_.
 Upload data files
 =================
 
-Please see `Data Upload <upload_01.html>`_.
+Please see `Data Upload <upload.html>`_.
 
 You must have uploaded data files into your Webin upload area before you can
 submit them using a run XML. Once the run has been submitted the data files
@@ -207,7 +207,7 @@ Run XML:
         </RUN>
     </RUN_SET>
 
-You can submit several experiments and runs at the same time by using multiple 
+You can submit several experiments and runs at the same time by using multiple
 `<EXPERIMENT>` and `<RUN>` blocks.
 
 Experiment XML:
@@ -252,14 +252,14 @@ Run XML:
 Change the XMLs by entering your own information and save it in two files, for example `experiment.xml`
 and `run.xml`.
 
-Change the value of `alias` to be a unique name. You will need the unique name for example to refer to your 
-experiment when adding run objects to it. An alias can be a short acronym but it should be meaningful 
+Change the value of `alias` to be a unique name. You will need the unique name for example to refer to your
+experiment when adding run objects to it. An alias can be a short acronym but it should be meaningful
 and memorable in some way.
 
 The `<FILES>` block in the run XML references the data files that are being submitted as
 part of the run.
 
-To check the integrity of the file transfer an md5 checksum must be provided for each file. 
+To check the integrity of the file transfer an md5 checksum must be provided for each file.
 You can provide this by using the `checksum_method="MD5"` and `checksum` attributes in the `<FILE>` element,
 or you can provide the MD5 checksum in file `<file>.md5` in the same folder as the corresponding data
 file `<file>`.
@@ -331,7 +331,7 @@ elements. These are controlled value fields and the permitted values are listed 
 Experiment XML: paired ended reads
 -----------------------------------
 
-In experiment XML, the `<LIBRARY_LAYOUT>` element within the `<LIBRARY_DESCRIPTOR>` 
+In experiment XML, the `<LIBRARY_LAYOUT>` element within the `<LIBRARY_DESCRIPTOR>`
 differentiates between single and paired ended reads. In the Experiment XML fragment
 below, we have described a paired ended experiment using the `<PAIRED>` element:
 
@@ -343,8 +343,8 @@ below, we have described a paired ended experiment using the `<PAIRED>` element:
     </LIBRARY_LAYOUT>
     ...
 
-The attribute `PAIRED NOMINAL_LENGTH` is the average insert size. 
-It is not the length of the reads. It is the average size of the fragments that are being sequenced. 
+The attribute `PAIRED NOMINAL_LENGTH` is the average insert size.
+It is not the length of the reads. It is the average size of the fragments that are being sequenced.
 
 The attribute `NOMINAL_SDEV` is the standard deviation of the fragment lengths. This attribute
 is not mandatory so you can omit it if you do not have this detail.
@@ -352,7 +352,7 @@ is not mandatory so you can omit it if you do not have this detail.
 Experiment XML: single ended reads
 -----------------------------------
 
-In the Experiment XML fragment below, we have described a 
+In the Experiment XML fragment below, we have described a
 single ended experiment using the `<SINGLE>` element:
 
 .. code-block:: xml
@@ -393,7 +393,7 @@ Create the Submission XML
 =========================
 
 To submit experiments or runs, you need an accompanying submission XML in a separate file.
-Let's call this file `submission.xml`. 
+Let's call this file `submission.xml`.
 
 .. code-block:: xml
 
@@ -405,10 +405,10 @@ Let's call this file `submission.xml`.
        </ACTIONS>
     </SUBMISSION>
 
-The submission XML declares one or more Webin submission service actions. 
-In this case the action is `<ADD/>` which is used to submit new objects. 
+The submission XML declares one or more Webin submission service actions.
+In this case the action is `<ADD/>` which is used to submit new objects.
 
-The XMLs can be submitted programmatically, using CURL on command line or 
+The XMLs can be submitted programmatically, using CURL on command line or
 using the `Webin submissions portal <prog_11.html>`_.
 
 Submit the XMLs using CURL
@@ -444,18 +444,18 @@ Submit the XMLs using Webin submissions portal
 
 XMLs can also be submitted interactively using the `Webin submissions portal <prog_11.html>`_.
 Please refer to the `Webin submissions portal <prog_11.html>`_ document for an example how
-to submit a study using XML. Other types of XMLs can be submitted using the same approach. 
+to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 The Receipt XML
 ===============
 
-To know if the submission was successful look in the first line of the `<RECEIPT>` block. 
+To know if the submission was successful look in the first line of the `<RECEIPT>` block.
 
-The attribute `success` will have value `true` or `false`. If the value 
-is false then the submission did not succeed. In this case check the rest of 
-the receipt for error messages and after making corrections, try the submission again. 
+The attribute `success` will have value `true` or `false`. If the value
+is false then the submission did not succeed. In this case check the rest of
+the receipt for error messages and after making corrections, try the submission again.
 
-If the success attribute is true then the submission was successful. The receipt will 
+If the success attribute is true then the submission was successful. The receipt will
 contain the accession numbers of the objects that you have submitted.
 
 Test and production services
@@ -467,11 +467,11 @@ Note the message in the receipt:
 
     <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 
-It is advisable to first test your submissions using the Webin test service where changes are not permanent 
-and are erased every 24 hours. 
+It is advisable to first test your submissions using the Webin test service where changes are not permanent
+and are erased every 24 hours.
 
-Once you are happy with the result of the submission you can use the CURL command again 
-but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to 
+Once you are happy with the result of the submission you can use the CURL command again
+but this time using the production service. Simply change the part in the URL from `wwwdev.ebi.ac.uk` to
 `www.ebi.ac.uk`:
 
 .. code-block:: bash

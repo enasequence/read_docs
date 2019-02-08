@@ -1,6 +1,6 @@
-=====================
-Module 2: Data Upload
-=====================
+================================
+Module 2: Uploading Files To ENA
+================================
 
 You must upload data files into your private Webin file upload area at EMBL-EBI
 before you can submit the files through the Webin submission service.
