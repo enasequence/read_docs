@@ -54,7 +54,7 @@ This results in two files: the original uncompressed file and a compressed copy:
 
     gzip -k eg_01.fq.gz
 
-For Windows users, 3rd party tools are available to accomplish this.
+For Windows users, third party tools are available to accomplish this.
 The standard compression type used in Windows, ZIP, is not accepted in ENA
 submissions.
 
