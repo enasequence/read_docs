@@ -33,7 +33,7 @@ run using the `java` command:
 
 for example:
 
-`java -jar webin-cli-1.3.0.jar <options>`
+`java -jar webin-cli-1.6.0.jar <options>`
 
 The `<version>` is the version number of the program.
 
