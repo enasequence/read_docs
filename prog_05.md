@@ -6,9 +6,8 @@ Previously we have discussed different metadata objects from studies and samples
 experiments, and explained how experiments and runs are used to include sequence read data
 into the archive.
 
-Similarly, the `analysis` object is associated with studies and samples and can be
-used to include data of various other types into the archive, for example,
-genome and transcriptome assemblies.
+Similarly, the `analysis` object is associated with studies and samples and can
+be used to include data of various other types into the archive.
 
 The analysis XML format is defined by [SRA.analysis.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd)
 XML Schema.
@@ -67,12 +66,12 @@ Like the run object, the analysis object has a `<FILES>` block. The analysis and
 main purpose which is to submit data files into the archive. However, while a run always represents sequence reads,
 an analysis can be used to archive many different types of data.
 
-For example, a genome assembly (`SEQUENCE_ASSEMBLY`) analysis type allows contigs to be submitted as a `fasta` file:
+For example, a read alignment (`REFERENCE_ALIGNMENT`) analysis type allows aligned reads to be submitted as a `bam` file:
 
 ```
 <FILES>
-    <FILE filename="contigs.fasta.gz" filetype="fasta"
-        checksum_method="MD5" checksum="89285db287f188d59d494475d75664a4"/>
+    <FILE filename="aligned_reads.bam" filetype="bam"
+        checksum="bafe0ed9be5c0f8515cdc4ac514d24af" checksum_method="MD5"/>
 </FILES>
 ```
 
@@ -127,53 +126,6 @@ with the name of the subdirectory:
 You can find below specific instructions for creating analysis XMLs for different
 types of analyses.
 
-### Genome Assembly
-
-Analysis type `<SEQUENCE_ASSEMBLY>` is for submitting genome assemblies to ENA.
-
-Genome assemblies must be associated with a study and sample. Except for metagenomes,
-the study and sample should be uniquely associated with a genome assembly. Updated
-versions of the a genome should use the same study and sample as the initial assembly.
-
-Which data files are required is dependent on the level of assembly (see
-[Genome Assembly Data Formats](format_02.html)).
-
-In the example below there are four files which make up the genome assembly submission:
-cryptosporidium.embl.gz, crypto.agp.gz, chromosome.txt.gz and unassigned_list.txt.gz:
-
-```xml
-<ANALYSIS_SET>
-    <ANALYSIS alias="wgs_C_hominis">
-        <TITLE>Whole genome shotgun sequencing of a human-derived isolate of C. hominis</TITLE>
-        <DESCRIPTION>Whole genome shotgun sequencing of a human-derived isolate of C.
-            hominis</DESCRIPTION>
-        <STUDY_REF accession="PRJEAXXXX"/>
-        <SAMPLE_REF accession="ERSXXXXXX"/>
-        <ANALYSIS_TYPE>
-            <SEQUENCE_ASSEMBLY>
-                <NAME>C.hominis.v1</NAME>
-                <COVERAGE>68</COVERAGE>
-                <PROGRAM>Newbler</PROGRAM>
-                <PLATFORM>454FLX+, Illumina Miseq</PLATFORM>
-            </SEQUENCE_ASSEMBLY>
-        </ANALYSIS_TYPE>
-        <FILES>
-            <FILE filename="c_hominis/cryptosporidium.embl.gz" filetype="chromosome_flatfile"
-                checksum_method="MD5" checksum="c0278da790b41f7efa43d7ea67c1ae1e"/>
-            <FILE filename="c_hominis/crypto.agp.gz" filetype="chromosome_agp" checksum_method="MD5"
-                checksum="5d65f8d8cf5b0f603df0d9db9c1ff003"/>
-            <FILE filename="c_hominis/chromosome.txt.gz" filetype="chromosome_list"
-                checksum_method="MD5" checksum="ee0d12a4d1afbf0e1fb731be595cef72"/>
-            <FILE filename="c_hominis/unassigned_list.txt.gz" filetype="unlocalised_contig_list"
-                checksum_method="MD5" checksum="89285db287f188d59d494475d75664a4"/>
-        </FILES>
-    </ANALYSIS>
-</ANALYSIS_SET>
-```
-
-Remember that the above analysis XML is an example. You must provide your own details
-in the analysis XML.
-
 ### Sequence Variation
 
 Analysis type `<SEQUENCE_VARIATION>` is for submitting variation files into the archive by EVA.
@@ -211,7 +163,7 @@ as in the following example:
 ```
 
 Notice that the VCF is using reads from several sequencing runs.
-The VCF file maps variant calls according to there position in a reference.  The
+The VCF file maps variant calls according to their position in a reference.  The
 `<ASSEMBLY>` and `<SEQUENCE>` blocks allow the VCF file identifiers to be associated with ENA accessions.
  For example, the VCF file in the example has this in the header:
 
