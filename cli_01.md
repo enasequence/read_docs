@@ -7,8 +7,10 @@ service and the Webin command line submission service.
 
 This module gives an introduction to the Webin command line submission interface
 used to validate, upload and submit files to the European Nucleotide Archive (ENA).
-Please note that unlike with other ENA submissions routes you may have used, you 
+Please note that unlike with other ENA submissions routes you may have used, you
 do not need to pre-upload your files when using Webin-CLI.
+
+Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
 ## Registration
 
