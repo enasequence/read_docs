@@ -253,6 +253,21 @@ Assembly updates must:
 - use the same sample and study pair as was used in the initial assembly submission
 - not remove any chromosomes
 
+## Ignoring validation errors
+
+In specific cases, the helpdesk (datasubs@ebi.ac.uk) may allow some genome
+assembly validation errors to be ignored. The following errors can be ignored
+for specific submission accounts and assembly names:   
+
+Since Webin 1.7.0:
+- Invalid number of sequences : XXX, Minimum number of sequences for CONTIG is: YYY
+- Invalid number of sequences : XXX, Minimum number of sequences for SCAFFOLD is: YYY
+- Invalid number of sequences : XXX, Minimum number of sequences for CHROMOSOME is: YYY
+- Invalid number of sequences : XXX, Maximum number of sequences for CONTIG is: YYY
+- Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
+- Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
+
+
 ## Automatic fixes
 
 ### CDS feature
