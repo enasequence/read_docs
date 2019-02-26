@@ -38,14 +38,14 @@ archived, and provide metadata explaining how they were produced.
    in:
 
 .. image:: images/mod_04_p02.png
+    :scale: 50 %
+    :align: center
 
 2. If you switch to any of the other tabs while filling out run information, the
    information you have already entered in the New Submission tab will be
    preserved:
 
 .. image:: images/mod_04_p03.png
-   :scale: 50 %
-   :align: center
 
 3. You can download a template spreadsheet to enter details of your submission
    into, then reupload it later to complete your submission.
