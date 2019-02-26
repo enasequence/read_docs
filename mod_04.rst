@@ -44,6 +44,8 @@ archived, and provide metadata explaining how they were produced.
    preserved:
 
 .. image:: images/mod_04_p03.png
+   :scale: 50 %
+   :align: center
 
 3. You can download a template spreadsheet to enter details of your submission
    into, then reupload it later to complete your submission.
