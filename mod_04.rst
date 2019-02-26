@@ -80,3 +80,5 @@ archived, and provide metadata explaining how they were produced.
     submission is completed.
 
 .. image:: images/mod_04_p07.png
+    :scale: 50 %
+    :align: center
