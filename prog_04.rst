@@ -304,6 +304,27 @@ note that `filetype` has been set to `cram`.
         </RUN>
     </RUN_SET>
 
+Run XML: Oxford Nanopore
+------------------------
+
+If you wish to submit your nanopore sequencing reads in their native FAST5
+format, you must prepare an individual gzipped tar archive for each run. The
+run XML should look as follows:
+
+.. code-block:: xml
+
+    <RUN_SET>
+        <RUN alias="run_mantis_religiosa" center_name="">
+            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <DATA_BLOCK>
+                <FILES>
+                    <FILE filename="exp_run_mantis_religiosa.tar.gz" filetype="OxfordNanopore_native"
+                        checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
+                </FILES>
+            </DATA_BLOCK>
+        </RUN>
+    </RUN_SET>
+
 Experiment XML: library information
 -----------------------------------
 
