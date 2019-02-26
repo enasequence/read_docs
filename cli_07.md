@@ -205,8 +205,6 @@ For metagenome assemblies, long term stable accession numbers that can be used i
 
 - Study accession (PRJ) assigned at time of study registration.
 - Sample accession (SAM) assigned at time of sample registration.
-- Analysis accession(s) (ERZ) assigned at the time of assembly submission 
-(**for primary/binned assemblies**).
 - Sequence accession(s) assigned once the assembly has been fully processed by ENA 
 (**for MAGS/SAGs**).
 - Genome assembly accession (GCA) assigned once the assembly has been fully processed by ENA 
