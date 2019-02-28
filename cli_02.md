@@ -5,6 +5,8 @@
 Genome assemblies can be submitted to the European Nucleotide Archive (ENA) 
 using the [Webin command line submission interface](cli_01.html) with `-context genome` option. 
 
+Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+
 As Metagenomic assemblies follow slightly different rules, please submit
 them following these [guidelines](cli_07.html).
 
