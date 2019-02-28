@@ -257,8 +257,9 @@ Assembly updates must:
 
 ## Ignoring validation errors
 
-In specific cases, the helpdesk (datasubs@ebi.ac.uk) may allow some genome
-assembly validation errors to be ignored. The following errors can be ignored
+In specific cases, the helpdesk may allow some genome assembly validation errors to 
+be ignored. This will be done at the discretion of the curation team, and can be 
+requested with an email to datasubs@ebi.ac.uk . The following errors can be ignored
 for specific submission accounts and assembly names:   
 
 Since Webin 1.7.0:
