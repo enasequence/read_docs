@@ -3,8 +3,9 @@
 ## Introduction
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](cli_01.html) with `-context genome`
-(or `-context transcriptome` for metatranscriptomic assemblies).
+using the [Webin command line submission interface](cli_01.html) with `-context genome`.
+
+Please contact datasubs@ebi.ac.uk if you intend to submit any assemblies assembled from third party data.
 
 A metagenome assembly consists of:
 - General assembly information
