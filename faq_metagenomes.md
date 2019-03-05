@@ -36,9 +36,10 @@ When registering a binned sample, you should do the following:
 | sample derived from | either the ERS accession of the environmental sample or the ERR of the environmental reads | ERS123456 |
 | isolation_source | material the parent sample was isolated from | gut |
 | metagenomic source | the environmental taxonomy of the patent environmental sample | human gut metagenome |
-| assembly quality | used to describe the quality of the assembly | Many fragments with little to no review of assembly other than reporting of standard assembly statistics (*) |
+| assembly quality | used to describe the quality of the assembly (*) | Many fragments with little to no review of assembly other than reporting of standard assembly statistics |
 | completeness score | the ratio of observed single-copy marker genes to total single-copy marker genes in chosen marker gene set  (*) | 82.35% |
 | contamination score | the ratio of observed single-copy marker genes in ≥2 copies to total single-copy marker genes in chosen marker gene set (*) | 9.25% |
+
 (*) See the **metagenomic assembly quality** section below for how to format these.
 
 3. Copy other sample attributes from the MIMAG sample checklist to the binned sample as appropriate, e.g. "collection_date", "geographic location (country and/or sea)", etc. This adds additional context to your environmentally sourced data.
