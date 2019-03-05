@@ -1,23 +1,22 @@
 # Rules for Submitting Metagenomic Samples
 
-Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are some rules to regulate the way these samples are submitted to make the level of the assembly and original source of data as clear as possible.
+Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are some rules to regulate the way these samples are submitted to make the quality of the assembly and original source of data as clear as possible.
 
-The image below shows the different levels of metagenomic studies.
+The following image illustrates the stages of a metagenome assembly study and what is submittable to each of the metagenone assembly levels in ENA:
 
 ![Metagenome assembly levels](images/metagenomes.png)
 
 ## Primary metagenome assembly
 
-Primary assemblies involve assembling your raw sequenced reads into contigs without any attempt to sort the data into taxonomic groups. As a result, there is no knowledge of taxonomy and no seperation of the contig set.
+Primary assemblies involve assembling your raw sequenced reads into contigs without any attempt to sort the data into taxonomic groups. As a result, there is no knowledge of taxonomy and no separation of the contig set.
 
 This is why a primary assembly should be associated with the **environmental** sample. If you have previously submitted your raw data, it should point to this same sample so the origin of the data is easy to follow.
 
 ## Binned metagenome assembly
 
-Binned assemblies involve separating this assembled contig set into separate taxonomically related groups.
-This means that, by associating your data with the same **environmental** sample, you will lose the  taxonomic information that describes these bins.
+Binned assemblies involve separating and/or assembling this contig set into single-taxon assemblies. This means that, by associating your data with the same **environmental** sample, you will lose the taxonomic information that describes these bins.
 
-This is why a binned assembly should be associated with a new **binned** sample. This requires some extra rules so the data can be correctly associated with the original environmental source (either the raw data runs or the **environmental** sample they were assembled from).
+This is why a binned assembly should be associated with a new **binned** sample. This requires some extra rules so the data can be correctly associated with the original environmental source (either the raw data runs or the **environmental** sample they were assembled from) and be searchable by its quality.
 
 When registering a binned sample, you should do the following:
 
@@ -29,23 +28,33 @@ When registering a binned sample, you should do the following:
 
     *"This sample represents a metagenomic bin from the metagenomic run ERRXXXXX"*
 
-2. Include a custom attribute named "sample derived from" with the value being either the ERS accession of the environmental sample or the ERR of the environmental reads. This is important to fill out correctly as it links the data together.
+2. Include the following custom attributes to give context to the quality and metagenome source of your assembly:
 
-3. Include a custom attribute named "isolation_source" with the value being the material the parent sample was isolated from, e.g. "soil" or "gut", to make the souce of the data more searchable.
 
-4. Include a custom attribute named "metagenome_source" with the value being the environmental taxonomy of the parent environmental sample. This makes the sample easy to recognise as originating as part of a metagenomic assembly.
+| custom attribute | value | example |
+|------------------|-------|---------|
+| sample derived from | either the ERS accession of the environmental sample or the ERR of the environmental reads | ERS123456 |
+| isolation_source | material the parent sample was isolated from | gut |
+| metagenomic source | the environmental taxonomy of the patent environmental sample | human gut metagenome |
+| assembly quality | used to describe the quality of the assembly | Many fragments with little to no review of assembly other than reporting of standard assembly statistics (*) |
+| completeness score | the ratio of observed single-copy marker genes to total single-copy marker genes in chosen marker gene set  (*) | 82.35% |
+| contamination score | the ratio of observed single-copy marker genes in ≥2 copies to total single-copy marker genes in chosen marker gene set (*) | 9.25% |
+(*) See the **metagenomic assembly quality** section below for how to format these.
 
-4. Copy other sample attributes from the parent sample to the binned sample as appropriate, e.g. "sampling_station", "event_label", etc. This adds additional context to your environmentally sourced data.
+3. Copy other sample attributes from the MIMAG sample checklist to the binned sample as appropriate, e.g. "collection_date", "geographic location (country and/or sea)", etc. This adds additional context to your environmentally sourced data.
 
-5. Register your sample with as specific taxonomy as possible.
+4. Register your sample with as specific taxonomy as possible.
 
 These attributes ensure that there is enough context to your **binned** sample that it can be linked with the rest of your data and anyone browsing your study can follow the workflow of the assembly.
 
-## MAG or SAG assembly
+## MAG assembly
 
-MAG or SAG assemblies involve assembling species specific groups of contigs to form a metagenome assembled genome of that species, originally derived from an environmental source. As the taxonomy is known and all the MAGs or SAGs will be assembled seperately, they should each be registered with as specific taxonomy as possible to best describe each assembly.
+This submission level is for a single-taxon assembly based on one or more binned metagenomes asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
+There should only be one MAG submitted for each species within a biome. This can be determined using a de-replication step or by choosing the highest quality representative genome for each predicted species.
 
-This is why a MAG or SAG should be associated with a **MAG/SAG** sample. This also requires some extra rules so that the data can be correctly linked with the original environmental source (either the raw data runs or the **environmental** sample).
+Again, by associating your data with the same **environmental** sample, you will lose the  taxonomic information that describes these assemblies.
+
+This is why a MAG should be associated with a **MAG** sample. This also requires some extra rules so that the data can be correctly linked with its source.
 
 When registering a MAG sample, please use the provided MIMAGs checklist, this will guide you through which attributes are mandatory to register a MAG.
 You will notice "sample derived from", "isolation source" and "metagenome source" attributes which explain the context of the data. Please see binned assemblies above for an explanation of these.
@@ -58,28 +67,32 @@ OR
 
 *"This sample represents a MAG from the metagenomic run ERRXXXXX"*
 
+## Metagenomic assembly quality
 
-You will also notice three mandatory fields that reflect quality of a MAG.
+You will notice three attributes that are mandatory for all binned and MAG sample submissions:
 
-1. **Assembly Quality**
+1. **Assembly Quality** - this is valid only as one of the following three sentences which best describes an assembly:
+    - Single contiguous sequence without gaps or ambiguities with a consensus error rate equivalent to Q50 or better
+    - Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S, and 5S rRNA genes and at least 18 tRNAs
+    - Many fragments with little to no review of assembly other than reporting of standard assembly statistics
 
-2. **Completeness Score** - ratio of observed single-copy marker genes to total single-copy marker genes 
-in chosen marker gene set.
+2. **Completeness Score** - the ratio of observed single-copy marker genes to total single-copy marker genes 
+in chosen marker gene set (%).
 
-3. **Contamination Score** - ratio of observed single-copy marker genes in ≥2 copies to total single-copy 
-marker genes in chosen marker gene set.
+3. **Contamination Score** - the ratio of observed single-copy marker genes in ≥2 copies to total single-copy 
+marker genes in chosen marker gene set (%).
 
-It is essential you complete these fields accurately so that the overall quality of the MAG is searchable using the criteria outlined by the Genomic Standards Consortium (GSC) in the 2018 publication [here](https://www.nature.com/articles/nbt.3893#t1 ).
+It is essential you complete these fields accurately so that the overall quality of an assembly is searchable using the criteria outlined by the Genomic Standards Consortium (GSC) in the 2018 publication [here](https://www.nature.com/articles/nbt.3893#t1 ).
 
-If you wish to search for MAGs by quality, these standards are outlined below:
+If you wish to search for binned metagenomes or MAGs by overall quality, these standards are outlined below:
 
 
-**Finished (SAG/MAG)**
+**Finished Assembly**
 
 Assembly quality : Single contiguous sequence without gaps or ambiguities with a consensus error rate equivalent to Q50 or better.
 
 
-**High-quality draft (SAG/MAG)**
+**High-quality draft**
 
 Assembly quality : Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S, and 5S rRNA genes and at least 18 tRNAs.
 
@@ -88,7 +101,7 @@ Completion : >90%
 Contamination : <5%
 
 
-**Medium-quality draft (SAG/MAG)**
+**Medium-quality draft**
 
 Assembly quality : Many fragments with little to no review of assembly other than reporting of standard assembly statistics.
 
@@ -97,7 +110,7 @@ Completion : ≥50%
 Contamination : <10%
 
 
-**Low-quality draft (SAG/MAG)**
+**Low-quality draft**
 
 Assembly quality : Many fragments with little to no review of assembly other than reporting of standard assembly statistics.
 
@@ -106,10 +119,10 @@ Completion : <50%
 Contamination : <10%
 
 
-It is useful to bear in mind these quality thresholds when assembling and submitting MAGs. And it should be noted that for a metagenomic assembly to be considered a MAG, you require a contamination score of <10%. If you assembly falls above this, then please submit as a binned assembly.
+It is useful to bear in mind these quality thresholds when assembling and submitting metagenomic assemblies.
 
 
-When registering a SAG sample, please contact datasubs@ebi.ac.uk for assistance.
+When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact datasubs@ebi.ac.uk for assistance.
 
 Please see [here](cli_07.html) for more information on how to submit your metagenome assemblies to ENA.
 
