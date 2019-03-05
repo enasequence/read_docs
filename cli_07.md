@@ -4,7 +4,7 @@
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](cli_01.html) with `-context genome`.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit environmental Single-cell Amplified Genomes (SAGs) or uncultured viral genomes.
+Please contact datasubs@ebi.ac.uk if you intend to submit environmental Single-cell Amplified Genomes (SAGs), uncultured viral genomes or an assembly assembled from third party data.
 
 A metagenome assembly consists of:
 - General assembly information
