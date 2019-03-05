@@ -241,7 +241,7 @@ Chromosome names must:
     - 'plasmid'
 - be unique within an assembly
 
-### Sequence validation rules
+### Sequence validation
 
 Sequences must:
 - have unique names within an assembly
@@ -249,27 +249,26 @@ Sequences must:
 - not have terminal Ns
 - consist of bases: 'a','c','g','t','u','b','d','h','k','m','n','r','s','v','w','y'
 
+### Sequence count validation
+
+Typically, assembly submissions consisting of sequences that exceed the standard minimum or maximum number are not permitted. However, in specific cases, ENA may allow the submission of genome assemblies that are giving the following errors:
+
+Since Webin 1.7.0:
+
+Invalid number of sequences : XXX, Minimum number of sequences for CONTIG is: YYY
+Invalid number of sequences : XXX, Minimum number of sequences for SCAFFOLD is: YYY
+Invalid number of sequences : XXX, Minimum number of sequences for CHROMOSOME is: YYY
+Invalid number of sequences : XXX, Maximum number of sequences for CONTIG is: YYY
+Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
+Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
+
+This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk . 
+
 ### Assembly updates
 
 Assembly updates must:
 - use the same sample and study pair as was used in the initial assembly submission
 - not remove any chromosomes
-
-## Ignoring validation errors
-
-In specific cases, the helpdesk may allow some genome assembly validation errors to 
-be ignored. This will be done at the discretion of the curation team, and can be 
-requested with an email to datasubs@ebi.ac.uk . The following errors can be ignored
-for specific submission accounts and assembly names:   
-
-Since Webin 1.7.0:
-- Invalid number of sequences : XXX, Minimum number of sequences for CONTIG is: YYY
-- Invalid number of sequences : XXX, Minimum number of sequences for SCAFFOLD is: YYY
-- Invalid number of sequences : XXX, Minimum number of sequences for CHROMOSOME is: YYY
-- Invalid number of sequences : XXX, Maximum number of sequences for CONTIG is: YYY
-- Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
-- Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
-
 
 ## Automatic fixes
 
