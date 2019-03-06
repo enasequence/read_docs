@@ -34,28 +34,36 @@ When registering a binned sample, you should do the following:
 
 2. Include the following custom attributes to give context to the quality and metagenome source of your assembly:
 
-
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| custom attribute    | value                                                                                                                       | example                                                                                                 |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| sample derived from | either the ERS accession of the environmental sample or the ERR of the environmental reads                                  | ERS123456                                                                                               |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| isolation_source    | material the parent sample was isolated from                                                                                | gut                                                                                                     |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| metagenomic source  | the environmental taxonomy of the patent environmental sample                                                               | human gut metagenome                                                                                    |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| assembly quality    | used to describe the quality of the assembly (*)                                                                            | Many fragments with little to no review of assembly other than reporting of standard assembly statistic |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| completeness score  | the ratio of observed single-copy marker genes to total single-copy marker genes in chosen marker gene set  (*)             | 82.35%                                                                                                  |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-| contamination score | the ratio of observed single-copy marker genes in ≥2 copies to total single-copy marker genes in chosen marker gene set (*) | 9.25%                                                                                                   |
-+---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
-
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| custom attribute    | value                                                 | example                                     |
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| sample derived from | either the ERS accession of the environmental sample  | ERS123456                                   |
+|                     | or the ERR of the environmental reads                 |                                             |
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| isolation_source    | material the parent sample was isolated from          | gut                                         |
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| metagenomic source  | the environmental taxonomy of the parent              | human gut metagenome                        |
+|                     | environmental sample                                  |                                             |
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| assembly quality    | used to describe the quality of the assembly (*)      | Many fragments with little to no review of  |
+|                     |                                                       | assembly other than reporting of standard   |
+|                     |                                                       | assembly statistic                          |
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| completeness score  | the ratio of observed single-copy marker genes        | 82.35%                                      |
+|                     | to total single-copy marker genes in chosen marker    |                                             |
+|                     | gene set  (*)                                         |                                             |
++---------------------+-------------------------------------------------------+---------------------------------------------+
+| contamination score | the ratio of observed single-copy marker genes in ≥2  | 9.25%                                       |
+|                     | copies to total single-copy marker genes in chosen    |                                             |
+|                     | marker gene set (*)                                   |                                             |
++---------------------+-------------------------------------------------------+---------------------------------------------+
 (*) See the **metagenomic assembly quality** section below for how to format these.
 
 3. Copy other sample attributes from the MIMAG sample checklist to the binned sample as appropriate, e.g. "collection_date", "geographic location (country and/or sea)", etc. This adds additional context to your environmentally sourced data.
 
+
 4. Register your sample with as specific taxonomy as possible.
+
 
 These attributes ensure that there is enough context to your **binned** sample that it can be linked with the rest of your data and anyone browsing your study can follow the workflow of the assembly.
 
@@ -83,9 +91,10 @@ OR
 Metagenomic assembly quality
 ============================
 
-You will notice three attributes that are mandatory for all binned and MAG sample submissions:
+You will notice three attributes that are mandatory for all binned and MAG sample submissions.
 
-1. **Assembly Quality** - this is valid only as one of the following three sentences which best describes an assembly:
+1. **Assembly Quality** - this is valid only as one of the following three sentences which best describes an assembly.
+
     - Single contiguous sequence without gaps or ambiguities with a consensus error rate equivalent to Q50 or better
     - Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S, and 5S rRNA genes and at least 18 tRNAs
     - Many fragments with little to no review of assembly other than reporting of standard assembly statistics
@@ -98,7 +107,7 @@ marker genes in chosen marker gene set (%).
 
 It is essential you complete these fields accurately so that the overall quality of an assembly is searchable using the criteria outlined by the Genomic Standards Consortium (GSC) in the 2018 publication `here <https://www.nature.com/articles/nbt.3893#t1>`_.
 
-If you wish to search for binned metagenomes or MAGs by overall quality, these standards are outlined below:
+If you wish to search for binned metagenomes or MAGs by overall quality, these standards are outlined below.
 
 
 **Finished Assembly**
