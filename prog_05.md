@@ -203,16 +203,16 @@ as in the following example:
             project. Aligments are in bam format and are presented for each of the 80 A. gambiae
             specimens comprising parents and progeny of four crosses.</DESCRIPTION>
         <STUDY_REF accession="ERP020641"/>
-        <SAMPLE_REF accession="ERS150992" label="AD0370-C"/>
-        <RUN_REF accession="ERR178314" label="8149_4_48"/>
-        <RUN_REF accession="ERR178374" label="8177_1_48"/>
-        <RUN_REF accession="ERR178386" label="8177_2_48"/>
+        <SAMPLE_REF accession="ERS150992"/>
+        <RUN_REF accession="ERR178314"/>
+        <RUN_REF accession="ERR178374"/>
+        <RUN_REF accession="ERR178386"/>
         <ANALYSIS_TYPE>
             <REFERENCE_ALIGNMENT>
                 <ASSEMBLY>
-                    <STANDARD accession="GCA_000005575.1" label="AgamP3"/>
+                    <STANDARD accession="GCA_000005575.1"/>
                 </ASSEMBLY>
-                <SEQUENCE accession="CM000356.1" label="2L"/>
+                <SEQUENCE accession="CM000356.1"/>
             </REFERENCE_ALIGNMENT>
         </ANALYSIS_TYPE>
         <FILES>
@@ -232,20 +232,20 @@ and has three read group tags defined in its header that each represent one run:
 @RG	ID:8177_2_48	PL:ILLUMINA	PU:8177_2_48	LB:AD0370_C_5557918	DS:AGPED1	SM:AD0370-C	CN:SC
 ```
 
-The alignments are associated with the original sequence reads using `label` and `accession`
+The alignments are associated with the original sequence reads using the `accession`
 attributes in `RUN_REF` element:
 
 ```xml
-<RUN_REF accession="ERR178314" label="8149_4_48"/>
-<RUN_REF accession="ERR178374" label="8177_1_48"/>
-<RUN_REF accession="ERR178386" label="8177_2_48"/>
+<RUN_REF accession="ERR178314"/>
+<RUN_REF accession="ERR178374"/>
+<RUN_REF accession="ERR178386"/>
 ```
 
 All three read groups are derived from the same sample which is associated to the `SAMPLE_REF`
-using the `label` attribute:
+using the `accession` attribute:
 
 ```
-<SAMPLE_REF accession="ERS150992" label="AD0370-C""/>
+<SAMPLE_REF accession="ERS150992"/>
 ```
 
 The BAM header contains a single assembly and a reference sequence:
@@ -258,15 +258,15 @@ iae-pestchromosomesagamp3fagz	AS:AgamP3	M5:a4da4bafa82830c0a418c5a42138377b
 ```
 
 The analysis XML associates the assembly and the reference sequence with ENA accessions
-using the `label` and `accession` attributes:
+using the `accession` attribute:
 
 ```xml
 <ANALYSIS_TYPE>
     <REFERENCE_ALIGNMENT>
         <ASSEMBLY>
-            <STANDARD accession="GCA_000005575.1" label="AgamP3"/>
+            <STANDARD accession="GCA_000005575.1"/>
         </ASSEMBLY>
-        <SEQUENCE accession="CM000356.1" label="2L"/>
+        <SEQUENCE accession="CM000356.1"/>
     </REFERENCE_ALIGNMENT>
 </ANALYSIS_TYPE>
 ```
