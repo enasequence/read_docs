@@ -1,18 +1,22 @@
-# Rules for Submitting Metagenomic Samples
+========================================
+Rules for Submitting Metagenomic Samples
+========================================
 
 Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are some rules to regulate the way these samples are submitted to make the quality of the assembly and original source of data as clear as possible.
 
 The following image illustrates the stages of a metagenome assembly study and what is submittable to each of the metagenone assembly levels in ENA:
 
-![Metagenome assembly levels](images/metagenomes.png)
+.. image:: images/metagenomes.png
 
-## Primary metagenome assembly
+Primary metagenome assembly
+===========================
 
 Primary assemblies involve assembling your raw sequenced reads into contigs without any attempt to sort the data into taxonomic groups. As a result, there is no knowledge of taxonomy and no separation of the contig set.
 
 This is why a primary assembly should be associated with the **environmental** sample. If you have previously submitted your raw data, it should point to this same sample so the origin of the data is easy to follow.
 
-## Binned metagenome assembly
+Binned metagenome assembly
+==========================
 
 Binned assemblies involve separating and/or assembling this contig set into single-taxon assemblies. This means that, by associating your data with the same **environmental** sample, you will lose the taxonomic information that describes these bins.
 
@@ -31,14 +35,21 @@ When registering a binned sample, you should do the following:
 2. Include the following custom attributes to give context to the quality and metagenome source of your assembly:
 
 
-| custom attribute    | value                                                                                                                       | example                                                                                                  |
-|---------------------|-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
-| sample derived from | either the ERS accession of the environmental sample or the ERR of the environmental reads                                  | ERS123456                                                                                                |
-| isolation_source    | material the parent sample was isolated from                                                                                | gut                                                                                                      |
-| metagenomic source  | the environmental taxonomy of the patent environmental sample                                                               | human gut metagenome                                                                                     |
-| assembly quality    | used to describe the quality of the assembly (*)                                                                            | Many fragments with little to no review of assembly other than reporting of standard assembly statistics |
-| completeness score  | the ratio of observed single-copy marker genes to total single-copy marker genes in chosen marker gene set  (*)             | 82.35%                                                                                                   |
-| contamination score | the ratio of observed single-copy marker genes in ≥2 copies to total single-copy marker genes in chosen marker gene set (*) | 9.25%                                                                                                    |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| custom attribute    | value                                                                                                                       | example                                                                                                 |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| sample derived from | either the ERS accession of the environmental sample or the ERR of the environmental reads                                  | ERS123456                                                                                               |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| isolation_source    | material the parent sample was isolated from                                                                                | gut                                                                                                     |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| metagenomic source  | the environmental taxonomy of the patent environmental sample                                                               | human gut metagenome                                                                                    |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| assembly quality    | used to describe the quality of the assembly (*)                                                                            | Many fragments with little to no review of assembly other than reporting of standard assembly statistic |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| completeness score  | the ratio of observed single-copy marker genes to total single-copy marker genes in chosen marker gene set  (*)             | 82.35%                                                                                                  |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
+| contamination score | the ratio of observed single-copy marker genes in ≥2 copies to total single-copy marker genes in chosen marker gene set (*) | 9.25%                                                                                                   |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+
 
 (*) See the **metagenomic assembly quality** section below for how to format these.
 
@@ -48,7 +59,8 @@ When registering a binned sample, you should do the following:
 
 These attributes ensure that there is enough context to your **binned** sample that it can be linked with the rest of your data and anyone browsing your study can follow the workflow of the assembly.
 
-## MAG assembly
+MAG assembly
+============
 
 This submission level is for a single-taxon assembly based on one or more binned metagenomes asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
 There should only be one MAG submitted for each species within a biome. This can be determined using a de-replication step or by choosing the highest quality representative genome for each predicted species.
@@ -68,7 +80,8 @@ OR
 
 *"This sample represents a MAG from the metagenomic run ERRXXXXX"*
 
-## Metagenomic assembly quality
+Metagenomic assembly quality
+============================
 
 You will notice three attributes that are mandatory for all binned and MAG sample submissions:
 
@@ -83,7 +96,7 @@ in chosen marker gene set (%).
 3. **Contamination Score** - the ratio of observed single-copy marker genes in ≥2 copies to total single-copy 
 marker genes in chosen marker gene set (%).
 
-It is essential you complete these fields accurately so that the overall quality of an assembly is searchable using the criteria outlined by the Genomic Standards Consortium (GSC) in the 2018 publication [here](https://www.nature.com/articles/nbt.3893#t1 ).
+It is essential you complete these fields accurately so that the overall quality of an assembly is searchable using the criteria outlined by the Genomic Standards Consortium (GSC) in the 2018 publication `here <https://www.nature.com/articles/nbt.3893#t1>`_.
 
 If you wish to search for binned metagenomes or MAGs by overall quality, these standards are outlined below:
 
@@ -125,9 +138,4 @@ It is useful to bear in mind these quality thresholds when assembling and submit
 
 When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact datasubs@ebi.ac.uk for assistance.
 
-Please see [here](cli_07.html) for more information on how to submit your metagenome assemblies to ENA.
-
-
-
-
-
+Please see `here <cli_07.html>`_ for more information on how to submit your metagenome assemblies to ENA.
