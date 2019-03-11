@@ -224,6 +224,7 @@ These accession numbers are also sent to the submitters by e-mail.
 Assembly names must:
 - match the pattern: ^[A-Za-z0-9][A-Za-z0-9 _#\-\.]*$
 - be shorter than 100 characters
+- not include the name of the organism assembled
            
 ### Chromosome name validation
     
