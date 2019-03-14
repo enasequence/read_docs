@@ -35,9 +35,19 @@ run using the `java` command:
 
 for example:
 
-`java -jar webin-cli-1.6.0.jar <options>`
+`java -jar webin-cli-1.7.3.jar <options>`
 
 The `<version>` is the version number of the program.
+
+Please note that the command must include the location of the jar file. For example, if 
+have it in your Downloads directory, the appropriate command on Mac/Linux on immediately
+opening the terminal would be:
+
+`java -jar Downloads/webin-cli-1.7.3.jar <options>`
+
+On Windows a backward slash is used instead of a forward slash:
+
+`java -jar Downloads\webin-cli-1.7.3.jar <options>`
 
 The command line `<options>` are explained below.
 
