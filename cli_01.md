@@ -31,9 +31,11 @@ We have tested Webin-CLI against Oracle Java 8 Runtime Environment (JRE) version
 We recommend that all submitters use this version.
 
 Latest oracle JREs can be downloaded from here:
+
 https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
 Older oracle JREs can be downloaded from here:
+
 https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
 
 ## Using the Program
