@@ -114,29 +114,29 @@ To view all environmental taxonomy available please visit [ENA tax portal](https
 
 If you are submitting sequences or assemblies that have been identified taxonomically from homology alone, with no culturing or isolation of the organism beforehand, then we also consider these as environmental samples. These samples should be registered with uncultured taxonomy to make it clear they were derived from an environmental source.
 
-A typical use-case of this would be the submission of a single fully assembled genome from a mixed DNA sample (i.e., from a metagenomic source).  There are exceptions where this taxonomy should not be used: for example, organisms which can be reliably recovered from their diseased host (e.g., endosymbionts, phyoplasmas) and organisms from samples which are readily identifiable by other means (e.g., cyanobacteria); organisms such as these are not considered uncultured/environmental in the way described here. If you are unsure whether your sample should be registered as environmental, contact datasubs@ebi.ac.uk for assistance.
+A typical use-case of this would be the submission of a single fully assembled genome from a mixed DNA sample (i.e., from a metagenomic source).  There are exceptions where this taxonomy should not be used: for example, organisms which can be reliably recovered from their diseased host (e.g., endosymbionts, phytoplasmas) and organisms from samples which are readily identifiable by other means (e.g., cyanobacteria); organisms such as these are not considered uncultured/environmental in the way described here. If you are unsure whether your sample should be registered as environmental, contact datasubs@ebi.ac.uk for assistance.
 
 Environmental organism-level taxa are usually prefixed with the term uncultured and are not allowed to have a species epithet. Some examples of basic organism names that can be used include:
 
-    uncultured bacterium  (taxid:77133)
-    uncultured archaeon  (taxid:115547)
-    uncultured cyanobacterium  (taxid:1211)
-    uncultured prokaryote  (taxid:198431)
-    uncultured fungus  (taxid:175245)
-    uncultured eukaryote  (taxid:100272)
+*uncultured bacterium  (taxid:77133)*
+*uncultured archaeon  (taxid:115547)*
+*uncultured cyanobacterium  (taxid:1211)*
+*uncultured prokaryote  (taxid:198431)*
+*uncultured fungus  (taxid:175245)*
+*uncultured eukaryote  (taxid:100272)*
 
 Where possible, you should register your samples with the most granular identification possible, up to Genus level. For example, for prokaryotes, the format is:
 
 uncultured \<Rank\> sp.
 
-    e.g. uncultured Bacillus sp.
-    e.g. uncultured Thermococcus sp.
+*e.g. uncultured Bacillus sp.*
+*e.g. uncultured Thermococcus sp.*
 
  For Fungi, the ‘sp.’ is dropped:
 
 uncultured \<Rank\>
 
-    e.g., uncultured Glomus
-    e.g., uncultured Saccharomycetes
+*e.g., uncultured Glomus*
+*e.g., uncultured Saccharomycetes*
 
 When registering samples that use uncultured taxonomy, a general environmental record should also be registered to describe the biome that was originally sequenced. This biome-level environmental sample should also be referenced within the organism-level sample using the "sample derived from" attribute.
