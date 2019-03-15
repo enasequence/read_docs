@@ -26,6 +26,16 @@ The program requires Java 1.8 or newer which can be downloaded from:
 
 <https://java.com/en/download/>
 
+We have tested Webin-CLI against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202.
+
+We recommend that all submitters use this version.
+
+Latest oracle JREs can be downloaded from here:
+https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+
+Older oracle JREs can be downloaded from here:
+https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html
+
 ## Using the Program
 
 The  Webin command line submission interface is a self-executing Java jar file and is
