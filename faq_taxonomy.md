@@ -127,14 +127,14 @@ Environmental organism-level taxa are usually prefixed with the term uncultured 
 
 Where possible, you should register your samples with the most granular identification possible, up to Genus level. For example, for prokaryotes, the format is:
 
-uncultured <Rank> sp.
+uncultured \<Rank\> sp.
 
     e.g. uncultured Bacillus sp.
     e.g. uncultured Thermococcus sp.
 
  For Fungi, the ‘sp.’ is dropped:
 
-uncultured <Rank>
+uncultured \<Rank\>
 
     e.g., uncultured Glomus
     e.g., uncultured Saccharomycetes
