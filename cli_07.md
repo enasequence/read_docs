@@ -4,7 +4,7 @@
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](cli_01.html) with `-context genome`.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit environmental Single-cell Amplified Genomes (SAGs), uncultured viral genomes or an assembly assembled from third party data.
+Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data, environmental Single-cell Amplified Genomes (SAGs), uncultured viral genomes or if you are unable to provide the raw data for your assembly.
 
 A metagenome assembly consists of:
 - General assembly information
@@ -27,12 +27,11 @@ The following picture illustrates the stages of the metagenome assembly submissi
 
 ## Stage 1: Pre-register study and metagenomic samples
 
-Each submission must be associated with a pre-registered study and 1 or more pre-registered metagenomic samples.
+Each submission must be associated with a pre-registered study and one or more pre-registered metagenomic samples.
 
-All metagenomic assemblies should have at least one **environmental** sample registered that represents where the original sequencing data was extracted from.  If raw reads have also been submitted, this sample can be reused. Please make sure the appropriate environmental checklist is chosen for this and an environmental taxon is used (e.g. aquatic metagenome (tax id: 1169740)).
+All metagenomic assemblies should have at least one **environmental** sample registered that represents where the original sequencing data was extracted from.  This sample should be the same sample used to submit your raw reads. Please make sure the appropriate environmental checklist is chosen for this and an environmental taxon is used (e.g. aquatic metagenome (tax id: 1169740)).
 
-See the available environmental taxa in the [ENA Tax Portal](https://www.ebi.ac.uk/ena/data/view/Taxon:408169). 
-Click on the *Tax tree* tab and click the '+' icons to expand the categories.
+For information about biome-level environmental taxonomy please see [here](faq_taxonomy.html#environmental-biome-level-taxonomy).
 
 Any additional samples required for submission of a metagenome assembly depends on the assembly level:
 
@@ -52,23 +51,35 @@ MAG submissions should only consist of high quality, unique, single-taxon repres
 
 This submission level is for a metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
 
-If you are submitting a primary assembly, you only need to reference the **environmental** sample as the taxonomy 
-of the organisms within the sample are still unknown. This means you are not required to pre-register any further samples.
+If you are submitting a primary assembly, you only need to reference the **environmental** sample as the taxonomy of the organisms within the assembly are still unknown. This means you are not required to pre-register any further samples.
 
 ### Binned metagenome
 
 This submission level is for a set of contigs or a genome assembly grouped into a single-taxon set.
 
-If you are submitting binned assemblies, you will need to submit an additional **binned** sample for each bin. This should be as specific in taxonomy as it can be and follow these additional [sample rules](faq_metagenomes.html).
+If you are submitting binned assemblies then you will need to submit an additional **binned** sample for each bin. This should be as specific in taxonomy as it can be and use the specific **ENA binned metagenome** checklist.
+
+For information about organism-level environmental taxonomy please see [here](faq_taxonomy.html#environmental-organism-level-taxonomy).
+
+Please make sure these **binned** samples correctly reference the **environmental** sample that the bin was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as one of the following:
+
+“This sample represents a metagenomic bin from the metagenomic sample ERSXXXXX”
+
+OR
+
+“This sample represents a metagenomic bin from the metagenomic run ERRXXXXX”
+
+If the assembly was derived from multiple samples or runs you can list these here with a comma separated list or range.
 
 ### Metagenome Assembled Genome (MAG)
 
 This submission level is for a single-taxon assembly based on one or more binned metagenomes asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
+
 There should only be one MAG submitted for each species within a biome. This can be determined using a de-replication step or by choosing the highest quality representative genome for each predicted species.
 
-If you are submitting MAGs then you will need to submit an additional **MAG** sample for each assembly. This should be as specific in taxonomy as it can be and use the specific MIMAGs checklist.
+If you are submitting MAGs then you will need to submit an additional **MAG** sample for each assembly. This should be as specific in taxonomy as it can be and use the specific **GSC MIMAGs** checklist.
 
-Please make sure these **MAG** samples correctly reference the **binned** sample that the MAG was derived from. This can be done from within the checklist using the mandatory “Sample derived from” attribute. You should also reference the **environmental** sample in the description as one of the following:
+Please make sure these **MAG** samples correctly reference the **binned** sample that the MAG was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as one of the following:
 
 “This sample represents a MAG from the metagenomic sample ERSXXXXX”
 
@@ -76,9 +87,11 @@ OR
 
 “This sample represents a MAG from the metagenomic run ERRXXXXX”
 
+If the assembly was derived from multiple samples or runs you can list these here with a comma separated list or range.
+
 More information about how and why we use this additional sample information can be found [here](faq_metagenomes.html).
 
-The methods for submitting these studies follow the same process as any other study/sample submission. Follow the links for more information.
+The methods for submitting metagenomic studies and samples follow the same process as any other study/sample submission. Follow the links for more information.
 
 Instructions for interactive submitters:
 
@@ -99,7 +112,7 @@ Please review Stage 1 and make sure you are familiar with the metagenome assembl
 
 ### Primary metagenome
 
-Assemblies in this level should be submitted associated with an **environmental** sample.
+Assemblies in this level should be submitted associated with an **environmental** sample, referenced from within the manifest file.
 
 A primary metagenome assembly submission consists of the following files:
 
@@ -110,7 +123,7 @@ This assembly level only requires information on the sequences.
 
 ### Binned metagenome
 
-Assemblies in this level should be submitted associated with a **binned** sample.
+Assemblies in this level should be submitted associated with a **binned** sample, referenced from within the manifest file.
 
 A binned metagenome assembly submission consists of the following files:
 
@@ -121,7 +134,7 @@ This assembly level only requires information on the sequences.
 
 ### Metagenome Assembled Genome (MAG)
 
-Assemblies in this level should be submitted associated with a **MAG** sample.
+Assemblies in this level should be submitted associated with a **MAG** sample, referenced from within the manifest file.
 
 A MAG assembly submission consists of the following files:
 
@@ -170,8 +183,7 @@ The following file name fields are supported in the manifest file:
 - AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
 - CHROMOSOME_LIST: list of chromosomes
 
-For example, the following manifest file represents a metagenome assembly consisting of contigs 
-provided in one fasta file:
+For example, the following manifest file represents a metagenome assembly consisting of contigs provided in one fasta file:
 
 ```
 STUDY   TODO
@@ -189,6 +201,7 @@ FASTA   metagenome.fasta.gz
 ## Stage 3: Validate and submit the files
 
 Files are validated, uploaded and submitted using the [Webin command line submission interface](cli_01.html). 
+
 Please refer to the [Webin command line submission interface](cli_01.html) documentation for more information about the submission process.
 
 ## Assigned accession numbers
