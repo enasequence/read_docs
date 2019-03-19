@@ -1,6 +1,6 @@
-=================================
-Common Metagenomic Sample Queries
-=================================
+====================================
+Common Metagenome Submission Queries
+====================================
 
 Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are often many queries regarding how these assemblies are submitted in order to make the quality of the assembly and original source of data as clear as possible.
 
@@ -19,7 +19,7 @@ Within ENA, a MAG is described as a single-taxon assembly based on one or more b
 
 There should only be one MAG submitted for each species within a biome. This can be determined using a de-replication step or by choosing the highest quality representative genome for each predicted species.
 
-MAG assemblies are registered within ENA in the same domain as cultured isolate genome assemblies which means that these genome assemblies are searchable alongside cultured isolates and are used by the same downstream processes. As a metagenomic sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone to contamination, we request only the highest quality unique-taxon submissions are submitted as MAGs. This means only the highest quality sequences and most accurate annotated features are used within these downstream services to keep them as relevant and informative as possible.
+MAG assemblies are registered within ENA in the same domain as cultured isolate genome assemblies which means that these genome assemblies are searchable alongside cultured isolates and are used by the same downstream processes. As an environmental sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone to contamination, we request only the highest quality unique-taxon submissions are submitted as MAGs. This means only the highest quality sequences and most accurate annotated features are used within these downstream services to keep them as relevant and informative as possible.
 
 How is the quality of a metagenomic assembly defined?
 =====================================================
@@ -42,16 +42,16 @@ Any assembly where the assembly quality is defined as: "Single contiguous sequen
 
 An assembly with the following criteria:
 
-+---------------------+--------------------------------------------------------------------------------------+
-| Attribute           | Value                                                                                |
-+---------------------+--------------------------------------------------------------------------------------+
-| assembly quality    | | Multiple fragments where gaps span repetitive regions. Presence of the 23S, 16S    |
-|                     | | and 5S rRNA genes and at least 18 tRNAs.                                           |
-+---------------------+--------------------------------------------------------------------------------------+
-| completeness score  | >90%                                                                                 |
-+---------------------+--------------------------------------------------------------------------------------+
-| contamination score | <5%                                                                                  |
-+---------------------+--------------------------------------------------------------------------------------+
++---------------------+------------------------------------------------------------------------------------+
+| Attribute           | Value                                                                              |
++---------------------+------------------------------------------------------------------------------------+
+| assembly quality    | | Multiple fragments where gaps span repetitive regions. Presence of the 23S,      |
+|                     | | 16S and 5S rRNA genes and at least 18 tRNAs.                                     |
++---------------------+------------------------------------------------------------------------------------+
+| completeness score  | >90%                                                                               |
++---------------------+------------------------------------------------------------------------------------+
+| contamination score | <5%                                                                                |
++---------------------+------------------------------------------------------------------------------------+
 
 **Medium-quality draft**
 
@@ -90,7 +90,7 @@ How do I navigate through a metagenomics study?
 
 When submitting metagenomic samples it is important to enter the “sample derived from” field correctly.
 
-This field is used to correctly trace back your data through the assembly stages back to its environmental biome-level origin. Users viewing the data can then also utilise the “sample derived from” attribute to navigate back through the assembly making your methods clear and reproducible.
+This field is used to correctly trace back your data through the assembly stages to its environmental biome-level origin. Users viewing the data can then also utilise the “sample derived from” attribute to navigate through the assemblies making your methods clear and reproducible.
 
 It is important to note that you can access all the assembly layers from the study itself. However, these assemblies do not associate with each other. To look for associated metadata for these assemblies and which assemblies are derived from which, you should refer to the samples.
 
