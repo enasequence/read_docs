@@ -2,7 +2,7 @@
 
 ## The Tax Database
 
-Every ENA sample object should have a taxonomic classification. The INSDC maintains a database of all unique taxonomy classifications known to us and you should apply one from this database when you create your samples. Each classification has a unique id and this is expanded to show the scientific name and common name of the organism when the sample is viewed.
+Every ENA sample object should have a taxonomic classification. The INSDC maintains a database of all unique taxonomic classifications known to us and you should apply one from this database when you create your samples. Each classification has a unique id and this is expanded to show the scientific name and common name of the organism when the sample is viewed.
 
 The [interactive submission service](https://www.ebi.ac.uk/ena/submit/sra/#home) has a look up table which you can use before you download the spreadsheet template so that you already know what taxonomy identifications to apply when you are creating your samples offline (step 8 in <a href="mod_01.html">module 1</a>). There is also a look up <a href="https://www.ebi.ac.uk/ena/data/warehouse/search?portal=taxon">here</a>, in the taxon domain of the ENA advanced search.
 
@@ -85,7 +85,11 @@ In each case above a JSON document is outputted and you will be looking for the 
 
 ## Environmental Taxonomic Classifications
 
-Every sample object in the ENA must have a taxonomic classification assigned to it. Of course environmental samples typically collected for metagenomic studies can not have a single organism identifier because they represent an environment with an unknown variety and number of organisms. For this purpose we have entries in the taxonomic database to apply exclusively to environmental samples. You can search for these terms using the methods described above - they tend to have "metagenome" as part of the scientific name.
+### Environmental Biome-Level Taxonomy 
+
+Every sample object in ENA must have a taxonomic classification assigned to it. Environmental samples can not be described with a single organism identifier because they represent an environment with an unknown variety and number of organisms.
+
+For this purpose there are entries in the Tax Database that apply exclusively to environmental samples. Taxa of this type can be immediately identified as they contain the term "metagenome" as part of the scientific name. These are searchable within the Tax Database using the same methods described above.
 
 ```bash
 curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%20meta"
@@ -97,306 +101,40 @@ curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%
   }
 ```
 
-To have an idea of what environmental sample names are available, below is a list.
-
-<div style="height:300px;width:500px;border:1px solid;overflow:auto;">
-Generic
-
-     metagenome
-
-     synthetic metagenome
-
-     ecological metagenomes
-
-     organismal metagenomes
-
-
-Specific
-
-ecological metagenomes sub nodes
-
-    activated carbon metagenome
-    activated sludge metagenome
-    aerosol metagenome
-    air metagenome
-    alkali sediment metagenome
-    anaerobic digester metagenome
-    anchialine metagenome
-    ant fungus garden metagenome
-    aquatic metagenome
-    aquifer metagenome
-    ballast water metagenome
-    beach sand metagenome
-    bioanode metagenome
-    biocathode metagenome
-    biofilm metagenome
-    biofilter metagenome
-    biofloc metagenome
-    biogas fermenter metagenome
-    bioreactor metagenome
-    bioreactor sludge metagenome
-    biosolids metagenome
-    cave metagenome
-    clinical metagenome
-    cloud metagenome
-    coal metagenome
-    cold seep metagenome
-    compost metagenome
-    concrete metagenome
-    coral reef metagenome
-    cow dung metagenome
-    crude oil metagenome
-    decomposition metagenome
-    dietary supplements metagenome
-    dust metagenome
-    electrolysis cell metagenome
-    estuary metagenome
-    fermentation metagenome
-    fertilizer metagenome
-    floral nectar metagenome
-    flotsam metagenome
-    food contamination metagenome
-    food fermentation metagenome
-    food metagenome
-    food production metagenome
-    freshwater metagenome
-    freshwater sediment metagenome
-    fuel tank metagenome
-    gas well metagenome
-    glacier lake metagenome
-    glacier metagenome
-    groundwater metagenome
-    halite metagenome
-    herbal medicine metagenome
-    honey metagenome
-    hospital metagenome
-    hot springs metagenome
-    HVAC metagenome
-    hydrocarbon metagenome
-    hydrothermal vent metagenome
-    hypersaline lake metagenome
-    hyphosphere metagenome
-    hypolithon metagenome
-    ice metagenome
-    indoor metagenome
-    industrial waste metagenome
-    interstitial water metagenome
-    lagoon metagenome
-    lake water metagenome
-    landfill metagenome
-    leaf litter metagenome
-    lichen crust metagenome
-    lobster shelll metagenome
-    mangrove metagenome
-    manure metagenome
-    marine metagenome
-    marine plankton metagenome
-    marine sediment metagenome
-    metal metagenome
-    microbial fuel cell metagenome
-    microbial mat metagenome
-    milk metagenome
-    mine drainage metagenome
-    mine tailings metagenome
-    mixed culture metagenome
-    money metagenome
-    moonmilk metagenome
-    mud volcano metagenome
-    museum specimen metagenome
-    musk metagenome
-    neuston metagenome
-    oasis metagenome
-    oil field metagenome
-    oil metagenome
-    oil production facility metagenome
-    oil sands metagenome
-    outdoor metagenome
-    paper pulp metagenome
-    parchment metagenome
-    peat metagenome
-    periphyton metagenome
-    permafrost metagenome
-    phytotelma metagenome
-    pitcher plant inquiline metagenome
-    plastisphere metagenome
-    pond metagenome
-    poultry litter metagenome
-    power plant metagenome
-    probiotic metagenome
-    retting metagenome
-    rhizoplane metagenome
-    rhizosphere metagenome
-    rice paddy metagenome
-    riverine metagenome
-    rock metagenome
-    rock porewater metagenome
-    root associated fungus metagenome
-    saline spring metagenome
-    salt lake metagenome
-    salt marsh metagenome
-    salt mine metagenome
-    saltern metagenome
-    sand metagenome
-    seawater metagenome
-    sediment metagenome
-    shale gas metegenome
-    silage metagenome
-    sludge metagenome
-    snow metagenome
-    snowblower vent metagenome
-    soda lake metagenome
-    soil crust metagenome
-    soil metagenome
-    solid waste metagenome
-    steel metagenome
-    stromatolite metagenome
-    subsurface metagenome
-    surface metagenome
-    tar pit metagenome
-    termitarium metagenome
-    termite fungus garden metagenome
-    terrestrial metagenome
-    tidal flat metagenome
-    tin mine metagenome
-    tobacco metagenome
-    tomb wall metagenome
-    urban metagenome
-    wastewater metagenome
-    wetland metagenome
-    whale fall metagenome
-    wine metagenome
-    wood decay metagenome
-
-organismal metagenomes sub nodes
-
-    algae metagenome
-    annelid metagenome
-    ant metagenome
-    aquatic viral metagenome
-    bat metagenome
-    bear gut metagenome
-    beetle metagenome
-    bird metagenome
-    blood metagenome
-    bovine gut metagenome
-    bovine metagenome
-    cetacean metagenome
-    chicken gut metagenome
-    ciliate metagenome
-    coral metagenome
-    crab metagenome
-    crustacean metagenome
-    ctenophore metagenome
-    dinoflagellate metagenome
-    ear metagenome
-    echinoderm metagenome
-    endophyte metagenome
-    epibiont metagenome
-    eye metagenome
-    feces metagenome
-    feline metagenome
-    fish gut metagenome
-    fish metagenome
-    flower metagenome
-    fossil metagenome
-    frog metagenome
-    fungus metagenome
-    gill metagenome
-    gonad metagenome
-    grain metagenome
-    grasshopper gut metagenome
-    gut metagenome
-    honeybee metagenome
-    human bile metagenome
-    human blood metagenome
-    human brain metagenome
-    human eye metagenome
-    human gut metagenome
-    human gut metagenome gcode 4
-    human lung metagenome
-    human metagenome
-    human milk metagenome
-    human nasopharyngeal metagenome
-    human oral metagenome
-    human reproductive system metagenome
-    human saliva metagenome
-    human semen metagenome
-    human skeleton metagenome
-    human skin metagenome
-    human tracheal metagenome
-    human vaginal metagenome
-    hydrozoan metagenome
-    insect gut metagenome
-    insect metagenome
-    invertebrate gut metagenome
-    invertebrate metagenome
-    jellyfish metagenome
-    koala metagenome
-    leaf metagenome
-    lichen metagenome
-    liver metagenome
-    lung metagenome
-    marsupial metagenome
-    mite metagenome
-    mollusc metagenome
-    mosquito metagenome
-    moss metagenome
-    mouse gut metagenome
-    mouse metagenome
-    mouse skin metagenome
-    nematode metagenome
-    oral metagenome
-    oral-nasopharyngeal metagenome
-    ovine metagenome
-    oyster metagenome
-    parasite metagenome
-    phage metagenome
-    phyllosphere metagenome
-    pig gut metagenome
-    pig metagenome
-    placenta metagenome
-    plant metagenome
-    pollen metagenome
-    primate metagenome
-    psyllid metagenome
-    rat gut metagenome
-    rat metagenome
-    reproductive system metagenome
-    respiratory tract metagenome
-    rodent metagenome
-    root metagenome
-    scorpion gut metagenome
-    sea anemone metagenome
-    sea squirt metagenome
-    sea urchin metagenome
-    seagrass metagenome
-    seed metagenome
-    sheep gut metagenome
-    sheep metagenome
-    shoot metagenome
-    shrimp gut metagenome
-    skin metagenome
-    snake metagenome
-    spider metagenome
-    sponge metagenome
-    stomach metagenome
-    symbiont metagenome
-    termite gut metagenome
-    termite metagenome
-    tick metagenome
-    upper respiratory tract metagenome
-    urine metagenome
-    urogenital metagenome
-    vaginal metagenome
-    viral metagenome
-    wallaby gut metagenome
-    wasp metagenome
-    zebrafish metagenome
-
-</div>
-
-This list is not updated so you should check the <a href="https://www.ebi.ac.uk/ena/data/view/Taxon:408169">ENA tax portal</a> for the most recent additions. Click on the *Tax tree* tab and click the '+' icons to expand the categories:
+To view all environmental taxonomy available please visit [ENA tax portal](https://www.ebi.ac.uk/ena/data/view/Taxon:408169). Click on the *Tax tree* tab and click the '+' icons to expand the categories:
 
 ![metagenome](images/tax_p01.png)
 
- These environmental terms go in the scientific name field of the sample object. To find the tax ID use the method outlined <a href="#rest-access-to-the-tax-database">above</a> (scientific-name endpoint). For example you can paste the following into your browser to find the tax ID for *termite fungus garden metagenome*: `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`.
+ The metagenomic term that is used to describe the biome is also the scientific name of the chosen taxon and can be used to find the tax ID in the same methods described above. For example, you can find the tax ID for *termite fungus garden metagenome* here:
+ `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`.
+ 
+ Please note that new metagenome taxonomic records are rarely added, particularly those that add granularity. Please use the closest available choice, even if this is a less granular option. Only request a new term if you are sure you are unable to use anything in the lists available.
+
+### Environmental Organism-Level Taxonomy
+
+If you are submitting sequences or assemblies that have been identified taxonomically from homology alone, with no culturing or isolation of the organism beforehand, then we also consider these as environmental samples. These samples should be registered with uncultured taxonomy to make it clear they were derived from an environmental source.
+
+A typical use-case of this would be the submission of a single fully assembled genome from a mixed DNA sample (i.e., from a metagenomic source).  There are exceptions where this taxonomy should not be used: for example, organisms which can be reliably recovered from their diseased host (e.g., endosymbionts, phytoplasmas) and organisms from samples which are readily identifiable by other means (e.g., cyanobacteria); organisms such as these are not considered uncultured/environmental in the way described here. If you are unsure whether your sample should be registered as environmental, contact datasubs@ebi.ac.uk for assistance.
+
+Environmental organism-level taxa are usually prefixed with the term uncultured and are not allowed to have a species epithet. Some examples of basic organism names that can be used include:
+
+- *uncultured bacterium  (taxid:77133)*
+- *uncultured archaeon  (taxid:115547)*
+- *uncultured cyanobacterium  (taxid:1211)*
+- *uncultured prokaryote  (taxid:198431)*
+- *uncultured fungus  (taxid:175245)*
+- *uncultured eukaryote  (taxid:100272)*
+
+Where possible, you should register your samples with the most granular identification possible, up to Genus level. For example, for prokaryotes, the format is:
+
+uncultured \<Rank\> sp.
+
+*e.g. uncultured Bacillus sp.*
+
+ For Fungi, the ‘sp.’ is dropped:
+
+uncultured \<Rank\>
+
+*e.g., uncultured Glomus*
+
+When registering samples that use uncultured taxonomy, a general environmental record should also be registered to describe the biome that was originally sequenced. This biome-level environmental sample should also be referenced within the organism-level sample using the "sample derived from" attribute.

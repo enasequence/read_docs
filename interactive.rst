@@ -10,5 +10,8 @@ Interactive Submissions
    mod_04
    mod_05
    mod_06
-   mod_07
-   mod_08
+
+.. note::
+
+    It is no longer possible to submit genome assemblies through the Interactive
+    submission route. Please use `Webin-CLI <cli.html>`_ to do this.

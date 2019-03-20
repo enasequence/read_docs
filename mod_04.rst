@@ -31,23 +31,54 @@ Step 1: Choose A Study To Add To
 Step 2: Describe Your Experiments
 =================================
 
+In this step, you will register the files you uploaded so that they may be
+archived, and provide metadata explaining how they were produced.
+
+1. First, you will need to select the file format your runs are to be submitted
+   in:
+
 .. image:: images/mod_04_p02.png
+    :scale: 50 %
+    :align: center
 
-In this step, you will register the files you uploaded so that they may be archived.
+2. If you switch to any of the other tabs while filling out run information, the
+   information you have already entered in the New Submission tab will be
+   preserved:
 
-1. Choose the type of file(s) you will be submitting.
-2. Fill out the fields to provide a description of your experiment.
-3. The 'Sample Reference Suggestions' dropdown contains the aliases of any samples you registered in the previous step.
-   If you didn't register your samples this way, it will be empty and you should manually enter a sample alias in the 'Sample Reference' field.
-4. File names entered here must correspond exactly with the name of the file in your submission directory, including any subdirectories in which your file may exist.
-5. A checksum is a 'fingerprint' of your file which will allow us to verify that it was uploaded without any corruption.
+.. image:: images/mod_04_p03.png
 
-   a. In Linux and Mac, you can generate this value from the command line by running the command 'md5' or 'md5sum' on the file.
-   b. Microsoft has a `support article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_ on performing this activity for Windows.
-   c. If you uploaded your files with the Webin File Uploader, a .md5 file will have been created for you and you should leave this field blank.
+3. You can download a template spreadsheet to enter details of your submission
+   into, then reupload it later to complete your submission.
+4. The third button will download the spreadsheet containing any information you
+   have already entered.
 
-6. If you are submitting many experiments, you may find it more convenient to download a template spreadsheet and enter your submission into this.
-   Note that if you close the browser before you complete the submission, the details you have entered will be lost. A spreadsheet will help avoid this.
-7. Click the 'Upload Spreadsheet' button to upload a spreadsheet you have prepared.
-8. The 'Download Spreadsheet' button downloads a template containing all the information you have entered.
-9. When you have completed the form and resolved any errors, click 'Submit' to finish.
+.. image:: images/mod_04_p04.png
+
+5. Fill out each field to provide a description of your experiment.
+6. The 'Sample Reference' box must contain the accession or alias of a sample
+   you have registered with us.
+7. The 'Sample Reference Suggestions' box will contain references to any
+   samples you registered in the previous step, but will otherwise be empty. In
+   the latter case, look up the appropriate aliases and enter them manually.
+8. Use the green cross to add more rows.
+
+.. image:: images/mod_04_p05.png
+
+9. The file name must exactly correspond with the name of a file in your upload
+   directory including any subdirectories (see the top of this page if you have
+   not uploaded your files.
+10. The checksum is a 'fingerprint' of the file which will allow us to verify
+    that it was uploaded successfully. In Linux and Mac, you can generate this
+    value from the command line by running the command 'md5' or 'md5sum' on the
+    file, while Microsoft has a `support article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_
+    on performing this activity for Windows.
+
+.. image:: images/mod_04_p06.png
+
+11. When you have filled out all the information you need to, click 'Submit' to
+    finish submission. Accession numbers will be provided as soon as the
+    submission is completed.
+
+.. image:: images/mod_04_p07.png
+    :scale: 50 %
+    :align: center

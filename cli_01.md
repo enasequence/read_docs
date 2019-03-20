@@ -7,8 +7,10 @@ service and the Webin command line submission service.
 
 This module gives an introduction to the Webin command line submission interface
 used to validate, upload and submit files to the European Nucleotide Archive (ENA).
-Please note that unlike with other ENA submissions routes you may have used, you 
+Please note that unlike with other ENA submissions routes you may have used, you
 do not need to pre-upload your files when using Webin-CLI.
+
+Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
 ## Registration
 
@@ -24,6 +26,18 @@ The program requires Java 1.8 or newer which can be downloaded from:
 
 <https://java.com/en/download/>
 
+We have tested Webin-CLI against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202.
+
+We recommend that all submitters use this version.
+
+Latest oracle JREs can be downloaded from here:
+
+<https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html>
+
+Older oracle JREs can be downloaded from here:
+
+<https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html>
+
 ## Using the Program
 
 The  Webin command line submission interface is a self-executing Java jar file and is
@@ -33,9 +47,19 @@ run using the `java` command:
 
 for example:
 
-`java -jar webin-cli-1.6.0.jar <options>`
+`java -jar webin-cli-1.7.3.jar <options>`
 
 The `<version>` is the version number of the program.
+
+Please note that the command must include the location of the jar file. For example, if 
+have it in your Downloads directory, the appropriate command on Mac/Linux on immediately
+opening the terminal would be:
+
+`java -jar Downloads/webin-cli-1.7.3.jar <options>`
+
+On Windows a backward slash is used instead of a forward slash:
+
+`java -jar Downloads\webin-cli-1.7.3.jar <options>`
 
 The command line `<options>` are explained below.
 

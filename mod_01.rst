@@ -41,6 +41,8 @@ When submitting new data to us, the following workflow is recommended:
 
 When you come to make a new submission, you will have the options described below.
 Follow the links for specific guidance on each submission activity.
+Please note that it is no longer possible to submit genome assemblies this way,
+use `Webin-CLI  <cli_01.html>`_ for this.
 
 .. image:: images/mod_01_p01.png
 
@@ -49,8 +51,9 @@ Follow the links for specific guidance on each submission activity.
 3. Use the `Register samples`_ option to register new samples.
 4. Use the `Submit sequence reads and experiments`_ option to submit sequence reads with associated experimental information.
    Ensure you have `uploaded your read files`_ first.
-5. Use the `Submit genome assemblies`_ option to submit assembled genomes.
-6. Use the `Submit other assembled and annotated sequences <https://www.ebi.ac.uk/ena/submit/sequence-submission>`_ option to submit coding genes, rRNA sequences and other
+5. Interactive submission of genome assemblies is no longer possible.
+   This must be done using `Webin-CLI  <cli_01.html>`_
+6. Use the `Submit other assembled and annotated sequences`_ option to submit coding genes, rRNA sequences and other
    annotated sequences.
 7. Use the `Taxonomy Check/Request`_ option to check that your samples have recognised taxonomic classifications
    or to register new ones. You must provide a taxonomic classification for each submitted sample.
@@ -59,7 +62,7 @@ Follow the links for specific guidance on each submission activity.
 .. _Register samples: mod_03.html
 .. _Submit sequence reads and experiments: mod_04.html
 .. _uploaded your read files: upload_01.html
-.. _Submit genome assemblies: mod_06.html
+.. _Submit other assembled and annotated sequences: mod_06.html
 .. _Taxonomy Check/Request: faq_taxonomy.html
 
 Metadata model
