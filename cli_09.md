@@ -20,11 +20,11 @@ A SAG assembly consists of:
 - Scaffold sequences (if any)
 - Chromosome sequences (if any)
 
-The following picture illustrates the stages of the metagenome assembly submission process:
+The following picture illustrates the stages of the Environmental Single-Cell Amplified Genome assembly submission process:
 
 ![Submission process](images/webin-cli_05.png)
 
-## Stage 1: Pre-register study and metagenomic samples
+## Stage 1: Pre-register study and samples
 
 Each assembly submission must be associated with a pre-registered study and a **SAG** sample  which  represents  the single cell that was amplified. This then points back to an additional **environmental** sample that represents the sampled source biome.
 
