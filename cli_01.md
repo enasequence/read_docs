@@ -52,8 +52,8 @@ for example:
 The `<version>` is the version number of the program.
 
 Please note that the command must include the location of the jar file. For example, if 
-have it in your Downloads directory, the appropriate command on Mac/Linux on immediately
-opening the terminal would be:
+you have it in your Downloads directory, the appropriate command on Mac/Linux on 
+immediately opening the terminal would be:
 
 `java -jar Downloads/webin-cli-1.7.3.jar <options>`
 
