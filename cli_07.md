@@ -23,7 +23,7 @@ A metagenome assembly consists of:
 
 The following picture illustrates the stages of the metagenome assembly submission process:
 
-![Submission process](images/webin-cli_01.png)
+![Submission process](images/webin-cli_04.png)
 
 ## Stage 1: Pre-register study and metagenomic samples
 
