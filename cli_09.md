@@ -9,7 +9,7 @@ Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled 
 A SAG assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
-   - **Environmetal** Sample accession or unique name (alias)
+   - **Environmental** Sample accession or unique name (alias)
    - **SAG** Sample accession or unique name (alias)
    - Assembly program
    - Sequencing platform
@@ -26,23 +26,25 @@ The following picture illustrates the stages of the metagenome assembly submissi
 
 ## Stage 1: Pre-register study and metagenomic samples
 
-Each assembly submission must be associated with a pre-registered study and a **SAG** sample  which  represents  the single cell that was amplified. This then points back to an **environmental** sample that represents the sampled source biome.
+Each assembly submission must be associated with a pre-registered study and a **SAG** sample  which  represents  the single cell that was amplified. This then points back to an additional **environmental** sample that represents the sampled source biome.
 
-The **environmental** sample contains all the metadata associated with sample collection and the **SAG** sample contains all the metadata associated with isolating, amplifying and sequencing that single-cell. Raw reads should be submitted to the **SAG** sample.
+### Environmental sample registration
 
-For your **environmental** sample, please register one sample for each real-life environmental sample, make sure the appropriate environmental checklist is chosen and an environmental taxon is used (e.g. aquatic metagenome (tax id: 1169740)).
+Firstly, you should register your **environmental** samples. For each real-life environmental sample that was used in the study, a sample should be registered using the most relevant environmental checklist and environmental taxonomy (e.g. aquatic metagenome (tax id: 1169740)).
 
 For information about biome-level environmental taxonomy please see [here](faq_taxonomy.html#environmental-biome-level-taxonomy).
 
-For your **SAG** sample, please register a different SAG sample for each assembly and utilise the GSC MISAG checklist and an uncultured taxon is used (e.g. ).
+### SAG sample registration
+
+Once all the **environmental** samples have been registered, you should register your **SAG** samples. For each resulting Single-Cell Amplified Genome assembly, a sample should be registered utilising the **GSC MISAGS** checklist and uncultured taxonomy (e.g. uncultured Bacillus sp. (tax id: 83428)).
 
 For information about organism-level environmental taxonomy please see [here](faq_taxonomy.html#environmental-organism-level-taxonomy).
 
-Please make sure the **SAG** samples correctly reference the **environmental** sample that they were derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as:
+When registering **SAG** samples, please make sure they correctly reference the **environmental** sample that they were derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as:
 
-“This sample represents a Single-Cell Amplified genome derived from the environmental sample ERSXXXXX”
+“This sample represents a Single-Cell Amplified Genome derived from the environmental sample ERSXXXXX”
 
-If the assembly was derived from multiple samples or runs you can list these here with a comma separated list or range.
+If the assembly was derived from multiple samples you can list these here with a comma separated list or range.
 
 The methods for submitting environmental studies and samples follow the same process as any other study/sample submission. Follow the links for more information.
 
@@ -56,12 +58,14 @@ Instructions for programmatic submitters:
 - [Register a Study](prog_02.html)
 - [Register a Sample](prog_03.html)
 
+When submitting raw data for a single-cell amplification project, these data should be submitted associated with this **SAG** sample as this is the sample that was sequenced.
+
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission are specified using a manifest file.
 The manifest file is specified using the `-manifest <filename>` option.
 
-Environmental Single-Cell Assemblies shoud be submitted associated with the **SAG** sample, referenced from within the manifest file.
+Environmental Single-Cell Assemblies should be submitted associated with the **SAG** sample, referenced from within the manifest file.
 
 A SAG assembly submission consists of the following files:
 
@@ -70,9 +74,9 @@ A SAG assembly submission consists of the following files:
 - 0-1 AGP files
 - 0-1 Chromosome list files
 
-This assembly level requires information on the sequences and annotation (if any).
+This submission requires information on the sequences and annotation (if any).
 
-This assembly level allows for the submission of fully assembled genome sequences (including chromosomes, organelles, plasmids, and viral segments) with the use of a 'chromosome list file'. It also allows the submitter to provide an AGP file to give instructions for the assembly of scaffolds or chromosomes if they wish.
+This submission also allows for the submission of fully assembled genome sequences (including chromosomes, organelles, plasmids, and viral segments) with the use of a 'chromosome list file'. It also allows the submitter to provide an AGP file to give instructions for the assembly of scaffolds or chromosomes if they wish.
 
 If you wish to submit an AGP or chromosome list file, it is important to understand how sequence names are formatted so they can be consistent between files and your assembly can be registered correctly.
 
@@ -91,9 +95,9 @@ The manifest file has two columns separated by a tab (or any whitespace characte
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias) 
-- SAMPLE: Sample accession or unique name (alias)
+- SAMPLE: **SAG** Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY_TYPE: 'Environmetal Single-Cell Amplified Genome (SAG)'
+- ASSEMBLY_TYPE: 'Environmental Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
@@ -116,7 +120,7 @@ For example, the following manifest file represents an environmental single-cell
 STUDY   TODO
 SAMPLE   TODO
 ASSEMBLYNAME   TODO
-ASSEMBLY_TYPE   Environmetal Single-Cell Amplified Genome (SAG)
+ASSEMBLY_TYPE   Environmental Single-Cell Amplified Genome (SAG)
 COVERAGE   TODO
 PROGRAM   TODO
 PLATFORM   TODO
@@ -157,7 +161,7 @@ An example of a submission XML for the release of three environmental samples is
 
 These samples can then be released programmatically through the secure HTTPS protocol using a tool such as curl.
 
-Below is an example of a environemtal sample release command:
+Below is an example of a environmental sample release command:
 
 ```
 curl -u username:password -F "SUBMISSION=@submission.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
@@ -239,4 +243,4 @@ Since Webin 1.7.0:
 - Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
 - Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
 
-This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk. 
+This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk.
