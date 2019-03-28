@@ -44,7 +44,7 @@ When registering **SAG** samples, please make sure they correctly reference the 
 
 “This sample represents a Single-Cell Amplified Genome derived from the environmental sample ERSXXXXX”
 
-If the assembly was derived from multiple samples you can list these here with a comma separated list or range.
+If the assembly was derived from multiple samples you can list these with a comma separated list or range. See [here](faq_metagenomes.html#how-do-i-register-samples-for-co-assemblies) for details on how to format these in the "sample derived from" attribute.
 
 The methods for submitting environmental studies and samples follow the same process as any other study/sample submission. Follow the links for more information.
 
@@ -137,7 +137,9 @@ Please refer to the [Webin command line submission interface](cli_01.html) docum
 
 ### Release environmental samples
 
-As the registered **environmental** samples do not have any data associated with them, they need to be manually released to become available to the public. Assuming you have submitted correctly using the guidelines above, this can be done in advance of your study release without the risk of any data files being prematurely released. However, if you do not wish to have your sample *metadata* publicly available before your study is released, this option is not suitable and it is recommended to make a note of the Study release date and release these samples during the same time of the study release.
+As the registered **environmental** samples do not have any data associated with them, they need to be manually released to become available to the public. Assuming you have submitted correctly using the guidelines above, this can be done in advance of your study release without the risk of any data files being prematurely released.
+
+However, if you do not wish to have your sample *metadata* publicly available before your study is released, this option is not suitable and it is recommended to make a note of the Study release date and release these samples during the same time of the study release.
 
 To manually release your environmental samples, first you need to prepare a submission XML file containing all your **environmental** sample accessions in a block of `ACTION` tags.
 
@@ -187,9 +189,9 @@ If your release is successful you should receive a receipt like the one below:
 
 Once the genome assembly has been submitted an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface. 
 
-The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service and, in the case of primary and binned assemblies, access their data in the browser.
+The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service, this accession remains private.
 
-For metagenome assemblies, long term stable accession numbers that can be used in publications are:
+For Environmental Single-cell Amplified Genome assemblies, long term stable accession numbers that can be used in publications are:
 
 - Study accession (PRJ) assigned at time of study registration.
 - Sample accession (SAM) assigned at time of sample registration.
