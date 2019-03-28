@@ -124,3 +124,66 @@ or
 ERRxxxxxx-ERRxxxxxx
 
 In the case of primary assemblies which are co-assembled from raw reads, please contact datasubs@ebi.ac.uk and inform the ENA helpdesk that you would like to submit a primary co-assembled metagenome.
+
+
+How do I submit uncultured virus genomes (UViGs)?
+=================================================
+
+The method used for submission of uncultured virus genomes depends on the methods used to identify these genomes.
+
+If the virus genome was derived from a study where the entire biome of environmental data was sequenced together and then binned by taxonomy, then please submit with the same methods as those outlined in the `metagenome assembly <cli_07.html>`_ submission guidelines. This is with the exception of the use of the **GSC MIMAGS** checklist. For virus genomes, the **GSC MIUVIGS** checklist should be utilised for each virus assembly.
+
+If the virus genome was derived from a study using single-cell amplification techniques, then please submit with the same methods as those outlined in the `environmental single-cell amplified genome assembly <cli_09.html>`_ submission guidelines. This is with the exception of the use of the **GSC MISAGS** checklist. For virus genomes, the **GSC MIUVIGS** checklist should be utilised for each virus assembly.
+
+How do I submit metagenome assemblies without raw data or primary assemblies to point to?
+=========================================================================================
+
+It is recommended to submit all levels of metagenomic assembly where possible. However, there are exceptions where this can not be done. For example, if you have assembled bacteria from a metagenome derived from a human host, your raw data may be contaminated with human DNA which you do not have the permission to make publicly available.
+
+In cases where it is not possible to provide raw data or a primary metagenome, environmental samples should still be registered. However, as the registered **environmental** samples do not have any data associated with them, they need to be manually released to become available to the public.
+
+If you have not submitted raw reads or primary assemblies, sample release can be done in advance of your study release without the risk of any data files being prematurely released. However, if you do not wish to have your sample *metadata* publicly available before your study is released, this option is not suitable and it is recommended to make a note of the Study release date and release these samples during the same time of the study release.
+
+To manually release your environmental samples, first you need to prepare a submission XML file containing all your **environmental** sample accessions in a block of ACTION tags.
+
+An example of a submission XML for the release of three environmental samples is below:
+
+.. code-block:: xml
+
+    <SUBMISSION>
+        <ACTIONS>
+             <ACTION>
+                  <RELEASE target="ERS3334823"/>
+             </ACTION>
+             <ACTION>
+                  <RELEASE target="ERS3334824"/>
+             </ACTION>
+             <ACTION>
+                  <RELEASE target="ERS3334825"/>
+             </ACTION>
+        </ACTIONS>
+    </SUBMISSION>
+
+These samples can then be released programmatically through the secure HTTPS protocol using a tool such as curl.
+
+Below is an example of a environmental sample release command:
+
+.. code-block:: bash
+
+    curl -u username:password -F "SUBMISSION=@submission.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+If your release is successful you should receive a receipt like the one below:
+
+.. code-block:: xml
+
+    <RECEIPT receiptDate="2019-03-25T08:23:45.795Z" submissionFile="submission.xml" success="true">
+         <MESSAGES>
+              <INFO>sample accession "ERS3334823" is set to public status.</INFO>
+              <INFO>sample accession "ERS3334824" is set to public status.</INFO>
+              <INFO>sample accession "ERS3334825" is set to public status.</INFO>
+              <INFO>Submission has been committed.</INFO>
+         </MESSAGES>
+         <ACTIONS>RELEASE</ACTIONS>
+         <ACTIONS>RELEASE</ACTIONS>
+         <ACTIONS>RELEASE</ACTIONS>
+    </RECEIPT>

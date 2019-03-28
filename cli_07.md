@@ -4,7 +4,9 @@
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](cli_01.html) with `-context genome`.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data, environmental Single-cell Amplified Genomes (SAGs), uncultured viral genomes or if you are unable to provide the raw data for your assembly.
+Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+
+Please see [here](faq_metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a metagenome study.
 
 A metagenome assembly consists of:
 - General assembly information
@@ -32,6 +34,8 @@ Each submission must be associated with a pre-registered study and one or more p
 All metagenomic assemblies should have at least one **environmental** sample registered that represents where the original sequencing data was extracted from.  This sample should be the same sample used to submit your raw reads. Please make sure the appropriate environmental checklist is chosen for this and an environmental taxon is used (e.g. aquatic metagenome (tax id: 1169740)).
 
 For information about biome-level environmental taxonomy please see [here](faq_taxonomy.html#environmental-biome-level-taxonomy).
+
+If you do not intend to submit raw reads or a primary metagenome as part of your metagenome assembly submission, please see [here](faq_metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to do this. If no data is associated with the **environmental** sample, it needs to be released manually in order to be available to the public.
 
 Any additional samples required for submission of a metagenome assembly depends on the assembly level:
 

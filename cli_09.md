@@ -6,6 +6,8 @@ Environmental SAG assemblies can be submitted to the European Nucleotide Archive
 
 Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
 
+Please see [here](faq_metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
+
 A SAG assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
