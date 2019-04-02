@@ -140,8 +140,8 @@ The SFF format is supported for the 454 and Ion Torrent platforms.
 ### 10x Genomics
 
 To submit 10x Genomics data where read indexes exist, you must convert to BAM
-or CRAM format. The supported tags are defined at:
-http://samtools.github.io/hts-specs/SAMtags.pdf
+or CRAM format. The supported tags are defined in the [SAM Optional Fields Specification](http://samtools.github.io/hts-specs/SAMtags.pdf)
+
 
 ## Formats being deprecated
 
