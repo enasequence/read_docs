@@ -174,7 +174,7 @@ application downloadable from
 1. `Download the Webin File Uploader
    <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
 2. Launch the application (Mac users please see further instructions below),
-3. Enter your Webin use r name in the ``Username`` field.
+3. Enter your Webin username in the ``Username`` field.
 4. Enter your Webin password in the ``Password`` field.
 5. Browse into the local ``Upload Directory`` containing the data files you
    wish to upload using the ``...`` button. The list of all the files contained
