@@ -422,28 +422,6 @@ Here is an example of an analysis XML:
 </ANALYSIS_SET>
 ```
 
-#### CRAM reference sequences
-
-Reference sequences in CRAM files must be known to ENA when read data is submitted using CRAM files.
-These reference sequences must be either public INSDC sequences or they must be submitted to the
-CRAM reference registry as a single Fasta file using the `<REFERENCE_SEQUENCE>` analysis type.
-
-Here is an example of an analysis XML:
-
-```xml
-<ANALYSIS_SET>
-    <ANALYSIS alias="08-1736">
-        <ANALYSIS_TYPE>
-            <REFERENCE_SEQUENCE/>
-        </ANALYSIS_TYPE>
-        <FILES>
-            <FILE filename="ref.fasta.gz" filetype="fasta" checksum_method="MD5"
-                checksum="7fd0cf4f550fd836758bfc242894a8fe"/>
-        </FILES>
-    </ANALYSIS>
-</ANALYSIS_SET>
-```
-
 ## Create the Submission XML
 
 To submit analyses, you need an accompanying submission XML in a separate file.
