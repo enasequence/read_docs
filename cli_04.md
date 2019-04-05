@@ -1,11 +1,5 @@
 # Module 4: Annotated Sequence Spreadsheet Submissions
 
-Currently supported through the [Webin interactive submission interface](mod_01.html).
-
-Planned to be supported in 2018 through the [Webin command line submission interface](cli_01.html).
-
-<!---
-
 ## Introduction
 
 Annotated sequences (e.g. 16S rRNA genes) can be submitted to the European Nucleotide Archive (ENA)
@@ -125,4 +119,3 @@ Submitters can retrieve the sequence accession numbers from the [Webin submissio
 or from the [Webin reports service](prog_10.html). These accession numbers are also send to the submitters by
 e-mail.
 
--->

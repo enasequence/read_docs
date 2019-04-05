@@ -3,23 +3,23 @@
 ## Single cell read data
 
 Single cell read data must be submitted in the `BAM` or `CRAM` format using
-the following tags specified in the [SAM Optional Fields Specification](https://samtools.github.io/hts-specs/SAMtags.pdf): 
+the following tags specified in the [SAM Optional Fields Specification](https://samtools.github.io/hts-specs/SAMtags.pdf):
 - CB: Cell identifier
 - CR: Cellular barcode sequence bases (uncorrected)
-- CY: Phred quality of the cellular barcode sequence in the CR tag 
+- CY: Phred quality of the cellular barcode sequence in the CR tag
 
 ## Other read data
 
-We recommend that all read data is submitted in the `BAM` or `CRAM` format. 
+We recommend that all read data is submitted in the `BAM` or `CRAM` format.
 However, please note that a variety of other data formats are supported as well.
 
 ## Sample de-multiplexing
 
 Reads for different samples should be submitted using separate files. The
-only exception is when a `BAM` or `CRAM` file contains reads for a large 
+only exception is when a `BAM` or `CRAM` file contains reads for a large
 number of samples intented to be always analysed together. In this case
 the sample associated with the read file should describe the sample
-group while the `BAM` or `CRAM` file should identify the sample 
+group while the `BAM` or `CRAM` file should identify the sample
 for each read.
 
 ## Standard formats
@@ -41,7 +41,7 @@ Each submitted CRAM file must:
 CRAM file names are required to end up with the .cram suffix (e.g. 'a.cram').
 
 A CRAM index (CRAI) file is created by the archive for each submitted CRAM file and is available in
-the same directory as the CRAM file from which is was created. CRAM index file names 
+the same directory as the CRAM file from which is was created. CRAM index file names
 start with the CRAM file name and end up with the .crai suffix (e.g. 'a.cram.crai' for CRAM file 'a.cram').
 
 ### BAM format
@@ -60,17 +60,17 @@ We support the submission of the following types of PacBio BAM files:
 
 ### Fastq format
 
-We recommend that read data is either submitted in BAM or CRAM format. 
+We recommend that read data is either submitted in BAM or CRAM format.
 However, single and paired reads are accepted as Fastq files that meet the following the requirements:
 
-- Quality scores must be in Phred scale. 
+- Quality scores must be in Phred scale.
 - Both ASCII and space delimitered decimal encoding of quality scores are supported. We will automatically detect the Phred quality offset of either 33 or 64.
 - No technical reads (adapters, linkers, barcodes) are allowed.
 - Single reads must be submitted using a single Fastq file and can be submitted with or without read names.
 - Paired reads must be submitted using two Fastq files.
 - The first line for each read must start with '@'.
 - The base calls and quality scores must be separated by a line starting with '+'.
-- Paired read names must either use Casava 1.8 read names 
+- Paired read names must either use Casava 1.8 read names
 (regular expression: `^@([a-zA-Z0-9_-]+:[0-9]+:[a-zA-Z0-9_-]+:[0-9]+:[0-9]+:[0-9-]+:[0-9-]+) ([12]):[YN]:[0-9]*[02468]:[ACGTN]+$`)
 or must end with `/1` or `/2` optionally followed by a space and a comment.    
 - The Fastq files must be compressed using gzip or bzip2.
@@ -110,10 +110,10 @@ With Casava 1.8 the format of the '@' line has changed and we accept this patter
 
 ### Oxford Nanopore
 
-Oxford Nanopore native data must be submitted as a single tar.gz 
+Oxford Nanopore native data must be submitted as a single tar.gz
 archive containing basecalled fast5 files from Metrichor or Albacore.
 
-For Metrichor, an example directory structure for run named XYZ: 
+For Metrichor, an example directory structure for run named XYZ:
 
 ```
 XYZ/reads/downloads/fail/
@@ -129,7 +129,7 @@ tar -cvzf XYZ.tar.gz XYZ/reads/downloads/
 
 ### PacBio
 
-PacBio data submissions are supported in the platform specific native format. 
+PacBio data submissions are supported in the platform specific native format.
 
 One run consists of *.bax.h5, *.bas.h5 and xml files. Please note that these files must not be tarred.
 
@@ -137,20 +137,26 @@ One run consists of *.bax.h5, *.bas.h5 and xml files. Please note that these fil
 
 The SFF format is supported for the 454 and Ion Torrent platforms.
 
+### 10x Genomics
+
+To submit 10x Genomics data where read indexes exist, you must convert to BAM
+or CRAM format. The supported tags are defined in the [SAM Optional Fields Specification](http://samtools.github.io/hts-specs/SAMtags.pdf)
+
+
 ## Formats being deprecated
 
 ### Complete Genomics native format
 
-The full Complete Genomics data package can be submitted including the ASM, LIB and MAP 
-subfolders. Each data package should be submitted as a single experiment and run. Please 
+The full Complete Genomics data package can be submitted including the ASM, LIB and MAP
+subfolders. Each data package should be submitted as a single experiment and run. Please
 note the data package must not be tarred or gzipped for submission.
 
 ### SRF format
 
-The *_seq.txt files can be converted into SRF files using the illumina2srf utility available 
+The *_seq.txt files can be converted into SRF files using the illumina2srf utility available
 from the DNA Sequence Read Toolkit.
 
-Each Illumina lane should be submitted as a separate SRF file and runs should be demultiplexed 
+Each Illumina lane should be submitted as a separate SRF file and runs should be demultiplexed
 prior SRF file generation.
 
 To produce a SRF submission file for a non-paired lane, change the working directory to the run
@@ -163,7 +169,7 @@ illumina2srf -R -P -N <run>:%l:%t: -n %x:%y -o <center_name>_<run>_<lane>.srf s_
 The -R, -P options are used to exclude intensity, noise and signal data from the generated SRF files.
 These data series are no longer supported for new data submissions.
 
-The recommended format for the SRF file names is <center_name>_<run>_<lane>.srf, where <center_name> 
+The recommended format for the SRF file names is <center_name>_<run>_<lane>.srf, where <center_name>
 is the center name abbreviation assigned to all submitters, and the <run> and <lane> are the run and
 the lane identifiers.
 
@@ -175,7 +181,7 @@ illumina2srf -R -P -N <run>:%l:%t: -n %x:%y -2 <cycle> -o <center_name>_<run>_<l
 
 ## Deprecated formats
 
-Read submissions are no longer accepted in the following formats: 
+Read submissions are no longer accepted in the following formats:
 
 - SOLiD csfasta/qual format (support ended in 2015)
 - Illumina qseq format (support ended in 2015)

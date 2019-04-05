@@ -57,7 +57,7 @@ Corrupted File: Upload Again
 | If you recalculate the MD5 value of you file locally and it matches the value you registered, it is likely the file upload was incomplete or corrupt.
   You therefore need to reupload the file.
   Once this is done, the file should be automatically accepted within 24 hours with no further action taken.
-| See the `Data Upload <upload_01.html>`_ pages for a guide to uploading.
+| See the `Data Upload <upload_02.html>`_ pages for a guide to uploading.
   You may find using Aspera for your upload gives you a more stable connection, especially if you and the ENA are geographically distant from one another.
 
 Wrong MD5 Value Registered: Register a New One

@@ -156,7 +156,7 @@ Uploading a file to the Webin file upload area is not sufficient for inclusion i
 The file must also be submitted through the Webin submission service either as a run or analysis.
 
 The Webin file upload area is a temporary transit area. Any unsubmitted files are subject
-to be removed according to [ENA fair use policy](upload_01.html).
+to be removed according to [ENA fair use policy](upload_02.html).
 
 The unsubmitted file report shows uploaded files scheduled to be removed unless
 submitted by the expiration date.

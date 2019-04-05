@@ -100,7 +100,8 @@ their order and orientation is unknown.
 The unlocalised list file is a tab separated text file (USASCII7) containing the following columns: 
 
 - OBJECT_NAME (first column): the unique sequence name.
-- CHROMOSOME_NAME (second column): the unique chromosome name associated with this sequence.
+- CHROMOSOME_NAME (second column): the unique chromosome name associated with this sequence. This
+  must match with a CHROMOSOME_NAME in the chromosome list file.
 
 An example unlocalised list file:
 

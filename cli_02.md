@@ -1,12 +1,16 @@
-# Module 2: Genome Assembly Submissions 
+﻿# Module 2: Genome Assembly Submissions 
 
 ## Introduction
 
 Genome assemblies can be submitted to the European Nucleotide Archive (ENA) 
 using the [Webin command line submission interface](cli_01.html) with `-context genome` option. 
 
-As Metagenomic assemblies follow slightly different rules, please submit
-them following these [guidelines](cli_07.html).
+Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+
+If you intend to submit uncultured genomes from an environmental source, please submit them following the most appropriate guidelines:
+
+- [Submission of metagenome assemblies (including MAGs)](cli_07.html)
+- [Submission of environmental Single-cell Amplified Genomes (SAGs)](cli_09.html)
 
 Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons, bacteriophages, prokaryotic and eukaryotic genomes.
  
@@ -15,7 +19,7 @@ A genome assembly consists of:
    - Study accession or unique name (alias)
    - Sample accession or unique name (alias)
    - Assembly name
-   - Assembly type (optional)
+   - Assembly type
    - Assembly program
    - Sequencing platform
    - Minimum gap length
@@ -54,8 +58,7 @@ submit metagenome assemblies.
 
 ### Register locus tag prefixes
 
-This is *only required if you are submitting an annotated assembly*. Otherwise, 
-please progress to Stage 2.
+This is *only required if you are submitting an annotated assembly*. Otherwise, please progress to Stage 2.
 
 See [here](https://www.ebi.ac.uk/ena/submit/locus-tags) for information on locus tags.
 
@@ -139,7 +142,7 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY_TYPE: 'clone or isolate' (default), ''primary metagenome', 'binned metagenome', 'Metagenome-Assembled Genome (MAG)','Environmetal Single-Cell Amplified Genome (SAG)'
+- ASSEMBLY_TYPE: 'clone or isolate'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform
@@ -157,8 +160,7 @@ The following file name fields are supported in the manifest file:
 - CHROMOSOME_LIST: list of chromosomes
 - UNLOCALISED_LIST: list of unlocalised sequences
 
-For example, the following manifest file represents a genome assembly consisting of contigs 
-provided in one fasta file:
+For example, the following manifest file represents a genome assembly consisting of contigs provided in one fasta file:
 
 ```
 STUDY   TODO
@@ -176,18 +178,6 @@ FASTA   genome.fasta.gz
 ### Other files
 
 Other genome assembly data files are described in [Genome Assembly Data Formats](format_02.html). 
-
-### Assembly types
-
-The following assembly types are supported:
-- clone or isolate (default): An assembly of reads from an isolated cultured organism, tissues, cells or a cell line.
-- primary metagenome: An original metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
-- binned metagenome: A set of contigs drawn from primary or unbinned metagenomes grouped into a single-taxon set.
-- Metagenome-Assembled Genome (MAG): A single-taxon assembly based on a binned metagenome asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
-- Environmental Single-Cell Amplified Genome (SAG): A genome assembly from amplified environmental sampled single-cell DNA.
-
-As Metagenomic assemblies follow slightly different rules, please submit
-them following these [guidelines](cli_07.html).
 
 ## Stage 3: Validate and submit the files
 
@@ -222,6 +212,7 @@ These accession numbers are also sent to the submitters by e-mail.
 Assembly names must:
 - match the pattern: ^[A-Za-z0-9][A-Za-z0-9 _#\-\.]*$
 - be shorter than 100 characters
+- not include the name of the organism assembled
            
 ### Chromosome name validation
     
@@ -239,13 +230,27 @@ Chromosome names must:
     - 'plasmid'
 - be unique within an assembly
 
-### Sequence validation rules
+### Sequence validation
 
 Sequences must:
 - have unique names within an assembly
 - be at least 20bp long
 - not have terminal Ns
 - consist of bases: 'a','c','g','t','u','b','d','h','k','m','n','r','s','v','w','y'
+
+### Sequence count validation
+
+Typically, assembly submissions consisting of sequences that exceed the standard minimum or maximum number are not permitted. However, in specific cases, ENA may allow the submission of genome assemblies that are giving the following errors:
+
+Since Webin 1.7.0:
+- Invalid number of sequences : XXX, Minimum number of sequences for CONTIG is: YYY
+- Invalid number of sequences : XXX, Minimum number of sequences for SCAFFOLD is: YYY
+- Invalid number of sequences : XXX, Minimum number of sequences for CHROMOSOME is: YYY
+- Invalid number of sequences : XXX, Maximum number of sequences for CONTIG is: YYY
+- Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
+- Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
+
+This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk . 
 
 ### Assembly updates
 

@@ -89,8 +89,8 @@ Common Experiment Updates
 The experiment object provides important metadata about how your data was produced.
 Common updates might include:
 
-- Changing the library descriptor where a mistake has been made
-  + e.g. the library source could be listed as 'GENOMIC' when in fact it is 'METAGENOMIC'
+- Changing the library descriptor where a mistake has been made e.g. the library source could be
+  listed as 'GENOMIC' when in fact it is 'METAGENOMIC'
 - Changing the <SAMPLE_DESCRIPTOR> where the experiment is pointing at the wrong sample
 - Changing the <STUDY_REF> where the experiment is pointing a the wrong study
 - Adding new <EXPERIMENT_ATTRIBUTE> elements to provide additional information about your experiment
