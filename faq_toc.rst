@@ -9,3 +9,4 @@ Tips and FAQs
    faq_sample_error
    faq_release
    faq_metagenomes
+   faq_locus_tags
