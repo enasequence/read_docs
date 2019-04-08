@@ -33,7 +33,7 @@ annotated assembly.
 What Rules Should The Prefix Conform To?
 ----------------------------------------
 
-The prefix you register must follow the following conventions or it will not be
+The prefix you register must follow the listed conventions or it will not be
 accepted:
  - Must begin with a letter
  - All letters must be upper case
@@ -53,7 +53,7 @@ How Do I Use Locus Tags?
   have the same value for all components of a single gene. The feature itself
   should resemble:
 
-.. code-block::
+::
 
     FT      /locus_tag="BN5_00001"
 
@@ -66,14 +66,14 @@ It is possible to encode information after the underscore but before the number.
 For example, the following tags might indicate the first genes of chromosomes I
 and II:
 
-.. code-block::
+::
 
     BN5_I00001
     BN5_II00001
 
 The following tags could indicate an rRNA gene and a tRNA gene:
 
-.. code-block::
+::
 
     BN5_r1112
     BN5_t1113
