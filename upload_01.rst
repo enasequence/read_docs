@@ -135,3 +135,35 @@ Once you have compressed your files and recorded their MD5 values in some way,
 proceed to upload them:
 
     `Data Upload Documentation <upload_02.html>`_.
+
+
+Fair Use Policy
+===============
+
+ENA is a permanent and comprehensive data repository for public domain sequence
+and associated information. Data submitted into this system are routed
+transiently through users' private data upload areas until such time as a
+submission instruction from the user, through his/her use of the Webin system,
+leads to the validation of the data and the movement of files from the data
+upload area into the ENA.
+
+The data upload areas are provided as a temporary place in which data are held
+while in transit. As such, they are neither intended nor suitable for any
+longer-term storage of data. Such storage is provided in ENA itself. Once in
+ENA, data can be released immediately following submission or can be held
+confidential prior to analysis and literature publication if required.
+
+We expect any given data file to remain in a data upload area for no longer
+than 2 months before the instruction is given by the user to submit the file.
+While we attempt to remind users of this policy at the 2 months time point we
+reserve the right to routinely delete any data files that persist in them for
+more than 2 months.
+
+We place no absolute limit within the 2-month period on the total volume of
+user data that may exist in a data upload area at any one time and are keen to
+accommodate the largest submissions where possible. However, we strongly
+encourage continuous data submissions where files are uploaded and submitted in
+small patches of few Terabytes or less and expect that volumes would not exceed
+10 Terabytes under normal circumstances. Unexpected heavy use of the data
+upload areas may have an impact on other Webin users and we are grateful for
+users' attention to this aspect of our fair use policy.
