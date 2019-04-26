@@ -15,26 +15,21 @@ Module 6: Annotated Sequence Submission
 Submitting Via Spreadsheet
 ==========================
 
-| To begin, `log in to your Webin account <https://www.ebi.ac.uk/ena/submit/sra/#home>`_, navigate to the 'New Submission' tab and select 'Submit other assembled and annotated sequences'.
+| To begin, visit the `sequence checklist portal <https://www.ebi.ac.uk/ena/submit/webin/sequence-checklist>`_.
+| Here, you can review the available checklists, select the most appropriate, customise it, and review the allowed values for each field.
+  Download your chosen spreadsheet and fill it out according to the restrictions given in the checklist portal.
+  You should not edit any of the filled cells of the spreadsheet you download, only modify the empty ones by inserting your data and metadata.
+
+| To submit, `log in to your Webin account <https://www.ebi.ac.uk/ena/submit/sra/#home>`_, navigate to the 'New Submission' tab and select 'Submit other assembled and annotated sequences'.
 | On the next screen, select the study you wish to submit to (or use the 'Create a new study' link).
+| On the following screen, note the 'Submit Completed Spreadsheet' button.
+  You should use this to upload your selected checklist.
+  If there are errors with your spreadsheet, you will be informed: correct them and redo the submission.
 
 .. image:: images/mod_10_p01.png
 
-| On the following screen, note the 'Submit Completed Spreadsheet' button.
-  You will return here to submit your spreadsheet once it is completed.
-| For now, use the 'Select Checklist' button, then browse the list of available checklists and their descriptions.
-
-.. image:: images/mod_10_p02.png
-
-| Next, you can select extra fields to add to your spreadsheet.
-  Doing this will give more context to your data and help other users to understand it.
-| The field selection screen also describes each field in detail: if at any point you are not sure what you should enter into a field, return to this screen and find its description.
-|
-| Once you are satisfied, use the 'Download Template Spreadsheet' button to get your checklist as a TSV file.
-  Open the file in a spreadsheet management program and fill out a row for each sequence you wish to submit.
-| When you have completed your spreadsheet, return to the page shown above to upload it.
-  If there are errors with your spreadsheet, you will be informed: correct them and redo the submission.
-| Once the submission is accepted, you will be shown a confirmation screen and will later receive an email with your accession numbers.
+| Once the submission is accepted, you will be shown a confirmation screen with a tracking number resembling ERZxxxxxx.
+  You will later receive an email with your accession numbers.
 
 
 Non-Spreadsheet Submission
