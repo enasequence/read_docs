@@ -29,6 +29,9 @@ Please note that after you register the prefix, it will not be usable until 24
 hours later. Therefore, you will not immediately be able to submit your
 annotated assembly.
 
+A study can have multiple prefixes registered to it, but each prefix can only
+be registered to a single study. 
+
 
 What Rules Should The Prefix Conform To?
 ----------------------------------------
@@ -40,6 +43,8 @@ accepted:
  - Must from 3 to 12 characters in length
  - All characters must be alphanumeric with none such as -_*
 
+Each prefix can only be registered to a single study; you cannot reuse a 
+prefix from another study, or one which another user has registered.
 
 How Do I Use Locus Tags?
 ========================
