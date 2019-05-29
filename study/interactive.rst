@@ -3,10 +3,10 @@ Register a Study Interactively
 ==============================
 
 This form is used to register a study (also referred to as a project). Studies are typically registered before any data is submitted.
-Data can be added to the study at any time. Please see `Interactive Submission Options`_ to learn how to access it. Fill it out and click 'Submit' to register your study and receive accession numbers.
+Data can be added to the study at any time. Please see `Interactive Submission Options <../general-guide/interactive.html>`_ to learn how to access it. Fill it out and click 'Submit' to register your study and receive accession numbers.
 The details can be edited and updated later, but you need to have registered a study to submit your data.
 
-.. image:: images/mod_02_p01.png
+.. image:: ../images/mod_02_p01.png
 
 
 Locus Tag Prefixes
