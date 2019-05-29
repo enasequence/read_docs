@@ -18,19 +18,19 @@ How Do I Register A Locus Tag Prefix?
 =====================================
 
 A locus tag prefix can be registered when a project is registered. Advice on
-doing this can be found at our `study registration page <study/interactive.html>`_. You
+doing this can be found at our `study registration page <../study/interactive.html>`_. You
 can allow automatic assignment of a prefix, or you can specify your own.
 
 If you did not add a prefix when you registered your project, it is possible to
 update the project with a prefix later on. See our advice on `updating studies
-<update/interactive.html>`_.
+<../update/interactive.html>`_.
 
 Please note that after you register the prefix, it will not be usable until 24
 hours later. Therefore, you will not immediately be able to submit your
 annotated assembly.
 
 A study can have multiple prefixes registered to it, but each prefix can only
-be registered to a single study. 
+be registered to a single study.
 
 
 What Rules Should The Prefix Conform To?
@@ -43,7 +43,7 @@ accepted:
  - Must from 3 to 12 characters in length
  - All characters must be alphanumeric with none such as -_*
 
-Each prefix can only be registered to a single study; you cannot reuse a 
+Each prefix can only be registered to a single study; you cannot reuse a
 prefix from another study, or one which another user has registered.
 
 How Do I Use Locus Tags?
