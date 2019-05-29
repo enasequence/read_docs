@@ -6,7 +6,7 @@ If you already have an account and have difficulties logging in please contact d
 1. Navigate to the [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) submission service page.
 
 2. Click the ![Register](../images/webin_register_01.png) button.
-..
+
 3. Fill in the required details. Other contacts can be added after your account has been created.
 ![Register Submission Account](../images/webin_register_02.png)
 
