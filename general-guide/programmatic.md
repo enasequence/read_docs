@@ -40,7 +40,7 @@ Once uploaded, data files are submitted by referring to them from Run XML or Ana
 Run XML is used for used for sequence read submissions while Analysis XML is used
 for other types of submissions (e.g. genome assemblies).
 
-More information of uploading data files and our the fair use policy is available [here](upload_02.html).
+More information of uploading data files and our the fair use policy is available [here](../fileprep/upload).
 
 ## Submission protocol
 

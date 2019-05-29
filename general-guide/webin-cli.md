@@ -99,19 +99,15 @@ The type of the submission is specified using the `-context` command line option
 
 The following picture illustrates the stages of the submission process:
 
-![Submission process](images/webin-cli_01.png)
+![Submission process](../images/webin-cli_01.png)
 
 ## Stage 1: Pre-register Study and Sample
 
 Each submission must be associated with a pre-registered study and a sample.
 
-Instructions for interactive submitters:
-- [Register a Study](study/interactive.html)
-- [Register a Sample](samples/interactive.html)
+- [Register a Study](../study.html)
+- [Register a Sample](../samples.html)
 
-Instructions for programmatic submitters:
-- [Register a Study](study/programmatic.html)
-- [Register a Sample](samples/programmatic.html)
 
 ## Stage 2: Prepare the Files
 
@@ -169,13 +165,13 @@ Sequence based submission support the following formats:
 - FASTA: Sequences in fasta format
 - FLATFILE: Sequences in EMBL-Bank flat file format
 
-The following additional formats are supported for [genome assembly submissions](assembly/webin-cli.html):
+The following additional formats are supported for [genome assembly submissions](../assembly/webin-cli.html):
 
 - AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
 - CHROMOSOME_LIST: list of chromosomes
 - UNLOCALISED_LIST: list of unlocalised sequences
 
-The following formats are supported for [read submissions](reads/webin-cli.html):
+The following formats are supported for [read submissions](../reads/webin-cli.html):
 
 - BAM: BAM file
 - CRAM: CRAM file

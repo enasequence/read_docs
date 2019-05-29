@@ -13,7 +13,7 @@ The service can be used to retrieve information about:
 * Analysis processing statuses
 * Assigned accessions
 
-The reports can also be conveniently explored using the [Webin submissions portal](general-guide/submissions-portal.html)
+The reports can also be conveniently explored using the [Webin submissions portal](submissions-portal.html)
 
 ## Service URL
 
