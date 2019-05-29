@@ -169,7 +169,7 @@ Files can be uploaded using the Webin File Uploader, a Java web start
 application downloadable from
 `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_:
 
-.. image:: images/webin_file_upload_01.png
+.. image:: ../images/webin_file_upload_01.png
 
 1. `Download the Webin File Uploader
    <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
@@ -194,7 +194,7 @@ Instructions For Mac Users
 
 When downloading the application the following dialog box will be displayed:
 
-.. image:: images/webin_file_upload_02.png
+.. image:: ../images/webin_file_upload_02.png
 
 Select the ``Save File`` option to save the WebinUploader.jnlp file to your
 local download directory.
@@ -202,7 +202,7 @@ local download directory.
 If you selected the ``Open with`` option instead of the ``Save File`` option
 then the following dialog box will be displayed:
 
-.. image:: images/webin_file_upload_03.png
+.. image:: ../images/webin_file_upload_03.png
 
 In this case please select ``OK``. This will save the WebinUploader.jnlp file
 to your default local download directory.
@@ -215,7 +215,7 @@ select the ``open`` option.
 
 The following dialog will now be displayed:
 
-.. image:: images/webin_file_upload_04.png
+.. image:: ../images/webin_file_upload_04.png
 
 Now select the ``Open`` button. This will launch the the Webin File Uploader
 application.
@@ -226,39 +226,39 @@ Using Windows File Explorer
 
 Right click ``Computer`` and select ``Add a network location`` from the menu
 
-.. image:: images/windows_explorer_upload_01.png
+.. image:: ../images/windows_explorer_upload_01.png
 
 Click ``Next``
 
-.. image:: images/windows_explorer_upload_02.png
+.. image:: ../images/windows_explorer_upload_02.png
 
 Select ``Choose a custom network location`` and click ``Next``
 
-.. image:: images/windows_explorer_upload_03.png
+.. image:: ../images/windows_explorer_upload_03.png
 
 Type ftp://webin.ebi.ac.uk in the ``Internet or network address`` field and
 click ``Next``
 
-.. image:: images/windows_explorer_upload_04.png
+.. image:: ../images/windows_explorer_upload_04.png
 
 Unselect ``Log on anonymously``, type your Webin user name in the ``User name``
 field and click ``Next``
 
-.. image:: images/windows_explorer_upload_05.png
+.. image:: ../images/windows_explorer_upload_05.png
 
 Type a network location to show in Windows Explorer e.g. ``webin.ebi.ac.uk``
 then click ``Next``
 
-.. image:: images/windows_explorer_upload_06.png
+.. image:: ../images/windows_explorer_upload_06.png
 
 Click ``Finish``
 
-.. image:: images/windows_explorer_upload_07.png
+.. image:: ../images/windows_explorer_upload_07.png
 
 When using the new folder you will prompted for your Webin password. Type your
 password and click ``Log on``
 
-.. image:: images/windows_explorer_upload_08.png
+.. image:: ../images/windows_explorer_upload_08.png
 
 
 File MD5 Checksums Value
@@ -273,7 +273,7 @@ MD5 checksum to make sure that the file transfer was completed without any
 changes to the file contents.
 
 Calculating this value is covered in `Preparing A File For Upload
-<fileprep/preparation.html>`_.
+<preparation.html>`_.
 
 
 Invalid File Submissions
@@ -283,4 +283,4 @@ All files are subjected to a format check done by Webin. This does not occur
 until after you formally submit the files. You will generally be notified of
 this by email, and may be required to correct and reupload the file.
 Advice on this can be found in our `Common Run Submission Errors FAQ
-<faq/runs.html>`_
+<../faq/runs.html>`_
