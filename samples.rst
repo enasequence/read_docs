@@ -10,7 +10,7 @@ project. These samples give context to your data so it is important to ensure th
 associated with them is as extensive and accurate as possible.
 
 It is also important to make sure the most appropriate taxonomy is used for your samples. 
-Read more about ENA's taxonomy services `here <faq/taxonomy.html>`_.
+Read more about ENA's taxonomy services `here <../faq/taxonomy.html>`_.
 
 Samples can be submitted one of two ways, using the Webin Interactive web interface 
 or programmatically.

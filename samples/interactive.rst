@@ -29,20 +29,20 @@ attribute information.
 2. If you have created your sample submission in a spreadsheet, click here to submit it, then go to `Step 3`_. Otherwise,
    ignore this.
 
-.. image:: images/mod_03_p01_a.png
+.. image:: ../images/mod_03_p01_a.png
 
 3. Find a checklist that suits your type of sample.
 4. Move on to `Step 2`_ to create the sample template.
 
-.. image:: images/mod_03_p01_b.png
+.. image:: ../images/mod_03_p01_b.png
 
-.. _Interactive Submission Options: mod_01.html
+.. _Interactive Submission Options: ../general-guide/interactive.html
 .. _Step 2:
 
 Step 2: Select The Checklist Fields
 ===================================
 
-.. image:: images/mod_03_p02_a.png
+.. image:: ../images/mod_03_p02_a.png
 
 1. Here, you can view the attributes in your chosen checklist. You can see which are optional and which are mandatory.
 2. You can add more attributes if there are important details not already covered by the checklist.
@@ -51,7 +51,7 @@ Step 2: Select The Checklist Fields
    See `Step 1`_ to submit your spreadsheet.
 4. Click next when you have finished customising your checklist.
 
-.. image:: images/mod_03_p02_b.png
+.. image:: ../images/mod_03_p02_b.png
 
 
 
@@ -63,7 +63,7 @@ Step 2: Select The Checklist Fields
 Step 3: Edit And Submit Samples
 ===============================
 
-.. image:: images/mod_03_p03.png
+.. image:: ../images/mod_03_p03.png
 
 This screen allows you to edit samples individually. It is also where you will be directed if you submit via spreadsheet.
 
@@ -79,4 +79,4 @@ This screen allows you to edit samples individually. It is also where you will b
 7. When all samples are complete, click here to submit. Webin will deliver accessions.
 
 The samples you have just registered are not yet associated with a study. When you submit data, you will refer it to a
-study and sample, thus indirectly linking the sample with a study. See our `Metadata Model <http://ena-docs.readthedocs.io/en/latest/general-guide/metadata.html>`_ for more information.
+study and sample, thus indirectly linking the sample with a study. See our `Metadata Model <../general-guide/metadata.html>`_ for more information.
