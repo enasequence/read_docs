@@ -25,7 +25,7 @@ the process of submitting your data:
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
-<meta_01.html>`_.
+<general-guide/metadata.html>`_.
 
 
 +------------------------+-------------+--------------+-----------+
@@ -50,17 +50,17 @@ It is also recommended that you familiarise yourself with our `metadata model
 .. toctree::
    :maxdepth: 2
 
-   reg
-   interactive
-   programmatic
-   cli
-   portal
-   report
-   meta
-   formats
-   upload
+   general-guide
+   study
+   samples
+   reads
+   sequence
+   assembly
+   analyses
+   update
+   fileprep
+   faq
    tools
-   faq_toc
 
 .. Extra
 .. *****
