@@ -53,13 +53,14 @@ Getting started
 Submission services
 ===================
 
-.. toctree::
-   :maxdepth: 1
-
-   general-guide/interactive
-   general-guide/webin-cli
-   general-guide/programmatic
-
+- `**Interactive Submissions** <general-guide/interactive.html>`_ are completed by filling out web forms in your
+  browser. This is often the most accessible submission route.
+- `**Programmatic Submissions** <general-guide/programmatic.html>`_ are completed by preparing your submissions as
+  XML documents and sending them to ENA using a program such as cURL
+- `**Command Line Submissions** <general-guide/webin-cli.html>`_ use our bespoke Webin-CLI program. This
+  validates your submissions entirely before you complete them, allowing you
+  maximum control of the process
+  
 
 Additional Services
 ===================
