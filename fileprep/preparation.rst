@@ -110,7 +110,7 @@ can make a note of the value and enter it when prompted during the submission
 process.
 
 The Webin File Uploader is a program provided by ENA covered `here
-<fileprep/upload.html>`_ which can be used to upload your files. It also
+<upload.html>`_ which can be used to upload your files. It also
 automatically creates ``.md5`` files and uploads them for you.
 
 If you make and upload your own ``.md5`` file, be sure it contains only the 32
@@ -134,7 +134,7 @@ Next Steps
 Once you have compressed your files and recorded their MD5 values in some way,
 proceed to upload them:
 
-    `Data Upload Documentation <upload.html>`_.
+    `Data Upload Documentation <upload.html>`_
 
 
 Fair Use Policy
