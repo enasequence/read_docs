@@ -24,7 +24,7 @@ You can see examples of types of sequences submitted using flat files here:
 Annotated sequence are submitted using Analysis XML and are required to be
 part of a study.
 
-![annotated sequences](images/webin_data_model_analysis.png)
+![annotated sequences](../images/webin_data_model_analysis.png)
 
 Studies are used to group other objects together and are typically used across multiple analyses and experiments.
 
@@ -37,23 +37,23 @@ study accession (ERP or PRJ) or the assigned individual sequence accessions.
 The sequence accessions will be assigned only when the submission has been fully
 processed by ENA. This will happen some time after the submission has been made.
 The sequence accessions will be send to you by e-mail and are also available
-through the [Webin submissions portal](general-guide/submissions-portal.html).
+through the [Webin submissions portal](../general-guide/submissions-portal.html).
 
 ## Step 1: Register a study
 
 If you have already registered a study then you can add your new analysis to it. If not then
 you should register a new study:
 
-- [Register a Study](study.html)
+- [Register a Study](../study.html)
 
 ## Step 2: Validate flat files
 
 Please validate your sequence flat files before submission using the
-[ENA flat file validator](tools_02.html).
+[ENA flat file validator](../tools_02.html).
 
 ## Step 3: Upload flat files
 
-Please see [Data Upload](fileprep/upload.html).
+Please see [Data Upload](../fileprep/upload.html).
 
 You must gz compress and upload flat files into your Webin upload area before you can
 submit them using analysis XML. Once the analysis has been submitted the files
@@ -104,7 +104,7 @@ The submission XML declares one or more Webin submission service actions.
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can be submitted programmatically, using CURL on command line or
-using the [Webin submissions portal](general-guide/submissions-portal.html).
+using the [Webin submissions portal](../general-guide/submissions-portal.html).
 
 ## Step 6: Submit the XMLs
 
@@ -134,8 +134,8 @@ After running the command above a receipt XML is returned. It will look like the
 
 ### Submit the XMLs using Webin submissions portal
 
-XMLs can also be submitted interactively using the [Webin submissions portal](general-guide/submissions-portal.html).
-Please refer to the [Webin submissions portal](general-guide/submissions-portal.html) document for an example how
+XMLs can also be submitted interactively using the [Webin submissions portal](../general-guide/submissions-portal.html).
+Please refer to the [Webin submissions portal](../general-guide/submissions-portal.html) document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ### The Receipt XML
@@ -167,5 +167,5 @@ but this time using the production service. Simply change the part in the URL fr
 curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
-Similarly, if you are using the [Webin submissions portal](general-guide/submissions-portal.html) change the URL from
+Similarly, if you are using the [Webin submissions portal](../general-guide/submissions-portal.html) change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.

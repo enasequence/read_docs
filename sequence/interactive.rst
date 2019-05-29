@@ -3,7 +3,7 @@ Submit Annotated Sequences Interactively
 ========================================
 
 | Submitting a new annotated sequence entry can be done interactively through Webin.
-  Ensure you `register a study <study.html>`_ before you begin if you have not already done so.
+  Ensure you `register a study <../study.html>`_ before you begin if you have not already done so.
 | Interactive submission of annotated sequences requires you to select a checklist and fill out a spreadsheet of information about your sequence.
   Please view the available `Annotation Checklists <https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_ and pick out a suitable one in advance.
   If there is no appropriate checklist available, you will need to create a flatfile and use a different submission method.
@@ -25,7 +25,7 @@ Submitting Via Spreadsheet
   You should use this to upload your selected checklist.
   If there are errors with your spreadsheet, you will be informed: correct them and redo the submission.
 
-.. image:: images/mod_10_p01.png
+.. image:: ../images/mod_10_p01.png
 
 | Once the submission is accepted, you will be shown a confirmation screen with a tracking number resembling ERZxxxxxx.
   You will later receive an email with your accession numbers.
@@ -46,12 +46,12 @@ Step 1: Select and Customise a Checklist
 | Browse the list of available checklists.
   A description is available for each one.
 
-.. image:: images/mod_10_p02.png
+.. image:: ../images/mod_10_p02.png
 
 | You can select extra fields to add to your spreadsheet at this point.
   These extra fields give your data more context and help other users understand it.
 
-.. image:: images/mod_10_p03.png
+.. image:: ../images/mod_10_p03.png
 
 
 Step 2: Fill Out Shared Details
@@ -61,7 +61,7 @@ Step 2: Fill Out Shared Details
   This information will be used to populate the form for each sequence you add to this submission.
 | None of these fields are mandatory at this stage, and you will be able to edit their content on an individual basis later.
 
-.. image:: images/mod_10_p04.png
+.. image:: ../images/mod_10_p04.png
 
 
 Step 3: Fill Out Individual Details
@@ -70,7 +70,7 @@ Step 3: Fill Out Individual Details
 In this final step, you should fill out the details for each sequence individually.
 Depending on how you completed the previous step, some fields will be filled already.
 
-.. image:: images/mod_10_p05.png
+.. image:: ../images/mod_10_p05.png
 
 Use the '+Add' button to increase the amount of sequences, using the adjacent field to specify how many sequences to add.
 In the box below, you can move between different sequences using the checks on the left.

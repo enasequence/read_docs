@@ -26,5 +26,5 @@ please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
    sequence/interactive
    sequence/programmatic-spreadsheet
-   sequence/webin_cli-flatfile
+   sequence/webin-cli-flatfile
    sequence/programmatic-flatfile

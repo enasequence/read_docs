@@ -3,7 +3,7 @@
 ## Introduction
 
 Annotated sequence flat files can be submitted to the European Nucleotide Archive (ENA)
-using the [Webin command line submission interface](general-guide/webin-cli.html)
+using the [Webin command line submission interface](../general-guide/webin-cli.html)
 with `-context sequence` option.
 
 An annotated sequence submission consists of:
@@ -15,7 +15,7 @@ An annotated sequence submission consists of:
 
 The following picture illustrates the stages of the annotated sequence flat file submission process:
 
-![Submission process](images/webin-cli_03.png)
+![Submission process](../images/webin-cli_03.png)
 
 ## Stage 1: Pre-register study
 
@@ -59,8 +59,8 @@ FLATFILE    sequences.dat.gz
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](general-guide/webin-cli.html).
-Please refer to the [Webin command line submission interface](general-guide/webin-cli.html) documentation for more information
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html).
+Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information
 about the submission process.
 
 ## Assigned accession numbers
@@ -70,7 +70,7 @@ returned to the submitter by the Webin command line submission interface.
 
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the
 Webin submission service. For example, the submitter can retrieve the assigned sequence accessions
-from the [Webin submissions portal](general-guide/submissions-portal.html) or from the [Webin reports service](general-guide/reports-service.html) using
+from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html) using
 the ERZ accession number.
 
 For sequences, long term stable accession numbers that can be used in publications are:
@@ -78,6 +78,6 @@ For sequences, long term stable accession numbers that can be used in publicatio
 - Study accession (PRJ) assigned at time of study registration.
 - Sequence accession(s) assigned once the submission has been fully processed by ENA.
 
-Submitters can retrieve the sequence accession numbers from the [Webin submissions portal](general-guide/submissions-portal.html)
-or from the [Webin reports service](general-guide/reports-service.html). These accession numbers are also send to the submitters by
+Submitters can retrieve the sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html)
+or from the [Webin reports service](../general-guide/reports-service.html). These accession numbers are also send to the submitters by
 e-mail.
