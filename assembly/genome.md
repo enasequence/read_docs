@@ -3,7 +3,7 @@
 ## Introduction
 
 Genome assemblies can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](general-guide/webin-cli.html) with `-context genome` option. 
+using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome` option. 
 
 Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
 
@@ -31,7 +31,7 @@ Chromosomes include organelles (e.g. mitochondrion and chloroplast), plasmids an
 
 The following picture illustrates the stages of the genome assembly submission process:
 
-![Submission process](images/webin-cli_01.png)
+![Submission process](../images/webin-cli_01.png)
 
 ## Stage 1: Pre-register study and sample
 
@@ -40,9 +40,9 @@ Each submission must be associated with a pre-registered study and a sample.
 Genome assemblies except metagenomes are uniquely associated with a study and a sample. 
 When assemblies are updated they must be re-submitted with the same study and sample as in the original submission.
 
-- [Register a Study](study.html)
+- [Register a Study](../study.html)
 
-- [Register a Sample](samples.html)
+- [Register a Sample](../samples.html)
 
 ### Register locus tag prefixes
 
@@ -81,7 +81,7 @@ Consists of the following files:
 
 This assembly level only requires information on the sequences and annotation (if any).
 
-You will receive an error if less than 2 sequences are submitted. If you have less than 2 sequences, then you  will need to submit at a higher assembly level or as [template sequences](sequence/webin-cli-flatfile.html).
+You will receive an error if less than 2 sequences are submitted. If you have less than 2 sequences, then you  will need to submit at a higher assembly level or as [template sequences](../sequence/webin-cli-flatfile.html).
 
 ### Scaffold assembly
 
@@ -165,18 +165,18 @@ FASTA   genome.fasta.gz
 
 ### Other files
 
-Other genome assembly data files are described in [Genome Assembly Data Formats](fileprep/assembly.html). 
+Other genome assembly data files are described in [Genome Assembly Data Formats](../fileprep/assembly.html). 
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](general-guide/webin-cli.html). 
-Please refer to the [Webin command line submission interface](general-guide/webin-cli.html) documentation for more information about the submission process.
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html). 
+Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information about the submission process.
 
 ## Assigned accession numbers
 
 Once the genome assembly has been submitted an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface. 
 
-The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service. For example, the submitter can retrieve the assigned genome assembly and sequence accessions from the [Webin submissions portal](prog_11.html) or from the [Webin reports service](prog_10.html) using the ERZ accession number.
+The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service. For example, the submitter can retrieve the assigned genome assembly and sequence accessions from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](general-guide/reports-service.html) using the ERZ accession number.
 
 For genome assemblies, long term stable accession numbers that can be used in publications are:
 
@@ -185,7 +185,7 @@ For genome assemblies, long term stable accession numbers that can be used in pu
 - Sequence accession(s) assigned once the genome assembly submission has been fully processed by ENA.
 - Genome assembly accession (GCA) assigned once the genome assembly has been fully processed by ENA.
 
-Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](general-guide/submissions-portal.html) or from the [Webin reports service](general-guide/reports-service.html). 
+Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html). 
 These accession numbers are also sent to the submitters by e-mail.
 
 ## Validation rules

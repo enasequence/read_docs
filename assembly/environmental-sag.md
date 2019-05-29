@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Environmental SAG assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](general-guide/webin-cli.html) with `-context genome`.
+Environmental SAG assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome`.
 
 Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
 
-Please see [here](faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
+Please see [here](../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
 
 A SAG assembly consists of:
 - General assembly information
@@ -24,7 +24,7 @@ A SAG assembly consists of:
 
 The following picture illustrates the stages of the Environmental Single-Cell Amplified Genome assembly submission process:
 
-![Submission process](images/webin-cli_05.png)
+![Submission process](../images/webin-cli_05.png)
 
 ## Stage 1: Pre-register study and samples
 
@@ -34,24 +34,24 @@ Each assembly submission must be associated with a pre-registered study and a **
 
 Firstly, you should register your **environmental** samples. For each real-life environmental sample that was used in the study, a sample should be registered using the most relevant environmental checklist and environmental taxonomy (e.g. aquatic metagenome (tax id: 1169740)).
 
-For information about biome-level environmental taxonomy please see [here](faq/taxonomy.html#environmental-biome-level-taxonomy).
+For information about biome-level environmental taxonomy please see [here](../faq/taxonomy.html#environmental-biome-level-taxonomy).
 
 ### SAG sample registration
 
 Once all the **environmental** samples have been registered, you should register your **SAG** samples. For each resulting Single-Cell Amplified Genome assembly, a sample should be registered utilising the **GSC MISAGS** checklist and uncultured taxonomy (e.g. uncultured Bacillus sp. (tax id: 83428)).
 
-For information about organism-level environmental taxonomy please see [here](faq/taxonomy.html#environmental-organism-level-taxonomy).
+For information about organism-level environmental taxonomy please see [here](../faq/taxonomy.html#environmental-organism-level-taxonomy).
 
 When registering **SAG** samples, please make sure they correctly reference the **environmental** sample that they were derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as:
 
 “This sample represents a Single-Cell Amplified Genome derived from the environmental sample ERSXXXXX”
 
-If the assembly was derived from multiple samples you can list these with a comma separated list or range. See [here](faq/metagenomes.html#how-do-i-register-samples-for-co-assemblies) for details on how to format these in the "sample derived from" attribute.
+If the assembly was derived from multiple samples you can list these with a comma separated list or range. See [here](../faq/metagenomes.html#how-do-i-register-samples-for-co-assemblies) for details on how to format these in the "sample derived from" attribute.
 
 The methods for submitting environmental studies and samples follow the same process as any other study/sample submission. Follow the links for more information.
 
-- [Register a Study](study.html)
-- [Register a Sample](samples.html)
+- [Register a Study](../study.html)
+- [Register a Sample](../samples.html)
 
 When submitting raw data for a single-cell amplification project, these data should be submitted associated with this **SAG** sample as this is the sample that was sequenced.
 
@@ -126,9 +126,9 @@ FASTA   single-cell_genome.fasta.gz
 
 ## Stage 3: Validate and submit the files and release environmental samples
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](general-guide/webin-cli.html). 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html). 
 
-Please refer to the [Webin command line submission interface](general-guide/webin-cli.html) documentation for more information about the submission process.
+Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information about the submission process.
 
 ### Release environmental samples
 
@@ -193,7 +193,7 @@ For Environmental Single-cell Amplified Genome assemblies, long term stable acce
 - Sequence accession(s) assigned once the assembly has been fully processed by ENA.
 - Genome assembly accession (GCA) assigned once the assembly has been fully processed by ENA.
 
-Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](general-guide/submissions-portal.html) or from the [Webin reports service](general-guide/reports-service.html). These accession numbers are also sent to the submitters by e-mail.
+Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html). These accession numbers are also sent to the submitters by e-mail.
 
 ## Validation rules
 

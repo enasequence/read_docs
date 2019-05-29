@@ -2,11 +2,11 @@
 
 ## Introduction
 
-Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](general-guide/webin-cli.html) with `-context genome`.
+Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome`.
 
 Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
 
-Please see [here](faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a metagenome study.
+Please see [here](../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a metagenome study.
 
 A metagenome assembly consists of:
 - General assembly information
@@ -25,7 +25,7 @@ A metagenome assembly consists of:
 
 The following picture illustrates the stages of the metagenome assembly submission process:
 
-![Submission process](images/webin-cli_04.png)
+![Submission process](../images/webin-cli_04.png)
 
 ## Stage 1: Pre-register study and metagenomic samples
 
@@ -35,7 +35,7 @@ All metagenomic assemblies should have at least one **environmental** sample reg
 
 For information about biome-level environmental taxonomy please see [here](faq/taxonomy.html#environmental-biome-level-taxonomy).
 
-If you do not intend to submit raw reads or a primary metagenome as part of your metagenome assembly submission, please see [here](faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to do this. If no data is associated with the **environmental** sample, it needs to be released manually in order to be available to the public.
+If you do not intend to submit raw reads or a primary metagenome as part of your metagenome assembly submission, please see [here](../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to do this. If no data is associated with the **environmental** sample, it needs to be released manually in order to be available to the public.
 
 Any additional samples required for submission of a metagenome assembly depends on the assembly level:
 
@@ -45,7 +45,7 @@ Any additional samples required for submission of a metagenome assembly depends 
 
 The following image illustrates the stages of a metagenome assembly study and what is submittable to each of the assembly levels in ENA:
 
-![Metagenome assembly levels](images/metagenomes.png)
+![Metagenome assembly levels](../images/metagenomes.png)
 
 To best represent your data, please submit all levels that are applicable to your study.
 
@@ -63,7 +63,7 @@ This submission level is for a set of contigs or a genome assembly grouped into 
 
 If you are submitting binned assemblies then you will need to submit an additional **binned** sample for each bin. This should be as specific in taxonomy as it can be and use the specific **ENA binned metagenome** checklist.
 
-For information about organism-level environmental taxonomy please see [here](faq/taxonomy.html#environmental-organism-level-taxonomy).
+For information about organism-level environmental taxonomy please see [here](../faq/taxonomy.html#environmental-organism-level-taxonomy).
 
 Please make sure these **binned** samples correctly reference the **environmental** sample that the bin was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as one of the following:
 
@@ -93,12 +93,12 @@ OR
 
 If the assembly was derived from multiple samples or runs you can list these here with a comma separated list or range.
 
-More information about how and why we use this additional sample information can be found [here](faq/metagenomes.html).
+More information about how and why we use this additional sample information can be found [here](../faq/metagenomes.html).
 
 The methods for submitting metagenomic studies and samples follow the same process as any other study/sample submission. Follow the links for more information.
 
-- [Register a Study](study.html)
-- [Register a Sample](samples.html)
+- [Register a Study](../study.html)
+- [Register a Sample](../samples.html)
 
 ## Stage 2: Prepare the files
 
@@ -197,9 +197,9 @@ FASTA   metagenome.fasta.gz
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](general-guide/webin-cli.html). 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html). 
 
-Please refer to the [Webin command line submission interface](general-guide/webin-cli.html) documentation for more information about the submission process.
+Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information about the submission process.
 
 ## Assigned accession numbers
 
@@ -214,7 +214,7 @@ For metagenome assemblies, long term stable accession numbers that can be used i
 - Sequence accession(s) assigned once the assembly has been fully processed by ENA (**for MAGS**).
 - Genome assembly accession (GCA) assigned once the assembly has been fully processed by ENA (**for MAGS**).
 
-Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](general-guide/submissions-portal.html) or from the [Webin reports service](general-guide/reports-service.html). These accession numbers are also sent to the submitters by e-mail.
+Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html). These accession numbers are also sent to the submitters by e-mail.
 
 ## Validation rules
 
