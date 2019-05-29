@@ -13,7 +13,7 @@ on the Webin Submissions Portal and Reports Service.
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
-<general-guide/metadata>`_.
+<general-guide/metadata.html>`_.
 
 
 +------------------------+-------------+--------------+-----------+
@@ -35,7 +35,7 @@ It is also recommended that you familiarise yourself with our `metadata model
 +------------------------+-------------+--------------+-----------+
 
 Once you are happy with the methods available to you and which metadata 
-objects you will need to submit for your rseearch project, please follow the 
+objects you will need to submit for your research project, please follow the 
 more detailed guides for these objects.
 
 .. toctree::
