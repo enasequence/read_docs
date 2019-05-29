@@ -39,8 +39,8 @@ objects you will need to submit for your research project, please follow the
 more detailed guides for these objects.
 
 
-Getting started:
-================
+Getting started
+===============
 
 .. toctree::
    :maxdepth: 1
@@ -49,8 +49,8 @@ Getting started:
    general-guide/metadata
 
 
-Submission services:
-====================
+Submission services
+===================
 
 .. toctree::
    :maxdepth: 1
@@ -60,8 +60,8 @@ Submission services:
    general-guide/programmatic
 
 
-Additional Services:
-====================
+Additional Services
+===================
 
 .. toctree::
    :maxdepth: 1
