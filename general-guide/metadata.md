@@ -1,4 +1,4 @@
-# Metadata Model
+# The ENA Metadata Model
 
 Submissions made through Webin are represented using a number of different metadata objects. 
 Before submitting data to ENA, it is important to familiarise yourself with the ENA metadata model 
@@ -16,7 +16,7 @@ metadata model with relationships between the different types of objects is illu
 
 ## Metadata Model
 
-![Webin medata model](images/webin_data_model_full.png)
+![Webin medata model](../images/webin_data_model_full.png)
 
 - **Submission**: A submission contains submission actions to be performed by the archive. A submission can add more objects to the
 archive, update already submitted objects or make objects publicly available.
