@@ -26,7 +26,7 @@ Study Edits
 Some parts of the study object can be edited.
 These include the release date, title, description and publication references.
 
-.. image:: images/mod_05_p03.png
+.. image:: ../images/mod_05_p03.png
 
 1. Login to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and find the studies tab.
 2. Find the study in the list, or search for it by its accession.
@@ -38,11 +38,11 @@ These include the release date, title, description and publication references.
 	- Mirroring to INSDC databases, who will then make the data available through their services.
 
    Please allow up to 48 hours for newly released data to appear in the public database.
-   Read more about this in our `Data Release Policies FAQ <faq/release.html>`_
+   Read more about this in our `Data Release Policies FAQ <../faq/release.html>`_
 
 4. For edits besides changing the release date, click the 'Edit' button.
 
-.. image:: images/mod_05_p04.png
+.. image:: ../images/mod_05_p04.png
 
 5. The short name for the study will be visible in search outputs and overview pages whereas the descriptive title and abstract will be presented in the study's public page.
 6. You can add the PMID of any papers related to your data.
@@ -57,16 +57,16 @@ Sample Edits
 
 To edit a sample, find it in the list (note the search box) and click the 'Edit' button next to it.
 
-.. image:: images/mod_05_p02.png
+.. image:: ../images/mod_05_p02.png
 
 Your sample will be shown as an XML document which you can edit directly.
 Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file.
 General XML errors and specific errors defined by us are prevented in this way.
 Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to remove an attribute which is required by the specified checklist.
 
-.. image:: images/mod_05_p02_b.png
+.. image:: ../images/mod_05_p02_b.png
 
-This method is useful for one-off edits but it is not feasible for editing many samples at once. For this you can use the `programmatic method <update/programmatic-sample.html>`_.
+This method is useful for one-off edits but it is not feasible for editing many samples at once. For this you can use the `programmatic method <../update/programmatic-sample.html>`_.
 
 
 Experiment And Run Edits
@@ -75,7 +75,7 @@ Experiment And Run Edits
 Experiments and runs are both listed in the 'Runs' tab, where matched pairs of experiments and runs share a row in the table.
 Note that their are separate 'Edit' buttons for the two object types:
 
-.. image:: images/mod_05_p05.png
+.. image:: ../images/mod_05_p05.png
 
 Be sure to use the correct edit button for the object you wish to edit.
 When you click the edit button, you will be shown the relevant object in XML format.
