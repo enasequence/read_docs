@@ -16,7 +16,7 @@ XML Schema.
 
 Analysis object is associated with other objects.
 
-![Webin data model](images/webin_data_model_analysis.png)
+![Webin data model](../images/webin_data_model_analysis.png)
 
 Most analyses are part of a study. Studies are used to group together analyses to
 allow them to be cited together in a publication.
@@ -98,7 +98,7 @@ the XML:
 
 ## Upload Data Files
 
-Please see [Data Upload](fileprep/upload.html).
+Please see [Data Upload](../fileprep/upload.html).
 
 You must have uploaded data files into your Webin upload area before you can
 submit them using an analysis XML. Once the analysis has been submitted the data files
@@ -188,7 +188,7 @@ The '19933_4#3' is the name for the sample used in the VCF file.
 Analysis type `<REFERENCE_ALIGNMENT>` is for submitting read alignments.
 
 Please note that the reads used in the alignment should already have been submitted following
-instructions in [Submit Read Data](reads.html).
+instructions in [Submit Read Data](../reads.html).
 
 Read alignment analyses must be associated with a study and can be assocated with
 one or more samples. The analyses may also point to sequencing experiments or runs
@@ -393,7 +393,7 @@ The submission XML declares one or more Webin submission service actions.
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can be submitted programmatically, using CURL on command line or
-using the `Webin submissions portal <general-guide/submissions-portal.html>`_.
+using the `Webin submissions portal <../general-guide/submissions-portal.html>`_.
 
 ## Submit the XMLs Using CURL
 
@@ -423,8 +423,8 @@ After running the command above a receipt XML is returned. It will look like the
 
 ## Submit the XMLs Using Webin submissions portal
 
-XMLs can also be submitted interactively using the [Webin submissions portal](general-guide/submissions-portal.html).
-Please refer to the [Webin submissions portal](general-guide/submissions-portal.html) document for an example how
+XMLs can also be submitted interactively using the [Webin submissions portal](../general-guide/submissions-portal.html).
+Please refer to the [Webin submissions portal](../general-guide/submissions-portal.html) document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ## The Receipt XML
@@ -457,5 +457,5 @@ but this time using the production service. Simply change the part in the URL fr
 curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
-Similarly, if you are using the [Webin submissions portal](general-guide/submissions-portal.html) change the URL from
+Similarly, if you are using the [Webin submissions portal](../general-guide/submissions-portal.html) change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
