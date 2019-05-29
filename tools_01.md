@@ -12,7 +12,7 @@ Full details of the format are available from the following documents:
 * [Feature table specification](<http://www.insdc.org/documents/feature-table>)
 
 
-If you use the [Webin command line interface](../general-guide/webin-cli.html) then the flat files will be automatically
+If you use the [Webin command line interface](general-guide/webin-cli.html) then the flat files will be automatically
 validated during the submission process.
 
 If you are submitting flat files through another Webin service
@@ -32,7 +32,7 @@ to convert them into sequence flat files.
 
 You can use AGP files to describe the assembly of longer sequences from shorter ones.
 
-If you use the [Webin command line interface](../general-guide/webin-cli.html) then the AGP files will be automatically
+If you use the [Webin command line interface](general-guide/webin-cli.html) then the AGP files will be automatically
 validated during the submission process.
 
 If you are submitting AGP files through another Webin service then please
