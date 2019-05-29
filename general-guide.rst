@@ -38,14 +38,33 @@ Once you are happy with the methods available to you and which metadata
 objects you will need to submit for your research project, please follow the 
 more detailed guides for these objects.
 
+
+Getting started:
+================
+
 .. toctree::
    :maxdepth: 1
 
    general-guide/registration
    general-guide/metadata
+
+
+Submission services:
+====================
+
+.. toctree::
+   :maxdepth: 1
+
    general-guide/interactive
    general-guide/webin-cli
    general-guide/programmatic
+
+
+Additional Services:
+====================
+
+.. toctree::
+   :maxdepth: 1
+
    general-guide/submissions-portal
    general-guide/reports-service
-
