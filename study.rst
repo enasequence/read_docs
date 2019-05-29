@@ -7,7 +7,6 @@ This study is used to group other objects together, so is the as a first step
 towards submitting your data to ENA.
 
 .. image:: images/webin_data_model_study.png
-   :scale: 45
    :align: center
 
 Once a study is registered, Webin will report two accession numbers for the study. 
