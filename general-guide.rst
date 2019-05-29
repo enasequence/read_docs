@@ -2,15 +2,22 @@
 General Guide on Submitting to ENA
 ==================================
 
-Before submitting to ENA it is important to familiarise yourself with 
-the different options available for data submission. This general guide 
-will get you started in understanding how data can be submitted to ENA 
-and how to keep track of the progress of your submission.
+Welcome to the general guide for the European Nucleotide Archive submission.
+Please take a moment to view this introduction and consider the options
+available to you, then use the links to the left to find instructions specific to
+your needs.
 
-For general advice on the three submission services available please see
-pages on interactive, Webin-CLI and programmatic submissions. For 
-information on how to track the progress of your submission, see pages 
-on the Webin Submissions Portal and Reports Service.
+ENA allows submissions via three routes, each of which is appropriate for a
+different set of submission types. You may be required to use more than one in
+the process of submitting your data:
+
+- **Interactive Submissions** are completed by filling out web forms in your
+  browser. This is often the most accessible submission route.
+- **Programmatic Submissions** are completed by preparing your submissions as
+  XML documents and sending them to ENA using a program such as cURL
+- **Command Line Submissions** use our bespoke Webin-CLI program. This
+  validates your submissions entirely before you complete them, allowing you
+  maximum control of the process
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
@@ -35,10 +42,10 @@ It is also recommended that you familiarise yourself with our `metadata model
 | Other Analyses         |      N      |       Y      |     N     |
 +------------------------+-------------+--------------+-----------+
 
-Once you are happy with the methods available to you and which metadata 
-objects you will need to submit for your research project, please follow the 
-more detailed guides for these objects.
-
+Before submitting to ENA it is important to familiarise yourself with 
+the different options available for data submission. This general guide 
+will get you started in understanding how data can be submitted to ENA 
+and how to keep track of the progress of your submission.
 
 Getting started
 ===============
