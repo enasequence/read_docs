@@ -66,7 +66,7 @@ annotation.
     FT                   /estimated_length={unknown or known}
 
 When you have prepared your flatfile, you will need to submit it using
-`Webin-CLI <cli_01.html>`_.
+`Webin-CLI <../general-guide/webin-cli.html>`_.
 
 **Available templates:**
 
