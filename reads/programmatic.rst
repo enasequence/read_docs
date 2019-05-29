@@ -19,7 +19,7 @@ Object relationships
 
 Both run and experiment are associated with other objects.
 
-.. image:: images/webin_data_model_read.png
+.. image:: ../images/webin_data_model_read.png
 
 An experiment is part of a study. Studies are used to group together experiments to
 allow them to be cited together in a publication.
@@ -110,12 +110,12 @@ publications.
 Supported data formats
 ======================
 
-Please see `Read Data Formats <fileprep/reads.html>`_.
+Please see `Read Data Formats <../fileprep/reads.html>`_.
 
 Upload data files
 =================
 
-Please see `Data Upload <fileprep/upload.html>`_.
+Please see `Data Upload <../fileprep/upload.html>`_.
 
 You must have uploaded data files into your Webin upload area before you can
 submit them using a run XML. Once the run has been submitted the data files
@@ -427,7 +427,7 @@ The submission XML declares one or more Webin submission service actions.
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can be submitted programmatically, using CURL on command line or
-using the `Webin submissions portal <general-guide/submissions-portal.html>`_.
+using the `Webin submissions portal <../general-guide/submissions-portal.html>`_.
 
 Submit the XMLs using CURL
 ==========================
@@ -460,8 +460,8 @@ After running the command above a receipt XML is returned. It will look like the
 Submit the XMLs using Webin submissions portal
 ==================================================
 
-XMLs can also be submitted interactively using the `Webin submissions portal <general-guide/submissions-portal.html>`_.
-Please refer to the `Webin submissions portal <general-guide/submissions-portal.html>`_ document for an example how
+XMLs can also be submitted interactively using the `Webin submissions portal <../general-guide/submissions-portal.html>`_.
+Please refer to the `Webin submissions portal <../general-guide/submissions-portal.html>`_ document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 The Receipt XML
@@ -496,5 +496,5 @@ but this time using the production service. Simply change the part in the URL fr
 
     curl -u username:password -F "SUBMISSION=@submission.xml" -F "EXPERIMENT=@experiment.xml" -F "RUN=@run.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
-Similarly, if you are using the `Webin submissions portal <prog_11.html>`_ change the URL from
+Similarly, if you are using the `Webin submissions portal <../general-guide/submissions-portal.html>`_ change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
