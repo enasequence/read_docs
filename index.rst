@@ -48,7 +48,7 @@ It is also recommended that you familiarise yourself with our `metadata model
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    general-guide
    study

@@ -22,7 +22,7 @@ Webin-CLI or programmatically. For an overview of the three ENA submission inter
 please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    sequence/interactive
    sequence/programmatic-spreadsheet

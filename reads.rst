@@ -21,7 +21,7 @@ Reads can be submitted in one of three ways. For an overview of these, please
 see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    reads/interactive
    reads/webin-cli

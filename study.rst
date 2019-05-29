@@ -26,7 +26,7 @@ Studies can be submitted one of two ways, using the Webin Interactive web interf
 or programmatically.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    study/interactive
    study/programmatic

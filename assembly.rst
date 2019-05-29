@@ -15,7 +15,7 @@ Webin-CLI submission interface. For an overview of how to use this, please
 see the documentation on `Webin-CLI Submission <general-guide/webin-cli.html>`_.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    assembly/genome
    assembly/metagenome

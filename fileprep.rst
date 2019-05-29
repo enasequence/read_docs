@@ -12,7 +12,7 @@ to register md5 checksums or previously upload data as the tool will do all this
 at the time of submission.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    fileprep/reads
    fileprep/assembly

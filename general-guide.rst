@@ -39,7 +39,7 @@ objects you will need to submit for your rseearch project, please follow the
 more detailed guides for these objects.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    general-guide/registration
    general-guide/metadata

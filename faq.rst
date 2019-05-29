@@ -2,7 +2,7 @@ Tips and FAQs
 =============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    faq/taxonomy
    faq/runs
