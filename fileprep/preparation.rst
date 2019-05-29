@@ -28,7 +28,7 @@ Oxford Nanopore FAST5 files, do not tar archive any collections of files - each
 should be uploaded separately.
 
 If you are unsure about the format that your files should be in, please view
-our `read data formats <format_01.html>`_ page. This includes advice on general
+our `read data formats <../fileprep/reads.html>`_ page. This includes advice on general
 read data formats, as well as information specific to platforms or sequencing
 applications.
 
@@ -125,7 +125,7 @@ Improperly compressed files and incorrect MD5 values are two of the most common
 errors encountered when processing submitted read files. Often, this happens
 because the file upload was incomplete. When this occurs, you are automatically
 notified by email. Guidance on fixing such errors is given in our `common run
-submission errors <faq/runs.html>`_ page.
+submission errors <../faq/runs.html>`_ page.
 
 
 Next Steps
@@ -134,7 +134,7 @@ Next Steps
 Once you have compressed your files and recorded their MD5 values in some way,
 proceed to upload them:
 
-    `Data Upload Documentation <fileprep/upload.html>`_.
+    `Data Upload Documentation <upload.html>`_.
 
 
 Fair Use Policy
