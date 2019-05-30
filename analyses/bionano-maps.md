@@ -7,8 +7,9 @@ To submit an analysis programmatically, two XML files must be generated to descr
 - **Analysis XML** - used for describing the analysis you would like to submit
 - **Submission XML** - tells ENA how to process this submission
 
-These are then submitted to ENA using a secure HTTP protocol. Please see the general guide on 
-`Programmatic Submission <../general-guide/programmatic.html>`_ for more information.
+These are then submitted to ENA through the secure HTTPS protocol using POST multipart/form-data 
+according to RFC1867. Please see the general guide on 
+[Programmatic Submission] (../general-guide/programmatic.html) for more information.
 
 ## Step 1: Create Analysis XML
 
@@ -90,9 +91,21 @@ from the Webin upload area into the archive.
 You can upload your data files to the root directory of your upload area or you can
 create subdirectories and upload your files there.
 
-#### Describe Data Files in Analysis XML
+#### Describe Data Files for Submission
 
-You can describe data files in your analysis XML with the `<FILE>` element.
+You should then describe these data files in your analysis XML with the `<FILE>` element.
+
+To descibe files required for submission, the analysis object has a `<FILES>` block. 
+This submits the data files into the archive.
+
+For example:
+
+```
+<FILES>
+    <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" 
+	checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
+</FILES>
+```
 
 If the files are uploaded to the root directory
 then simply enter the file name in the Analysis XML when referring to it:
@@ -107,19 +120,6 @@ with the name of the subdirectory:
 ```
 <FILE filename="mantis_religiosa/a.bnx" ... />
 ```
-
-To descibe files required for submission, the analysis object has a `<FILES>` block. 
-This submits the data files into the archive.
-
-For example:
-
-```
-<FILES>
-    <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" 
-	checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
-</FILES>
-```
-
 
 Note that the `filetype` must be `"BioNano_native"` and must refer to one of the following files:
 
@@ -159,12 +159,12 @@ XML in a separate file to tell ENA what actions you would like to take for your 
 ```
 
 The submission XML declares one or more Webin submission service actions. See the general guide on 
-`Programmatic Submission <../general-guide/programmatic.html>`_ for more information.
+[Programmatic Submission] (../general-guide/programmatic.html>) for more information.
 
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can then be submitted programmatically, using CURL on command line or
-using the `Webin submissions portal <../general-guide/submissions-portal.html>`_.
+using the [Webin submissions portal] (../general-guide/submissions-portal.html).
 
 ## Step 3: Submit the XMLs
 

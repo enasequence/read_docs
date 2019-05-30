@@ -6,7 +6,7 @@ Introduction
 ============
 
 Any secondary analyses you wish to submit to ENA that are not `Assemblies <assembly.html>`_ 
-or `Annotated Sequences <sequence.html>` need to be submitted programmatically.
+or `Annotated Sequences <sequence.html>`_ need to be submitted programmatically.
 
 .. image:: images/metadata_model_analysis.png
    :align: center
