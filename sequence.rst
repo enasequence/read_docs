@@ -1,12 +1,38 @@
-Submitting Assembled and Annotated Sequences
-============================================
+How to Submit Annotated Sequences
+=================================
 
-Submitting assembled and annotated sequences to ENA requires submission of a 
-Study to represent your research project.
+Introduction
+============
 
-If you have not done so already, please register a study:
+To submit assembled and annotated sequences to ENA you must also provide 
+context on the research project where this was assembled.
+
+.. image:: images/metadata_model_squence.png
+   :align: center
+   
+Within ENA, all annotated sequences are submitted as 'analysis' submission 
+objects but are processed as 'sequences'.
+
+A sequence submission must be part of an ENA study submission so a study must 
+be registered before any sequences are submitted.
+
+Please register a study if you have not done so already:
    
 - `Register a study <study.html>`_
+
+Accessions
+==========
+
+As all sequences in ENA are submitted as 'analyses', for each sequence submission, Webin will report 
+a unique accession number that starts with ERZ. This accession number is for internal processing only 
+and will not be visible in the browser. As a result, you will recieve additional post-processing accession 
+numbers for your sequences via email. 
+
+Always make a note of any accessions you receive as these are the unique identifiers for each of 
+your submissions to ENA.
+
+Submission Options
+==================
 
 Before you submit an assembled and annotated sequences, you should review the sequence 
 checklists available to see if any are suitable for your submission. This checklist will 
