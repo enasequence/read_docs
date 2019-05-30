@@ -1,4 +1,4 @@
-# Submitting BioNano Maps
+# Submitting Sequence Annotations
 
 ## Introduction
 
@@ -19,23 +19,22 @@ This XML is used for:
 - Listing all files required for submission
 - Describing metadata of the object
 
-Here is an example of a BioNano map analysis XML:
+Here is an example of a sequence annotation analysis XML:
 
 ```xml
 <ANALYSIS_SET>
-    <ANALYSIS alias="es_omd">
-        <TITLE>Euclidium syriacum BioNano Optical Mapping data</TITLE>
-        <DESCRIPTION>Euclidium syriacum Optical Mapping data produced by BioNano Genomics Irys System</DESCRIPTION>
-        <STUDY_REF accession="ERP018601"/>        
-        <SAMPLE_REF accession="ERS1436420"/>      
+    <ANALYSIS alias="YF3059">
+        <TITLE>Y chromosome sequence STR analysis using lobSTR</TITLE>
+        <DESCRIPTION>Y chromosome sequence STR analysis using lobSTR</DESCRIPTION>
+        <STUDY_REF accession="ERP011288"/>
+        <SAMPLE_REF accession="ERS1023190"/>
+        <RUN_REF accession="ERR1198112"/>
         <ANALYSIS_TYPE>
-            <GENOME_MAP>
-                <PROGRAM>IrysView</PROGRAM>
-                <PLATFORM>BioNano</PLATFORM>
-            </GENOME_MAP>
+            <SEQUENCE_ANNOTATION/>
         </ANALYSIS_TYPE>
         <FILES>
-            <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
+            <FILE filename="STR_for_YF03059_20151228.tab.gz" filetype="tab" checksum_method="MD5"
+                checksum="9f2976d079c10b111669b32590d1eb3e"/>
         </FILES>
     </ANALYSIS>
 </ANALYSIS_SET>
@@ -47,10 +46,10 @@ The most distinguishing part of an analysis object is contained in the `<ANALYSI
 The content of this block determines the type of data the analysis should contain and
 how it will be validated by ENA after it has been submitted.
 
-Analysis type `<GENOME_MAP>` is for submitting BioNano optical map data to ENA.
+Analysis type `<SEQUENCE_ANNOTATION>` is for submitting sequence annotation files.
+These are usually tab files. Examples include gene count and OTU tables from metagenomic studies.
 
-Optical maps must be associated with a study and a sample.
-
+Sequence annotation analyses must be associated with a study and at most one sample.
 
 ### Associating with Other ENA Objects
 
@@ -102,8 +101,8 @@ For example:
 
 ```
 <FILES>
-    <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" 
-	checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
+    <FILE filename="STR_for_YF03059_20151228.tab.gz" filetype="tab" checksum_method="MD5"
+        checksum="9f2976d079c10b111669b32590d1eb3e"/>
 </FILES>
 ```
 
@@ -111,25 +110,15 @@ If the files are uploaded to the root directory
 then simply enter the file name in the Analysis XML when referring to it:
 
 ```
-<FILE filename="a.bnx" ... />
+<FILE filename="a.tab.gz"" ... />
 ```
 
 If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix the file name
 with the name of the subdirectory:
 
 ```
-<FILE filename="mantis_religiosa/a.bnx" ... />
+<FILE filename="mantis_religiosa/a.tab.gz"" ... />
 ```
-
-Note that the `filetype` must be `"BioNano_native"` and must refer to one of the following files:
-
-- CMAP: The BioNano Genomics Irys .cmap file is a raw data view reporting a label site position within a genome map.
-- XMAP: The BioNano Genomics Irys .xmap file is a cross-comparison derived from the alignment between an anchor .cmap file and a query .cmap file.
-- SMAP: The BioNano Genomics Irys .smap file is a description of structural variations (SV) derived from the alignment between an anchor .cmap file and a query .cmap file.
-- BNX: The BioNano Genomics Irys .bnx file is a raw data view of molecule and label information and quality scores per channel.
-- COORD: The .coord file relates the coordinates of scaffolds in a hybrid assembly to a corresponding sequences.
-
-For full details of the BioNano data files please refer to [Bionano Solve](https://bionanogenomics.com/support-page/bionano-solve/) documentation.
 
 ### Adding Additional Metadata
 

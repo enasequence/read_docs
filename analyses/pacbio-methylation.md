@@ -1,4 +1,4 @@
-# Submitting BioNano Maps
+# Submitting PacBio Methylation Data
 
 ## Introduction
 
@@ -19,23 +19,31 @@ This XML is used for:
 - Listing all files required for submission
 - Describing metadata of the object
 
-Here is an example of a BioNano map analysis XML:
+Here is an example of a PacBio methylation analysis XML:
 
 ```xml
 <ANALYSIS_SET>
-    <ANALYSIS alias="es_omd">
-        <TITLE>Euclidium syriacum BioNano Optical Mapping data</TITLE>
-        <DESCRIPTION>Euclidium syriacum Optical Mapping data produced by BioNano Genomics Irys System</DESCRIPTION>
-        <STUDY_REF accession="ERP018601"/>        
-        <SAMPLE_REF accession="ERS1436420"/>      
+    <ANALYSIS alias="08-1736">
+        <TITLE>Epigenomic analysis of Salmonella enterica 08-1736 from PacBio RS base-incorporation
+            kinetic data</TITLE>
+        <DESCRIPTION>Single-molecule read technologies allow for detection of epigenomic base
+            modifications during routine sequencing by analysis of kinetic data during the reaction,
+            including the duration between base incorporations at the elongation site (the
+            "inter-pulse duration.") Methylome data associated with a closed de- novo bacterial
+            genome of Salmonella enterica subsp. enterica serovar 4,5,12, i- str. 08-1736 was
+            produced and submitted to the Gene Expression Omnibus.</DESCRIPTION>
+        <STUDY_REF accession="SRP026480"/>
+        <SAMPLE_REF accession="SRS454371"/>
         <ANALYSIS_TYPE>
-            <GENOME_MAP>
-                <PROGRAM>IrysView</PROGRAM>
-                <PLATFORM>BioNano</PLATFORM>
-            </GENOME_MAP>
+            <SEQUENCE_ANNOTATION/>
         </ANALYSIS_TYPE>
         <FILES>
-            <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
+            <FILE filename="data-motifs.gff.gz" filetype="gff" checksum_method="MD5"
+                checksum="7fd0cf4f550fd836758bfc242894a8fe"/>
+            <FILE filename="data-motif_summary.csv.gz" filetype="tab" checksum_method="MD5"
+                checksum="28e36d2792991de13aee0f377b774523"/>
+            <FILE filename="data-modifications.csv.gz" filetype="tab" checksum_method="MD5"
+                checksum="cebce127ade5bc04b0846b205151cbc9"/>
         </FILES>
     </ANALYSIS>
 </ANALYSIS_SET>
@@ -47,10 +55,7 @@ The most distinguishing part of an analysis object is contained in the `<ANALYSI
 The content of this block determines the type of data the analysis should contain and
 how it will be validated by ENA after it has been submitted.
 
-Analysis type `<GENOME_MAP>` is for submitting BioNano optical map data to ENA.
-
-Optical maps must be associated with a study and a sample.
-
+Analysis type `<SEQUENCE_ANNOTATION>` is use for submitting PacBio methylation data to ENA.
 
 ### Associating with Other ENA Objects
 
@@ -102,8 +107,12 @@ For example:
 
 ```
 <FILES>
-    <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" 
-	checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
+    <FILE filename="data-motifs.gff.gz" filetype="gff" checksum_method="MD5"
+        checksum="7fd0cf4f550fd836758bfc242894a8fe"/>
+    <FILE filename="data-motif_summary.csv.gz" filetype="tab" checksum_method="MD5"
+        checksum="28e36d2792991de13aee0f377b774523"/>
+    <FILE filename="data-modifications.csv.gz" filetype="tab" checksum_method="MD5"
+        checksum="cebce127ade5bc04b0846b205151cbc9"/>
 </FILES>
 ```
 
@@ -111,25 +120,20 @@ If the files are uploaded to the root directory
 then simply enter the file name in the Analysis XML when referring to it:
 
 ```
-<FILE filename="a.bnx" ... />
+<FILE filename="a.gff.gz"" ... />
 ```
 
 If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix the file name
 with the name of the subdirectory:
 
 ```
-<FILE filename="mantis_religiosa/a.bnx" ... />
+<FILE filename="mantis_religiosa/a.gff.gz"" ... />
 ```
 
-Note that the `filetype` must be `"BioNano_native"` and must refer to one of the following files:
-
-- CMAP: The BioNano Genomics Irys .cmap file is a raw data view reporting a label site position within a genome map.
-- XMAP: The BioNano Genomics Irys .xmap file is a cross-comparison derived from the alignment between an anchor .cmap file and a query .cmap file.
-- SMAP: The BioNano Genomics Irys .smap file is a description of structural variations (SV) derived from the alignment between an anchor .cmap file and a query .cmap file.
-- BNX: The BioNano Genomics Irys .bnx file is a raw data view of molecule and label information and quality scores per channel.
-- COORD: The .coord file relates the coordinates of scaffolds in a hybrid assembly to a corresponding sequences.
-
-For full details of the BioNano data files please refer to [Bionano Solve](https://bionanogenomics.com/support-page/bionano-solve/) documentation.
+PacBio methylation data usually consists of a set of three files: modifications.csv, 
+motif_summary.csv and motifs.gff. To learn more about what these files are 
+and how to generate them, please refer to 
+[PacBio's own documentation on the subject](https://github.com/PacificBiosciences/Bioinformatics-Training/wiki/Methylome-Analysis-Technical-Note#output-files).
 
 ### Adding Additional Metadata
 

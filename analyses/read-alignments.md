@@ -1,4 +1,4 @@
-# Submitting BioNano Maps
+# Submitting Read Alignments
 
 ## Introduction
 
@@ -19,26 +19,53 @@ This XML is used for:
 - Listing all files required for submission
 - Describing metadata of the object
 
-Here is an example of a BioNano map analysis XML:
+Here is an example of a  read alignment analysis XML:
 
 ```xml
+<?xml version="1.0" encoding="US-ASCII"?>
 <ANALYSIS_SET>
-    <ANALYSIS alias="es_omd">
-        <TITLE>Euclidium syriacum BioNano Optical Mapping data</TITLE>
-        <DESCRIPTION>Euclidium syriacum Optical Mapping data produced by BioNano Genomics Irys System</DESCRIPTION>
-        <STUDY_REF accession="ERP018601"/>        
-        <SAMPLE_REF accession="ERS1436420"/>      
+    <ANALYSIS alias="AD0370_C_alignment">
+        <TITLE>The Anopheles gambiae 1000 Genomes Project - Phase 1 - Alignment - Crosses</TITLE>
+        <DESCRIPTION>Sequence alignments from the AR3 data release from the Anopheles 1000 genomes
+            project. Aligments are in bam format and are presented for each of the 80 A. gambiae
+            specimens comprising parents and progeny of four crosses.</DESCRIPTION>
+        <STUDY_REF accession="ERP020641"/>
+        <SAMPLE_REF accession="ERS150992"/>
+        <RUN_REF accession="ERR178314"/>
+        <RUN_REF accession="ERR178374"/>
+        <RUN_REF accession="ERR178386"/>
         <ANALYSIS_TYPE>
-            <GENOME_MAP>
-                <PROGRAM>IrysView</PROGRAM>
-                <PLATFORM>BioNano</PLATFORM>
-            </GENOME_MAP>
+            <REFERENCE_ALIGNMENT>
+                <ASSEMBLY>
+                    <STANDARD accession="GCA_000005575.1"/>
+                </ASSEMBLY>
+                <SEQUENCE accession="CM000356.1"/>
+            </REFERENCE_ALIGNMENT>
         </ANALYSIS_TYPE>
         <FILES>
-            <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
-        </FILES>
+            <FILE checksum="bafe0ed9be5c0f8515cdc4ac514d24af" checksum_method="MD5"
+                filename="AD0370_C.bam" filetype="bam"/>
+        </FILES>      
     </ANALYSIS>
 </ANALYSIS_SET>
+```
+
+In this example, the BAM file aligns reads from three sequencing runs to the reference genome 'GCA_000005575'
+and has three read group tags defined in its header that each represent one run:
+
+```
+@RG	ID:8149_4_48	PL:ILLUMINA	PU:8149_4_48	LB:AD0370_C_5557918	DS:AGPED1	SM:AD0370-C	CN:SC
+@RG	ID:8177_1_48	PL:ILLUMINA	PU:8177_1_48	LB:AD0370_C_5557918	DS:AGPED1	SM:AD0370-C	CN:SC
+@RG	ID:8177_2_48	PL:ILLUMINA	PU:8177_2_48	LB:AD0370_C_5557918	DS:AGPED1	SM:AD0370-C	CN:SC
+```
+
+The BAM header contains a single assembly and a reference sequence:
+
+```
+@HD	VN:1.4	GO:none	SO:coordinate
+@SQ	SN:2L	LN:49364325	UR:http://www.vectorbase.org/content/anopheles-gamb
+iae-pestchromosomesagamp3fagz	AS:AgamP3	M5:a4da4bafa82830c0a418c5a42138377b
+	SP:Anopheles gambiae
 ```
 
 ### Defining the Analysis Type
@@ -47,9 +74,25 @@ The most distinguishing part of an analysis object is contained in the `<ANALYSI
 The content of this block determines the type of data the analysis should contain and
 how it will be validated by ENA after it has been submitted.
 
-Analysis type `<GENOME_MAP>` is for submitting BioNano optical map data to ENA.
+Analysis type `<REFERENCE_ALIGNMENT>` is use for submitting read alignments to ENA. For analyses of this type, 
+you must reference any reference genomes or sequences used for the alignment.
 
-Optical maps must be associated with a study and a sample.
+```xml
+<ANALYSIS_TYPE>
+    <REFERENCE_ALIGNMENT>
+        <ASSEMBLY>
+            <STANDARD accession="GCA_000005575.1"/>
+        </ASSEMBLY>
+        <SEQUENCE accession="CM000356.1"/>
+    </REFERENCE_ALIGNMENT>
+</ANALYSIS_TYPE>
+```
+
+Please note additionally that the reads used in the alignment should also already have been submitted following
+instructions in [Submit Read Data](../reads.html).
+
+Read alignment analyses must be associated with a study and can be associated with
+one or more samples.
 
 
 ### Associating with Other ENA Objects
@@ -102,34 +145,24 @@ For example:
 
 ```
 <FILES>
-    <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" 
-	checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
-</FILES>
+    <FILE checksum="bafe0ed9be5c0f8515cdc4ac514d24af" checksum_method="MD5"
+        filename="AD0370_C.bam" filetype="bam"/>
+</FILES>     
 ```
 
 If the files are uploaded to the root directory
 then simply enter the file name in the Analysis XML when referring to it:
 
 ```
-<FILE filename="a.bnx" ... />
+<FILE filename="a.bam" ... />
 ```
 
 If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix the file name
 with the name of the subdirectory:
 
 ```
-<FILE filename="mantis_religiosa/a.bnx" ... />
+<FILE filename="mantis_religiosa/a.bam" ... />
 ```
-
-Note that the `filetype` must be `"BioNano_native"` and must refer to one of the following files:
-
-- CMAP: The BioNano Genomics Irys .cmap file is a raw data view reporting a label site position within a genome map.
-- XMAP: The BioNano Genomics Irys .xmap file is a cross-comparison derived from the alignment between an anchor .cmap file and a query .cmap file.
-- SMAP: The BioNano Genomics Irys .smap file is a description of structural variations (SV) derived from the alignment between an anchor .cmap file and a query .cmap file.
-- BNX: The BioNano Genomics Irys .bnx file is a raw data view of molecule and label information and quality scores per channel.
-- COORD: The .coord file relates the coordinates of scaffolds in a hybrid assembly to a corresponding sequences.
-
-For full details of the BioNano data files please refer to [Bionano Solve](https://bionanogenomics.com/support-page/bionano-solve/) documentation.
 
 ### Adding Additional Metadata
 
