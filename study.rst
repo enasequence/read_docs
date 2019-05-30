@@ -7,21 +7,21 @@ Introduction
 
 Every data submission to ENA requires registration of a study object.
 
-This study is used to group other objects together, so is the as a first step 
+This study is used to group other objects together, so it is the first step 
 towards submitting your data to ENA.
 
 .. image:: images/metadata_model_study.png
    :align: center
 
 The study and its associated data will not become public until the study release 
-date has expired (*). You can change this date at will should you need to release 
+date has expired. You can change this date at will should you need to release 
 the data or delay its publication further. However, you will no longer have 
 this option once the data are public.
 
 Have a look at an `example <http://www.ebi.ac.uk/ena/data/view/PRJEB1234>`_ 
 of a study in the ENA browser.
 
-Accesssions
+Accessions
 ===========
 
 Once a study is registered, Webin will report two accession numbers for the study. 
