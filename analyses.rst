@@ -1,5 +1,6 @@
-Submitting Analyses
-===================
+============================
+How to Submit other Analyses
+============================
 
 Any analysis types that are not genome assemblies need 
 to be submitted programmatically.
