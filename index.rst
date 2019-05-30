@@ -54,8 +54,8 @@ It is also recommended that you familiarise yourself with our `metadata model
    study
    samples
    reads
-   sequence
    assembly
+   sequence
    analyses
    update
    fileprep
