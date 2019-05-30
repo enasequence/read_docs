@@ -1,21 +1,44 @@
-Submitting Raw Reads
-====================
+=======================
+How to Submit Raw Reads
+=======================
 
-Submitting your raw sequencing data to ENA required submission of a Study 
-to represent your research project and Samples to represent the biological 
-samples that were sequenced.
+Introduction
+============
 
-Raw reads are represented within ENA as 'runs' and 'experiments'.
+To submit raw read sequencing data to ENA you must also provide some metadata to 
+describe your sequencing project. This helps make your data re-useable and searchable.
 
-
-.. image:: images/mod_01_p02.png
-   :scale: 45
+.. image:: images/metadata_model_reads.png
    :align: center
 
-Before your submit your read data, please register a study and samples:
+Within ENA, raw reads are represented as 'run' and 'experiment' submission objects.
+   
+The **run** submission holds information about the raw read files generated in a run of sequencing.
+
+The **experiment** submission holds metadata that describe the methods used to sequence the sample.
+
+If you are not yet familiar with the metadata model, please see 
+`here <general-guide/metadata.html>`_ for some more information.
+
+As a raw read submission references ENA sample and study objects, you must submit these before your 
+submit your read data. See below for information on how to register a study within ENA to describe 
+your overall research project and samples with information on the biological data that was sequenced:
    
 - `Register a study <study.html>`_
 - `Register a sample <samples.html>`_
+
+Accessions
+==========
+
+Once the raw reads are registered, Webin will report two unique accession numbers for each read submission. 
+The first starts with ERR and is called the Run accession. The other starts with ERX and is called 
+the Experiment accession.
+
+Always make a note of any accessions you receive as these are the unique identifiers for each 
+of your submissions to ENA.
+
+Submission Options
+==================
 
 Reads can be submitted in one of three ways. For an overview of these, please 
 see the `General Guide on Submitting to ENA <general-guide.html>`_.
