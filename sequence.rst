@@ -7,7 +7,7 @@ Introduction
 To submit assembled and annotated sequences to ENA you must also provide 
 context on the research project where this was assembled.
 
-.. image:: images/metadata_model_squence.png
+.. image:: images/metadata_model_sequences.png
    :align: center
    
 Within ENA, all annotated sequences are submitted as 'analysis' submission 
