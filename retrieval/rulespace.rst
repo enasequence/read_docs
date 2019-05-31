@@ -19,7 +19,7 @@ The Rulespace system can be accessed and managed using
 
 How Do I Register with AAP ?
 ----------------------------
-Create an AAP account by registering at |AAP| and fill out the below user form.
+Create an AAP account by registering at |AAP| and fill out the user form.
 
 .. |AAP| raw:: html
 
@@ -29,8 +29,7 @@ Create an AAP account by registering at |AAP| and fill out the below user form.
 
 How Do I Create an Elixir Account ?
 -----------------------------------
-Create an ELIXIR ID that you can use to access services across ELIXIR. You don't need to fill in any long forms to
-register because you register with an account you already use, like your university, ORCID or Google account.
+Create an ELIXIR ID that you can use to access services across ELIXIR. You can register with an account you already use, like your institution account, ORCID or Google account.
 
 Steps to register with Elixir
 
@@ -44,14 +43,14 @@ Steps to register with Elixir
 
 .. image:: images/elixir-form.png
 
-3.  Sign-in to your selected identity provider (If you select Google account).
+3.  Sign-in to your selected identity provider e.g. using your Google account
 
-4.  Enter your Google username.
+4.  Enter your username.
 
 .. image:: images/google-user.png
 
-4.  Enter your Google password and allow the permissions.
+4.  Enter your password and grant permissions.
 
 .. image:: images/google-password.png
 
-5.  You are now registered to Elixir.
+5.  You are now registered with Elixir.
