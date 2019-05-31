@@ -35,7 +35,7 @@ your submissions to ENA.
 Submission Options
 ==================
 
-Before you submit an assembled and annotated sequences, you should review the sequence 
+Before you submit an assembled and annotated sequence, you should review the sequence 
 checklists available to see if any are suitable for your submission. This checklist will 
 simplify and standardise your submission so you can submit with a template spreadsheet. 
 The full list of sequence checklists are available `here <https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_.

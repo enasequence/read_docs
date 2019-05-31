@@ -21,7 +21,7 @@ a Study.
 The analysis XML format is defined by `SRA.analysis.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd>`_
 XML Schema.
 
-Please note some analysis types require certain object relations so please the submission guide 
+Please note some analysis types require certain object relations so please read the individual submission guides 
 for more detail on what needs submitting for each analysis type and please register all 
 required objects before beginning your analysis submission.
 
@@ -43,5 +43,9 @@ see the documentation on `Programmatic Submissions <general-guide/programmatic.h
 .. toctree::
    :maxdepth: 1
 
-   analyses/programmatic
+   analyses/sequence-variation
+   analyses/read-alignments
+   analyses/sequence-annotation
+   analyses/pacbio-methylation
+   analyses/bionano-maps
    
