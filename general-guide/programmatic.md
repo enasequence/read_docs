@@ -246,7 +246,7 @@ Below is an example of a submission XML used to cancel objects:
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
-            <CANCEL target="TODO: object accession number">
+            <CANCEL target="TODO: object accession number"/>
         </ACTION>
     </ACTIONS>
 </SUBMISSION>
@@ -270,7 +270,7 @@ Below is an example of a submission XML used to permanently suppress objects:
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
-            <SUPPRESS target="TODO: object accession number">
+            <SUPPRESS target="TODO: object accession number"/>
         </ACTION>
     </ACTIONS>
 </SUBMISSION>
@@ -283,7 +283,7 @@ until 1st of January 2019 after which the object will become public again:
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
-            <SUPPRESS target="TODO: object accession number"" HoldUntilDate="2019-01-01">
+            <SUPPRESS target="TODO: object accession number"" HoldUntilDate="2019-01-01"/>
         </ACTION>
     </ACTIONS>
 </SUBMISSION>
@@ -307,7 +307,7 @@ Below is an example of a submission XML used to permanently kill objects:
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
-            <KILL target="TODO: object accession number">
+            <KILL target="TODO: object accession number"/>
         </ACTION>
     </ACTIONS>
 </SUBMISSION>
@@ -320,7 +320,7 @@ until 1st of January 2019 after which the object will become public again:
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
-            <KILL target="TODO: object accession number"" HoldUntilDate="2019-01-01">
+            <KILL target="TODO: object accession number"" HoldUntilDate="2019-01-01"/>
         </ACTION>
     </ACTIONS>
 </SUBMISSION>
