@@ -24,7 +24,7 @@ A SAG assembly consists of:
 
 The following picture illustrates the stages of the Environmental Single-Cell Amplified Genome assembly submission process:
 
-![Submission process](../images/webin-cli_05.png)
+![Submission process](../images/webin-cli_04.png)
 
 ## Stage 1: Pre-register study and samples
 
@@ -35,6 +35,10 @@ Each assembly submission must be associated with a pre-registered study and a **
 Firstly, you should register your **environmental** samples. For each real-life environmental sample that was used in the study, a sample should be registered using the most relevant environmental checklist and environmental taxonomy (e.g. aquatic metagenome (tax id: 1169740)).
 
 For information about biome-level environmental taxonomy please see [here](../faq/taxonomy.html#environmental-biome-level-taxonomy).
+
+When submitting the raw reads in a Single-Cell Amplification study, these should remain multiplexed in BAM format and be submitted to this environmental sample.
+
+If you can not submit your raw reads, please follow these [additional guidelines](../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to).
 
 ### SAG sample registration
 
@@ -52,8 +56,6 @@ The methods for submitting environmental studies and samples follow the same pro
 
 - [Register a Study](../study.html)
 - [Register a Sample](../samples.html)
-
-When submitting raw data for a single-cell amplification project, these data should be submitted associated with this **SAG** sample as this is the sample that was sequenced.
 
 ## Stage 2: Prepare the files
 
@@ -124,61 +126,12 @@ MOLECULETYPE   genomic DNA
 FASTA   single-cell_genome.fasta.gz
 ``` 
 
-## Stage 3: Validate and submit the files and release environmental samples
+## Stage 3: Validate and submit the files
 
 Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html). 
 
 Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information about the submission process.
 
-### Release environmental samples
-
-As the registered **environmental** samples do not have any data associated with them, they need to be manually released to become available to the public. Assuming you have submitted correctly using the guidelines above, this can be done in advance of your study release without the risk of any data files being prematurely released.
-
-However, if you do not wish to have your sample *metadata* publicly available before your study is released, this option is not suitable and it is recommended to make a note of the Study release date and release these samples during the same time of the study release.
-
-To manually release your environmental samples, first you need to prepare a submission XML file containing all your **environmental** sample accessions in a block of `ACTION` tags.
-
-An example of a submission XML for the release of three environmental samples is below:
-
-```xml
-<SUBMISSION>
-    <ACTIONS>
-         <ACTION>
-              <RELEASE target="ERS3334823"/>
-         </ACTION>
-         <ACTION>
-              <RELEASE target="ERS3334824"/>
-         </ACTION>
-         <ACTION>
-              <RELEASE target="ERS3334825"/>
-         </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-```
-
-These samples can then be released programmatically through the secure HTTPS protocol using a tool such as curl.
-
-Below is an example of a environmental sample release command:
-
-```
-curl -u username:password -F "SUBMISSION=@submission.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
-```
-
-If your release is successful you should receive a receipt like the one below:
-
-```
-<RECEIPT receiptDate="2019-03-25T08:23:45.795Z" submissionFile="submission.xml" success="true">
-     <MESSAGES>
-          <INFO>sample accession "ERS3334823" is set to public status.</INFO>
-          <INFO>sample accession "ERS3334824" is set to public status.</INFO>
-          <INFO>sample accession "ERS3334825" is set to public status.</INFO>
-          <INFO>Submission has been committed.</INFO>
-     </MESSAGES>
-     <ACTIONS>RELEASE</ACTIONS>
-     <ACTIONS>RELEASE</ACTIONS>
-     <ACTIONS>RELEASE</ACTIONS>
-</RECEIPT>
-```
 
 ## Assigned accession numbers
 
