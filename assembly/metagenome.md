@@ -4,19 +4,19 @@
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) as one of three options.
 
-1. **Primary metagenome** : a metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
+1. **Primary Metagenome** : a metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
 
-2. **binned metagenome** : encompasses anything from a set of contigs to a complete genome assembly from a metagenomic source that has been identified as a single-taxon set.
+2. **Binned Metagenome** : encompasses anything from a set of contigs to a complete genome assembly from a metagenomic source that has been identified as a single-taxon set.
 
 3. **Metagenome-Assembled Genome (MAG)** : a single-taxon assembly based on one or more binned metagenomes that has been asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
 
-This three tiered system was designed to represent the different stages of a metagenome assembly workflow:
+This three tiered system is designed to represent the different stages of a metagenome assembly workflow:
 
 ![Metagenome assembly levels](../images/metagenomes.png)
 
 To best represent your data, please submit as many of the levels as you can that are applicable to your study.
 
-Please note: MAG submissions should only consist of high quality, unique, single-taxon representative assemblies.
+**Please note**: MAG submissions should only consist of high quality, unique, single-taxon representative assemblies.
 
 For submission of MAGs, only one assembly for each assembled species within a biome (either the best quality or a de-replicated genome) can also be submitted as a MAG to represent that species.
 
