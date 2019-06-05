@@ -127,6 +127,8 @@ Examples of metadata fields are study and sample references:
 ```
 STUDY   Study accession or unique name (alias)
 SAMPLE   Sample accession or unique name (alias)
+ANALYSIS_REF Comma separated list of analysis accession(s) 
+RUN_REF Comma separated list of run accession(s)  
 ```
 
 The file name field format is:
