@@ -12,11 +12,9 @@ Full details of the format are available from the following documents:
 * [Feature table specification](<http://www.insdc.org/documents/feature-table>)
 
 
-If you use the [Webin command line interface](general-guide/webin-cli.html) then the flat files will be automatically
-validated during the submission process.
+The [Webin command line interface](general-guide/webin-cli.html) will validate your flat file automatically
+when you submit, or else can be used in 'validate' mode.
 
-If you are submitting flat files through another Webin service
-then please first validate your flat files using the [ENA flat file validator](tools_02.html).
 
 ### How to create flat files
 
