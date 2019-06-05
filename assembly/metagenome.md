@@ -38,9 +38,6 @@ All derived assemblies from an environmental source require a virtual derived sa
 
 Please submit all metagenome assembly levels that apply to your study.
 
-.. toctree::
-   :maxdepth: 1
-
-    metagenome/primary
-    metagenome/binned
-    metagenome/mag
+- [Submitting A Primary Metagenome Assembly](primary.html)
+- [Submitting Binned Metagenome Assemblies](binned.html)
+- [Submitting Metagenome-Assembled Genomes (MAGs)](mag.html)
