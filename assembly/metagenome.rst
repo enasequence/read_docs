@@ -42,8 +42,8 @@ All derived assemblies from an environmental source require a virtual derived sa
 .. image:: ../images/metadata_model_derivedanalysis.png
    :align: center
 
-Submitting a Primary Metagenome Assembly
-========================================
+Submission Guidelines
+=====================
 
 Please submit all metagenome assembly levels that apply to your study.
 
