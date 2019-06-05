@@ -51,14 +51,29 @@ Webin-CLI submission interface. For an overview of how to use this, please
 see the documentation on `Webin-CLI Submission <general-guide/webin-cli.html>`_.
 
 .. toctree::
+   :caption: Isolate Genome Assemblies
    :maxdepth: 1
 
    assembly/genome
+   
+.. toctree::
+   :caption: Environmental Assemblies
+   :maxdepth: 1
+
+   assembly/environmental-sag
    assembly/metagenome
+   
+.. toctree::
+   :caption: Metagenome Assembly Levels
+   :maxdepth: 1
+
    assembly/metagenome/primary
    assembly/metagenome/binned
    assembly/metagenome/mag
-   assembly/environmental-sag
+   
+.. toctree::
+   :caption: Transcriptome Assemblies
+   :maxdepth: 1
+
    assembly/transcriptome
    assembly/metatranscriptome
-
