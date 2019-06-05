@@ -1,4 +1,4 @@
-﻿# Submitting Genome Assemblies
+# Submitting Isolate Genome Assemblies
 
 ## Introduction
 
