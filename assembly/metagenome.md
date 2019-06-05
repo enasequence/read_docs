@@ -4,11 +4,13 @@
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) as one of three options.
 
-1. **Primary Metagenome** : a metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
+- **Primary Metagenome** : a metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
 
-2. **Binned Metagenome** : encompasses anything from a set of contigs to a complete genome assembly from a metagenomic source that has been identified as a single-taxon set.
 
-3. **Metagenome-Assembled Genome (MAG)** : a single-taxon assembly based on one or more binned metagenomes that has been asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
+- **Binned Metagenome** : encompasses anything from a set of contigs to a complete genome assembly from a metagenomic source that has been identified as a single-taxon set.
+
+
+- **Metagenome-Assembled Genome (MAG)** : a single-taxon assembly based on one or more binned metagenomes that has been asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
 
 This three tiered system is designed to represent the different stages of a metagenome assembly workflow:
 
@@ -24,11 +26,11 @@ This prevents any particular species within an environmental sample/biome from b
 
 You can submit MAGs as stand-alone if you intend to submit only a small representative set within your study but please follow the specific guidance on how to do this.
 
-## Submitting Derived Assemblies
+## Virtual Samples
 
 When it comes to submission of **binned metagenomes** or **Metagenome-Assembled Genomes** you will be asked to register additional 'virtual' samples for each assembly (a **binned** sample or a **MAG** sample).
 
-This is because a binned assembly or MAG is not an assembly of the whole set of raw metagenomic data but in fact an assembly derived from a smaller subset of that data. These virtual sample represents the subset of that data and holds all metadata related to the taxonomy of that subset as well as methods used to derive it.
+This is because a binned assembly or MAG is not an assembly of the whole set of raw metagenomic data but in fact an assembly derived from a smaller subset of those data. These virtual samples represents the subset of that data and hold all metadata related to the taxonomy of that subset as well as methods used to derive it.
 
 All derived assemblies from an environmental source require a virtual derived sample so please follow instructions carefully.
 
