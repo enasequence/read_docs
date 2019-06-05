@@ -38,6 +38,6 @@ All derived assemblies from an environmental source require a virtual derived sa
 
 Please submit all metagenome assembly levels that apply to your study.
 
-- [Submitting A Primary Metagenome Assembly](primary.html)
-- [Submitting Binned Metagenome Assemblies](binned.html)
-- [Submitting Metagenome-Assembled Genomes (MAGs)](mag.html)
+- [Submitting A Primary Metagenome Assembly](metagenome/primary.html)
+- [Submitting Binned Metagenome Assemblies](metagenome/binned.html)
+- [Submitting Metagenome-Assembled Genomes (MAGs)](metagenome/mag.html)
