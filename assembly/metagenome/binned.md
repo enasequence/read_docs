@@ -92,6 +92,7 @@ The following metadata fields are supported in the manifest file:
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
 - DESCRIPTION: Free text description of the genome assembly (optional)
+- RUN_REF: Comma separated list of run accession(s) (optional)
 
 Please see further below for validation rules affecting some of these fields.
 
