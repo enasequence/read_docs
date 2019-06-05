@@ -21,7 +21,8 @@ To best represent your data, please submit as many of the levels as you can that
 
 .. note::
 
-Submissions of **binned metagenomes** or **Metagenome-Assembled Genomes** follow different rules to **primary metagenome** submission as they are considered derived assemblies.
+   Submissions of **binned metagenomes** or **Metagenome-Assembled Genomes** follow different rules 
+   to **primary metagenome** submission as they are considered derived assemblies.
 
 When it comes to submission of derived assemblies you will be asked to register additional 'virtual' samples for each assembly (a **binned** sample or a **MAG** sample).
 
