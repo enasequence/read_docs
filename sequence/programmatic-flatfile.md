@@ -48,8 +48,9 @@ you should register a new study:
 
 ## Step 2: Validate flat files
 
-Please validate your sequence flat files before submission using the
-[ENA flat file validator](../tools_02.html).
+Previously, it was possible to validate your flat file using our standalone flat file validator. This tool is
+no longer supported, as this submission route will soon be unavailable. If you wish to pre-validate your flat
+file, please use [Webin-CLI](../general-guide/webin-cli.html) instead.
 
 ## Step 3: Upload flat files
 
