@@ -55,6 +55,9 @@ see the documentation on `Webin-CLI Submission <general-guide/webin-cli.html>`_.
 
    assembly/genome
    assembly/metagenome
+       assembly/metagenome/primary
+       assembly/metagenome/binned
+       assembly/metagenome/mag
    assembly/environmental-sag
    assembly/transcriptome
    assembly/metatranscriptome
