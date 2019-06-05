@@ -95,6 +95,7 @@ The following metadata fields are supported in the manifest file:
 - ASSEMBLYNAME: The unique assembly name.
 - PROGRAM: The assembly program.
 - PLATFORM: The sequencing platform.
+- RUN_REF: Comma separated list of run accession(s) (optional)
 
 The following file name fields are supported in the manifest file:
 
