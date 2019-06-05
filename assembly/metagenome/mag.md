@@ -59,7 +59,7 @@ Your **environmental** samples are the same samples used for raw read submission
 
 - [Register a Sample](../../samples.html)
  
-If you do not intend to submit either [raw reads](../../reads.html) as part of your stand-alone MAG submission, please see [here](../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be released manually in order to be available to the public.
+If you do not intend to submit [raw reads](../../reads.html) as part of your stand-alone MAG submission, please see [here](../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be released manually in order to be available to the public.
  
 ### Registering MAG samples
 
