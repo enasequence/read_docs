@@ -2,6 +2,11 @@
 Rulespace
 =========
 
+Note: This service is currently in development.
+
+Authentication
+==============
+
 Login Types
 -----------
 The Rulespace system can be accessed and managed using
