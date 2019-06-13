@@ -1,3 +1,4 @@
+================
 Umbrella Studies
 ================
 
@@ -15,8 +16,9 @@ Decide which of the following scenarios best describes your need and follow the 
 In either case, you will need to create two XML files, then submit them to us with a curl command.
 If you wish to test your submission, specify the URL of the test service in your curl command: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/
 
+
 Grouping Studies Under An Umbrella
-----------------------------------
+==================================
 
 To group your studies under an umbrella, you will need to create two XML files.
 
@@ -77,8 +79,9 @@ When you are satisfied with the changes you have made to umbrella.xml you should
   These begin 'ERP' and 'PRJEB'.
   The receipt for a failed submission will contain error messages which will advise you on how to fix your submission.
 
+
 Adding Children To An Umbrella
-------------------------------
+==============================
 
 If you have already created an umbrella study and want to add child studies to it, create the following XML files.
 
@@ -110,3 +113,33 @@ When you are satisfied with the updates to your umbrella project XML file, submi
 | You will receive a receipt in XML form.
   Note the 'success' attribute in this receipt, which will read true or false to indicate whether your submission was accepted.
   If the submission failed, there will be specific error messages to advise you of the problem.
+
+
+Releasing Umbrella Studies
+==========================
+
+Umbrella studies do not appear in the list of studies shown in your Webin account.
+Modifying the release date must therefore be done programmatically as well.
+
+Create an XML with the HOLD action, specifying the new release date and project accession:
+
+**hold_date.xml**
+
+.. code-block:: xml
+
+	<SUBMISSION>
+		<ACTIONS>
+			<ACTION>
+				<HOLD HoldUntilDate="YYYY-MM-DD" accession="PRJEBxxxxxx" />
+			</ACTION>
+		</ACTIONS>
+	</SUBMISSION>
+
+Submit this XML to us using curl:
+
+.. code-block:: shell
+
+	curl -u Username:Password -F "SUBMISSION=@hold_date.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
+
+You will be presented with an XML <RECEIPT> which contains an attribute 'success'.
+This will indicate to you whether the update has been accepted or not.
