@@ -62,24 +62,56 @@ The methods for submitting environmental studies and samples follow the same pro
 The set of files that are part of the submission are specified using a manifest file.
 The manifest file is specified using the `-manifest <filename>` option.
 
-Environmental Single-Cell Assemblies should be submitted associated with the **SAG** sample, referenced from within the manifest file.
+The files required for submission of a genome assembly depends on the assembly level:
 
-A SAG assembly submission consists of the following files:
+- Contig
+- Scaffold
+- Chromosome
+
+### Contig assembly
+
+Consists of the following files:
 
 - 1 manifest file
 - 1 fasta file OR 1 flat file
+
+This assembly level only requires information on the sequences and annotation (if any).
+
+You will receive an error if less than 2 sequences are submitted. If you have less than 2 sequences, then you  will need to submit at chromosome level.
+
+### Scaffold assembly
+
+Consists of the following files:
+
+- 1 manifest file
+- 1 fasta file OR 1 flat file
+- 1 AGP file
+
+This assembly level requires information on the sequences and annotation (if any).
+
+It also allows the submitter to provide an AGP file to give instructions for the assembly of the scaffolds from the contigs.
+
+### Chromosome assembly
+
+Consists of the following files:
+
+- 1 manifest file
+- 1 fasta file OR 1 flat file
+- 1 chromosome list file
+- 0-1 unlocalised list files
 - 0-1 AGP files
-- 0-1 Chromosome list files
 
-This submission requires information on the sequences and annotation (if any).
+This assembly level allows the submission of fully assembled chromosomes (including organelles, plasmids, and viral segments). This requires information on the sequences and annotation (if any) and submission of a chromosome list file to indicate which sequences represent which ‘chromosomes’.
 
-This submission also allows for the submission of fully assembled genome sequences (including chromosomes, organelles, plasmids, and viral segments) with the use of a 'chromosome list file'. It also allows the submitter to provide an AGP file to give instructions for the assembly of scaffolds or chromosomes if they wish.
+If these chromosomes contain unlocalised sequences (where the chromosome of the sequence is known but not the exact location) you can submit an additional unlocalised list file. However, please note, if you wish to submit unplaced contigs, you will have to submit at a lower level and use an AGP file to indicate which scaffolds/contigs are 
+assembled to form each chromosome. Any sequences that are not used to assemble chromosomes 
+are considered unplaced.
 
-If you wish to submit an AGP or chromosome list file, it is important to understand how sequence names are formatted so they can be consistent between files and your assembly can be registered correctly.
+For this assembly level in particular, it is important to understand how sequence names are formatted so they can be consistent between files otherwise the system will register your submission at contig level.
 
 ### Sequence names
 
-Sequences must each have a unique entry name within the submission that is provided in the fasta, AGP or flat files. It is essential that the sequence names are unique and used consistently between files. 
+Sequences must have a unique name within the submission that is provided in the fasta, AGP or flat files. It is essential that the sequence names are unique and used consistently between files. 
 
 For example, the chromosome list file must refer to the chromosome sequences using the unique sequence names. Similarly, an AGP file must refer to scaffolds or contigs using the unique sequence names.
 
