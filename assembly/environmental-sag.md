@@ -8,6 +8,18 @@ Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled 
 
 Please see [here](../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
 
+.. note::
+   Submissions of Environmental Single-Cell Amplified Genomes follow different rules to standard isolate assemblies as they are considered derived assemblies.
+
+When it comes to submission of derived assemblies you will be asked to register additional 'virtual' samples for each assembly (a **SAG** sample).
+
+.. image:: ../images/metadata_model_derivedanalysis.png
+   :align: center
+
+This is because a SAG is not an assembly of the whole set of raw data but in fact an assembly derived from a smaller subset of those data. These virtual samples represents the subset of that data and hold all metadata related to the taxonomy of that subset as well as methods used to derive it.
+
+Each SAG from an environmental source requires a virtual derived **SAG** sample so please follow instructions carefully.
+
 A SAG assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
