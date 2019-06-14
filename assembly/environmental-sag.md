@@ -8,7 +8,7 @@ Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled 
 
 Please see [here](../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
 
-** Please note**
+**Please note**
 
 Submissions of Environmental Single-Cell Amplified Genomes follow different rules to standard isolate assemblies as they are considered derived assemblies.
 
