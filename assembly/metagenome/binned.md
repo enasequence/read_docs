@@ -131,8 +131,6 @@ For binned metagenome assemblies, long term stable accession numbers that can be
 
 - Study accession (PRJ) assigned at time of study registration.
 - Sample accession (SAM) assigned at time of sample registration.
-- Sequence accession(s) assigned once the assembly has been fully processed by ENA (**for MAGS**).
-- Genome assembly accession (GCA) assigned once the assembly has been fully processed by ENA (**for MAGS**).
 
 ## Validation rules
 
