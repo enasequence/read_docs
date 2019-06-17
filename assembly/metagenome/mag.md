@@ -4,7 +4,7 @@
 
 A **Metagenome-Assembled Genome (MAG)** is a single-taxon assembly based on one or more binned metagenomes that has been asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
 
-MAG submissions are submitted at the same level as isolate genomes and are distributed within INSDC as environmental isolate genomes. As an environmental sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone to contamination, we request only the highest quality unique-taxon submissions are submitted as MAGs.
+MAG submissions are submitted at the same level as isolate genomes and are distributed within INSDC in the same way. As an environmental sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone to contamination, we request only the highest quality unique-taxon submissions are submitted as MAGs.
 
 There should only be **one MAG** submitted for each species within a biome. This can be determined using a de-replication step or by choosing the highest quality representative genome for each predicted species.
 
@@ -69,7 +69,7 @@ This **MAG** sample virtually represents the taxon that was assembled from the m
 
 It should be as [specific in taxonomy](../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific **GSC MIMAGS** checklist.
 
-Please make sure these **MAG** samples correctly reference either the **binned** sample or **environmental** sample (in the case of stand-alone MAGs) that the MAG was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you can list these with a comma separated list or range.
+Please make sure these **MAG** samples correctly reference either the **binned** sample (or **environmental** sample in the case of stand-alone MAGs) that the MAG was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you can list these with a comma separated list or range.
 
 You should also reference the source sample in the description:
 
