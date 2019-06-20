@@ -2,7 +2,25 @@
 Rulespace
 =========
 
-Note: This service is currently in development.
+Introduction
+============
+
+The Rulespace component supports the persistence of user-controlled sets of rules and user provided
+metadata relating to these rules that can be used to define, through discovery
+services beyond Rulespace, such as the ENA Discovery API. Rules include metadata filters,
+expressed in an appropriate query language and inclusion/exclusion lists of accessions.
+Inclusion/exclusion lists accommodate accessions within our hosted namespaces (e.g.
+ENA). Metadata relating to rules include annotations that allow a user to assert, for example,
+additional facts relating to the basis of a rule (and/or rule set) and any provenance and
+confidence information. For an item declared in an inclusion/exclusion list, facts might be
+links to external resources or identifiers from alternative namespaces.
+
+Services offered by RS will include a write interface - an API in which users can maintain
+their rules. A GUI is available in the ENA Browser that allows users to edit rules with
+some assistance and choose from pre-selected rules. This GUI integrates with the ENA discovery
+interface web GUI, by allowing users to capture the search expression that they have created.
+Read access will be supported via an API around which consumer services (such as Tag&flag or the ENA Browser)
+will draw content from RS.
 
 Authentication
 ==============
