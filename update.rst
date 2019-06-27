@@ -33,4 +33,4 @@ Updates to assemblies can be performed through `Webin-CLI <general-guide/webin-c
 Updating Assembled/Annotated Sequences
 ======================================
 
-If you require an updates to assembled and annotated sequences, please send an email to datasubs@ebi.ac.uk detailing this.
+If you require updates to assembled and annotated sequences, please send an email to datasubs@ebi.ac.uk detailing this.
