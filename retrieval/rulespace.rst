@@ -5,22 +5,21 @@ Rulespace
 Introduction
 ============
 
-The Rulespace component supports the persistence of user-controlled sets of rules and user provided
-metadata relating to these rules that can be used to define, through discovery
-services beyond Rulespace, such as the ENA Discovery API. Rules include metadata filters,
-expressed in an appropriate query language and inclusion/exclusion lists of accessions.
-Inclusion/exclusion lists accommodate accessions within our hosted namespaces (e.g.
-ENA). Metadata relating to rules include annotations that allow a user to assert, for example,
-additional facts relating to the basis of a rule (and/or rule set) and any provenance and
-confidence information. For an item declared in an inclusion/exclusion list, facts might be
-links to external resources or identifiers from alternative namespaces.
+The Rulespace service supports the creation & management of user-controlled rules &
+metadata relating to these rules that are used to define shareable searches on services such as the ENA Discovery API.
+Rules can specify metadata filters, expressed in a structured query language, and lists of accessions
+for inclusion/exclusion. The results matching the search parameters can be further customised by which fields are
+returned and the number of rows etc.
 
-Services offered by RS will include a write interface - an API in which users can maintain
-their rules. A GUI is available in the ENA Browser that allows users to edit rules with
-some assistance and choose from pre-selected rules. This GUI integrates with the ENA discovery
-interface web GUI, by allowing users to capture the search expression that they have created.
-Read access will be supported via an API around which consumer services (such as Tag&flag or the ENA Browser)
-will draw content from RS.
+Rulespace components
+----------------------------------------
+
+1. **A RESTful read/write API**
+    Allows the creation and editing of Rules programmatically, and the retrieval of existing Rules by Id or unique name
+
+2. **A Graphical User Interface**
+    This component in the ENA Browser allows users to create, view and edit rules with assistance. This fully integrates
+     with the Advanced Search interface for easily capturing Rules from searches.
 
 Authentication
 ==============
