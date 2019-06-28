@@ -35,6 +35,12 @@ your needs.
    faq
    tools
 
+.. toctree::
+   :caption: Discovery & Retrieval
+   :maxdepth: 1
+
+   retrieval/rulespace
+
 .. Extra
 .. *****
 
