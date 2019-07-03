@@ -4,20 +4,20 @@ General Guide on Submitting to ENA
 
 Welcome to the general guide for the European Nucleotide Archive submission.
 Please take a moment to view this introduction and consider the options
-available to you, then use the links to the left to find instructions specific to
-your needs.
+available to you before you begin your submission.
 
 ENA allows submissions via three routes, each of which is appropriate for a
 different set of submission types. You may be required to use more than one in
 the process of submitting your data:
 
-- **Interactive Submissions** are completed by filling out web forms in your
-  browser. This is often the most accessible submission route.
+- **Interactive Submissions** are completed by either filling out web forms directly 
+  in your browser or alternatively downloading spreadsheets that can be completed 
+  off-line and uploaded to ENA. This is often the most accessible submission route.
 - **Programmatic Submissions** are completed by preparing your submissions as
-  XML documents and sending them to ENA using a program such as cURL
+  XML documents and sending them to ENA using a program such as cURL.
 - **Command Line Submissions** use our bespoke Webin-CLI program. This
   validates your submissions entirely before you complete them, allowing you
-  maximum control of the process
+  maximum control of the process.
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
