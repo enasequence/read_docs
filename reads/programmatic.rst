@@ -19,7 +19,7 @@ Object relationships
 
 Both run and experiment are associated with other objects.
 
-.. image:: ../images/webin_data_model_read.png
+.. image:: ../images/metadata_model_reads.png
 
 An experiment is part of a study. Studies are used to group together experiments to
 allow them to be cited together in a publication.
