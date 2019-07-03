@@ -5,7 +5,7 @@ Submit Raw Reads Interactively
 Read files are represented in the database as run objects which point to the file location in an FTP directory.
 Runs also point to experiments, which describe the library preparation protocol and themselves point to the sample and study for the data, as described in the below image:
 
-.. image:: ../images/mod_01_p02.png
+.. image:: ../images/metadata_model_reads.png
    :scale: 45
    :align: center
 
