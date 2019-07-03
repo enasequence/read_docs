@@ -6,7 +6,6 @@ Read files are represented in the database as run objects which point to the fil
 Runs also point to experiments, which describe the library preparation protocol and themselves point to the sample and study for the data, as described in the below image:
 
 .. image:: ../images/metadata_model_reads.png
-   :scale: 45
    :align: center
 
 Before you register the run and experiment objects, you should have completed the following steps:
