@@ -23,7 +23,7 @@ You can see examples of types of sequences submitted using flat files [here](../
 Annotated sequence are submitted using Analysis XML and are required to be
 part of a study.
 
-![annotated sequences](../images/webin_data_model_analysis.png)
+![](../images/metadata_model_sequences.png)
 
 Studies are used to group other objects together and are typically used across multiple analyses and experiments.
 
