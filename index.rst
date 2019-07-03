@@ -39,6 +39,7 @@ your needs.
    :caption: Discovery & Retrieval
    :maxdepth: 1
 
+   retrieval/about_ena
    retrieval/rulespace
 
 .. Extra
