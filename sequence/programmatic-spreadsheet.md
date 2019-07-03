@@ -10,13 +10,13 @@ types of sequences are supported as well.
 Most submitters will use [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions)
 to submit these types of sequences:
 
-![annotated sequences](../images/webin_submit_annotated.png)
+![](../images/webin_submit_annotated.png)
 
 ## Object relationships
 
 Annotated sequence are submitted using Analysis XML and are required to be part of a study.
 
-![annotated sequences](../images/webin_data_model_analysis.png)
+![](../images/metadata_model_sequences.png)
 
 Studies are used to group other objects together and are typically used across multiple analyses and experiments.
 
@@ -49,12 +49,12 @@ Sequences are submitted as a tab separated (TSV) file.
 Login into [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/#submissions), select
 `Submit other assembled and annotated sequences` and download a tab separated (TSV) template.
 
-![annotated sequences](../images/webin_submit_annotated_template_1.png)
+![](../images/webin_submit_annotated_template_1.png)
 
 In the example below the sequence type is 'rRNA gene'. You can download the tab separated (TSV) template
 by clicking the `Download Spreadsheet` button.
 
-![annotated sequences](../images/webin_submit_annotated_template_2.png)
+![](../images/webin_submit_annotated_template_2.png)
 
 The downloaded file is called something like "Sequence-ERT000002-5697110325950293078.tsv".
 
