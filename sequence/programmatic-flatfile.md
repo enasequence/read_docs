@@ -16,8 +16,7 @@ For example, the [HLA gene](http://www.ebi.ac.uk/ena/data/view/KU963029&display=
 exons and this is difficult to describe in a spreadsheet. Typically the more complicated sequences
 with multiple and repeating features are the ones which must be submitted using flat files.
 
-You can see examples of types of sequences submitted using flat files here:
-[http://www.ebi.ac.uk/ena/submit/entry-upload-templates](http://www.ebi.ac.uk/ena/submit/entry-upload-templates)
+You can see examples of types of sequences submitted using flat files [here](../fileprep/sequence-flatfile.html).
 
 ## Object relationships
 
