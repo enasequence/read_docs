@@ -65,7 +65,7 @@ However, single and paired reads are accepted as Fastq files that meet the follo
 
 - Quality scores must be in Phred scale.
 - Both ASCII and space delimitered decimal encoding of quality scores are supported. We will automatically detect the Phred quality offset of either 33 or 64.
-- No technical reads (adapters, linkers, barcodes) are allowed.
+- No technical reads (e.g. adapters, linkers, barcodes, primers) are allowed.
 - Single reads must be submitted using a single Fastq file and can be submitted with or without read names.
 - Paired reads must be submitted using two Fastq files.
 - The first line for each read must start with '@'.
