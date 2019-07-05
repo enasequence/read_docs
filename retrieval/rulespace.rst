@@ -12,7 +12,7 @@ for inclusion/exclusion. The results matching the search parameters can be furth
 returned and the number of rows etc.
 
 Rulespace components
-----------------------------------------
+====================
 
 1. **A RESTful read/write API**
     Allows the creation and editing of Rules programmatically, and the retrieval of existing Rules by Id or unique name
