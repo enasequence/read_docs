@@ -11,7 +11,7 @@ machine configuration), output machine data (sequence traces, reads and quality 
 
 Data arrive at ENA from a variety of sources. These include submissions of raw data, assembled sequences and annotation
 from small-scale sequencing efforts, data provision from the major European sequencing centres and routine and
-comprehensive exchange with our partners in the International Nucleotide Sequence Database Collaboration (INSDC).
+comprehensive exchange with our partners in the International Nucleotide Sequence Database Collaboration (`INSDC <http://www.insdc.org>`_).
 
 Provision of nucleotide sequence data to ENA or its INSDC partners has become a central and mandatory step in the
 dissemination of research findings to the scientific community. ENA works with publishers of scientific literature and
@@ -19,12 +19,12 @@ funding bodies to ensure compliance with these principles and to provide optimal
 tools that work seamlessly with the published literature.
 
 ENA is made up of a number of distinct classes of data organised into three tiers. Each class has its own data formats
-and standards. ENA data classes and formats are described here.
+and standards. ENA data classes and formats are described `here <https://www.ebi.ac.uk/ena/submit/data-formats>`_.
 
 Although the ENA has almost 30 years of history, the data and services are constantly changing to reflect growing
 volumes of data, ever improving sequencing technology and the broadening of applications to which sequencing is now
-put. Latest developments and changes to services are announced here and users are encourage to join the ENA mailing
-list (see here).
+put. Latest developments and changes to services are announced `here <https://wwwdev.ebi.ac.uk/ena/browser/news>`_ and users are encourage to join the ENA mailing
+list  `ena-announce <http://listserver.ebi.ac.uk/mailman/listinfo/ena-announce>`_.
 
 As part of the global effort to improve access to and usability of nucleotide sequencing data, we collaborate
 extensively in the development of our services and technologies and in standards activities.
