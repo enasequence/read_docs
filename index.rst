@@ -39,8 +39,14 @@ your needs.
    :caption: Discovery & Retrieval
    :maxdepth: 1
 
-   retrieval/about_ena
    retrieval/rulespace
+
+.. toctree::
+   :caption: About ENA
+   :maxdepth: 1
+
+   about/about_ena
+   about/data_coordination
 
 .. Extra
 .. *****
