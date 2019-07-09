@@ -17,13 +17,15 @@ differently depending on what type of assembly is submitted.
 If you are not yet familiar with the metadata model, please see 
 `here <general-guide/metadata.html>`_ for some more information.
 
-As an assembly references ENA sample and study objects, you must submit these before your 
-submit your data. See below for information on how to register a study within ENA to describe 
-your overall research project and samples with information on the biological data that was 
-sequenced then assembled:
+As an assembly references ENA sample and study objects, you must submit these before you
+submit your data. It is also strongly recommended to submit as well as reference any reads associated with the assembly being submitted.
+
+See below for information on how to: register a study within ENA to describe your overall research project,
+register samples with information on the biological data that was sequenced then assembled and submit any reads associated with each sample being submitted.
    
 - `Register a study <study.html>`_
 - `Register a sample <samples.html>`_
+- `Submit raw reads <reads.html>`_
 
 Accessions
 ==========
