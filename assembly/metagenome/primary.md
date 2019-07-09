@@ -36,6 +36,11 @@ The methods for submitting metagenomic studies and samples follow the same proce
 - [Register a Study](../../study.html)
 - [Register a Sample](../../samples.html)
 
+It is strongly recommended to submit as well as reference any reads associated with the assembly being submitted.
+In order to reference the reads associated with the study, please see the `RUN_REF` tag included in the manifest file below.
+
+- [Submit raw reads](../reads.html)
+
 ## Stage 2: Prepare the files
 
 The set of files that are part of the submission are specified using a manifest file.
