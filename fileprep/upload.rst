@@ -179,7 +179,7 @@ application downloadable from
 5. Browse into the local ``Upload Directory`` containing the data files you
    wish to upload using the ``...`` button. The list of all the files contained
    in the selected directory will be displayed.
-6. Choose ``Override`` option if you wish to replace any existing files which
+6. Choose ``Overwrite`` option if you wish to replace any existing files which
    have been previously uploaded.
 7. Choose ``Upload Tree`` option if you wish to preserve the directory
    structure when uploading files to the Webin upload area. By default, the
