@@ -35,19 +35,6 @@ your needs.
    faq
    tools
 
-.. toctree::
-   :caption: Discovery & Retrieval
-   :maxdepth: 1
-
-   retrieval/rulespace
-
-.. toctree::
-   :caption: About ENA
-   :maxdepth: 1
-
-   about/about_ena
-   about/data_coordination
-
 .. Extra
 .. *****
 
