@@ -232,7 +232,7 @@ Or with the `MODIFY` action:
 
 ### Submission XML: cancel objects
 
-Pre-publication private objects can be cancelled by all submitters.
+Pre-publication private objects (with the exception of assemblies) can be cancelled by all submitters.
 
 To cancel objects, you must use the `CANCEL` action in the submission XML.
 
