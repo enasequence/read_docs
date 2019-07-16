@@ -139,7 +139,7 @@ The following metadata fields are supported in the manifest file:
 - ASSEMBLY_TYPE: 'Environmental Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
-- PLATFORM: The sequencing platform or comma-separated list of platforms, if appropriate
+- PLATFORM: The sequencing platform, or comma-separated list of platforms
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
 - DESCRIPTION: Free text description of the genome assembly (optional)

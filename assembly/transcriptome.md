@@ -67,7 +67,7 @@ The following metadata fields are supported in the manifest file:
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: The unique assembly name
 - PROGRAM: The assembly program
-- PLATFORM: The sequencing platform or comma-separated list of platforms, if appropriate
+- PLATFORM: The sequencing platform, or comma-separated list of platforms
 - DESCRIPTION: Free text description of the transcriptome assembly (optional)
 - RUN_REF: Comma separated list of run accession(s) (optional)
 
