@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Genome assemblies can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome` option. 
+Genome assemblies can be submitted to the European Nucleotide Archive (ENA)
+using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome` option.
 
 Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
 
 Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons, bacteriophages, prokaryotic and eukaryotic genomes.
- 
+
 A genome assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
@@ -35,9 +35,9 @@ The following picture illustrates the stages of the genome assembly submission p
 
 ## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a pre-registered study and a sample. 
+Each submission must be associated with a pre-registered study and a sample.
 
-Genome assemblies except metagenomes are uniquely associated with a study and a sample. 
+Genome assemblies except metagenomes are uniquely associated with a study and a sample.
 When assemblies are updated they must be re-submitted with the same study and sample as in the original submission.
 
 - [Register a Study](../study.html)
@@ -113,38 +113,38 @@ Consists of the following files:
 
 This assembly level allows the submission of fully assembled chromosomes (including organelles, plasmids, and viral segments). This requires information on the sequences and annotation (if any) and submission of a chromosome list file to indicate which sequences represent which ‘chromosomes’.
 
-If these chromosomes contain unlocalised sequences (where the chromosome of the sequence is known but not the exact location) you can submit an additional unlocalised list file. However, please note, if you wish to submit unplaced contigs, you will have to submit at a lower level and use an AGP file to indicate which scaffolds/contigs are 
-assembled to form each chromosome. Any sequences that are not used to assemble chromosomes 
+If these chromosomes contain unlocalised sequences (where the chromosome of the sequence is known but not the exact location) you can submit an additional unlocalised list file. However, please note, if you wish to submit unplaced contigs, you will have to submit at a lower level and use an AGP file to indicate which scaffolds/contigs are
+assembled to form each chromosome. Any sequences that are not used to assemble chromosomes
 are considered unplaced.
 
 For this assembly level in particular, it is important to understand how sequence names are formatted so they can be consistent between files otherwise the system will just register your submission at contig level.
 
 ### Sequence names
 
-Sequences must have a unique name within the submission that is provided in the fasta, AGP or flat files. It is essential that the sequence names are unique and used consistently between files. 
+Sequences must have a unique name within the submission that is provided in the fasta, AGP or flat files. It is essential that the sequence names are unique and used consistently between files.
 
 For example, the chromosome list file must refer to the chromosome sequences using the unique sequence names. Similarly, an AGP file must refer to scaffolds or contigs using the unique sequence names.
 
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
+- Field name (first column): case insensitive field name
 - Field value (second column): field value
 
 The following metadata fields are supported in the manifest file:
 
-- STUDY: Study accession or unique name (alias) 
+- STUDY: Study accession or unique name (alias)
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
 - ASSEMBLY_TYPE: 'clone or isolate'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
-- PLATFORM: The sequencing platform
+- PLATFORM: The sequencing platform or comma-separated list of platforms, if appropriate
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
 - DESCRIPTION: Free text description of the genome assembly (optional)
 - RUN_REF: Comma separated list of run accession(s) (optional)
-                                                   
+
 Please see further below for validation rules affecting some of these fields.
 
 The following file name fields are supported in the manifest file:
@@ -172,16 +172,16 @@ FASTA   genome.fasta.gz
 
 ### Other files
 
-Other genome assembly data files are described in [Genome Assembly Data Formats](../fileprep/assembly.html). 
+Other genome assembly data files are described in [Genome Assembly Data Formats](../fileprep/assembly.html).
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html). 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html).
 Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information about the submission process.
 
 ## Assigned accession numbers
 
-Once the genome assembly has been submitted an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface. 
+Once the genome assembly has been submitted an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface.
 
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service. For example, the submitter can retrieve the assigned genome assembly and sequence accessions from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](general-guide/reports-service.html) using the ERZ accession number.
 
@@ -192,7 +192,7 @@ For genome assemblies, long term stable accession numbers that can be used in pu
 - Sequence accession(s) assigned once the genome assembly submission has been fully processed by ENA.
 - Genome assembly accession (GCA) assigned once the genome assembly has been fully processed by ENA.
 
-Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html). 
+Submitters can retrieve the genome and sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html).
 These accession numbers are also sent to the submitters by e-mail.
 
 ## Validation rules
@@ -208,13 +208,13 @@ Assembly names must:
 - match the pattern: ^[A-Za-z0-9][A-Za-z0-9 _#\-\.]*$
 - be shorter than 100 characters
 - not include the name of the organism assembled
-           
+
 ### Chromosome name validation
-    
+
 Chromosome names must:
 - match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9_#\-\.]*$
 - be shorter than 33 characters
-- not contain any of the following as part of their name (case insensitive): 
+- not contain any of the following as part of their name (case insensitive):
     - 'chr'
     - 'chrm'
     - 'chrom'
@@ -245,7 +245,7 @@ Since Webin 1.7.0:
 - Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
 - Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
 
-This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk . 
+This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk .
 
 ### Assembly updates
 

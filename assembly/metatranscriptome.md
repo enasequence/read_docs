@@ -2,8 +2,8 @@
 
 ## Introduction
 
-Metatranscriptome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../general-guide/webin-cli.html)  with `-context transcriptome` option. 
- 
+Metatranscriptome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../general-guide/webin-cli.html)  with `-context transcriptome` option.
+
 A metatranscriptome assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
@@ -20,7 +20,7 @@ The following picture illustrates the stages of the transcriptome assembly submi
 
 ## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a pre-registered study and 1 or more pre-registered 
+Each submission must be associated with a pre-registered study and 1 or more pre-registered
 metagenomic samples.
 
 For transcriptomic assemblies, raw reads must also be submitted to give context to the data.
@@ -45,7 +45,7 @@ Please make sure these **species** samples correctly reference the original samp
 
 "This sample represents an assembly from the metatranscriptomic sample ERSXXXXX"
 
-OR 
+OR
 
 "This sample represents an assembly from the metatranscriptomic run ERRXXXXX"
 
@@ -80,27 +80,27 @@ Transcriptome assemblies should be of a high enough quality to fulfil the follow
 
 ### Sequence names
 
-Sequences must have a unique name within the submission that is provided in the fasta or flat files. 
+Sequences must have a unique name within the submission that is provided in the fasta or flat files.
 
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
+- Field name (first column): case insensitive field name
 - Field value (second column): field value
 
 The following metadata fields are supported in the manifest file:
 
-- STUDY: Study accession or unique name (alias) 
+- STUDY: Study accession or unique name (alias)
 - SAMPLE: Sample accession or unique name (alias)
-- ASSEMBLYNAME: The unique assembly name.
-- PROGRAM: The assembly program.
-- PLATFORM: The sequencing platform.
+- ASSEMBLYNAME: The unique assembly name
+- PROGRAM: The assembly program
+- PLATFORM: The sequencing platform or comma-separated list of platforms, if appropriate
 - RUN_REF: Comma separated list of run accession(s) (optional)
 
 The following file name fields are supported in the manifest file:
 
 - FASTA: sequences in fasta format
-- FLATFILE: sequences in EMBL-Bank flat file format 
+- FLATFILE: sequences in EMBL-Bank flat file format
 
 For example, the following manifest file represents a genome assembly consisting of transcripts provided in one fasta file:
 
@@ -111,7 +111,7 @@ ASSEMBLYNAME    TODO
 PROGRAM TODO
 PLATFORM    TODO
 FASTA   metatranscriptome.fasta.gz
-``` 
+```
 
 ### Fasta file
 
@@ -121,7 +121,7 @@ The sequence name is extracted from the fasta header. For example the following 
 
 `>contig1`
 
-### Flat file	
+### Flat file
 
 Annotated sequences must be submitted using an EMBL-Bank flat file.
 
@@ -132,12 +132,12 @@ For example the following AC * line defines name 'contig1':
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html). 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../general-guide/webin-cli.html).
 Please refer to the [Webin command line submission interface](../general-guide/webin-cli.html) documentation for more information about the submission process.
 
 ## Assigned accession numbers
 
-Once the transcriptome assembly has been submitted, an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface. 
+Once the transcriptome assembly has been submitted, an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface.
 
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service. For example, the submitter can retrieve the assigned sequence accessions from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html) using the ERZ accession number.
 
@@ -145,7 +145,7 @@ For metatranscriptome assemblies, long term stable accession numbers that can be
 
 - Study accession (PRJ) assigned at time of study registration.
 - Sample accession (SAM) assigned at time of study registration.
-- Sequence accession(s) assigned once the metatranscriptome assembly submission has been fully 
+- Sequence accession(s) assigned once the metatranscriptome assembly submission has been fully
 processed by ENA.
 
 Submitters can retrieve the sequence accession numbers from the [Webin submissions portal](../general-guide/submissions-portal.html) or from the [Webin reports service](../general-guide/reports-service.html). These accession numbers are also sent to the submitters by e-mail.
