@@ -16,8 +16,39 @@ A different sample should be registered for each sample used in the real-life se
 project. These samples give context to your data so it is important to ensure the metadata 
 associated with them is as extensive and accurate as possible.
 
-It is also important to make sure the most appropriate taxonomy is used for your samples. 
-Read more about ENA's taxonomy services `here <../faq/taxonomy.html>`_.
+Checklists
+----------
+
+To ensure that each sample is registered with at least a minimum amount of metadata, ENA
+provides "Sample Checklists" which are used during registration to tailor these samples to fit
+minimum standards for different sample types.
+
+These "Checklists" were developed in collaboration with different research communities to ensure
+that there is enough information provided for each type of sample that is deposited in ENA to comply
+with the FAIR data principles (making sure your associated data is Findable, Accessible, Interoperable
+and Reusable).
+
+As a result, when registering a sample, it is important to choose the most relevant sample
+checklist available to you and provide at least the minimum metadata.
+
+.. note::
+   If your sample metadata does not provide enough context for your data to be easily interpreted,
+   you could be requested to update your samples, so it is important to take some time to choose
+   the correct checklist and metadata when you first register your samples.
+
+If you can not find a suitable checklist for your sample data type - please first contact
+datasubs@ebi.ac.uk for advice. Please only use the **ENA default sample** checklist if you have
+been advised that there are no other suitable options.
+
+Taxonomy
+--------
+
+Please also make sure you are familiar with the `ENA's taxonomy services <../faq/taxonomy.html>`_
+and use the correct taxonomy to describe your samples.
+
+In particular, consider the `environmental
+taxonomy <taxonomy.html#environmental-taxonomic-classifications>`_ options available to you when
+working with environmental samples.
 
 Accessions
 ==========
