@@ -25,7 +25,7 @@ It is also recommended that you familiarise yourself with our `metadata model
 <general-guide/metadata.html>`_.
 
 
-+------------------------+-------------+--------------+-----------+
++------------------------+-------------+-----------+--------------+
 |                        | Interactive | Webin-CLI | Programmatic |
 +------------------------+-------------+-----------+--------------+
 | Study                  |      Y      |     N     |       Y      |
