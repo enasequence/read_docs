@@ -14,7 +14,7 @@ You can edit the release date of a study from within your Webin account:
 In the 'Studies' tab, find the study you wish to change and click the pencil icon adjacent to its current release date.
 You can move the date to be sooner or later as required.
 
-.. image:: ../images/release_p01.png
+.. image:: /images/release_p01.png
 
 When you are ready to release your study, you should do it by changing the release day to the current day.
 
