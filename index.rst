@@ -6,7 +6,7 @@
 ENA: Guidelines and Tutorials
 *****************************
 
-Welcome to the guidelines for submission to the European Nucleotide Archive.
+Welcome to the guidelines for submission and retrieval for the European Nucleotide Archive.
 Please use the links below and to the left to find instructions specific to
 your needs.
    
@@ -35,8 +35,9 @@ your needs.
    :maxdepth: 1
    retrieval/general-guide
 
+
 .. toctree::
-   :caption: Frequently Asked Questions
+   :caption: Tips and FAQs
    :maxdepth: 1
    
    faq/taxonomy
