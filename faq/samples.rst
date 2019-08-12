@@ -15,7 +15,7 @@ Error: Object Being Added Already Exists In Submission Account
 | During interactive submissions, the alias is referred to as the 'Unique Name': if nothing is entered here, samples are automatically given numerical values starting at 1.
   This means that if the field is ignored on two separate submissions, the second submission will result in this error.
 
-.. image:: /images/faq_sample_error_p01.png
+.. image:: images/faq_sample_error_p01.png
 
 | Enter an informative name here, as you may need to use the alias in the future and it cannot be changed after submission.
 
