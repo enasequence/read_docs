@@ -1,5 +1,5 @@
-============================================
-General Guide on ENA Discovery and Retrieval
-============================================
+===================================
+General Guide on ENA Data Retrieval
+===================================
 
 *Coming soon!*
