@@ -1,4 +1,4 @@
-# Taxonomic Classifications for Your Samples
+# Tips for Sample Taxonomy
 
 ## The Tax Database
 

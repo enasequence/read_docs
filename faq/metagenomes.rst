@@ -1,6 +1,6 @@
-====================================
-Common Metagenome Submission Queries
-====================================
+=============================
+Metagenome Submission Queries
+=============================
 
 Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are often many queries regarding how these assemblies are submitted in order to make the quality of the assembly and original source of data as clear as possible.
 
