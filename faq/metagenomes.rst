@@ -6,7 +6,7 @@ Metagenomic studies involve assembling sequencing data sampled from an entire bi
 
 The following image illustrates the stages of a metagenome assembly study and what is submittable to each of the metagenome assembly levels in ENA:
 
-.. image:: /images/metagenomes.png
+.. image:: images/metagenomes.png
 
 When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact datasubs@ebi.ac.uk for assistance.
 
