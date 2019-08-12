@@ -1,6 +1,6 @@
-==================================
-General Guide on Submitting to ENA
-==================================
+====================================
+General Guide on ENA Data Submission
+====================================
 
 Welcome to the general guide for the European Nucleotide Archive submission.
 Please take a moment to view this introduction and consider the options
