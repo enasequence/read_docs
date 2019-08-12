@@ -1,4 +1,4 @@
-# Submitting A Primary Metagenome Assembly 
+# Submitting A Primary Metagenome Assembly
 
 ## Introduction
 
@@ -25,7 +25,7 @@ The following picture illustrates the stages of the metagenome assembly submissi
 
 ## Stage 1: Pre-register study and environmental sample
 
-Each submission must be associated with a pre-registered study and environmental sample. This sample should be the same sample used to submit your raw reads. 
+Each submission must be associated with a pre-registered study and environmental sample. This sample should be the same sample used to submit your raw reads.
 
 When registering an environmental sample, please make sure the appropriate environmental checklist is chosen for this and an [environmental taxon](../../faq/taxonomy.html#environmental-biome-level-taxonomy) is used (e.g. aquatic metagenome (tax id: 1169740)).
 
@@ -49,23 +49,23 @@ The manifest file is specified using the `-manifest <filename>` option.
 A primary metagenome assembly submission consists of the following files:
 
 - 1 manifest file
-- 1 fasta file 
+- 1 fasta file
 
 ### Manifest file
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
+- Field name (first column): case insensitive field name
 - Field value (second column): field value
 
 The following metadata fields are supported in the manifest file:
 
-- STUDY: Study accession or unique name (alias) 
+- STUDY: Study accession or unique name (alias)
 - SAMPLE: Environmental sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
 - ASSEMBLY_TYPE: 'primary metagenome'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
-- PLATFORM: The sequencing platform
+- PLATFORM: The sequencing platform, or comma-separated list of platforms
 - MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
 - MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
 - DESCRIPTION: Free text description of the genome assembly (optional)
@@ -90,17 +90,17 @@ PLATFORM   TODO
 MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
 FASTA   primary_metagenome.fasta.gz
-``` 
+```
 
 ## Stage 3: Validate and submit the files
 
-Files are validated, uploaded and submitted using the [Webin command line submission interface](../../general-guide/webin-cli.html). 
+Files are validated, uploaded and submitted using the [Webin command line submission interface](../../general-guide/webin-cli.html).
 
 Please refer to the [Webin command line submission interface](../../general-guide/webin-cli.html) documentation for more information about the submission process.
 
 ## Assigned accession numbers
 
-Once the genome assembly has been submitted an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface. 
+Once the genome assembly has been submitted an analysis (ERZ) accession number is immediately assigned and returned to the submitter by the Webin command line submission interface.
 
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin submission service and access their data in the browser.
 
@@ -117,7 +117,7 @@ Assembly names must:
 - match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9 _#\-\.]*$
 - be shorter than 100 characters
 - not include the name of the organism assembled
-           
+
 ### Sequence validation
 
 Sequences must:
