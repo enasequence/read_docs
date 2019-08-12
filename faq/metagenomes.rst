@@ -6,11 +6,11 @@ Metagenomic studies involve assembling sequencing data sampled from an entire bi
 
 The following image illustrates the stages of a metagenome assembly study and what is submittable to each of the metagenome assembly levels in ENA:
 
-.. image:: ../images/metagenomes.png
+.. image:: images/metagenomes.png
 
 When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact datasubs@ebi.ac.uk for assistance.
 
-Please see `here <../assembly/metagenome.html>`_ for more information on how to submit your metagenome assemblies to ENA.
+Please see `here <..submit/assembly/metagenome.html>`_ for more information on how to submit your metagenome assemblies to ENA.
 
 What is defined as a MAG within ENA?
 ====================================
@@ -131,9 +131,9 @@ How do I submit uncultured virus genomes (UViGs)?
 
 The method used for submission of uncultured virus genomes depends on the methods used to identify these genomes.
 
-If the virus genome was derived from a study where the entire biome of environmental data was sequenced together and then binned by taxonomy, then please submit with the same methods as those outlined in the `metagenome assembly <../assembly/metagenome.html>`_ submission guidelines. This is with the exception of the use of the **GSC MIMAGS** checklist. For virus genomes, the **GSC MIUVIGS** checklist should be utilised for each virus assembly.
+If the virus genome was derived from a study where the entire biome of environmental data was sequenced together and then binned by taxonomy, then please submit with the same methods as those outlined in the `metagenome assembly <../submit/assembly/metagenome.html>`_ submission guidelines. This is with the exception of the use of the **GSC MIMAGS** checklist. For virus genomes, the **GSC MIUVIGS** checklist should be utilised for each virus assembly.
 
-If the virus genome was derived from a study using single-cell amplification techniques, then please submit with the same methods as those outlined in the `environmental single-cell amplified genome assembly <../assembly/environmental-sag.html>`_ submission guidelines. This is with the exception of the use of the **GSC MISAGS** checklist. For virus genomes, the **GSC MIUVIGS** checklist should be utilised for each virus assembly.
+If the virus genome was derived from a study using single-cell amplification techniques, then please submit with the same methods as those outlined in the `environmental single-cell amplified genome assembly <../submit/assembly/environmental-sag.html>`_ submission guidelines. This is with the exception of the use of the **GSC MISAGS** checklist. For virus genomes, the **GSC MIUVIGS** checklist should be utilised for each virus assembly.
 
 How do I submit metagenome assemblies without raw data or primary assemblies to point to?
 =========================================================================================

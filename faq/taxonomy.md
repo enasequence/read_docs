@@ -6,7 +6,7 @@ Every ENA sample object should have a taxonomic classification. The INSDC mainta
 
 The [interactive submission service](https://www.ebi.ac.uk/ena/submit/sra/#home) has a look up table which you can use to find appropriate taxonomic identifiers. There is also a look up <a href="https://www.ebi.ac.uk/ena/data/warehouse/search?portal=taxon">here</a>, in the taxon domain of the ENA advanced search.
 
-![webin_tax_look_up](../images/tips_p01.png)
+![webin_tax_look_up](images/tips_p01.png)
 
 Submitters using REST API will apply the taxonomic information to the sample object using the sample_name block
 
@@ -103,7 +103,7 @@ curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%
 
 To view all environmental taxonomy available please visit [ENA tax portal](https://www.ebi.ac.uk/ena/data/view/Taxon:408169). Click on the *Tax tree* tab and click the '+' icons to expand the categories:
 
-![metagenome](../images/tax_p01.png)
+![metagenome](images/tax_p01.png)
 
  The metagenomic term that is used to describe the biome is also the scientific name of the chosen taxon and can be used to find the tax ID in the same methods described above. For example, you can find the tax ID for *termite fungus garden metagenome* here:
  `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome`.

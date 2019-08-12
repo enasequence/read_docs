@@ -6,41 +6,46 @@
 ENA: Guidelines and Tutorials
 *****************************
 
-Welcome to the guidelines for submission to the European Nucleotide Archive.
+Welcome to the guidelines for submission and retrieval for the European Nucleotide Archive.
 Please use the links below and to the left to find instructions specific to
 your needs.
-
-.. toctree::
-   :maxdepth: 1
-
-   general-guide
    
 .. toctree::
-   :caption: Submission Guidelines
+   :caption: ENA Data Submission
    :maxdepth: 1
 
-   study
-   samples
-   reads
-   assembly
-   sequence
-   analyses
-   
+   submit/general-guide
+   submit/study
+   submit/samples
+   submit/fileprep
+   submit/reads
+   submit/assembly
+   submit/sequence
+   submit/analyses
+  
 .. toctree::
-   :caption: Additional Information
+   :caption: Updating Previous Submissions
    :maxdepth: 1
-   
-   update
-   fileprep
-   faq
-   tools
+   update/metadata
+   update/assembly
+   update/sequence
 
 .. toctree::
-   :caption: Discovery & Retrieval
+   :caption: ENA Data Discovery & Retrieval
    :maxdepth: 1
+   retrieval/general-guide
 
-   retrieval/about_ena
-   retrieval/rulespace
+
+.. toctree::
+   :caption: Tips and FAQs
+   :maxdepth: 1
+   
+   faq/taxonomy
+   faq/runs
+   faq/samples
+   faq/metagenomes
+   faq/locus_tags
+   faq/release
 
 .. Extra
 .. *****
