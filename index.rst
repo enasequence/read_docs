@@ -26,6 +26,7 @@ your needs.
 .. toctree::
    :caption: Updating Previous Submissions
    :maxdepth: 1
+   
    update/metadata
    update/assembly
    update/sequence
@@ -33,6 +34,7 @@ your needs.
 .. toctree::
    :caption: ENA Data Discovery & Retrieval
    :maxdepth: 1
+   
    retrieval/general-guide
 
 
