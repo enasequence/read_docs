@@ -18,12 +18,12 @@ How Do I Register A Locus Tag Prefix?
 =====================================
 
 A locus tag prefix can be registered when a project is registered. Advice on
-doing this can be found at our `study registration page <../study/interactive.html>`_. You
+doing this can be found at our `study registration page <../submit/study/interactive.html>`_. You
 can allow automatic assignment of a prefix, or you can specify your own.
 
 If you did not add a prefix when you registered your project, it is possible to
 update the project with a prefix later on. See our advice on `updating studies
-<../update/interactive.html>`_.
+<../update/metadata/interactive.html>`_.
 
 Please note that after you register the prefix, it will not be usable until 24
 hours later. Therefore, you will not immediately be able to submit your
