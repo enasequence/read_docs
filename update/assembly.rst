@@ -5,11 +5,7 @@ Updating Assemblies
 Updates to assemblies can be performed through `Webin-CLI <general-guide/webin-cli.html>`_, and result in the creation of a new version of the assembly.
 
 Updates to assemblies are performed in very similar fashion to submission of assemblies.
-<<<<<<< HEAD
 It is therefore sufficient to follow the guidance in the `assembly submission <assembly>`_ pages, while considering the below factors:
-=======
-It is therefore sufficient to follow the guidance in the `assembly submission <../assembly.html>`_ pages, while considering the below information.
->>>>>>> c1d9150a6943ec86aacae0141563d007ab518055
 
 - `Metadata Objects`_ should be maintained
 - `Annotation`_ cannot be added
