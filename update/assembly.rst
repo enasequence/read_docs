@@ -12,10 +12,13 @@ To submit an assembly update, make sure you reference the same study and sample 
 In fact, this study-sample pair is unique to your assembly and is the means by which you submission is recognised as an update rather than a new assembly.
 
 **Annotation status must be maintained:**
-It is possible to update an assembly's annotaiton, but if it assembly did not originally include annotation, it is not possible to update your assembly with annotation.
-An unannotated assembly can only be updated with new versions of the same unannotated assembly. An annotated assembly can only be updated with new versions of the same annotated assembly.
+If your assembly was previously submitted with annotation and you are updating the assembly you can do this following the above factors, i.e. maintaining the study and sample, and adding an updated assembly including annotation.
 
-If you have an unannotated assembly which you need to add annotation to, please contact the helpdesk via datasubs@ebi.ac.uk
+If your assembly did not originally include annotation, it is not possible to update your assembly with annotation.
+An unannotated assembly can only be updated with new versions of the same unannotated assembly.
+In order to add annotation to a previously unannotated assembly you need to re-submit the assembly.
+Note this will result in new accession numbers.
+Please contact the helpdesk via datsubs@ebi.ac.uk to request suppression of the existing assembly version.
 
 **Some metadata can be updated:**
 Information such as run references and whether or not an assembly is made from third party data can be updated.
