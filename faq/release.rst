@@ -14,7 +14,7 @@ You can edit the release date of a study from within your Webin account:
 In the 'Studies' tab, find the study you wish to change and click the pencil icon adjacent to its current release date.
 You can move the date to be sooner or later as required.
 
-.. image:: /images/release_p01.png
+.. image:: images/release_p01.png
 
 When you are ready to release your study, you should do it by changing the release day to the current day.
 
@@ -44,7 +44,8 @@ Please be very clear about which accessions should be removed, especially if you
 I Need To Remove My Public Study
 --------------------------------
 If your study is public and needs to be removed from public view on a permanent or temporary basis, you must contact datasubs@ebi.ac.uk and provide an explanation of the issue, along with the accession(s) to be suppressed.
-This action is completed by a curator at your request.
+A curator will assess the request and carry it out if deemed suitable.
+Information about circumstances in which suppression will be considered can be found in our `Data Availability Policy <https://www.ebi.ac.uk/ena/about/data-availability-policy>`_.
 Please note that data that is made public for even a short time may be used by downstream services which we do not control.
 
 If your suppression will be temporary, please provide a new release date when you contact us.
