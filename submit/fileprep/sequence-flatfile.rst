@@ -11,7 +11,8 @@ flatfiles, suitable for submission. All submissions should include the topology
 of the ID line, the description from the DE line, and the feature table (FT
 lines). Other parts of the final flatfile will be collected during submission,
 including release date and references, rather than being present in the
-submitted file.
+submitted file. This includes any fields filled with 'XXX': these can be left
+as they are and our pipeline will infer them later.
 
 To use one of the templates, copy the boxed example and save into a plain text
 file. It is essential that you use a plain text format, as hidden characters and
