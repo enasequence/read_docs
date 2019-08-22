@@ -47,7 +47,7 @@ Please also make sure you are familiar with the `ENA's taxonomy services <faq/ta
 and use the correct taxonomy to describe your samples.
 
 In particular, consider the `environmental
-taxonomy <faq/taxonomy.html#environmental-taxonomic-classifications>`_ options available to you when
+taxonomy <../faq/taxonomy.html#environmental-taxonomic-classifications>`_ options available to you when
 working with environmental samples.
 
 Accessions
