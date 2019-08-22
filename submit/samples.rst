@@ -43,7 +43,7 @@ been advised that there are no other suitable options.
 Taxonomy
 --------
 
-Please also make sure you are familiar with the `ENA's taxonomy services <faq/taxonomy.html>`_
+Please also make sure you are familiar with the `ENA's taxonomy services <../faq/taxonomy.html>`_
 and use the correct taxonomy to describe your samples.
 
 In particular, consider the `environmental
