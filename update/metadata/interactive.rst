@@ -38,7 +38,7 @@ These include the release date, title, description and publication references.
 	- Mirroring to INSDC databases, who will then make the data available through their services.
 
    Please allow up to 48 hours for newly released data to appear in the public database.
-   Read more about this in our `Data Release Policies FAQ <../faq/release.html>`_
+   Read more about this in our `Data Release Policies FAQ <../../faq/release.html>`_
 
 4. For edits besides changing the release date, click the 'Edit' button.
 
