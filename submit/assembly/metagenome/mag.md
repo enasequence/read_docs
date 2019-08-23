@@ -55,11 +55,11 @@ It is recommended to submit all lower level metagenomic assemblies and raw reads
 
 If you intend to submit only a small number of stand-alone MAGs, submitting lower level assemblies is not necessary. In this case, please make sure you have registered an **environmental** sample. This will represents the original sequenced biomaterial that your MAG was derived from.
 
-Your **environmental** samples are the same samples used for raw read submission. If you have not yet registered an environmental sample, please make sure the appropriate environmental checklist is chosen for this and an [environmental taxon](../../faq/taxonomy.html#environmental-biome-level-taxonomy) is used (e.g. aquatic metagenome (tax id: 1169740)).
+Your **environmental** samples are the same samples used for raw read submission. If you have not yet registered an environmental sample, please make sure the appropriate environmental checklist is chosen for this and an [environmental taxon](../../../faq/taxonomy.html#environmental-biome-level-taxonomy) is used (e.g. aquatic metagenome (tax id: 1169740)).
 
 - [Register a Sample](../../samples.html)
 
-If you do not intend to submit [raw reads](../../reads.html) as part of your stand-alone MAG submission, please see [here](../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be released manually in order to be available to the public.
+If you do not intend to submit [raw reads](../../reads.html) as part of your stand-alone MAG submission, please see [here](../../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to) for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be released manually in order to be available to the public.
 
 ### Registering MAG samples
 
@@ -67,7 +67,7 @@ Each **MAG** assembly submission must be associated with a **MAG** sample.
 
 This **MAG** sample virtually represents the taxon that was assembled from the metagenome and refers to another sample that the MAG was derived from (either a **binned** metagenome sample or an **environmental** source sample).
 
-It should be as [specific in taxonomy](../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific **GSC MIMAGS** checklist.
+It should be as [specific in taxonomy](../../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific **GSC MIMAGS** checklist.
 
 Please make sure these **MAG** samples correctly reference either the **binned** sample (or **environmental** sample in the case of stand-alone MAGs) that the MAG was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you can list these with a comma separated list or range.
 
