@@ -6,7 +6,7 @@ Environmental SAG assemblies can be submitted to the European Nucleotide Archive
 
 Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
 
-Please see [here](../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
+Please see [here](../../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
 
 **Please note** : Submissions of Environmental Single-Cell Amplified Genomes follow different rules to standard isolate assemblies as they are considered derived assemblies.
 
@@ -44,23 +44,23 @@ Each assembly submission must be associated with a pre-registered study and a **
 
 Firstly, you should register your **environmental** samples. For each real-life environmental sample that was used in the study, a sample should be registered using the most relevant environmental checklist and environmental taxonomy (e.g. aquatic metagenome (tax id: 1169740)).
 
-For information about biome-level environmental taxonomy please see [here](../faq/taxonomy.html#environmental-biome-level-taxonomy).
+For information about biome-level environmental taxonomy please see [here](../../faq/taxonomy.html#environmental-biome-level-taxonomy).
 
 When submitting the raw reads in a Single-Cell Amplification study, these should remain multiplexed in BAM format and be submitted to this environmental sample.
 
-If you can not submit your raw reads, please follow these [additional guidelines](../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to).
+If you can not submit your raw reads, please follow these [additional guidelines](../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to).
 
 ### SAG sample registration
 
 Once all the **environmental** samples have been registered, you should register your **SAG** samples. For each resulting Single-Cell Amplified Genome assembly, a sample should be registered utilising the **GSC MISAGS** checklist and uncultured taxonomy (e.g. uncultured Bacillus sp. (tax id: 83428)).
 
-For information about organism-level environmental taxonomy please see [here](../faq/taxonomy.html#environmental-organism-level-taxonomy).
+For information about organism-level environmental taxonomy please see [here](../../faq/taxonomy.html#environmental-organism-level-taxonomy).
 
 When registering **SAG** samples, please make sure they correctly reference the **environmental** sample that they were derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. You should also reference the **environmental** sample in the description as:
 
 “This sample represents a Single-Cell Amplified Genome derived from the environmental sample ERSXXXXX”
 
-If the assembly was derived from multiple samples you can list these with a comma separated list or range. See [here](../faq/metagenomes.html#how-do-i-register-samples-for-co-assemblies) for details on how to format these in the "sample derived from" attribute.
+If the assembly was derived from multiple samples you can list these with a comma separated list or range. See [here](../../faq/metagenomes.html#how-do-i-register-samples-for-co-assemblies) for details on how to format these in the "sample derived from" attribute.
 
 The methods for submitting environmental studies and samples follow the same process as any other study/sample submission. Follow the links for more information.
 
