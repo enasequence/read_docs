@@ -87,6 +87,8 @@ FASTQ read2.fastq.gz
 - PACBIO_SMRT: PacificBiosciences platform type for the single molecule real time (SMRT) technology.
 - ION_TORRENT: Ion Torrent Personal Genome Machine (PGM) from Life Technologies.
 - CAPILLARY: Sequencers based on capillary electrophoresis technology manufactured by LifeTech (formerly Applied BioSciences).
+- OXFORD_NANOPORE: Oxford Nanopore platform type. nanopore-based electronic single molecule analysis.
+- BGISEQ
 
 <a name="instrument"></a>
 ### Permitted values for instrument
@@ -109,6 +111,7 @@ FASTQ read2.fastq.gz
 - Illumina HiSeq 2500
 - Illumina HiSeq 3000
 - Illumina HiSeq 4000
+- Illumina iSeq 100
 - Illumina MiSeq
 - Illumina MiniSeq
 - Illumina NovaSeq 6000
@@ -128,6 +131,10 @@ FASTQ read2.fastq.gz
 - AB 3130xL Genetic Analyzer
 - AB 3130 Genetic Analyzer
 - AB 310 Genetic Analyzer
+- MinION
+- GridION
+- PromethION
+- BGISEQ-500
 - unspecified
 
 <a name="selection"></a>
