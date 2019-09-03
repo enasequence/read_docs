@@ -4,7 +4,7 @@
 
 Environmental SAG assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome`.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+Please contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support) if you intend to submit an assembly assembled from third party data.
 
 Please see [here](../../faq/metagenomes.html#how-do-i-submit-uncultured-virus-genomes-uvigs) if you intend to submit uncultured virus genomes derived from a single-cell amplification study.
 
@@ -236,4 +236,4 @@ Since Webin 1.7.0:
 - Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
 - Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
 
-This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk.
+This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested through our [helpdesk](https://www.ebi.ac.uk/ena/browser/support).

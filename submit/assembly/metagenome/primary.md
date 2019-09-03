@@ -4,7 +4,7 @@
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../../general-guide/webin-cli.html) with `-context genome`.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+Please contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support) if you intend to submit an assembly assembled from third party data.
 
 A **primary metagenome** assembly is a metagenome assembly prior to binning from a sampled biome or collection of sampled biomes without attempt to separate taxa.
 

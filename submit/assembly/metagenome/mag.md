@@ -13,13 +13,13 @@ It is recommended that for all MAG submissions, all lower level assemblies are s
 - [Submitting A Primary Metagenome Assembly](primary.html)
 - [Submitting Binned Metagenome Assemblies](binned.html)
 
-If your study is small-scale and you only intend to submit a very small number of **stand-alone MAGs**, lower level metagenome assembly submissions may not be necessary, though are still recommended where possible. Please contact datasubs@ebi.ac.uk if you have any questions.
+If your study is small-scale and you only intend to submit a very small number of **stand-alone MAGs**, lower level metagenome assembly submissions may not be necessary, though are still recommended where possible. Please contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support) if you have any questions.
 
 ## Introduction
 
 Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the [Webin command line submission interface](../../general-guide/webin-cli.html) with `-context genome`.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+Please contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support) if you intend to submit an assembly assembled from third party data.
 
 A Metagenome-Assembled Genome consists of:
 - General assembly information

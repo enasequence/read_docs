@@ -1,7 +1,7 @@
 # Register a Submission Account
 
 Before you can submit data to ENA, you need to register for a Webin submission account.
-If you already have an account and have difficulties logging in please contact datasubs@ebi.ac.uk.
+If you already have an account and have difficulties logging in please contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support).
 
 1. Navigate to the [Interactive Webin](https://www.ebi.ac.uk/ena/submit/sra/#home) submission service page.
 

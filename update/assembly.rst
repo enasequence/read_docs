@@ -18,10 +18,10 @@ If your assembly did not originally include annotation, it is not possible to up
 An unannotated assembly can only be updated with new versions of the same unannotated assembly.
 In order to add annotation to a previously unannotated assembly you need to re-submit the assembly.
 Note this will result in new accession numbers.
-Please contact the helpdesk via datasubs@ebi.ac.uk to request suppression of the existing assembly version.
+Please contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ to request suppression of the existing assembly version.
 
 **Some metadata can be updated:**
-However, not all can. Please contact datasubs@ebi.ac.uk for queries about this topic.
+However, not all can. Please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for queries about this topic.
 
 **State of publicity will be the same:**
 If the original assembly is already public, then the update will be made public as soon as processing is complete.
@@ -29,5 +29,5 @@ However, please be aware that this process can take some time to complete, and y
 
 **Metagenomic Assemblies:**
 Primary and binned metagenome assemblies cannot be updated.
-If you wish to update one of these assemblies, please email datasubs@ebi.ac.uk so that we can suppress the existing version.
+If you wish to update one of these assemblies, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ so that we can suppress the existing version.
 MAG assemblies work the same as isolate assemblies in the context of updates.

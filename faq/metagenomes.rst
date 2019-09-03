@@ -8,7 +8,7 @@ The following image illustrates the stages of a metagenome assembly study and wh
 
 .. image:: images/metagenomes.png
 
-When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact datasubs@ebi.ac.uk for assistance.
+When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for assistance:
 
 Please see `here <..submit/assembly/metagenome.html>`_ for more information on how to submit your metagenome assemblies to ENA.
 
@@ -123,7 +123,7 @@ or
 
 ERRxxxxxx-ERRxxxxxx
 
-In the case of primary assemblies which are co-assembled from raw reads, please contact datasubs@ebi.ac.uk and inform the ENA helpdesk that you would like to submit a primary co-assembled metagenome.
+If you wish to submit a primary assembly which is co-assembled from raw reads, please inform our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
 How do I submit uncultured virus genomes (UViGs)?

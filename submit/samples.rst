@@ -5,15 +5,15 @@ How to Register Samples
 Introduction
 ============
 
-In order to submit sequencing or analysis data, it is important to first register your 
-biological samples with ENA. Each sample in ENA represents biomaterial that a sequencing 
+In order to submit sequencing or analysis data, it is important to first register your
+biological samples with ENA. Each sample in ENA represents biomaterial that a sequencing
 library was produced from.
 
 .. image:: images/metadata_model_sample.png
    :align: center
 
-A different sample should be registered for each sample used in the real-life sequencing 
-project. These samples give context to your data so it is important to ensure the metadata 
+A different sample should be registered for each sample used in the real-life sequencing
+project. These samples give context to your data so it is important to ensure the metadata
 associated with them is as extensive and accurate as possible.
 
 Checklists
@@ -37,7 +37,7 @@ checklist available to you and provide at least the minimum metadata.
    the correct checklist and metadata when you first register your samples.
 
 If you can not find a suitable checklist for your sample data type - please first contact
-datasubs@ebi.ac.uk for advice. Please only use the **ENA default sample** checklist if you have
+our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for advice. Please only use the **ENA default sample** checklist if you have
 been advised that there are no other suitable options.
 
 Taxonomy
@@ -53,19 +53,19 @@ working with environmental samples.
 Accessions
 ==========
 
-Once the samples are registered, Webin will report two accession numbers for each sample. 
-The first starts with SAMEA and is called the BioSample accession. The samples will also be 
-assigned an alternative accession number that starts with ERS. This accession number is called 
+Once the samples are registered, Webin will report two accession numbers for each sample.
+The first starts with SAMEA and is called the BioSample accession. The samples will also be
+assigned an alternative accession number that starts with ERS. This accession number is called
 the ENA sample accession.
 
-Always make a note of any accessions you receive as these are the unique identifiers for each 
+Always make a note of any accessions you receive as these are the unique identifiers for each
 of your submissions to ENA.
 
 Submission Options
 ==================
 
-Samples can be submitted one of two ways, using the Webin Interactive web interface 
-or programmatically.  For an overview of these, please 
+Samples can be submitted one of two ways, using the Webin Interactive web interface
+or programmatically.  For an overview of these, please
 see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
 .. toctree::
