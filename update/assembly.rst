@@ -2,10 +2,10 @@
 Updating Assemblies
 ===================
 
-Updates to assemblies can be performed through `Webin-CLI <general-guide/webin-cli.html>`_, and result in the creation of a new version of the assembly.
+Updates to assemblies can be performed through `Webin-CLI <../submit/general-guide/webin-cli.html>`_, and result in the creation of a new version of the assembly.
 
 Updates to assemblies are performed in very similar fashion to submission of assemblies.
-It is therefore sufficient to follow the guidance in the `assembly submission <assembly>`_ pages, while considering the below factors:
+It is therefore sufficient to follow the guidance in the `assembly submission <../submit/general-guide/assembly.html>`_ pages, while considering the below factors:
 
 **Study and sample reference must be maintained:**
 To submit an assembly update, make sure you reference the same study and sample accessions as were used in the original submission.
