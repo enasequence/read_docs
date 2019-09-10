@@ -5,7 +5,7 @@
 Genome assemblies can be submitted to the European Nucleotide Archive (ENA)
 using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context genome` option.
 
-Please contact datasubs@ebi.ac.uk if you intend to submit an assembly assembled from third party data.
+Please contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support) if you intend to submit an assembly assembled from third party data.
 
 Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons, bacteriophages, prokaryotic and eukaryotic genomes.
 
@@ -245,7 +245,7 @@ Since Webin 1.7.0:
 - Invalid number of sequences : XXX, Maximum number of sequences for SCAFFOLD is: YYY
 - Invalid number of sequences : XXX, Maximum number of sequences for CHROMOSOME is: YYY
 
-This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested with an email to datasubs@ebi.ac.uk .
+This will be done at the discretion of the curation team when provided with valid reasoning, and can be requested through our [helpdesk](https://www.ebi.ac.uk/ena/browser/support).
 
 ### Assembly updates
 

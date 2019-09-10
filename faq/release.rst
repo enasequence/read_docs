@@ -25,7 +25,7 @@ After a study is made public, it can take up to 48 hours for your data to be sea
 It will take four days for it to be visible in GenBank.
 Please take this into consideration if you have a strict deadline by which your data must be public.
 Note that the processes which are taking place in this time are automated, and we are not able to intervene in order to expedite the release of your data.
-If after 48 hours your data remain confidential, please contact datasubs@ebi.ac.uk
+If after 48 hours your data remain confidential, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
 Can I Make My Study Partially Available?
@@ -37,13 +37,13 @@ If you need evidence of your submission for reviewers, forward them the email co
 I Need To Remove My Confidential Study
 --------------------------------------
 If you have registered objects in the database which you wish to have removed, we can cancel them if they are not yet public.
-Contact datasubs@ebi.ac.uk with an explanation of the issue and we will handle the deletion for you.
+Contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ with an explanation of the issue and we will handle the deletion for you.
 Please be very clear about which accessions should be removed, especially if you only want to have a few objects removed from the study.
 
 
 I Need To Remove My Public Study
 --------------------------------
-If your study is public and needs to be removed from public view on a permanent or temporary basis, you must contact datasubs@ebi.ac.uk and provide an explanation of the issue, along with the accession(s) to be suppressed.
+If your study is public and needs to be removed from public view on a permanent or temporary basis, you must contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ and provide an explanation of the issue, along with the accession(s) to be suppressed.
 A curator will assess the request and carry it out if deemed suitable.
 Information about circumstances in which suppression will be considered can be found in our `Data Availability Policy <https://www.ebi.ac.uk/ena/about/data-availability-policy>`_.
 Please note that data that is made public for even a short time may be used by downstream services which we do not control.
