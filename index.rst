@@ -3,8 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+=============================
 ENA: Guidelines and Tutorials
-*****************************
+=============================
 
 Welcome to the guidelines for submission and retrieval for the European Nucleotide Archive.
 Please use the links below and to the left to find instructions specific to
@@ -49,6 +50,9 @@ bottom of the page.
    faq/locus_tags
    faq/release
 
+
+Introductory Webinar
+====================
 
 .. raw:: html
 
