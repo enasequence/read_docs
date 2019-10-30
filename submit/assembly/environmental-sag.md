@@ -52,7 +52,7 @@ If you can not submit your raw reads, please follow these [additional guidelines
 
 ### SAG sample registration
 
-Once all the **environmental** samples have been registered, you should register your **SAG** samples. For each resulting Single-Cell Amplified Genome assembly, a sample should be registered utilising the **GSC MISAGS** checklist and uncultured taxonomy (e.g. uncultured Bacillus sp. (tax id: 83428)).
+Once all the **environmental** samples have been registered, you should register your **SAG** samples. For each resulting Single-Cell Amplified Genome assembly, a sample should be registered utilising the [GSC MISAGS](https://www.ebi.ac.uk/ena/browser/view/ERC000048) checklist and uncultured taxonomy (e.g. uncultured Bacillus sp. (tax id: 83428)).
 
 For information about organism-level environmental taxonomy please see [here](../../faq/taxonomy.html#environmental-organism-level-taxonomy).
 
