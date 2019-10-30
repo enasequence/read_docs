@@ -67,7 +67,7 @@ Each **MAG** assembly submission must be associated with a **MAG** sample.
 
 This **MAG** sample virtually represents the taxon that was assembled from the metagenome and refers to another sample that the MAG was derived from (either a **binned** metagenome sample or an **environmental** source sample).
 
-It should be as [specific in taxonomy](../../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific **GSC MIMAGS** checklist.
+It should be as [specific in taxonomy](../../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific [GSC MIMAGS](https://www.ebi.ac.uk/ena/browser/view/ERC000047) checklist.
 
 Please make sure these **MAG** samples correctly reference either the **binned** sample (or **environmental** sample in the case of stand-alone MAGs) that the MAG was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you can list these with a comma separated list or range.
 
