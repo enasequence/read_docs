@@ -123,7 +123,7 @@ will look like:
 ### Submission XML: submit studies with release date
 
 If no release date is provided then submitted studies and any associated objects
-will be publicly released two years after the date of study submission.
+will be publicly released two months after the date of study submission.
 
 A release date can be provided for studies by using the `HOLD` action together with the `ADD` action:
 
