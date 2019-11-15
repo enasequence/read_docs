@@ -57,6 +57,4 @@ please see the `General Guide on Submitting to ENA <general-guide.html>`_.
    :maxdepth: 1
 
    sequence/interactive
-   sequence/programmatic-spreadsheet
    sequence/webin-cli-flatfile
-   sequence/programmatic-flatfile
