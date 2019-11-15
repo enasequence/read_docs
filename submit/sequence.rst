@@ -48,10 +48,9 @@ The full list of sequence checklists are available `here <https://www.ebi.ac.uk/
 If there are no suitable checklists available for your submission, then you will need to 
 submit your sequences in EMBL flat file format.
 
-Template sequence spreadsheets can be submitted either using the Webin Interactive 
-web interface or programmatically. To submit flat files, you can submit using 
-Webin-CLI or programmatically. For an overview of the three ENA submission interfaces, 
-please see the `General Guide on Submitting to ENA <general-guide.html>`_.
+Template sequence spreadsheets can be submitted either using Webin Interactive or 
+Webin-CLI. You can directly deposit a flat file using Webin-CLI. For an overview of 
+the ENA submission interfaces, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
 .. toctree::
    :maxdepth: 1
