@@ -58,3 +58,4 @@ please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
    sequence/interactive
    sequence/webin-cli-flatfile
+   sequence/webin-cli-spreadsheet
