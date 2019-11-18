@@ -130,7 +130,7 @@ Create an XML with the HOLD action, specifying the new release date and project 
 	<SUBMISSION>
 		<ACTIONS>
 			<ACTION>
-				<HOLD HoldUntilDate="YYYY-MM-DD" accession="PRJEBxxxxxx" />
+				<RELEASE target="PRJEBxxxxxx" />
 			</ACTION>
 		</ACTIONS>
 	</SUBMISSION>
