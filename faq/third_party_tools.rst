@@ -19,7 +19,7 @@ staff at NBI Sweden. This tool can be used to convert an assembly in FASTA
 format along with associated annotation in GFF3 format into the EMBL flat file
 format which is the accepted medium for submitting annotated assemblies to us.
 
-`Artemis Comparison Tool (ACT)<http://sanger-pathogens.github.io/Artemis/ACT/>`_
+`Artemis Comparison Tool (ACT) <http://sanger-pathogens.github.io/Artemis/ACT/>`_
 is a part of the Artemis Software developed at the Sanger Institute. Among 
 other things, it can output your file in EMBL flat file format.
 
