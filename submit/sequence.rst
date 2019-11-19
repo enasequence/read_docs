@@ -1,12 +1,12 @@
-=================================
-How to Submit Annotated Sequences
-=================================
+================================
+How to Submit Targeted Sequences
+================================
 
 Introduction
 ============
 
-To submit assembled and annotated sequences to ENA you must also provide 
-context on the research project where this was assembled.
+To submit targeted assembled and annotated sequences to ENA you must also 
+provide context on the research project where this was assembled.
 
 .. image:: images/metadata_model_sequences.png
    :align: center
@@ -22,8 +22,8 @@ Please register a study if you have not done so already:
 - `Register a study <study.html>`_
 
 .. note::
-   This submission route is for a set of stand-alone assembled and annotated sequences only. If you intend to 
-   submit an annotated **assembly**, please follow the `assembly submission guidelines <assembly.html>`_ 
+   This submission route is for a set of stand-alone targeted assembled and annotated sequences only. If you intend to 
+   submit an annotated **assembly** such as a genome, please follow the `assembly submission guidelines <assembly.html>`_ 
    and submit your assembly in EMBL flat file format.
    
 Accessions
