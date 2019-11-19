@@ -14,9 +14,11 @@ towards submitting your data to ENA.
    :align: center
 
 The study and its associated data will not become public until the study release 
-date has expired. You can change this date at will should you need to release 
-the data or delay its publication further. However, you will no longer have 
-this option once the data are public.
+date has expired. The default for a newly registered study is to have a hold
+date two months after the submission date. You can change this date at will 
+should you need to release the data or delay its publication further. However,
+you will no longer have this option once the data are public. Read more on our
+`data release policies FAQ <../../faq/release.html>`_.
 
 Have a look at an `example <http://www.ebi.ac.uk/ena/data/view/PRJEB1234>`_ 
 of a study in the ENA browser.
