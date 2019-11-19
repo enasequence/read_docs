@@ -56,7 +56,7 @@ useful for someone to interpret your project correctly. Within the `<TITLE></TIT
 ## Create the Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
-Let's call this file `submission.xml`. 
+Name this file `submission.xml`. 
 
 ```xml
 <SUBMISSION>
@@ -64,12 +64,20 @@ Let's call this file `submission.xml`.
       <ACTION>
          <ADD/>
       </ACTION>
+      <ACTION>
+         <HOLD HoldUntilDate="TODO: release date"/>
+      </ACTION>
    </ACTIONS>
 </SUBMISSION>
 ```
 
 The submission XML declares one or more Webin submission service actions. 
-In this case the action is `<ADD/>` which is used to submit new objects. 
+In this case the first action is `<ADD/>` which is used to submit new objects. 
+The study has a release date on which it will become public, along with all data submitted beneath it. 
+By default this is two months after the data of submission.
+However, you can specify any date within two years of the present date.
+This is the purpose of the `<HOLD/>` action.
+The release date can be modified later by replacing `<ADD/>` with `<MODIFY/>` action.
 
 The XMLs can be submitted programmatically, using CURL on command line or 
 using the [Webin submissions portal](../general-guide/submissions-portal).
