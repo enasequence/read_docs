@@ -43,12 +43,13 @@ bottom of the page.
    :caption: Tips and FAQs
    :maxdepth: 1
 
-   faq/taxonomy
+   faq/release
    faq/runs
    faq/samples
+   faq/taxonomy
    faq/metagenomes
    faq/locus_tags
-   faq/release
+   faq/third_party_tools
 
 
 Introductory Webinar
