@@ -15,9 +15,9 @@ The format has three components:
 
 - `Metadata Record`_: Some general information about the dataset as a whole
 - `Sequence Record`_: A multi-FASTA containing the sequence to be archived,
-along with identifiers
+  along with identifiers
 - `Sequence Metadata Table`_: A TSV file containing information about the
-origins of the sequences, matched by identifiers
+  origins of the sequences, matched by identifiers
 
 The three components together comprise a Taxonomic Reference Set. The format
 of each item is described in detail below.
