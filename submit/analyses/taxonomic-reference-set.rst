@@ -163,9 +163,9 @@ files.
 
 Webin-CLI requires the following options from you:
 
-- Your Webin username, resemling 'Webin-xxxxx':``-username``
+- Your Webin username, resembling 'Webin-xxxxx': ``-username``
 - Your Webin password: ``-password``
-- The type of submission, ;taxrefset' in this case: ``-context``
+- The type of submission, 'taxrefset' in this case: ``-context``
 - Name and path to your metadata record file: ``-manifest``
 - Instruction, either ``-validate`` or ``-submit``
 - Optionally, you may use ``-test`` to submit to the test server
