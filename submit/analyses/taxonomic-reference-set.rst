@@ -52,6 +52,8 @@ The following fields are used for Taxonomic Reference Set Submission:
 - **FASTA** (MANDATORY) - The gzipped FASTA file containing your sequence
   record
 - **TAB** (MANDATORY) - The gzipped TSV file containing your sequence metadata
+- **CUSTOMFIELD** (OPTIONAL) - Custom headers you have included in your
+  sequence metadata table
 
 It should be clear from the name and description what the theme of you dataset
 is (e.g. ITS1 sequences, 16S sequences, a specific clade). The name must always
@@ -63,6 +65,12 @@ mandatory if you intend to include NCBI taxon IDs. However, any database may be
 specified here. You can clarify a version/release number with the Taxonomy
 system version if you wish.
 
+You may include custom field rows in the metadata record. These are used to
+define and describe additional headers used in your sequence metadata table.
+Additional table headers and custom field entries must exactly match each
+other. Separate the header and description with a colon
+(e.g. Name1:Description1).
+
 An example manifest follows:
 
 ::
@@ -73,9 +81,10 @@ An example manifest follows:
  TAXONOMY_SYSTEM NCBI
  FASTA 16s_db_seqs.fasta.gz
  TAB 16s_db_info.tsv.gz
+ CUSTOMFIELD header_name:description of column purpose
 
 Download a blank manifest for your use here:
-`TODO/PATH/HERE <tax-ref-set-example-manifest.txt>`_
+`tax-ref-set-example-manifest.txt <../files/tax-ref-set-example-manifest.txt>`_
 
 
 Sequence Record
@@ -128,10 +137,14 @@ contain null values:
 The INSDC sequence range is optional, but must be null if the the INSDC
 sequence accession is null. If NCBI taxonomy is specified as the taxonomic
 system, you must provide NCBI tax ID for every entry. Otherwise, this column
-must always be null. If Tax IDs are included, they must match the organism name
+must always be null. If Tax IDs are included, they must match the organism
+name.
+
+In addition to the mandatory headers, you may have chosen to define additional
+headers in the metadata record. If so, they must be included in this table.
 
 Download a blank table for your use here:
-`TODO/PATH/HERE <tax-ref-set-example-manifest.txt>`_
+`tax-ref-set-example-manifest.txt <../files/tax-ref-set-example-manifest.txt>`_
 
 
 Submitting The Files
