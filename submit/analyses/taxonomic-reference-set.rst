@@ -87,7 +87,7 @@ An example manifest follows:
  CUSTOMFIELD header_name:description of column purpose
 
 Download a blank manifest for your use here:
-`tax-ref-set-example-manifest.txt <../files/tax_ref_set_example_manifest.txt>`_
+`tax_ref_set_example_manifest.txt <https://raw.githubusercontent.com/enasequence/read_docs/master/submit/files/tax_ref_set_example_manifest.txt>`_
 
 
 Sequence Record
@@ -148,7 +148,7 @@ In addition to the mandatory headers, you may have chosen to define additional
 headers in the metadata record. If so, they must be included in this table.
 
 Download a blank table for your use here:
-`tax-ref-set-example-manifest.txt <../files/tax_ref_set_example_manifest.txt>`_
+`tax_ref_set_example_table.tsv <https://raw.githubusercontent.com/enasequence/read_docs/master/submit/files/tax_ref_set_example_table.tsv>`_
 
 
 Submitting The Files
