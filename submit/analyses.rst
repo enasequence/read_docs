@@ -48,4 +48,4 @@ see the documentation on `Programmatic Submissions <general-guide/programmatic.h
    analyses/sequence-annotation
    analyses/pacbio-methylation
    analyses/bionano-maps
-   
+   analyses/taxonomic-reference-set
