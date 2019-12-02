@@ -1,5 +1,5 @@
 ============================
-How to Submit other Analyses
+How to Submit Other Analyses
 ============================
 
 Introduction
