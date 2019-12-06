@@ -43,7 +43,6 @@ see the documentation on `Programmatic Submissions <general-guide/programmatic.h
 .. toctree::
    :maxdepth: 1
 
-   analyses/sequence-variation
    analyses/read-alignments
    analyses/sequence-annotation
    analyses/pacbio-methylation
