@@ -52,7 +52,7 @@ This results in two files: the original uncompressed file and a compressed copy:
 
 .. code-block:: bash
 
-    gzip -k eg_01.fq.gz
+    gzip -k eg_01.fq
 
 For Windows users, third party tools are available to accomplish this.
 The standard compression type used in Windows, ZIP, is not accepted in ENA
