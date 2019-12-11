@@ -59,22 +59,23 @@ application downloadable from
 
 .. image:: ../images/webin_file_upload_01.png
 
-1. `Download the Webin File Uploader
-   <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
-2. Launch the application (Mac users please see further instructions below),
-3. Enter your Webin username in the ``Username`` field.
-4. Enter your Webin password in the ``Password`` field.
-5. Browse into the local ``Upload Directory`` containing the data files you
-   wish to upload using the ``...`` button. The list of all the files contained
-   in the selected directory will be displayed.
-6. Choose ``Overwrite`` option if you wish to replace any existing files which
-   have been previously uploaded.
-7. Choose ``Upload Tree`` option if you wish to preserve the directory
-   structure when uploading files to the Webin upload area. By default, the
-   files will be uploaded into the root directory of your Webin upload area.
-8. Select the files to upload. You can use the ``Select All`` button to select
-   all the files for upload.
-9. Click on the ``Upload`` button.
+1.  `Download the Webin File Uploader
+    <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
+2.  Launch the application (Mac users please see further instructions below),
+3.  Enter your Webin username in the ``Username`` field.
+4.  Enter your Webin password in the ``Password`` field.
+5.  Browse into the local ``Upload Directory`` containing the data files you
+    wish to upload using the ``...`` button.
+6.  Click 'okay' to see he list of all the files contained in the selected
+    directory displayed in the Webin File Uploader window
+7.  Choose ``Overwrite`` option if you wish to replace any existing files which
+    have been previously uploaded.
+8.  Choose ``Upload Tree`` option if you wish to preserve the directory
+    structure when uploading files to the Webin upload area. By default, the
+    files will be uploaded into the root directory of your Webin upload area.
+9.  Select the files to upload. You can use the ``Select All`` button to select
+    all the files for upload.
+10. Click on the ``Upload`` button.
 
 
 Instructions For Mac Users
@@ -83,6 +84,8 @@ Instructions For Mac Users
 When downloading the application the following dialog box will be displayed:
 
 .. image:: ../images/webin_file_upload_02.png
+    :scale: 50 %
+    :align: center
 
 Select the ``Save File`` option to save the WebinUploader.jnlp file to your
 local download directory.
@@ -91,6 +94,8 @@ If you selected the ``Open with`` option instead of the ``Save File`` option
 then the following dialog box will be displayed:
 
 .. image:: ../images/webin_file_upload_03.png
+    :scale: 50 %
+    :align: center
 
 In this case please select ``OK``. This will save the WebinUploader.jnlp file
 to your default local download directory.
@@ -104,6 +109,8 @@ select the ``open`` option.
 The following dialog will now be displayed:
 
 .. image:: ../images/webin_file_upload_04.png
+    :scale: 50 %
+    :align: center
 
 Now select the ``Open`` button. This will launch the the Webin File Uploader
 application.
@@ -208,38 +215,54 @@ Using Windows File Explorer
 Right click ``Computer`` and select ``Add a network location`` from the menu
 
 .. image:: ../images/windows_explorer_upload_01.png
+    :scale: 50 %
+    :align: center
 
 Click ``Next``
 
 .. image:: ../images/windows_explorer_upload_02.png
+    :scale: 50 %
+    :align: center
 
 Select ``Choose a custom network location`` and click ``Next``
 
 .. image:: ../images/windows_explorer_upload_03.png
+    :scale: 50 %
+    :align: center
 
 Type ftp://webin.ebi.ac.uk in the ``Internet or network address`` field and
 click ``Next``
 
 .. image:: ../images/windows_explorer_upload_04.png
+    :scale: 50 %
+    :align: center
 
 Unselect ``Log on anonymously``, type your Webin user name in the ``User name``
 field and click ``Next``
 
 .. image:: ../images/windows_explorer_upload_05.png
+    :scale: 50 %
+    :align: center
 
 Type a network location to show in Windows Explorer e.g. ``webin.ebi.ac.uk``
 then click ``Next``
 
 .. image:: ../images/windows_explorer_upload_06.png
+    :scale: 50 %
+    :align: center
 
 Click ``Finish``
 
 .. image:: ../images/windows_explorer_upload_07.png
+    :scale: 50 %
+    :align: center
 
 When using the new folder you will prompted for your Webin password. Type your
 password and click ``Log on``
 
 .. image:: ../images/windows_explorer_upload_08.png
+    :scale: 50 %
+    :align: center
 
 
 File MD5 Checksums Value
