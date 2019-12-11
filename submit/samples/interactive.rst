@@ -14,6 +14,7 @@ However, if you prefer to fill in a web form to make your sample submission, ple
 
 There are three steps to registering your sample(s).
 
+.. _Step 1:
 
 Step 1: Select A Sample Checklist
 =================================
