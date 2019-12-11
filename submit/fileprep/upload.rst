@@ -4,13 +4,19 @@ Uploading Files To ENA
 
 You must upload data files into your private Webin file upload area at EMBL-EBI
 before you can submit the files through the Webin submission service.
+The most user-friendly approach is `Using Webin File Uploader`_.
 
 Please note that this is not necessary if you are using Webin-CLI, as it
 handles the upload process for you.
 
+All upload methods described below will require you to have registered a
+Webin account, the ID for which resembles 'Webin-XXXXX'. Register an account
+or reset your password at the `Webin login page
+<https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+
 
 Keep Local Copies
-=================
+-----------------
 
 Always keep a local copy of the uploaded files until the files have been
 successfully submitted and archived. The Webin file upload area is a temporary
@@ -18,40 +24,8 @@ transit area which is not backed up. Any files on the area are subject to
 our fair use policy (see below).
 
 
-Fair Use Policy
-===============
-
-ENA is a permanent and comprehensive data repository for public domain sequence
-and associated information. Data submitted into this system are routed
-transiently through users' private data upload areas until such time as a
-submission instruction from the user, through his/her use of the Webin system,
-leads to the validation of the data and the movement of files from the data
-upload area into the ENA.
-
-The data upload areas are provided as a temporary place in which data are held
-while in transit. As such, they are neither intended nor suitable for any
-longer-term storage of data. Such storage is provided in ENA itself. Once in
-ENA, data can be released immediately following submission or can be held
-confidential prior to analysis and literature publication if required.
-
-We expect any given data file to remain in a data upload area for no longer
-than 2 months before the instruction is given by the user to submit the file.
-While we attempt to remind users of this policy at the 2 months time point we
-reserve the right to routinely delete any data files that persist in them for
-more than 2 months.
-
-We place no absolute limit within the 2-month period on the total volume of
-user data that may exist in a data upload area at any one time and are keen to
-accommodate the largest submissions where possible. However, we strongly
-encourage continuous data submissions where files are uploaded and submitted in
-small patches of few Terabytes or less and expect that volumes would not exceed
-10 Terabytes under normal circumstances. Unexpected heavy use of the data
-upload areas may have an impact on other Webin users and we are grateful for
-users' attention to this aspect of our fair use policy.
-
-
-Upload Files
-============
+File Upload Options
+===================
 
 You will upload files to your private Webin file upload area using either FTP
 or Aspera protocol through the ``webin.ebi.ac.uk`` service. The authentication
@@ -63,17 +37,76 @@ password at the `Webin login page
 
 There are a number of ways to accomplish the upload, detailed below:
 
+- `Using Webin File Uploader`_
 - `General Instructions For Uploading Files Using A FTP Client`_
 - `Using FTP Command Line Client On Linux/Mac`_
 - `Using FTP Command Line Client On Windows`_
 - `Using FileZilla On Windows`_
 - `Using Aspera ascp Command Line Program`_
-- `Using Webin File Uploader`_
 - `Using Windows File Explorer`_
 
 
-General Instructions For Uploading Files Using A FTP Client
------------------------------------------------------------
+Using Webin File Uploader
+-------------------------
+
+Files can be uploaded using the Webin File Uploader, a Java web start
+application downloadable from
+`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_:
+
+.. image:: ../images/webin_file_upload_01.png
+
+1. `Download the Webin File Uploader
+   <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
+2. Launch the application (Mac users please see further instructions below),
+3. Enter your Webin username in the ``Username`` field.
+4. Enter your Webin password in the ``Password`` field.
+5. Browse into the local ``Upload Directory`` containing the data files you
+   wish to upload using the ``...`` button. The list of all the files contained
+   in the selected directory will be displayed.
+6. Choose ``Overwrite`` option if you wish to replace any existing files which
+   have been previously uploaded.
+7. Choose ``Upload Tree`` option if you wish to preserve the directory
+   structure when uploading files to the Webin upload area. By default, the
+   files will be uploaded into the root directory of your Webin upload area.
+8. Select the files to upload. You can use the ``Select All`` button to select
+   all the files for upload.
+9. Click on the ``Upload`` button.
+
+
+Instructions For Mac Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When downloading the application the following dialog box will be displayed:
+
+.. image:: ../images/webin_file_upload_02.png
+
+Select the ``Save File`` option to save the WebinUploader.jnlp file to your
+local download directory.
+
+If you selected the ``Open with`` option instead of the ``Save File`` option
+then the following dialog box will be displayed:
+
+.. image:: ../images/webin_file_upload_03.png
+
+In this case please select ``OK``. This will save the WebinUploader.jnlp file
+to your default local download directory.
+
+In order to run the File Uploader application, open your file explorer and go
+to the directory where the ``WebinUploader.jnlp`` file has been saved.
+
+While pressing the ``ctrl`` button, select the ``WebinUploader.jnlp`` file then
+select the ``open`` option.
+
+The following dialog will now be displayed:
+
+.. image:: ../images/webin_file_upload_04.png
+
+Now select the ``Open`` button. This will launch the the Webin File Uploader
+application.
+
+
+General Instructions For Uploading Files Using FTP Client
+---------------------------------------------------------
 
 1. Use your favourite ftp client. For example, ``lftp`` is a popular choice for
    linux and Mac users.
@@ -84,7 +117,7 @@ General Instructions For Uploading Files Using A FTP Client
 
 
 Using FTP Command Line Client On Linux/Mac
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Open a terminal and type ``ftp webin.ebi.ac.uk``.
 2. Enter the username and password  associated with your Webin submission
@@ -97,10 +130,10 @@ Using FTP Command Line Client On Linux/Mac
 
 
 Using FTP Command Line Client On Windows
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Use FTP command line client on Windows
-2. Start the command line interpreter: press Win-R, type cmd, hit enter
+2. Start the command line interpreter: press Win-R -> type `cmd` -> press Enter
 3. Type ``ftp``
 4. Type ``open webin.ebi.ac.uk``
 5. Enter the username and password associated with your Webin submission
@@ -115,6 +148,9 @@ Using FTP Command Line Client On Windows
 
 Using FileZilla On Windows
 --------------------------
+
+Filezilla allows you to transfer files via FTP through a user-friendly
+graphical interface.
 
 1. Download and install `FileZilla <https://filezilla-project.org/>`_.
    If you are not administrator of your computer then download the portable
@@ -160,65 +196,6 @@ The ``<file(s)>`` can be a file mask (e.g. ``*.cram``), a list of files or a
 single file.
 
 ``<Webin-N>`` is your Webin submission account name.
-
-
-Using Webin File Uploader
--------------------------
-
-Files can be uploaded using the Webin File Uploader, a Java web start
-application downloadable from
-`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_:
-
-.. image:: ../images/webin_file_upload_01.png
-
-1. `Download the Webin File Uploader
-   <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
-2. Launch the application (Mac users please see further instructions below),
-3. Enter your Webin username in the ``Username`` field.
-4. Enter your Webin password in the ``Password`` field.
-5. Browse into the local ``Upload Directory`` containing the data files you
-   wish to upload using the ``...`` button. The list of all the files contained
-   in the selected directory will be displayed.
-6. Choose ``Overwrite`` option if you wish to replace any existing files which
-   have been previously uploaded.
-7. Choose ``Upload Tree`` option if you wish to preserve the directory
-   structure when uploading files to the Webin upload area. By default, the
-   files will be uploaded into the root directory of your Webin upload area.
-8. Select the files to upload. You can use the ``Select All`` button to select
-   all the files for upload.
-9. Click on the ``Upload`` button.
-
-
-Instructions For Mac Users
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-When downloading the application the following dialog box will be displayed:
-
-.. image:: ../images/webin_file_upload_02.png
-
-Select the ``Save File`` option to save the WebinUploader.jnlp file to your
-local download directory.
-
-If you selected the ``Open with`` option instead of the ``Save File`` option
-then the following dialog box will be displayed:
-
-.. image:: ../images/webin_file_upload_03.png
-
-In this case please select ``OK``. This will save the WebinUploader.jnlp file
-to your default local download directory.
-
-In order to run the File Uploader application, open your file explorer and go
-to the directory where the ``WebinUploader.jnlp`` file has been saved.
-
-While pressing the ``ctrl`` button, select the ``WebinUploader.jnlp`` file then
-select the ``open`` option.
-
-The following dialog will now be displayed:
-
-.. image:: ../images/webin_file_upload_04.png
-
-Now select the ``Open`` button. This will launch the the Webin File Uploader
-application.
 
 
 Using Windows File Explorer
@@ -284,3 +261,35 @@ until after you formally submit the files. You will generally be notified of
 this by email, and may be required to correct and reupload the file.
 Advice on this can be found in our `Common Run Submission Errors FAQ
 <../faq/runs.html>`_
+
+
+Fair Use Policy
+===============
+
+ENA is a permanent and comprehensive data repository for public domain sequence
+and associated information. Data submitted into this system are routed
+transiently through users' private data upload areas until such time as a
+submission instruction from the user, through his/her use of the Webin system,
+leads to the validation of the data and the movement of files from the data
+upload area into the ENA.
+
+The data upload areas are provided as a temporary place in which data are held
+while in transit. As such, they are neither intended nor suitable for any
+longer-term storage of data. Such storage is provided in ENA itself. Once in
+ENA, data can be released immediately following submission or can be held
+confidential prior to analysis and literature publication if required.
+
+We expect any given data file to remain in a data upload area for no longer
+than 2 months before the instruction is given by the user to submit the file.
+While we attempt to remind users of this policy at the 2 months time point we
+reserve the right to routinely delete any data files that persist in them for
+more than 2 months.
+
+We place no absolute limit within the 2-month period on the total volume of
+user data that may exist in a data upload area at any one time and are keen to
+accommodate the largest submissions where possible. However, we strongly
+encourage continuous data submissions where files are uploaded and submitted in
+small patches of few Terabytes or less and expect that volumes would not exceed
+10 Terabytes under normal circumstances. Unexpected heavy use of the data
+upload areas may have an impact on other Webin users and we are grateful for
+users' attention to this aspect of our fair use policy.
