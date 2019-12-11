@@ -47,7 +47,7 @@ If you do not intend to submit raw reads or a primary metagenome as part of your
 
 ### Binned sample
 
-In addition to your **environmental** sample, a **binned** sample must be registered for each bin. This should be as [specific in taxonomy](../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific [ENA binned metagenome](https://www.ebi.ac.uk/ena/browser/view/ERC000050) checklist.
+In addition to your **environmental** sample, a **binned** sample must be registered for each bin. This should be as [specific in taxonomy](../../../faq/taxonomy.html#environmental-organism-level-taxonomy) as it can be and use the specific [ENA binned metagenome](https://www.ebi.ac.uk/ena/browser/view/ERC000050) checklist.
 
 Please make sure these **binned** samples correctly reference the **environmental** sample that the bin was derived from. This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you can list these with a comma separated list or range.
 
