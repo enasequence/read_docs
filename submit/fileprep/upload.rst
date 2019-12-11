@@ -2,6 +2,10 @@
 Uploading Files To ENA
 ======================
 
+
+Introduction
+============
+
 You must upload data files into your private Webin file upload area at EMBL-EBI
 before you can submit the files through the Webin submission service.
 The most user-friendly approach is `Using Webin File Uploader`_.
@@ -38,7 +42,7 @@ password at the `Webin login page
 There are a number of ways to accomplish the upload, detailed below:
 
 - `Using Webin File Uploader`_
-- `General Instructions For Uploading Files Using A FTP Client`_
+- `General Instructions For Uploading Files Using FTP Client`_
 - `Using FTP Command Line Client On Linux/Mac`_
 - `Using FTP Command Line Client On Windows`_
 - `Using FileZilla On Windows`_
