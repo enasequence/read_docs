@@ -215,53 +215,53 @@ Using Windows File Explorer
 Right click ``Computer`` and select ``Add a network location`` from the menu
 
 .. image:: ../images/windows_explorer_upload_01.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 Click ``Next``
 
 .. image:: ../images/windows_explorer_upload_02.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 Select ``Choose a custom network location`` and click ``Next``
 
 .. image:: ../images/windows_explorer_upload_03.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 Type ftp://webin.ebi.ac.uk in the ``Internet or network address`` field and
 click ``Next``
 
 .. image:: ../images/windows_explorer_upload_04.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 Unselect ``Log on anonymously``, type your Webin user name in the ``User name``
 field and click ``Next``
 
 .. image:: ../images/windows_explorer_upload_05.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 Type a network location to show in Windows Explorer e.g. ``webin.ebi.ac.uk``
 then click ``Next``
 
 .. image:: ../images/windows_explorer_upload_06.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 Click ``Finish``
 
 .. image:: ../images/windows_explorer_upload_07.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 When using the new folder you will prompted for your Webin password. Type your
 password and click ``Log on``
 
 .. image:: ../images/windows_explorer_upload_08.png
-    :scale: 50 %
+    :scale: 75 %
     :align: center
 
 
