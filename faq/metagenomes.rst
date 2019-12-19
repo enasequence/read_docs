@@ -8,8 +8,6 @@ The following image illustrates the stages of a metagenome assembly study and wh
 
 .. image:: images/metagenomes.png
 
-When intending to submit environmental Single-cell Amplified Genomes or uncultured viral genomes, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for assistance:
-
 Please see `here <..submit/assembly/metagenome.html>`_ for more information on how to submit your metagenome assemblies to ENA.
 
 What is defined as a MAG within ENA?
