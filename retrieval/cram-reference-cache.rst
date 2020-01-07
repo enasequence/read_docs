@@ -16,12 +16,12 @@ CRAM Reference Registry.
 Setting up Squid reverse proxy
 ------------------------------
 
-   1. Download and install Squid.
+1. Download and install Squid.
 
 If a binary package is not available for `download <http://www.squid-cache.org/Versions/>`_ then Squid can also be
 compiled from source.  We recommend that you install version 3.1 or later.
 
-   2. Create directories for the cache files, log files and the Squid configuration file.
+2. Create directories for the cache files, log files and the Squid configuration file.
 
 In the example below we have created directories under /data/squid but any directory accessible to the user running
 Squid can be used after it has been defined in the Squid configuration file.
@@ -36,7 +36,7 @@ Squid can be used after it has been defined in the Squid configuration file.
 | /data/squid/conf  | Used to store the Squid configuration file |
 +-------------------+--------------------------------------------+
 
-   3. Create the Squid configuration file.
+3. Create the Squid configuration file.
 
 The following configuration file in /data/squid/conf will cache locally reference sequences retrieved from the CRAM
 Reference Registry. Parameter values that should be configured locally are bolded.
@@ -76,7 +76,7 @@ Reference Registry. Parameter values that should be configured locally are bolde
 |              |          | | retrieved reference sequences to the Squid cache directory.    |
 +--------------+----------+------------------------------------------------------------------+
 
-   4. Initialize Squid.
+4. Initialize Squid.
 
 Execute the following command:
 
@@ -84,7 +84,7 @@ Execute the following command:
 
    squid -f /data/squid/conf/squid.conf -z
 
-   5. Start up Squid.
+5. Start up Squid.
 
 Execute the following command:
 
@@ -95,7 +95,7 @@ Execute the following command:
 This will start the squid process as a daemon so that it runs in the background. If you wish, you can execute squid
 in the foreground by adding the parameter -N.
 
-   6. Configuring Samtools to use Squid.
+6. Configuring Samtools to use Squid.
 
 In Samtools, the **REF_CACHE** environment variable is used to indicate that any downloaded reference sequences are
 stored locally in the specified directory in order to avoid subsequent downloads.
@@ -119,7 +119,7 @@ should be defined:
 
    export REF_PATH=http://<hostname>:<port>/ena/cram/md5/%s
 
-   7. Configuring CRAMToolkit to use Squid.
+7. Configuring CRAMToolkit to use Squid.
 
 CRAMTools can be instructed to use the Squid cache by defining the following Java property:
 
@@ -128,7 +128,7 @@ CRAMTools can be instructed to use the Squid cache by defining the following Jav
    java -DREF_URL_TEMPLATE=http://<hostname>:<port>/ena/cram/md5/%s
 where **<hostname>** and **<port>** are the ones used by the Squid server.
 
-   8. Testing Squid.
+8. Testing Squid.
 
 Execute the following command to test the cache:
 
@@ -150,7 +150,7 @@ and can be one of the following:
 | TCP_MEM_HIT/200 |	The requested object is available in the Squid memory cache.        |
 +-----------------+---------------------------------------------------------------------+
 
-   9. Shut down Squid.
+9. Shut down Squid.
 
 To gracefully shut down the squid daemon process, execute the following command:
 
