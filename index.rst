@@ -30,6 +30,7 @@ bottom of the page.
    :maxdepth: 1
 
    retrieval/general-guide
+   retrieval/cram-reference-cache
 
 .. toctree::
    :caption: ENA Data Updates
