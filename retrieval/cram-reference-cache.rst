@@ -1,5 +1,5 @@
 =====================================
-How to cache CRAM reference sequences
+How to Cache CRAM Reference Sequences
 =====================================
 
 The CRAM reference registry provides access to reference sequences used in CRAM files.
