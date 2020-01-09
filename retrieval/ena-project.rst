@@ -140,7 +140,7 @@ From within this sample record, you can see not only the read files that were pa
 any other uses of the data associated with this sample. In particular, you'll notice that you can now see an Analysis
 Files tab:
 
-.. image:: images/sample-navigation-box.png
+.. image:: images/sample-record.png
    :align: center
 
 When you click on the Analysis Files tab, you can see a number of analyses of the raw read data. Within this table you
