@@ -45,7 +45,7 @@ If you know the taxon you would like to use, you can check if its submittable an
 
 `https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`
 
-`https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/common-name/`
+`https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/`
 
 `https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/tax-id/`
 
