@@ -24,17 +24,17 @@ Search For All Reads of a Specified Taxon
 =========================================
 
 As an example, let's look at a search that will return all reads of the taxon
-`'ant fungus garden metagenome (797283)' <https://www.ebi.ac.uk/ena/browser/view/797283>`_.
+`ant fungus garden metagenome <https://www.ebi.ac.uk/ena/browser/view/797283>`_.
 
-The `ENA Discovery Portal API<https://www.ebi.ac.uk/ena/portal/api>`_ can be used to tailor powerful and complex
+The `ENA Discovery Portal API <https://www.ebi.ac.uk/ena/portal/api>`_ can be used to tailor powerful and complex
 searches across the archive. This API returns a report of the results of your search in TSV or JSON format. See
 the Swagger interface or API docs for full usage details.
 
 For the purpose of a simple taxon based search, the query that would be run would use the parameter
 **tax_eq(**<tax_id>**)**.
 
-The following search would provide all accessions and descriptions for raw reads which are from 'human gut metagenome'
-samples:
+The following search would provide all accessions and descriptions for raw reads which are from human gut
+samples (the default format is a tsv):
 
 .. code-block:: bash
 
@@ -44,7 +44,7 @@ You can then further tailor your search to return particular fields of interest 
 the host sex of the sample, the sequencing platform etc. In this example, we will look at adding the following fields to
 the returned report:
 
-- accession - the resulting Run accession
+- accession - the resulting Sample accession
 - description - the record description
 - collection_date - the sample collection date
 - instrument_platform - the sequencing platform
@@ -75,6 +75,8 @@ To do this, you can use the `ENA Browser API <https://www.ebi.ac.uk/ena/browser/
 there (without the specified fields to return). This will download all the resulting
 XML records for that particular taxon:
 
+.. code-block:: bash
+
    https://www.ebi.ac.uk/ena/browser/api/xml/search?result=read_run&query=tax_eq(797283)
 
 Including The Taxon Sub-tree in Searches
@@ -83,10 +85,10 @@ Including The Taxon Sub-tree in Searches
 If you would like to search at a higher level in the taxonomy tree, e.g. Genus level, then you can specify to return
 all records under that tax node. This allows you to capture all Records of a taxonomic lineage.
 
-To do this, simply swap the **tax_eq(**<tax_id>**)** for **tax_tree(**<tax_id>**)**.
+To do this, simply swap the **tax_eq(<tax_id>)** for **tax_tree(<tax_id>)**.
 
 For example, the search below searches for a summary of ALL metagenome raw read records by searching under the tax node
-`'metagenomes (408169)' <https://www.ebi.ac.uk/ena/browser/view/408169>`_:
+`metagenomes <https://www.ebi.ac.uk/ena/browser/view/408169>`_:
 
 .. code-block:: bash
 
