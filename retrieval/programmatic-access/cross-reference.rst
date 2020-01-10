@@ -20,14 +20,14 @@ Display List of All Cross Reference Sources
 ===========================================
 
 To get a good overview of what is included in the cross-reference service. You can first access the full list of
-cross reference 'Sources' registered with ENA. These sources are the external data resources which are linked to
+cross-reference 'Sources' registered with ENA. These sources are the external data resources which are linked to
 ENA records. You can use the following endpoint to do this:
 
 .. code-block::
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/source
 
-**First 10 resulting x-ref sources:**
+**First 10 resulting cross-reference Sources:**
 
 .. code-block::
 
@@ -45,7 +45,7 @@ ENA records. You can use the following endpoint to do this:
 
    continued....
 
-In addition to providing an overview of the x-ref service, this endpoint is useful for determining the Source
+In addition to providing an overview of the cross-reference service, this endpoint is useful for determining the Source
 name for any sources you may want to explore further.
 
 Look up Cross References for a Source
@@ -68,7 +68,7 @@ Alternatively, set the limit to 0 to fetch all the records.
 Narrow Down a Search By Target Record Type
 ------------------------------------------
 
-You can narrow down x-ref searches further to only return records of a certain Type. For example, you may want to
+You can narrow down cross-reference searches further to only return records of a certain Type. For example, you may want to
 search specifically for sample records which are linked to the MGnify service.
 
 Firstly, you may want to determine what Targets are available and how they are named. To list the full list of
@@ -139,7 +139,7 @@ for a particular ENA Record. To do this, you can also perform a cross-reference 
 Expanding metadata
 ------------------
 
-In some cases, the cross-reference registered may have additional metadata. For example, cross references registered
+In some cases, the cross-reference registered may have additional metadata. For example, cross-references registered
 with the source COMPARE-RefGenome.
 
 To view this, add "expanded=true":
