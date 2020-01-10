@@ -78,7 +78,7 @@ Review the help until you are happy with what the command does and how to use it
 Now, let's try an example and download all the raw read files associated with the Sample
 `SAMEA2591084 <https://www.ebi.ac.uk/ena/browser/view/SAMEA2591084>`_.
 
-Again we know that raw reads are available in 'submitted', 'fastq' and 'sra' formats so let's try and download
+Again, we know that raw reads are available in 'submitted', 'fastq' and 'sra' formats so let's try and download
 the submitted files this time. Please note that if data was submitted via one of our INSDC partners (NCBI or DDBJ) as
 opposed to through ENA, these submitted files will not be available.
 
