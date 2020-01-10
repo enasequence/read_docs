@@ -159,6 +159,8 @@ and descriptions, we can specify this with the addition of 'result=study':
 
 **Result:**
 
+.. code-block:: bash
+
    study_accession	description
    PRJNA258031	Atta colombica refuse dump Targeted Locus (Loci)
    PRJNA336974	Cyphomyrmex longiscapus fungus garden microbial communities from Gamboa, Panama metagenome
