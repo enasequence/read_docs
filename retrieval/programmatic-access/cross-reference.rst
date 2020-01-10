@@ -27,7 +27,7 @@ ENA records. You can use the following endpoint to do this:
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/source
 
-**Snapshot of resulting x-ref sources:**
+**First 10 resulting x-ref sources:**
 
 .. code-block::
 
@@ -42,10 +42,6 @@ ENA records. You can use the following endpoint to do this:
    dictyBase	Dictyostelid genomics
    Ensembl	Genome (EnsEMBL)
    Ensembl-Gn	EnsEMBL Genes
-   Ensembl-Scaffolds	EnsEMBL Scaffolds and Chromosomes
-   Ensembl-Tr	EnsEMBL Transcripts
-   EnsemblGenomes	Genome (EnsEMBL Genomes)
-   EnsemblGenomes-Gn	EnsEMBL Genomes Genes
 
    continued....
 
@@ -143,8 +139,10 @@ for a particular ENA Record. To do this, you can also perform a cross-reference 
 Expanding metadata
 ------------------
 
-In some cases, the cross-reference registered will have additional metadata. For example, cross references
-registered with the source COMPARE-RefGenome. to view this, add "expanded=true":
+In some cases, the cross-reference registered may have additional metadata. For example, cross references registered
+with the source COMPARE-RefGenome.
+
+To view this, add "expanded=true":
 
 .. code-block::
 
