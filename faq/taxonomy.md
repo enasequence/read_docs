@@ -1,69 +1,26 @@
 # Tips for Sample Taxonomy
 
-## The Tax Database
+The classification system for source biological organisms for all INSDC records is the NCBI Taxonomy and 
+is available from the ![ENA browser](https://www.ebi.ac.uk/ena/browser/view/Taxon:9606). The ENA team work 
+alongside taxonomists at the NCBI to ensure that all ENA records display the accepted organism name and 
+classification hierarchy. NCBI Taxonomy covers the complete tree of life and also includes other types, 
+such as synthetic constructs and environmental samples. However, it is an incomplete classification system 
+in that it only considers taxa for data that are represented in INSDC records. Users should note that taxa 
+are only displayed if at least one associated ENA record is available.
 
-Every ENA sample object should have a taxonomic classification. The INSDC maintains a database of all unique taxonomic classifications known to us and you should apply one from this database when you create your samples. Each classification has a unique id and this is expanded to show the scientific name and common name of the organism when the sample is viewed.
+## Choosing the Right Taxonomy For Your Submission
 
-The [interactive submission service](https://www.ebi.ac.uk/ena/submit/sra/#home) has a look up table which you can use to find appropriate taxonomic identifiers. There is also a look up <a href="https://www.ebi.ac.uk/ena/data/warehouse/search?portal=taxon">here</a>, in the taxon domain of the ENA advanced search.
+Submitted organism names must be at ‘species’ rank. This rank type does not automatically mean the name 
+is a published binomen; it is simply a rank, which differentiates the sequenced organism from another. 
+For example, unidentified strains of the same bacterial genus should be kept as separate species, 
+rather than binned together under the same genus name.
 
-![webin_tax_look_up](images/tips_p01.png)
+If you do not know the scientific name or the common name that you would like to use for your submission but you 
+have an idea, you can use this *suggest* endpoint for the ENA taxonomy service:
+ 
+ `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/`
 
-Submitters using REST API will apply the taxonomic information to the sample object using the sample_name block
-
-```xml
-    <SAMPLE_NAME>
-      <TAXON_ID>450267</TAXON_ID>
-      <SCIENTIFIC_NAME>Chlamyphorus truncatus</SCIENTIFIC_NAME>
-      <COMMON_NAME>Pink fairy armadillo</COMMON_NAME>
-    </SAMPLE_NAME>
-```
-
-
-## REST Access to the Tax Database
-
-Submitters using the REST API to programmatically submit samples in XML format can use the taxonomy database look up to find what tax ID they need to apply to their sample using these REST endpoints:
-
-If you know the scientific name of the organism you can find the taxonomy ID with this endpoint `www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`. Simply append the scientific name to the URL. You can use a browser or use cURL at the command line (the "see URL" program available on Linux and Mac). Note the use of `%20` to represent a space character. This is URL encoding and you may find the commands do not work unless you replace space characters with `%20`
-
-```bash
-> curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/Leptonycteris%20nivalis"
-[
-  {
-    "taxId": "59456",
-    "scientificName": "Leptonycteris nivalis",
-    "commonName": "Mexican long-nosed bat",
-    "formalName": "true",
-    "rank": "species",
-    "division": "MAM",
-    "lineage": "Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia; Eutheria; Laurasiatheria; Chiroptera; Microchiroptera; Phyllostomidae; Glossophaginae; Leptonycteris; ",
-    "geneticCode": "1",
-    "mitochondrialGeneticCode": "2",
-    "submittable": "true"
-  }
-]
-```
-
-You can do the same with the common name. Use endpoint `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/` and append the name
-
-```bash
-> curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/golden%20arrow%20poison%20frog"
-[
-  {
-    "taxId": "377316",
-    "scientificName": "Atelopus zeteki",
-    "commonName": "golden arrow poison frog",
-    "formalName": "true",
-    "rank": "species",
-    "division": "VRT",
-    "lineage": "Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Amphibia; Batrachia; Anura; Neobatrachia; Hyloidea; Bufonidae; Atelopus; ",
-    "geneticCode": "1",
-    "mitochondrialGeneticCode": "2",
-    "submittable": "true"
-  }
-]
-```
-
-If you do not know the scientific name or the common name but you have an idea, you can use this *suggest* endpoint `http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/`
+For example, using curl or pasting the URL in the browser for "curry" looks as follows:
 
 ```bash
 > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/curry"
@@ -81,7 +38,36 @@ If you do not know the scientific name or the common name but you have an idea, 
 ]
 ```
 
-In each case above a JSON document is outputted and you will be looking for the *taxId* field. Outputting JSON format will help you to automate the call if appropriate.
+### Checking a taxon is submittable
+
+If you know the taxon you would like to use, you can check if its submittable and find any additional information 
+ about it by using this url:
+
+`https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`
+
+For example, using curl or pasting the url in the browser for "mixed culture" looks as follows:
+
+```bash
+> curl "https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/mixed%20culture"
+[
+  {
+    "taxId": "1306155",
+    "scientificName": "mixed culture",
+    "formalName": "false",
+    "rank": "no rank",
+    "division": "UNC",
+    "lineage": "unclassified sequences; ",
+    "geneticCode": "1",
+    "mitochondrialGeneticCode": "2",
+    "plastIdGeneticCode": "11",
+    "submittable": "false"
+  }
+]
+```
+
+Please see our ![guide on exploring taxonomy](../retrieval/taxonomy.html) for more advice on exploring our 
+taxonomy services.
+
 
 ## Environmental Taxonomic Classifications
 
