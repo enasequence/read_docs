@@ -190,7 +190,7 @@ could specify this with the addition of "subtree=true":
 Downloading Taxonomy Data via FTP
 =================================
 
-Taxonomy data is available for bulk download through `FTP <ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/>`_.
+Taxonomy data is available for bulk download through FTP at ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/.
 
 +-----------------+--------------------------------------------------------------+
 | File            | Definition                                                   |
