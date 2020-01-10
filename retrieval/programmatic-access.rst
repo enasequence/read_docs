@@ -56,9 +56,12 @@ Explore Taxonomy and Related Records
 ====================================
 
 All sample records in ENA have taxonomic assignment. As a result, the majority of records stored within the archive
-can be searched based on their taxonomy. The ENA has a REST API for access to taxonomic information (e.g. lineage and
-rank) so taxonomic records can be explored programmatically.
+can be searched based on their taxonomy.
 
+The ENA has a REST API for access to taxonomic information (e.g. lineage and
+rank) so taxonomic records can be explored programmatically. You can also download taxon records in XML format using
+the `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_ or explore related records with the
+`ENA Portal API <https://www.ebi.ac.uk/ena/portal/api/>`_.
 
 .. toctree::
    :maxdepth: 1
