@@ -57,7 +57,7 @@ Locate all read data submitted for Neanderthals
 Find Samples From Female Sheep
 ------------------------------
 
-Search for cow samples registered as female
+Search for sheep samples registered as female
 
 1. Navigate to the advanced search browser:
    https://www.ebi.ac.uk/ena/browser/advanced-search
