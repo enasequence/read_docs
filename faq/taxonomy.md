@@ -15,6 +15,21 @@ is a published binomen; it is simply a rank, which differentiates the sequenced 
 For example, unidentified strains of the same bacterial genus should be kept as separate species, 
 rather than binned together under the same genus name.
 
+The [interactive submission service](https://www.ebi.ac.uk/ena/submit/sra/#home) has a look up table which you can
+use to find appropriate taxonomic identifiers.
+
+![](images/tips_p01.png)
+
+Programmatic submitters will apply the taxonomic information to the sample object using the sample_name block:
+
+```xml
+    <SAMPLE_NAME>
+      <TAXON_ID>450267</TAXON_ID>
+      <SCIENTIFIC_NAME>Chlamyphorus truncatus</SCIENTIFIC_NAME>
+      <COMMON_NAME>Pink fairy armadillo</COMMON_NAME>
+    </SAMPLE_NAME>
+```
+
 If you do not know the scientific name or the common name that you would like to use for your submission but you 
 have an idea, you can use this *suggest* endpoint for the ENA taxonomy service:
  
