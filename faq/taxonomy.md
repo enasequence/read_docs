@@ -41,9 +41,13 @@ For example, using curl or pasting the URL in the browser for "curry" looks as f
 ### Checking a taxon is submittable
 
 If you know the taxon you would like to use, you can check if its submittable and find any additional information 
- about it by using this url:
+ about it by using one of the following urls:
 
 `https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/`
+
+`https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/common-name/`
+
+`https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/tax-id/`
 
 For example, using curl or pasting the url in the browser for "mixed culture" looks as follows:
 
@@ -65,8 +69,8 @@ For example, using curl or pasting the url in the browser for "mixed culture" lo
 ]
 ```
 
-Please see our ![guide on exploring taxonomy](../retrieval/taxonomy.html) for more advice on exploring our 
-taxonomy services.
+Please see our ![guide on exploring taxonomy](../retrieval/programmatic-access/taxonomy.html) for more advice on 
+exploring our taxonomy services programmatically.
 
 
 ## Environmental Taxonomic Classifications
