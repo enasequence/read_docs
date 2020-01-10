@@ -22,11 +22,12 @@ The `interactive submission service <https://www.ebi.ac.uk/ena/submit/sra/#home>
 use to find appropriate taxonomic identifiers.
 
 .. image:: images/tips_p01.png
-   :align: centre
+   :align: center
 
 Programmatic submitters will apply the taxonomic information to the sample object using the sample_name block:
 
 .. code-block:: xml
+
     <SAMPLE_NAME>
       <TAXON_ID>450267</TAXON_ID>
       <SCIENTIFIC_NAME>Chlamyphorus truncatus</SCIENTIFIC_NAME>
@@ -38,11 +39,13 @@ If you do not know the scientific name or the common name that you would like to
 have an idea, you can use this *suggest* endpoint for the ENA taxonomy service:
 
 .. code-block:: bash
+
    http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/
 
 For example, using curl or pasting the URL in the browser for "curry" looks as follows:
 
 .. code-block:: bash
+
    > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/curry"
    [
      {
@@ -62,9 +65,10 @@ Checking a taxon is submittable
 -------------------------------
 
 If you know the taxon you would like to use, you can check if its submittable and find any additional information
- about it by using one of the following urls:
+about it by using one of the following urls:
 
 .. code-block:: bash
+
    https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/
 
    https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/
@@ -74,6 +78,7 @@ If you know the taxon you would like to use, you can check if its submittable an
 For example, using curl or pasting the url in the browser for "mixed culture" looks as follows:
 
 .. code-block:: bash
+
    > curl "https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/mixed%20culture"
    [
      {
@@ -91,7 +96,7 @@ For example, using curl or pasting the url in the browser for "mixed culture" lo
    ]
 
 
-Please see our ![guide on exploring taxonomy](../retrieval/programmatic-access/taxonomy.html) for more advice on
+Please see our `guide on exploring taxonomy <../retrieval/programmatic-access/taxonomy.html>`_ for more advice on
 exploring our taxonomy services programmatically.
 
 
@@ -110,6 +115,7 @@ of this type can be immediately identified as they contain the term "metagenome"
 These are searchable within the Tax Database using the same methods described above.
 
 .. code-block:: bash
+
    curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%20meta"
    [
      {
@@ -119,21 +125,23 @@ These are searchable within the Tax Database using the same methods described ab
      }
 
 To view all environmental taxonomy available please visit the
- `"metagenomes" tax node <https://www.ebi.ac.uk/ena/browser/view/Taxon:408169>`_.
- Click on the *Tax tree* tab and click the arrow icons to expand the categories:
+`"metagenomes" tax node <https://www.ebi.ac.uk/ena/browser/view/Taxon:408169>`_.
+Click on the *Tax tree* tab and click the arrow icons to expand the categories:
 
-![metagenome](images/tax_p01.png)
+.. image:: images/tax_p01.png
+   :align: center
 
- The metagenomic term that is used to describe the biome is also the scientific name of the chosen taxon and
- can be used to find the tax ID in the same methods described above. For example, you can find the tax ID
- for *termite fungus garden metagenome* here:
+The metagenomic term that is used to describe the biome is also the scientific name of the chosen taxon and
+can be used to find the tax ID in the same methods described above. For example, you can find the tax ID
+for *termite fungus garden metagenome* here:
 
 .. code-block:: bash
+
    http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome
 
- Please note that new metagenome taxonomic records are rarely added, particularly those that add granularity.
- Please use the closest available choice, even if this is a less granular option. Only request a new term if
- you are sure you are unable to use anything in the lists available.
+Please note that new metagenome taxonomic records are rarely added, particularly those that add granularity.
+Please use the closest available choice, even if this is a less granular option. Only request a new term if
+you are sure you are unable to use anything in the lists available.
 
 Environmental Organism-Level Taxonomy
 -------------------------------------
@@ -167,7 +175,7 @@ uncultured \<Rank\> sp.
 
 *e.g. uncultured Bacillus sp.*
 
- For Fungi, the ‘sp.’ is dropped:
+For Fungi, the ‘sp.’ is dropped:
 
 uncultured \<Rank\>
 
