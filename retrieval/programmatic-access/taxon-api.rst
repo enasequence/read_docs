@@ -199,3 +199,15 @@ Taxonomy data is available for bulk download through FTP at ftp://ftp.ebi.ac.uk/
 +-----------------+--------------------------------------------------------------+
 | sdwca           | Full release of taxonomy data in Darwin Core Archive format. |
 +-----------------+--------------------------------------------------------------+
+
+GBIF and the Darwin Core Archive
+--------------------------------
+
+The Global Biodiversity Information Facility (GBIF) aims to make the world’s Biodiversity data freely
+and universally available to provide an essential global informatics infrastructure for Biodiversity research and
+applications worldwide. Read about the Darwin Core Standard (DwC) on their website
+`here <https://www.gbif.org/darwin-core>`_.
+
+The Darwin Core Archive comprises of 3 files: a tab-delimited data file, an XML file listing the descriptors
+of used in the data file and an another XML file representing a metadata file with information related to the
+data itself, the data supplier, the archive creator name of the person who created the archive.
