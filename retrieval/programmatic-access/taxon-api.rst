@@ -186,3 +186,16 @@ could specify this with the addition of "subtree=true":
 .. code-block:: bash
 
    https://www.ebi.ac.uk/ena/portal/api/links/taxon?accession=410657&result=study&subtree=true
+
+Downloading Taxonomy Data via FTP
+=================================
+
+Taxonomy data is available for bulk download through FTP at ftp://ftp.ebi.ac.uk/pub/databases/ena/taxonomy/.
+
++-----------------+--------------------------------------------------------------+
+| File            | Definition                                                   |
++-----------------+--------------------------------------------------------------+
+| taxonomy.xml.gz | Full release of the taxonomy data in ENA taxonomy format.    |
++-----------------+--------------------------------------------------------------+
+| sdwca           | Full release of taxonomy data in Darwin Core Archive format. |
++-----------------+--------------------------------------------------------------+
