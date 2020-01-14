@@ -64,9 +64,9 @@ ENA records. You can use the following endpoints to do this:
 
    continued....
 
-The resulting format can differ the detail of information returned it can be worth exploring the endpoints available
-for both options. In the above example, the TSV provides more direct readability but the JSON format gives additional
-information on when the cross-references for that Source were most recently updated.
+In the above example, the TSV provides more direct readability but the JSON format provides additional
+information on the date the cross-references for that Source were most recently updated. It can be worth exploring
+both the 'tsv' and 'json' endpoints available before deciding what is most useful for your particular use-case.
 
 In addition to providing an overview of the cross-reference service, this endpoint is useful for determining the Source
 name for any sources you may want to explore further.
