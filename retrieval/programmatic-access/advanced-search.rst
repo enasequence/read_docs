@@ -99,10 +99,10 @@ Here, we can see in both searches, the following fields can be used:
 
 - **host_body_site** - the site in the host organism where the sample was collected
 - **host_tax_id** - the taxon ID for the host - this is the best way to accurately narrow down the host species sampled.
-   The tax ID for `Bos Taurus <https://www.ebi.ac.uk/ena/browser/view/Taxon:9913>`_ is 9913.
 - **country** - the country where the sample was collected
 
-When we put these together as a query we get:
+The tax ID for `Bos Taurus <https://www.ebi.ac.uk/ena/browser/view/Taxon:9913>`_ is 9913. So, when we put these together
+as a query we get:
 
 .. code-block:: bash
 
