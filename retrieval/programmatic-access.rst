@@ -37,28 +37,31 @@ Retrieve and Download Records
 =============================
 
 All public records within ENA are available from within the `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_
-so records can be programmatically downloaded directly from the API. Associate files can be downloaded using FTP.
+so records can be programmatically downloaded directly from the API. Associate files can be downloaded using FTP or
+Aspera protocol.
 
 For further simplicity, `enaBrowserTools <https://github.com/enasequence/enaBrowserTools>`_
 can be downloaded and run locally to fetch files associated with records by using accession. It can also be used
 to bulk download records related to a specified Sample or Study.
 
-For examples and tutorials on how to use the Browser API, FTP and enaBrowserTools, please see the guidelines below:
+For examples and tutorials on how to use the Browser API and enaBrowserTools, please see the guidelines below:
 
 .. toctree::
    :maxdepth: 1
 
    retrieval/browser-api
-   retrieval/ftp-download
    retrieval/browser-tools
 
 Explore Taxonomy and Related Records
 ====================================
 
 All sample records in ENA have taxonomic assignment. As a result, the majority of records stored within the archive
-can be searched based on their taxonomy. The ENA has a REST API for access to taxonomic information (e.g. lineage and
-rank) so taxonomic records can be explored programmatically.
+can be searched based on their taxonomy.
 
+The ENA has a REST API for access to taxonomic information (e.g. lineage and
+rank) so taxonomic records can be explored programmatically. You can also download taxon records in XML format using
+the `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_ or explore related records with the
+`ENA Portal API <https://www.ebi.ac.uk/ena/portal/api/>`_.
 
 .. toctree::
    :maxdepth: 1

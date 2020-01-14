@@ -57,7 +57,7 @@ Locate all read data submitted for Neanderthals
 Find Samples From Female Sheep
 ------------------------------
 
-Search for cow samples registered as female
+Search for sheep samples registered as female
 
 1. Navigate to the advanced search browser:
    https://www.ebi.ac.uk/ena/browser/advanced-search
@@ -100,6 +100,3 @@ Rulespace
 Rulespace is a tool which allows you save your searches, give them names, rerun
 them and share them with other people. Learn more about it in the `Rulespace
 Guide <advanced-search/rulespace.html>`_.
-
-
-example of taxon based search - `<advanced-search/taxon-based-search.html>`_
