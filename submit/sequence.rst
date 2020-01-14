@@ -31,7 +31,7 @@ Accessions
 
 As all sequences in ENA are submitted as 'analyses', for each sequence submission, Webin will report 
 a unique accession number that starts with ERZ. This accession number is for internal processing only 
-and will not be visible in the browser. As a result, you will recieve additional post-processing accession 
+and will not be visible in the browser. As a result, you will receive additional post-processing accession
 numbers for your sequences via email. 
 
 Always make a note of any accessions you receive as these are the unique identifiers for each of 
