@@ -21,7 +21,7 @@ There are several categories of checklist, described below:
 Frequently Used Checklists
 ==========================
 
-+----------------------------------------------------------------------------------------------------------------------+
++------------------------+---------------------------------------------------------------------------------------------+
 | Name                   | Definition                                                                                  |
 +========================+=============================================================================================+
 | rRNA Gene              | For ribosomal RNA genes from prokaryotic, nuclear or organellar DNA. All rRNAs are          |
@@ -57,7 +57,7 @@ Frequently Used Checklists
 | Gene Promoter          | For submission of uni- or bi-directional gene promoter regions. Please note that CDS is not |
 |                        | annotated; if you wish to include the start of the coding region(s), please leave a comment |
 |                        | with the coordinates of the start site(s).                                                  |
-+------------------------+--------------------------------------------------------------------------------------------+
++------------------------+---------------------------------------------------------------------------------------------+
 
 
 Marker Sequence Checklists
