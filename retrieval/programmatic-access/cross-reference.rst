@@ -9,25 +9,26 @@ The update and frequency of each source is dependent on their own release cycle 
 with ENA supporting updates as frequently as once a week.
 
 These cross-references can be explored programmatically using the
-`x-ref API <https://www.ebi.ac.uk/ena/xref/rest/>`_ which is documented with a Swagger interface.
+`Xref API <https://www.ebi.ac.uk/ena/xref/rest/>`_ which is documented with a Swagger interface.
 
-This guide is not extensive and is designed to introduce you to some example uses for the x-ref API which can be used
+This guide is not extensive and is designed to introduce you to some example uses for the Xref API which can be used
 as a platform for you to explore the API and service further.
 
-These examples use the 'tsv' format result but this can be swapped for 'json' if that is preferable.
+Most of these examples use the 'tsv' format result but this can be swapped for 'json' if that is preferable.
 
 Display List of All Cross Reference Sources
 ===========================================
 
 To get a good overview of what is included in the cross-reference service. You can first access the full list of
 cross-reference 'Sources' registered with ENA. These sources are the external data resources which are linked to
-ENA records. You can use the following endpoint to do this:
+ENA records. You can use the following endpoints to do this:
 
 .. code-block::
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/source
+   https://www.ebi.ac.uk/ena/xref/rest/json/source
 
-**First 10 resulting cross-reference Sources:**
+**First 10 resulting cross-reference Sources as a TSV:**
 
 .. code-block::
 
@@ -44,6 +45,28 @@ ENA records. You can use the following endpoint to do this:
    Ensembl-Gn	EnsEMBL Genes
 
    continued....
+
+**First 2 resulting cross-reference Sources in JSON:**
+
+.. code-block::
+
+   [ {
+     "Description" : "ArrayExpress experiment",
+     "HomePage" : "https://www.ebi.ac.uk/arrayexpress/",
+     "LastUpdated" : "2020-01-11 05:01:04.066495",
+     "Source" : "ArrayExpress"
+   }, {
+     "Description" : "BCCM/LMBP Plasmid Collection",
+     "HomePage" : "http://www.genecorner.ugent.be/",
+     "LastUpdated" : "2017-06-03 18:19:30.764629",
+     "Source" : "BCCM/LMBP"
+   }, {
+
+   continued....
+
+The resulting format can differ the detail of information returned it can be worth exploring the endpoints available
+for both options. In the above example, the TSV provides more direct readability but the JSON format gives additional
+information on when the cross-references for that Source were most recently updated.
 
 In addition to providing an overview of the cross-reference service, this endpoint is useful for determining the Source
 name for any sources you may want to explore further.
@@ -63,7 +86,7 @@ This results in a tsv of all records that have a cross-reference with MGnify. Th
 the url to the cross-reference source (in this case MGnify's website) as well as the record in ENA.
 
 This example is limited to 100 records. By using the 'limit' and 'offset' options, you can retrieve the data in batches.
-Alternatively, set the limit to 0 to fetch all the records.
+By default the limit is set to 100,000 records. You can set the limit to 0 to fetch all the records.
 
 Narrow Down a Search By Target Record Type
 ------------------------------------------
