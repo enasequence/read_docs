@@ -8,7 +8,7 @@ should be used where applicable.
 
 Please note that none of the information here is relevant to submission of
 annotated genome assemblies. For information on this, please see our page
-`How To Submit Genome Assemblies <../../assembly.html`_.
+`How To Submit Genome Assemblies <../../assembly.html>`_.
 
 There are several categories of checklist:
 
