@@ -111,23 +111,34 @@ Marker Sequence Checklists
 Virus-Specific Checklists
 =========================
 
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+======================================================================================================================+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
++------------------------+--------------+------------------------------------------------------------------------------+
+| Name                   | Checklist ID | Definition                                                                   |
++========================+==============+==============================================================================+
+| Single Viral CDS       | ERT000028    | For complete or partial single coding sequence (CDS) from a viral gene.      |
+|                        |              | Please do not use for peptides processed from polyproteins or proviral       |
+|                        |              | sequences, as these are all annotated differently.                           |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Viral Polyprotein      | ERT000051    | For complete or partial viral polyprotein genes where the mature peptide     |
+|                        |              | boundaries remain undefined. This template is not suitable for proviral      |
+|                        |              | sequences. If the sequences contain ribosomal frameshifts, please contact us.|
++------------------------+--------------+------------------------------------------------------------------------------+
+| ssRNA(-) Viral         | ERT000052    | For complete or partial viral copy RNA (cRNA) sequences, complementary to    |
+| copy RNA               |              | ssRNA(-) virus genomes. Only one CDS can be added; further CDS information   |
+|                        |              | should be provided in the curator comments section.                          |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Viral Untranslated     | ERT000060    | For complete or partial untranslated region (UTR) or nontranslated region    |
+| Region (UTR)           |              | (NTR) found at the termini of viral genomes. Please do not use this          |
+|                        |              | checklist for submitting virus genomes or viral coding genes.                |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Alphasatellite         | ERT000057    | For submission of circular single stranded DNA alphasatellite sequences      |
+| sub-viral particle     |              | associated with Begomovirus, Babuvirus and Nanovirus.                        |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Betasatellite          | ERT000047    | For submission of circular single stranded DNA betasatellite sequences       |
+| sub-viral particle     |              | of the Begomovirus genus.                                                    |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Plant Viroid           | ERT000031    | For complete circular ssRNA plant viroid sequences. Please do not use for    |
+|                        |              | other circular viruses.                                                      |
++------------------------+--------------+------------------------------------------------------------------------------+
 
 
 Large-Scale Data Checklists
