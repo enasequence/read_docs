@@ -10,7 +10,7 @@ Please note that none of the information here is relevant to submission of
 annotated genome assemblies. For information on this, please see our page
 `How To Submit Genome Assemblies <../../assembly.html`_.
 
-There are several categories of checklist, described below:
+There are several categories of checklist:
 
 - `Frequently Used Checklists`_
 - `Marker Sequence Checklists`_
@@ -156,7 +156,7 @@ Large-Scale Data Checklists
 |                        |              | which can be specifically amplified by PCR and detected in the presence of   |
 |                        |              | all other genomic sequences and whose location in the genome is mapped.      |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Genome Survey          | ERT000024    |For submission of Genome Survey Sequences (GSS). These are short DNA          |
+| Genome Survey          | ERT000024    | For submission of Genome Survey Sequences (GSS). These are short DNA         |
 | Sequence (GSS)         |              | sequences which inlude: random single pass genome survey sequences, single   |
 |                        |              | pass reads from cosmid/BAC/YAC ends (may be chromosome specific), exon       |
 |                        |              | trapped genomic sequences, Alu PCR sequences and transposon-tagged sequences.|
