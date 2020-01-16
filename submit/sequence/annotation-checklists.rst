@@ -67,29 +67,45 @@ Frequently Used Checklists
 Marker Sequence Checklists
 ==========================
 
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+======================================================================================================================+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
++------------------------+--------------+------------------------------------------------------------------------------+
+| Name                   | Checklist ID | Definition                                                                   |
++========================+==============+==============================================================================+
+| COI gene               | ERT000020    | For mitochondrial cytochrome oxidase subunit 1 genes.                        |
++------------------------+--------------+------------------------------------------------------------------------------+
+| ITS rDNA               | ERT000009    | For ITS rDNA region. This checklist allows generic annotation of the ITS     |
+|                        |              | components (18S rRNA, ITS1, 5.8S rRNA, ITS2 and 28S rRNA). For annotation of |
+|                        |              | the rRNA component only, please use the rRNA gene checklist.                 |
++------------------------+--------------+------------------------------------------------------------------------------+
+| trnK-matK locus        | ERT000032    | For complete or partial matK gene within the chloroplast trnK gene intron.   |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Phylogenetic Marker    | ERT000038    | For the submission of the following markers: actin (act), tubulin (tuba or   |
+|                        |              | tubb), calmodulin (CaM), RNA polymerase II large subunits (RPB1 and RPB2),   |
+|                        |              | translation elongation factor 1-alpha (tef1a), glyceraldehyde 3-phosphate    |
+|                        |              | dehydrogenase (GAPDH) and histone 3 (H3) where the intron/exon boundaries    |
+|                        |              | are not known.                                                               |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Multi-Locus Marker     | ERT000058    | For the submission of multi-locus markers (e.g., tRNA + CDS + rRNA) from in  |
+|                        |              | vivo gemomic DNA. This checklist provides a simple submission process for    |
+|                        |              | organellar or nuclear regions containing multiple genes. For example, a      |
+|                        |              | region containing coding genes, rRNA genes and tRNA genes. Please note that  |
+|                        |              | individual feature annotation is not possible with this checklist.           |
++------------------------+--------------+------------------------------------------------------------------------------+
+| D-Loop                 | ERT000034    | For mitochondrial D-loop (control region) sequences. All D-loops are         |
+|                        |              | considered partial.                                                          |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Intergenic Spacer, IGS | ERT000035    | For intergenic spacer (IGS) sequences between neighbouring genes (e.g.,      |
+|                        |              | psbA-trnH IGS, 16S-23S rRNA IGS). Inclusion of the flanking genes is allowed.|
++------------------------+--------------+------------------------------------------------------------------------------+
+| Gene intron            | ERT000037    | For complete or partial single gene intron.                                  |
++------------------------+--------------+------------------------------------------------------------------------------+
+| External Transcribed   | ERT000053    | For submission of External Transcribed Spacer (ETS) regions of the           |
+| Spacer (ETS)           |              | eukaryotic rDNA transcript; a region often used to study intrageneric        |
+|                        |              | relationships.                                                               |
++------------------------+--------------+------------------------------------------------------------------------------+
+| 16S-23S Intergenic     | ERT000050    | For submission of the 16S-23S rRNA intergenic spacer region: the transcribed |
+| Spacer Region          |              | spacer between the 16S rR NA and 23S rRNA genes of rRNA operons, found in    |
+|                        |              | prokaryotes and organelles.                                                  |
++------------------------+--------------+------------------------------------------------------------------------------+
 
 
 Virus-Specific Checklists
