@@ -144,16 +144,20 @@ Virus-Specific Checklists
 Large-Scale Data Checklists
 ===========================
 
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+======================================================================================================================+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
-|
-+----------------------------------------------------------------------------------------------------------------------+
++------------------------+--------------+------------------------------------------------------------------------------+
+| Name                   | Checklist ID | Definition                                                                   |
++========================+==============+==============================================================================+
+| Expressed Sequence     | ERT000003    | For submission of Sanger-sequenced Expressed Sequence Tags (ESTs). ESTs are  |
+| Tag (EST)              |              | short transcripts ~500-800 bp long usually of low quality as they are the    |
+|                        |              | result of only single pass reads. No feature annotation is recorded on ESTs. |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Sequence Tagged        | ERT000055    | For submission of Sequence Tagged Sites (STS). The Sequence Tagged Site      |
+| Site (STS)             |              | (STS) is a relatively short, easily PCR-amplified sequence (200 to 500 bp)   |
+|                        |              | which can be specifically amplified by PCR and detected in the presence of   |
+|                        |              | all other genomic sequences and whose location in the genome is mapped.      |
++------------------------+--------------+------------------------------------------------------------------------------+
+| Genome Survey          | ERT000024    |For submission of Genome Survey Sequences (GSS). These are short DNA          |
+| Sequence (GSS)         |              | sequences which inlude: random single pass genome survey sequences, single   |
+|                        |              | pass reads from cosmid/BAC/YAC ends (may be chromosome specific), exon       |
+|                        |              | trapped genomic sequences, Alu PCR sequences and transposon-tagged sequences.|
++------------------------+--------------+------------------------------------------------------------------------------+
