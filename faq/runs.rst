@@ -57,7 +57,7 @@ Corrupted File: Upload Again
 | If you recalculate the MD5 value of you file locally and it matches the value you registered, it is likely the file upload was incomplete or corrupt.
   You therefore need to reupload the file.
   Once this is done, the file should be automatically accepted within 24 hours with no further action taken.
-| See the `Data Upload <../fileprep/upload.html>`_ pages for a guide to uploading.
+| See the `Data Upload <../submit/fileprep/upload.html>`_ pages for a guide to uploading.
   You may find using Aspera for your upload gives you a more stable connection, especially if you and the ENA are geographically distant from one another.
 
 Wrong MD5 Value Registered: Register a New One
@@ -69,7 +69,7 @@ Wrong MD5 Value Registered: Register a New One
   You will be presented with a field in which you can update the MD5 value.
 |
 | If you have many runs to update, you may wish to do this programmatically, by submitting corrected XML versions of your runs.
-  View our pages on `Programmatic Run Updates <../update/programmatic-read.html>`_ to learn more about this.
+  View our pages on `Programmatic Run Updates <../update/metadata/programmatic-read.html>`_ to learn more about this.
 
 
 Error: Number Of Lines Is Not A Multiple Of Four
