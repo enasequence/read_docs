@@ -19,6 +19,7 @@ bottom of the page.
    submit/general-guide
    submit/study
    submit/samples
+   submit/taxonomy
    submit/fileprep
    submit/reads
    submit/assembly
