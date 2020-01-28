@@ -19,7 +19,9 @@ Perform Searches
 
 All functionalities of the ENA Advanced Search can be performed programmatically using a combination of the
 `ENA Portal API <https://www.ebi.ac.uk/ena/portal/api/>`_ and the
-`ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_.
+`ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_. You can download the API docs for the Portal API
+`here <https://www.ebi.ac.uk/ena/portal/api/doc>`_ and the browser API
+`here <https://www.ebi.ac.uk/ena/browser/api/doc>`_.
 
 You can further explore related records outside of the
 European Nucleotide Archive by programmatically accessing the
@@ -30,8 +32,8 @@ For examples and tutorials on how to use these APIs, please see the guidelines b
 .. toctree::
    :maxdepth: 1
 
-   retrieval/advanced-search
-   retrieval/cross-reference
+   programmatic-access/advanced-search
+   programmatic-access/cross-reference
 
 Retrieve and Download Records
 =============================
@@ -49,8 +51,8 @@ For examples and tutorials on how to use the Browser API and enaBrowserTools, pl
 .. toctree::
    :maxdepth: 1
 
-   retrieval/browser-api
-   retrieval/browser-tools
+   programmatic-access/browser-api
+   programmatic-access/browser-tools
 
 Explore Taxonomy and Related Records
 ====================================
@@ -63,11 +65,23 @@ rank) so taxonomic records can be explored programmatically. You can also downlo
 the `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_ or explore related records with the
 `ENA Portal API <https://www.ebi.ac.uk/ena/portal/api/>`_.
 
+For examples and tutorials on how to use the ENA taxonomy services, please see the guidelines below:
+
 .. toctree::
    :maxdepth: 1
 
-   retrieval/taxon-api
-   retrieval/taxon-based-search
+   programmatic-access/taxon-api
+   programmatic-access/taxon-based-search
+
+Sequence similarity search
+==========================
+
+EBI's central NCBI BLAST service can be accessed via
+`REST and SOAP <https://www.ebi.ac.uk/seqdb/confluence/display/JDSAT/Job+Dispatcher+Sequence+Analysis+Tools+Home>`_.
+
+For usage details and parameter options, see the
+`NCBI BLAST+ documentation <https://www.ebi.ac.uk/seqdb/confluence/pages/viewpage.action?pageId=94147939>`_.
+
 
 Access the CRAM Reference Registry
 ==================================
@@ -81,9 +95,9 @@ cached reference sequences. In addition to local caches supported by Samtools it
 sequences using an HTTP proxy.
 
 In the tutorial below, the Squid is used as a reverse proxy to cache reference sequences retrieved from the
-CRAM Reference Registry.
+CRAM Reference Registry:
 
 .. toctree::
    :maxdepth: 1
 
-   retrieval/cram-reference-cache
+   programmatic-access/cram-reference-cache
