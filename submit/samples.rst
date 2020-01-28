@@ -25,8 +25,8 @@ minimum standards for different sample types.
 
 These "Checklists" were developed in collaboration with different research communities to ensure
 that there is enough information provided for each type of sample that is deposited in ENA to comply
-with the `FAIR <https://doi.org/10.1038/sdata.2016.18>`_ data principles (making sure your associated data is Findable, Accessible, Interoperable
-and Reusable).
+with the `FAIR <https://doi.org/10.1038/sdata.2016.18>`_ data principles (making sure your associated data is Findable, 
+Accessible, Interoperable and Reusable). Explore all our sample checklists `here <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
 As a result, when registering a sample, it is important to choose the most relevant sample
 checklist available to you and provide at least the minimum metadata.
