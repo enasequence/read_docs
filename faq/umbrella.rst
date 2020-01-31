@@ -25,6 +25,7 @@ To group your studies under an umbrella, you will need to create two XML files.
 **submission.xml:**
 
 .. code-block:: xml
+
    <SUBMISSION>   
       <ACTIONS>
          <ACTION>
