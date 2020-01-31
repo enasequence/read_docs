@@ -20,19 +20,25 @@ If you wish to test your submission, specify the URL of the test service in your
 Grouping Studies Under An Umbrella
 ==================================
 
-To group your studies under an umbrella, you will need to create two XML files.
+To group your studies under an umbrella, you will need to create two XML files. 
 
 **submission.xml:**
 
 .. code-block:: xml
+   <SUBMISSION>   
+      <ACTIONS>
+         <ACTION>
+            <ADD/>
+         </ACTION>
+         <ACTION>
+            <HOLD HoldUntilDate="TODO: release date"/>
+         </ACTION>
+      </ACTIONS>
+   </SUBMISSION>
 
-    <SUBMISSION>
-        <ACTIONS>
-            <ACTION>
-                <ADD/>
-            </ACTION>
-        </ACTIONS>
-    </SUBMISSION>
+It is good practice to provide a specific release date for an umbrella project using the HOLD action in the submission XML. When this date arrives, the umbrella project will become public automatically. However, this is optional and if not provided, the release date defaults to two years after registration. 
+
+Each child project is released independently and they each have their own hold date which is determined on registration, the umbrella project release does not determine the child project(s) release.
 
 **umbrella.xml:**
 
@@ -121,7 +127,7 @@ Releasing Umbrella Studies
 Umbrella studies do not appear in the list of studies shown in your Webin account.
 Modifying the release date must therefore be done programmatically as well.
 
-Create an XML with the HOLD action, specifying the new release date and project accession:
+Create an XML with the HOLD action, specifying the new release date and project accession or alternatively, use the RELEASE action to release the study as soon as possible:
 
 **hold_date.xml**
 
