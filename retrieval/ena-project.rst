@@ -15,8 +15,8 @@ Viewing the Project in The Browser
 ==================================
 
 Firstly - navigate to the ENA project. This can be done by typing the accession **PRJEB1787** into the box where it says
-'Enter accession' - this will take you directly to the ENA record. Alternatively, you can add the accession to the
-ENA Browser url below:
+'Enter accession' on the top right of the ENA browser homepage - this will take you directly to the ENA record.
+Alternatively, you can add the accession to the ENA Browser url below:
 
 https://www.ebi.ac.uk/ena/browser/view/<accession>
 
@@ -32,10 +32,10 @@ Once the page has fully loaded, the project should look like this:
 The Navigation Box
 ==================
 
-The main way to navigation through an ENA project is using the navigation box in the top right corner. This will
+The main way to navigate through an ENA project is using the navigation box in the top right corner. This will
 allow you to show/hide different types of information about that project. The contents of the navigation box will
 vary depending on the contents of the project. For example, some projects will have Read Files, others may have
-Analysis Files.
+Analysis Files. Some projects have a large number of different components, so be patient if it takes a while to load.
 
 This is the navigation box for project **PRJEB1787**:
 
@@ -162,7 +162,7 @@ Navigate to the Additional Attributes tab:
    :align: center
 
 Here you can see all the details of the sample collection event - when it was collected, where it was collected, at
-what depth etc. This information can be incredible useful to provide context to the associated data files. It is also
+what depth etc. This information can be incredibly useful to provide context to the associated data files. It is also
 the metadata used to help search across records.
 
 Sample Checklists
