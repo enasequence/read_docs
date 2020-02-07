@@ -12,13 +12,13 @@ database API:
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/<scientific-name>
+   www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/<scientific-name>
 
 If you do not know the scientific name or the common name but you have an idea, you can use the *suggest* endpoint:
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/<search-term>
+   www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/<search-term>
 
 Search For All Reads of a Specified Taxon
 =========================================
