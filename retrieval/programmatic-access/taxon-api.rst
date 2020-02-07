@@ -17,13 +17,13 @@ If you know the scientific name of the organism you can find the taxonomy ID wit
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/
+   www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/
 
 Simply append the scientific name to the URL:
 
 .. code-block:: bash
 
-   > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/Leptonycteris%20nivalis"
+   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/Leptonycteris%20nivalis"
    [
      {
        "taxId": "59456",
@@ -43,13 +43,13 @@ You can also do this with the common name using this endpoint:
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/
+   www.ebi.ac.uk/ena/taxonomy/rest/any-name/
 
 Simply append the common name to the URL:
 
 .. code-block:: bash
 
-   > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/golden%20arrow%20poison%20frog"
+   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/any-name/golden%20arrow%20poison%20frog"
    [
      {
        "taxId": "377316",
@@ -69,13 +69,13 @@ If you do not know the scientific name or the common name but you have an idea, 
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/
+   www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/
 
 See this example using the search term "curry":
 
 .. code-block:: bash
 
-   > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/curry"
+   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/curry"
    [
      {
        "taxId": "159030",
