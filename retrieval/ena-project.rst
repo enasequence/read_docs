@@ -120,25 +120,23 @@ We know that project **PRJEB1787** contains Samples, Experiments and Runs, which
 contains Read Files. So have a look into the Read Files tab to see a table of all the data generated as part of
 this project.
 
-From this tabe you can explore all the functionality of the Read Files table. Have a look at what  additional metadata
-you can view in the table using the 'Show selected columns' drop down. Also, have a look at what files you can download
-as part of this project.
+Have a look at what additional metadata you can view in the table using the 'Show selected columns' drop down.
+Also, have a look at what files you can download as part of this project.
 
 Looking into Sample Records
 ===========================
 
-If you want to know any specific details of a particular set of sequencing data or want to know the particulars of
-the samples that were collected during the research project, you can look into the Sample records that are within
-the Project.
+If you want to know any specific details about the samples that were collected (and sequenced) during the research
+project, you can look into the Sample records that are within the Project.
 
 Sample records contain the most extensive metadata. These explain how the data was collected and can be used to
-understand what each read file contains. For example, navigate to sample
+understand and better interpret the contents of any related data files. For example, navigate to sample
 `ERS478017/SAMEA2591108 <https://www.ebi.ac.uk/ena/browser/view/SAMEA2591108>`_ either in the Read Files table or
 through the Navigation tab.
 
-From within this sample record, you can see not only the read files that were part of the original project but also
-any other uses of the data associated with this sample. In particular, you'll notice that you can now see an Analysis
-Files tab:
+From within this sample record, you can still see the read files that were part of the original project. But from here
+you can also see other uses of the data associated with this sample. In particular, you'll notice that you can now
+see an Analysis Files tab:
 
 .. image:: images/sample-record.png
    :align: center
@@ -177,7 +175,7 @@ metadata of samples to make it easier to interpret and search across them.
 
 These checklists have been developed with the research communities themselves to encourage where possible, ENA
 submitters to provide at least the minimum information for their samples to be findable and re-usable for further
-reasearch. You can see the full list of checklists `here <https://www.ebi.ac.uk/ena/browser/checklists>`_.
+research. You can see the full list of checklists `here <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
 If you want to search for a particular type of sample (e.g. a soil sample), you can search across the archive by
 the checklist (e.g. searching for samples that used the
