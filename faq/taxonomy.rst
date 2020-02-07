@@ -40,13 +40,13 @@ have an idea, you can use this *suggest* endpoint for the ENA taxonomy service:
 
 .. code-block:: bash
 
-   http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/
+   www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/
 
 For example, using curl or pasting the URL in the browser for "curry" looks as follows:
 
 .. code-block:: bash
 
-   > curl "http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/curry"
+   > curl "http://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/curry"
    [
      {
        "taxId": "159030",
@@ -69,17 +69,17 @@ about it by using one of the following urls:
 
 .. code-block:: bash
 
-   https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/
+   www.ebi.ac.uk/ena/taxonomy/rest/taxon/scientific-name/
 
-   https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/any-name/
+   www.ebi.ac.uk/ena/taxonomy/rest/taxon/any-name/
 
-   https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/tax-id/
+   www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
 
 For example, using curl or pasting the url in the browser for "mixed culture" looks as follows:
 
 .. code-block:: bash
 
-   > curl "https://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/mixed%20culture"
+   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/mixed%20culture"
    [
      {
        "taxId": "1306155",
@@ -116,7 +116,7 @@ These are searchable within the Tax Database using the same methods described ab
 
 .. code-block:: bash
 
-   curl "www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/suggest-for-submission/marsupial%20meta"
+   curl "https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/marsupial%20meta"
    [
      {
        "taxId": "1477400",
@@ -137,7 +137,7 @@ for *termite fungus garden metagenome* here:
 
 .. code-block:: bash
 
-   http://www.ebi.ac.uk/ena/data/taxonomy/v1/taxon/scientific-name/termite fungus garden metagenome
+   www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/termite fungus garden metagenome
 
 Please note that new metagenome taxonomic records are rarely added, particularly those that add granularity.
 Please use the closest available choice, even if this is a less granular option. Only request a new term if
