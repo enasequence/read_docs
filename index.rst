@@ -52,6 +52,7 @@ bottom of the page.
    faq/samples
    faq/taxonomy
    faq/metagenomes
+   faq/missing-values
    faq/locus_tags
    faq/third_party_tools
 
