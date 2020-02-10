@@ -43,8 +43,8 @@ value.
 
 Example of usage:
 
-Checklist: `GSC MIxS host associated <https://www.ebi.ac.uk/ena/browser/view/ERC000013>`_
+Checklist: `GSC MIxS soil <https://www.ebi.ac.uk/ena/browser/view/ERC000022>`_
 
-host sex: not provided
+geographic location (elevation): not collected
 
 geographic location (country and/or sea): restricted access
