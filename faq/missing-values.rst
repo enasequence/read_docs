@@ -10,6 +10,11 @@ to always provide true values. However, if missing/null value reporting is requi
 submitters are asked to use a term with the finest granularity for their situation. See the table below for
 accepted missing value reporting terms.
 
+.. note::
+   If your sample metadata does not provide enough context for your data to be easily interpreted,
+   you could be requested to update your samples, so it is important to take some time to provide any metadata
+   you have and only use missing value terms when necessary.
+
 INSDC missing value reporting terms
 ===================================
 
