@@ -1,6 +1,6 @@
-=======================
-Missing value reporting
-=======================
+========================
+Reporting Missing Values
+========================
 
 The International Nucleotide Database Collaboration (INSDC) have a standardised missing/null value reporting
 language to be used where a value of an expected format for sample metadata reporting **can not** be provided.
@@ -15,7 +15,7 @@ accepted missing value reporting terms.
    you could be requested to update your samples, so it is important to take some time to provide any metadata
    you have and only use missing value terms when necessary.
 
-INSDC missing value reporting terms
+INSDC Missing Value Reporting Terms
 ===================================
 
 +----------------------------+------------------------------+-----------------------------------------------+
@@ -37,8 +37,8 @@ INSDC missing value reporting terms
 |                            |                              | | openly because of privacy concerns          |
 +----------------------------+------------------------------+-----------------------------------------------+
 
-Usage of INSDC missing value reporting terms
-============================================
+Example Usage of INSDC Missing Value Reporting Terms
+====================================================
 
 Please use the above standardised missing value vocabulary **only if a true value of an expected format for a**
 **mandatory field is missing**. If a true value is missing for a **recommended** or an **optional** field, then these fields
