@@ -33,7 +33,7 @@ checklist available to you and provide at least the minimum metadata.
 
 .. note::
    If your sample metadata does not provide enough context for your data to be easily interpreted,
-   you could be requested to update your samples, so it is important to take some time to choose
+   you may be requested to update your samples, so it is important to take some time to choose
    the correct checklist and metadata when you first register your samples.
 
 If you can not find a suitable checklist for your sample data type - please first contact
