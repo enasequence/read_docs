@@ -29,15 +29,15 @@ browser.
 | Analyses              | | Hold results files of analyses performed  | `ERZ841272`_              |
 |                       | | on sequencing data and analysis methods   |                           |
 +-----------------------+---------------------------------------------+---------------------------+
-| WGS contig set        | | Hold Whole Genome Sequencing contig sets  |  `CABHOY010000000.1`_     |
-|                       | | generated as part of a genome assembly.   |                           |
+| Contig set            | | Hold contig sets generated as part of a   |  `CABHOY010000000.1`_     |
+|                       | | genome or transcriptome assembly.         |                           |
 +-----------------------+---------------------------------------------+---------------------------+
 | Assemblies            | | Represents an entire genome assembly and  | `GCA_000001405.28`_       |
 |                       | | holds any contig sets or sequence records |                           |
 |                       | | generated as part of the assembly         |                           |
 +-----------------------+---------------------------------------------+---------------------------+
 | | Assembled/Annotated | | Any sequence records from coding or       | `CM000667.2`_             |
-| | Sequences           | | non-coding regions to full assembled      |                           |
+| | Sequences (*)       | | non-coding regions to full assembled      |                           |
 |                       | | chromosomes                               |                           |
 +-----------------------+---------------------------------------------+---------------------------+
 | Taxon                 | | The sequenced organism or metagenome of a | `Taxon:9606`_             |
@@ -56,6 +56,9 @@ browser.
 .. _`CM000667.2`: https://www.ebi.ac.uk/ena/browser/view/CM000667.2
 .. _`Taxon:9606`: https://www.ebi.ac.uk/ena/browser/view/Taxon:9606
 .. _`ERC000013`: https://www.ebi.ac.uk/ena/browser/view/ERC000013
+
+\* Assembled and annotated sequences fall into different sub-classes. Read more about the
+different sub-classes of sequences `here <./general-guide/data-classes.html>`_.
 
 Search and Retrieval
 ====================
