@@ -424,9 +424,9 @@ modifications to the submitted objects.
 
 Please substitute `<accession>` with the assigned accession number in the URLs below:
 
-- Project XML: `https://www.ebi.ac.uk/ena/submit/drop-box/projects/<accession>?format=html`
-- Study XML: `https://www.ebi.ac.uk/ena/submit/drop-box/studies/<accession>?format=xml`
-- Sample XML: `https://www.ebi.ac.uk/ena/submit/drop-box/samples/<accession>?format=xml`
-- Run XML: `https://www.ebi.ac.uk/ena/submit/drop-box/runs/<accession>?format=xml`
-- Experiment XML: `https://www.ebi.ac.uk/ena/submit/drop-box/experiments/<accession>?format=xml`
-- Analysis XML: `https://www.ebi.ac.uk/ena/submit/drop-box/analyses/<accession>?format=xml`
+- Project XML: `https://www.ebi.ac.uk/ena/submit/drop-box/projects/<accession>`
+- Study XML: `https://www.ebi.ac.uk/ena/submit/drop-box/studies/<accession>`
+- Sample XML: `https://www.ebi.ac.uk/ena/submit/drop-box/samples/<accession>`
+- Run XML: `https://www.ebi.ac.uk/ena/submit/drop-box/runs/<accession>`
+- Experiment XML: `https://www.ebi.ac.uk/ena/submit/drop-box/experiments/<accession>`
+- Analysis XML: `https://www.ebi.ac.uk/ena/submit/drop-box/analyses/<accession>`

@@ -167,7 +167,7 @@ Sequence based submission support the following formats:
 - FASTA: Sequences in fasta format
 - FLATFILE: Sequences in EMBL-Bank flat file format
 
-The following additional formats are supported for [genome assembly submissions](../assembly/webin-cli.html):
+The following additional formats are supported for [genome assembly submissions](../assembly.html):
 
 - AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
 - CHROMOSOME_LIST: list of chromosomes

@@ -95,7 +95,7 @@ chr04 4 Chromosome
 This file should be provided when the submission contains chromosomes with unlocalised sequences.
 
 Unlocalised sequences are contigs or scaffolds that are associated with a specific chromosome but 
-their order and orientation is unknown.
+for which order and orientation is unknown.
 
 The unlocalised list file is a tab separated text file (USASCII7) containing the following columns: 
 

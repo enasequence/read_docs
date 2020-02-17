@@ -78,7 +78,7 @@ distributions. Below you can see an example command, along with its output:
 .. code-block:: bash
 
     md5 eg_01.fq.gz
-    MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
+    MD5 (eg_01.fq.gz) = 74f085a6f3dd8b2877b89fcb592c7f5c
 
 Note that the MD5 value for this file is ``74f085a6f3dd8b2877b89fcb592c7f5c``.
 
@@ -96,7 +96,7 @@ Sometimes the correct command is ``md5sum`` instead of ``md5``:
 .. code-block:: bash
 
     md5sum eg_01.fq.gz
-    MD5 (eg_01.fq.bz2) = 74f085a6f3dd8b2877b89fcb592c7f5c
+    MD5 (eg_01.fq.gz) = 74f085a6f3dd8b2877b89fcb592c7f5c
 
 For Windows users, 3rd party tools can be found to carry out these checks.
 

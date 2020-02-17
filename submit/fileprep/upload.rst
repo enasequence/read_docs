@@ -287,7 +287,7 @@ All files are subjected to a format check done by Webin. This does not occur
 until after you formally submit the files. You will generally be notified of
 this by email, and may be required to correct and reupload the file.
 Advice on this can be found in our `Common Run Submission Errors FAQ
-<../faq/runs.html>`_
+<../../faq/runs.html>`_
 
 
 Fair Use Policy
