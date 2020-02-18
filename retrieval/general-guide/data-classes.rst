@@ -32,6 +32,9 @@ Sequence Data Classes
 |               +----------------+-------------------------------------------------------------+----------------+
 |               | PAT            | | A record representing a sequence associated with a patent | `A77200`_      |
 |               |                | | process                                                   |                |
+|               +----------------+-------------------------------------------------------------+----------------+
+|               | WGS            | | A record repesenting an annotated region (coding or non   | `AAAABD01`_    |
+|               |                | | coding) of a Whole Genome Shotgun contig level assembly   |                |
 +---------------+----------------+-------------------------------------------------------------+----------------+
 
 .. _`AL022645` : https://www.ebi.ac.uk/ena/browser/view/AL022645
@@ -44,3 +47,4 @@ Sequence Data Classes
 .. _`AC011759` : https://www.ebi.ac.uk/ena/browser/view/AC011759
 .. _`AJ005668` : https://www.ebi.ac.uk/ena/browser/view/AJ005668
 .. _`A77200` : https://www.ebi.ac.uk/ena/browser/view/A77200
+.. _`AAAABD01` : https://www.ebi.ac.uk/ena/browser/view/AAAABD010000136.1:1193..1283:tRNA
