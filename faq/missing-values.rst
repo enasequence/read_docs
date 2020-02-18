@@ -6,14 +6,14 @@ The International Nucleotide Database Collaboration (INSDC) have a standardised 
 language to be used where a value of an expected format for sample metadata reporting **can not** be provided.
 
 The controlled vocabulary takes into account different type of constraints. Submitters are **strongly** encouraged
-to always provide true values. However, if missing/null value reporting is required, and only when it is required,
+to always provide true values. However, if missing/null value reporting is required,
 submitters are asked to use a term with the finest granularity for their situation. See the table below for
 accepted missing value reporting terms.
 
 .. note::
-   If your sample metadata does not provide enough context for your data to be easily interpreted,
-   you could be requested to update your samples, so it is important to take some time to provide any metadata
-   you have and only use missing value terms when necessary.
+   If your sample metadata does not provide enough context for your data to be easily interpreted, you may 
+   be requested to update your samples, so it is important to ensure you provide any metadata available and 
+   only use missing value terms when necessary.
 
 INSDC Missing Value Reporting Terms
 ===================================
@@ -37,12 +37,12 @@ INSDC Missing Value Reporting Terms
 |                            |                              | | openly because of privacy concerns          |
 +----------------------------+------------------------------+-----------------------------------------------+
 
-Example Usage of INSDC Missing Value Reporting Terms
-====================================================
+Usage of INSDC Missing Value Reporting Terms
+============================================
 
 Please use the above standardised missing value vocabulary **only if a true value of an expected format for a**
 **mandatory field is missing**. If a true value is missing for a **recommended** or an **optional** field, then these fields
-should not be used for reporting at all (leave these blank). For any use cases we discourage the usage of the top level term 'missing'
+should not be used for reporting at all. For any use cases, we discourage the usage of the top level term 'missing'
 and encourage to use a lower level term with a higher granularity to declare the reason for the absence of a true
 value.
 
