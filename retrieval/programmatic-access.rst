@@ -9,11 +9,6 @@ records and associated files.
 Please see the relevant guides below for examples and tutorials on ENA programmatic
 data access and retrieval.
 
-.. note::
-   Our programmatic guides are not yet complete - these will be coming soon! If you have any questions about
-   topics mentioned in this guide which are not yet covered please contact us via our
-   `support form <https://www.ebi.ac.uk/ena/browser/support>`_.
-
 Perform Searches
 ================
 
