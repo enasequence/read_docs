@@ -11,8 +11,8 @@ submitters are asked to use a term with the finest granularity for their situati
 accepted missing value reporting terms.
 
 .. note::
-   If your sample metadata does not provide enough context for your data to be easily interpreted, you may 
-   be requested to update your samples, so it is important to ensure you provide any metadata available and 
+   If your sample metadata does not provide enough context for your data to be easily interpreted, you may
+   be requested to update your samples, so it is important to ensure you provide any metadata available and
    only use missing value terms when necessary.
 
 INSDC Missing Value Reporting Terms
