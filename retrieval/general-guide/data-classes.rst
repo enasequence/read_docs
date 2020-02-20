@@ -41,8 +41,8 @@ were derived from the high-level assembly or annotation of an assembly.
 |               | PAT            | | A record representing a sequence associated with a patent | `A77200`_      |
 |               |                | | process                                                   |                |
 |               +----------------+-------------------------------------------------------------+----------------+
-|               | WGS            | | A record representing an annotated region (coding or non  | Annotation for |
-|               |                | | coding) of a Whole Genome Shotgun contig level assembly   | `KXS48886`_    |
+|               | WGS            | | A record representing an annotated region (coding or non  | `KXS48886`_    |
+|               |                | | coding) of a Whole Genome Shotgun contig level assembly   |                |
 +---------------+----------------+-------------------------------------------------------------+----------------+
 
 .. _`AL022645` : https://www.ebi.ac.uk/ena/browser/view/AL022645
@@ -55,5 +55,4 @@ were derived from the high-level assembly or annotation of an assembly.
 .. _`AC011759` : https://www.ebi.ac.uk/ena/browser/view/AC011759
 .. _`AJ005668` : https://www.ebi.ac.uk/ena/browser/view/AJ005668
 .. _`A77200` : https://www.ebi.ac.uk/ena/browser/view/A77200
-.. https://www.ebi.ac.uk/ena/browser/view/AAAABD010000136.1:1193..1283:tRNA
 .. _`KXS48886` : https://www.ebi.ac.uk/ena/browser/view/KXS48886
