@@ -8,12 +8,12 @@ name and common name of the organism when the sample is viewed in the
 `ENA Browser <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606>`_.
 
 There are several ways that you can access information about taxonomy or related records using the REST APIs available
-through our taxonomy services.
+through the ENA taxonomy services.
 
 Finding General Information about Taxa
 ======================================
 
-If you know the scientific name of the organism you can find the taxonomy ID with this endpoint:
+If you know the scientific name of the organism you can find the tax ID with this endpoint:
 
 .. code-block:: bash
 
@@ -116,10 +116,10 @@ Finding Associated Records
 
 For a report of all records associated with a taxon, you can use the
 `Discovery Portal API <https://www.ebi.ac.uk/ena/portal/api/>`_. This API can provide a table of record counts as
-well as provide a list of record IDs and descriptions when provided a 'result type'.
+well as provide a list of record IDs and descriptions when provided a 'result' data type.
 
 For example, to provide a report of all records that link to the 'ant fungus garden metagenome' taxon, we could
-provide the Portal API with the taxon ID using the 'links/taxon' endpoint. This can be in tsv or json format:
+provide the Portal API with the tax ID using the 'links/taxon' endpoint. This can be in tsv or json format:
 
 .. code-block:: bash
 

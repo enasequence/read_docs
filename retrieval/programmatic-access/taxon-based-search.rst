@@ -5,7 +5,7 @@ How to Programmatically Perform a Search Across ENA Based on Taxonomy
 The Taxonomy of ENA Sample records and associated data are maintained in the NCBI taxonomy database.
 
 As a result, before searching through ENA using Taxonomy, you'll need to find the appropriate taxon for the search
-within the NCBI Tax Database.
+within the Tax Database.
 
 If you know the scientific name of the taxon for the search, you catch retrieve the tax ID using the taxonomy
 database API:

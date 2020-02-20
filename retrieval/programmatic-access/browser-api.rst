@@ -2,7 +2,7 @@
 How to Download Records using the ENA Browser API
 =================================================
 
-The `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/#/>`_ can be used to download ENA Records in EMBL flat file,
+The `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_ can be used to download ENA Records in EMBL flat file,
 fasta or XML format dependant on the record type.
 
 +-----------------------+-------------------------------------------------+
@@ -57,3 +57,14 @@ Fetch Records Using an Advanced Search
 This allows you to perform an advanced search and directly download the resulting records as XMLs. This is
 most useful when used alongside the `Portal API <https://www.ebi.ac.uk/ena/portal/api>`_. See our guide on how
 to perform programmatic advanced searches `here <advanced-search.html>`_.
+
+Fetch Records Linked to a Sample, Taxon or Study
+------------------------------------------------
+
+.. code-block:: bash
+
+   https://www.ebi.ac.uk/ena/browser/api/xml/links/<data-type>
+
+This allows you to directly download records associated with a specified Sample, Study or Taxon. You just need to specify
+which one of the three datatypes you want to download records from (sample, study or taxon) as well as the accession then
+specify which datatype you would like to download that is related to that record.

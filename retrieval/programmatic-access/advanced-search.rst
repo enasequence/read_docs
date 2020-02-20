@@ -4,7 +4,7 @@ How to Perform Advanced Searches Across ENA Programmatically
 
 The `ENA Advanced Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ is a powerful tool for exploring the
 datasets within the archive using tailored search queries. The ENA Advanced search in the browser provides a user
-interface to build search queries and can be a useful way to start exploring the full functionalities of the
+interface to build search queries and can be a useful way to start exploring the full functionality of the
 service. Once you are happy with a query, you can click the 'Copy Curl Request' button to allow you to run this
 locally on the command line.
 
@@ -62,7 +62,7 @@ From this list we can see that the **read_run** result provides a platform to se
 
 .. note:: Why are we not using the assembly result?
 
-   You may be wondering why we are not using the **assembly** result to search for the primary metagenomes? Within
+   You may be wondering why we are not using the **assembly** result to search for the primary metagenomes. Within
    ENA, the Genome Assembly database only accepts high-quality, individual-genome level assemblies such as isolate
    genomes, MAGs and SAGs. As primary metagenomes are sets of contigs with a mixture of genomic data from many
    individuals within an environmental sample, primary metagenome assemblies are archived as 'sequence assembly' type
@@ -87,7 +87,7 @@ What Fields Can I use in My Search?
 -----------------------------------
 
 The easiest way to explore the fields you can use for your search is the
-`ENA Advanced Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ quwey builder but you can also output
+`ENA Advanced Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ query builder but you can also output
 the full list in the Portal API by looking up the **searchFields** for each result:
 
 .. code-block:: bash
@@ -98,7 +98,7 @@ the full list in the Portal API by looking up the **searchFields** for each resu
 Here, we can see in both searches, the following fields can be used:
 
 - **host_body_site** - the site in the host organism where the sample was collected
-- **host_tax_id** - the taxon ID for the host - this is the best way to accurately narrow down the host species sampled.
+- **host_tax_id** - the taxon ID for the host - this is the best way to accurately narrow down the host species sampled
 - **country** - the country where the sample was collected
 
 The tax ID for `Bos Taurus <https://www.ebi.ac.uk/ena/browser/view/Taxon:9913>`_ is 9913. So, when we put these together
@@ -110,13 +110,13 @@ as a query we get:
 
 .. note:: Why are we not looking for samples using 'Bos Taurus' as the **scientific_name**?
 
-   A common misunderstanding of how INSDC use taxonomy to label samples is the belief that samples originating from
+   A common misunderstanding of INSDC taxonomy is the belief that samples originating from
    a *microbiome within a species* should be labelled with the host taxonomy.
    This is incorrect. The correct way to label these samples would be using *biome-level metagenome taxonomy*
    and including the host taxonomy and information in the metadata as described above.
    Read our `taxonomy tips <../../faq/taxonomy.html#environmental-taxonomic-classifications>`_ for more information
-   on environmental taxonomy. You can use metagenome taxonomy to perform more general searches. See
-   `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
+   on environmental taxonomy. You can use also metagenome taxonomy to perform more general searches on microbiome
+   data. See `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
 
 Search For Raw Reads
 ====================
