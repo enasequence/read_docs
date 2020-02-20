@@ -50,6 +50,7 @@ bottom of the page.
    faq/taxonomy
    faq/metagenomes
    faq/locus_tags
+   faq/missing-values
    faq/third_party_tools
 
 
