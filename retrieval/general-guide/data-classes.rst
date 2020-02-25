@@ -2,8 +2,8 @@
 Sequence Data Classes
 =====================
 
-The ENA archives and displays many different classes of nucleotide sequence. These sequences are separate to the
-standard raw read or assembly formats listed in the `General Guide <../>`_ and these records are meant to represent specific
+The ENA archives and displays different classes of nucleotide sequence. These sequences are separate to the
+standard raw read or assembly formats listed in the `General Guide <../>`_ and these records hold specific
 coding/non-coding regions or individual targeted, assembled and annotated sequences as opposed to capturing the whole
 genomic material of an organism.
 
