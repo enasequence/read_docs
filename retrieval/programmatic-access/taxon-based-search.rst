@@ -31,7 +31,7 @@ searches across the archive. This API returns a report of the results of your se
 the Swagger interface or API docs for full usage details.
 
 For the purpose of a simple taxon based search, the query that would be run would use the parameter
-**tax_eq(**<tax_id>**)**.
+**tax_eq(<tax_id>)**.
 
 The following search would provide all accessions and descriptions for raw reads which are from ant fungus garden
 samples (the default format is a tsv):
