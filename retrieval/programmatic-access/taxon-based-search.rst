@@ -7,7 +7,7 @@ The Taxonomy of ENA Sample records and associated data are maintained in the NCB
 As a result, before searching through ENA using Taxonomy, you'll need to find the appropriate taxon for the search
 within the Tax Database.
 
-If you know the scientific name of the taxon for the search, you catch retrieve the tax ID using the taxonomy
+If you know the scientific name of the taxon for the search, you can retrieve the tax ID using the taxonomy
 database API:
 
 .. code-block:: bash
@@ -31,7 +31,7 @@ searches across the archive. This API returns a report of the results of your se
 the Swagger interface or API docs for full usage details.
 
 For the purpose of a simple taxon based search, the query that would be run would use the parameter
-**tax_eq(**<tax_id>**)**.
+**tax_eq(<tax_id>)**.
 
 The following search would provide all accessions and descriptions for raw reads which are from ant fungus garden
 samples (the default format is a tsv):

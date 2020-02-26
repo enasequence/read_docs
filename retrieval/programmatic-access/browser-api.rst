@@ -20,7 +20,7 @@ API End-points
 ==============
 
 The Browser API has three endpoints for each file format available in the table above. Using the XML file format as
-an example, below is a summary of how to use these end-points to retreive data.
+an example, below is a summary of how to use these end-points to retrieve data.
 
 XML Records contain metadata provided by the submitter as well as injected cross-reference links to
 other related resources and FTP locations of associated files.
