@@ -81,7 +81,7 @@ of the submitted files
 FASTQ File Format
 _________________
 
-.. code-block::
+::
 
     @<run accession>.<spot index> [<spot name>][/<read index>]
     <bases>
@@ -114,7 +114,7 @@ ________
 
 Single layout:
 
-.. code-block::
+::
 
     @ERR000017.1 IL6_554:7:1:249:322
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -123,7 +123,7 @@ Single layout:
 
 Paired (first read):
 
-.. code-block::
+::
 
     @ERR005143.1 ID49_20708_20H04AAXX_R1:7:1:41:356/1
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -132,7 +132,7 @@ Paired (first read):
 
 Paired (second read):
 
-.. code-block::
+::
 
     @ERR005143.1 ID49_20708_20H04AAXX_R1:7:1:41:356/2
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -141,7 +141,7 @@ Paired (second read):
 
 Single layout without read names:
 
-.. code-block::
+::
 
     @ERR000017.1
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -150,7 +150,7 @@ Single layout without read names:
 
 Paired without read names (first read):
 
-.. code-block::
+::
 
     @ERR005143.1
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -159,7 +159,7 @@ Paired without read names (first read):
 
 Paired without read names (second read):
 
-.. code-block::
+::
 
     @ERR005143.1
     AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
