@@ -26,7 +26,7 @@ browser.
 +-----------------------+---------------------------------------------+---------------------------+
 | Runs/Experiments      | Hold raw read files and sequencing methods  | `ERR1701760/ERX1772048`_  |
 +-----------------------+---------------------------------------------+---------------------------+
-| Analyses              | | Hold results files of analyses performed  | `ERZ841272`_              |
+| Analyses              | | Hold results files of analyses performed  | `ERZ1195979`_              |
 |                       | | on sequencing data and analysis methods   |                           |
 +-----------------------+---------------------------------------------+---------------------------+
 | Contig set            | | Hold contig sets generated as part of a   |  `CABHOY010000000.1`_     |
@@ -50,7 +50,7 @@ browser.
 .. _`PRJEB1787/ERP001736`: https://www.ebi.ac.uk/ena/browser/view/PRJEB1787
 .. _`SAMEA2620084/ERS488919`: https://www.ebi.ac.uk/ena/browser/view/SAMEA2620084
 .. _`ERR1701760/ERX1772048`: https://www.ebi.ac.uk/ena/browser/view/ERR1701760
-.. _`ERZ841272`: https://www.ebi.ac.uk/ena/browser/view/ERZ841272
+.. _`ERZ1195979`: https://www.ebi.ac.uk/ena/browser/view/ERZ1195979
 .. _`CABHOY010000000.1`: https://www.ebi.ac.uk/ena/browser/view/CABHOY010000000.1
 .. _`GCA_000001405.28`: https://www.ebi.ac.uk/ena/browser/view/GCA_000001405.28
 .. _`CM000667.2`: https://www.ebi.ac.uk/ena/browser/view/CM000667.2
