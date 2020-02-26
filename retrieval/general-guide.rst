@@ -26,7 +26,7 @@ browser.
 +-----------------------+---------------------------------------------+---------------------------+
 | Runs/Experiments      | Hold raw read files and sequencing methods  | `ERR1701760/ERX1772048`_  |
 +-----------------------+---------------------------------------------+---------------------------+
-| Analyses              | | Hold results files of analyses performed  | `ERZ1195979`_              |
+| Analyses              | | Hold results files of analyses performed  | `ERZ1195979`_             |
 |                       | | on sequencing data and analysis methods   |                           |
 +-----------------------+---------------------------------------------+---------------------------+
 | Contig set            | | Hold contig sets generated as part of a   |  `CABHOY010000000.1`_     |
