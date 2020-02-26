@@ -59,7 +59,7 @@ Before performing a search, you will first need to determine what 'result' data 
 From this list we can see that the **read_run** result provides a platform to search for 'Raw reads' and the
 **analysis** result provides a platform to search for 'Nucleotide sequence analyses from reads'.
 
-.. note:: Why are we not using the assembly result?
+.. admonition:: Why are we not using the assembly result?
 
    You may be wondering why we are not using the **assembly** result to search for the primary metagenomes. Within
    ENA, the Genome Assembly database only accepts high-quality, individual-genome level assemblies such as isolate
@@ -107,7 +107,7 @@ as a query we get:
 
    query=country="United Kingdom" AND host_tax_id=9913 AND host_body_site="rumen"
 
-.. note:: Why are we not looking for samples using 'Bos Taurus' as the **scientific_name**?
+.. admonition:: Why are we we using host_tax_id instead of scientific_name?
 
    A common misunderstanding of INSDC taxonomy is the belief that samples originating from
    a *microbiome within a species* should be labelled with the host taxonomy.
