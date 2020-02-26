@@ -82,7 +82,7 @@ Publications are available in a table display with links to the article's DOI or
 
 There are links to 'Publications in which the generation of this record is described' which can
 be useful when looking into the methods used for this piece of research. There are also links to 'Publications citing
-this record' which can give incite into the influence these data have had on further research.
+this record' which can give insight into the influence these data have had on further research.
 
 Once you have finished exploring the associated literature, navigate back to **PRJEB1787** so we can explore the data
 that was generated as part of this particular Tara Oceans component project further.
