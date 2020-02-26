@@ -2,7 +2,7 @@
 Sequence Data Classes
 =====================
 
-The ENA holds and displays different data classes of nucleotide sequence which fall under the three tiers of ENA:
+The ENA holds different data classes of nucleotide sequence which fall under the three tiers of ENA:
 reads, assembly and annotation. These sequences are separate to the standard raw read *Runs/Experiments* or *Assembly*
 records listed in the `General Guide <../>`_. Sequence records often represent specific areas of genetic interest as
 opposed to capturing the whole genomic material of an organism.
