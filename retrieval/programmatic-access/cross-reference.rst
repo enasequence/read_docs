@@ -23,7 +23,7 @@ To get a good overview of what is included in the cross-reference service. You c
 cross-reference 'Sources' registered with ENA. These sources are the external data resources which are linked to
 ENA records. You can use the following endpoints to do this:
 
-.. code-block::
+.. code-block:: bash
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/source
    https://www.ebi.ac.uk/ena/xref/rest/json/source
@@ -31,7 +31,7 @@ ENA records. You can use the following endpoints to do this:
 
 **First 10 resulting cross-reference Sources as a TSV:**
 
-.. code-block::
+.. code-block:: bash
 
    Source	Description
    ArrayExpress	ArrayExpress experiment
@@ -50,7 +50,7 @@ ENA records. You can use the following endpoints to do this:
 
 **First 2 resulting cross-reference Sources in JSON:**
 
-.. code-block::
+.. code-block:: bash
 
    [ {
      "Description" : "ArrayExpress experiment",
@@ -81,7 +81,7 @@ Once you have determined what Source you would like to search for, you can perfo
 example, to fetch records that have a cross-reference registered with MGnify (EMBL-EBI's metagenomic data analysis
 service), you could look up the following:
 
-.. code-block::
+.. code-block:: bash
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/search?source=MGnify&limit=100
 
@@ -101,14 +101,14 @@ search specifically for sample records which are linked to the MGnify service.
 Firstly, you may want to determine what Targets are available and how they are named. To list the full list of
 Target options and Target names, you can use the following endpoint:
 
-.. code-block::
+.. code-block:: bash
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/target
 
 
 **Result:**
 
-.. code-block::
+.. code-block:: bash
 
    Target	Description
    analysis	Nucleotide sequence analyses
@@ -127,7 +127,7 @@ Target options and Target names, you can use the following endpoint:
 
 Here we can see that Samples are determined by the target 'sample'. Now, you can narrow down your previous search:
 
-.. code-block::
+.. code-block:: bash
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/search?source=MGnify&target=sample&limit=100
 
@@ -138,14 +138,14 @@ Look up Cross References for a Record
 As opposed to looking for cross-references by the registered service, you may want to look up all cross-references
 for a particular ENA Record. To do this, you can also perform a cross-reference search using an INSDC accession:
 
-.. code-block::
+.. code-block:: bash
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/search?accession=AY772730
 
 
 **Result:**
 
-.. code-block::
+.. code-block:: bash
 
    Source	Source primary accession	Source secondary accession	Source url	Target	Target primary accession	Target secondary accession	Target url
    COMPARE-RefGenome	NLV/GII/Neustrelitz260/2000/DE			sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
@@ -176,14 +176,14 @@ with the source COMPARE-RefGenome.
 
 To view this, add "expanded=true":
 
-.. code-block::
+.. code-block:: bash
 
    https://www.ebi.ac.uk/ena/xref/rest/tsv/search?source=COMPARE-RefGenome&accession=AY772730&expanded=true
 
 
 **Result:**
 
-.. code-block::
+.. code-block:: bash
 
    Source	Source primary accession	Source secondary accession	Source url	Target	Target primary accession	Target secondary accession	Target url	Family	Genus	species	1st below- species level	2nd below- species level	3rd below-species level	Aggregated taxonomic name	genome
    COMPARE-RefGenome	NLV/GII/Neustrelitz260/2000/DE			sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730	Caliciviridae	norovirus	GII	P15, 16			NoV/GII.P16/GII.16	complete
