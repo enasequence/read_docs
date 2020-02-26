@@ -28,8 +28,6 @@ Locate all read data submitted for Neanderthals
    We are searching for read data, so select 'Raw Reads':
 
 .. image:: images/advanced-search-1.png
-    :align: center
-    :scale: 50 %
 
 3. Click 'Next'
 
@@ -37,8 +35,6 @@ Locate all read data submitted for Neanderthals
    which are provided.
 
 .. image:: images/advanced-search-2.png
-    :align: center
-    :scale: 50 %
 
 5. Use the blue buttons on the left to select different filter categories, or
    use the 'Type to filter query params' box to search for a specific parameter
@@ -67,8 +63,6 @@ Search for sheep samples registered as female
    Select the option simply named 'Samples'
 
 .. image:: images/advanced-search-3.png
-    :align: center
-    :scale: 50 %
 
 3. Click 'Next'
 
@@ -88,8 +82,6 @@ Search for sheep samples registered as female
 9. Notice this is added to the 'Query' box
 
 .. image:: images/advanced-search-4.png
-    :align: center
-    :scale: 50 %
 
 10. Now click 'Search' to see sample objects for female sheep
 
