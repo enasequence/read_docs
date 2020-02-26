@@ -44,8 +44,8 @@ browser.
 | | Sequences (*)       | | non-coding regions to full assembled    |                           |
 |                       | | chromosomes                             |                           |
 +-----------------------+-------------------------------------------+---------------------------+
-| Taxon                 | | The sequenced organism or metagenome of | `Taxon:9606`_             |
-|                       | | a sample                                |                           |
+| Taxon                 | | The sequenced organism or metagenome    | `Taxon:9606`_             |
+|                       | | of a sample                             |                           |
 +-----------------------+-------------------------------------------+---------------------------+
 | Sample Checklist      | | The checklist of metadata that the      | `ERC000013`_              |
 |                       | | sample was registered with              |                           |
