@@ -54,7 +54,7 @@ bottom of the page.
    faq/metagenomes
    faq/missing-values
    faq/locus_tags
-   faq/missing-values
+   faq/archive-generated-files
    faq/third_party_tools
 
 
