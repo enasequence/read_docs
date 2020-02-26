@@ -1,10 +1,6 @@
-=====================================
-How to Cache CRAM Reference Sequences
-=====================================
-
-The CRAM reference registry provides access to reference sequences used in CRAM files.
-Retrieval of reference sequences from the CRAM reference registry is provided by MD5 or
-SHA1 checksum through the endpoints documented in the `CRAM reference registry API <https://www.ebi.ac.uk/ena/cram/>`_.
+=================================================
+How to Cache CRAM Reference Sequences using Squid
+=================================================
 
 To reduce network traffic originating from the use of the CRAM Reference Registry we recommend using locally
 cached reference sequences. In addition to local caches supported by Samtools it is possible to cache sequences

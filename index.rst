@@ -30,7 +30,10 @@ bottom of the page.
    :maxdepth: 1
 
    retrieval/general-guide
-   retrieval/cram-reference-cache
+   retrieval/ena-project
+   retrieval/file-download
+   retrieval/advanced-search
+   retrieval/programmatic-access
 
 .. toctree::
    :caption: ENA Data Updates
@@ -49,6 +52,7 @@ bottom of the page.
    faq/samples
    faq/taxonomy
    faq/metagenomes
+   faq/missing-values
    faq/locus_tags
    faq/missing-values
    faq/third_party_tools

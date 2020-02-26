@@ -33,7 +33,7 @@ Accessions
 As all assemblies in ENA are submitted as 'analyses', for each assembly submission, Webin will report 
 a unique accession number that starts with ERZ. For most assemblies, this accession number is for 
 internal processing only and will not be visible in the browser. As a result, for most 
-assemblies you will recieve additional post-processing accession numbers starting with GCA\_. 
+assemblies you will receive additional post-processing accession numbers starting with GCA\_.
 
 Please see individual submission guidelines for information on what accessions you will receive for 
 each assembly type.

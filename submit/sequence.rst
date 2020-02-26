@@ -5,56 +5,82 @@ How to Submit Targeted Sequences
 Introduction
 ============
 
-To submit targeted assembled and annotated sequences to ENA you must also 
-provide context on the research project where this was assembled.
+The information on this page pertains to the submission of targeted sequences,
+typically short assembled and annotated sequences representing interesting
+features or gene regions. This is unrelated to the submission of full
+chromosome or genome assemblies, which is described in our `Assembly Submission
+Pages <assembly.html>`_.
 
 .. image:: images/metadata_model_sequences.png
    :align: center
-   
-Within ENA, all annotated sequences are submitted as 'analysis' submission 
-objects but are processed as 'sequences'.
 
-A sequence submission must be part of an ENA study submission so a study must 
-be registered before any sequences are submitted.
+All submissions of this type are subitted as 'analysis' objects, but the
+accessions of these analyses are not exposed. Instead, specific sequence
+accessions are assigned later, and these are what should be used to reference
+the sequences.
 
-Please register a study if you have not done so already:
-   
-- `Register a study <study.html>`_
+Sequence submission requires that a study be registered first. Please do this
+before attempting any of the guides shown below:
+
+- `Register a Study <study.html>`_
 
 .. note::
-   This submission route is for a set of stand-alone targeted assembled and annotated sequences only. If you intend to 
-   submit an annotated **assembly** such as a genome, please follow the `assembly submission guidelines <assembly.html>`_ 
-   and submit your assembly in EMBL flat file format.
+   This submission route is for sets of stand-alone targeted assembled and
+   annotated sequences only. If you intend to submit an annotated **assembly**
+   such as a genome, please follow the `assembly submission guidelines
+   <assembly.html>`_ and submit your assembly in EMBL flat file format.
    
 Accessions
 ==========
 
-As all sequences in ENA are submitted as 'analyses', for each sequence submission, Webin will report 
-a unique accession number that starts with ERZ. This accession number is for internal processing only 
-and will not be visible in the browser. As a result, you will recieve additional post-processing accession 
-numbers for your sequences via email. 
+As all sequences in ENA are submitted as 'analyses', for each sequence set
+submission, Webin will report a unique accession number that starts with ERZ.
+This accession number is for internal processing only and will not be visible
+in the browser. Furthermore, if your submission includes multiple sequences,
+the ERZ accession will not be unique to any one of them. Instead, you will
+receive additional post-processing accession numbers for your sequences via
+email, each of which will be unique to one of your sequences.
 
-Always make a note of any accessions you receive as these are the unique identifiers for each of 
-your submissions to ENA.
+Always make a note of any accessions you receive as these are the unique
+identifiers for each of your submissions to ENA.
 
 Submission Options
 ==================
 
-Before you submit an assembled and annotated sequence, you should review the sequence 
-checklists available to see if any are suitable for your submission. This checklist will 
-simplify and standardise your submission so you can submit with a template spreadsheet. 
-The full list of sequence checklists are available `here <https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_.
+Many types of sequence can be submitted using a checklist. These define a set
+of metadata whicih should be provided for a given type of sequence and
+streamline the submission process for these sequence types. Checklist
+submission allows you to avoid having to create the flatfile record manually.
 
-If there are no suitable checklists available for your submission, then you will need to 
-submit your sequences in EMBL flat file format.
+Therefore, please check the list of available checklists to determine whether
+one of them meets the needs of your submission:
 
-Template sequence spreadsheets can be submitted either using Webin Interactive or 
-Webin-CLI. You can directly deposit a flat file using Webin-CLI. For an overview of 
-the ENA submission interfaces, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
+- `List of Annotation Checklists <annotation-checklists.html>`_
+
+
+If There Is A Suitable Checklist Available
+------------------------------------------
+
+You can use the Webin Interactive service to submit your checklist sequences
+through web forms. You also have the option of preparing a spreadsheet and
+submitting it through our Webin-CLI tool.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   sequence/interactive
-   sequence/webin-cli-flatfile
-   sequence/webin-cli-spreadsheet
+    sequence/interactive
+    sequence/webin-cli-spreadsheet
+
+
+If No Suitable Checklist Exists
+-------------------------------
+
+You will need to prepare your sequence in the EMBL Flat File Format and
+submit it using Webin-CLI as described in the below link. Webin-CLI will
+validate the file for you before accepting its submission, and will advise you
+of any formatting errors.
+
+.. toctree::
+    :maxdepth: 1
+
+    sequence/webin-cli-flatfile
