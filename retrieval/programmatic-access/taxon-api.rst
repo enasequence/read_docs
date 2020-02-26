@@ -65,6 +65,8 @@ Simply append the common name to the URL:
      }
    ]
 
+Please note that not all taxa have a common name.
+
 If you do not know the scientific name or the common name but you have an idea, you can use the *suggest* endpoint:
 
 .. code-block:: bash

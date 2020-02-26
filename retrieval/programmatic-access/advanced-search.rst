@@ -8,12 +8,11 @@ interface to build search queries and can be a useful way to start exploring the
 service. Once you are happy with a query, you can click the 'Copy Curl Request' button to allow you to run this
 locally on the command line.
 
-This guide will help you explore the search functionalities of the
-`ENA Portal API <https://www.ebi.ac.uk/ena/portal/api>`_ and `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api>`_.
-
-When first exploring the APIs, it can be worth testing out the query builder in the
-`ENA Advanced Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ interface as well as playing around with the
-APIs' swagger interfaces. Using a combination of all three of these can help build more complex searches.
+This guide will help you explore the search functionalities of the ENA retrieval APIs. When first exploring the APIs,
+it can be worth testing out the query builder in the `ENA Advanced Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_
+interface as well as playing around with the APIs' swagger interfaces
+(`ENA Portal API <https://www.ebi.ac.uk/ena/portal/api>`_ and `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api>`_.).
+Using a combination of all three of these can help build more complex searches.
 
 In this example we are going to perform a complex search and retrieve raw read and primary metagenome datasets specifically
 for *cow rumen samples collected in the UK*.

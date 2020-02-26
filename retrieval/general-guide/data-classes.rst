@@ -29,8 +29,6 @@ Sequence records and are all available in EMBL or FASTA format.
 +----------------+-------------------------------------------------------------+----------------+
 | TSA            | | A Transcriptome Shotgun Assembly record                   | `EZ000160`_    |
 +----------------+-------------------------------------------------------------+----------------+
-| TPA            | | A Third PArty sequence data record                        |  `BN000166`_   |
-+----------------+-------------------------------------------------------------+----------------+
 | HTC            | | A record representing high throughput assembled           | `AL122108`_    |
 |                | | transcriptomic sequence and optional annotation           |                |
 +----------------+-------------------------------------------------------------+----------------+

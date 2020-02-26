@@ -32,7 +32,7 @@ Now, let's try an example and download the data files that are in the sequencing
 We can see from the help output that raw reads are available in 'submitted', 'fastq' and 'sra' formats:
 
 - submitted - the file format provided by the submitter when they provided their data to the archive
-- fastq - the standardised ENA fastq format (where the sequence names in the file are standardised)
+- fastq - `the standardised ENA fastq format <../../faq/archive-generated-files.html>`_ (where the sequence names in the file are standardised)
 - sra - a file format that works with the NCBI tool `SRAToolkit <https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?cmd=show&f=software&m=software&s=software>`_.
 
 Simply choose the desired file format, specify the accession and provide a destination directory and the raw read file
