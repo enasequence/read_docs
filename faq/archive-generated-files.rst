@@ -48,35 +48,42 @@ Generated FASTQ Files
 The number of files generated and their content varies depending on the nature
 of the submitted files
 
-+-------------+------------------------------------+----------------------------------------------------------+
-| Number of   | FASTQ Files                        | Description                                              |
-| Application |                                    |                                                          |
-| Reads       |                                    |                                                          |
-+-------------+------------------------------------+----------------------------------------------------------+
-|             | <run_accession>.fastq.gz           | For experiments with single application reads            |
-| 1           | or                                 | all reads will be made available in one fastq            |
-|             | <run_accession>_1.fastq.gz         | file.                                                    |
-+-------------+------------------------------------+----------------------------------------------------------+
-|             |                                    | Paired experiments with two application reads will       |
-|             |                                    | be made available in 1-3 FASTQ files.                    |
-|             |                                    | For a paired experiment submitted with both application  |
-|             |                                    | reads the first reads will be in                         |
-|             | <run_accession>_1.fastq.gz         | <run accession>_1.fastq.gz file, the second reads will   |
-| 2           | <run_accession>.fastq.gz           | be in <run accession>_2.fastq.gz, and any unpaired       |
-|             | <run_accession>_2.fastq.gz         | reads will be in <run accession>.fastq.gz file.          |
-|             |                                    | If files from a paired experiment are submitted and all  |
-|             |                                    | reads are unpaired then only a single file is created:   |
-|             |                                    | <run accession>.fastq.gz                                 |
-+-------------+------------------------------------+----------------------------------------------------------+
-|             |                                    | For experiments with more than two application reads     |
-| > 2         | <run_accession>_N.fastq.gz         | (e.g. Complete Genomics) one fastq file is created for   |
-|             |                                    | each application read, however, no empty fastq files     |
-|             |                                    | are created.                                             |
-+-------------+------------------------------------+----------------------------------------------------------+
-| N/A         | <run_accession>_consensus.fastq.gz | ONT or PacBio consensus reads.                           |
-+-------------+------------------------------------+----------------------------------------------------------+
-| N/A         | <run_accession>_subreads.fastq.gz  | PacBio subreads.                                         |
-+-------------+------------------------------------+----------------------------------------------------------+
+
++---------------+--------------------------------------+-----------------------------------------+
+| | Number of   | FASTQ Files                          | Description                             |
+| | Application |                                      |                                         |
+| | Reads       |                                      |                                         |
++---------------+--------------------------------------+-----------------------------------------+
+|               | | <run_accession>.fastq.gz           | | For experiments with single           |
+| 1             | | or                                 | | application reads all reads will be   |
+|               | | <run_accession>_1.fastq.gz         | | made available in one fastq file.     |
++---------------+--------------------------------------+-----------------------------------------+
+|               |                                      | | Paired experiments with two           |
+|               |                                      | | application reads will be made        |
+|               |                                      | | available in 1-3 FASTQ files. For a   |
+|               |                                      | | paired experiment submitted with both |
+|               | | <run_accession>_1.fastq.gz         | | application reads the first reads     |
+| 2             | | <run_accession>.fastq.gz           | | will be in <run accession>_1.fastq.gz |
+|               | | <run_accession>_2.fastq.gz         | | file, the second reads will be in     |
+|               |                                      | | <run accession>_2.fastq.gz, and any   |
+|               |                                      | | unpaired reads will be in <run        |
+|               |                                      | | accession>.fastq.gz file. If files    |
+|               |                                      | | from a paired experiment are          |
+|               |                                      | | submitted and all reads are unpaired  |
+|               |                                      | | then only a single file is created:   |
+|               |                                      | | <run accession>.fastq.gz              |
++---------------+--------------------------------------+-----------------------------------------+
+|               |                                      | | For experiments with more than two    |
+| > 2           | | <run_accession>_N.fastq.gz         | | application reads (e.g. Complete      |
+|               |                                      | | Genomics) one fastq file is created   |
+|               |                                      | | for each application read, however,   |
+|               |                                      | | no empty fastq files are created.     |
++---------------+--------------------------------------+-----------------------------------------+
+| N/A           | | <run_accession>_consensus.fastq.gz | ONT or PacBio consensus reads.          |
++---------------+--------------------------------------+-----------------------------------------+
+| N/A           | | <run_accession>_subreads.fastq.gz  | PacBio subreads.                        |
++---------------+--------------------------------------+-----------------------------------------+
+
 
 FASTQ File Format
 _________________
@@ -89,25 +96,25 @@ _________________
     <phred qualities, ASCII encoded starting with '!' (33)>
 
 
-+-----------------+--------------------------------------------------------------------------+
-| Field           | Description                                                              |
-+-----------------+--------------------------------------------------------------------------+
-| <run accession> | The run accession. A spot is identified uniquely by the combination      |
-|                 | of the run accession and the spot index                                  |
-+-----------------+--------------------------------------------------------------------------+
-|                 | A positive integer assigned to the spots in the order in which they      |
-| <spot index>    | appear in the run. A spot is identified uniquely by the combination of   |
-|                 | the Run accession and the spot index.                                    |
-+-----------------+--------------------------------------------------------------------------+
-| <spot name>     | The spot name as it was provided by the submitter. In cases where the    |
-|                 | read name is missing or was removed by the archive this field is not     |
-|                 | present.                                                                 |
-+-----------------+--------------------------------------------------------------------------+
-| <read index>    | A positive integer assigned to the application reads in the order in     |
-|                 | which they appear in the spot: /1 for first application read and /2 for  |
-|                 | the second application read. In cases where the read name is missing or  |
-|                 | was removed by the archive this field is not present.                    |
-+-----------------+--------------------------------------------------------------------------+
++-----------------+----------------------------------------------------------------------------+
+| Field           | Description                                                                |
++-----------------+----------------------------------------------------------------------------+
+| <run accession> | | The run accession. A spot is identified uniquely by the combination      |
+|                 | | of the run accession and the spot index                                  |
++-----------------+----------------------------------------------------------------------------+
+|                 | | A positive integer assigned to the spots in the order in which they      |
+| <spot index>    | | appear in the run. A spot is identified uniquely by the combination of   |
+|                 | | the Run accession and the spot index.                                    |
++-----------------+----------------------------------------------------------------------------+
+| <spot name>     | | The spot name as it was provided by the submitter. In cases where the    |
+|                 | | read name is missing or was removed by the archive this field is not     |
+|                 | | present.                                                                 |
++-----------------+----------------------------------------------------------------------------+
+| <read index>    | | A positive integer assigned to the application reads in the order in     |
+|                 | | which they appear in the spot: /1 for first application read and /2 for  |
+|                 | | the second application read. In cases where the read name is missing or  |
+|                 | | was removed by the archive this field is not present.                    |
++-----------------+----------------------------------------------------------------------------+
 
 Examples
 ________
