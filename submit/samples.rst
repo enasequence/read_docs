@@ -25,7 +25,7 @@ minimum standards for different sample types.
 
 These "Checklists" were developed in collaboration with different research communities to ensure
 that there is enough information provided for each type of sample that is deposited in ENA to comply
-with the `FAIR <https://doi.org/10.1038/sdata.2016.18>`_ data principles (making sure your associated data is Findable, 
+with the `FAIR <https://doi.org/10.1038/sdata.2016.18>`_ data principles (making sure your associated data is Findable,
 Accessible, Interoperable and Reusable). Explore all our sample checklists `here <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
 As a result, when registering a sample, it is important to choose the most relevant sample
@@ -39,6 +39,9 @@ checklist available to you and provide at least the minimum metadata.
 If you can not find a suitable checklist for your sample data type - please first contact
 our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for advice. Please only use the **ENA default sample** checklist if you have
 been advised that there are no other suitable options.
+
+If you can not provide a value for a mandatory field within a checklist, please use one of the `INDSC accepted terms <samples/missing-values.html>`_
+for missing value reporting.
 
 Taxonomy
 --------
