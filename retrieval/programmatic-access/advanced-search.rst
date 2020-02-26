@@ -109,13 +109,12 @@ as a query we get:
 
 .. admonition:: Why are we we using host_tax_id instead of scientific_name?
 
-   A common misunderstanding of INSDC taxonomy is the belief that samples originating from
-   a *microbiome within a species* should be labelled with the host taxonomy.
-   This is incorrect. The correct way to label these samples would be using *biome-level metagenome taxonomy*
-   and including the host taxonomy and information in the metadata as described above.
-   Read our `taxonomy tips <../../faq/taxonomy.html#environmental-taxonomic-classifications>`_ for more information
-   on environmental taxonomy. You can use also metagenome taxonomy to perform more general searches on microbiome
-   data. See `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
+   Here, we are searching for samples of the *microbiome within a host* not samples of the *host genome itself*.
+   Microbiome samples use `biome-level metagenome taxonomy <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ 
+   and should add the host taxonomy in the metadata like in this example.
+   
+   You can also perform searches using this biome-level taxonomy to find microbiome data. See `here <taxon-based-search.html>`_ 
+   for our guide on performing taxonomy-based searches.
 
 Search For Raw Reads
 ====================
