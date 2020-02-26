@@ -59,7 +59,7 @@ Before performing a search, you will first need to determine what 'result' data 
 From this list we can see that the **read_run** result provides a platform to search for 'Raw reads' and the
 **analysis** result provides a platform to search for 'Nucleotide sequence analyses from reads'.
 
-.. note:: Why are we not using the assembly result?
+.. admonition:: Why are we not using the assembly result?
 
    You may be wondering why we are not using the **assembly** result to search for the primary metagenomes. Within
    ENA, the Genome Assembly database only accepts high-quality, individual-genome level assemblies such as isolate
@@ -107,15 +107,12 @@ as a query we get:
 
    query=country="United Kingdom" AND host_tax_id=9913 AND host_body_site="rumen"
 
-.. note:: Why are we not looking for samples using 'Bos Taurus' as the **scientific_name**?
+.. admonition:: Why are we we using host_tax_id instead of scientific_name?
 
-   A common misunderstanding of INSDC taxonomy is the belief that samples originating from
-   a *microbiome within a species* should be labelled with the host taxonomy.
-   This is incorrect. The correct way to label these samples would be using *biome-level metagenome taxonomy*
-   and including the host taxonomy and information in the metadata as described above.
-   Read our `taxonomy tips <../../faq/taxonomy.html#environmental-taxonomic-classifications>`_ for more information
-   on environmental taxonomy. You can use also metagenome taxonomy to perform more general searches on microbiome
-   data. See `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
+   Here, we are searching for samples of the *microbiome within a host* not samples of the *host genome itself*.
+   Microbiome samples use `biome-level metagenome taxonomy <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ 
+   and should include the host taxonomy in the metadata like in this example. You can also perform searches using this biome-level
+   taxonomy to find microbiome data. See `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
 
 Search For Raw Reads
 ====================
