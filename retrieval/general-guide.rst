@@ -14,38 +14,42 @@ The table below summarises all the types of records that ENA archives and displa
 an ENA project <ena-project.html>`_ for an example of how to navigate through an ENA Project in the
 browser.
 
-+-----------------------+---------------------------------------------+---------------------------+
-| **Record Type**       | **Description**                             | **Example accessions**    |
-+-----------------------+---------------------------------------------+---------------------------+
-| Projects/Studies      | | Contains information on a biological      | `PRJEB1787/ERP001736`_    |
-|                       | | research project. This holds all the data |                           |
-|                       | | generated as part of this research.       |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| Samples               | | Represents biological samples collected   | `SAMEA2620084/ERS488919`_ |
-|                       | | and sequenced in real life                |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| Runs/Experiments      | Hold raw read files and sequencing methods  | `ERR1701760/ERX1772048`_  |
-+-----------------------+---------------------------------------------+---------------------------+
-| Analyses              | | Hold results files of analyses performed  | `ERZ1195979`_             |
-|                       | | on sequencing data and analysis methods   |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| Contig set            | | Hold contig sets generated as part of a   |  `CABHOY010000000.1`_     |
-|                       | | genome or transcriptome assembly.         |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| Assemblies            | | Represents an entire genome assembly and  | `GCA_000001405.28`_       |
-|                       | | holds any contig sets or sequence records |                           |
-|                       | | generated as part of the assembly         |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| | Assembled/Annotated | | Any sequence records from coding or       | `CM000667.2`_             |
-| | Sequences (*)       | | non-coding regions to full assembled      |                           |
-|                       | | chromosomes                               |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| Taxon                 | | The sequenced organism or metagenome of a | `Taxon:9606`_             |
-|                       | | sample                                    |                           |
-+-----------------------+---------------------------------------------+---------------------------+
-| Sample Checklist      | | The checklist of metadata that the sample | `ERC000013`_              |
-|                       | | was registered with                       |                           |
-+-----------------------+---------------------------------------------+---------------------------+
++-----------------------+-------------------------------------------+---------------------------+
+| **Record Type**       | **Description**                           | **Example accessions**    |
++-----------------------+-------------------------------------------+---------------------------+
+| Projects/Studies      | | Contains information on a biological    | `PRJEB1787/ERP001736`_    |
+|                       | | research project. This holds all the    |                           |
+|                       | | data generated as part of this          |                           |
+|                       | | research                                |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Samples               | | Represents biological samples           | `SAMEA2620084/ERS488919`_ |
+|                       | | collected and sequenced in real life    |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Runs/Experiments      | | Hold raw read files and sequencing      | `ERR1701760/ERX1772048`_  |
+|                       | | methods                                 |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Analyses              | | Hold results files of analyses          | `ERZ1195979`_             |
+|                       | | performed on sequencing data and        |                           |
+|                       | | analysis methods                        |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Contig set            | | Hold contig sets generated as part of   |  `CABHOY010000000.1`_     |
+|                       | | a genome or transcriptome assembly.     |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Assemblies            | | Represents an entire genome assembly    | `GCA_000001405.28`_       |
+|                       | | and holds any contig sets or sequence   |                           |
+|                       | | records generated as part of the        |                           |
+|                       | | assembly                                |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| | Assembled/Annotated | | Any sequence records from coding or     | `CM000667.2`_             |
+| | Sequences (*)       | | non-coding regions to full assembled    |                           |
+|                       | | chromosomes                             |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Taxon                 | | The sequenced organism or metagenome of | `Taxon:9606`_             |
+|                       | | a sample                                |                           |
++-----------------------+-------------------------------------------+---------------------------+
+| Sample Checklist      | | The checklist of metadata that the      | `ERC000013`_              |
+|                       | | sample was registered with              |                           |
++-----------------------+-------------------------------------------+---------------------------+
 
 .. _`PRJEB1787/ERP001736`: https://www.ebi.ac.uk/ena/browser/view/PRJEB1787
 .. _`SAMEA2620084/ERS488919`: https://www.ebi.ac.uk/ena/browser/view/SAMEA2620084
@@ -73,7 +77,7 @@ The ENA browser allows for searching across the archive in a number of ways:
 
 The `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ in the browser provides a
 simple interface for building more complex search queries that can be saved and run again with
-`Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guides on 
+`Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guides on
 `how to use the advanced search <advanced-search.html>`_ for examples on how to build queries and how to use Rulespace.
 
 The ENA Browser also provides different means to download data from the archive whether its XML ENA records,
