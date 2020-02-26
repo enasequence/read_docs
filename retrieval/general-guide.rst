@@ -64,14 +64,17 @@ Search and Retrieval
 ====================
 
 The ENA browser allows for searching across the archive in a number of ways:
-`Free text search <https://www.ebi.ac.uk/ena/browser/text-search>`_,
-`sequence similarity search <https://www.ebi.ac.uk/ena/browser/sequence-search>`_ as well as searching
-through `cross-references <https://www.ebi.ac.uk/ena/browser/xref>`_ to other resources.
+
+- `Free text search <https://www.ebi.ac.uk/ena/browser/text-search>`_
+
+- `sequence similarity search <https://www.ebi.ac.uk/ena/browser/sequence-search>`_
+
+- `cross-reference search <https://www.ebi.ac.uk/ena/browser/xref>`_
 
 The `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ in the browser provides a
 simple interface for building more complex search queries that can be saved and run again with
-`Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guides on how to use the `advanced
-search <advanced-search.html>`_ for examples on how to build queries and how to use Rulespace.
+`Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guides on 
+`how to use the advanced search <advanced-search.html>`_ for examples on how to build queries and how to use Rulespace.
 
 The ENA Browser also provides different means to download data from the archive whether its XML ENA records,
 a tabulated summary of metadata resulting from a search or sequencing data files submitted as part of a research
