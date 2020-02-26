@@ -111,10 +111,8 @@ as a query we get:
 
    Here, we are searching for samples of the *microbiome within a host* not samples of the *host genome itself*.
    Microbiome samples use `biome-level metagenome taxonomy <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ 
-   and should add the host taxonomy in the metadata like in this example.
-   
-   You can also perform searches using this biome-level taxonomy to find microbiome data. See `here <taxon-based-search.html>`_ 
-   for our guide on performing taxonomy-based searches.
+   and should include the host taxonomy in the metadata like in this example. You can also perform searches using this biome-level
+   taxonomy to find microbiome data. See `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
 
 Search For Raw Reads
 ====================
