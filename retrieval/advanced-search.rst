@@ -15,8 +15,8 @@ Example Uses
 Below are two example cases you can follow to better understand the advanced
 search interface
 
-Neanderthal Read Data
----------------------
+Find Neanderthal Read Data
+--------------------------
 
 Locate all read data submitted for Neanderthals
 
