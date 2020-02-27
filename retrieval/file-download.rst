@@ -2,4 +2,295 @@
 How to Download Data Files
 ==========================
 
-*Coming soon!*
+Providing users with the ability to download submitted data for further
+analysis purposes is a key part of ENA's mission.
+Files are therefore made available through a public FTP server.
+Here you can learn how this server is structure, and how to download read and
+analysis files.
+
+
+FTP Structure
+=============
+
+The root address of the FTP server containing all read and analysis data is:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/
+
+Meanwhile, assembled and annotated sequence data can be found at:
+
+::
+
+    ftp://ftp.ebi.ac.uk/pub/databases/ena/
+
+This latter directory is outside the scope of this article.
+
+.. note::
+
+    Most directories contain a '.md5' file. You can calculate the MD5 value for
+    a file you have downloaded and compare it with the relevant .md5 file to
+    confirm it has been transferred in full.
+
+Reads FTP Structure
+-------------------
+
+For most reads presented by ENA, there are three kinds of file available:
+
+- *Submitted files* are identical to those submitted by the user
+- *FASTQ files* are archive-generated files generated according to a
+  standardised format (`learn more about this format`_)
+- *SRA files* are in a format designed to work with NCBI's `SRA Toolkit`_
+
+.. _`learn more about this format` : <../faq/archive-generated-files.rst>
+.. _`SRA Toolkit` : https://www.ncbi.nlm.nih.gov/books/NBK158900/
+
+Each of the three file types has its own directory.
+Within each directory are subdirectories: each of these is the first 6
+characters of a run accession and itself contains a directory for a subset of
+ENA runs which starts with that accession.
+For example, the run ERR164407 would be found in a directory resembling:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/<file-type>/ERR164/ERR164407
+
+Specifics of how to access each read type are available below.
+
+Submitted Read Files
+____________________
+
+The submitted read file is always present for all runs submitted to ENA.
+If a run was originally submitted to another INSDC database (NCBI SRA, DDBJ)
+then a file of this category will not be available.
+
+ENA submitted files are available in the 'run' directory, e.g.:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/run/<accession-prefix>/<full-accession>/
+
+Using ERR164407 as an example:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR164/ERR164407/
+
+Navigating to this directory in your browser will reveal a file named
+'APY_COTS_GPUCM0403.sff'.
+
+Archive-Generated Read Files
+____________________________
+
+In most cases ENA generates one or more FASTQ files for each run, which follow
+a specific format.
+For information on this format, and when it is not available, please see our
+page on `Archive Generated FASTQ Files <../faq/archive-generated-files.rst>`_.
+
+ENA archive-generated files are available in the 'fastq' directory, e.g.:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/fastq/<accession-prefix>/<full-accession>/
+
+Using ERR164407 as an example:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/
+
+Navigating to this directory in your browser will reveal a file named
+'ERR164407.fastq.gz'
+An archive-generated FASTQ file always has a name which contains the run
+accession.
+
+SRA Read Files
+______________
+
+SRA format file are provided for use with NCBI's `SRA Toolkit
+<https://www.ncbi.nlm.nih.gov/books/NBK158900/>`_.
+
+SRA files are made available in the 'err' directory, e.g.:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/err/<accession-prefix>/<full-accession>/
+
+Using ERR164407 as an example:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/err/ERR164/ERR164407/
+
+
+Analysis FTP Structure
+----------------------
+
+The ENA analysis object can hold a variety of different data types.
+It is designed to be extensible to allow quick implementation of new data
+types.
+
+Analyses come in two types:
+
+- Processed analyses include materials such as genome assemblies, transcriptome
+  assemblies and other annotated sequences: these are stored in a separate
+  archive and are beyond the scope of this article
+- Simple analyses include many other types. They undergo simple validation but
+  are mostly presented in the same format the user submitted them: this is the
+  type of analysis described in this section
+
+The variation in types of analyses prevents the sort of processing and
+organisation given to reads, as described above.
+Analyses are stored in directories named with the analysis accession, e.g.
+ERZ1195979.
+These directories are stored within parent directories named with the first six
+characters of their accession.
+Therefore, files for analysis ERZ1195979 can be found at:
+
+::
+
+    ftp://ftp.sra.ebi.ac.uk/vol1/ERZ119/ERZ1195979/
+
+
+
+Downloading Files
+=================
+
+ENA provides numerous ways to access the data it hosts, suiting a range of
+use-cases and computational ability levels.
+These are described below, ranked from low to high, based on how much
+computational ability might be required:
+
+- `Using ENA Browser`_
+- `Using ENA FTP Downloader`_
+- `Using *Globus*`_
+- `Using *enaBrowserTools*`_
+- `Using *wget*`_
+- `Using FTP Client`_
+- `Using *Aspera*`_
+
+Using ENA Browser
+-----------------
+
+The ENA Browser is our website, from which you can get information about ENA,
+as well as accessing all the data we have public.
+Visit us here:
+
+https://www.ebi.ac.uk/ena/browser/home
+
+You can go to any accession by entering it into the 'Enter accession' box at
+the link above.
+If, for example, you see an ENA accession referenced in a paper, you can see
+the data for yourself in this way.
+Once there, you can download any associated files by clicking the relevant link.
+For more information on how to explore a record in ENA, please visit our guide
+on `How to Explore an ENA Project <./ena-project.html>`_
+
+Using ENA FTP Downloader
+------------------------
+
+The ENA FTP File Downloader is an application you can download from
+`GitHub <https://github.com/enasequence/ena-ftp-downloader/releases>`_.
+Given an accession, this program will present a list of associated files you
+can download.
+Alternatively, you can provide a query from our Advanced Search API or Portal
+API to perform a bulk download of all files for a given set of criteria.
+Learn more about these APIs from our guide on `How to Access ENA
+Programmatically <./programmatic-access.html>`_.
+
+Using *Globus*
+--------------
+
+Globus provides a more user-friendly, feature-rich directory interface for
+interacting with the FTP server.
+Files can be downloaded through `Globus`_ ebi#public endpoint from the
+'/gridftp/ena' subfolder:
+
+.. image:: images/file-download-globus.png
+
+.. _`Globus`: https://app.globus.org/file-manager?origin_id=6f70c1b4-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2FERZ520%2FERZ520001%2F
+
+Using *enaBrowserTools*
+-----------------------
+
+enaBrowserTools is a set of Python-based utilities which can be found `here
+<https://github.com/enasequence/enaBrowserTools/releases>`_.
+These are simple-to-run scripts which allow simple accession-based data
+download commands with the option to create more complex commands.
+Read more about this page in the `enaBrowserTools Guide
+<./programmatic-access/browser-tools.html>`_.
+
+Using *wget*
+------------
+
+*wget* is a simple command line tool, ubiquitously available in Linux and Mac
+releases.
+A file can be downloaded with wget simply by specifying its location:
+
+::
+
+    $ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
+
+
+Using FTP Client
+----------------
+
+Command-line FTP clients allow you to interactively explore the FTP server and
+download data to your local computer.
+When asked for a username, use 'anonymous'. When asked for a password, press
+the enter key to skip this.
+
+::
+    ftp ftp.sra.ebi.ac.uk
+    Name: anonymous
+    Password:
+    ftp> cd vol1/fastq/ERR164/ERR164407
+    ftp> get ERR164407.fastq.gz
+
+In the above example, the 'cd' command is used to 'change directory' to the
+required directory.
+Then, the 'get' command is used to specify the file of interest.
+At any time, you can use 'ls' to view the content of the current directory.
+The command 'pwd' can be used to identify what the current directory is.
+
+Using *Aspera*
+--------------
+
+Aspera ascp command line client can be downloaded from `Aspera
+<https://downloads.asperasoft.com/en/downloads/62>`_.
+Please select the correct version for your operating system.
+The ascp command line client is distributed as part of the Aspera connect
+high-performance transfer browser plug-in.
+
+Following are some examples of how Aspera may be used to download ENA data:
+
+Unix
+^^^^
+
+::
+
+    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz
+    local/target/directory
+
+
+Mac OSX
+^^^^^^^
+
+::
+
+    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz
+    local/target/directory
+
+
+Windows
+^^^^^^^
+
+::
+
+    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp"
+    -QT -l 300m -P33001 -i
+    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh"
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz
+    local\target\directory
