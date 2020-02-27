@@ -36,31 +36,45 @@ Locate all read data submitted for Neanderthals
 3. Click 'Next'
 
 4. You now have opportunity to apply filters which will limit the set of reads
-   which are provided.
+   which are provided
 
 5. Use the blue buttons on the left to select different filter categories, or
    use the 'Type to filter query params' box to search for a specific parameter
 
 6. In the above box, we have selected the 'Taxonomy and related' category, and
-   chosen 'NCBI Taxonomy' from the dropdown.
+   chosen 'NCBI Taxonomy' from the dropdown
 
 7. All submissions to ENA must use a valid species-level taxon from the NCBI
    taxonomy database. Begin typing and suggestions appear. We have put
    'Neanderthal'. Notice multiple suggestions are given; in this case, they
-   are synonyms, as indicated by their matching taxon IDs (63221).
+   are synonyms, as indicated by their matching taxon IDs (63221)
 
 8. We have entered all the parameters we want, so click 'Search' at the bottom
-   right. After a moment, you will be presented with a list of run objects.
+   right. After a moment, you will be presented with a list of run objects
 
 .. image:: images/advanced-search-2.png
 
-9. Now click 'Next' twice to get to the Fields selection box
+9. Now click 'Next' twice to get to the Fields selection box, then check the
+   'Manually select fields' box.
+
+10. For reads, there are three pre-defined field sets you can use: FASTQ Files
+    gives you the `archive-generated standardised FASTQ format`_, SRA Files
+    gives file versions suitable for use with NCBI's SRA Toolkit, while
+    Submitted Files gives you copies of the files originally submitted by the
+    user
 
 10. You can use the 'Available Fields' box to choose any fields you wish to see
-    included in the table of results. Not all of these will always be relevant
+    included in the table of results. Not all of these will always be relevant.
+    For this serach, we have selected the FASTQ Files preset
+
+.. image:: images/advanced-search-3.png
 
 11. When you are satisfied with the fields you have chosen, click 'Search' to
     see the results of your query
+
+.. image:: images/advanced-search-4.png
+
+.. _`archive-generated standardised FASTQ format`: ../faq/archive-generate-files.html
 
 
 Find Samples Based On Checklists
@@ -81,7 +95,7 @@ Follow the below guide to find samples registered using the checklist named
    Use the '?' icon next to the drop-down box to learn more about the options.
    Select the option simply named 'Samples'
 
-.. image:: images/advanced-search-3.png
+.. image:: images/advanced-search-5.png
 
 3. Click 'Next'
 
@@ -96,7 +110,7 @@ Follow the below guide to find samples registered using the checklist named
 7. Notice the accession number of the checklist, 'ERC000015', is added to the
    'Query' box
 
-.. image:: images/advanced-search-4.png
+.. image:: images/advanced-search-6.png
 
 8. Now click 'Next' twice to get to the Fields selection box
 
