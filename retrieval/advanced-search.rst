@@ -51,13 +51,12 @@ Locate all read data submitted for Neanderthals
    'Neanderthal'. Notice multiple suggestions are given; in this case, they
    are synonyms, as indicated by their matching taxon IDs (63221)
 
-8. We have entered all the parameters we want, so click 'Search' at the bottom
-   right. After a moment, you will be presented with a list of run objects
+8. We have entered all the parameters we want, so click 'Next' twice to get
+   to the Fields selection box
 
 .. image:: images/advanced-search-3.png
 
-9. Now click 'Next' twice to get to the Fields selection box, then check the
-   'Manually select fields' box.
+9. Now click the 'Manually select fields' box.
 
 10. For reads, there are three pre-defined field sets you can use: FASTQ Files
     gives you the `archive-generated standardised FASTQ format`_, SRA Files
