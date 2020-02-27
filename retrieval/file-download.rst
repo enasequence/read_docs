@@ -45,10 +45,14 @@ For most reads presented by ENA, there are three kinds of file available:
 .. _`learn more about this format` : <../faq/archive-generated-files.rst>
 .. _`SRA Toolkit` : https://www.ncbi.nlm.nih.gov/books/NBK158900/
 
-Each of the three file types has its own directory.
-Within each directory are subdirectories: each of these is the first 6
-characters of a run accession and itself contains a directory for a subset of
-ENA runs which starts with that accession.
+Each of the three file types has its own directory on the FTP server.
+A folder exists for every run, which is named with the accession of the run,
+e.g. files for run ERR164407 are in a directory named ERR164407.
+These run accession directories are organised into parent directories named
+with their first 6 characters.
+For ERR164407 this is 'ERR164'.
+This structure is repeated across all three file types
+
 For example, the run ERR164407 would be found in a directory resembling:
 
 ::
@@ -100,7 +104,7 @@ Using ERR164407 as an example:
     ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/
 
 Navigating to this directory in your browser will reveal a file named
-'ERR164407.fastq.gz'
+'ERR164407.fastq.gz'.
 An archive-generated FASTQ file always has a name which contains the run
 accession.
 
