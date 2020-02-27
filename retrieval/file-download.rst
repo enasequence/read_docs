@@ -89,7 +89,7 @@ ____________________________
 In most cases ENA generates one or more FASTQ files for each run, which follow
 a specific format.
 For information on this format, and when it is not available, please see our
-page on `Archive Generated FASTQ Files <../faq/archive-generated-files.rst>`_.
+page on `Archive Generated FASTQ Files <../faq/archive-generated-files.html>`_.
 
 ENA archive-generated files are available in the 'fastq' directory, e.g.:
 
@@ -213,7 +213,7 @@ Files can be downloaded through `Globus`_ ebi#public endpoint from the
 
 .. image:: images/file-download-globus.png
 
-.. _`Globus`: https://app.globus.org/file-manager?origin_id=6f70c1b4-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2FERZ520%2FERZ520001%2F
+.. _`Globus`: https://app.globus.org/file-manager?origin_id=6f70c1b4-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
 
 Using *enaBrowserTools*
 -----------------------
