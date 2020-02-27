@@ -16,7 +16,6 @@ Below are three example cases you can follow to better understand the advanced
 search interface:
 
 - `Find Neanderthal Read Data`_
-- `Find Samples From Female Sheep`_
 - `Find Samples Based On Checklists`_
 
 
@@ -64,48 +63,6 @@ Locate all read data submitted for Neanderthals
     see the results of your query
 
 
-Find Samples From Female Sheep
-------------------------------
-
-Search for sheep samples registered as female
-
-1. Navigate to the advanced search browser:
-   https://www.ebi.ac.uk/ena/browser/advanced-search
-
-2. The interface first asks you to select the datatype you want to search for.
-   Use the '?' icon next to the drop-down box to learn more about the options.
-   Select the option simply named 'Samples'
-
-.. image:: images/advanced-search-3.png
-
-3. Click 'Next'
-
-4. Click the 'Taxonomy and related' box, the select 'NCBI Taxonomy' from the
-   drop-down. The search box which appears will suggested valid taxa from the
-   NCBI taxonomy database as you type. You can enter 'sheep' or the Latin name,
-   'Ovis aries', as they are synonyms for the same Taxonomic ID, '9940'
-
-5. Click the name and you will see 'tax_eq(9940)' appear in the query box
-
-6. You can check the 'Include subordinate taxa' box to include subspecies
-
-7. Now select the blue 'Sample state and conditions' box
-
-8. Choose 'sex' from the dropdown, then select 'female'
-
-9. Notice this is added to the 'Query' box
-
-.. image:: images/advanced-search-4.png
-
-10. Now click 'Next' twice to get to the Fields selection box
-
-11. You can use the 'Available Fields' box to choose any fields you wish to see
-    included in the table of results. Not all of these will always be relevant
-
-12. When you are satisfied with the fields you have chosen, click 'Search' to
-    see the results of your query
-
-
 Find Samples Based On Checklists
 --------------------------------
 
@@ -139,7 +96,7 @@ Follow the below guide to find samples registered using the checklist named
 7. Notice the accession number of the checklist, 'ERC000015', is added to the
    'Query' box
 
-.. image:: images/advanced-search-5.png
+.. image:: images/advanced-search-4.png
 
 8. Now click 'Next' twice to get to the Fields selection box
 
