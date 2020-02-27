@@ -186,7 +186,8 @@ You can go to any accession by entering it into the 'Enter accession' box at
 the link above.
 If, for example, you see an ENA accession referenced in a paper, you can see
 the data for yourself in this way.
-Once there, you can download any associated files by clicking the relevant link.
+Once there, you can download any associated files by clicking the relevant
+links.
 For more information on how to explore a record in ENA, please visit our guide
 on `How to Explore an ENA Project <./ena-project.html>`_
 
@@ -219,8 +220,8 @@ Using *enaBrowserTools*
 
 enaBrowserTools is a set of Python-based utilities which can be found `here
 <https://github.com/enasequence/enaBrowserTools/releases>`_.
-These are simple-to-run scripts which allow simple accession-based data
-download commands with the option to create more complex commands.
+These are simple-to-run scripts which allow  accession-based data download
+commands with the option to create more complex commands.
 Read more about this page in the `enaBrowserTools Guide
 <./programmatic-access/browser-tools.html>`_.
 
@@ -245,6 +246,7 @@ When asked for a username, use 'anonymous'. When asked for a password, press
 the enter key to skip this.
 
 ::
+
     ftp ftp.sra.ebi.ac.uk
     Name: anonymous
     Password:
@@ -273,8 +275,8 @@ Unix
 
 ::
 
-    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz
+    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh \
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz \
     local/target/directory
 
 
@@ -283,8 +285,8 @@ Mac OSX
 
 ::
 
-    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz
+    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh \
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz \
     local/target/directory
 
 
@@ -293,8 +295,8 @@ Windows
 
 ::
 
-    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp"
-    -QT -l 300m -P33001 -i
-    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh"
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz
+    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp" ^
+    -QT -l 300m -P33001 -i ^
+    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz ^
     local\target\directory
