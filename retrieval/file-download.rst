@@ -42,7 +42,7 @@ For most reads presented by ENA, there are three kinds of file available:
   standardised format (`learn more about this format`_)
 - *SRA files* are in a format designed to work with NCBI's `SRA Toolkit`_
 
-.. _`learn more about this format` : ../faq/archive-generated-files.rst
+.. _`learn more about this format` : ../faq/archive-generated-files.html
 .. _`SRA Toolkit` : https://www.ncbi.nlm.nih.gov/books/NBK158900/
 
 Each of the three file types has its own directory on the FTP server.
