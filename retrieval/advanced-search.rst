@@ -12,7 +12,7 @@ interface before conducting your own searches.
 Example Uses
 ============
 
-Below are three example cases you can follow to better understand the advanced
+Below are two example cases you can follow to better understand the advanced
 search interface:
 
 - `Find Neanderthal Read Data`_
