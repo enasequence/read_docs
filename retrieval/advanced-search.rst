@@ -27,13 +27,15 @@ Locate all read data submitted for Neanderthals
 1. Navigate to the advanced search browser:
    https://www.ebi.ac.uk/ena/browser/advanced-search
 
+.. image:: images/advanced-search-1.png
+
 2. The interface first asks you to select the datatype you want to search for.
    Use the '?' icon next to the drop-down box to learn more about the options.
    We are searching for read data, so select 'Raw Reads':
 
-.. image:: images/advanced-search-1.png
-
 3. Click 'Next'
+
+.. image:: images/advanced-search-2.png
 
 4. You now have opportunity to apply filters which will limit the set of reads
    which are provided
@@ -52,7 +54,7 @@ Locate all read data submitted for Neanderthals
 8. We have entered all the parameters we want, so click 'Search' at the bottom
    right. After a moment, you will be presented with a list of run objects
 
-.. image:: images/advanced-search-2.png
+.. image:: images/advanced-search-3.png
 
 9. Now click 'Next' twice to get to the Fields selection box, then check the
    'Manually select fields' box.
@@ -63,18 +65,18 @@ Locate all read data submitted for Neanderthals
     Submitted Files gives you copies of the files originally submitted by the
     user
 
-10. You can use the 'Available Fields' box to choose any fields you wish to see
+11. You can use the 'Available Fields' box to choose any fields you wish to see
     included in the table of results. Not all of these will always be relevant.
-    For this serach, we have selected the FASTQ Files preset
+    For this serach, we have selected the FASTQ Files preset, but if you skip
+    this step you will still be shown a list of accessions with descriptions,
+    by default
 
-.. image:: images/advanced-search-3.png
-
-11. When you are satisfied with the fields you have chosen, click 'Search' to
+12. When you are satisfied with the fields you have chosen, click 'Search' to
     see the results of your query
 
 .. image:: images/advanced-search-4.png
 
-.. _`archive-generated standardised FASTQ format`: ../faq/archive-generate-files.html
+.. _`archive-generated standardised FASTQ format`: ../faq/archive-generated-files.html
 
 
 Find Samples Based On Checklists
@@ -91,13 +93,15 @@ Follow the below guide to find samples registered using the checklist named
 1. Navigate to the advanced search browser:
    https://www.ebi.ac.uk/ena/browser/advanced-search
 
+.. image:: images/advanced-search-5.png
+
 2. The interface first asks you to select the datatype you want to search for.
    Use the '?' icon next to the drop-down box to learn more about the options.
    Select the option simply named 'Samples'
 
-.. image:: images/advanced-search-5.png
-
 3. Click 'Next'
+
+.. image:: images/advanced-search-6.png
 
 4. Categories of search parameters are found by clicking the blue boxes to the
    left of the page. Select the 'Database record' category now
@@ -109,8 +113,6 @@ Follow the below guide to find samples registered using the checklist named
 
 7. Notice the accession number of the checklist, 'ERC000015', is added to the
    'Query' box
-
-.. image:: images/advanced-search-6.png
 
 8. Now click 'Next' twice to get to the Fields selection box
 
