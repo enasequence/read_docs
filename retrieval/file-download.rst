@@ -167,11 +167,11 @@ computational ability might be required:
 
 - `Using ENA Browser`_
 - `Using ENA FTP Downloader`_
-- `Using *Globus*`_
-- `Using \*enaBrowserTools\*`_
-- `Using *wget*`_
+- `Using Globus`_
+- `Using enaBrowserTools`_
+- `Using wget`_
 - `Using FTP Client`_
-- `Using *Aspera*`_
+- `Using Aspera`_
 
 Using ENA Browser
 -----------------
