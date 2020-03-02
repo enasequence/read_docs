@@ -72,8 +72,12 @@ different sub-classes of sequences `here <./general-guide/data-classes.html>`_.
 Search and Retrieval
 ====================
 
-You can search across the ENA browser in a number of ways (`free text search <https://www.ebi.ac.uk/ena/browser/text-search>`_,
-`sequence similarity search <https://www.ebi.ac.uk/ena/browser/sequence-search>`_, `cross-reference search <https://www.ebi.ac.uk/ena/browser/xref>`_ or `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ ).
+You can search across the ENA browser in a number of ways:
+
+- `free text search <https://www.ebi.ac.uk/ena/browser/text-search>`_
+- `sequence similarity search <https://www.ebi.ac.uk/ena/browser/sequence-search>`_
+- `cross-reference search <https://www.ebi.ac.uk/ena/browser/xref>`_
+- `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_
 
 The advanced search in the browser provides a simple interface for building more complex search queries that can be saved and run again with `Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guide on how to use the advanced search for examples on how to build queries and how to use Rulespace:
 
