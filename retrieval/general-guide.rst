@@ -9,10 +9,15 @@ our data retrieval services.
 Viewing and Exploring ENA Records
 =================================
 
-The table below summarises all the types of records that ENA archives and displays within the
-`ENA Browser <https://www.ebi.ac.uk/ena/browser/home>`_. Please see our *How To* guide on `exploring
-an ENA project <ena-project.html>`_ for an example of how to navigate through an ENA Project in the
-browser.
+The table below summarises all the types of records that ENA holds and displays within the
+`ENA Browser <https://www.ebi.ac.uk/ena/browser/home>`_. Please see our *How To* guide on exploring
+an ENA project for an example of how to navigate through an ENA Project in the
+browser:
+
+.. toctree::
+   :maxdepth: 1
+   
+   ena-project
 
 +-----------------------+-------------------------------------------+---------------------------+
 | **Record Type**       | **Description**                           | **Example accessions**    |
@@ -67,23 +72,25 @@ different sub-classes of sequences `here <./general-guide/data-classes.html>`_.
 Search and Retrieval
 ====================
 
-The ENA browser allows for searching across the archive in a number of ways:
+You can search across the ENA browser in a number of ways (`free text search <https://www.ebi.ac.uk/ena/browser/text-search>`_,
+`sequence similarity search <https://www.ebi.ac.uk/ena/browser/sequence-search>`_, `cross-reference search <https://www.ebi.ac.uk/ena/browser/xref>`_ or `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ ).
 
-- `Free text search <https://www.ebi.ac.uk/ena/browser/text-search>`_
+The advanced search in the browser provides a simple interface for building more complex search queries that can be saved and run again with `Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guide on how to use the advanced search for examples on how to build queries and how to use Rulespace:
 
-- `sequence similarity search <https://www.ebi.ac.uk/ena/browser/sequence-search>`_
+.. toctree::
+   :maxdepth: 1
 
-- `cross-reference search <https://www.ebi.ac.uk/ena/browser/xref>`_
-
-The `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_ in the browser provides a
-simple interface for building more complex search queries that can be saved and run again with
-`Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guides on
-`how to use the advanced search <advanced-search.html>`_ for examples on how to build queries and how to use Rulespace.
+   advanced-search
 
 The ENA Browser also provides different means to download data from the archive whether its XML ENA records,
 a tabulated summary of metadata resulting from a search or sequencing data files submitted as part of a research
-project. See our guide on `file download <file-download.html>`_ for details on how to use our data retrieval services
-to download data from the archive.
+project. See our guide on file download for details on how to use our data retrieval services
+to download data from the archive:
+
+.. toctree::
+   :maxdepth: 1
+   
+   file-download
 
 Programmatic Access
 ===================
@@ -92,4 +99,9 @@ When working with a large number of records or when developing an automated pipe
 to explore and interact with the programmatic services that ENA has to offer.
 
 Once you are familiar with how ENA records are linked and what data are available associated with each record,
-please explore our more advanced guides for `accessing data from the archive programmatically <programmatic-access.html>`_.
+please explore our more advanced guides foraccessing data from the archive programmatically:
+
+.. toctree::
+   :maxdepth: 1
+   
+   programmatic-access
