@@ -15,7 +15,7 @@ Perform Searches
 All functionalities of the ENA Advanced Search can be performed programmatically using a combination of the
 `ENA Portal API <https://www.ebi.ac.uk/ena/portal/api/>`_ and the
 `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_. You can download the API docs for the Portal API
-`here <https://www.ebi.ac.uk/ena/portal/api/doc>`_ and the browser API
+`here <https://www.ebi.ac.uk/ena/portal/api/doc>`_ and the Browser API
 `here <https://www.ebi.ac.uk/ena/browser/api/doc>`_.
 
 You can further explore related records outside of the
