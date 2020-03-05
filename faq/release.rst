@@ -51,7 +51,7 @@ Please note that data that is made public for even a short time may be used by d
 If your suppression will be temporary, please provide a new release date when you contact us.
 You can read more about INSDC data availability levels `here <https://www.ebi.ac.uk/ena/about/data-availability-policy>`_.
 
-Data Release Policy
--------------------
+Data Availability Policy
+------------------------
 
 For full details of ENA's data availability policy including the different levels of controlled access, see `here <release/data-availability-policy.html>`_.
