@@ -30,8 +30,8 @@ browser:
 | Samples               | | Represents biological samples         | `SAMEA2620084 (ERS488919)`_ |
 |                       | | collected and sequenced in real life  |                             |
 +-----------------------+-----------------------------------------+-----------------------------+
-| Runs/Experiments      | | Hold raw read files and sequencing    | `ERR1701760`_ `ERX1772048`_ |
-|                       | | methods                               |                             |
+| Runs/Experiments      | | Hold raw read files and sequencing    | | `ERR1701760`_             |
+|                       | | methods                               | | `ERX1772048`_             |
 +-----------------------+-----------------------------------------+-----------------------------+
 | Analyses              | | Hold results files of analyses        | `ERZ1195979`_               |
 |                       | | performed on sequencing data and      |                             |
@@ -56,8 +56,8 @@ browser:
 |                       | | sample was registered with            |                             |
 +-----------------------+-----------------------------------------+-----------------------------+
 
-.. _`PRJEB1787/ERP001736`: https://www.ebi.ac.uk/ena/browser/view/PRJEB1787
-.. _`SAMEA2620084/ERS488919`: https://www.ebi.ac.uk/ena/browser/view/SAMEA2620084
+.. _`PRJEB1787 (ERP001736)`: https://www.ebi.ac.uk/ena/browser/view/PRJEB1787
+.. _`SAMEA2620084 (ERS488919)`: https://www.ebi.ac.uk/ena/browser/view/SAMEA2620084
 .. _`ERR1701760`: https://www.ebi.ac.uk/ena/browser/view/ERR1701760
 .. _`ERX1772048`: https://www.ebi.ac.uk/ena/browser/view/ERX1772048
 .. _`ERZ1195979`: https://www.ebi.ac.uk/ena/browser/view/ERZ1195979
