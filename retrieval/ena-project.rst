@@ -131,7 +131,7 @@ project, you can look into the Sample records that are within the Project.
 
 Sample records contain the most extensive metadata. These explain how the data was collected and can be used to
 understand and better interpret the contents of any related data files. For example, navigate to sample
-`ERS478017/SAMEA2591108 <https://www.ebi.ac.uk/ena/browser/view/SAMEA2591108>`_ either in the Read Files table or
+`SAMEA2591108 (ERS478017) <https://www.ebi.ac.uk/ena/browser/view/SAMEA2591108>`_ either in the Read Files table or
 through the Navigation tab.
 
 From within this sample record, you can still see the read files that were part of the original project. But from here
