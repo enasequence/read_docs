@@ -10,7 +10,7 @@ opposed to capturing the whole genomic material of an organism.
 Sequence records can be specific coding/non-coding regions derived from an annotated submission, submissions
 of individual targeted sequences of interest, or high-level assembly sequences such as scaffolds or chromosomes.
 
-Sequence records and are all available in EMBL or FASTA format.
+Sequence records are all available in EMBL (TEXT) or FASTA format.
 
 +----------------+-------------------------------------------------------------+----------------+
 | **Data Class** | | **Definition**                                            | **Example**    |
