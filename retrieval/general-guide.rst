@@ -9,10 +9,10 @@ our data retrieval services.
 Viewing and Exploring ENA Records
 =================================
 
-The table below summarises all the types of records that ENA holds and displays within the
-`ENA Browser <https://www.ebi.ac.uk/ena/browser/home>`_. Please see our *How To* guide on exploring
-an ENA project for an example of how to navigate through an ENA Project in the
-browser:
+The table below summarises the Domains of data held within ENA and example records that are archived within 
+each domain and displayed within the `ENA Browser <https://www.ebi.ac.uk/ena/browser/home>`_. 
+Please see our *How To* guide on exploring an ENA project for an example of how to navigate through an 
+ENA Project in the browser:
 
 .. toctree::
    :maxdepth: 1
@@ -20,7 +20,7 @@ browser:
    ena-project
 
 +-----------------------+-----------------------------------------+-----------------------------+
-| **Record Type**       | **Description**                         | **Example accessions**      |
+| **Data Domain**       | **Description**                         | **Example Records**         |
 +-----------------------+-----------------------------------------+-----------------------------+
 | Projects/Studies      | | Contains information on a biological  | `PRJEB1787 (ERP001736)`_    |
 |                       | | research project. This holds all the  |                             |
@@ -67,8 +67,8 @@ browser:
 .. _`Taxon:9606`: https://www.ebi.ac.uk/ena/browser/view/Taxon:9606
 .. _`ERC000013`: https://www.ebi.ac.uk/ena/browser/view/ERC000013
 
-\* Assembled and annotated sequences fall into different sub-classes. Read more about the
-different sub-classes of sequences `here <./general-guide/data-classes.html>`_.
+\* Assembled and annotated sequence records fall into different Data Classes. Read 
+more about the different classes of sequences `here <./general-guide/data-classes.html>`_.
 
 Search and Retrieval
 ====================
