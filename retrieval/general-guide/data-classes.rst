@@ -4,7 +4,7 @@ Sequence Data Classes
 
 The ENA holds different data classes of nucleotide sequence which fall under the three tiers of ENA:
 reads, assembly and annotation within the *Sequence* domain. This *Sequence* domain is separate to the standard 
-*Reads* or *Assembly* domains listed in the `General Guide <../>`_. Sequence 
+*Reads* or *Assembly* domains listed in the `General Guide <../general-guide.html>`_. Sequence 
 records often represent specific areas of genetic interest as opposed to capturing the whole genomic 
 material of an organism.
 
