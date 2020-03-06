@@ -30,8 +30,8 @@ ENA Project in the browser:
 | Samples               | | Represents biological samples         | `SAMEA2620084 (ERS488919)`_ |
 |                       | | collected and sequenced in real life  |                             |
 +-----------------------+-----------------------------------------+-----------------------------+
-| Runs/Experiments      | | Hold raw read files and sequencing    | | `ERR1701760`_             |
-|                       | | methods                               | | `ERX1772048`_             |
+| | Reads               | | Hold raw read files and sequencing    | | `ERR1701760`_             |
+| | (Runs/Experiments)  | | methods                               | | `ERX1772048`_             |
 +-----------------------+-----------------------------------------+-----------------------------+
 | Analyses              | | Hold results files of analyses        | `ERZ1195979`_               |
 |                       | | performed on sequencing data and      |                             |
