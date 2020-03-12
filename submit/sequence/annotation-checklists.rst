@@ -134,30 +134,37 @@ Virus-Specific Checklists
 +------------------------+--------------+------------------------------------------------------------------------------+
 | Name                   | Checklist ID | Definition                                                                   |
 +========================+==============+==============================================================================+
-| Single Viral CDS       | ERT000028    | For complete or partial single coding sequence (CDS) from a viral gene.      |
-|                        |              | Please do not use for peptides processed from polyproteins or proviral       |
-|                        |              | sequences, as these are all annotated differently.                           |
+| | Single Viral         | ERT000028    | | For complete or partial single coding sequence (CDS)                       |
+| | CDS                  |              | | from a viral gene.Please do not use for peptides                           |
+|                        |              | | processed from polyproteins or proviral sequences,                         |
+|                        |              | | as these are all annotated differently.                                    |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Viral Polyprotein      | ERT000051    | For complete or partial viral polyprotein genes where the mature peptide     |
-|                        |              | boundaries remain undefined. This template is not suitable for proviral      |
-|                        |              | sequences. If the sequences contain ribosomal frameshifts, please contact us.|
+| | Viral                | ERT000051    | | For complete or partial viral polyprotein genes where                      |
+| | Polyprotein          |              | | the mature peptide boundaries remain undefined. This                       |
+|                        |              | | template is not suitable for proviral sequences. If                        |
+|                        |              | | the sequences contain ribosomal frameshifts, please                        |
+|                        |              | | contact us.                                                                |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| ssRNA(-) Viral         | ERT000052    | For complete or partial viral copy RNA (cRNA) sequences, complementary to    |
-| copy RNA               |              | ssRNA(-) virus genomes. Only one CDS can be added; further CDS information   |
-|                        |              | should be provided in the curator comments section.                          |
+| | ssRNA(-) Viral       | ERT000052    | | For complete or partial viral copy RNA (cRNA)                              |
+| | copy RNA             |              | | sequences, complementary to ssRNA(-) virus genomes.                        |
+|                        |              | | Only one CDS can be added; further CDS information                         |
+|                        |              | | should be provided in the curator comments section.                        |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Viral Untranslated     | ERT000060    | For complete or partial untranslated region (UTR) or nontranslated region    |
-| Region (UTR)           |              | (NTR) found at the termini of viral genomes. Please do not use this          |
-|                        |              | checklist for submitting virus genomes or viral coding genes.                |
+| | Viral                | ERT000060    | | For complete or partial untranslated region (UTR) or                       |
+| | Untranslated         |              | | nontranslated region (NTR) found at the termini of                         |
+| | Region (UTR)         |              | | viral genomes. Please do not use this checklist for                        |
+|                        |              | | submitting virus genomes or viral coding genes.                            |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Alphasatellite         | ERT000057    | For submission of circular single stranded DNA alphasatellite sequences      |
-| sub-viral particle     |              | associated with Begomovirus, Babuvirus and Nanovirus.                        |
+| | Alphasatellite       | ERT000057    | | For submission of circular single stranded DNA                             |
+| | sub-viral            |              | | alphasatellite sequences associated with Begomovirus,                      |
+| | particle             |              | | Babuvirus and Nanovirus.                                                   |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Betasatellite          | ERT000047    | For submission of circular single stranded DNA betasatellite sequences       |
-| sub-viral particle     |              | of the Begomovirus genus.                                                    |
+| | Betasatellite        | ERT000047    | | For submission of circular single stranded DNA                             |
+| | sub-viral            |              | | betasatellite sequences of the Begomovirus genus.                          |
+| | particle             |              | |                                                                            |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Plant Viroid           | ERT000031    | For complete circular ssRNA plant viroid sequences. Please do not use for    |
-|                        |              | other circular viruses.                                                      |
+| Plant Viroid           | ERT000031    | | For complete circular ssRNA plant viroid sequences.                        |
+|                        |              | | Please do not use for other circular viruses.                              |
 +------------------------+--------------+------------------------------------------------------------------------------+
 
 
@@ -167,17 +174,23 @@ Large-Scale Data Checklists
 +------------------------+--------------+------------------------------------------------------------------------------+
 | Name                   | Checklist ID | Definition                                                                   |
 +========================+==============+==============================================================================+
-| Expressed Sequence     | ERT000003    | For submission of Sanger-sequenced Expressed Sequence Tags (ESTs). ESTs are  |
-| Tag (EST)              |              | short transcripts ~500-800 bp long usually of low quality as they are the    |
-|                        |              | result of only single pass reads. No feature annotation is recorded on ESTs. |
+| | Expressed            | ERT000003    | | For submission of Sanger-sequenced Expressed Sequence                      |
+| | Sequence             |              | | Tags (ESTs). ESTs are short transcripts ~500-800 bp                        |
+| | Tag (EST)            |              | | long usually of low quality as they are the result                         |
+|                        |              | | of only single pass reads. No feature annotation is                        |
+|                        |              | | recorded on ESTs.                                                          |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Sequence Tagged        | ERT000055    | For submission of Sequence Tagged Sites (STS). The Sequence Tagged Site      |
-| Site (STS)             |              | (STS) is a relatively short, easily PCR-amplified sequence (200 to 500 bp)   |
-|                        |              | which can be specifically amplified by PCR and detected in the presence of   |
-|                        |              | all other genomic sequences and whose location in the genome is mapped.      |
+| | Sequence             | ERT000055    | | For submission of Sequence Tagged Sites (STS). The                         |
+| | Tagged               |              | | Sequence Tagged Site (STS) is a relatively short,                          |
+| | Site (STS)           |              | | easily PCR-amplified sequence (200 to 500 bp) which                        |
+|                        |              | | can be specifically amplified by PCR and detected in                       |
+|                        |              | | the presence of all other genomic sequences and whose                      |
+|                        |              | | location in the genome is mapped.                                          |
 +------------------------+--------------+------------------------------------------------------------------------------+
-| Genome Survey          | ERT000024    | For submission of Genome Survey Sequences (GSS). These are short DNA         |
-| Sequence (GSS)         |              | sequences which inlude: random single pass genome survey sequences, single   |
-|                        |              | pass reads from cosmid/BAC/YAC ends (may be chromosome specific), exon       |
-|                        |              | trapped genomic sequences, Alu PCR sequences and transposon-tagged sequences.|
+| Genome Survey          | ERT000024    | | For submission of Genome Survey Sequences (GSS). These                     |
+| Sequence (GSS)         |              | | are short DNA sequences which inlude: random single                        |
+|                        |              | | pass genome survey sequences, single pass reads from                       |
+|                        |              | | cosmid/BAC/YAC ends (may be chromosome specific), exon                     |
+|                        |              | | trapped genomic sequences, Alu PCR sequences and                           |
+|                        |              | | transposon-tagged sequences.                                               |
 +------------------------+--------------+------------------------------------------------------------------------------+
