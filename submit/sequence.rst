@@ -55,7 +55,7 @@ submission allows you to avoid having to create the flatfile record manually.
 Therefore, please check the list of available checklists to determine whether
 one of them meets the needs of your submission:
 
-- `List of Annotation Checklists <annotation-checklists.html>`_
+- `List of Annotation Checklists <sequence/annotation-checklists.html>`_
 
 
 If There Is A Suitable Checklist Available

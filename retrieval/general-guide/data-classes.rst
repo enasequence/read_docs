@@ -3,14 +3,15 @@ Sequence Data Classes
 =====================
 
 The ENA holds different data classes of nucleotide sequence which fall under the three tiers of ENA:
-reads, assembly and annotation. These sequences are separate to the standard raw read *Runs/Experiments* or *Assembly*
-records listed in the `General Guide <../>`_. Sequence records often represent specific areas of genetic interest as
-opposed to capturing the whole genomic material of an organism.
+reads, assembly and annotation within the *Sequence* domain. This *Sequence* domain is separate to the standard 
+*Reads* or *Assembly* domains listed in the `General Guide <../general-guide.html>`_. Sequence 
+records often represent specific areas of genetic interest as opposed to capturing the whole genomic 
+material of an organism.
 
 Sequence records can be specific coding/non-coding regions derived from an annotated submission, submissions
 of individual targeted sequences of interest, or high-level assembly sequences such as scaffolds or chromosomes.
 
-Sequence records and are all available in EMBL or FASTA format.
+Sequence records are all available in EMBL (TEXT) or FASTA format.
 
 +----------------+-------------------------------------------------------------+----------------+
 | **Data Class** | | **Definition**                                            | **Example**    |
