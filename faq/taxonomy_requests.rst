@@ -4,7 +4,7 @@ Requesting New Taxon IDs
 
 All submissions to INSDC databases must be classified against the NCBI Taxonomy database. Entries in the Taxonomy
 database have integer taxon IDs and are visible in the ENA browser alongside their full lineage and available data
-(e.g. human Tax ID is `9606<https://www.ebi.ac.uk/ena/browser/view/Taxon:9606>`_).
+(e.g. human Tax ID is `9606 <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606>`_).
 This database covers the complete tree of life, as well as viruses, synthetic constructs and metagenomic taxa.
 However, it is incomplete in that it only considers taxa which are already represented in INSDC records.
 In addition, taxa are only displayed if at least one public INSDC record is available.
