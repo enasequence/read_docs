@@ -48,12 +48,6 @@ If you enter 'cat', you are offered 'Felis catus'.
 In any of these cases, the alternative is name is recognised and the most up-to-date scientific name is used.
 The majority of species do not have common names.
 
-- Secondary
-- Contents
-- Page
-- Here
-- Ninny
-
 
 Creating Taxon Requests
 =======================
