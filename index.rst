@@ -51,6 +51,7 @@ bottom of the page.
    faq/runs
    faq/samples
    faq/taxonomy
+   faq/taxonomy_requests
    faq/metagenomes
    faq/missing-values
    faq/locus_tags
