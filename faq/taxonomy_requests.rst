@@ -54,7 +54,7 @@ Creating Taxon Requests
 
 If you wish to request a new taxon name, fill the details into the `'Taxonomy Check/Request'
 <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ tool.
-If you have multiple names to request, use the 'Add another organism' name to do so: submissions of numerous requests
+If you have multiple names to request, use the 'Add another organism' button to do so: submissions of numerous requests
 instead of one multi-name request may be rejected at the discretion of helpdesk staff.
 Once your request is received, it will be reviewed and sent to the taxonomy service.
 You will be contacted again by ENA staff to let you know the names have been added, or else to advise you of corrections
@@ -115,7 +115,7 @@ If the genus is unknown, please use the name of the highest known taxonomic rank
     Bacillaceae bacterium ABC123
     Thermococcales archaeon DEF456
 
-Note that if you are publishing a novel species, each strain of the proposed specie should be given a unique informal
+Note that if you are publishing a novel species, each strain of the proposed species should be given a unique informal
 name.
 Only after publication will the individual records be merged and renamed as the formal name.
 
@@ -142,25 +142,25 @@ For example, if three strains of *Candida* (ABC, DEF, and GHI) are identified as
 should be given a single informal name to act as a placeholder.
 It is recommended that this be a number, followed by an author's initials and the year.
 
-+----------------------------------------------------------------------------------------------------------------------+
-| Informal Name     | Informal Groupings
-+======================================================================================================================+
-| Candida sp. ABC   |   |
++-------------------+--------------------------------------------------------------------------------------------------+
+| Informal Name     | Informal Groupings                                                                               |
++===================+==================================================================================================+
+| Candida sp. ABC   |   |                                                                                              |
 +-------------------+   |                                                                                              |
-| Candida sp. DEF   |   | Candida sp. 1 SH-2020
+| Candida sp. DEF   |   | Candida sp. 1 SH-2020                                                                        |
 +-------------------+                                                                                                  |
-| Candida sp. GHI   |
-+----------------------------------------------------------------------------------------------------------------------+
-| Candida sp. JKL   |   |
-+-------------------+   | Candida sp. 2 SH-2020                                                                                              |
-| Candida sp. MNO   |
-+----------------------------------------------------------------------------------------------------------------------+
-| Candida sp. PQR   |   |
+| Candida sp. GHI   |                                                                                                  |
++-------------------+--------------------------------------------------------------------------------------------------+
+| Candida sp. JKL   |   |                                                                                              |
++-------------------+   | Candida sp. 2 SH-2020                                                                        |
+| Candida sp. MNO   |                                                                                                  |
++-------------------+--------------------------------------------------------------------------------------------------+
+| Candida sp. PQR   |   |                                                                                              |
 +-------------------+   |                                                                                              |
-| Candida sp. STU   |   | Candida sp. 3 SH-2020
+| Candida sp. STU   |   | Candida sp. 3 SH-2020                                                                        |
 +-------------------+                                                                                                  |
-| Candida sp. VWX   |
-+----------------------------------------------------------------------------------------------------------------------+
+| Candida sp. VWX   |                                                                                                  |
++-------------------+--------------------------------------------------------------------------------------------------+
 
 If you are requesting a binomen which is already mentioned in published literature but has not been added to the
 database, then simply submitting this name with a paper reference will be sufficient.
