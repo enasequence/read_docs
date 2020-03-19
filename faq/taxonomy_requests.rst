@@ -177,8 +177,8 @@ the categories.
 .. image:: images/tax_p01.png
    :align: center
 
-Use most appropriate environmental name for your metagenome
-New names under this node are added only rarely and you should use the closest available choice
+Use most appropriate environmental name for your metagenome.
+New names under this node are added only rarely and you should use the closest available choice.
 Only request a new name of this type if you are unable to use anything listed.
 
 If you are submitting assembled/annotated sequences which are identified from homology alone with no prior culturing or
@@ -233,7 +233,7 @@ the organism name, whether or not it is identified at species level.
 Synthetic Sequences
 -------------------
 
-Synthetic sequences, such as cloning an expression vectors, can use one of the relevant taxa:
+Synthetic sequences, such as cloning and expression vectors, can use one of the relevant taxa:
 
 ::
 
