@@ -26,14 +26,14 @@ FAST5, HDF5, etc.
 Archive-Generated Files
 =======================
 
-Providing a archive-generated FASTQs for runs is a means of bringing some
+Providing archive-generated FASTQs for runs is a means of bringing some
 consistency to the data we provide.
 By imposing a level of uniformity on these files, we can ensure users know
 what to expect of them and may incorporate them into pipelines with minimal
 friction.
 
 Note that archive-generated FASTQ will not be available in the following
-uncommon scenarios
+uncommon scenarios:
 
 - BAM/CRAM files containing @PG:longranger
 - BAM/CRAM files containing @PG:cellranger
