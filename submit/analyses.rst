@@ -90,11 +90,9 @@ showing that 0 is an acceptable quantity of files for a given type.
 |                         | Taxonomic Reference Set | TAB             | 1                |
 +-------------------------+-------------------------+-----------------+------------------+
 
+..  Raw version of above in ERAPRO:
 ..
-
-    Raw version of above in ERAPRO:
-
-    select afg.analysis_type, fgf.file_group_id, fgf.file_format, concat(concat(fgf.min_file_cnt, '-'), fgf.max_file_cnt) from cv_file_group_format fgf
-    join cv_analysis_file_group afg
-    on fgf.file_group_id = afg.file_group_id
-    order by afg.analysis_type;
+..  select afg.analysis_type, fgf.file_group_id, fgf.file_format, concat(concat(fgf.min_file_cnt, '-'), fgf.max_file_cnt) from cv_file_group_format fgf
+..  join cv_analysis_file_group afg
+..  on fgf.file_group_id = afg.file_group_id
+..  order by afg.analysis_type;
