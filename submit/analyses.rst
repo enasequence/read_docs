@@ -67,45 +67,15 @@ showing that 0 is an acceptable quantity of files for a given type.
 +-------------------------+-------------------------+-----------------+------------------+
 | Analysis Type           | File Group Name         | File Format     | Allowed Quantity |
 +=========================+=========================+=================+==================+
-|                         | AMR Antibiogram         | TAB             | 1                |
-| AMR Antibiogram         +-------------------------+-----------------+------------------+
-|                         | AMR Antibiogram         | README_FILE     | 0-1              |
-+-------------------------+-------------------------+-----------------+------------------+
 | Genome Map              | Bionano Native          | BIONANO_NATIVE  | 1+               |
-+-------------------------+-------------------------+-----------------+------------------+
-| Pathogen Analysis       | Pathogen Analysis       | OTHER           | 1+               |
-|                         +-------------------------+-----------------+------------------+
-|                         | Pathogen Analysis       | VCF             | 0+               |
-|                         +-------------------------+-----------------+------------------+
-|                         | Pathogen Analysis       | GFF             | 0+               |
-|                         +-------------------------+-----------------+------------------+
-|                         | Pathogen Analysis       | README_FILE     | 0-1              |
-|                         +-------------------------+-----------------+------------------+
-|                         | Pathogen Analysis       | FASTA           | 0+               |
-|                         +-------------------------+-----------------+------------------+
-|                         | Pathogen Analysis       | TAB             | 0+               |
-+-------------------------+-------------------------+-----------------+------------------+
-| Processed Reads         | Single or Paired FASTQ  | FASTQ           | 1-2              |
-|                         +-------------------------+-----------------+------------------+
-|                         | Single BAM              | BAM             | 1                |
-|                         +-------------------------+-----------------+------------------+
-|                         | Kallisto Native 1-N     | KALLISTO_NATIVE | 1+               |
-|                         +-------------------------+-----------------+------------------+
-|                         | Single CRAM             | CRAM            | 1                |
 +-------------------------+-------------------------+-----------------+------------------+
 | Reference Alignment     | Single BAM              | BAM             | 1                |
 |                         +-------------------------+-----------------+------------------+
 |                         | Single CRAM             | CRAM            | 1                |
 +-------------------------+-------------------------+-----------------+------------------+
-| Reference Sequence      | Single FASTA            | FASTA           | 1                |
-+-------------------------+-------------------------+-----------------+------------------+
-| Sample Phenotype        | Sample Phenotype        | README_FILE     | 0+               |
-|                         +-------------------------+-----------------+------------------+
-|                         | Sample Phenotype        | PHENOTYPE_FILE  | 1+               |
-+-------------------------+-------------------------+-----------------+------------------+
-| Sequence Annotation     | Sequence Methylation    | GFF             | 1                |
-|                         +-------------------------+-----------------+------------------+
-|                         | Sequence Methylation    | TAB             | 0-2              |
+| PacBio Methylation      | Sequence Methylation    | GFF             | 1                |
+|-------------------------+-------------------------+-----------------+------------------+
+| Sequence Annotation     | Sequence Methylation    | TAB             | 0-2              |
 |                         +-------------------------+-----------------+------------------+
 |                         | Single TAB              | TAB             | 1                |
 |                         +-------------------------+-----------------+------------------+
@@ -120,3 +90,11 @@ showing that 0 is an acceptable quantity of files for a given type.
 |                         | Taxonomic Reference Set | TAB             | 1                |
 +-------------------------+-------------------------+-----------------+------------------+
 
+..
+
+    Raw version of above in ERAPRO:
+
+    select afg.analysis_type, fgf.file_group_id, fgf.file_format, concat(concat(fgf.min_file_cnt, '-'), fgf.max_file_cnt) from cv_file_group_format fgf
+    join cv_analysis_file_group afg
+    on fgf.file_group_id = afg.file_group_id
+    order by afg.analysis_type;
