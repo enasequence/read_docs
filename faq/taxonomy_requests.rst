@@ -258,6 +258,8 @@ Viruses
 Viruses do not fit well into biological classification systems and do not follow the format of binomial nomenclature.
 Instead, descriptive names are formed, usually referencing the host or disease.
 
+NCBI Taxonomy will accept isolate names for well characterized isolates, isolates with commercial interests, or
+those with biological and medical implications.
 Certain viruses, specifically those involved in human health, should be named in accordance to known standards where
 metadata such as strain, host and serotype, are included in the taxon name.
 Some examples:
