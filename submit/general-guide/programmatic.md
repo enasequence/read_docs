@@ -157,6 +157,25 @@ A study can be made immediately public by using `RELEASE` action with the study 
 </SUBMISSION>
 ```
 
+### Submission XML: set study hold date
+
+You can update the release date of a study by specifying its accession alongside a new release date:
+
+```
+<SUBMISSION>
+    <ACTIONS>
+        <ACTION>
+            <HOLD target="TODO: study accession number" HoldUntilDate="TODO: YYYY-MM-DD"/>
+        </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+This applies only to non-public studies.
+It is not possible to suppress a public study by this method.
+
+The new release date must be not more than two years in the future.
+
 ### Submission XML: update existing objects
 
 The `MODIFY` action is used when updating existing objects. A corresponding submission XML
