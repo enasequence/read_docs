@@ -276,7 +276,7 @@ Unix
 ::
 
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh \
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz \
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz \
     local/target/directory
 
 
@@ -286,7 +286,7 @@ Mac OSX
 ::
 
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh \
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz \
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz \
     local/target/directory
 
 
@@ -298,5 +298,5 @@ Windows
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp" ^
     -QT -l 300m -P33001 -i ^
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407ERR164407.fastq.gz ^
+    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ^
     local\target\directory
