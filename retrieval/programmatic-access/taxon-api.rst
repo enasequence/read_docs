@@ -129,7 +129,7 @@ provide the Portal API with the tax ID using the 'links/taxon' endpoint. This ca
 
 **Result:**
 
-.. code-block::
+.. code-block:: bash
 
    result_id	description	entry_cnt	base_cnt	subtree_entry_cnt	subtree_base_cnt
    read_experiment	Experiment	236	12253983418	236	12253983418
