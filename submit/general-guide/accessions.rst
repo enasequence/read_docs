@@ -39,9 +39,9 @@ for ENA, 'D' for DDBJ, or 'S' for NCBI.
 +---------------------------------+----------------------------------+--------------------+
 | | Assembled/Annotated Sequences | | [A-Z]{1}[0-9]{5}.[0-9]+        | | A12345.1         |
 | | (including contig, scaffold   | | [A-Z]{2}[0-9]{6}.[0-9]+        | | AB123456.1       |
-| | and chromosome sequences      | | [A-Z]{2}[0-9]{8}               | | AB12345678.1     |
-| | generated from an assembly    | | [A-Z]{4}[0-9]{2}S?[0-9]{6,8}   | | ABCD01123456.1   |
-| | submission)                   | | [A-Z]{6}[0-9]{2}S?[0-9]{7,9}   | | ABCDEF011234567.1|
+| | and chromosome sequences      | | [A-Z]{2}[0-9]{8}               | | AB12345678       |
+| | generated from an assembly    | | [A-Z]{4}[0-9]{2}S?[0-9]{6,8}   | | ABCD01123456     |
+| | submission)                   | | [A-Z]{6}[0-9]{2}S?[0-9]{7,9}   | | ABCDEF011234567  |
 +---------------------------------+----------------------------------+--------------------+
 | Protein Coding Sequences        | | [A-Z]{3}[0-9]{5}\\.[0-9]+      | | ABC12345.1       |
 |                                 | | [A-Z]{3}[0-9]{7}\\.[0-9]+      | | ABC1234567.1     |
