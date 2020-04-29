@@ -393,7 +393,7 @@ The submission XML declares one or more Webin submission service actions.
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can be submitted programmatically, using CURL on command line or
-using the `Webin submissions portal <../general-guide/submissions-portal.html>`_.
+using the [Webin submissions portal](../general-guide/submissions-portal.html).
 
 ## Submit the XMLs Using CURL
 
