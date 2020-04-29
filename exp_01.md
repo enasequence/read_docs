@@ -41,7 +41,7 @@ For example:
 </DESIGN>
 ```
 
-For controlled vocabulary of restricted fields see the official <a href="ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd">schema</a>.
+For controlled vocabulary of restricted fields see the official <a href="ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd">schema</a>.
 
 + sequencing technology (instrument, platform). Found in the `<PLATFORM>` block.
 

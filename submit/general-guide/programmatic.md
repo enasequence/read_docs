@@ -69,16 +69,16 @@ When using curl each XML file is submitted using the '-F' option:
 
 where the `XMLTYPE` is one of the following POST parameters:
 
-- `SUBMISSION` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.submission.xsd))
-- `STUDY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd))
-- `SAMPLE` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.sample.xsd))
-- `EXPERIMENT` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd))
-- `RUN` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd))
-- `ANALYSIS` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd))
-- `DAC` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.dac.xsd))
-- `POLICY` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.policy.xsd))
-- `DATASET` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/EGA.dataset.xsd))
-- `PROJECT` ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd))
+- `SUBMISSION` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.submission.xsd))
+- `STUDY` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd))
+- `SAMPLE` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd))
+- `EXPERIMENT` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd))
+- `RUN` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd))
+- `ANALYSIS` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd))
+- `DAC` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dac.xsd))
+- `POLICY` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.policy.xsd))
+- `DATASET` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dataset.xsd))
+- `PROJECT` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd))
 
 Below is an example of a sequence read data submission to the Webin test service:
 
@@ -395,7 +395,7 @@ curl -u username:password -F "HOLD_DATE=31-11-2019"  -F "ACTION=ADD" "https://ww
 
 ## Receipt XML
 
-Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.receipt.xsd))
+Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.receipt.xsd))
 is returned.
 
 To know if the submission was successful look in the first line of the `<RECEIPT>` block.

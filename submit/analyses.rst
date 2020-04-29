@@ -18,7 +18,7 @@ Other submission objects may also need submitting before you can submit your sec
 depending on the analysis type. E.g. read alignments require a raw read submission as well as 
 a Study.
 
-The analysis XML format is defined by `SRA.analysis.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd>`_
+The analysis XML format is defined by `SRA.analysis.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_
 XML Schema.
 
 Please note some analysis types require certain object relations so please read the individual submission guides 

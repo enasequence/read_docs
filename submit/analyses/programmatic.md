@@ -9,7 +9,7 @@ into the archive.
 Similarly, the `analysis` object is associated with studies and samples and can
 be used to include data of various other types into the archive.
 
-The analysis XML format is defined by [SRA.analysis.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.analysis.xsd)
+The analysis XML format is defined by [SRA.analysis.xsd](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd)
 XML Schema.
 
 ## Object Relationships

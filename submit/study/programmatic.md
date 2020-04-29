@@ -27,8 +27,8 @@ A study (also referred to as a project) object is submitted in XML format like t
 
 You can register one or more studies at the same time by using one `<PROJECT></PROJECT>` block for each study.
 
-The study XML format is defined by the [ENA.project.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/ENA.project.xsd) XML schema.
-Studies can also be submitted using the [SRA.study.xsd](ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.study.xsd) XML schema.
+The study XML format is defined by the [ENA.project.xsd](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd) XML schema.
+Studies can also be submitted using the [SRA.study.xsd](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd) XML schema.
 
 ## Create the Study XML
 

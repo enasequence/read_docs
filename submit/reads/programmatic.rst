@@ -10,8 +10,8 @@ sequencing platform and library protocols.
 A run object represents a lane (or equivalent) on an sequencing machine
 and is used to attach sequence read data to experiments.
 
-The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd>`_
-XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.run.xsd>`_
+The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_
+XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
 
 Object relationships
@@ -328,7 +328,7 @@ Experiment XML: library information
 The experiment contains a `<LIBRARY_DESCRIPTOR>` block in order to capture
 basic library information within the `<LIBRARY_STRATEGY>`, `<LIBRARY_SOURCE>` and `<LIBRARY_SELECTION>`
 elements. These are controlled value fields and the permitted values are listed in the
-`SRA.experiment.xsd <ftp://ftp.sra.ebi.ac.uk/meta/xsd/sra_1_5/SRA.experiment.xsd>`_ XML Schema.
+`SRA.experiment.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_ XML Schema.
 
 .. code-block:: xml
 
