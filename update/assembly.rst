@@ -19,11 +19,11 @@ update rather than a new assembly.
 If you are updating a chromosome-level assembly, all chromosomes in the original assembly must be present in the
 updated version, with identical name.
 Webin-CLI does not currently validate for this and the error will only be caught after submission.
-If you believe you may have mistakenly submitted an update with a chromosome absent of incorrectly named, please
+If you believe you may have mistakenly submitted an update with a chromosome absent or incorrectly named, please
 contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 The chromosome name is the value our pipeline uses to identify which sequence in your update should be considered the
-successor to each of the original chromosome.
+successor to each of the original chromosomes.
 The name is specified in the chromosome list file, as well as in the identifier lines of your FASTA or the 'AC * '
 lines of your EMBL file.
 
