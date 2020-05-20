@@ -52,7 +52,7 @@ If the taxon you wish to use does not exist in the taxonomy database, you will n
 
 **Contact us for other metadata updates:**
 The advice given here pertains to updating the sequence and annotation (if applicable) of your assembly.
-If you wish to change the assembly metadata values, such as the TPA flag, please contact our
+If you wish to change the assembly metadata values, such as the coverage, please contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 **State of publicity will be the same:**
