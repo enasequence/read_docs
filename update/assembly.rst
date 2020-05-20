@@ -46,7 +46,7 @@ assembly version.
 If there is a problem with the taxonomy of your sample, please contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 This process will require first that the sample taxonomy be correct, so you are welcome to
-`update your sample first </metadata/interactive.html>`_.
+`update your sample first <metadata/interactive.html>`_.
 If the taxon you wish to use does not exist in the taxonomy database, you will need to
 `request its addition <../faq/taxonomy_requests.html>`_.
 
