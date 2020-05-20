@@ -7,7 +7,8 @@ creation of a new version of the assembly.
 
 Updates to assemblies are performed in very similar fashion to submission of assemblies.
 It is therefore sufficient to follow the guidance in the `assembly submission <../submit/assembly.html>`_ pages, while
-considering the below factors:
+considering the below factors. Note that this information applies only to updating the sequence and annotation, not
+the general assembly metadata.
 
 **Study and sample reference must be maintained:**
 To submit an assembly update, make sure you reference the same study and sample accessions as were used in the original
@@ -60,8 +61,8 @@ If the original assembly is already public, then the update will be made public 
 However, please be aware that this process can take some time to complete, and you should allow at least a week after
 successful submission for your update to be apparent.
 
-**Allow 30 minutes some time:**
-If the original assembly was submitted less than half an hour ago, the update will fail after you submit it.
+**Allow 30 minutes after original submission:**
+If the update is submitted less than 30 minutes after the original submission, it will fail after submission.
 This is a failsafe to prevent duplicate submissions, but does occasionally inconvenience some genuine use cases.
 
 **Metagenomic Assemblies:**
