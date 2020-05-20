@@ -42,9 +42,13 @@ Note this will result in new accession numbers.
 Please contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ to request suppression of the existing
 assembly version.
 
-**Some metadata can be updated:**
-However, not all can. Please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for queries about this
-topic.
+**Taxonomy changes require our assistance:**
+If there is a problem with the taxonomy of your sample, please contact our
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+This process will require first that the sample taxonomy be correct, so you are welcome to
+`update your sample first </metadata/interactive.html>`_.
+If the taxon you wish to use does not exist in the taxonomy database, you will need to
+`request its addition <../faq/taxonomy_requests.html>`_.
 
 **State of publicity will be the same:**
 If the original assembly is already public, then the update will be made public as soon as processing is complete.
