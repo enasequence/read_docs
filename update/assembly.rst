@@ -50,10 +50,19 @@ This process will require first that the sample taxonomy be correct, so you are 
 If the taxon you wish to use does not exist in the taxonomy database, you will need to
 `request its addition <../faq/taxonomy_requests.html>`_.
 
+**Contact us for other metadata updates:**
+The advice given here pertains to updating the sequence and annotation (if applicable) of your assembly.
+If you wish to change the assembly metadata values, such as the TPA flag, please contact our
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+
 **State of publicity will be the same:**
 If the original assembly is already public, then the update will be made public as soon as processing is complete.
 However, please be aware that this process can take some time to complete, and you should allow at least a week after
 successful submission for your update to be apparent.
+
+**Allow 30 minutes some time:**
+If the original assembly was submitted less than half an hour ago, the update will fail after you submit it.
+This is a failsafe to prevent duplicate submissions, but does occasionally inconvenience some genuine use cases.
 
 **Metagenomic Assemblies:**
 Primary and binned metagenome assemblies cannot be updated.
