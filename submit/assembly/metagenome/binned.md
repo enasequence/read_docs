@@ -138,7 +138,7 @@ For binned metagenome assemblies, long term stable accession numbers that can be
 
 Assembly names must:
 - match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9 _#\-\.]*$
-- be shorter than 100 characters
+- not be longer than 50 characters
 - not include the name of the organism assembled
 
 ### Sequence validation
