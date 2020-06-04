@@ -93,6 +93,7 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias)
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: The unique assembly name
+- ASSEMBLY_TYPE: 'metatranscriptome' (only valid for Webin-CLI v3.0.0 or later)
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform, or comma-separated list of platforms
 - RUN_REF: Comma separated list of run accession(s) (optional)
@@ -108,6 +109,7 @@ For example, the following manifest file represents a genome assembly consisting
 STUDY   TODO
 SAMPLE  TODO
 ASSEMBLYNAME    TODO
+ASSEMBLY_TYPE metatranscriptome
 PROGRAM TODO
 PLATFORM    TODO
 FASTA   metatranscriptome.fasta.gz
