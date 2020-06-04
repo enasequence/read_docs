@@ -1,63 +1,36 @@
-==============================================
-Submitting A Metagenome-Assembled Genome (MAG)
-==============================================
+======================================================
+Submitting Environmental Single-Cell Amplified Genomes
+======================================================
 
-- `What is considered a MAG in ENA?`_
 - `Introduction`_
-- `Stage 1: Pre-register study, samples and lower level assemblies`_
+- `Stage 1: Pre-register study and samples`_
 - `Stage 2: Prepare the files`_
 - `Stage 3: Validate and submit the files`_
 - `Assigned accession numbers`_
 - `Validation rules`_
 
 
-What is considered a MAG in ENA?
-================================
-
-A **Metagenome-Assembled Genome (MAG)** is a single-taxon assembly based on one or more binned metagenomes that
-has been asserted to be a close representation to an actual individual genome (that could match an already existing
-isolate or represent a novel isolate).
-
-MAG submissions are submitted at the same level as isolate genomes and are distributed within INSDC in the same way.
-As an environmental sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone
-to contamination, we request only the highest quality unique-taxon submissions are submitted as MAGs.
-
-There should only be **one MAG** submitted for each species within a biome. This can be determined using a
-de-replication step or by choosing the highest quality representative genome for each predicted species.
-
-It is recommended that for all MAG submissions, all lower level assemblies are submitted first. This means a MAG
-submission can be used to highlight the best and most representative derived assemblies from a binned metagenome set
-and ensures the methods used to derive your MAG are reproducible.
-
-- `Submitting A Primary Metagenome Assembly <primary.html>`_
-- `Submitting Binned Metagenome Assemblies <binned.html>`_
-
-If your study is small-scale and you only intend to submit a very small number of **stand-alone MAGs**, lower level
-metagenome assembly submissions may not be necessary, though are still recommended where possible. Please contact
-our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ if you have any questions.
-
-
 Introduction
 ============
 
-Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) using the
-`Webin command line submission interface <../../general-guide/webin-cli.html>`_ with ``-context genome``.
+Environmental SAG assemblies can be submitted to the European Nucleotide Archive (ENA) using the
+`Webin command line submission interface <../general-guide/webin-cli.html>`_ with ``-context genome``.
 
 Please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ if you intend to submit an assembly
 assembled from third party data.
 
-Each MAG from an environmental source requires a virtual derived **MAG** sample so please follow instructions carefully.
+Each SAG from an environmental source requires a virtual derived **SAG** sample so please follow instructions carefully.
 
 Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons,
 bacteriophages, prokaryotic and eukaryotic genomes.
 
-A Metagenome-Assembled Genome consists of:
+An environmental SAG assembly consists of:
 
 - General assembly information
 
    - Study accession or unique name (alias)
-   - **Binned** Sample accession or unique name (alias) or **Environmental** Sample accession or unique name (alias)
-   - **MAG** Sample accession or unique name (alias)
+   - **Environmental** Sample accession or unique name (alias)
+   - **SAG** Sample accession or unique name (alias)
    - Assembly name
    - Assembly program
    - Sequencing platform
@@ -75,72 +48,58 @@ A Metagenome-Assembled Genome consists of:
 For assembly submission purposes, the term 'chromosome' should be understood to include organelles
 (e.g. mitochondria and chloroplasts), plasmids and viral segments.
 
-The below image illustrates the stages of the MAG submission process:
+The below image illustrates the stages of the environmental SAG submission process:
 
-.. image:: ../../images/webin-cli_04.png
+.. image:: ../images/webin-cli_04.png
 
+Stage 1: Pre-register study and samples
+=======================================
 
-Stage 1: Pre-register study, samples and lower level assemblies
-===============================================================
-
-Each submission must be associated with a pre-registered study and a **MAG** sample.
+Each submission must be associated with a pre-registered study and a **SAG** sample.
 
 Genome assemblies except primary metagenomes are uniquely associated with a study and a sample.
 
-If you have not done so already, please register a study. If you intend to submit your MAG with annotation, make
+If you have not done so already, please register a study. If you intend to submit your SAG with annotation, make
 sure to register locus tag prefixes during this stage.
 
-- `Register a Study <../../study.html>`_
+- `Register a Study <../study.html>`_
 
-It is recommended to also submit all lower level metagenomic assemblies and raw reads before submitting MAGs to help
-record your methods and make your data reproducible.
-
-- `Submitting Raw Reads <../../reads.html>`_
-- `Submitting A Primary Metagenome Assembly <primary.html>`_
-- `Submitting Binned Metagenome Assemblies <binned.html>`_
-
-Stand-alone MAG submission
---------------------------
-
-If you intend to submit only a small number of stand-alone MAGs, submitting lower level assemblies is not necessary.
-In this case, please make sure you have registered an **environmental** sample. This will represents the original
-sequenced biomaterial that your MAG was derived from.
-
-Your **environmental** samples are the same samples used for raw read submission. If you have not yet registered
-an environmental sample, please make sure the appropriate environmental checklist is chosen for this and an
-`environmental taxon <../../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ is used (e.g. aquatic
+It is also strongly recommended to submit the reads from which the assembly was assembled. When submitting the raw reads
+in a Single-Cell Amplification study, these should remain multiplexed in BAM format and
+be submitted to an **environmental** sample. This sample should use the most appropriate environmental checklist and an
+`environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic
 metagenome (tax id: 1169740)).
 
-- `Register a Sample <../../samples.html>`_
+- `Submitting Raw Reads <../reads.html>`_
 
-If you do not intend to submit `raw reads <../../reads.html>`_ as part of your stand-alone MAG submission,
-please see `here <../../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
+If you do not intend to submit raw reads as part of your SAG submission, please make sure you have registered
+**environmental** samples anyway. These will represents the original sequenced biomaterial that your SAG was derived from.
+You will also need to follow `these guidelines <../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
 for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be
 released manually in order to be available to the public.
 
-Registering MAG samples
+SAG sample registration
 -----------------------
 
-Each **MAG** assembly submission must be associated with a **MAG** sample. This is because a MAG is not an assembly
+Each **SAG** assembly submission must be associated with a **SAG** sample. This is because a SAG is not an assembly
 of the whole set of raw data but an assembly derived from a smaller subset of those data. These virtual
 samples represents the subset of that data and hold all metadata related to the taxonomy of that subset as well as
 methods used to derive it.
 
 .. image:: ../images/metadata_model_derivedanalysis.png
 
-It should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as it can
-be and use the specific `GSC MIMAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000047>`_ checklist.
+It should be as `specific in taxonomy <../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as it can
+be and use the specific `GSC MISAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000048>`_ checklist.
 
-Please make sure these **MAG** samples correctly reference either the **binned** sample (or **environmental**
-sample in the case of stand-alone MAGs) that the MAG was derived from. This can be done from within the checklist
-using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you
-can list these with a comma separated list or range.
+Please make sure these **SAG** samples correctly reference the **environmental** sample  that the SAG was derived from.
+This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was
+derived from multiple samples or runs you can list these with a comma separated list or range.
 
 You should also reference the source sample in the description:
 
-“This sample represents a MAG derived from the metagenomic sample ERSXXXXX”
+“This sample represents a Single-Cell Amplified Genome derived from the environmental sample ERSXXXXX”
 
-- `Register a Sample <../../samples.html>`_
+- `Register a Sample <../samples.html>`_
 
 Stage 2: Prepare the files
 ==========================
@@ -160,12 +119,12 @@ Contig assembly
 Consists of the following files:
 
 - 1 manifest file
-- 1 FASTA file OR 1 `flat file <../../fileprep/assembly.html#flat-file>`_
+- 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
 
 This assembly level only requires information on the sequences and annotation (if any).
 You will receive an error if less than 2 or more than 1,000,000 sequences are submitted. If you have less than 2
 sequences, then you will need to submit at a higher assembly level or as
-`template sequences <../../sequence/webin-cli-flatfile.html>`_.
+`template sequences <../sequence/webin-cli-flatfile.html>`_.
 
 Scaffold assembly
 -----------------
@@ -173,8 +132,8 @@ Scaffold assembly
 Consists of the following files:
 
 - 1 manifest file
-- 1 FASTA file OR 1 `flat file <../../fileprep/assembly.html#flat-file>`_
-- 1 `AGP files <../../fileprep/assembly.html#agp-file>`_
+- 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
+- 1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
 This assembly level requires information on the sequences and annotation (if any).
 It also allows the submitter to provide an AGP file to give instructions for the assembly of the scaffolds from the
@@ -186,10 +145,10 @@ Chromosome assembly
 Consists of the following files:
 
 - 1 manifest file
-- 1 FASTA file OR 1 `flat file <../../fileprep/assembly.html#flat-file>`_
-- 1 `chromosome list file <../../fileprep/assembly.html#chromosome-list-file>`_
-- 0-1 `unlocalised list files <../../fileprep/assembly.html#unlocalised-list-file>`_
-- 0-1 `AGP files <../../fileprep/assembly.html#agp-file>`_
+- 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
+- 1 `chromosome list file <../fileprep/assembly.html#chromosome-list-file>`_
+- 0-1 `unlocalised list files <../fileprep/assembly.html#unlocalised-list-file>`_
+- 0-1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
 This assembly level allows the submission of fully assembled chromosomes (including organelles, plasmids, and viral
 segments). This requires information on the sequences and annotation (if any) and submission of a chromosome list file
@@ -216,16 +175,15 @@ Manifest file
 -------------
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
-
 - Field name (first column): case insensitive field name
 - Field value (second column): field value
 
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
-- SAMPLE: MAG sample accession or unique name (alias)
+- SAMPLE: **SAG** Sample accession or unique name (alias)
 - ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY_TYPE: 'Metagenome-Assembled Genome (MAG)'
+- ASSEMBLY_TYPE: 'Environmental Single-Cell Amplified Genome (SAG)'
 - COVERAGE: The estimated depth of sequencing coverage
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform, or comma-separated list of platforms
@@ -240,32 +198,31 @@ The following file name fields are supported in the manifest file:
 
 - FASTA: sequences in fasta format
 - FLATFILE: sequences in EMBL-Bank flat file format
-- AGP: sequences in `AGP format <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_
+- AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
 - CHROMOSOME_LIST: list of chromosomes
 
-For example, the following manifest file represents a MAG consisting of contigs provided in one FASTA file:
+For example, the following manifest file represents an environmental single-cell assembly consisting of contigs provided in one FASTA file:
 
 ::
 
     STUDY   TODO
     SAMPLE   TODO
     ASSEMBLYNAME   TODO
-    ASSEMBLY_TYPE   TODO
+    ASSEMBLY_TYPE   Environmental Single-Cell Amplified Genome (SAG)
     COVERAGE   TODO
     PROGRAM   TODO
     PLATFORM   TODO
     MINGAPLENGTH   TODO
     MOLECULETYPE   genomic DNA
-    FASTA   metagenome_assembled_genome.fasta.gz
-
+    FASTA   single-cell_genome.fasta.gz
 
 Stage 3: Validate and submit the files
 ======================================
 
 Files are validated, uploaded and submitted using the
-`Webin command line submission interface <../../general-guide/webin-cli.html>`_.
+`Webin command line submission interface <../general-guide/webin-cli.html>`_.
 
-Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_ documentation for
+Please refer to the `Webin command line submission interface <../general-guide/webin-cli.html>`_ documentation for
 more information about the submission process.
 
 
@@ -282,7 +239,7 @@ the `Webin submissions portal <../../general-guide/submissions-portal.html>`_ or
 <../../general-guide/reports-service.html>`_ using the ERZ accession number.
 This accession should be used to refer to the assembly in any conversations with helpdesk staff.
 
-For metagenome assemblies, long term stable accession numbers that can be used in publications are:
+For Environmental Single-cell Amplified Genome assemblies, long term stable accession numbers that can be used in publications are:
 
 - Study accession (PRJEBxxxxx) assigned at time of study registration.
 - Sample accession (SAMEAxxxxxx) assigned at time of sample registration.
@@ -290,10 +247,9 @@ For metagenome assemblies, long term stable accession numbers that can be used i
 - Sequence accession(s) assigned once the assembly has been fully processed by ENA.
 
 Submitters can retrieve the genome and sequence accession numbers from the
-`Webin submissions portal <../../general-guide/submissions-portal.html>`_ or from the
-`Webin reports service <../../general-guide/reports-service.html>`_.
+`Webin submissions portal <../general-guide/submissions-portal.html>`_ or from the
+`Webin reports service <../general-guide/reports-service.html>`_.
 These accession numbers are also sent to the submitters by e-mail.
-
 
 Validation rules
 ================
@@ -324,7 +280,6 @@ Chromosome names must:
 - match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9_#\-\.]*$
 - be shorter than 33 characters
 - not contain any of the following as part of their name (case insensitive):
-
     - 'chr'
     - 'chrm'
     - 'chrom'
@@ -333,14 +288,12 @@ Chromosome names must:
     - 'linkage-group'
     - 'linkage_group'
     - 'plasmid'
-
 - be unique within an assembly
 
 Sequence validation
 -------------------
 
 Sequences must:
-
 - have unique names within an assembly
 - be at least 20bp long
 - not have terminal Ns
