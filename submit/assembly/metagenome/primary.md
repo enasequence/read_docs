@@ -11,7 +11,7 @@ A **primary metagenome** assembly is a metagenome assembly prior to binning from
 A primary metagenome assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
-   - Environmetal Sample accession or unique name (alias)
+   - Environmental Sample accession or unique name (alias)
    - Assembly program
    - Sequencing platform
    - Minimum gap length
