@@ -89,6 +89,7 @@ FASTQ read2.fastq.gz
 - CAPILLARY: Sequencers based on capillary electrophoresis technology manufactured by LifeTech (formerly Applied BioSciences).
 - OXFORD_NANOPORE: Oxford Nanopore platform type. nanopore-based electronic single molecule analysis.
 - BGISEQ
+- DNBSEQ
 
 <a name="instrument"></a>
 ### Permitted values for instrument
@@ -135,6 +136,10 @@ FASTQ read2.fastq.gz
 - GridION
 - PromethION
 - BGISEQ-500
+- DNBSEQ-T7
+- DNBSEQ-G400
+- DNBSEQ-G50
+- DNBSEQ-G400 FAST
 - unspecified
 
 <a name="selection"></a>
