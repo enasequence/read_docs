@@ -198,7 +198,7 @@ The following file name fields are supported in the manifest file:
 
 - FASTA: sequences in fasta format
 - FLATFILE: sequences in EMBL-Bank flat file format
-- AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
+- AGP: Sequences in `AGP format <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_
 - CHROMOSOME_LIST: list of chromosomes
 
 For example, the following manifest file represents an environmental single-cell assembly consisting of contigs provided in one FASTA file:
