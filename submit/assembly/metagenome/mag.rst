@@ -126,7 +126,7 @@ of the whole set of raw data but an assembly derived from a smaller subset of th
 samples represents the subset of that data and hold all metadata related to the taxonomy of that subset as well as
 methods used to derive it.
 
-.. image:: ../images/metadata_model_derivedanalysis.png
+.. image:: ../../images/metadata_model_derivedanalysis.png
 
 It should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as it can
 be and use the specific `GSC MIMAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000047>`_ checklist.
