@@ -56,7 +56,6 @@ A Metagenome-Assembled Genome consists of:
 - General assembly information
 
    - Study accession or unique name (alias)
-   - **Binned** Sample accession or unique name (alias) or **Environmental** Sample accession or unique name (alias)
    - **MAG** Sample accession or unique name (alias)
    - Assembly name
    - Assembly program
@@ -99,25 +98,6 @@ record your methods and make your data reproducible.
 - `Submitting A Primary Metagenome Assembly <primary.html>`_
 - `Submitting Binned Metagenome Assemblies <binned.html>`_
 
-Stand-alone MAG submission
---------------------------
-
-If you intend to submit only a small number of stand-alone MAGs, submitting lower level assemblies is not necessary.
-In this case, please make sure you have registered an **environmental** sample. This will represents the original
-sequenced biomaterial that your MAG was derived from.
-
-Your **environmental** samples are the same samples used for raw read submission. If you have not yet registered
-an environmental sample, please make sure the appropriate environmental checklist is chosen for this and an
-`environmental taxon <../../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ is used (e.g. aquatic
-metagenome (tax id: 1169740)).
-
-- `Register a Sample <../../samples.html>`_
-
-If you do not intend to submit `raw reads <../../reads.html>`_ as part of your stand-alone MAG submission,
-please see `here <../../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
-for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be
-released manually in order to be available to the public.
-
 Registering MAG samples
 -----------------------
 
@@ -128,17 +108,33 @@ methods used to derive it.
 
 .. image:: ../../images/metadata_model_derivedanalysis.png
 
-It should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as it can
+**MAG** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as they can
 be and use the specific `GSC MIMAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000047>`_ checklist.
 
-Please make sure these **MAG** samples correctly reference either the **binned** sample (or **environmental**
-sample in the case of stand-alone MAGs) that the MAG was derived from. This can be done from within the checklist
-using the mandatory “sample derived from” attribute. If the assembly was derived from multiple samples or runs you
-can list these with a comma separated list or range.
+Please make sure these **MAG** samples correctly reference the sample they were derived from (e.g. a **binned**
+sample used to submit a metagenomic bin or the **environmental** sample used to submit the raw reads the MAG was derived from).
+
+This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple
+samples or runs you can list these with a comma separated list or range.
 
 You should also reference the source sample in the description:
 
 “This sample represents a MAG derived from the metagenomic sample ERSXXXXX”
+
+.. admonition:: What if I only want to submit MAGs and not lower level assemblies or reads?
+
+   If you do not intend to submit raw reads or lower level assemblies as part of your metagenome assembly submission,
+   please still register an **environmental** sample and reference this within your **MAG** sample to show the source of the data
+   and reference this within your **MAG** sample.
+   Registering an **environmental** sample follows the same method as regular sample registration.
+   Make sure to use the most appropriate environmental checklist and an
+   `environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic metagenome (tax id: 1169740)).
+   Please also see `here <../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
+   for details on how to release these samples. If no data is associated with the **environmental** sample, it needs to be
+   released manually in order to be available to the public.
+
+The methods for submitting metagenomic studies and samples follow the same process as any other study/sample submission.
+Follow the links for more information.
 
 - `Register a Sample <../../samples.html>`_
 
