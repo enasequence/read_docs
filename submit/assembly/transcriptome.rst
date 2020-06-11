@@ -69,21 +69,6 @@ Transcriptome assemblies should be of a high enough quality to fulfil the follow
 
 5. Any vector sequence or primers should be removed.
 
-Sequence names
---------------
-
-Sequences must have a unique name within the submission that is provided in the fasta or flat files.
-
-The sequence name is extracted from the FASTA header for FASTA files. For example the following header contains the name 'contig1':
-
-``>contig1``
-
-The sequence name is extracted from the AC * line for flat files and must be prefixed with a '_'.
-For example the following AC * line defines name 'contig1':
-
-``AC * _contig1``
-
-
 Manifest file
 -------------
 
@@ -119,6 +104,26 @@ For example, the following manifest file represents a genome assembly consisting
     PROGRAM TODO
     PLATFORM    TODO
     FASTA   transcriptome.fasta.gz
+
+
+Fasta file
+----------
+
+Unannotated sequences should be submitted as a Fasta file.
+
+The sequence name is extracted from the fasta header. For example the following header contains the name 'contig1':
+
+`>contig1`
+
+Flat file
+---------
+
+Annotated sequences must be submitted using an EMBL-Bank flat file.
+
+The sequence name is extracted from the AC * line and must be prefixed with a '_'.
+For example the following AC * line defines name 'contig1':
+
+`AC * _contig1`
 
 
 Stage 3: Validate and submit the files

@@ -77,22 +77,6 @@ Transcriptome assemblies should be of a high enough quality to fulfil the follow
 
 6. Any vector sequence or primers should be removed.
 
-
-Sequence names
---------------
-
-Sequences must have a unique name within the submission that is provided in the fasta or flat files.
-
-The sequence name is extracted from the FASTA header for FASTA files. For example the following header contains the name 'contig1':
-
-``>contig1``
-
-The sequence name is extracted from the AC * line for flat files and must be prefixed with a '_'.
-For example the following AC * line defines name 'contig1':
-
-``AC * _contig1``
-
-
 Manifest file
 -------------
 
