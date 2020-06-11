@@ -7,8 +7,7 @@ Metatranscriptome assemblies can be submitted to the European Nucleotide Archive
 A metatranscriptome assembly consists of:
 - General assembly information
    - Study accession or unique name (alias)
-   - **Environmetal** Sample accession or unique name (alias)
-   - **Species** Sample accession or unique name (alias) *for species level assemblies*
+   - Environmental Sample accession or unique name (alias)
    - Assembly program
    - Sequencing platform
 - Sequences
@@ -20,34 +19,9 @@ The following picture illustrates the stages of the transcriptome assembly submi
 
 ## Stage 1: Pre-register study and sample
 
-Each submission must be associated with a pre-registered study and 1 or more pre-registered
-metagenomic samples.
+Each submission must be associated with a pre-registered study and a pre-registered environmental sample. This should be the same sample used for submitting raw reads. Please make sure the appropriate environmental checklist is chosen for this and an environmental taxon is used (e.g. aquatic metagenome (tax id: 1169740)). See the available environmental taxa in the [ENA Tax Portal](https://www.ebi.ac.uk/ena/data/view/Taxon:408169). Click on the *Tax tree* tab and click the '+' icons to expand the categories.
 
 For transcriptomic assemblies, raw reads must also be submitted to give context to the data.
-
-The type of sample you submit depends on the level of your transcriptomic assembly. All metatranscriptomeassemblies should have an **environmental** sample registered that represents where the originalsequencing data was extracted from. This should be the same sample used for submitting raw reads.Please make sure the appropriate environmental checklist is chosen for this and an environmental taxon is used(e.g. aquatic metagenome (tax id: 1169740)).
-
-See the available environmental taxa in the [ENA Tax Portal](https://www.ebi.ac.uk/ena/data/view/Taxon:408169).
-Click on the *Tax tree* tab and click the '+' icons to expand the categories.
-
-An additional sample may be required if you assembled your transcriptome to species level.
-The sample you reference for your assembly depends on the level of taxonomy the assembly refers to.
-
-### Unknown taxa assembly
-
-If you are submitting a transcriptomic assembly where the taxa are still unknown, you only need to reference the **environmental** sample. This means you are not required to pre-register any further samples.
-
-### Known taxon assembly
-
-If the transcriptomic assembly represents an individual species from a metagenomic sample,you should register an additional sample with the MIMAGs checklist.
-
-Please make sure these **species** samples correctly reference the original sample the data was assembled from within the checklist using the mandatory "Sample derived from" attribute. You should also reference the **environmental** sample in the description as one of the following:
-
-"This sample represents an assembly from the metatranscriptomic sample ERSXXXXX"
-
-OR
-
-"This sample represents an assembly from the metatranscriptomic run ERRXXXXX"
 
 The methods for submitting these studies follow the same process as any other study/sample/read submission. Follow the links for more information.
 
