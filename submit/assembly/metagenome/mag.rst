@@ -133,7 +133,7 @@ You should also reference the source sample in the description:
    for details on how to release these samples. If no data is associated with the **environmental** sample, it needs to be
    released manually in order to be available to the public.
 
-The methods for submitting metagenomic studies and samples follow the same process as any other study/sample submission.
+The methods for submitting metagenomic samples follow the same process as any other sample submission.
 Follow the links for more information.
 
 - `Register a Sample <../../samples.html>`_
