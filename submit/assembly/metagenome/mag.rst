@@ -32,7 +32,7 @@ and ensures the methods used to derive your MAG are reproducible.
 - `Submitting A Primary Metagenome Assembly <primary.html>`_
 - `Submitting Binned Metagenome Assemblies <binned.html>`_
 
-If your study is small-scale and you only intend to submit a very small number of **stand-alone MAGs**, lower level
+If your study is small-scale and you only intend to submit a very small number of MAGs, lower level
 metagenome assembly submissions may not be necessary, though are still recommended where possible. Please contact
 our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ if you have any questions.
 
