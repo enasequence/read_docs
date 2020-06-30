@@ -66,7 +66,7 @@ Note that not all fields can be edited: the sample alias and accession are immut
 
 .. image:: ../images/mod_05_p02_b.png
 
-This method is useful for one-off edits but it is not feasible for editing many samples at once. For this you can use the `programmatic method <../update/programmatic-sample.html>`_.
+This method is useful for one-off edits but it is not feasible for editing many samples at once. For this you can use the `programmatic method <programmatic-sample.html>`_.
 
 
 Experiment And Run Edits

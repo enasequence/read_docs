@@ -96,9 +96,8 @@ For example, using curl or pasting the url in the browser for "mixed culture" lo
    ]
 
 
-Please see our `guide on exploring taxonomy <../retrieval/programmatic-access/taxonomy.html>`_ for more advice on
+Please see our `guide on exploring taxonomy <../retrieval/programmatic-access/taxon-api.html>`_ for more advice on
 exploring our taxonomy services programmatically.
-
 
 Environmental Taxonomic Classifications
 =======================================

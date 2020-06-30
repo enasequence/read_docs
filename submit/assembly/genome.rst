@@ -29,8 +29,8 @@ A genome assembly submission includes:
 
 - General assembly information
 
-   - Study accession
-   - Sample accession
+   - Study accession or unique name (alias)
+   - Sample accession or unique name (alias)
    - Assembly name
    - Assembly type
    - Assembly program
@@ -59,7 +59,7 @@ Stage 1: Pre-Register Study And Sample
 
 Each submission must be associated with a pre-registered study and a sample.
 
-Genome assemblies except metagenomes are uniquely associated with a study and a sample.
+Genome assemblies except primary metagenomes are uniquely associated with a study and a sample.
 When assemblies are updated they must be re-submitted with the same study and sample as in the original submission.
 
 - `Register a Study <../study.html>`_
@@ -111,7 +111,7 @@ Contig Assembly
 Consists of the following files:
 
 - 1 manifest file
-- 1 FASTA file OR 1 flat file
+- 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
 
 This assembly level only requires information on the sequences and annotation (if any).
 You will receive an error if less than 2 or more than 1,000,000 sequences are submitted.
@@ -124,8 +124,8 @@ Scaffold Assembly
 Consists of the following files:
 
 - 1 manifest file
-- 1 FASTA file OR 1 flat file
-- 1 AGP file
+- 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
+- 1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
 This assembly level requires information on the sequences and annotation (if any).
 It also allows the submitter to provide an AGP file to give instructions for the assembly of the scaffolds
@@ -137,10 +137,10 @@ Chromosome Assembly
 Consists of the following files:
 
 - 1 manifest file
-- 1 FASTA file OR 1 flat file
-- 1 chromosome list file
-- 0-1 unlocalised list files
-- 0-1 AGP files
+- 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
+- 1 `chromosome list file <../fileprep/assembly.html#chromosome-list-file>`_
+- 0-1 `unlocalised list files <../fileprep/assembly.html#unlocalised-list-file>`_
+- 0-1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
 This assembly level allows the submission of fully assembled chromosomes including organelles, plasmids, and viral
 segments. This requires information on the sequences and annotation (if any) and submission of a chromosome list file
@@ -192,7 +192,7 @@ The following file name fields are supported in the manifest file:
 
 - FASTA: sequences in fasta format
 - FLATFILE: sequences in EMBL-Bank flat file format
-- AGP: Sequences in `AGP format <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_
+- AGP: sequences in `AGP format <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_
 - CHROMOSOME_LIST: list of chromosomes
 - UNLOCALISED_LIST: list of unlocalised sequences
 
@@ -210,12 +210,6 @@ For example, the following manifest file represents a genome assembly consisting
     MINGAPLENGTH   TODO
     MOLECULETYPE   genomic DNA
     FASTA   genome.fasta.gz
-
-
-Other Files
------------
-
-Other genome assembly data files are described in `Genome Assembly Data Formats <../fileprep/assembly.html>`_.
 
 
 Stage 3: Validate And Submit The Files
@@ -263,8 +257,8 @@ are described here.
 Sample And Study Validation
 ---------------------------
 
-- Sample and study (BioProject) pair must be unique for an assembly (except metagenomes)
-- Sample taxonomic classification must be species level or below (or equivalent) within NCBI taxonomy.
+- Sample and study (BioProject) pair must be unique for an assembly (except primary metagenomes)
+- Sample taxonomic classification must be species rank or below (or equivalent) within NCBI taxonomy.
 
 Assembly Name Validation
 ------------------------
@@ -272,7 +266,7 @@ Assembly Name Validation
 Assembly names must:
 
 - match the pattern: ^[A-Za-z0-9][A-Za-z0-9 _#\-\.]*$
-- be shorter than 100 characters
+- not be longer than 50 characters
 - not include the name of the organism assembled
 
 Chromosome Name Validation
