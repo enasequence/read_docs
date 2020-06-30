@@ -43,6 +43,18 @@ Note this will result in new accession numbers.
 Please contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ to request suppression of the existing
 assembly version.
 
+**Use a new ASSEMBLYNAME:** The Webin-CLI manifest format includes an 'ASSEMBLYNAME' field. This must be unique in
+each of your submissions, whether they are updates or new assemblies. Using a pre-existing assembly name will result
+in an error informing you the object you are trying to submit already exists:
+
+::
+
+    ERROR: In analysis, alias:"webin-genome-ASSEMBLYNAME", accession:"". The object being added already exists in the submission account with accession: "ERZxxxxxxx". The submission has failed because of a system error.
+
+
+To check the name used for the previous submission, look up its ERZ accession in interactive Webin. Enter the XML view
+and find the 'alias' field, which will resemble "webin-genome-ASSEMBLYNAME".
+
 **Taxonomy changes require our assistance:**
 If there is a problem with the taxonomy of your sample, please contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
