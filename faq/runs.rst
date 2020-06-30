@@ -2,17 +2,26 @@
 Common Run Submission Errors
 ============================
 
-| Runs are objects in the ENA database which wrap read files of types such as FASTQ and BAM.
-| Before they can be submitted, these files must be uploaded to your Webin account's FTP directory.
+| When you submit read data to ENA, we store and accession these as 'Runs'.
+| As part of the submission process, read data files must be uploaded to your Webin account's FTP directory.
   After you complete the submission, several validation procedures are applied to the file(s).
-  If validation is successful, files are archived.
-  Otherwise, you will be notified of the error.
+  If validation is successful, files are archived, otherwise all account contacts are notified of the error(s)
 |
 | The errors discussed here typically do not require you to repeat the submission in its entirety.
-  It is usually sufficient to reupload the file or correct the error.
+  It is usually sufficient to upload a corrected version of the file, possibly udpating its MD5 value.
 | Once you correct your submission, it can take 24 hours or longer for this to be registered and for the error notifications to cease.
 |
-| Find the error you are receiving in the subsections below for advice on how to fix the error.
+| The common error types are described here:
+
+- `Error: Invalid File Checksum`_
+- `Error: Number Of Lines Is Not A Multiple Of Four`_
+- `Error: File Integrity Check Failed`_
+- `Error: Missing File`_
+
+| A couple of general-purpose solutions are described too:
+
+- `Appendix: Correcting An MD5 Value`_
+- `Appendix: Reuploading Your File`_
 
 
 Error: Invalid File Checksum
@@ -164,3 +173,106 @@ BAM Files
 | This command attempts to view the BAM file and output the exit code of this procedure.
   If the code is 1 or higher, there is a problem with the file.
   Try this check on your local file and then upload a corrected version.
+
+
+Error: Missing File
+===================
+
+| If a missing file error occurs, you will receive the below message:
+
+::
+
+    FILE_NAME | ERROR | MD5 | FILE_SIZE | DATE | RUN_ID/ANALYSIS_ID
+    UFMG-CM-Y030_R1.fastq.gz | Missing file | 2da9b9c9bb8833c14b103e0de123829c | 137298909 | 13-JUN-2020 12:51:29 | ERR2299965
+
+
+The Problem
+-----------
+
+| Submitted files occasionally go missing and must either be replaced or resubmitted
+
+
+The Solution
+------------
+
+| You should reupload the file to your submission area.
+  Note that if you uploaded the original file to a subdirectory in your submission area, you must also upload the new
+  file to this subdirectory.
+  The processing pipeline expects to see the file for your run in the originally specified location, so this must be
+  maintained.
+  You can check what path the pipeline is expecting to see by referring to the 'FILE_NAME' field of the error message:
+  this will contain the full path.
+| Read below for more information
+
+#TODO
+
+
+
+Appendix: Correcting An MD5 Value
+=================================
+
+If the MD5 value registered for your read file is incorrect, you can supply a corrected version.
+To do this:
+
+1. Log into `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_
+2. Switch to the 'Runs' tab
+3. Enter the accession of the errored run into the search box
+4. Click the 'Edit' button for the relevant run (there will be two edit boxes, use the rightmost one)
+5. Enter the new MD5 value next to the correct file
+6. Click 'Save'
+
+The change you have made will require 24 hours to take effect.
+
+Calculating the MD5 value you need can be done natively from the command line in Mac/Linux.
+One of the following commands will work, if you supply the correct filename:
+
+::
+
+    $ md5sum mbr_depth_05.bam
+    594934819a1571f805ff299807431da4  mbr_depth_05.bam
+
+    $ md5 mbr_depth_05.bam
+    594934819a1571f805ff299807431da4  mbr_depth_05.bam
+
+Windows users should see the `Microsoft Support Article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_ on this subject.
+
+
+Appendix: Re-Uploading Your File
+================================
+
+If your error requires a new version of the file be uploaded, you have two options for this.
+You should first consider whether your file was originally uploaded to a sub-directory.
+You can tell by referring to the original error message, looking out for the 'FILE_NAME' column.
+The below error describes a file which was uploaded to a subdirectory:
+
+::
+
+    FILE_NAME | ERROR | MD5 | FILE_SIZE | DATE | RUN_ID/ANALYSIS_ID
+    SOC9/MCONS1_R1.fq.gz | File content missing or malformed, Number of lines in fastq is not multiple of 4 | c2f8455c1a024cfb96a6c91f5d71f534 | 1358349886 | 01-DEC-2016 03:12:35 | ERR1755094
+
+You can tell this was uploaded to a subdirectory because the actual filename ( MCONS1_R1.fq.gz ) is preceded by a
+directory name and a '/' character ( SOC9/ ).
+The replacement file must be uploaded to this same subdirectory, as this is where the processing pipeline expects to
+find it.
+Having determined this, refer to the relevant section below.
+
+In either case, you may need to update the MD5 value if the originally registered value was correct for the originally
+uploaded file.
+If you need to update the MD5 value, please refer to `Appendix: Correcting An MD5 Value`_.
+
+If Your File Is Not In A Subdirectory
+-------------------------------------
+
+Please view our guidance on the `Webin File Uploader <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-webin-file-uploader>`_.
+This will conveniently allow you to upload your file to the top level of your submission directory.
+
+
+If Your File Is In A Subdirectory
+----------------------------------
+
+You will need to upload your file using `FTP Client <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#general-instructions-for-uploading-files-using-ftp-client>`_.
+There are various options for doing this, described at the linked page.
+
+Once you are connected to the FTP server, use the ``ls`` command to view the content of the directory and the
+``cd <directory-name>`` command to move into the required location.
+Once you arrive in the desired directory, proceed to upload the files.
