@@ -130,7 +130,7 @@ You can replicate the check we run on your file locally from the command line:
 This command will output the amount of lines in the file, after removing any blank lines.
 Please note that blank lines are considered a violation of the FASTQ format, as empty reads are not informative.
 
-If the line count divisible by four, it is likely the file was corrupted during upload and should be reuploaded.
+If the line is count divisible by four, it is likely the file was corrupted during upload and should be reuploaded.
 If it is not divisible by four, you should discover why, correct your file and reupload.
 
 .. note::
