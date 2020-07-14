@@ -5,8 +5,8 @@
 Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin submission
 service and the Webin command line submission service.
 
-This module gives an introduction to the Webin command line submission interface
-used to validate, upload and submit files to the European Nucleotide Archive (ENA).
+This module gives an introduction to the Webin command line submission interface used to validate, upload and submit
+files to the European Nucleotide Archive (ENA) and will also link to where you can download it.
 Please note that unlike with other ENA submissions routes you may have used, you
 do not need to pre-upload your files when using Webin-CLI.
 
@@ -15,25 +15,25 @@ Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
 ## Download the Program
 
-The latest version of the Webin command line submission interface can be downloaded from:
+You can download Webin-CLI from its GitHub repository. We recommend always using the latest version:
 
-<https://github.com/enasequence/webin-cli/releases>
+- [ **Latest Webin-CLI Version** ](https://github.com/enasequence/webin-cli/releases/latest)
+- [ Older Webin-CLI Versions ](https://github.com/enasequence/webin-cli/releases)
 
-The program requires Java 1.8 or newer which can be downloaded from:
+To get started with running Webin-CLI, download the `.jar` file for whatever version you're interested in.
+If you have a GitHub account, you can use the 'Watch' button in the top right to always be notified of new releases.
 
-<https://java.com/en/download/>
+Please note that Webin-CLI requires that you have Java installed before you can run it.
+You should have version 1.8 or newer installed, which can be downloaded from Java:
 
-We have tested Webin-CLI against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202.
+- [ Download Java ](https://java.com/en/download/)
 
-We recommend that all submitters use this version.
+Webin-CLI has been tested against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202 .
+You are recommended to use this version.
+Download Oracle JREs from the below links:
 
-Latest oracle JREs can be downloaded from here:
-
-<https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html>
-
-Older oracle JREs can be downloaded from here:
-
-<https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html>
+- [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+- [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
 
 ## Using the Program
