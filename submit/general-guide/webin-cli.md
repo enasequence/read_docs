@@ -18,7 +18,6 @@ Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 You can download Webin-CLI from its GitHub repository. We recommend always using the latest version:
 
 - [ **Latest Webin-CLI Version** ](https://github.com/enasequence/webin-cli/releases/latest)
-- [ Older Webin-CLI Versions ](https://github.com/enasequence/webin-cli/releases)
 
 To get started with running Webin-CLI, download the `.jar` file for whatever version you're interested in.
 If you have a GitHub account, you can use the 'Watch' button in the top right to always be notified of new releases.
@@ -26,7 +25,7 @@ If you have a GitHub account, you can use the 'Watch' button in the top right to
 Please note that Webin-CLI requires that you have Java installed before you can run it.
 You should have version 1.8 or newer installed, which can be downloaded from Java:
 
-- [ Download Java ](https://java.com/en/download/)
+- [ **Download Java** ](https://java.com/en/download/)
 
 Webin-CLI has been tested against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202 .
 You are recommended to use this version.
