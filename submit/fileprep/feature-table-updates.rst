@@ -12,6 +12,7 @@ With effect of Feature Table document version 10.9 (December 2019) the following
 1. Value "contamination" added to ``/gap_type`` in the assembly_gap definition mandatory qualifiers
 
 ::
+
    Feature Key           assembly_gap
 
    Definition            gap between two components of a genome or transcriptome assembly;
@@ -26,6 +27,7 @@ With effect of Feature Table document version 10.9 (December 2019) the following
 2. Value "contamination" added to  ``/gap_type`` in ``/linkage_evidence`` definition
 
 ::
+
    Qualifier       /linkage_evidence
 
    Definition      type of evidence establishing linkage across an
