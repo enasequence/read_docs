@@ -47,6 +47,7 @@ For examples and tutorials on how to use the Browser API and enaBrowserTools, pl
    :maxdepth: 1
 
    programmatic-access/browser-api
+   programmatic-access/file-reports
    programmatic-access/browser-tools
 
 Explore Taxonomy and Related Records
