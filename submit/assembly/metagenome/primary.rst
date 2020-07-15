@@ -163,6 +163,7 @@ Sequence validation
 -------------------
 
 Sequences must:
+
 - have unique names within an assembly
 - be at least 20bp long
 - not have terminal Ns

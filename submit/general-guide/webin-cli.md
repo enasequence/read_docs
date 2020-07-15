@@ -5,34 +5,35 @@
 Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin submission
 service and the Webin command line submission service.
 
-This module gives an introduction to the Webin command line submission interface
-used to validate, upload and submit files to the European Nucleotide Archive (ENA).
+This module gives an introduction to the Webin command line submission interface used to validate, upload and submit
+files to the European Nucleotide Archive (ENA) and will also link to where you can download it.
 Please note that unlike with other ENA submissions routes you may have used, you
 do not need to pre-upload your files when using Webin-CLI.
 
 Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
+
 ## Download the Program
 
-The latest version of the Webin command line submission interface can be downloaded from:
+You can download Webin-CLI from its GitHub repository. We recommend always using the latest version:
 
-<https://github.com/enasequence/webin-cli/releases>
+- [ **Latest Webin-CLI Version** ](https://github.com/enasequence/webin-cli/releases/latest)
 
-The program requires Java 1.8 or newer which can be downloaded from:
+To get started with running Webin-CLI, download the `.jar` file for whatever version you're interested in.
+If you have a GitHub account, you can use the 'Watch' button in the top right to always be notified of new releases.
 
-<https://java.com/en/download/>
+Please note that Webin-CLI requires that you have Java installed before you can run it.
+You should have version 1.8 or newer installed, which can be downloaded from Java:
 
-We have tested Webin-CLI against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202.
+- [ **Download Java** ](https://java.com/en/download/)
 
-We recommend that all submitters use this version.
+Webin-CLI has been tested against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202 .
+You are recommended to use this version.
+Download Oracle JREs from the below links:
 
-Latest oracle JREs can be downloaded from here:
+- [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+- [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
-<https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html>
-
-Older oracle JREs can be downloaded from here:
-
-<https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html>
 
 ## Using the Program
 
@@ -59,6 +60,7 @@ On Windows a backward slash is used instead of a forward slash:
 
 The command line `<options>` are explained below.
 
+
 ## Command Line Options
 
 - `-context`: the   submission type:
@@ -82,8 +84,11 @@ should be installed and path to executable "ascp" should be in PATH variable.
 - `-version`: prints the version number of the program and exists.
 - `-help`: detailed information about the different options.
 
+
 ## Submission Process
 
+Please note that this section serves as a general overview of the use of Webin-CLI.
+You may prefer to find the page specific to your submission type using the links in the sidebar of this page.
 The following types of submissions are supported:
 
 - genome assemblies
@@ -101,6 +106,7 @@ The following picture illustrates the stages of the submission process:
 
 ![Submission process](../images/webin-cli_01.png)
 
+
 ## Stage 1: Pre-register Study and Sample
 
 Each submission must be associated with a pre-registered study and a sample.
@@ -113,6 +119,7 @@ Each submission must be associated with a pre-registered study and a sample.
 
 The set of files that are part of the submission must be specified using a manifest file.
 The manifest file is specified using the `-manifest <filename>` option.
+
 
 ### Manifest File Format
 
@@ -158,6 +165,7 @@ MOLECULETYPE   genomic DNA
 FASTA   genome.fasta.gz
 ```
 
+
 ### Manifest File Types
 
 Please refer to the more detailed documentation for supported file types for each submission.
@@ -179,6 +187,7 @@ The following formats are supported for [read submissions](../reads/webin-cli.ht
 - CRAM: CRAM file
 - FASTQ: fastq file
 
+
 #### Info File (for backward compability only)
 
 You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
@@ -193,6 +202,7 @@ provided in one fasta file:
 INFO   assembly.info
 FASTA   genome.fasta.gz
 ```
+
 
 ## Stage 3: Validate and Submit Files
 
@@ -220,6 +230,7 @@ Once the submission is complete an accession number is immediately returned to t
 submitter by the Webin command line submission interface. Please refer to individual modules for advice which
 long term stable accession numbers can be used in publications.
 
+
 ## Output Directory Structure
 
 An output directory can be specific to the Webin command line submission interface
@@ -238,6 +249,7 @@ and the `<name>` is the unique name provided in the manifest file.
 Receipt XML. This directory also contains the file manifest that refers to the files that are
 part of the submission.
 
+
 ## Validation Reports
 
 If the `-validate` action fails for any reason then validation reports are written into directory:
@@ -253,6 +265,7 @@ Messages which can't be attributed to a specific input file will be written to b
 in the following file:  
 
 `<context>/<name>/validate/webin-cli.report`
+
 
 ## Proxy Servers
 
@@ -289,6 +302,7 @@ webin.ebi.ac.uk server. Alternatively, you may use the Aspera protocol by instal
 Please note that that the folder containing the `ascp` command line program
 must be included in the PATH variable. The `ascp` command can be found from
 the `cli/bin` directory of the downloaded and expanded Aspera Cli archive file.
+
 
 ## Release policy
 
