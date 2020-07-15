@@ -193,3 +193,68 @@ one more space.
 
 Appendix: Definition of Terms
 =============================
+
+Commonly used terms:
+
++-----------------------+----------------------------------------------------------------------------------------------+
+| Term                  | Definition                                                                                   |
++=======================+==============================================================================================+
+| Assembly              | | A set of chromosome assemblies, unlocalized and unplaced sequences,                        |
+|                       | | alternate loci and patches that represent a genome.                                        |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Assembly chain        | | The major and minor releases form an assembly chain. For example, the                      |
+|                       | | assembly accession for GRCh37 major release is GCA_000001405.1. The                        |
+|                       | | assembly accession consists of two parts: the assembly chain accession                     |
+|                       | | (GCA_000001405) and the assembly version (.1). The assembly version is                     |
+|                       | | incremented for each minor release while the assembly chain accession                      |
+|                       | | remains unchanged.                                                                         |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Chromosome            | | An assembled pseudomolecule that represents a biological chromosome.                       |
+|                       | | Most of the chromosome is expected to be represented by sequenced bases,                   |
+|                       | | although some gaps may still be present.                                                   |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Placed sequence       | | A sequence that has a known chromosomal location and orientation.                          |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Unplaced sequence     | | A sequence that is not associated with any specific chromosome.                            |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Unlocalised sequence  | | A sequence that is associated with a specific chromosome without                           |
+|                       | | being ordered or oriented on that chromosome.                                              |
++-----------------------+----------------------------------------------------------------------------------------------+
+
+Uncommonly used terms:
+
++-----------------------+----------------------------------------------------------------------------------------------+
+| Term                  | Definition                                                                                   |
++=======================+==============================================================================================+
+| Genomic region        | | A named part of the primary assembly for which alternate loci or                           |
+|                       | | patches are available.                                                                     |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Alternate locus       | | A sequence that provides an alternate representation of a locus.                           |
+|                       | | Alternate locus are collected into additional assembly units (i.e.                         |
+|                       | | not in the primary assembly).                                                              |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Patch                 | | A sequence that provides a fix and/or novel sequence to the genome                         |
+|                       | | assembly.                                                                                  |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Fix patch             | | Sequence corrections or assembly gap reductions for the primary                            |
+|                       | | assembly introduced in a minor release. Fix patches are expected to be                     |
+|                       | | incorporated into the primary or alternate loci assembly units in the                      |
+|                       | | next major release.                                                                        |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Novel patch           | | Novel sequences for the primary assembly introduced in a minor release.                    |
+|                       | | Novel patches are expected to be incorporated into the primary assembly                    |
+|                       | | unit in the next major release.                                                            |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Assembly unit         | | An assembly is organized into assembly units.                                              |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Primary assembly unit | | Assembly unit that contains the set of assembled chromosomes,                              |
+|                       | | unlocalized and unplaced sequences that represent a non-redundant                          |
+|                       | | genome. Alternative loci and patches are not included in the primary                       |
+|                       | | assembly unit.                                                                             |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Major release         | | A release of a genome assembly that contains a primary assembly and                        |
+|                       | | alternate loci, e.g. GRCh37.                                                               |
++-----------------------+----------------------------------------------------------------------------------------------+
+| Minor release         | | A release of a genome assembly that adds patches to the major release,                     |
+|                       | | e.g. GRCh37.p5.                                                                            |
++-----------------------+----------------------------------------------------------------------------------------------+
