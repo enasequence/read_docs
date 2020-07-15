@@ -24,21 +24,21 @@ do not represent biological objects and should therefore be split into individua
 
 You can use the below file formats to submit genome assemblies. Follow the links to learn more about formatting them:
 
-- `FASTA file`_: Unannotated assemblies should be submitted as a FASTA file
-- `Flat file`_: Annotated assemblies must be submitted as an EMBL flat file
-- `AGP file`_: The assembly of scaffolds or chromosomes from contigs can be described using an AGP file
-- `Chromosome list file`_: Must be provided when the submission contains assembled chromosomes
-- `Unlocalised list file`_: Should be provided when the submission contains chromosomes with unlocalised sequences
+- `FASTA File`_: Unannotated assemblies should be submitted as a FASTA file
+- `Flat File`_: Annotated assemblies must be submitted as an EMBL flat file
+- `AGP File`_: The assembly of scaffolds or chromosomes from contigs can be described using an AGP file
+- `Chromosome List File`_: Must be provided when the submission contains assembled chromosomes
+- `Unlocalised List File`_: Should be provided when the submission contains chromosomes with unlocalised sequences
 
 Please note that all data files must be compressed with GZIP.
 
 Some additional information is provided in the appendices:
 
-- `Appendix: Unique sequence names`_
+- `Appendix: Unique Sequence Names`_
 - `Appendix: Definition of Terms`_
 
 
-FASTA file
+FASTA File
 ==========
 
 Unannotated sequences should be submitted as a FASTA file.
@@ -48,7 +48,7 @@ Ensure the sequence contains only valid nucleotide characters and no whitespace 
 
 
 
-Flat file
+Flat File
 =========
 
 Annotated sequences can only be submitted in the EMBL flat file format, described `here <./flat-file-example.html>`_.
@@ -59,7 +59,7 @@ The feature table annotation must conform to the `INSDC Feature Table Definition
 Some tools to help you create flat files are described in our `Third Party Tools page <https://ena-docs.readthedocs.io/en/latest/faq/third_party_tools.html>`.
 
 
-Chromosome list file
+Chromosome List File
 ====================
 
 The chromosome list file must be provided when the submission contains assembled chromosomes. 
@@ -117,7 +117,7 @@ Please read on for information on the content of the chromosome list file column
 
 
 
-AGP file
+AGP File
 ===========
 
 You may use an `AGP <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_ file to describe the assembly
@@ -129,7 +129,7 @@ The AGP file can also be used to define sequences as unplaced.
 Unplaced sequences are those known to be part of the assembly, but it is unknown which chromosome they belong to.
 
 
-Unlocalised list file
+Unlocalised List File
 =====================
 
 This file should be provided when the submission contains chromosomes with unlocalised sequences.
@@ -151,7 +151,7 @@ The unlocalised list file is a tab separated text file (USASCII7) containing the
   must match with a CHROMOSOME_NAME in the chromosome list file.
 
 
-Appendix: Unique sequence names
+Appendix: Unique Sequence Names
 ===============================
 
 All sequences within one genome assembly submission must be identified by a unique sequence name provided in the FASTA,
@@ -162,8 +162,8 @@ For example, the chromosome list file must refer to the chromosome sequences bei
 using the unique entry name.
 Similarly, an AGP file must refer to scaffolds or contigs using unique entry names.
 
-FASTA file
-----------
+FASTA
+-----
 
 The sequence name is extracted from the header line starting with ``>``.
 
@@ -175,13 +175,13 @@ For example, the following sequence has name ``contig1``:
     AAACCCGGG...
 
 
-AGP file
---------
+AGP
+---
 
 The sequence name is extracted from the 1st (object) column.
 
-Flat file
----------
+Flat Files
+----------
 
 The sequence name is extracted from the ``AC *`` line . The sequence name must be prefixed with a ``_``
 when using the flat file format.
