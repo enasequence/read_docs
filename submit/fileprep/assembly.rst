@@ -109,12 +109,12 @@ An example chromosome list file, describing a eukaryote with four linear nuclear
 mitochondrial chromosomes:
 
 ::
-    
+
     chr01   1 Linear-Chromosome
     chr02   2 Linear-Chromosome
     chr03   3 Linear-Chromosome
     chr04   4 Linear-Chromosome
-    chrMi   MIT Linear-Chromosome Mitochondrion   
+    chrMi   MIT Linear-Chromosome Mitochondrion
 
 
 Unlocalised list file
@@ -127,7 +127,7 @@ for which order and orientation is unknown.
 
 The unlocalised list file is a tab separated text file (USASCII7) containing the following columns: 
 
-- OBJECT_NAME (first column): the unique sequence name matching a FASTA header or flatfile ``AC * `` line
+- OBJECT_NAME (first column): the unique sequence name matching a FASTA header or flatfile ``AC *`` line
 - CHROMOSOME_NAME (second column): the unique chromosome name associated with this sequence. This
   must match with a CHROMOSOME_NAME in the chromosome list file.
 
@@ -171,7 +171,7 @@ The sequence name is extracted from the 1st (object) column.
 Flat file
 ---------
 
-The sequence name is extracted from the ``AC *`` line . The sequence name must be prefixed with a ``_`` 
+The sequence name is extracted from the ``AC *`` line . The sequence name must be prefixed with a ``_``
 when using the flat file format.
 
 For example, the following sequence has name ``contig1``:
@@ -179,7 +179,7 @@ For example, the following sequence has name ``contig1``:
 ::
 
     AC * _contig1
-    
+
 
 
 Appendix: Definition of Terms
