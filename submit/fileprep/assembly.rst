@@ -32,6 +32,11 @@ You can use the below file formats to submit genome assemblies. Follow the links
 
 Please note that all data files must be compressed with GZIP.
 
+Some additional information is provided in the appendices:
+
+- `Appendix: Unique sequence names`_
+- `Appendix: Definition of Terms`_
+
 
 FASTA file
 ==========
