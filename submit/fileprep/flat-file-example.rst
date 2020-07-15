@@ -15,7 +15,8 @@ On the other hand, be sure to edit any text enclosed in curly brackets
 ( '{' and '}' ).
 
 To see the full range of available features and qualifiers, please visit
-`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.
+`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_. To see any upcoming feature table
+changes see `here <feature-table-updates.html>`_.
 
 For a list of third party tools which may help with the creation of your
 flat file or conversion from another format, please see our page on
