@@ -50,7 +50,7 @@ for ENA, 'D' for DDBJ, or 'S' for NCBI.
 How to cite your ENA study
 ==========================
 
-In all cases, the top-level Project accession should be cited as well as a 
+In all cases, the top-level Project accession should be cited as well as a
 link to where the data can be found in the browser, for example:
 
  “the data for this study have been deposited in the European Nucleotide Archive
@@ -64,4 +64,4 @@ considered accessions that could be used for publication:
 
 - Assemblies
 - BioSamples (in the context of associated data)
-- Assembled/Annotated Sequences 
+- Assembled/Annotated Sequences

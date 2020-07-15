@@ -37,16 +37,19 @@ All public records within ENA are available to retrieve from the `ENA Browser AP
 so records can be programmatically downloaded directly from the API. Associated files can be downloaded using FTP or
 Aspera protocol.
 
+For a quick summary of metadata and file retrieval locations of records, you can use the ENA file reports.
+
 For further simplicity, `enaBrowserTools <https://github.com/enasequence/enaBrowserTools>`_
 can be downloaded and run locally on the command line to fetch files associated with records by accession. It can also be used
 to bulk download records related to a specified Sample or Study.
 
-For examples and tutorials on how to use the Browser API and enaBrowserTools, please see the guidelines below:
+For examples and tutorials on how to use the Browser API, file reports and enaBrowserTools, please see the guidelines below:
 
 .. toctree::
    :maxdepth: 1
 
    programmatic-access/browser-api
+   programmatic-access/file-reports
    programmatic-access/browser-tools
 
 Explore Taxonomy and Related Records
