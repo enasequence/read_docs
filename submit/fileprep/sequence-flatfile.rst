@@ -779,7 +779,7 @@ Synthetic Construct
 6. **{product}** is the protein/product name. This is mandatory for CDS.
 7. **{table}** is the translation table under which the coding region is
    translated. Learn more at the `Translation Tables
-   <https://www.ebi.ac.uk/ena/browse/translation-tables>`_ page
+   <http://www.insdc.org/genetic-code-tables>`_ page
 8. **{short note 1}** should provide additional information on the promoter,
    e.g. *Eu and SRalpha promoter*
 9. **{short note 2}** should provide additional information for the CDS, e.g.
