@@ -33,16 +33,6 @@ Their content and structures are described in detail at the below pages:
     file-download/sra-ftp-structure
     file-download/ena-ftp-structure
 
-.. note::
-
-    Under some circumstances, ENA data may be suppressed, meaning that it has
-    been withdrawn from metadata search results. Such data is still available
-    via the relevant FTP server and is not flagged as suppressed here.
-    It is therefore recommended that the information here be used only to
-    download data identified via metadata search results, to avoid potentially
-    invalid materials
-
-
 
 Downloading Files
 =================
