@@ -13,7 +13,7 @@ This server contains short pieces of assembled/annotated sequence dating back
 to the early 80s, as well as larger scale data types including genome
 assemblies, metagenome assemblies, and transcriptome sequence assemblies.
 This server does not contain other data types such as raw reads, which can be
-found in the `SRA FTP server <../sra-ftp-structure.html>`_.
+found in the `SRA FTP server <../file-download/sra-ftp-structure.html>`_.
 
 It is expected that users will find relevant data through the various search
 interfaces available from ENA, rather than directly interacting with and
