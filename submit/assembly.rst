@@ -27,6 +27,28 @@ register samples with information on the biological data that was sequenced then
 - `Register a sample <samples.html>`_
 - `Submit raw reads <reads.html>`_
 
+
+Assembly Levels
+===============
+
+Before submitting your assembly, consider the highest level of assembly which has been attained.
+This will have implications for how you prepare your submission, as well as the accessions you receive at the end.
+
+ENA recognises three assembly levels:
+
+- **Contig:** the highest level of assembly is contigs
+- **Scaffold:** the highest level of assembly consists of gapped contigs (scaffolds)
+- **Chromosome:** the highest level of assembly includes assembled chromosomes
+
+Note that 'chromosome' should here be understood as a general term for a range of complete replicons, including
+chromosomes of eukaryotes, prokaryotes, and viruses, as well as organellar chromosomes and plasmids.
+All of these may be submitted within the same chromosome-level assembly.
+
+Please note that contig and scaffold level assemblies can both be updated to higher level assemblies after submission.
+You cannot update to a lower level assembly, however, and you cannot add functional annotation if none was present
+in the first submission.
+
+
 Accessions
 ==========
 
