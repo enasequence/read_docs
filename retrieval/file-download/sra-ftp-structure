@@ -15,6 +15,7 @@ a subset of analysis data.
 This server explicitly excludes genome assemblies of all kinds, metagenome
 assemblies, transcriptome sequence assemblies, template sequences, and other
 short pieces of annotated sequence.
+This type of data can be found in `ENA FTP <../ena-ftp-structure.html>`_.
 Analyses found in SRA FTP include variant data in VCF format, methylation 
 data, and taxonomic reference sets.
 
