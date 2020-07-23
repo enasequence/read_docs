@@ -39,7 +39,7 @@ Stage 1: Pre-register study and sample
 Each submission must be associated with a pre-registered study and a pre-registered environmental sample.
 This should be the same sample used for submitting raw reads. Please make sure the appropriate environmental
 checklist is chosen for this and an environmental taxon is used (e.g. aquatic metagenome (tax id: 1169740)).
-See the available environmental taxa in the [ENA Tax Portal](https://www.ebi.ac.uk/ena/data/view/Taxon:408169).
+See the available environmental taxa in the [ENA Tax Portal](https://www.ebi.ac.uk/ena/browser/view/Taxon:408169).
 Click on the *Tax tree* tab and click the '+' icons to expand the categories.
 
 For transcriptomic assemblies, raw reads must also be submitted to give context to the data.

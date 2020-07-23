@@ -89,7 +89,7 @@ the below conventions to avoid having your submission rejected.
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{gene}** has a value such as *HLA-A*, *HLA-B*, *HLA-DRB*
 3. **{allele}** takes the form *{gene\*allele designation}*, e.g. *HLA-A\*01:01*,
    *HLA-B\*40:32*
@@ -199,7 +199,7 @@ of unknown length.
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{gene}** has a value such as *HLA-A*, *HLA-B*, *HLA-DRB*
 3. **{allele}** takes the form *{gene\*allele designation}*, e.g. *HLA-A\*01:01*,
    *HLA-B\*40:32*
@@ -294,7 +294,7 @@ features.
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{strain}** is the strain identifier. You may change this to /isolate if you
    prefer
 3. **{operon}** is the name of the operon and has a value like *gal* or *lac*
@@ -392,7 +392,7 @@ from the template.
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{identifier}** is a form of sample or organism identification. You must use
    at least one from the below list and fill in the **{ID}** field with it.
    Other qualifiers are available in `WebFeat
@@ -510,7 +510,7 @@ Multi-Feature Region
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{organelle}** with the value taken from the INSDC
    `controlled vocabulary
    <https://www.ebi.ac.uk/ena/WebFeat/qualifiers/organelle.html>`_.
@@ -599,7 +599,7 @@ This section provides a skeleton for that.
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{identifier}** is a form of sample or organism identification. You must use
    at least one from the below list and fill in the **{ID}** field with it.
    Other qualifiers are available in `WebFeat
@@ -666,7 +666,7 @@ need to prepare the file yourself with the template below.
 
 1. **{organism}** is a species-rank organism present in the database. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 2. **{organelle}** with the value taken from the INSDC
    `controlled vocabulary
    <https://www.ebi.ac.uk/ena/WebFeat/qualifiers/organelle.html>`_.
@@ -770,7 +770,7 @@ Synthetic Construct
 3. **{organism}** is a species-rank organism present in the database referring
    to the originating organism. Search
    available taxa at
-   `ENA Search <https://www.ebi.ac.uk/ena/data/warehouse/search>`_.
+   `ENA Search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_.
 4. **{a to h}** are the feature coordinates. Incompleteness of any features
    (except source) should be described using partiality symbols, e.g. *<1..250*
    or *2917..>2960*

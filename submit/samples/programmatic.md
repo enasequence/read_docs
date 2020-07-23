@@ -106,17 +106,17 @@ Note that the checklist is defined using a `SAMPLE_ATTRIBUTE` block and that the
 the other `SAMPLE_ATTRIBUTE` blocks.
 
 If you do not define a checklist then the samples will be validated against the ENA default checklist
-[ERC000011](https://www.ebi.ac.uk/ena/data/view/ERC000011). This checklist has virtually no mandatory
+[ERC000011](https://www.ebi.ac.uk/ena/browser/view/ERC000011). This checklist has virtually no mandatory
 fields but contains many optional attributes that can help you to annotate your samples
 to the highest possible standard.
 
 You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/submit/checklists). For example, the
-checklist [ERC000014](http://www.ebi.ac.uk/ena/data/view/ERC000014) represents the
+checklist [ERC000014](https://www.ebi.ac.uk/ena/browser/view/ERC000014) represents the
 GSC MIxS annotation standard for human associated source samples.
 
 The checklists are defined using XML. These XMLs are available by appending `&display=xml`
 to the URL for retriving a specific checklist. For example, the XML for
-checklist ERC000014 can be retrieved using the following URL: [http://www.ebi.ac.uk/ena/data/view/ERC000014&display=xml](http://www.ebi.ac.uk/ena/data/view/ERC000014&display=xml)
+checklist ERC000014 can be retrieved using the following URL: [https://www.ebi.ac.uk/ena/browser/api/xml/ERC000011](https://www.ebi.ac.uk/ena/browser/api/xml/ERC000011)
 
 ##  The Taxonomic Classification
 
