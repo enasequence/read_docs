@@ -28,10 +28,10 @@ Any file you download from ENA will come from one of these two FTP servers.
 Their content and structures are described in detail at the below pages:
 
 .. toctree::
-  :maxdepth: 1
+   :maxdepth: 1
 
-    file-download/sra-ftp-structure
-    file-download/ena-ftp-structure
+   file-download/sra-ftp-structure
+   file-download/ena-ftp-structure
 
 
 Downloading Files
