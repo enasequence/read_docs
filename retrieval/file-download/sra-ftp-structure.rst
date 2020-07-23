@@ -134,17 +134,21 @@ Analysis FTP Structure
 ======================
 
 The ENA analysis object can hold a variety of different data types.
-It is designed to be extensible to allow quick implementation of new data
-types.
+It is designed to be flexible and extensible to allow quick implementation of
+new data types.
 
 Analyses come in two types:
 
 - Processed analyses include materials such as genome assemblies, transcriptome
-  assemblies and other annotated sequences: these are stored in a separate
-  archive and are beyond the scope of this article
-- Simple analyses include many other types. They undergo simple validation but
-  are mostly presented in the same format the user submitted them: this is the
-  type of analysis described in this section
+  assemblies, MAGs, and other annotated sequences: these are stored in the
+  `ENA FTP <../file-download/ena-ftp-structure.html>`_.
+- Simple analyses include various types described in our page on `How To Submit
+  Other Analyses <../../submit/analyses.html>`_ as well as primary and binned
+  metagenomes are stored in the SRA FTP
+
+These simple analyses undergo some validation but are mostly presented in the
+same format the user submitted them: this is the type of analysis described in
+this section.
 
 The variation in types of analyses prevents the sort of processing and
 organisation given to reads, as described above.
@@ -157,3 +161,8 @@ Therefore, files for analysis ERZ1195979 can be found at:
 ::
 
     ftp://ftp.sra.ebi.ac.uk/vol1/ERZ119/ERZ1195979/
+
+
+This area of the FTP server includes primary and binned metagenomes, as well as
+analysis classes described in our page on `How To Submit Other Analyses
+<../../submit/analyses.html>`_.
