@@ -34,7 +34,7 @@ with some also available as FASTA.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/
 
 | **Genome Collections**
-| An XML file containing cumulative information on all Genome Collections Accessions
+| An XML file containing cumulative information on all genome collection accessions
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/genome_collections/
 
 | **Assembly**
@@ -50,19 +50,19 @@ with some also available as FASTA.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/tsa/
 
 | **Sequence**
-| Generalised sequence category, gzipped and organised by sequence type and taxon class
+| Generalised sequence category, organised by sequence type and taxon class
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/sequence/
 
 | **Coding**
-| Protein-coding sequences, gzipped and organised by sequence type and accession number
+| Protein-coding sequences, organised by sequence type and accession number
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/coding/
 
 | **Non-Coding**
-| Non-protein-coding sequences, gzipped and organised by sequence type and accession number
+| Non-protein-coding sequences, organised by sequence type and accession number
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/non-coding/
 
 | **rRNA**
-| Ribosomal RNA sequences, gzipped and organised by sequence type and accession number
+| Ribosomal RNA sequences, organised by sequence type and accession number
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/rRNA/
 
 | **TLS**
