@@ -48,6 +48,46 @@ Please note that contig and scaffold level assemblies can both be updated to hig
 You cannot update to a lower level assembly, however, and you cannot add functional annotation if none was present
 in the first submission.
 
+Files For Genome Assembly Submissions
+=====================================
+
+File requirements for a genome assembly submission depends on the assembly level and are specified using a manifest file.
+The set of files required for genome assembly submissions are listed in the following table:
+
++--------------------+------------------------------------------+-------------------------------------+
+| Assembly Level     | File Requirements                        | Additional Information              |
++====================+==========================================+=====================================+
+| Contig             | 1 Manifest file                          |                                     |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 Flat file                              | For annotated assemblies            |
++--------------------+------------------------------------------+-------------------------------------+
+| Scaffold           | 1 Manifest file                          |                                     |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 Flat file                              | For annotated assemblies            |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 0-1 AGP file                             | For scaffold instructions from      |
+|                    |                                          | contigs                             |
++--------------------+------------------------------------------+-------------------------------------+
+| Chromosome         | 1 Manifest file                          |                                     |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 Flat file                              | For annotated assemblies            |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 1 Chromosome list file                   | Indicate which sequences represent  |
+|                    |                                          | which ‘chromosomes’                 |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 0-1 Unlocalised list files               | For chromosomes containing          |
+|                    |                                          | unlocalised sequences               |
+|                    +------------------------------------------+-------------------------------------+
+|                    | 0-1 AGP file                             | To submit unplaced contigs and      |
+|                    |                                          | indicate which scaffolds/contigs are|
+|                    |                                          | assembled to form each chromosome   |
++--------------------+------------------------------------------+-------------------------------------+
 
 Accessions
 ==========
@@ -82,3 +122,4 @@ see the documentation on `Webin-CLI Submission <general-guide/webin-cli.html>`_.
    assembly/environmental-sag
    assembly/transcriptome
    assembly/metatranscriptome
+
