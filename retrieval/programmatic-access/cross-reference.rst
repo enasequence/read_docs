@@ -148,24 +148,28 @@ for a particular ENA Record. To do this, you can also perform a cross-reference 
 .. code-block:: bash
 
    Source	Source primary accession	Source secondary accession	Source url	Target	Target primary accession	Target secondary accession	Target url
-   COMPARE-RefGenome	NLV/GII/Neustrelitz260/2000/DE			sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC1393082	16517856	http://europepmc.org/abstract/PMC/PMC1393082	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC1594604	16891526	http://europepmc.org/abstract/PMC/PMC1594604	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC2828081	17953089	http://europepmc.org/abstract/PMC/PMC2828081	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC2897520	20484606	http://europepmc.org/abstract/PMC/PMC2897520	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC2919043	20554772	http://europepmc.org/abstract/PMC/PMC2919043	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC3096948	21524296	http://europepmc.org/abstract/PMC/PMC3096948	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC3110387	21686127	http://europepmc.org/abstract/PMC/PMC3110387	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC3187498	21849454	http://europepmc.org/abstract/PMC/PMC3187498	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC3493335	22943503	http://europepmc.org/abstract/PMC/PMC3493335	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC3695492	23630317	http://europepmc.org/abstract/PMC/PMC3695492	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC4298492	24989606	http://europepmc.org/abstract/PMC/PMC4298492	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC5388089	28181902	http://europepmc.org/abstract/PMC/PMC5388089	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC5746213	29284004	http://europepmc.org/abstract/PMC/PMC5746213	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC5874246	29593246	http://europepmc.org/abstract/PMC/PMC5874246	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC5911914	25946552	http://europepmc.org/abstract/PMC/PMC5911914	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC6160709	29992776	http://europepmc.org/abstract/PMC/PMC6160709	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
-   EuropePMC	PMC6511519	30531093	http://europepmc.org/abstract/PMC/PMC6511519	sequence	AY772730		https://www.ebi.ac.uk/ena/data/view/AY772730
+   COMPARE-RefGenome	NLV/GII/Neustrelitz260/2000/DE			sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC1393082	16517856	http://europepmc.org/abstract/PMC/PMC1393082	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC1594604	16891526	http://europepmc.org/abstract/PMC/PMC1594604	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC2828081	17953089	http://europepmc.org/abstract/PMC/PMC2828081	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC2897520	20484606	http://europepmc.org/abstract/PMC/PMC2897520	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC2919043	20554772	http://europepmc.org/abstract/PMC/PMC2919043	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC3096948	21524296	http://europepmc.org/abstract/PMC/PMC3096948	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC3110387	21686127	http://europepmc.org/abstract/PMC/PMC3110387	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC3187498	21849454	http://europepmc.org/abstract/PMC/PMC3187498	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC3367634	16485473	http://europepmc.org/abstract/PMC/PMC3367634	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC3493335	22943503	http://europepmc.org/abstract/PMC/PMC3493335	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC3695492	23630317	http://europepmc.org/abstract/PMC/PMC3695492	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC4298492	24989606	http://europepmc.org/abstract/PMC/PMC4298492	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC5388089	28181902	http://europepmc.org/abstract/PMC/PMC5388089	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC5746213	29284004	http://europepmc.org/abstract/PMC/PMC5746213	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC5874246	29593246	http://europepmc.org/abstract/PMC/PMC5874246	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC5911914	25946552	http://europepmc.org/abstract/PMC/PMC5911914	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC6160709	29992776	http://europepmc.org/abstract/PMC/PMC6160709	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC6511519	30531093	http://europepmc.org/abstract/PMC/PMC6511519	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC7011714	31483239	http://europepmc.org/abstract/PMC/PMC7011714	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC7160966	32322405	http://europepmc.org/abstract/PMC/PMC7160966	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
+   EuropePMC	PMC7165577	16629981	http://europepmc.org/abstract/PMC/PMC7165577	sequence	AY772730		https://www.ebi.ac.uk/ena/browser/view/AY772730
 
 
 Expanding metadata
