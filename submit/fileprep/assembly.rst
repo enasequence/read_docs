@@ -51,12 +51,15 @@ Ensure the sequence contains only valid nucleotide characters and no whitespace 
 Flat File
 =========
 
-Annotated sequences can only be submitted in the EMBL flat file format, described `here <./flat-file-example.html>`_.
-For the full range of features and qualifiers available for flat files and their expected content, please see `WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.
+Annotated sequences can only be submitted in the `EMBL flat file format <./flat-file-example.html>`_.
+For the full range of features and qualifiers available for flat files and their expected content, please see
+`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.
 
-The feature table annotation must conform to the `INSDC Feature Table Definition <http://www.insdc.org/files/feature_table.html>`_.
+The feature table annotation must conform to the
+`INSDC Feature Table Definition <http://www.insdc.org/files/feature_table.html>`_.
 
-Some tools to help you create flat files are described in our `Third Party Tools page <https://ena-docs.readthedocs.io/en/latest/faq/third_party_tools.html>`.
+Some tools to help you create flat files are described in our
+`Third Party Tools page <https://ena-docs.readthedocs.io/en/latest/faq/third_party_tools.html>`_.
 
 
 Chromosome List File
