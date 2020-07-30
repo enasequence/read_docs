@@ -11,7 +11,7 @@ An annotated sequence submission consists of:
    - Study accession or unique name (alias)
    - Unique name for the submission
    - Free text description of the submitted sequences (optional)
-- Sequence flat files
+- Sequences in [EMBL-Bank flat file format](../fileprep/flat-file-example.html)
 
 The following picture illustrates the stages of the annotated sequence flat file submission process:
 
@@ -47,7 +47,7 @@ The following metadata fields are supported in the manifest file:
 
 The following file name fields are supported in the manifest file:
 
-- FLATFILE: flat file containing the sequences and functional annotation
+- FLATFILE: sequences in [EMBL-Bank flat file format](../fileprep/flat-file-example.html)
 
 For example, the following manifest file represents a submission:
 
