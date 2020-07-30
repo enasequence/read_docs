@@ -235,7 +235,7 @@ Please see further below for validation rules affecting some of these fields.
 The following file name fields are supported in the manifest file:
 
 - FASTA: sequences in fasta format
-- FLATFILE: sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_
+- FLATFILE: sequences in `EMBL-Bank flat file format <../../fileprep/flat-file-example.html>`_
 - AGP: sequences in `AGP format <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_
 - CHROMOSOME_LIST: list of chromosomes
 
