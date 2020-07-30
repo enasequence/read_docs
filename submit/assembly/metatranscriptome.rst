@@ -97,7 +97,7 @@ The following metadata fields are supported in the manifest file:
 The following file name fields are supported in the manifest file:
 
 - FASTA: sequences in fasta format
-- FLATFILE: sequences in EMBL-Bank flat file format
+- FLATFILE: sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_
 
 For example, the following manifest file represents a genome assembly consisting of transcripts provided in one fasta file:
 
