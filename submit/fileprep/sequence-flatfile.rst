@@ -6,8 +6,13 @@ Entry Upload Templates - Guidelines on Accepted Sequence Flatfile Formats
 Introduction
 ============
 
+The EMBL flat file format is the only way to submit all types of functional
+sequence annotation to ENA.
+See the `example flat file page <./flat-file-example.html>`_ for general
+information on this format.
+
 The Entry Upload Templates provided on this page are skeletons of actual
-flatfiles, suitable for submission. All submissions should include the topology
+flatfiles, to adapt for submission. All submissions should include the topology
 of the ID line, the description from the DE line, and the feature table (FT
 lines). Other parts of the final flatfile will be collected during submission,
 including release date and references, rather than being present in the
