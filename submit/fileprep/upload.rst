@@ -122,7 +122,7 @@ General Instructions For Uploading Files Using FTP Client
 1. Use your favourite ftp client. For example, ``lftp`` is a popular choice for
    linux and Mac users.
 2. Use ``binary mode`` for file transfers.
-3. Use ``webin.ebi.ac.uk`` as the target host.
+3. Use ``webin2.ebi.ac.uk`` as the target host.
 4. ``Login`` with your Webin username and password.
 5. ``Upload`` files to your private Webin upload area.
 
@@ -130,14 +130,11 @@ General Instructions For Uploading Files Using FTP Client
 Using FTP Command Line Client On Linux/Mac
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Open a terminal and type ``ftp webin.ebi.ac.uk``.
-2. Enter the username and password  associated with your Webin submission
-   account.
-3. Type ``bin`` to use binary mode.
-4. Type ``ls`` command to check the content of your drop box.
-5. Type ``prompt`` to switch off confirmation for each file uploaded.
-6. Use ``mput`` command to upload files.
-7. Use ``bye`` command to exit the ftp client.
+1. Open a terminal and type ``lftp webin2.ebi.ac.uk -u Webin-xxxxx``, filling in your Webin username
+2. Enter your password when prompted
+3. Type ``ls`` command to check the content of your drop box.
+4. Use ``mput <filename>`` command to upload files.
+5. Use ``bye`` command to exit the ftp client.
 
 
 Using FTP Command Line Client On Windows
@@ -160,15 +157,15 @@ Using FTP Command Line Client On Windows
 Using FileZilla On Windows
 --------------------------
 
-Filezilla allows you to transfer files via FTP through a user-friendly
+FileZilla allows you to transfer files via FTP through a user-friendly
 graphical interface.
 
 1. Download and install `FileZilla <https://filezilla-project.org/>`_.
    If you are not administrator of your computer then download the portable
    version of FileZilla.
 2. Use the binary mode: ``Transfer menu -> Transfer Type -> Binary``.
-3. Use ``webin.ebi.ac.uk`` as the host.
-4. Use your Webin username and password.
+3. Use ``webin2.ebi.ac.uk`` as the host.
+4. Enter your Webin username and password.
 5. Click ``Quickconnect``.
 6. Search for the file(s) you want to upload using the tree on the left panel.
 7. Create directories in your drop box (if necessary) using the tree on the
