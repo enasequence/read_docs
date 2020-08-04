@@ -1,6 +1,6 @@
-====================================
-Submitting Isolate Genome Assemblies
-====================================
+===========================================
+Submitting Genome Assemblies of Individuals
+===========================================
 
 - `Introduction`_
 - `Stage 1: Pre-Register Study And Sample`_
@@ -116,6 +116,10 @@ This assembly level only requires information on the sequences and annotation (i
 You will receive an error if less than 2 or more than 1,000,000 sequences are submitted.
 If you have less than 2 sequences, then you  will need to submit at a higher assembly level or as `template sequences
 <../sequence/webin-cli-flatfile.html)>`_.
+If you have more than 1,000,000 contigs in your submission, please
+`contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+
+Seen an example contig-level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_000003085
 
 Scaffold Assembly
 -----------------
@@ -124,11 +128,13 @@ Consists of the following files:
 
 - 1 manifest file
 - 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
-- 1 `AGP files <../fileprep/assembly.html#agp-file>`_
+- 0-1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
 This assembly level requires information on the sequences and annotation (if any).
 It also allows the submitter to provide an AGP file to give instructions for the assembly of the scaffolds
 from the contigs.
+
+See an example scaffold-level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_902705575
 
 Chromosome Assembly
 -------------------
@@ -147,8 +153,13 @@ to indicate which sequences represent which ‘chromosomes’.
 
 If these chromosomes contain unlocalised sequences (where the chromosome of the sequence is known but not the exact
 location) you can submit an additional unlocalised list file. However, please note, if you wish to submit unplaced
-contigs, you will have to submit at a lower level and use an AGP file to indicate which scaffolds/contigs are
-assembled to form each chromosome. Any sequences that are not used to assemble chromosomes are considered unplaced.
+contigs or unplaced scaffolds (with valid biological evidence), you will have to submit these at the appropriate
+lower level and use an AGP file to indicate which scaffolds/contigs are assembled to form each chromosome.
+Any sequences that are not used to assemble chromosomes are considered unplaced. Note that all sequences should still
+be submitted in a single FASTA or flat file. Artificial constructs without biological evidence, such as artificial
+chromosomes consisting of unplaced contigs or scaffolds, are not permitted to be submitted.
+
+See an example chromosome level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_000237925
 
 For this assembly level in particular, it is important to understand how sequence names are formatted so they can be
 consistent between files, otherwise the system will just register your submission at contig level.
@@ -237,8 +248,8 @@ For genome assemblies, long term stable accession numbers that can be used in pu
 
 - Study accession (PRJEBxxxxxx) assigned at time of study registration
 - Sample accession (SAMEAxxxxxx) assigned at time of study registration
-- Genome assembly accession (GCA_xxxxxx) assigned once the genome assembly has been fully processed by ENA and
-  stable between versions
+- Genome assembly accession (GCA_xxxxxx) assigned once the genome assembly has been fully processed by ENA and is
+  released on agreement with GenCol. The GCA is stable between versions
 - Sequence accession(s) assigned once the genome assembly submission has been fully processed by ENA
 
 Submitters can retrieve the genome and sequence accession numbers from the `Webin submissions portal
@@ -266,7 +277,7 @@ Assembly names must:
 
 - match the pattern: ^[A-Za-z0-9][A-Za-z0-9 _#\-\.]*$
 - not be longer than 50 characters
-- not include the name of the organism assembled
+- not include the taxonomic name of the organism assembled
 
 Chromosome Name Validation
 --------------------------
@@ -315,6 +326,9 @@ Since Webin 1.7.0:
 
 This will be done at the discretion of the curation team when provided with valid reasoning,
 and can be requested through our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+
+Note that their is no limit on the quantity of sequence data in bases, just the amount of sequences in total.
+
 
 Assembly Updates
 ================
