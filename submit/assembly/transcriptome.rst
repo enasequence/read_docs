@@ -82,7 +82,7 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias)
 - SAMPLE: Sample accession or unique name (alias)
 - ASSEMBLYNAME: The unique assembly name
-- ASSEMBLY_TYPE: 'isolate' (only valid for Webin-CLI v3.0.0 or later)
+- ASSEMBLY_TYPE: 'isolate'
 - PROGRAM: The assembly program
 - PLATFORM: The sequencing platform, or comma-separated list of platforms
 - DESCRIPTION: Free text description of the transcriptome assembly (optional)
@@ -142,10 +142,11 @@ the submitter by the Webin command line submission interface (Webin-CLI).
 
 ERZ accessions **should not** be used to reference the assembly in publications.
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin
-submission service. For example, the submitter can retrieve the assigned genome assembly and sequence accessions from
+submission service. For example, the submitter can retrieve the assigned sequence accessions from
 the `Webin submissions portal <../general-guide/submissions-portal.html>`_ or from the `Webin reports service
 <../general-guide/reports-service.html>`_ using the ERZ accession number.
-This accession should be used to refer to the assembly in any conversations with helpdesk staff.
+Sequence accessions are sent to the user by email once the TSA has completed processing.
+The ERZ accession should be used to refer to the assembly in any conversations with helpdesk staff.
 
 For transcriptome assemblies, long term stable accession numbers that can be used in publications are:
 
@@ -153,10 +154,8 @@ For transcriptome assemblies, long term stable accession numbers that can be use
 - Sample accession (SAMEAxxxxxx) assigned at time of study registration
 - Sequence accession(s) assigned once the genome assembly submission has been fully processed by ENA
 
-Submitters can retrieve the genome and sequence accession numbers from the `Webin submissions portal
-<../general-guide/submissions-portal.html>`_ or from the `Webin reports service
-<../general-guide/reports-service.html>`_.
-These accession numbers are also sent to the submitters by e-mail.
+See an example of a publicly available TSA at:
+https://www.ebi.ac.uk/ena/browser/view/GAAJ01000000
 
 Validation rules
 ================
