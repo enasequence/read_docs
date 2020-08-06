@@ -67,11 +67,13 @@ A transcriptome assembly submission consists of the following files:
 
 Transcriptome assemblies should be of a high enough quality to fulfil the following criteria:
 
-1. They must have at least 1x coverage by primary sequence at each base. Regions of a TSA record can be assembled from a single Expressed Sequence Tag (EST) or read so that coverage is only 1x.
+1. They must have at least 1x coverage by primary sequence at each base. Regions of a TSA record can be assembled
+   from a single Expressed Sequence Tag (EST) or read so that coverage is only 1x.
 
 3. Bases that are listed as 'n' should be less than 10%.
 
-4. They should not have a stretch of more than 15 n's in a row. If they are within 20 base pairs of the c- or n-terminus they should be removed.
+4. They should not have a stretch of more than 15 n's in a row. If they are within 20 base pairs of the c- or
+   n-terminus they should be removed.
 
 5. No assemblies can be shorter than 200 base pairs.
 
@@ -99,7 +101,7 @@ The following file name fields are supported in the manifest file:
 - FASTA: sequences in fasta format
 - FLATFILE: sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_
 
-For example, the following manifest file represents a genome assembly consisting of transcripts provided in one fasta file:
+For example, the following manifest file represents a metatranscriptome assembly provided in one fasta file:
 
 ::
 
@@ -135,7 +137,8 @@ For example the following AC * line defines name 'contig1':
 Stage 3: Validate and submit the files
 ======================================
 
-Files are validated, uploaded and submitted using the `Webin command line submission interface (Webin-CLI) <../general-guide/webin-cli.html>`_.
+Files are validated, uploaded and submitted using the
+`Webin command line submission interface (Webin-CLI) <../general-guide/webin-cli.html>`_.
 Please refer to the `Webin command line submission interface <../general-guide/webin-cli.html>`_ documentation
 for more information about the submission process.
 
@@ -143,8 +146,8 @@ for more information about the submission process.
 Assigned accession numbers
 ==========================
 
-Once the genome assembly has been submitted an analysis (ERZxxxxxx) accession number is immediately assigned and returned to
-the submitter by the Webin command line submission interface (Webin-CLI).
+Once the genome assembly has been submitted an analysis (ERZxxxxxx) accession number is immediately assigned and
+returned to the submitter by the Webin command line submission interface (Webin-CLI).
 
 ERZ accessions **should not** be used to reference the assembly in publications.
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin
@@ -164,6 +167,8 @@ Submitters can retrieve the genome and sequence accession numbers from the `Webi
 <../general-guide/reports-service.html>`_.
 These accession numbers are also sent to the submitters by e-mail.
 
+See an example of a publicly available metatranscriptome TSA at:
+https://www.ebi.ac.uk/ena/browser/view/HAZG01000000
 
 Validation rules
 ================

@@ -185,6 +185,9 @@ For binned metagenome assemblies, long term stable accession numbers that can be
 - Study accession (PRJEBxxxxx) assigned at time of study registration.
 - Sample accession (SAMEAxxxxxx) assigned at time of sample registration.
 
+See an example of a publicly available binned metagenome at:
+https://www.ebi.ac.uk/ena/browser/view/ERZ1100281
+
 Validation rules
 ================
 
@@ -194,7 +197,7 @@ Assembly name validation
 Assembly names must:
 - match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9 _#\-\.]*$
 - not be longer than 50 characters
-- not include the name of the organism assembled
+- not include the taxonomic name of the organism assembled
 
 Sequence validation
 -------------------
