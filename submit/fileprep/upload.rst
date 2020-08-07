@@ -179,8 +179,7 @@ Using Aspera ascp Command Line Program
 --------------------------------------
 
 Aspera is a commercial file transfer protocol that may provide better transfer
-speeds than FTP over long distances. For short distance file transfers we
-recommend the use of FTP.
+speeds than FTP.
 
 Download Aspera CLI from
 `here <https://downloads.asperasoft.com/en/downloads/62>`_.
