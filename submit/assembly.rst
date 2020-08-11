@@ -98,7 +98,7 @@ internal processing only and will not be visible in the browser. As a result, fo
 assemblies you will receive additional post-processing accession numbers starting with GCA\_.
 
 In alignment with INSDC partners, `SARS-CoV-2 assemblies <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html>`_ 
-will not be assigned a GCA_ accession. 
+will not be assigned a GCA\_ accession. 
 For these assemblies, sequence accessions will continue to be assigned and the ERZ records 
 will also be available in the browser to provide a point of access for the submitted file(s).
 
