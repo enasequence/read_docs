@@ -83,19 +83,39 @@ mitochondrial chromosomes:
 Please read on for information on the content of the chromosome list file columns
 
 - OBJECT_NAME (first column): The unique sequence name.
-- CHROMOSOME_NAME (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment qualifiers in the EMBL-Bank flat files.
+- CHROMOSOME_NAME (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment
+  qualifier in the EMBL-Bank flat files. Names must:
+
+   - match the pattern: ^[A-Za-z0-9][A-Za-z0-9_#-.]*$
+   - be shorter than 33 characters
+   - be unique within an assembly
+   - not contain any of the following as part of their name (case insensitive):
+
+      - ‘chr’
+      - ‘chrm’
+      - ‘chrom’
+      - ‘chromosome’
+      - ‘linkage group’
+      - ‘linkage-group’
+      - ‘linkage_group’
+      - ‘plasmid’
+
 - CHROMOSOME_TYPE (third column): Allowed values:
-    1. chromosome
-    2. plasmid
-    3. linkage_group
-    4. monopartite
-    5. segmented
-    6. multipartite
+
+   1. chromosome
+   2. plasmid
+   3. linkage_group
+   4. monopartite
+   5. segmented
+   6. multipartite
+
 - TOPOLOGY (CHROMOSOME_TYPE modifier):
+
     - Topology can be specified as a modifier to the chromosome type
     - Options are 'linear' or 'circular', default is linear
     - Must not conflict with any value specified in flat file
-    - Contigs, scaffolds and transcriptome sequences are always linear: entering 'circular' here will be overriden
+ - Contigs, scaffolds and transcriptome sequences are always linear: entering 'circular' here will be overriden
+
 - CHROMOSOME_LOCATION (optional fourth column): By default eukaryotic chromosomes will be assumed to reside in the
   nucleus and prokaryotic chromosomes and plasmids in the cytoplasm. Allowed values:
     - Macronuclear
