@@ -82,8 +82,8 @@ mitochondrial chromosomes:
 
 Please read on for information on the content of the chromosome list file columns
 
-- OBJECT_NAME (first column): The unique sequence name.
-- CHROMOSOME_NAME (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment
+- **OBJECT_NAME** (first column): The unique sequence name.
+- **CHROMOSOME_NAME** (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment
   qualifier in the EMBL-Bank flat files. Names must:
 
    - match the pattern: ^[A-Za-z0-9][A-Za-z0-9_#-.]*$
@@ -100,7 +100,7 @@ Please read on for information on the content of the chromosome list file column
       - ‘linkage_group’
       - ‘plasmid’
 
-- CHROMOSOME_TYPE (third column): Allowed values:
+- **CHROMOSOME_TYPE** (third column): Allowed values:
 
    1. chromosome
    2. plasmid
@@ -109,15 +109,16 @@ Please read on for information on the content of the chromosome list file column
    5. segmented
    6. multipartite
 
-- TOPOLOGY (CHROMOSOME_TYPE modifier):
+- **TOPOLOGY** (CHROMOSOME_TYPE modifier):
 
-    - Topology can be specified as a modifier to the chromosome type
-    - Options are 'linear' or 'circular', default is linear
-    - Must not conflict with any value specified in flat file
- - Contigs, scaffolds and transcriptome sequences are always linear: entering 'circular' here will be overriden
+   - Topology is not a separate column but can be specified as a modifier to the chromosome type
+   - Options are 'linear' or 'circular', default is linear
+   - Must not conflict with any value specified in flat file
+   - Contigs, scaffolds and transcriptome sequences are always linear: entering 'circular' here will be overriden
 
-- CHROMOSOME_LOCATION (optional fourth column): By default eukaryotic chromosomes will be assumed to reside in the
+- **CHROMOSOME_LOCATION** (optional fourth column): By default eukaryotic chromosomes will be assumed to reside in the
   nucleus and prokaryotic chromosomes and plasmids in the cytoplasm. Allowed values:
+
     - Macronuclear
     - Nucleomorph
     - Mitochondrion
@@ -136,7 +137,6 @@ Please read on for information on the content of the chromosome list file column
     - Proplastid
     - Hydrogenosome
     - Chromatophore
-
 
 
 
