@@ -64,6 +64,7 @@ To use this program, follow the below instructions in video or text form:
         <iframe src="https://www.youtube.com/embed/LjYmhWWGnhM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
+
 1.  `Download the Webin File Uploader
     <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
 2.  Launch the application (Mac users please see further instructions below),
