@@ -55,9 +55,14 @@ Using Webin File Uploader
 
 Files can be uploaded using the Webin File Uploader, a Java web start
 application downloadable from
-`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_:
+`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_ or the below link.
+To use this program, follow the below instructions in video or text form:
 
-.. image:: ../images/webin_file_upload_01.png
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/LjYmhWWGnhM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
 
 1.  `Download the Webin File Uploader
     <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
@@ -78,8 +83,8 @@ application downloadable from
 10. Click on the ``Upload`` button.
 
 
-Instructions For Mac Users
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional Instructions For Mac Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When downloading the application the following dialog box will be displayed:
 
