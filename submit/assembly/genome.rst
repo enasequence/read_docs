@@ -1,6 +1,6 @@
-===========================================
-Submitting Genome Assemblies of Individuals
-===========================================
+================================================================
+Submitting Genome Assemblies of Individuals or Cultured Isolates
+================================================================
 
 - `Introduction`_
 - `Stage 1: Pre-Register Study And Sample`_
