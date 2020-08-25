@@ -72,7 +72,7 @@ To use this program, follow the below instructions in video or text form:
 4.  Enter your Webin password in the ``Password`` field.
 5.  Browse into the local ``Upload Directory`` containing the data files you
     wish to upload using the ``...`` button.
-6.  Click 'okay' to see he list of all the files contained in the selected
+6.  Click 'okay' to see the list of all the files contained in the selected
     directory displayed in the Webin File Uploader window
 7.  Choose ``Overwrite`` option if you wish to replace any existing files which
     have been previously uploaded.
@@ -129,8 +129,8 @@ General Instructions For Uploading Files Using FTP Client
    linux and Mac users.
 2. Use ``binary mode`` for file transfers.
 3. Use ``webin2.ebi.ac.uk`` as the target host.
-4. ``Login`` with your Webin username and password.
-5. ``Upload`` files to your private Webin upload area.
+4. Login with your Webin username and password.
+5. Upload files to your private Webin upload area.
 
 
 Using FTP Command Line Client On Linux/Mac
@@ -170,15 +170,20 @@ graphical interface.
    If you are not administrator of your computer then download the portable
    version of FileZilla.
 2. Use the binary mode: ``Transfer menu -> Transfer Type -> Binary``.
-3. Use ``webin2.ebi.ac.uk`` as the host.
-4. Enter your Webin username and password.
-5. Click ``Quickconnect``.
-6. Search for the file(s) you want to upload using the tree on the left panel.
-7. Create directories in your drop box (if necessary) using the tree on the
+3. Open the 'Site Manager' menu with the button at the top-left
+4. Use the 'New Site' option
+5. Enter details to match those in the screenshot, adding your own Webin
+   username and password:
+
+.. images:: ../images/filezilla-site-manager-settings.png
+
+6. Click 'Connect'
+7. Search for the file(s) you want to upload using the tree on the left panel.
+8. Create directories in your drop box (if necessary) using the tree on the
    right panel.
-8. Drag and drop the files you want to upload from the lower left panel to the
+9. Drag and drop the files you want to upload from the lower left panel to the
    lower right panel.
-9. Once your transfer is successful, close the application.
+10. Once your transfer is successful, close the application.
 
 
 Using Aspera ascp Command Line Program
