@@ -5,7 +5,7 @@ How to Download Data Files
 Providing users with the ability to download submitted data for further
 analysis purposes is a key part of ENA's mission.
 Files are therefore made available through a public FTP server.
-Here you can learn how this server is structure, and how to download read and
+Here you can learn how this server is structured, and how to download read and
 analysis files.
 
 
@@ -93,8 +93,8 @@ Using *Globus*
 
 Globus provides a more user-friendly, feature-rich directory interface for
 interacting with the FTP server.
-Files can be downloaded through `Globus`_ ebi#public endpoint from the
-'/gridftp/ena' subfolder:
+Files can be downloaded through `Globus`_ 'Shared EMBL-EBI public endpoint'
+endpoint from the '/gridftp/ena' subfolder:
 
 .. image:: images/file-download-globus.png
 
