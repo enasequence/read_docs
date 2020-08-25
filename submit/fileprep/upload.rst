@@ -175,7 +175,7 @@ graphical interface.
 5. Enter details to match those in the screenshot, adding your own Webin
    username and password:
 
-.. images:: ../images/filezilla-site-manager-settings.png
+.. image:: ../images/filezilla-site-manager-settings.png
 
 6. Click 'Connect'
 7. Search for the file(s) you want to upload using the tree on the left panel.
