@@ -46,16 +46,16 @@ Each child project is released independently and they each have their own hold d
 .. code-block:: xml
 
     <PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <PROJECT center_name="" alias="">
-            <TITLE></TITLE>
-            <DESCRIPTION></DESCRIPTION>
+        <PROJECT center_name="" alias="TODO:alias">
+            <TITLE>TODO:Title_text_here</TITLE>
+            <DESCRIPTION>TODO:Description_text_here</DESCRIPTION>
             <UMBRELLA_PROJECT/>
             <RELATED_PROJECTS>
               <RELATED_PROJECT>
-                <CHILD_PROJECT accession=""/>
+                <CHILD_PROJECT accession="TODO:child_accession"/>
               </RELATED_PROJECT>
               <RELATED_PROJECT>
-                <CHILD_PROJECT accession=""/>
+                <CHILD_PROJECT accession="TODO:child_accession"/>
               </RELATED_PROJECT>
             </RELATED_PROJECTS>
         </PROJECT>
@@ -63,7 +63,6 @@ Each child project is released independently and they each have their own hold d
 
 Edit umbrella.xml to contain the following information:
 
-- Centre name
 - Alias (a unique, informative name for your project)
 - Title
 - Description
