@@ -16,7 +16,7 @@ metadata model with relationships between the different types of objects is illu
 
 ## Metadata Model
 
-![Webin medata model](../images/metadata_model_whole.png)
+![](../images/metadata_model_whole.png)
 
 - **Submission**: A submission contains submission actions to be performed by the archive. A submission can add more objects to the
 archive, update already submitted objects or make objects publicly available.
