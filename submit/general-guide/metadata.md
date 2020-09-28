@@ -28,6 +28,3 @@ checklists, which define the fields used to annotate the samples.
 instrument details.
 - **Run**: A run is part of an experiment and refers to data files containing sequence reads.
 - **Analysis**: An analysis contains secondary analysis results derived from sequence reads (e.g. a genome assembly),
-- **EGA DAC**: An European Genome-phenome Archive (EGA) data access committee (DAC) is required for authorized access submissions.
-- **EGA Policy**: An European Genome-phenome Archive (EGA) data access policy is required for authorized access submissions.
-- **EGA Dataset**: An European Genome-phenome Archive (EGA) data set is required for authorized access submissions.
