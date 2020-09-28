@@ -18,8 +18,6 @@ metadata model with relationships between the different types of objects is illu
 
 ![Webin medata model](../images/metadata_model_whole.png)
 
-![Webin medata model](../images/metadata_model_whole_no_bg.png)
-
 - **Submission**: A submission contains submission actions to be performed by the archive. A submission can add more objects to the
 archive, update already submitted objects or make objects publicly available.
 - **Study**: A study (project) groups together data submitted to the archive. A study accession is typically used
