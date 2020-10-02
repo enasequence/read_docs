@@ -34,7 +34,9 @@ The manifest file is specified using the `-manifest <filename>` option.
 A sequence read submission consists of the following files:
 
 - 1 manifest file
-- 1 BAM file, 1 CRAM file, or 1-2 Fastq files
+- 1 BAM file, 1 CRAM file, 1 Fastq file, or a pair of Fastq files
+
+Multiple submissions must be done separately, each with their own manifest file.
 
 ### Manifest file
 
