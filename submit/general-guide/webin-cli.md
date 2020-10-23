@@ -12,10 +12,25 @@ do not need to pre-upload your files when using Webin-CLI.
 
 Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
+Webin-CLI is available as a Docker image and as a Java jar file.
 
-## Download the Program
+## Run the program using the Docker image
 
-You can download Webin-CLI from its GitHub repository. We recommend always using the latest version:
+Webin-CLI is available as the `enasequence/webin-cli` Docker image.
+
+You can run the Webin-CLI docker image using `docker`:
+
+`docker run enasequence/webin-cli`
+
+or using `singularity`:
+
+`singularity run docker://enasequence/webin-cli`
+
+The required command line options are explained below.
+
+## Download the program as a Java jar file
+
+You can download Webin-CLI Java jar file from its GitHub repository. We recommend always using the latest version:
 
 - [ **Latest Webin-CLI Version** ](https://github.com/enasequence/webin-cli/releases/latest)
 
@@ -34,8 +49,7 @@ Download Oracle JREs from the below links:
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 - [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
-
-## Using the Program
+## Run the program as a Java jar file
 
 The  Webin command line submission interface is a self-executing Java jar file and is
 run using the `java` command:
