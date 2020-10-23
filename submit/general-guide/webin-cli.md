@@ -26,7 +26,7 @@ or using `singularity`:
 
 `singularity run docker://enasequence/webin-cli`
 
-The required command line options are explained below.
+The required command line options are explained below. Please remember to mount local directories containing the files to submit so that they available to the running container.
 
 ## Download the program as a Java jar file
 
@@ -42,8 +42,12 @@ You should have version 1.8 or newer installed, which can be downloaded from Jav
 
 - [ **Download Java** ](https://java.com/en/download/)
 
-Webin-CLI has been tested against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202 .
-You are recommended to use this version.
+Webin-CLI has been tested against openjdk version 1.8.0_212. You are recommended to use equivalent or later version.
+
+Download openapi JDKs from the below links:
+
+https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+
 Download Oracle JREs from the below links:
 
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
