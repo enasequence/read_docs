@@ -6,7 +6,7 @@ How Is Data Release Managed?
 ------------------------------
 Data release is controlled from the level of study objects.
 When a study is made public, all samples, experiments, runs and analyses associated with it are also made public.
-For an explanation of these terms and their relationships, please read the `Metadata Model<https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html>`_ page.
+For an explanation of these terms and their relationships, please read the `Metadata Model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html>`_ page.
 
 
 Can I Advance/Postpone The Release Date?
