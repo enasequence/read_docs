@@ -12,10 +12,25 @@ do not need to pre-upload your files when using Webin-CLI.
 
 Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
+Webin-CLI is available as a Docker image and as a Java jar file.
 
-## Download the Program
+## Run the program using the Docker image
 
-You can download Webin-CLI from its GitHub repository. We recommend always using the latest version:
+Webin-CLI is available as the `enasequence/webin-cli` Docker image.
+
+You can run the Webin-CLI docker image using `docker`:
+
+`docker run enasequence/webin-cli`
+
+or using `singularity`:
+
+`singularity run docker://enasequence/webin-cli`
+
+The required command line options are explained below. Please remember to mount local directories containing the files to submit so that they available to the running container.
+
+## Download the program as a Java jar file
+
+You can download Webin-CLI Java jar file from its GitHub repository. We recommend always using the latest version:
 
 - [ **Latest Webin-CLI Version** ](https://github.com/enasequence/webin-cli/releases/latest)
 
@@ -27,15 +42,18 @@ You should have version 1.8 or newer installed, which can be downloaded from Jav
 
 - [ **Download Java** ](https://java.com/en/download/)
 
-Webin-CLI has been tested against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202 .
-You are recommended to use this version.
+Webin-CLI has been tested against openjdk version 1.8.0_212. You are recommended to use equivalent or later version.
+
+Download openapi JDKs from the below links:
+
+https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+
 Download Oracle JREs from the below links:
 
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 - [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
-
-## Using the Program
+## Run the program as a Java jar file
 
 The  Webin command line submission interface is a self-executing Java jar file and is
 run using the `java` command:

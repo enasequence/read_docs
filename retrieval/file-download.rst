@@ -185,3 +185,30 @@ Windows
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
     era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ^
     local\target\directory
+
+
+Downloading Private Files
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+e.g. If you want to use aspera to download a non-public data file using datahub (dcc) authentication,
+provide the dcc username instead of era-fasp and you will be prompted for the password.
+
+::
+
+    ascp -QT -l 300m -P33001 \
+    dcc_name@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz \
+    local/target/directory
+
+
+Downloading Assembled and Annotated Sequence Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Files in public FTP folders can also be downloaded using Aspera.
+
+e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy/WYAA01.dat.gz
+
+::
+
+    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
+    fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wy/WYAA01.dat.gz local/target/directory
+

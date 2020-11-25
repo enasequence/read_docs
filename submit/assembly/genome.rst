@@ -184,21 +184,23 @@ It is a plain text file with two columns separated by a tab (or any whitespace c
 
 The following metadata fields are supported in the manifest file for genome context:
 
-- STUDY: Study accession
-- SAMPLE: Sample accession
-- ASSEMBLYNAME: Unique assembly name
-- ASSEMBLY_TYPE: 'clone or isolate'
-- COVERAGE: The estimated depth of sequencing coverage
-- PROGRAM: The assembly program
-- PLATFORM: The sequencing platform, or comma-separated list of platforms
-- MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap (optional)
-- MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' (optional)
-- DESCRIPTION: Free text description of the genome assembly (optional)
-- RUN_REF: Comma separated list of run accession(s) (optional)
+- STUDY: Study accession - *mandatory*
+- SAMPLE: Sample accession - *mandatory*
+- ASSEMBLYNAME: Unique assembly name - *mandatory*
+- ASSEMBLY_TYPE: 'clone or isolate' - *mandatory*
+- COVERAGE: The estimated depth of sequencing coverage - *mandatory*
+- PROGRAM: The assembly program - *mandatory*
+- PLATFORM: The sequencing platform, or comma-separated list of platforms - *mandatory*
+- MINGAPLENGTH: Minimum length of consecutive Ns to be considered a gap - *optional*
+- MOLECULETYPE: 'genomic DNA', 'genomic RNA' or 'viral cRNA' - *optional*
+- DESCRIPTION: Free text description of the genome assembly - *optional*
+- RUN_REF: Comma separated list of run accession(s) - *optional*
 
 Please see further below for validation rules affecting some of these fields.
 
-The following file name fields are supported in the manifest file:
+Various file name fields are supported in the manifest file. Note that all of these are optional, 
+though of course at least one must be provided, and some may only be relevant in the presence of
+other file types. The available fields are as follows:
 
 - FASTA: sequences in fasta format
 - FLATFILE: sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_
