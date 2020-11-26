@@ -131,7 +131,7 @@ The following picture illustrates the stages of the submission process:
 ![Submission process](../images/webin-cli_01.png)
 
 
-## Stage 1: Pre-register Study and Sample
+### Stage 1: Pre-register Study and Sample
 
 Each submission must be associated with a pre-registered study and a sample.
 
@@ -139,13 +139,13 @@ Each submission must be associated with a pre-registered study and a sample.
 - [Register a Sample](../samples.html)
 
 
-## Stage 2: Prepare the Files
+### Stage 2: Prepare the Files
 
 The set of files that are part of the submission must be specified using a manifest file.
 The manifest file is specified using the `-manifest <filename>` option.
 
 
-### Manifest File Format
+#### Manifest File Format
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
 - Field name (first column): case insensitive field name   
@@ -190,7 +190,7 @@ FASTA   genome.fasta.gz
 ```
 
 
-### Manifest File Types
+#### Manifest File Types
 
 Please refer to the more detailed documentation for supported file types for each submission.
 
@@ -212,7 +212,7 @@ The following formats are supported for [read submissions](../reads/webin-cli.ht
 - FASTQ: fastq file
 
 
-#### Info File (for backward compability only)
+##### Info File (for backward compability only)
 
 You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 
@@ -228,7 +228,7 @@ FASTA   genome.fasta.gz
 ```
 
 
-## Stage 3: Validate and Submit Files
+### Stage 3: Validate and Submit Files
 
 You can validate your files using the `-validate` command line option. Note that
 the `-submit` option must be used to submit the validated files.
