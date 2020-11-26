@@ -296,6 +296,14 @@ or using `singularity`:
 The required command line options are explained below. Please remember to mount local directories containing the files to submit so that they available to the running container.
 
 
+## Configuring Your Firewall For ENA Upload
+
+Some users may encounter problems connecting to the ENA FTP service, a necessary step in Webin-CLI submission.
+A possible solution to this is to ensure that your firewall is configured appropriately to allow you to connect to this
+service:
+
+- `Configuring Your Firewall For ENA Upload <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#appendix-configuring-your-firewall-for-ena-upload>`_
+
 ## Proxy Servers
 
 If your organisation uses a https proxy you can set the following Java properties to instruct
