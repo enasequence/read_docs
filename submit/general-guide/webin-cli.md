@@ -13,7 +13,7 @@ do not need to pre-upload your files when using Webin-CLI.
 
 Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
-Webin-CLI is available as a [Docker image](#docker-img) and as a Java jar file.
+Webin-CLI is available as a [Docker image](#run-the-program-using-the-docker-image) and as a Java jar file.
 
 
 ## Download the program as a Java jar file
@@ -281,7 +281,7 @@ in the following file:
 `<context>/<name>/validate/webin-cli.report`
 
 
-## <a name="docker-img"></a> Run the program using the Docker image
+## Run the program using the Docker image
 
 Webin-CLI is available as the `enasequence/webin-cli` Docker image.
 
