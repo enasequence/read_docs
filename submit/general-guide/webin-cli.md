@@ -302,7 +302,7 @@ Some users may encounter problems connecting to the ENA FTP service, a necessary
 A possible solution to this is to ensure that your firewall is configured appropriately to allow you to connect to this
 service:
 
-- `Configuring Your Firewall For ENA Upload <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#appendix-configuring-your-firewall-for-ena-upload>`_
+- [Configuring Your Firewall For ENA Upload](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#appendix-configuring-your-firewall-for-ena-upload)
 
 
 ## Proxy Servers
