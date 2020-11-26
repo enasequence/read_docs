@@ -304,6 +304,7 @@ service:
 
 - `Configuring Your Firewall For ENA Upload <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#appendix-configuring-your-firewall-for-ena-upload>`_
 
+
 ## Proxy Servers
 
 If your organisation uses a https proxy you can set the following Java properties to instruct
