@@ -1,5 +1,6 @@
 # Webin-CLI Submission
 
+
 ## Introduction
 
 Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin submission
@@ -40,6 +41,7 @@ Download Oracle JREs from the below links:
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 - [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
+
 ## Run the program as a Java jar file
 
 The  Webin command line submission interface is a self-executing Java jar file and is
@@ -64,6 +66,7 @@ On Windows a backward slash is used instead of a forward slash:
 `java -jar Downloads\webin-cli-1.7.3.jar <options>`
 
 The command line `<options>` are explained below.
+
 
 ### Video Guide: Getting Started With Webin-CLI in Windows 10
 
@@ -277,6 +280,7 @@ in the following file:
 
 `<context>/<name>/validate/webin-cli.report`
 
+
 ## <a name="docker-img"></a> Run the program using the Docker image
 
 Webin-CLI is available as the `enasequence/webin-cli` Docker image.
@@ -316,6 +320,7 @@ For example:
 ```
 java -Dftp.proxyHost=proxy.com -Dftp.proxyPort=8080 -jar webin-cli-<version>.jar <options>
 ```
+
 
 ### Using Aspera Instead of FTP to Upload Files
 
