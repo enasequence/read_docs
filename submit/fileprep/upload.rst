@@ -49,6 +49,10 @@ There are a number of ways to accomplish the upload, detailed below:
 - `Using Aspera ascp Command Line Program`_
 - `Using Windows File Explorer`_
 
+If you have problems with using these services, you may find help in the appendix:
+
+- `Appendix: Configuring Your Firewall For ENA Upload`_
+
 
 Using Webin File Uploader
 -------------------------
@@ -272,6 +276,25 @@ password and click ``Log on``
     :align: center
 
 
+Appendix: Configuring Your Firewall For ENA Upload
+--------------------------------------------------
+
+While most users should not encounter problems in this area, it may sometimes be necessary to configure your firewall
+to permit upload of data to ENA.
+Users attempting to connect from an institutional network may find that their IT services department has placed
+restrictions on their ability to connect to FTP services.
+This information could be useful in getting our service whitelisted.
+
+FTP is used in passive mode and connection will be opened to one of the below ports:
+
+- 40000
+- 50000
+
+Access to port **21** is required for the following IP address ( webin2.ebi.ac.uk ):
+
+- 193.62.193.143
+
+
 File MD5 Checksums Value
 ========================
 
@@ -327,3 +350,4 @@ small patches of few Terabytes or less and expect that volumes would not exceed
 10 Terabytes under normal circumstances. Unexpected heavy use of the data
 upload areas may have an impact on other Webin users and we are grateful for
 users' attention to this aspect of our fair use policy.
+
