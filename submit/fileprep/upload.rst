@@ -14,9 +14,9 @@ Please note that this is not necessary if you are using Webin-CLI, as it
 handles the upload process for you.
 
 All upload methods described below will require you to have registered a
-Webin account, the ID for which resembles 'Webin-XXXXX'. Register an account
-or reset your password at the `Webin login page
-<https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+Webin account, the ID for which resembles 'Webin-XXXXX'. Always enter this with
+an upper-case 'W'. Register an account or reset your password at the `Webin
+login page <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
 
 
 Keep Local Copies
@@ -72,7 +72,8 @@ To use this program, follow the below instructions in video or text form:
 1.  `Download the Webin File Uploader
     <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
 2.  Launch the application (Mac users please see further instructions below),
-3.  Enter your Webin username in the ``Username`` field.
+3.  Enter your Webin username in the ``Username`` field, ensuring the 'W' is
+    upper-case.
 4.  Enter your Webin password in the ``Password`` field.
 5.  Browse into the local ``Upload Directory`` containing the data files you
     wish to upload using the ``...`` button.
@@ -133,7 +134,8 @@ General Instructions For Uploading Files Using FTP Client
    linux and Mac users.
 2. Use ``binary mode`` for file transfers.
 3. Use ``webin2.ebi.ac.uk`` as the target host.
-4. Login with your Webin username and password.
+4. Login with your Webin username and password, capitalising the 'W' in your
+   username.
 5. Upload files to your private Webin upload area.
 
 
