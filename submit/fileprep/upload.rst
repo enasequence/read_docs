@@ -42,9 +42,7 @@ password at the `Webin login page
 There are a number of ways to accomplish the upload, detailed below:
 
 - `Using Webin File Uploader`_
-- `General Instructions For Uploading Files Using FTP Client`_
-- `Using FTP Command Line Client On Linux/Mac`_
-- `Using FTP Command Line Client On Windows`_
+- `Uploading Files Using Command Line FTP Client`_
 - `Using FileZilla On Windows`_
 - `Using Aspera ascp Command Line Program`_
 - `Using Windows File Explorer`_
@@ -127,20 +125,19 @@ Now select the ``Open`` button. This will launch the the Webin File Uploader
 application.
 
 
-General Instructions For Uploading Files Using FTP Client
----------------------------------------------------------
+Uploading Files Using Command Line FTP Client
+---------------------------------------------
 
-1. Use your favourite ftp client. For example, ``lftp`` is a popular choice for
-   linux and Mac users.
-2. Use ``binary mode`` for file transfers.
-3. Use ``webin2.ebi.ac.uk`` as the target host.
-4. Login with your Webin username and password, capitalising the 'W' in your
-   username.
-5. Upload files to your private Webin upload area.
+This section explains how to upload files to us using a command line FTP
+client in Linux or Mac.
+The built in FTP tool for Windows command line does not support FTPS so Windows
+users are recommended to use an alternative:
 
+- `Using Webin File Uploader`_
+- `Using FileZilla On Windows`_
 
-Using FTP Command Line Client On Linux/Mac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The below instructions describe how you may upload your files to us through
+a command line FTP client in Linux or Mac.
 
 1. Open a terminal and type ``lftp webin2.ebi.ac.uk -u Webin-xxxxx``, filling in your Webin username
 2. Enter your password when prompted
@@ -148,22 +145,7 @@ Using FTP Command Line Client On Linux/Mac
 4. Use ``mput <filename>`` command to upload files.
 5. Use ``bye`` command to exit the ftp client.
 
-
-Using FTP Command Line Client On Windows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. Use FTP command line client on Windows
-2. Start the command line interpreter: press Win-R -> type `cmd` -> press Enter
-3. Type ``ftp``
-4. Type ``open webin.ebi.ac.uk``
-5. Enter the username and password associated with your Webin submission
-   account.
-6. Type ``bin`` to use binary mode.
-7. Type ``ls`` command to check the content of your drop box.
-8. Type ``prompt`` to switch off confirmation for each file uploaded.
-9. Use ``mput`` command to upload files.
-10. Use ``bye`` command to exit the ftp client.
-11. Use ``exit`` command to exit the command line interpreter.
+Note that in your Webin username, the 'W' should be upper case.
 
 
 Using FileZilla On Windows
