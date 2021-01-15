@@ -14,7 +14,7 @@ Submit Annotated Sequences Interactively
 Submitting Via Spreadsheet
 ==========================
 
-| To begin, visit the `sequence checklist portal <https://www.ebi.ac.uk/ena/submit/webin/sequence-checklist>`_.
+| To begin, visit the `sequence checklist portal <./annotation-checklists.html>`_.
 | Here, you can review the available checklists, select the most appropriate, customise it, and review the allowed values for each field.
   Download your chosen spreadsheet and fill it out according to the restrictions given in the checklist portal.
   You should not edit any of the filled cells of the spreadsheet you download, only modify the empty ones by inserting your data and metadata.
