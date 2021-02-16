@@ -28,7 +28,7 @@ required objects before beginning your analysis submission.
 How to register/submit other datasets to ENA:
 
 - `Register a study <study.html>`_ 
-- `Register samples <sample.html>`_
+- `Register samples <samples.html>`_
 - `Submit raw reads <reads.html>`_
 
 
