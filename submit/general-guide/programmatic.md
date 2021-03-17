@@ -80,6 +80,10 @@ where the `XMLTYPE` is one of the following POST parameters:
 - `DATASET` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dataset.xsd))
 - `PROJECT` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd))
 
+You can include multiple records of the same type in the same submission as part of a `SET`. For example, by grouping `SAMPLE` records in a `<SAMPLE_SET></SAMPLE_SET>`.
+
+The maximum allowed size of a submitted XML file is 15MB. If your XML exceeds this size, please split your records into smaller XMLs and submit them across multiple submissions.
+
 Below is an example of a sequence read data submission to the Webin test service:
 
 ```
