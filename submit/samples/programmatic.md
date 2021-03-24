@@ -114,8 +114,7 @@ You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/submit/ch
 checklist [ERC000014](https://www.ebi.ac.uk/ena/browser/view/ERC000014) represents the
 GSC MIxS annotation standard for human associated source samples.
 
-The checklists are defined using XML. These XMLs are available by appending `&display=xml`
-to the URL for retriving a specific checklist. For example, the XML for
+The checklists are defined using XML. These XMLs are available via the ENA Browser API. For example, the XML for
 checklist ERC000014 can be retrieved using the following URL: [https://www.ebi.ac.uk/ena/browser/api/xml/ERC000011](https://www.ebi.ac.uk/ena/browser/api/xml/ERC000011)
 
 ##  The Taxonomic Classification
