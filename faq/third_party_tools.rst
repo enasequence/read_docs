@@ -27,3 +27,13 @@ other things, it can output your file in EMBL flat file format.
 developed by colleagues at EBI. It can convert between many different formats
 for various different molecules. 
 
+`annonex2embl <https://github.com/michaelgruenstaeudl/annonex2embl>`_ is
+available for the conversion of annotated DNA multi-sequence alignments in
+NEXUS format to an EMBL flat file suitable for submission via Webin-CLI. This
+was developed by Michael Gruenstaeudl and a paper is available with additional
+detail::
+
+     M. Gruenstaeudl, 2020. annonex2embl: automatic preparation of annotated
+     DNA sequences for bulk submissions to ENA. Bioinformatics 36: 3841-3848.
+     DOI: https://doi.org/10.1093/bioinformatics/btaa209
+
