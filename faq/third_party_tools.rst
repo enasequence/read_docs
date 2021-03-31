@@ -31,7 +31,7 @@ for various different molecules.
 available for the conversion of annotated DNA multi-sequence alignments in
 NEXUS format to an EMBL flat file suitable for submission via Webin-CLI. This
 was developed by Michael Gruenstaeudl and a paper is available with additional
-detail::
+detail
 
      M. Gruenstaeudl, 2020. annonex2embl: automatic preparation of annotated
      DNA sequences for bulk submissions to ENA. Bioinformatics 36: 3841-3848.
