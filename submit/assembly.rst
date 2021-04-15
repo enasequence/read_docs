@@ -57,13 +57,13 @@ The set of files required for genome assembly submissions are listed in the foll
 +--------------------+------------------------------------------+-------------------------------------+
 | Assembly Level     | File Requirements                        | Additional Information              |
 +====================+==========================================+=====================================+
-| Contig             | 1 Manifest file                          |                                     |
+| Contig             | 1 Manifest file                          | Defines essential metadata          |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 +--------------------+------------------------------------------+-------------------------------------+
-| Scaffold           | 1 Manifest file                          |                                     |
+| Scaffold           | 1 Manifest file                          | Defines essential metadata          |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
@@ -72,7 +72,7 @@ The set of files required for genome assembly submissions are listed in the foll
 |                    | 0-1 AGP file                             | For scaffold instructions from      |
 |                    |                                          | contigs                             |
 +--------------------+------------------------------------------+-------------------------------------+
-| Chromosome         | 1 Manifest file                          |                                     |
+| Chromosome         | 1 Manifest file                          | Defines essential metadata          |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
