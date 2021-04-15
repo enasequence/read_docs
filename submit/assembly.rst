@@ -59,24 +59,24 @@ The set of files required for genome assembly submissions are listed in the foll
 +====================+==========================================+=====================================+
 | Contig             | 1 Manifest file                          |                                     |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 Flat file                              | For annotated assemblies            |
+|                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 +--------------------+------------------------------------------+-------------------------------------+
 | Scaffold           | 1 Manifest file                          |                                     |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 Flat file                              | For annotated assemblies            |
+|                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 0-1 AGP file                             | For scaffold instructions from      |
 |                    |                                          | contigs                             |
 +--------------------+------------------------------------------+-------------------------------------+
 | Chromosome         | 1 Manifest file                          |                                     |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 Flat file                              | For annotated assemblies            |
+|                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 1 Chromosome list file                   | Indicate which sequences represent  |
 |                    |                                          | which ‘chromosomes’                 |
