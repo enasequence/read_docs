@@ -112,10 +112,12 @@ Consists of the following files:
 - 1 manifest file
 - 1 FASTA file OR 1 `flat file <../fileprep/assembly.html#flat-file>`_
 
+The default assumption is that an assembly is contig-level, thus if a submission comprises the sequences with no
+additional context, it is treated as a contig-level assembly
+
 This assembly level only requires information on the sequences and annotation (if any).
 You will receive an error if less than 2 or more than 1,000,000 sequences are submitted.
-If you have less than 2 sequences, then you  will need to submit at a higher assembly level or as `template sequences
-<../sequence/webin-cli-flatfile.html)>`_.
+If you have less than 2 sequences, then you  will need to submit at a higher assembly level.
 If you have more than 1,000,000 contigs in your submission, please
 `contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
@@ -131,10 +133,18 @@ Consists of the following files:
 - 0-1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
 This assembly level requires information on the sequences and annotation (if any).
-It also allows the submitter to provide an AGP file to give instructions for the assembly of the scaffolds
-from the contigs.
+A scaffold is an assemblage of contigs separated by gaps of known length.
+These gaps define the scaffold, and so your submission must define them in one of two ways:
 
+- **Explicit Gaps:** Use an AGP file to describe how scaffolds are assembled from contigs in the sequence file
+- **Implicit Gaps:** Include gaps as runs of Ns in the sequence file and set the manifest file's MINGAPLENGTH value
+  to an appropriate integer value; ever run of Ns which exceeds or matches this length will result in the creation of
+  a scaffold
+
+If an AGP file is included, it is not shown in our browser as part of the final assembly, but rather is consumed in
+the creation of the final sequence format.
 See an example scaffold-level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_902705575
+
 
 Chromosome Assembly
 -------------------
@@ -147,17 +157,21 @@ Consists of the following files:
 - 0-1 `unlocalised list files <../fileprep/assembly.html#unlocalised-list-file>`_
 - 0-1 `AGP files <../fileprep/assembly.html#agp-file>`_
 
-This assembly level allows the submission of fully assembled chromosomes including organelles, plasmids, and viral
-segments. This requires information on the sequences and annotation (if any) and submission of a chromosome list file
-to indicate which sequences represent which ‘chromosomes’.
+This assembly level allows the submission of fully assembled replicons including chromosomes, organelles, plasmids, and
+viral segments. This requires information on the sequences and annotation (if any), and submission of a chromosome list
+file to indicate which sequences represent which ‘chromosomes’.
 
-If these chromosomes contain unlocalised sequences (where the chromosome of the sequence is known but not the exact
-location) you can submit an additional unlocalised list file. However, please note, if you wish to submit unplaced
-contigs or unplaced scaffolds (with valid biological evidence), you will have to submit these at the appropriate
-lower level and use an AGP file to indicate which scaffolds/contigs are assembled to form each chromosome.
-Any sequences that are not used to assemble chromosomes are considered unplaced. Note that all sequences should still
-be submitted in a single FASTA or flat file. Artificial constructs without biological evidence, such as artificial
-chromosomes consisting of unplaced contigs or scaffolds, are not permitted to be submitted.
+In addition to the chromosome sequences, you may include unlocalised and unplaced sequences.
+Unlocalised sequences (where the chromosome of the sequence is known but not the exact location) can be submitted with
+an additional unlocalised list file.
+Unplaced sequences (where the chromosome is entirely unknown) can be submitted the same as contigs; with no additional
+context.
+They will then be included as part of a contig accession set.
+Any sequences that are not used to assemble chromosomes are considered unplaced.
+
+Note that all sequences should still be submitted in a single FASTA or flat file.
+Artificial constructs without biological evidence, such as artificial chromosomes consisting of unplaced contigs or
+scaffolds, are not permitted to be submitted.
 
 See an example chromosome level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_000237925
 
