@@ -98,7 +98,7 @@ endpoint from the '/gridftp/ena' subfolder:
 
 .. image:: images/file-download-globus.png
 
-.. _`Globus`: https://app.globus.org/file-manager?origin_id=6f70c1b4-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
+.. _`Globus`: https://app.globus.org/file-manager?origin_id=fd9c190c-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
 
 Using *enaBrowserTools*
 -----------------------
