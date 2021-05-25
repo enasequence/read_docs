@@ -260,7 +260,7 @@ First, run the Webin-CLI validation command, specifying your credentials and the
     webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
 
 
-Webin-CLI submission command:
+Second, run the Webin-CLI submission command:
 
 ::
 
