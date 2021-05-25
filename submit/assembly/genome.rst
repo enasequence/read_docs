@@ -273,6 +273,8 @@ assigned accession number (see below) being reported at your command line.
 Meanwhile, a failed validation will provide direction to a report file where you can find a list of error messages
 explaining the reason for the failure, which you can address before re-attempting.
 
+For more information on how to install and use Webin-CLI, please refer to the `Webin-CLI Submission
+<../general-guide/webin-cli.html>`_ page.
 
 
 Assigned Accession Numbers
