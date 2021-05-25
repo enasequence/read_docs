@@ -138,7 +138,7 @@ These gaps define the scaffold, and so your submission must define them in one o
 
 - **Explicit Gaps:** Use an AGP file to describe how scaffolds are assembled from contigs in the sequence file
 - **Implicit Gaps:** Include gaps as runs of Ns in the sequence file and set the manifest file's MINGAPLENGTH value
-  to an appropriate integer value; ever run of Ns which exceeds or matches this length will result in the creation of
+  to an appropriate integer value; each run of Ns which exceeds or matches this length will result in the creation of
   a scaffold
 
 If an AGP file is included, it is not shown in our browser as part of the final assembly, but rather is consumed in
@@ -200,7 +200,7 @@ The following metadata fields are supported in the manifest file for genome cont
 
 - STUDY: Study accession - *mandatory*
 - SAMPLE: Sample accession - *mandatory*
-- ASSEMBLYNAME: Unique assembly name - *mandatory*
+- ASSEMBLYNAME: Unique assembly name, user-provided - *mandatory*
 - ASSEMBLY_TYPE: 'clone or isolate' - *mandatory*
 - COVERAGE: The estimated depth of sequencing coverage - *mandatory*
 - PROGRAM: The assembly program - *mandatory*
@@ -226,16 +226,16 @@ For example, the following manifest file represents a genome assembly consisting
 
 ::
 
-    STUDY   TODO
-    SAMPLE   TODO
-    ASSEMBLYNAME   TODO
-    ASSEMBLY_TYPE clone or isolate
-    COVERAGE   TODO
-    PROGRAM   TODO
-    PLATFORM   TODO
-    MINGAPLENGTH   TODO
-    MOLECULETYPE   genomic DNA
-    FASTA   genome.fasta.gz
+    STUDY           TODO
+    SAMPLE          TODO
+    ASSEMBLYNAME    TODO
+    ASSEMBLY_TYPE   clone or isolate
+    COVERAGE        TODO
+    PROGRAM         TODO
+    PLATFORM        TODO
+    MINGAPLENGTH    TODO
+    MOLECULETYPE    genomic DNA
+    FASTA           genome.fasta.gz
 
 
 Stage 3: Validate And Submit The Files
@@ -243,8 +243,36 @@ Stage 3: Validate And Submit The Files
 
 Files are validated, uploaded and submitted using the `Webin command line submission interface
 <../general-guide/webin-cli.html>`_ (Webin-CLI).
-Please refer to the `Webin command line submission interface <../general-guide/webin-cli.html>`_ documentation for more
+Please refer to the `Webin command line submission interface <../general-guide/webin-cli.html>`_ documentation for full
 information about the submission process.
+
+Brief examples of Webin-CLI commands follow.
+The tool has ``-submit`` and ``-validate`` options which are mutually exclusive.
+Full validation of your data and metadata is run regardless of which option you choose, but using just ``-validate``
+gives you the opportunity to check the current status of your assembly and information on any errors.
+You are therefore encouraged to make use of Webin-CLI validation as much as you need to before you are ready to submit
+for real.
+
+First, run the Webin-CLI validation command, specifying your credentials and the path to your manifest file:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+Webin-CLI submission command:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+In both cases, your prospective submission will be validated in full, and the result of this reported to you.
+A successful validation results in a simple success message, while a successful submission will further result in the
+assigned accession number (see below) being reported at your command line.
+Meanwhile, a failed validation will provide direction to a report file where you can find a list of error messages
+explaining the reason for the failure, which you can address before re-attempting.
+
 
 
 Assigned Accession Numbers
