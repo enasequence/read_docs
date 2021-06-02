@@ -65,3 +65,5 @@ considered accessions that could be used for publication:
 - Assemblies
 - BioSamples (in the context of associated data)
 - Assembled/Annotated Sequences
+
+You can now claim your ENA studies to your ORCID ID. Please see `here <https://ena-browser-docs.readthedocs.io/en/latest/about/citing-ena.html#orcid-data-claiming>`_ for more information.
