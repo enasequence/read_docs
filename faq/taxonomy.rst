@@ -69,9 +69,9 @@ about it by using one of the following urls:
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/taxonomy/rest/taxon/scientific-name/
+   www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/
 
-   www.ebi.ac.uk/ena/taxonomy/rest/taxon/any-name/
+   www.ebi.ac.uk/ena/taxonomy/rest/any-name/
 
    www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
 
