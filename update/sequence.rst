@@ -7,5 +7,5 @@ please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ detai
 
 .. note::
 
-  This does not refer to the update of annotated genome assemblies, please see `Updating Assemblies </assembly.html`_
+  This does not refer to the update of annotated genome assemblies, please see `Updating Assemblies </assembly.html>`_
   for information on how to do this.
