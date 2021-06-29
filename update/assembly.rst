@@ -31,6 +31,7 @@ Chromosome names must be maintained:
   The name is specified in the chromosome list file, as well as in the
   identifier lines of your FASTA or the 'AC * 'lines of your EMBL file.
 
+Chromosomes may be added:
   Note that it is acceptable to include new chromosomes, as long as all
   previous chromosomes are maintained.
   Also, it is acceptable to update a contig or scaffold-level assembly to a
@@ -56,9 +57,9 @@ Annotation status must be maintained:
 Both the sequence and annotation may be updated, or just one:
   When updating an annotated assembly, it is not necessary that both the
   sequence and annotation have been changed.
-  Just one having changed is sufficient
+  Just one having changed is sufficient.
   In either case, the assembly version and all sub-sequence accessions will be
-  incremented
+  incremented.
 
 
 Use a new ASSEMBLYNAME:
@@ -68,13 +69,13 @@ Use a new ASSEMBLYNAME:
   To check the name used for the previous submission, look up its ERZ accession
   in interactive Webin.
   Enter the XML view and find the 'alias' field, which will resemble
-  "webin-genome-ASSEMBLYNAME".
+  "webin-genome-<ASSEMBLYNAME>".
   Using a pre-existing assembly name will result in an error informing you the
   object you are trying to submit already exists:
 
 ::
 
-    ERROR: In analysis, alias:"webin-genome-ASSEMBLYNAME", accession:"". The object being added already exists in the submission account with accession: "ERZxxxxxxx". The submission has failed because of a system error.
+    ERROR: In analysis, alias:"webin-genome-<ASSEMBLYNAME>", accession:"". The object being added already exists in the submission account with accession: "ERZxxxxxxx". The submission has failed because of a system error.
 
 
 Taxonomy changes require our assistance:
