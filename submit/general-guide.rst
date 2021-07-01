@@ -38,7 +38,7 @@ It is also recommended that you familiarise yourself with our `metadata model
 +------------------------+-------------+-----------+--------------+
 | Transcriptome Assembly |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
-| Template Sequence      |      Y      |     Y     |       Y      |
+| Template Sequence      |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Other Analyses         |      N      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
