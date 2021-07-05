@@ -82,7 +82,8 @@ mitochondrial chromosomes:
 
 Please read on for information on the content of the chromosome list file columns
 
-- **OBJECT_NAME** (first column): The unique sequence name.
+- **OBJECT_NAME** (first column): The unique sequence name, matching with the sequence name in your FASTA file ('>' line) 
+  or EMBL flat file ('AC * ' line).
 - **CHROMOSOME_NAME** (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment
   qualifier in the EMBL-Bank flat files. Names must:
 
