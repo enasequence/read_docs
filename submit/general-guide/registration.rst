@@ -11,8 +11,9 @@ You will be presented with the below interface:
 .. image:: ../images/wsp_register.png
 
 Fill out the boxes, giving details of the group and centre for which you are submitting.
-Note that the 'Center Name' value will be applied irrevocably to all submissions you make from this account.
-Always make sure this value is correct before you perform a submission, as it cannot be updated later.
+The centre name for your account can be changed later: note that the value will be applied irrevocably to all
+submissions you make from this account.
+Always make sure your account's centre name is correct before you perform a submission.
 
 You must add at least one contact to the account.
 Names added here will be automatically included in certain types of submission, including those which are processed into
