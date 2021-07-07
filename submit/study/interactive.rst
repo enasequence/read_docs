@@ -2,33 +2,42 @@
 Register a Study Interactively
 ==============================
 
-Submission of data into ENA requires a study to contain and manage it.
+To submit data into ENA you must first register a study to contain and manage it.
 Studies (also referred to as projects) can be registered through the
-`Webin Submissions Portal<../general-guide/interactive.html>`_.
+`Webin Submissions Portal <../general-guide/interactive.html>`_.
 Log in with your Webin credentials and select the 'Register Study' button to bring up the below interface:
 
-.. image:: ../images/mod_02_p01.png
+.. image:: ../images/wsp_study_registration.png
 
+Fill out the form to describe your study: most of these values can be `edited later <../../update/metadata.html>`_
+if needed.
+This study will eventually be the entry point into your data, so provide a sufficiently detailed abstract that users can
+get a good overview of your work.
 
+The release date can be as much as 2 years beyond the present date, and on this day the study and its content will
+automatically be made public.
+Notification of this will be sent in advance to all email addresses registered with your submission account.
+You can change the release date at any time, but once the data becomes public you may not make it private again.
+Users are expected to manage the release date of data submitted to ENA, but may write to the
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ to request that it be temporarily suppressed.
 
-This form is used to register a study (also referred to as a project). Studies are typically registered before any data is submitted.
-Data can be added to the study at any time. Please see `Interactive Submission Options <../general-guide/interactive.html>`_ to learn how to access it. Fill it out and click 'Submit' to register your study and receive accession numbers.
-The details can be edited and updated later, but you need to have registered a study to submit your data.
-
-
+Once registration is complete, you will be assigned accession numbers.
+You may return to the dashboard and select the 'Studies Report' button to review registered studies.
 
 
 Locus Tag Prefixes
 ==================
 
-If you intend to submit an annotated genome assembly, you will need to register
-a locus tag prefix at this stage. In the bottom right of the form, find the
-question about functional genome annotation and check the 'Yes' radio button and
-enter your prefix into the box which appears. Once you submit this, it will take
-24 hours for the prefix to be usable.
+If you intend to submit a genome assembly which includes functional annotation, you will need to register a locus tag
+prefix.
+To do this, first check the box asking 'Will you provide functional genome annotation?'
 
-The prefix you enter must conform to the following rules:
+An additional field will appear at the bottom of the page allowing you to add one or more locus tag prefixes.
+All prefixes you enter must conform to the following rules:
  - Starts with a letter
  - Between 3 and 12 characters long
  - Is upper case
  - Contains only alpha-numeric characters and no symbols such as -_*
+
+Note that the prefixes will only be validated when you click the 'Submit' button.
+Once you complete registration of a locus tag prefix, it will take 24 hours for the prefix to be usable.
