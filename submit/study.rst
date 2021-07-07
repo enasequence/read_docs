@@ -38,9 +38,8 @@ of your submissions to ENA.
 Submission Options
 ==================
 
-Studies can be submitted one of two ways, using the Webin Interactive web interface 
-or programmatically.  For an overview of these, please 
-see the `General Guide on Submitting to ENA <general-guide.html>`_.
+Studies can be submitted one of two ways, using the Webin Submissions Portal interface or programmatically.
+For an overview of these, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 
 .. toctree::
    :maxdepth: 1
