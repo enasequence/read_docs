@@ -32,7 +32,7 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
 2. You will be presented with groups of checklists: click a group to explore its members, then click the most
    appropriate one
 
-.. image:: ../images/mod_03_p01_a.png
+.. image:: ../images/wsp_sample_1_checklist_selection.png
 
 3. Next, you will be presented with groups of checklist attributes: expand these to see the range of attributes
    included in your checklist and their field requirements.
@@ -41,7 +41,7 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
 
 4. Finally, click 'Next' and then the 'Download TSV Template' to get a spreadsheet based on your selections so far
 
-.. image:: ../images/mod_03_p01_b.png
+.. image:: ../images/wsp_sample_2_checklist_customisation.png
 
 
 .. _Step 2:
@@ -75,7 +75,7 @@ and this time expand the 'Upload filled spreadsheet to register samples' option.
 Use the 'Browse' button to find the spreadsheet you wish to submit, then click the 'Submit Completed Spreadsheet'
 button.
 
-.. image:: ../images/mod_03_p02.png
+.. image:: ../images/wsp_sample_3_spreadsheet_upload.png
 
 At this point your samples will be validated and if accepted, accession numbers will be reported.
 If there are errors, these will be reported to you.
