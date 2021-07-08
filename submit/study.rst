@@ -27,19 +27,20 @@ Accessions
 ===========
 
 Once a study is registered, Webin will report two accession numbers for the study. 
-The first starts with PRJEB and is called the BioProject accession. This is typically 
-used in journal publications. The study will also be assigned an alternative 
-accession number that starts with ERP. This accession number is called the 
-SRA (Sequence Read Archive) study accession.
+The first starts with PRJEB and is called the BioProject accession.
+This is typically used in journal publications.
+The study will also be assigned an alternative accession number that starts with ERP.
+This accession number is called the study accession.
 
-Always make a note of any accessions you receive as these are the unique identifiers for each 
+Always make a note of any accessions you receive as these are the unique identifiers for each
 of your submissions to ENA.
 
 Submission Options
 ==================
 
-Studies can be submitted one of two ways, using the Webin Submissions Portal interface or programmatically.
-For an overview of these, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
+Studies can be submitted one of two ways, using the Webin Submissions Portal interface or the programmatic interface.
+For a general overview of these interfaces, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
+Find specific advice on registering studies using your preferred method below:
 
 .. toctree::
    :maxdepth: 1

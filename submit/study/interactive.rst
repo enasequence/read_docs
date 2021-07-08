@@ -14,12 +14,12 @@ if needed.
 This study will eventually be the entry point into your data, so provide a sufficiently detailed abstract that users can
 get a good overview of your work.
 
-The release date can be as much as 2 years beyond the present date, and on this day the study and its content will
+The release date can be as much as 2 years beyond the present date, and on this day the study and its data will
 automatically be made public.
 Notification of this will be sent in advance to all email addresses registered with your submission account.
-You can change the release date at any time, but once the data becomes public you may not make it private again.
-Users are expected to manage the release date of data submitted to ENA, but may write to the
-`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ to request that it be temporarily suppressed if their need is urgent.
+You can change the release date at any time to make it sooner or later, but once the data becomes public you may not
+make it private again.
+Read more about data publication in our `Data Release Policies FAQ <../../faq/release.html>`_.
 
 Once registration is complete, you will be assigned accession numbers.
 You may return to the dashboard and select the 'Studies Report' button to review registered studies.
