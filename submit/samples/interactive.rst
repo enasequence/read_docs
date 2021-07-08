@@ -24,6 +24,7 @@ If you are unsure, you can always try this process out consequence-free using th
 Step 1: Select A Sample Checklist
 =================================
 
+
 To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
 'Register Samples' button.
 
@@ -58,7 +59,7 @@ Consider the following tips as you do this:
   restrictions for each field
 - Do not edit the first line of the spreadsheet, which specifies the checklist in use
 - You can add custom fields by inserting new column headers, however do not edit the existing column names
-- The file must maintain one of the following extensions: .csv, .tsv, .tab, .txt
+- The file must use one of the following extensions: .csv, .tsv, .tab, .txt
 - Use only valid ASCII characters
 
 Once you are satisfied with the content of your spreadsheet, be sure to save it then proceed to the next step.
@@ -78,7 +79,7 @@ button.
 .. image:: ../images/wsp_sample_3_spreadsheet_upload.png
 
 At this point your samples will be validated and if accepted, accession numbers will be reported.
-If there are errors, these will be reported to you.
+If there are errors with the information you have entered, these will be reported to you.
 
 Note that at this point you have not submitted any data, but you have laid the groundwork for this by providing sample
 metadata.
