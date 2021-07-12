@@ -12,11 +12,13 @@ which a sequencing library was produced from.
 .. image:: images/metadata_model_sample.png
    :align: center
 
-A different sample should be registered for each sample used in the real-life sequencing project.
+A different database sample should be registered for each real-life sample used in the sequencing project.
 These samples give context to your data so it is important to ensure the metadata associated with them is as extensive
 and accurate as possible.
 In general, you should register one sample for each biological replicate, while technical replicates which used the
 same real-world sample should be represented using a single ENA sample object.
+Where multiple experiments were performed on the same sample, this should still only result in one database sample, as
+the experimental details will be logged separately.
 
 
 Checklists
@@ -71,6 +73,7 @@ This accession number is called the ENA sample accession.
 
 Always make a note of any accessions you receive as these are the unique identifiers for each
 of your submissions to ENA.
+You can always review your sample submissions within the interactive submission interface.
 
 
 Submission Options

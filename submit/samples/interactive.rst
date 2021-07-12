@@ -16,7 +16,7 @@ There are three steps to registering your sample(s) through the Webin Submission
 3. Validate and submit the template spreadsheet
 
 If you are unsure, you can always try this process out consequence-free using the
-`Webin Submissions Portal test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/login>`_.
+Webin Submissions Portal `test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/login>`_.
 
 
 .. _Step 1:
@@ -37,8 +37,8 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
 
 3. Next, you will be presented with groups of checklist attributes: expand these to see the range of attributes
    included in your checklist and their field requirements.
-   Optional fields will be deselected by default, so review these carefully to ensure any appropriate fields are
-   selected
+   Optional fields will be deselected by default, while recommended ones will be selected, so review these carefully to
+   ensure all appropriate fields are selected
 
 4. Finally, click 'Next' and then the 'Download TSV Template' to get a spreadsheet based on your selections so far
 
@@ -55,12 +55,13 @@ Once you have downloaded the template spreadsheet, you should open it in an appr
 such as Microsoft Excel or Google Sheets.
 Consider the following tips as you do this:
 
-- Use the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to understand the requirements and
+- Use the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to look up the requirements and
   restrictions for each field
 - Do not edit the first line of the spreadsheet, which specifies the checklist in use
-- You can add custom fields by inserting new column headers, however do not edit the existing column names
-- The file must use one of the following extensions: .csv, .tsv, .tab, .txt
+- You can add custom fields by inserting new column headers
+- Do not edit the existing column names
 - Use only valid ASCII characters
+- When you come to submit the file must use one of the following extensions: .csv, .tsv, .tab, .txt
 
 Once you are satisfied with the content of your spreadsheet, be sure to save it then proceed to the next step.
 
