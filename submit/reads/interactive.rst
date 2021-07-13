@@ -91,7 +91,7 @@ This time, expand the 'Upload filled spreadsheet template for Read submission' s
 Select the 'Browse' option or click-and-drag the file onto this section.
 Then, click the 'Submit Completed Spreadsheet' button to have your file validated and submitted.
 
-.. image:: ../images/mod_04_p02.png
+.. image:: ../images/wsp_read_2_spreadsheet_submission.png
 
 Should metadata validation fail, you will receive a pop-up with an error message.
 If the content of the error message is unclear, please `contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
