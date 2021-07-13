@@ -43,7 +43,7 @@ It is also recommended that you familiarise yourself with our `metadata model
 | Other Analyses         |      N      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
 
-* It is possible to submit reads through Webin-CLI, as long as they are in FASTQ, BAM, or CRAM format.
+\* It is possible to submit reads through Webin-CLI, as long as they are in FASTQ, BAM, or CRAM format.
 All other read file formats must be submitted through another route.
 
 Before submitting to ENA it is important to familiarise yourself with
