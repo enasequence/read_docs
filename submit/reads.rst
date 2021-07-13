@@ -20,7 +20,7 @@ The **experiment** submission holds metadata that describe the methods used to s
 If you are not yet familiar with the metadata model, please see 
 `here <general-guide/metadata.html>`_ for some more information.
 
-As a raw read submission references ENA sample and study objects, you must submit these before your 
+As a raw read submission references ENA sample and study objects, you must submit these before you can
 submit your read data. See below for information on how to register a study within ENA to describe 
 your overall research project and samples with information on the biological data that was sequenced:
    
@@ -36,12 +36,12 @@ the Experiment accession.
 
 Always make a note of any accessions you receive as these are the unique identifiers for each 
 of your submissions to ENA.
+You can always review your read submissions within the interactive submission interface.
 
 Submission Options
 ==================
 
-Reads can be submitted in one of three ways. For an overview of these, please 
-see the `General Guide on Submitting to ENA <general-guide.html>`_.
+Reads can be submitted in any of three ways.
 
 .. toctree::
    :maxdepth: 1
@@ -49,3 +49,10 @@ see the `General Guide on Submitting to ENA <general-guide.html>`_.
    reads/interactive
    reads/webin-cli
    reads/programmatic
+
+For an overview of these, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
+
+.. note::
+
+  Webin-CLI is recommended for read submissions because it provides the best pre-submission validation, however note
+  that in the read context it is only usable for data in FASTQ, BAM, or CRAM formats
