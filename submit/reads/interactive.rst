@@ -43,7 +43,7 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
    Note that there are different options for single and paired FASTQ files.
 3. Click the appropriate file format to expand it and see the list of attributes
 
-.. image:: ../images/mod_04_p01.png
+.. image:: ../images/wsp_read_1_template_selection.png
 
 4. Review the included attributes, their meanings, and requirements.
    Check the boxes next to the non-default attributes to include them.
