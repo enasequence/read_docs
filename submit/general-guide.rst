@@ -32,16 +32,19 @@ It is also recommended that you familiarise yourself with our `metadata model
 +------------------------+-------------+-----------+--------------+
 | Sample                 |      Y      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
-| Read data              |      Y      |     Y     |       Y      |
+| Read data              |      Y      |     Y*    |       Y      |
 +------------------------+-------------+-----------+--------------+
 | Genome Assembly        |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Transcriptome Assembly |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
-| Template Sequence      |      Y      |     Y     |       Y      |
+| Template Sequence      |      Y      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Other Analyses         |      N      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
+
+* It is possible to submit reads through Webin-CLI, as long as they are in FASTQ, BAM, or CRAM format.
+All other read file formats must be submitted through another route.
 
 Before submitting to ENA it is important to familiarise yourself with
 the different options available for data submission. This general guide
