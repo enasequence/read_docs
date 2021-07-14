@@ -21,7 +21,8 @@ As an assembly references ENA sample and study objects, you must submit these be
 submit your data. It is also strongly recommended to submit as well as reference any reads associated with the assembly being submitted.
 
 See below for information on how to: register a study within ENA to describe your overall research project,
-register samples with information on the biological data that was sequenced then assembled and submit any reads associated with each sample being submitted.
+register samples with information on the biological material that was sequenced then assembled, and submit any reads
+associated with each sample being submitted.
    
 - `Register a study <study.html>`_
 - `Register a sample <samples.html>`_
