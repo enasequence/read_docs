@@ -63,7 +63,7 @@ Sample Edits
 1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
    presented with a list of your registered samples:
 
-.. image:: ../images/mod_05_p02.png
+.. image:: ../images/wsp_meta_update_03_sample_edit.png
 
 2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
 3. Your sample will be shown as an XML document which you can edit directly
@@ -81,7 +81,7 @@ In `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ experiments and runs ar
 where matched pairs of experiments and runs share a row in the table.
 Note that their are separate 'Edit' buttons for the two object types:
 
-.. image:: ../images/mod_05_p05.png
+.. image:: ../images/wsp_meta_update_04_read_edit.png
 
 Be sure to use the correct edit button for the object you wish to edit (see common examples of each below).
 When you click the edit button, you will be shown the relevant object in XML format.
