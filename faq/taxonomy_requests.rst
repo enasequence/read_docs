@@ -2,6 +2,7 @@
 Requesting New Taxon IDs
 ========================
 
+
 All submissions to INSDC databases must be classified against the NCBI Taxonomy database.
 Entries in the Taxonomy database have integer taxon IDs and are visible in the ENA browser alongside their full lineage
 and available data (e.g. human Tax ID is `9606 <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606?show=tax-tree>`_).
@@ -19,7 +20,7 @@ Submittable Organism Names
 ==========================
 
 
-Submitted organism names must be at 'species' rank.
+Submitted organism names must be at 'species' rank, though not every species-rank name is submittable.
 This rank type does not automatically mean the name is a published binomen (e.g. *Homo sapiens*): it is simply a rank,
 which differentiates the sequenced organism from another.
 For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
@@ -53,10 +54,10 @@ Creating Taxon Requests
 If you wish to request a new taxon name visit the `Webin Submissions Portal (WSP)<https://www.ebi.ac.uk/ena/submit/webin>`_
 and choose the 'Register taxonomy' option.
 
-The 'Register using form' option allows you to enter names one-by-one alongside a category and description.
+The 'Register using form' option allows you to enter names one-by-one along with a category and description.
 The proposed names are automatically checked against the taxonomy database and only those not already present will be
 submittable.
-Those already present are shown alongside their taxon ID.
+Those already present are shown alongside their taxon ID to aid you with submission.
 
 For submissions of many names, the 'Register using spreadsheet' option is recommended.
 Download a copy of the template spreadsheet and fill it out in accordance with the guidance provided in the WSP
@@ -68,8 +69,8 @@ If you have multiple names to request, please do this as a single request: submi
 instead of one multi-name request may be rejected at the discretion of helpdesk staff.
 Once your request is received, it will be reviewed and sent to the taxonomy service.
 You will be contacted again by ENA staff to let you know the names have been added, or else to request corrections,
-changes, or clarifications to be made.
-Once this process is complete, the name will be indexed within our submission tool within 2 days and you can then
+changes, or clarifications.
+Once this process is complete, the name will be indexed within our submission tools within 2 days and you can then
 continue your submission.
 
 Author citations should not be included in scientific names.
