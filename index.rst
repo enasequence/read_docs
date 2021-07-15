@@ -49,7 +49,6 @@ bottom of the page.
 
    faq/release
    faq/runs
-   faq/samples
    faq/taxonomy
    faq/taxonomy_requests
    faq/metagenomes
