@@ -57,18 +57,18 @@ These include the release date, title, description and publication references.
 Sample Edits
 ============
 
-To edit a sample, find it in the list (note the search box) and click the 'Edit' button next to it.
+1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
+   presented with a list of your registered samples:
 
 .. image:: ../images/mod_05_p02.png
 
-Your sample will be shown as an XML document which you can edit directly.
-Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file.
+2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
+3. Your sample will be shown as an XML document which you can edit directly.
+   Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file.
+
 General XML errors and specific errors defined by us are prevented in this way.
-Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to remove an attribute which is required by the specified checklist.
-
-.. image:: ../images/mod_05_p02_b.png
-
-This method is useful for one-off edits but it is not feasible for editing many samples at once. For this you can use the `programmatic method <programmatic-sample.html>`_.
+Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to
+remove an attribute which is required by the specified checklist.
 
 
 Experiment And Run Edits
