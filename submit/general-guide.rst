@@ -1,5 +1,5 @@
 ====================================
-General Guide on ENA Data Submission
+General Guide On ENA Data Submission
 ====================================
 
 Welcome to the general guide for the European Nucleotide Archive submission.
@@ -49,8 +49,9 @@ will get you started in understanding how data can be submitted to ENA
 and how to keep track of the progress of your submission.
 
 
-Getting started
+Getting Started
 ===============
+
 
 .. toctree::
    :maxdepth: 1
@@ -60,8 +61,9 @@ Getting started
    general-guide/accessions
 
 
-Submission services
+Submission Services
 ===================
+
 
 .. toctree::
    :maxdepth: 1
@@ -71,8 +73,9 @@ Submission services
    general-guide/webin-cli
 
 
-Additional Services
-===================
+Reports Services
+================
+
 
 .. toctree::
    :maxdepth: 1
