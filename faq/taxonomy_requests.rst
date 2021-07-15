@@ -10,9 +10,11 @@ This database covers the complete tree of life, as well as viruses, synthetic co
 However, it is incomplete in that it only considers taxa which are already represented in INSDC records.
 In addition, taxa are only displayed if at least one public INSDC record is available.
 
+Below you will find information on what taxon names are submittable.
+Following this is a guide to creating taxon requests, including domain-specific advice on how names for different
+species should be formed.
 
 - `Submittable Organism Names`_
-- `Carrying Out Taxon Checks`_
 - `Creating Taxon Requests`_
 
 
@@ -26,25 +28,10 @@ which differentiates the sequenced organism from another.
 For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
 together under the same genus name.
 
-
-Carrying Out Taxon Checks
-=========================
-
-
 To check for the availability of a name, please refer to the advice in the `Tips for Sample Taxonomy <taxonomy.html>`_
 section.
 
 If the name is not already available, you will need to request its addition, the process for which is described below.
-The taxonomists continually add both published species and informal names for novel species as sequences are deposited
-into the nucleotide archives.
-
-Note that sometimes names have synonyms.
-This may happen if a name has been changed at some point and the old name is still recognised.
-More often, English common names for a species may be recognised.
-For example, if you input 'human', you will be offered 'Homo sapiens'.
-If you enter 'cat', you are offered 'Felis catus'.
-In any of these cases, the alternative name is recognised and the most up-to-date scientific name is used.
-The majority of species do not have common names.
 
 
 Creating Taxon Requests
