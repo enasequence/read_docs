@@ -2,17 +2,18 @@
 Common Run Submission Errors
 ============================
 
-When you submit read data to ENA, we store and accession these as 'Runs'.
+When you submit read data to ENA, we store and accession your files within `Runs <../submit/general-guide/metadata.html>`_.
 As part of the submission process, read data files must be uploaded to your Webin account's FTP directory.
 After you complete the submission, several validation procedures are applied to the file(s).
-If validation is successful, files are archived, otherwise all account contacts are notified of the error(s)
+If validation is successful files are archived, otherwise all account contacts are notified of the error(s).
 
 The errors discussed here typically do not require you to repeat the submission in its entirety.
 It is usually sufficient to upload a corrected version of the file, possibly updating its MD5 value.
 Once you correct your submission, it can take 24 hours or longer for this to be registered and for the error
 notifications to cease.
 
-The common error types are described here.
+The common error types are described here; if you have been notified of an error, please find it in this list and
+follow the instructions:
 
 - `Error: Invalid File Checksum`_
 - `Error: Number Of Lines Is Not A Multiple Of Four`_
@@ -46,9 +47,10 @@ The checksum is a means of checking a file has been uploaded in its entirety.
 It is a 32-character string calculated from the file, and is unique to that file.
 We recalculate the MD5sum after you complete your submission and confirm that it matches the value you registered.
 Therefore, if the upload procedure fails to deliver the full file, this will be evident from the checksum.
-You will have calculated this value previously and included it in your submission: you can see the value you registered
+You may have calculated this value previously and included it in your submission: you can see the value you registered
 in the notification email, as is the case above.
-If you used the graphical Webin File Uploader program, the MD5 will have been calculated automatically for you.
+Alternatively, if you used the graphical Webin File Uploader program, the MD5 will have been calculated automatically
+for you.
 
 The error could indicate a failure in the file transfer process as described, or it could be that the wrong MD5 value
 was registered in the first place.
@@ -101,7 +103,7 @@ You will receive an email resembling the below if this error occurs:
 The Problem
 -----------
 
-This error is specific to FASTQ files: each entry in such a file should comprise exactly four lines, none of which
+This error is specific to FASTQ files: each read record in such a file should comprise exactly four lines, none of which
 should be blank.
 The FASTQ format is as follows:
 
@@ -113,8 +115,8 @@ The FASTQ format is as follows:
     <phred qualities, ASCII encoded starting with '!' (33)>
 
 
-If your file does not match this format, it may be incorrectly formatted, or may have become corrupted in the upload
-process.
+If your file does not match this format it may have started incorrectly formatted, or may have become corrupted in the
+upload process.
 
 
 The Solution
@@ -124,7 +126,7 @@ You can replicate the check we run on your file locally from the command line:
 
 .. code-block:: bash
 
-    $ zcat MCONS1_R1.fq.gz | grep '[^[:space:]]' | wc -l
+    $ zcat <file>.fq.gz | grep '[^[:space:]]' | wc -l
 
 
 This command will output the amount of lines in the file, after removing any blank lines.
@@ -174,6 +176,7 @@ See `Appendix: Re-Uploading Your File`_ for information on how to do this.
 
 If the file is identified as having errors, remake the file and upload this.
 Be sure to check that the MD5 value hasn't changed: you will need to re-register a correct value if it has.
+To do so, see `Appendix: Correcting An MD5 Value`_ for information on how to do this.
 
 
 FASTQ Files
@@ -244,14 +247,17 @@ Appendix: Correcting An MD5 Value
 If the MD5 value registered for your read file is incorrect, you can supply a corrected version.
 To do this:
 
-1. Log into `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_
-2. Switch to the 'Runs' tab
-3. Enter the accession of the errored run into the search box
-4. Click the 'Edit' button for the relevant run (there will be two edit boxes, use the rightmost one)
-5. Enter the new MD5 value next to the correct file
-6. Click 'Save'
+1. Log into the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_
+2. Go to the 'Run Files Report'
+3. Enter the erroneous run accession into the search field
+4. Identify the run, then select its 'Action' box and choose 'Edit run XML'
+5. You will be presented with the run in XML format: find the ``<FILES>`` block
+6. In the ``<FILES>`` block their may be one or more ``<FILE>`` elements: identify the relevant one by reference to its
+   'filename' value
+7. Remove the checksum value for the errored file(s) and enter the correct one
+8. Click 'Save' at the bottom of the pop-up
 
-The change you have made will require 24 hours to take effect.
+Once completed, your file will be re-validated, usually within 24 hours.
 
 Calculating the MD5 value you need can be done natively from the command line in Mac/Linux.
 One of the following commands will work, if you supply the correct filename:
