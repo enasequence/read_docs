@@ -13,6 +13,8 @@ Fill out the form to describe your study: most of these values can be `edited la
 if needed.
 This study will eventually be the entry point into your data, so provide a sufficiently detailed abstract that users can
 get a good overview of your work.
+If you will be submitting a genome assembly which includes functional annotation please see the `Locus Tag Prefixes`_
+section below.
 
 The release date can be as much as 2 years beyond the present date, and on this day the study and its data will
 automatically be made public.
@@ -25,8 +27,11 @@ Once registration is complete, you will be assigned accession numbers.
 You may return to the dashboard and select the 'Studies Report' button to review registered studies.
 
 
+.. _Locus Tag Prefixes
+
 Locus Tag Prefixes
 ==================
+
 
 If you intend to submit a genome assembly which includes functional annotation, you will need to register a locus tag
 prefix.
