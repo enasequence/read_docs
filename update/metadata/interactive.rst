@@ -2,10 +2,13 @@
 Updating Studies, Samples, Experiments and Runs Interactively
 =============================================================
 
-The interactive submission interface supports some editing of your submitted objects.
-Access these existing objects by clicking the relevant tab after logging in to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+The `Webin Submissions Portal (WSP) <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
+submitted objects.
+Access these existing objects by clicking the relevant tab after logging in to
+`Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
 
 Note that under no circumstances can an object's own accession or alias attribute be edited.
+The names of submitted files are also not editable, though the associated MD5 value can be updated.
 
 When editing the XML version of an object, you should in general leave the element tags unchanged.
 These are the capitalised words enclosed in '<>'.
@@ -14,6 +17,8 @@ For example, in the below XML snippet you should leave the words 'ELEMENT' uncha
 ::
 
     <ELEMENT>value</ELEMENT>
+
+For samples, there may sometimes be good reason to add, remove, or edit the element names.
 
 - 1: `Study Edits`_
 - 2: `Sample Edits`_
@@ -26,30 +31,27 @@ Study Edits
 Some parts of the study object can be edited.
 These include the release date, title, description and publication references.
 
+1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Studies Report' button to be
+   presented with the below interface:
+
 .. image:: ../images/mod_05_p03.png
 
-1. Login to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and find the studies tab.
-2. Find the study in the list, or search for it by its accession.
-3. If your study is confidential you can change the release date by clicking on the pencil icon and navigating to the required date in the calendar.
-   To release the study simply select the current date/present day and set the following processes in motion:
-
-	- Moving relevant sequence data files to a public archive.
-	- Indexing and rendering the study and its objects so that they can be linked-to and visualised in the ENA browser.
-	- Mirroring to INSDC databases, who will then make the data available through their services.
-
-   Please allow up to 48 hours for newly released data to appear in the public database.
-   Read more about this in our `Data Release Policies FAQ <../../faq/release.html>`_
-
-4. For edits besides changing the release date, click the 'Edit' button.
+2. Find the study you wish to edit in the list, or search for it by accession/name
+3. If your study is confidential, you can change the release date by clicking the pencil icon and navigating to the
+   required date in the calendar. Read more on this in our `Data Release Policies FAQ <../../faq/release.html>`_
+4. For edits other than changing the release date, click the Action button and then the 'Edit study (project)' option
+   for a graphical interface or the 'Edit study (project) XML' option to work in XML format
 
 .. image:: ../images/mod_05_p04.png
 
-5. The short name for the study will be visible in search outputs and overview pages whereas the descriptive title and abstract will be presented in the study's public page.
-6. You can add the PMID of any papers related to your data.
-   There will then be a link to the paper from your study's public page.
-7. Study attributes are optional tag-value pairs you can specify to add extra information or to make your study more searchable.
-   For example, you could add a 'DOI' tag with your paper's DOI as the value.
-8. Save your changes when you are satisfied with your updates, or click 'Cancel' to abandon them.
+5. Edit values in this interface as required: the short name for the study will be visible in search outputs and
+   overview pages whereas the descriptive title and abstract will be presented in the study's public page
+6. If you now wish to add a genome assembly with functional annotation to this study, start by checking the box for this
+   and then registering a `locus tag prefix <../..faq/locus_tags.html>`_ at the bottom of the page
+7. You can add papers by searching the PubMed ID; through integration with ePMC these papers will then be linked from
+   this study's page in the ENA Browser
+8. Add additional keywords as desired; for example you may add a DOI as shown above
+9. Save your changes when you are satisfied, or click 'Cancel' to abandon them
 
 
 Sample Edits
