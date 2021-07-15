@@ -34,7 +34,7 @@ These include the release date, title, description and publication references.
 1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Studies Report' button to be
    presented with the below interface:
 
-.. image:: ../images/mod_05_p03.png
+.. image:: ../images/wsp_meta_update_01_study_edit_list.png
 
 2. Find the study you wish to edit in the list, or search for it by accession/name
 3. If your study is confidential, you can change the release date by clicking the pencil icon and navigating to the
@@ -42,7 +42,7 @@ These include the release date, title, description and publication references.
 4. For edits other than changing the release date, click the Action button and then the 'Edit study (project)' option
    for a graphical interface or the 'Edit study (project) XML' option to work in XML format
 
-.. image:: ../images/mod_05_p04.png
+.. image:: ../images/wsp_meta_update_02_study_edit_interface.png
 
 5. Edit values in this interface as required: the short name for the study will be visible in search outputs and
    overview pages whereas the descriptive title and abstract will be presented in the study's public page
