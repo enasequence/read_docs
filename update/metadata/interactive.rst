@@ -2,6 +2,7 @@
 Updating Studies, Samples, Experiments and Runs Interactively
 =============================================================
 
+
 The `Webin Submissions Portal (WSP) <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
 submitted objects.
 Access these existing objects by clicking the relevant tab after logging in to
@@ -27,6 +28,7 @@ For samples, there may sometimes be good reason to add, remove, or edit the elem
 
 Study Edits
 ===========
+
 
 Some parts of the study object can be edited.
 These include the release date, title, description and publication references.
@@ -57,6 +59,7 @@ These include the release date, title, description and publication references.
 Sample Edits
 ============
 
+
 1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
    presented with a list of your registered samples:
 
@@ -73,12 +76,14 @@ remove an attribute which is required by the specified checklist.
 Experiment And Run Edits
 ========================
 
-Experiments and runs are both listed in the 'Runs' tab, where matched pairs of experiments and runs share a row in the table.
+
+In `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ experiments and runs are both listed in the 'Runs Report' page,
+where matched pairs of experiments and runs share a row in the table.
 Note that their are separate 'Edit' buttons for the two object types:
 
 .. image:: ../images/mod_05_p05.png
 
-Be sure to use the correct edit button for the object you wish to edit.
+Be sure to use the correct edit button for the object you wish to edit (see common examples of each below).
 When you click the edit button, you will be shown the relevant object in XML format.
 Locate the element you wish to change and make the required changes, then click 'Save'.
 You will not be able to save changes which invalidate the file.
@@ -86,6 +91,7 @@ You will not be able to save changes which invalidate the file.
 
 Common Experiment Updates
 -------------------------
+
 
 The experiment object provides important metadata about how your data was produced.
 Common updates might include:
@@ -101,6 +107,7 @@ All of the above can be achieved by editing the XML displayed when you click the
 
 Common Run Updates
 ------------------
+
 
 The most common run edit would be an MD5 update.
 You may need to do this if:
