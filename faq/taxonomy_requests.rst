@@ -2,9 +2,9 @@
 Requesting New Taxon IDs
 ========================
 
-All submissions to INSDC databases must be classified against the NCBI Taxonomy database. Entries in the Taxonomy
-database have integer taxon IDs and are visible in the ENA browser alongside their full lineage and available data
-(e.g. human Tax ID is `9606 <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606>`_).
+All submissions to INSDC databases must be classified against the NCBI Taxonomy database.
+Entries in the Taxonomy database have integer taxon IDs and are visible in the ENA browser alongside their full lineage
+and available data (e.g. human Tax ID is `9606 <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606?show=tax-tree>`_).
 This database covers the complete tree of life, as well as viruses, synthetic constructs and metagenomic taxa.
 However, it is incomplete in that it only considers taxa which are already represented in INSDC records.
 In addition, taxa are only displayed if at least one public INSDC record is available.
@@ -18,23 +18,20 @@ In addition, taxa are only displayed if at least one public INSDC record is avai
 Submittable Organism Names
 ==========================
 
-Submitted organism names must be at 'species' rank. This rank type does not automatically mean the name is a published
-binomen (e.g. *Homo sapiens*): it is simply a rank, which differentiates the sequenced organism from another. For
-example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
+
+Submitted organism names must be at 'species' rank.
+This rank type does not automatically mean the name is a published binomen (e.g. *Homo sapiens*): it is simply a rank,
+which differentiates the sequenced organism from another.
+For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
 together under the same genus name.
 
 
 Carrying Out Taxon Checks
 =========================
 
-`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ features the 'Taxonomy Check/Request' tool, which
-allows submitters to check whether a taxon name is valid and submittable.
-You are advised to use this tool before beginning registration of any samples or data.
-If the name you enter is recognised, the tool will return a Tax ID; an integer unique to the matched name.
-A name may not be recognised if:
 
-- You have provided a non-submittable taxonomic rank (e.g. genus, family)
-- The name has not yet been classified by NCBI Taxonomy
+To check for the availability of a name, please refer to the advice in the `Tips for Sample Taxonomy <taxonomy.html>`_
+section.
 
 If the name is not already available, you will need to request its addition, the process for which is described below.
 The taxonomists continually add both published species and informal names for novel species as sequences are deposited
@@ -45,22 +42,35 @@ This may happen if a name has been changed at some point and the old name is sti
 More often, English common names for a species may be recognised.
 For example, if you input 'human', you will be offered 'Homo sapiens'.
 If you enter 'cat', you are offered 'Felis catus'.
-In any of these cases, the alternative is name is recognised and the most up-to-date scientific name is used.
+In any of these cases, the alternative name is recognised and the most up-to-date scientific name is used.
 The majority of species do not have common names.
 
 
 Creating Taxon Requests
 =======================
 
-If you wish to request a new taxon name, fill the details into the `'Taxonomy Check/Request'
-<https://www.ebi.ac.uk/ena/submit/sra/#home>`_ tool.
-If you have multiple names to request, use the 'Add another organism' button to do so: submissions of numerous requests
+
+If you wish to request a new taxon name visit the `Webin Submissions Portal (WSP)<https://www.ebi.ac.uk/ena/submit/webin>`_
+and choose the 'Register taxonomy' option.
+
+The 'Register using form' option allows you to enter names one-by-one alongside a category and description.
+The proposed names are automatically checked against the taxonomy database and only those not already present will be
+submittable.
+Those already present are shown alongside their taxon ID.
+
+For submissions of many names, the 'Register using spreadsheet' option is recommended.
+Download a copy of the template spreadsheet and fill it out in accordance with the guidance provided in the WSP
+interface.
+Do not alter the spreadsheet headings or add new ones, and use only ASCII characters.
+When this spreadsheet is complete, save it and return to the interface to upload and submit your taxon request.
+
+If you have multiple names to request, please do this as a single request: submissions of numerous requests
 instead of one multi-name request may be rejected at the discretion of helpdesk staff.
 Once your request is received, it will be reviewed and sent to the taxonomy service.
-You will be contacted again by ENA staff to let you know the names have been added, or else to advise you of corrections
-or changes to be made.
-Once this process is complete, the name will be indexed within our submission tool within 2 working days and you can
-then continue your submission.
+You will be contacted again by ENA staff to let you know the names have been added, or else to request corrections,
+changes, or clarifications to be made.
+Once this process is complete, the name will be indexed within our submission tool within 2 days and you can then
+continue your submission.
 
 Author citations should not be included in scientific names.
 Exceptions to this are only made where there are ambiguities between different nomenclature codes, e.g. *Agathis
@@ -82,6 +92,7 @@ taxon names.
 Unidentified/Novel Organisms
 ----------------------------
 
+
 An informal name is used when the organism being submitted has not been identified to a specific name, or when a novel
 species name has not been published.
 The informal name can later be updated to a formal name, when the species is identified and appears in the literature.
@@ -94,6 +105,7 @@ feedback on a name.
 
 Prokaryotes
 ___________
+
 
 If the genus is known but the species is novel or unidentified, please use the following format, where *identifier* is
 something unique to the culture, such as a strain/voucher ID, and is at least 3 characters long:
@@ -134,6 +146,7 @@ to us.
 Eukaryotes
 __________
 
+
 Higher organisms are treated similarly to prokaryotes, but the term 'sp.' is applied no matter which taxonomic rank is
 being used.
 If multiple strains/isolates/samples are identified to be from teh same unidentified or novel species, they should be
@@ -169,10 +182,10 @@ database, then simply submitting this name with a paper reference will be suffic
 Environmental Samples
 ---------------------
 
+
 If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous metagenomic taxa.
 You should use one of these for this purpose: visit the `"metagenomes" tax node
-<https://www.ebi.ac.uk/ena/browser/view/Taxon:408169>`_, click the *Tax tree* tab and use the arrow icons to expand
-the categories.
+<https://www.ebi.ac.uk/ena/browser/view/Taxon:408169?show=tax-tree>`_, and use the arrow icons to expand the categories.
 
 .. image:: images/tax_p01.png
    :align: center
@@ -221,6 +234,7 @@ For fungi, the 'sp.' is dropped:
 Cyanobacteria
 -------------
 
+
 Cyanobacteria taxonomy is very complex and so the strain or culture collection identifier is always captured as part of
 the organism name, whether or not it is identified at species level.
 
@@ -232,6 +246,7 @@ the organism name, whether or not it is identified at species level.
 
 Synthetic Sequences
 -------------------
+
 
 Synthetic sequences, such as cloning and expression vectors, can use one of the relevant taxa:
 
@@ -254,6 +269,7 @@ Some real examples of this:
 
 Viruses
 -------
+
 
 Viruses do not fit well into biological classification systems and do not follow the format of binomial nomenclature.
 Instead, descriptive names are formed, usually referencing the host or disease.
@@ -280,6 +296,7 @@ A paper was published to explain this decision and is available at https://doi.o
 
 Endosymbionts
 -------------
+
 
 Endosymbionts live within the cells of their host organisms and cannot usually be cultured outside the host.
 Although technically uncultured according to our terminology, they are exempt from the treatment of other environmental
