@@ -63,10 +63,9 @@ Sample Edits
 .. image:: ../images/mod_05_p02.png
 
 2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
-3. Your sample will be shown as an XML document which you can edit directly.
-   Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file.
+3. Your sample will be shown as an XML document which you can edit directly
+4. Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file
 
-General XML errors and specific errors defined by us are prevented in this way.
 Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to
 remove an attribute which is required by the specified checklist.
 
