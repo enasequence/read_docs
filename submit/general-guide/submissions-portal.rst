@@ -14,7 +14,7 @@ This page does not deal with updating your submissions, please see
 To access WSP, visit the link and log in with your standard Webin credentials (or create an account if you don't
 already have one): https://www.ebi.ac.uk/ena/submit/webin/
 
-.. image:: ../images/webin_portal_login.png
+.. image:: ../images/wsp_reports_1_login.png
 
 WSP has a range of functionalities, listed below.
 Those which are covered in this article are bolded:
@@ -51,7 +51,7 @@ to review.
 The below image shows the reports view for samples.
 The interface is similar in look and functionality for all data types, but will vary in what attributes are shown.
 
-.. image:: ../images/webin_portal_sample_reports.png
+.. image:: ../images/wsp_reports_2_samples.png
 
 1. Enter the accession or name of a sample to search for it directly
 2. Filter by release status (e.g. show only public samples)
@@ -76,7 +76,7 @@ You can  review the content of your directory through `WSP <https://www.ebi.ac.u
 Files Report.
 Access this from the dashboard, under the 'Raw Reads' section:
 
-.. image:: ../images/webin_portal_raw_reads_dashboard.png
+.. image:: ../images/wsp_reports_3_raw_reads_dashboard.png
 
 The form will be automatically populated with a list of files from your submission area.
 The name, size in bytes, and expiration date of the file is shown.
@@ -98,7 +98,7 @@ These can be accessed from the WSP dashboard, look for the buttons named:
 
 The below image shows the file report interface for runs; the interface for analyses is much the same.
 
-.. image:: ../images/webin_portal_run_file_report.png
+.. image:: ../images/wsp_reports_4_run_file_report.png
 
 1. Enter the accession or name of a run to search for it directly
 2. Filter by processing status: active, completed, or failed
@@ -131,7 +131,7 @@ From the dashboard, look for the buttons named:
 Both reports will give you information on the outcome (if any) of file processing.
 Below is an example of the analysis processing report:
 
-.. image:: ../images/webin_portal_analysis_process_report.png
+.. image:: ../images/wsp_reports_5_analysis_process_report.png
 
 1. Enter the accession or name of an analysis to search for it directly
 2. Filter by analysis type, or processing status: active, completed, or failed
