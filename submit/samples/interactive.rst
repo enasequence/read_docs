@@ -39,7 +39,9 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
    or optional.
    Expand each to see the range of attributes included in your checklist and their field requirements.
    Optional fields will be deselected by default, while recommended ones will be selected, so review these carefully to
-   ensure all appropriate fields are selected
+   ensure all appropriate fields are selected.
+   Note the 'Add custom field' box to the top-left, which allows you to define additional attributes not included
+   in any checklist
 
 4. Finally, click 'Next' and then the 'Download TSV Template' to get a spreadsheet based on your selections so far
 
