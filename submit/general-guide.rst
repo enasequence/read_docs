@@ -73,8 +73,8 @@ Submission Services
    general-guide/webin-cli
 
 
-Reports Services
-================
+Submission Reports Services
+===========================
 
 
 .. toctree::
