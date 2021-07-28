@@ -41,12 +41,12 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
 1. Expand the 'Download spreadsheet template for Read submission' section by clicking it
 2. Carefully review the list of submittable read file formats and choose the one which applies to your submission.
    Note that there are different options for single and paired FASTQ files
-3. Click the appropriate file format to expand it and see the list of attributes
+3. Click the appropriate file format to advance and see its list of attributes
 
 .. image:: ../images/wsp_read_1_template_selection.png
 
 4. Review the included attributes, their meanings, and requirements.
-   Check the boxes next to the non-default attributes to include them
+   Expand the 'Optional Fields' section and check the boxes next to the non-default attributes to include them
 5. Click 'Next' when you are ready to continue; you can return to this interface later to review attribute meanings and
    requirements
 6. Click 'Download TSV Template' to acquire a copy of your customised template spreadsheet
