@@ -29,6 +29,8 @@ Limitations
 ===========
 
 Some types of submission cannot be completed via WSP and must be done through our other submission routes.
+Usually, this is because some submission types are limited to our Webin-CLI tool, which has extensive pre-submission
+data validation capability built in.
 For a summary of what can be submitted through each interface, as well as what these interfaces are, please read the
 `General Guide on ENA Data Submission <../general-guide.html>`_.
 
@@ -50,7 +52,7 @@ Follow the links for specific guidance on each submission activity.
 2 - Studies (Projects):
   **`Register Study`_:** An interface to register new studies
   **Submit XMLs:** You can submit studies in XML format through this interface
-  **Studies Report:** Review and edit previously submitted studies, and change their release date
+  **`Studies Report`_:** Review and edit previously submitted studies, and change their release date
 
 3 - Samples:
   **`Register samples`_:** Select and customise a sample checklist, download a template spreadsheet, then re-upload it
@@ -58,16 +60,16 @@ Follow the links for specific guidance on each submission activity.
   **`Register taxonomy`_:** If your submission uses taxa which are not known to the taxonomy database, you can request
   their addition through this interface
   **Submit XMLs:** You can submit samples in XML format through this interface
-  **Samples Report:** Review and edit previously submitted samples
+  **`Samples Report`_:** Review and edit previously submitted samples
 
 4 - Raw Reads (Experiments and Runs):
   **`Submit reads`_:** Select a type of read data and download a template spreadsheet, then re-upload it to this
   interface to complete registration of your read data
   **Submit XMLs:** You can submit experiments and runs in XML format through this interface
-  **Runs Report:** Review and edit previously submitted runs and experiments
-  **Run Files Report:** Review status of files associated with previously submitted runs
-  **Run Processing Report:** Review processing status of files associated with previously submitted runs
-  **Unsubmitted Files Report:** Before you can submit a run file here you must `upload it to your account's FTP area`_;
+  **`Runs Report`_:** Review and edit previously submitted runs and experiments
+  **`Run Files Report`_:** Review status of files associated with previously submitted runs
+  **`Run Processing Report`_:** Review processing status of files associated with previously submitted runs
+  **`Unsubmitted Files Report`_:** Before you can submit a run file here you must `upload it to your account's FTP area`_;
   review the status of such unsubmitted files here
 
 5 - Data Analyses:
@@ -75,9 +77,9 @@ Follow the links for specific guidance on each submission activity.
   and others can often be submitted using template spreadsheets; select and customise a template here and download a
   file to submit via Webin-CLI
   **Submit XMLs:** You can submit some analysis types in XML format through this interface
-  **Analyses Report:** Review and edit previously submitted analyses
-  **Analysis File Report:** Review status of files associated with previously submitted analyses
-  **Analysis Processing Report:** Review processing status of files associated with previously submitted analyses
+  **`Analyses Report`_:** Review and edit previously submitted analyses
+  **`Analysis File Report`_:** Review status of files associated with previously submitted analyses
+  **`Analysis Processing Report`_:** Review processing status of files associated with previously submitted analyses
 
 
 .. _Register study (project): ../study/interactive.html
@@ -88,6 +90,16 @@ Follow the links for specific guidance on each submission activity.
 .. _Create annotated sequence spreadsheet: ../sequence/interactive.html
 
 .. _upload it to your account's FTP area: ../fileprep/upload.html
+
+.. _Studies Report: /reports-service.html
+.. _`Samples Report`: /reports-service.html
+.. _`Runs Report`: /reports-service.html
+.. _`Run Files  Report`: /reports-service.html
+.. _`Run Processing Report`: /reports-service.html
+.. _`Unsubmitted Files Report`: /reports-service.html
+.. _`Analyses Report`: /reports-service.html
+.. _`Analysis File Report`: /reports-service.html
+.. _`Analysis Processing Report`: /reports-service.html
 
 Each of these links will interfaces which provide further information on how to complete the described action.
 Interactive submission is recommended for registration of your Study and Samples and for small scale Read submissions.
