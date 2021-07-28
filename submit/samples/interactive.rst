@@ -30,13 +30,14 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
 
 1. Click 'Download spreadsheet to register samples' to expand the checklist selection menu
 
-2. You will be presented with groups of checklists: click a group to explore its members, then click the most
+2. You will be presented with groups of checklists: click a checklist group to explore its members, then click the most
    appropriate one
 
 .. image:: ../images/wsp_sample_1_checklist_selection.png
 
-3. Next, you will be presented with groups of checklist attributes: expand these to see the range of attributes
-   included in your checklist and their field requirements.
+3. Next, you will be presented with lists of checklist attributes, grouped by whether they are mandatory, recommended,
+   or optional.
+   Expand each to see the range of attributes included in your checklist and their field requirements.
    Optional fields will be deselected by default, while recommended ones will be selected, so review these carefully to
    ensure all appropriate fields are selected
 
