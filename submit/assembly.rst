@@ -2,8 +2,10 @@
 How to Submit Assemblies
 ========================
 
+
 Introduction
 ============
+
 
 To submit genome or transcriptome assemblies to ENA you must also provide some metadata to 
 describe your research project. This helps make your data re-useable and searchable.
@@ -32,6 +34,7 @@ associated with each sample being submitted.
 Assembly Levels
 ===============
 
+
 Before submitting your assembly, consider the highest level of assembly which has been attained.
 This will have implications for how you prepare your submission, as well as the accessions you receive at the end.
 
@@ -49,8 +52,10 @@ Please note that contig and scaffold level assemblies can both be updated to hig
 You cannot update to a lower level assembly, however, and you cannot add functional annotation if none was present
 in the first submission.
 
+
 Files For Genome Assembly Submissions
 =====================================
+
 
 File requirements for a genome assembly submission depends on the assembly level and are specified using a manifest file.
 The set of files required for genome assembly submissions are listed in the following table:
@@ -90,28 +95,32 @@ The set of files required for genome assembly submissions are listed in the foll
 |                    |                                          | assembled to form each chromosome   |
 +--------------------+------------------------------------------+-------------------------------------+
 
+
 Accessions
 ==========
+
 
 As all assemblies in ENA are submitted as 'analyses', for each assembly submission, Webin will report 
 a unique accession number that starts with ERZ. For most assemblies, this accession number is for 
 internal processing only and will not be visible in the browser. As a result, for most 
 assemblies you will receive additional post-processing accession numbers starting with GCA\_.
 
-In alignment with INSDC partners, `SARS-CoV-2 assemblies <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html>`_ 
-will not be assigned a GCA\_ accession. 
-For these assemblies, sequence accessions will continue to be assigned and the ERZ records 
-will also be available in the browser to provide a point of access for the submitted file(s).
-
-Please see individual submission guidelines for information on what accessions you will receive for 
-each assembly type.
 
 Always make a note of any accessions you receive as these are the unique identifiers for each of 
 your submissions to ENA.
 
-The ERZ accession can be used to access information on the progress of the internal processing of 
-each assembly through the `Webin Submissions Portal <general-guide/submissions-portal.html>`_ or 
-`Webin Reports Service <general-guide/reports-service.html>`_.
+The ERZ accession can be used to access information on the progress of the internal processing of each assembly through
+the `Webin Submissions Portal (WSP) <general-guide/submissions-portal.html>`_.
+You can also use this service to see the assigned chromosome, contig, and scaffold accessions.
+Please follow the WSP link to learn more about this.
+See individual submission guidelines for information on what accessions you will receive for
+each assembly type.
+
+In alignment with INSDC partners, `SARS-CoV-2 assemblies <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html>`_
+will not be assigned a GCA\_ accession.
+For these assemblies, sequence accessions will continue to be assigned and the ERZ records will also be available in the
+browser to provide a point of access for the submitted file(s).
+
 
 Submission Options
 ==================
