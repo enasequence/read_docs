@@ -38,7 +38,8 @@ Assembly Levels
 Before submitting your assembly, consider the highest level of assembly which has been attained.
 This will have implications for how you prepare your submission, as well as the accessions you receive at the end.
 
-ENA recognises three assembly levels:
+ENA recognises three assembly levels which describe the highest level of sequence within the assembly.
+An assembly may contain a mixture of the three sequence types:
 
 - **Contig:** the highest level of assembly is contigs
 - **Scaffold:** the highest level of assembly consists of gapped contigs (scaffolds)
@@ -48,7 +49,8 @@ Note that 'chromosome' should here be understood as a general term for a range o
 chromosomes of eukaryotes, prokaryotes, and viruses, as well as organellar chromosomes and plasmids.
 All of these may be submitted within the same chromosome-level assembly.
 
-Please note that contig and scaffold level assemblies can both be updated to higher level assemblies after submission.
+Please also note that contig and scaffold level assemblies can both be updated to higher level assemblies after
+submission.
 You cannot update to a lower level assembly, however, and you cannot add functional annotation if none was present
 in the first submission.
 
