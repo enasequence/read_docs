@@ -153,6 +153,11 @@ Please select the correct version for your operating system.
 The ascp command line client is distributed as part of the Aspera connect
 high-performance transfer browser plug-in.
 
+Public data download requires a public key authentication file. This is
+provided in the Aspera command line client download package as the
+'asperaweb_id_dsa.openssh' file. The location of this file varies between
+platforms.
+
 Following are some examples of how Aspera may be used to download ENA data:
 
 Unix
