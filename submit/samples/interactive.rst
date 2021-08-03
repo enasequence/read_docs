@@ -56,7 +56,7 @@ Step 2: Complete Template Spreadsheet
 
 Once you have downloaded the template spreadsheet, you should open it in an appropriate spreadsheet editing program,
 such as Microsoft Excel or Google Sheets.
-Consider the following tips as you do this:
+Consider the following tips as you complete your spreadsheet:
 
 - Use the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to look up the requirements and
   restrictions for each field

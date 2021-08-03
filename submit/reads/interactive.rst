@@ -60,7 +60,7 @@ Step 2: Complete The Template Spreadsheet
 
 Once you have downloaded the template spreadsheet, you should open it in an appropriate spreadsheet editing program,
 such as Microsoft Excel or Google Sheets.
-Consider the following tips as you do this:
+Consider the following tips as you complete your spreadsheet:
 
 - Each row of your spreadsheet should describe the files and metadata for exactly one experiment/run pair
   - Submissions must always be de-multiplexed
