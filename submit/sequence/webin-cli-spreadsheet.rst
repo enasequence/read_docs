@@ -6,133 +6,63 @@ Submit Targeted Sequence Spreadsheets with Webin-CLI
 Introduction
 ============
 
+Submission of targeted sequences may be done using `Webin-CLI <../general-guide/webin-cli.html>`_ as described in this
+page's parent page: `How to Submit Targeted Sequences <../sequence.html>`_.
+As described there, you may prepare your submissions in a spreadsheet format in accordance with a checklist, provided
+that an appropriate checklist exists.
+Please browser the selection of available checklists to determine if this route is correct for you:
+
+- `List of Annotation Checklists <sequence/annotation-checklists.html>`_
+
+If you are satisfied that there is an appropriate checklist, please read on to learn how you may download and complete a
+template.
+If in doubt, feel free to `contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
+Step 1: Acquire A Template Spreadsheet
+======================================
 
-Annotated sequences (e.g. 16S rRNA genes) can be submitted to the European Nucleotide Archive (ENA)
-as tab-separated (tsv) spreadsheets using the
-`Webin command line submission interface <../general-guide/webin-cli.html>`_ with ``-context sequence`` option.
+To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
+'Generate Annotated Sequence Spreadsheet' button.
 
-An annotated sequence submission consists of:
-- General sequence information
-   - Study accession or unique name (alias)
-   - Unique name for the submission
-   - Free text description of the set of submitted sequences (optional)
-- Sequences
-- Functional annotation
+1. You will be presented with a set of checklist groups: select the appropriate one for your submission, by reference to
+   the `List of Annotation Checklists <sequence/annotation-checklists.html>`_ if needed
+2. Next, select the actual checklist you intend to use
 
-The following picture illustrates the stages of the annotated sequence spreadsheet submission process:
+.. image:: ../images/wsp_sequence_1_select_checklist.png
 
-.. image:: ../images/webin-cli_02.png
+3. The interface will now present the list of mandatory attributes for your selected checklist
 
+   a. Check the 'Show Description' box for an explanation of each field
+   b. Review the 'Validation' column to see what requirements a field may have, e.g. a list of permitted values
 
-Stage 1: Pre-register study
-===========================
-
-
-Each submission must be associated with a pre-registered study.
-
-- `Register a Study <../study.html>`_
+4. Ensure you expand the 'Optional Fields' section and review its contents carefully: all these fields are optional,
+   because they don't apply in all cases but some may be essential to adequately describe your sequences
+5. Check the box next to any optional field you wish to use
+6. When you are satisfied with the optional fields you have chosen, click 'Next' or 'Download spreadsheet template' to
+   proceed to the final stage of template acquisition
+7. On the last page, click the 'Download TSV Template' to get the spreadsheet you have designed
 
 
-Stage 2: Prepare the files
-==========================
+Stage 2: Complete The Template Spreadsheet
+==========================================
 
 
-The set of files that are part of the submission are specified using a manifest file.
-The manifest file is specified using the ``-manifest <filename>`` option.
+Once you have downloaded the template spreadsheet, you should open it in an appropriate spreadsheet editing program,
+such as Microsoft Excel or Google Sheets.
+Consider the following tips as you complete your spreadsheet:
 
-An annotated sequence spreadsheet submission consists of the following files:
+- Each row of the table must include all the metadata and nucleotide sequence of exactly one of your sequence entries
+- Refer to the spreadsheet customisation and download interface to check the meaning and requirements of fields
+- Ensure that sequence field does not contain any whitespace or newline characters
+- Do not modify the first two lines of the spreadsheet
+- Do not edit the column names
+- The 'Organism' field must match with the scientific name of a species-rank taxon in the NCBI Taxonomy database
+  - See `tips for sample taxonomy <../../faq/taxonomy.html>`_ for help with how to identify an appropriate name
+- Use only valid ASCII characters in filling out the spreadsheet
+- When you come to submit it, the file must use either a '.tsv' or '.tab' format
+- Before submitting, you must compress your spreadsheet with GZIP or BZIP2
 
-- 1 manifest file
-- 1 tab-separated (tsv) spreadsheet containing the sequences and functional annotation
+Once you are satisfied with the content of your file and it has been appropriate compressed, return to the page
+`How to Submit Targeted Sequences <../sequence.html>`_ to continue with your submission.
 
-
-Manifest file
--------------
-
-The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
-- Field value (second column): field value
-
-The following metadata fields are supported in the manifest file:
-
-- STUDY: Study accession or unique name (alias)
-- NAME: Unique name for the submission
-- DESCRIPTION: Free text description of the set of submitted sequences (optional)
-
-The following file name fields are supported in the manifest file:
-
-- TAB: tab-separated (tsv) spreadsheet containing the sequences and functional annotation
-
-For example, the following manifest file represents a submission:
-
-..
-    STUDY   TODO
-    NAME   TODO
-    TAB    sequences.tsv.gz
-
-
-Tab-separated (tsv) spreadsheet
--------------------------------
-
-
-Please download and fill a tab-separated (tsv) spreadsheet template
-from the `Webin submission portal <../general-guide/submissions-portal.html>`_:
-
-https://www.ebi.ac.uk/ena/submit/webin
-
-- Step 1: Expand the 'Download spreadsheet template for annotated sequences' option from the 'Submit' page.
-
-.. image:: ../images/webin_submit_annotated_sequences_01.png
-
-- Step 2: Press the 'Start' button.
-
-.. image:: ../images/webin_submit_annotated_sequences_02.png
-
-- Step 3: Select the most appropriate checklist group.
-
-.. image:: ../images/webin_submit_annotated_sequences_03.png
-
-- Step 4: Select the most appropriate checklist.
-
-.. image:: ../images/webin_submit_annotated_sequences_04.png
-
-- Step 5: Select the checklist fields and click 'Next' at the botton of the page.
-
-.. image:: ../images/webin_submit_annotated_sequences_05.png
-
-- Step 6: Click 'Download' button to download the spreadsheet template.
-
-.. image:: ../images/webin_submit_annotated_sequences_06.png
-
-
-Stage 3: Validate and submit the files
---------------------------------------
-
-Files are validated, uploaded and submitted using the
-`Webin command line submission interface <../general-guide/webin-cli.html>`_.
-Please refer to the `Webin command line submission interface <../general-guide/webin-cli.html>`_ documentation for more
-information about the submission process.
-
-
-Assigned accession numbers
-==========================
-
-Once the sequences have been submitted an analysis (ERZ) accession number is immediately assigned and
-returned to the submitter by the Webin command line submission interface.
-
-The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the
-Webin submission service. For example, the submitter can retrieve the assigned sequence accessions
-from the `Webin submissions portal <../general-guide/submissions-portal.html>`_ or from the
-`Webin reports service <../general-guide/reports-service.html>`_ using the ERZ accession number.
-
-For sequences, long term stable accession numbers that can be used in publications are:
-
-- Study accession (PRJ) assigned at time of study registration.
-- Sequence accession(s) assigned once the submission has been fully processed by ENA.
-
-Submitters can retrieve the sequence accession numbers from the
-`Webin submissions portal <../general-guide/submissions-portal.html>`_ or from the
-`Webin reports service <../general-guide/reports-service.html>`_.
-These accession numbers are also sent to the submitters by e-mail.
