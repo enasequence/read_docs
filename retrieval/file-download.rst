@@ -49,6 +49,7 @@ computational ability might be required:
 - `Using wget`_
 - `Using FTP Client`_
 - `Using Aspera`_
+- `Using ENA File Downloader`_
 
 
 .. note::
@@ -217,3 +218,30 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
     fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wy/WYAA01.dat.gz local/target/directory
 
+Using *ENA File Downloader*
+--------------
+Ena File Downloader is a user runnable tool used for downloading accessions.It allows users to submit comma separated list of accessions or the file path with accessions that one wishes to download.
+Next the user is prompted to select the format. One can choose among the following format  :
+
+- `read files fastq`
+- `read files submitted`
+- `analysis files submitted`
+- `analysis files generated`
+
+Next the user is prompted to select the location of the download and the protocol to be used for download. The user can choose among the following protocol :
+
+- `FTP`
+- `Aspera`
+
+If the user chooses Aspera protocol, he will be prompted to select the The location of local aspera client folder. In this location we’d expect to see a ‘bin’ folder with the ascp executable and an ‘etc’ folder which has the <ssh file name.
+
+Next the user is prompted to enter his email address at which one wishes to receive an alert on completion. This step is Optional.
+
+Next the user will be prompted with the below options :
+
+* `To start downloading right now, and also create a script that can be invoked directly, please enter 1`
+
+*  `To create a script that can be invoked directly (e.g. by a pipeline or a script), enter 2`
+
+If the user selects 1, then download will start right away in the current console, but also create a script.
+If the user selects 2, then a script file will be created inside the current folder with the inputs received that can be invoked directly.
