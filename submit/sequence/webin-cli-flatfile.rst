@@ -1,6 +1,6 @@
-==================================================
-Submit Annotated Sequence Flatfiles with Webin-CLI
-==================================================
+=================================================
+Submit Targeted Sequence Flatfiles with Webin-CLI
+=================================================
 
 
 Introduction

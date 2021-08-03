@@ -1,10 +1,12 @@
-=====================================================
-Submit Annotated Sequence Spreadsheets with Webin-CLI
-=====================================================
+====================================================
+Submit Targeted Sequence Spreadsheets with Webin-CLI
+====================================================
 
 
 Introduction
 ============
+
+
 
 
 Annotated sequences (e.g. 16S rRNA genes) can be submitted to the European Nucleotide Archive (ENA)
