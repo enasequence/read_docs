@@ -13,6 +13,12 @@ The information on this page pertains to the submission of targeted sequences, t
 sequences representing interesting features or gene regions.
 This is unrelated to the submission of genome assemblies annotated or otherwise, which is described in our `Assembly
 Submission Pages <assembly.html>`_.
+Submissions of this type very rarely exceed a few hundred individual sequences, and usually contain substantially less
+than this.
+Please do not use the information given here to submit thousands of sequences without prior approval as there may be a
+more appropriate route.
+If you're unsure whether this is the correct option for your submission, please
+`contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 .. image:: images/metadata_model_sequences.png
    :align: center
@@ -21,8 +27,8 @@ All submissions of this type are submitted as 'analysis' objects with accessions
 However, analysis accessions of this type are not exposed.
 Instead, specific sequence accessions are assigned later, and these are what should be used to reference the sequences.
 
-Sequence submission requires that a study be registered first. Please do this
-before attempting any of the guides shown below:
+Sequence submission requires that a study be registered first.
+Please do this before attempting any of the guides shown below:
 
 - `Register a Study <study.html>`_
 
@@ -39,8 +45,9 @@ Accessions
 
 
 As all sequences in ENA are submitted as 'analyses', for each sequence set submission, you will receive a unique
-accession number that starts with ERZ.
-This accession number is for internal processing only and will not be visible in the browser.
+analysis accession number that starts with ERZ.
+This accession number is for internal processing only and will not be visible in the browser so do not reference
+this number in publications, etc.
 Furthermore, if your submission includes multiple sequences, the ERZ accession will not be unique to any one of them.
 Instead, you will receive additional post-processing accession numbers for your sequences via email, each of which will
 be unique to one of your sequences.
@@ -98,7 +105,7 @@ In addition, you will need to have our Webin-CLI tool available on the machine f
 For information on what this tool is and how to get started with it, including an instructional video for Windows
 users, please refer to the `Webin-CLI general guide </general-guide/webin-cli.html>`_.
 The linked page provides extensive detail on Webin-CLI and its use, but the information below should be enough to
-complete your submission.
+complete your submission provided you are already able to run Webin-CLI.
 
 
 Step 1: Prepare A Manifest File
@@ -120,6 +127,7 @@ The following manifest fields are supported for targeted sequence submission:
 - TAB: name of a spreadsheet containing sequences
 
 Note that the FLATFILE and TAB fields are mutually exclusive.
+You will have already prepared one of these file types as described in `Submission Options`_.
 
 Below are two example manifest files, which you could copy into a plain text file and edit with appropriate values:
 
@@ -144,7 +152,9 @@ _________________________________
 Once you have successfully prepared your manifest file, you should be prepared to complete your submission.
 Please refer to the `Webin-CLI general guide </general-guide/webin-cli.html>`_ if you do not have this program set up.
 
-Webin-CLI automatically validates your submissions before accepting it.
+Webin-CLI has 'submission' and 'validation-only' modes.
+Both of these will run the full validation suite on your submission, but only the submission mode will submit your file.
+No submission is accepted before it has passed validation.
 You are encouraged to run Webin-CLI in validate mode before attempting to submit.
 An example validation command will resemble:
 
@@ -155,8 +165,8 @@ An example validation command will resemble:
 
 This will review the contents of your manifest and sequence file and output a validation result, indicating a pass or
 fail.
-In the case of a failed validation, the output will include the location of a file detailing the errors with your
-submission.
+In the case of a failed validation, the output will point to the location of a file detailing the identified errors with
+your submission.
 
 Once validation is successful, proceed with a submission command:
 
