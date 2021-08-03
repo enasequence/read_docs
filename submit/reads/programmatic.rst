@@ -192,12 +192,12 @@ Run XML:
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
                     <FILE filename="mantis_religiosa_R1.fastq.gz" filetype="fastq"
                         checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
-                    <FILE filename="antis_religiosa_R2.fastq.gz" filetype="fastq"
+                    <FILE filename="mantis_religiosa_R2.fastq.gz" filetype="fastq"
                         checksum_method="MD5" checksum="183d6a24e0c3704e993bebe75bbbd989"/>
                 </FILES>
             </DATA_BLOCK>
@@ -271,7 +271,7 @@ note that `filetype` has been set to `bam`.
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
                     <FILE filename="mantis_religiosa_R1.bam" filetype="bam"
@@ -291,7 +291,7 @@ note that `filetype` has been set to `cram`.
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
                     <FILE filename="mantis_religiosa_R1.cram" filetype="cram"
@@ -312,10 +312,10 @@ run XML should look as follows:
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
-                    <FILE filename="exp_run_mantis_religiosa.tar.gz" filetype="OxfordNanopore_native"
+                    <FILE filename="mantis_religiosa.tar.gz" filetype="OxfordNanopore_native"
                         checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
                 </FILES>
             </DATA_BLOCK>
