@@ -7,91 +7,84 @@ Introduction
 ============
 
 
-Annotated sequence flat files can be submitted to the European Nucleotide Archive (ENA) using the `Webin command line
-submission interface <../general-guide/webin-cli.html>`_ with ``-context sequence`` option.
+Submission of targeted sequences may be done using `Webin-CLI <../general-guide/webin-cli.html>`_ as described in this
+page's parent page: `How to Submit Targeted Sequences <../sequence.html>`_.
+The native format for annotated sequences in ENA is the `EMBL flat file format <../fileprep/flat-file-example.html>`_.
+You may prepare your annotated targeted sequence in this format and submit it directly to us, subject to it passing
+validation.
 
-An annotated sequence submission consists of:
-- General sequence information
-   - Study accession or unique name (alias)
-   - Unique name for the submission
-   - Free text description of the submitted sequences (optional)
-- Sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_.
-
-The following picture illustrates the stages of the annotated sequence flat file submission process:
-
-.. image:: ../images/webin-cli_03.png
+Because of the highly flexible nature of the format and the diversity of sequences which may be submitted in it, this
+page does not provide prescriptive information on how to prepare your file, but lists some useful resources.
 
 
-Stage 1: Pre-register study
+Tips On Preparing Your File
 ===========================
 
-Each submission must be associated with a pre-registered study.
 
-- `Register a study <study.html>`_
-
-
-Stage 2: Prepare the files
-==========================
-
-The set of files that are part of the submission are specified using a manifest file.
-The manifest file is specified using the ``-manifest <filename>`` option.
-
-An annotated sequence flat file submission consists of the following files:
-
-- 1 manifest file
-- 1 flat file containing the sequences and functional annotation
+If you are not familiar, please see an example of the `EMBL flat file format <../fileprep/flat-file-example.html>`_.
+When you have completed your file, you must compress it with GZIP or BZIP2.
 
 
-Manifest file
--------------
+Flat File Format Description
+----------------------------
 
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
-- Field value (second column): field value
+When preparing a flat file using the above, note a few things:
 
-The following metadata fields are supported in the manifest file:
+- The sections which read 'XXX' will be automatically filled by our pipeline on submission, and anything you write here
+  will be overwritten
+- Information on centre name and address, and author names, is autofilled into the 'RX' lines (RN, RP, RA, etc.)
 
-- STUDY: Study accession or unique name (alias)
-- NAME: Unique name for the submission
-- DESCRIPTION: Free text description of the submitted sequences (optional)
+  - Anything you write here will not be retained, and will be overwritten by the centre and contact information
+    associated with your account, so please ensure this is correct before you submit
 
-The following file name fields are supported in the manifest file:
+- The feature table section (FT lines) are where your annotation should be inserted
 
-- FLATFILE: sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_
+  - The first column of the feature table should name the 'feature', e.g. source, gene, intron
+  - Each feature need only be named once: following lines are treated as part of the same feature, until a new feature
+    is named
+  - The second column names qualifiers which provide information about the feature and starts with a '/' character,
+    e.g. /organism, /gene, /product
 
-For example, the following manifest file represents a submission:
+- Each sequence entry must contain exactly one source feature, which names the biological origin of the record
 
-..
-    STUDY   TODO
-    NAME   TODO
-    FLATFILE    sequences.dat.gz
+  - This must include one /organism qualifier which must match with the scientific name of a species-rank taxon in the
+    NCBI Taxonomy database
+  - See `tips for sample taxonomy <../../faq/taxonomy.html>`_ for help with how to identify an appropriate name
 
-
-Stage 3: Validate and submit the files
-======================================
-
-Files are validated, uploaded and submitted using the `Webin command line submission interface <../general-guide/webin-cli.html>`_.
-Please refer to the [`Webin command line submission interface <../general-guide/webin-cli.html>`_ documentation for more
-information about the submission process.
+- A flat file may contain multiple sequence records, which should be separated within the file by a single line which
+  contains only ``//``
 
 
-Assigned accession numbers
-==========================
+Flat File Preparation Resources
+-------------------------------
 
-Once the sequences have been submitted an analysis (ERZ) accession number is immediately assigned and returned to the
-submitter by the Webin command line submission interface.
 
-The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the
-Webin submission service.
-For example, the submitter can retrieve the assigned sequence accessions from the `Webin submissions portal <../general-guide/submissions-portal.html>`_
-or from the `Webin reports service <../general-guide/reports-service.html>`_ using the ERZ accession number.
+There are various tools which can help you with the preparation of your flat file, some of which are listed in our
+`Third Party Tools page <../../faq/third_party_tools.html>`_.
 
-For sequences, long term stable accession numbers that can be used in publications are:
+`Entry Upload Templates <../fileprep/sequence_flatfile.html>`_
+  Some flat file templates are provided at the linked page which may help with the preparation of some submissions.
+  These are different from the checklist-based templates available from the Webin Submissions Portal, described
+  elsewhere in this documentation.
 
-- Study accession (PRJ) assigned at time of study registration.
-- Sequence accession(s) assigned once the submission has been fully processed by ENA.
+`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_
+  This is where we provide a comprehensive directory of the available features and qualifiers you may use in your
+  flat files, as well as information on how they should be used
 
-Submitters can retrieve the sequence accession numbers from the `Webin submissions portal <../general-guide/submissions-portal.html>`_
-or from the `Webin reports service <../general-guide/reports-service.html>`_. These accession numbers are also send to the submitters by
-e-mail.
+`Webin-CLI Validator <../sequence.html>`_
+  When you submit your flat file you will do so via Webin-CLI.
+  The above links back to the parent of this page which describes submission of flat files via Webin-CLI.
+  This tool includes a validation mode able to point out errors in your file which would prevent it from being
+  submitted.
+  While being valid may not be the same as being complete and well-annotated, this is a useful check you can do.
+
+`EMBLmyGFF3 <https://github.com/NBISweden/EMBLmyGFF3>`_
+  If you have your annotation in GFF3 format already, this tool created by staff at NBI Sweden can be used to convert
+  them to EMBL flat file format.
+  Read more in the `Third Party Tools page <../../faq/third_party_tools.html>`_.
+
+`annonex2embl <https://github.com/michaelgruenstaeudl/annonex2embl>`_
+  For multiple sequence alignments in NEXUS format with annotation, this tool is available for conversion to
+  EMBL flat file format.
+  Read more in the `Third Party Tools page <../../faq/third_party_tools.html>`_.
