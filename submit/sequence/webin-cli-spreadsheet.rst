@@ -8,9 +8,9 @@ Introduction
 
 Submission of targeted sequences may be done using `Webin-CLI <../general-guide/webin-cli.html>`_ as described in this
 page's parent page: `How to Submit Targeted Sequences <../sequence.html>`_.
-As described there, you may prepare your submissions in a spreadsheet format in accordance with a checklist, provided
+As mentioned there, you may prepare your submissions in a spreadsheet format in accordance with a checklist, provided
 that an appropriate checklist exists.
-Please browser the selection of available checklists to determine if this route is correct for you:
+Please browse the selection of available checklists to determine if this route is correct for you:
 
 - `List of Annotation Checklists <sequence/annotation-checklists.html>`_
 
@@ -36,8 +36,8 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
    a. Check the 'Show Description' box for an explanation of each field
    b. Review the 'Validation' column to see what requirements a field may have, e.g. a list of permitted values
 
-4. Ensure you expand the 'Optional Fields' section and review its contents carefully: all these fields are optional,
-   because they don't apply in all cases but some may be essential to adequately describe your sequences
+4. Ensure you expand the 'Optional Fields' section and review its contents carefully: all these fields are optional
+   because they don't apply in all cases, but some may be essential for you to adequately describe your sequences
 5. Check the box next to any optional field you wish to use
 6. When you are satisfied with the optional fields you have chosen, click 'Next' or 'Download spreadsheet template' to
    proceed to the final stage of template acquisition
@@ -53,8 +53,10 @@ such as Microsoft Excel or Google Sheets.
 Consider the following tips as you complete your spreadsheet:
 
 - Each row of the table must include all the metadata and nucleotide sequence of exactly one of your sequence entries
-- Refer to the spreadsheet customisation and download interface to check the meaning and requirements of fields
-- Ensure that sequence field does not contain any whitespace or newline characters
+- Refer to the spreadsheet customisation and download interface described above to check the meaning and requirements of
+  fields
+- Ensure that the sequence field does not contain any whitespace or newline characters: it should only contain the
+  DNA characters A, C, T, G, as well as N
 - Do not modify the first two lines of the spreadsheet
 - Do not edit the column names
 - The 'Organism' field must match with the scientific name of a species-rank taxon in the NCBI Taxonomy database
@@ -63,6 +65,6 @@ Consider the following tips as you complete your spreadsheet:
 - When you come to submit it, the file must use either a '.tsv' or '.tab' format
 - Before submitting, you must compress your spreadsheet with GZIP or BZIP2
 
-Once you are satisfied with the content of your file and it has been appropriate compressed, return to the page
+Once you are satisfied with the content of your file and it has been appropriately compressed, return to the page
 `How to Submit Targeted Sequences <../sequence.html>`_ to continue with your submission.
 
