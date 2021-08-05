@@ -39,6 +39,7 @@ To do this, first check the box asking 'Will you provide functional genome annot
 
 An additional field will appear at the bottom of the page allowing you to add one or more locus tag prefixes.
 All prefixes you enter must conform to the following rules:
+
  - Starts with a letter
  - Between 3 and 12 characters long
  - Is upper case
