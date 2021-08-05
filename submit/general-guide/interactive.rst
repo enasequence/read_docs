@@ -92,14 +92,14 @@ Follow the links for specific guidance on each submission activity.
 .. _upload it to your account's FTP area: ../fileprep/upload.html
 
 .. _Studies Report: /reports-service.html
-.. _`Samples Report`: /reports-service.html
-.. _`Runs Report`: /reports-service.html
-.. _`Run Files  Report`: /reports-service.html
-.. _`Run Processing Report`: /reports-service.html
-.. _`Unsubmitted Files Report`: /reports-service.html
-.. _`Analyses Report`: /reports-service.html
-.. _`Analysis File Report`: /reports-service.html
-.. _`Analysis Processing Report`: /reports-service.html
+.. _Samples Report: /reports-service.html
+.. _Runs Report: /reports-service.html
+.. _Run Files Report: /reports-service.html
+.. _Run Processing Report: /reports-service.html
+.. _Unsubmitted Files Report: /reports-service.html
+.. _Analyses Report: /reports-service.html
+.. _Analysis File Report: /reports-service.html
+.. _Analysis Processing Report: /reports-service.html
 
 Each of these links will interfaces which provide further information on how to complete the described action.
 Interactive submission is recommended for registration of your Study and Samples and for small scale Read submissions.
