@@ -45,7 +45,8 @@ To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/sub
 
 .. image:: ../images/wsp_read_1_template_selection.png
 
-4. Review the included attributes, their meanings, and requirements.
+4. Review the included attributes, their meanings, and requirements; use the 'Show Description' box to see more
+   information about an attribute
    Expand the 'Optional Fields' section and check the boxes next to the non-default attributes to include them
 5. Click 'Next' when you are ready to continue; you can return to this interface later to review attribute meanings and
    requirements
@@ -63,11 +64,15 @@ such as Microsoft Excel or Google Sheets.
 Consider the following tips as you complete your spreadsheet:
 
 - Each row of your spreadsheet should describe the files and metadata for exactly one experiment/run pair
+
   - Submissions must always be de-multiplexed
+
 - Return to the interface in the previous step to review the meanings of attributes and any requirements they have
 - The study and sample fields can be filled out with either SRA or BioStudies/BioSamples accessions
 - The file name fields must exactly match the name of a file in your account's upload area
+
   - If you created subdirectories for your files, include this full path in the file name field
+
 - The MD5 fields should be filled with file MD5 values, which are 32-digit hexadecimal numbers.
   The MD5 value is a fingerprint value for the file which allows us to verify that it was uploaded successfully.
   In Linux and Mac, you can generate this value from the command line by running the command 'md5' or 'md5sum' on the
@@ -105,4 +110,5 @@ them to an archive.
 If there are file errors, these will be reported to account holders by the registered email address(es).
 You can always check the processing status of your submissions via the run reports available in WSP.
 
-
+See `Webin Submissions Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+about these submissions.

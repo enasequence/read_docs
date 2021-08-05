@@ -181,3 +181,6 @@ A successful submission will result in an analysis accession being immediately a
 After your sequences have been processed, you will be sent the assigned sequence accessions and copies of the flat
 files by email.
 Refer to the `Accessions`_ section above for an explanation of these.
+
+See `Webin Submissions Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+about these submissions.
