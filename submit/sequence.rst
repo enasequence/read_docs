@@ -79,7 +79,7 @@ Whether you submit with a flat file or a checklist spreadsheet, the actual submi
 the preparation of these files which differs significantly.
 The stages of your submission are illustrated in the below diagram:
 
-.. image:: /images/webin-cli_03.png
+.. image:: images/webin-cli_03.png
 
 Refer to the relevant guide below on preparing your file:
 

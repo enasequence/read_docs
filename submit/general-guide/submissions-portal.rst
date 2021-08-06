@@ -88,7 +88,7 @@ overheads.
 Submitted Runs and Analyses
 ---------------------------
 
-For analyses and runs there are reports available on archival of their associated files.
+For analyses and runs there are reports available on archival of their associated submitted files.
 Access these in `WSP <https://www.ebi.ac.uk/ena/submit/webin/>`_.
 These are the only two object types which have data files associated with them rather than just metadata.
 These can be accessed from the WSP dashboard, look for the buttons named:
@@ -101,7 +101,7 @@ The below image shows the file report interface for runs; the interface for anal
 .. image:: ../images/wsp_reports_4_run_file_report.png
 
 1. Enter the accession or name of a run to search for it directly
-2. Filter by processing status: active, completed, or failed
+2. Filter by submitted file archiving status: active, completed, or failed
 3. Modify the maximum amount of rows to be shown: default 100
 4. Download all the results of your query in a CSV file
 5. Rows are sorted by accession number

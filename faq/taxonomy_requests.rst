@@ -38,7 +38,7 @@ Creating Taxon Requests
 =======================
 
 
-If you wish to request a new taxon name visit the `Webin Submissions Portal (WSP)<https://www.ebi.ac.uk/ena/submit/webin>`_
+If you wish to request a new taxon name visit the `Webin Submissions Portal (WSP) <https://www.ebi.ac.uk/ena/submit/webin>`_
 and choose the 'Register taxonomy' option.
 
 The 'Register using form' option allows you to enter names one-by-one along with a category and description.
