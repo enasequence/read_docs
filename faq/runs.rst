@@ -251,11 +251,17 @@ To do this:
 2. Go to the 'Run Files Report'
 3. Enter the erroneous run accession into the search field
 4. Identify the run, then select its 'Action' box and choose 'Edit run XML'
-5. You will be presented with the run in XML format: find the ``<FILES>`` block
-6. In the ``<FILES>`` block their may be one or more ``<FILE>`` elements: identify the relevant one by reference to its
-   'filename' value
-7. Remove the checksum value for the errored file(s) and enter the correct one
-8. Click 'Save' at the bottom of the pop-up
+5. You will be presented with the run in XML format: find the ``<FILE>`` elements
+6. There may be one or more ``<FILE>`` elements, e.g. if you have submitted paired FASTQ files. Find the relevant one by
+   reference to its 'filename' value
+7. Remove the 'checksum' value for the errored file(s) and enter the correct value. The checksum is shown in the pink
+   box:
+
+.. images:: images/run_errors_md5_edit.png
+
+8. When editing the checksum value, change only the 32-digit string: do not remove the quotation marks, the word
+   'checksum', or any other parts of the XML
+9. Click 'Save' at the bottom of the pop-up
 
 Once completed, your file will be re-validated, usually within 24 hours.
 
