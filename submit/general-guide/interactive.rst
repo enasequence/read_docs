@@ -6,12 +6,14 @@ Interactive Submission
 Introduction
 ============
 
+
 This guide will introduce you to the Webin Submissions Portal (WSP) service, which allows you to submit data to ENA
 interactively through an ordinary web browser.
 
 
 Production and Test Services
 ============================
+
 
 There are two WSP services: one for test submissions and another for production (real) submissions.
 The test service allows you to trial the interface in a consequence-free manner.
@@ -25,18 +27,24 @@ We advise and encourage that you trial your submissions using the Webin test ser
 service.
 
 
-Limitations
-===========
+What Can Be Submitted Through WSP?
+==================================
 
-Some types of submission cannot be completed via WSP and must be done through our other submission routes.
+
+Some submissions can be done entirely through WSP, for example you could submit a study comprising only read data
+without needing to use any of the other submission interfaces.
+However Some types of submission cannot be completed via WSP and must be done through our other submission routes.
 Usually, this is because some submission types are limited to our Webin-CLI tool, which has extensive pre-submission
-data validation capability built in.
-For a summary of what can be submitted through each interface, as well as what these interfaces are, please read the
-`General Guide on ENA Data Submission <../general-guide.html>`_.
+data validation capability built in and is able to flag up errors in your data before you submit it.
+Because of this, Webin-CLI is recommended for all circumstances in which it is an option.
+
+For a summary of what can be submitted through each interface, as well as what these interfaces are, please refer to the
+table in the `General Guide on ENA Data Submission <../general-guide.html>`_.
 
 
 Submission
 ==========
+
 
 When you come to make a new submission, you will have the options described below.
 Follow the links for specific guidance on each submission activity.
