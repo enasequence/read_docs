@@ -105,6 +105,7 @@ The Problem
 
 This error is specific to FASTQ files: each read record in such a file should comprise exactly four lines, none of which
 should be blank.
+Whitespace characters may only occur in the identifier line and are discouraged.
 The FASTQ format is as follows:
 
 ::
