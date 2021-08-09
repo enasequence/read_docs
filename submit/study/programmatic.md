@@ -136,8 +136,7 @@ Webin will report an accession number for the study that starts with PRJEB.
 ```
  
 This accession number is called the BioProject accession and is typically used in journal publications. The study will
-also be assigned an alternative accession number that starts with ERP. This accession number is called the SRA 
-(Sequence Read Archive) study accession.
+also be assigned an alternative accession number that starts with ERP.
 
 ## Test and production services
 

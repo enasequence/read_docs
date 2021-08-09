@@ -240,7 +240,7 @@ Webin will report an accession number for the sample that starts with SAMEA.
 
 This accession number is called the BioSample accession and is typically used in journal
 publications. The sample will also be assigned an alternative accession number that starts with
-ERS. This accession number is called the SRA (Sequence Read Archive) sample accession.
+ERS.
 
 ```xml
 <SAMPLE accession="ERS1833148" alias="MT5176" status="PRIVATE">

@@ -68,7 +68,7 @@ Consider the following tips as you complete your spreadsheet:
   - Submissions must always be de-multiplexed
 
 - Return to the interface in the previous step to review the meanings of attributes and any requirements they have
-- The study and sample fields can be filled out with either SRA or BioStudies/BioSamples accessions
+- The study and sample fields can be filled out with either ENA or BioStudies/BioSamples accessions
 - The file name fields must exactly match the name of a file in your account's upload area
 
   - If you created subdirectories for your files, include this full path in the file name field
