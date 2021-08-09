@@ -62,12 +62,16 @@ Sample Edits
 
 1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
    presented with a list of your registered samples:
+2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
+3. Your sample will be shown as an XML document which you can edit directly:
 
 .. image:: ../images/wsp_meta_update_03_sample_edit.png
 
-2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
-3. Your sample will be shown as an XML document which you can edit directly
-4. Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file
+4. Do not edit the attributes highlighted in red (accession, alias, and centre name details) as you will not be able to
+   save these changes
+5. Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file
+6. Changing the checklist attribute is allowed, but your sample must conform to the requirements of the new checklist
+7. Add new '<SAMPLE_ATTRIBUTE>' blocks are desired
 
 Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to
 remove an attribute which is required by the specified checklist.
