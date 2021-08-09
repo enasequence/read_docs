@@ -51,9 +51,9 @@ Follow the links for specific guidance on each submission activity.
   the account, and change your centre name, a value which is immutably attached to all your submissions
 
 2 - Studies (Projects):
-  **`Register Study`_** - An interface to register new studies
+  **`Register Study`_:** An interface to register new studies
 
-  **Submit XMLs** You can submit studies in XML format through this interface
+  **Submit XMLs:** You can submit studies in XML format through this interface
 
   **`Studies Report`_:** Review and edit previously submitted studies, and change their release date
 
