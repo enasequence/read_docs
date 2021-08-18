@@ -32,11 +32,6 @@ and ensures the methods used to derive your MAG are reproducible.
 - `Submitting A Primary Metagenome Assembly <primary.html>`_
 - `Submitting Binned Metagenome Assemblies <binned.html>`_
 
-If your study is small-scale and you only intend to submit a very small number of MAGs, lower level
-metagenome assembly submissions may not be necessary, though are still recommended where possible. Please contact
-our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ if you have any questions.
-
-
 Introduction
 ============
 
@@ -46,7 +41,7 @@ Metagenome assemblies can be submitted to the European Nucleotide Archive (ENA) 
 Please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ if you intend to submit an assembly
 assembled from third party data.
 
-Each MAG from an environmental source requires a virtual derived **MAG** sample so please follow instructions carefully.
+Each MAG from an environmental source requires a derived **MAG** sample so please follow instructions carefully.
 
 Genome assembly submissions include plasmids, organelles, complete virus genomes, viral segments/replicons,
 bacteriophages, prokaryotic and eukaryotic genomes.
@@ -65,10 +60,7 @@ A Metagenome-Assembled Genome consists of:
    - Coverage
    - Free text description of the assembly (optional)
 
-- Contig sequences (if any)
-- Scaffold sequences (if any)
-- Chromosome sequences (if any)
-- Unlocalised sequences (if any)
+- Contig/Chromosome sequences
 - Functional annotation (optional)
 
 For assembly submission purposes, the term 'chromosome' should be understood to include organelles
@@ -101,21 +93,22 @@ record your methods and make your data reproducible.
 Registering MAG samples
 -----------------------
 
-Each **MAG** assembly submission must be associated with a **MAG** sample. This is because a MAG is not an assembly
-of the whole set of raw data but an assembly derived from a smaller subset of those data. These virtual
-samples represents the subset of that data and hold all metadata related to the taxonomy of that subset as well as
-methods used to derive it.
+Each **MAG** assembly submission must be associated with a **MAG** sample. This is because a MAG is not an assembly of
+all the data from the collected sample so linking to the environmental sample is misleading and causes incorrect
+taxonomy assignment. These **MAG** samples represent the individual organisms derived from the environmental sample and
+hold all metadata related to the taxonomy of that subset as well as methods used to derive it.
 
 .. image:: ../../images/metadata_model_derivedanalysis.png
 
-**MAG** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as they can
-be and use the specific `GSC MIMAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000047>`_ checklist.
+**MAG** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_
+as they can be and use the specific `GSC MIMAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000047>`_ checklist.
 
-Please make sure these **MAG** samples correctly reference the sample they were derived from (e.g. a **binned**
-sample used to submit a metagenomic bin or the **environmental** sample used to submit the raw reads the MAG was derived from).
+Please make sure these **MAG** samples correctly reference the sample they were derived from, e.g. a **binned**
+sample used to submit a metagenomic bin (if submitted) or the **environmental** sample used to submit the raw reads
+the MAG was derived from.
 
-This can be done from within the checklist using the mandatory “sample derived from” attribute. If the assembly was derived from multiple
-samples or runs you can list these with a comma separated list or range.
+This can be done from within the checklist using the mandatory “sample derived from” attribute.
+If the assembly was derived from multiple samples or runs you can list these with a comma separated list or range.
 
 You should also reference the source sample in the description:
 
@@ -144,10 +137,10 @@ Stage 2: Prepare the files
 The set of files that are part of the submission are specified using a manifest file.
 The manifest file is specified using the ``-manifest <filename>`` option.
 
-The files required for submission of a genome assembly depends on the assembly level:
+The files required for submission of a genome assembly depends on the assembly level. Compared to more complex genomes
+which can be submitted as contigs, scaffolds or chromosomes, MAGs are usually only submitted at one of two levels:
 
 - `Contig assembly`_
-- `Scaffold assembly`_
 - `Chromosome assembly`_
 
 Contig assembly
@@ -159,22 +152,12 @@ Consists of the following files:
 - 1 FASTA file OR 1 `flat file <../../fileprep/assembly.html#flat-file>`_
 
 This assembly level only requires information on the sequences and annotation (if any).
-You will receive an error if less than 2 or more than 1,000,000 sequences are submitted. If you have less than 2
-sequences, then you will need to submit at a higher assembly level or as
-`template sequences <../../sequence/webin-cli-flatfile.html>`_.
 
-Scaffold assembly
------------------
-
-Consists of the following files:
-
-- 1 manifest file
-- 1 FASTA file OR 1 `flat file <../../fileprep/assembly.html#flat-file>`_
-- 1 `AGP files <../../fileprep/assembly.html#agp-file>`_
-
-This assembly level requires information on the sequences and annotation (if any).
-It also allows the submitter to provide an AGP file to give instructions for the assembly of the scaffolds from the
-contigs.
+You will receive an error if less than 2 or more than 1,000,000 sequences are submitted. If your assembly is a single
+sequence and the genome is highly complete, please submit this as a `Chromosome assembly`_. If the sequence is not
+complete enough to consider it a fully assembled chromosome but you think the assembly is high enough quality to be
+considered a MAG, you can request your assembly be considered as a 'single contig' assembly through our
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Chromosome assembly
 -------------------
@@ -185,28 +168,21 @@ Consists of the following files:
 - 1 FASTA file OR 1 `flat file <../../fileprep/assembly.html#flat-file>`_
 - 1 `chromosome list file <../../fileprep/assembly.html#chromosome-list-file>`_
 - 0-1 `unlocalised list files <../../fileprep/assembly.html#unlocalised-list-file>`_
-- 0-1 `AGP files <../../fileprep/assembly.html#agp-file>`_
 
 This assembly level allows the submission of fully assembled chromosomes (including organelles, plasmids, and viral
 segments). This requires information on the sequences and annotation (if any) and submission of a chromosome list file
 to indicate which sequences represent which ‘chromosomes’.
 
 If these chromosomes contain unlocalised sequences (where the chromosome of the sequence is known but not the exact
-location) you can submit an additional unlocalised list file. However, please note, if you wish to submit unplaced
-contigs, you will have to submit at a lower level and use an AGP file to indicate which scaffolds/contigs are
-assembled to form each chromosome. Any sequences that are not used to assemble chromosomes are considered unplaced.
-
-For this assembly level in particular, it is important to understand how sequence names are formatted so they can
-be consistent between files otherwise the system will just register your submission at contig level.
+location) you can submit an additional unlocalised list file.
 
 Sequence names
 --------------
 
-Sequences must have a unique name within the submission that is provided in the fasta, AGP or flat files.
+Sequences must have a unique name within the submission that is provided in the fasta or flat files.
 It is essential that the sequence names are unique and used consistently between files.
 
 For example, the chromosome list file must refer to the chromosome sequences using the unique sequence names.
-Similarly, an AGP file must refer to scaffolds or contigs using the unique sequence names.
 
 Manifest file
 -------------
@@ -245,6 +221,7 @@ For example, the following manifest file represents a MAG consisting of contigs 
 
     STUDY   TODO
     SAMPLE   TODO
+    RUN_REF   TODO
     ASSEMBLYNAME   TODO
     ASSEMBLY_TYPE   TODO
     COVERAGE   TODO
@@ -258,11 +235,40 @@ For example, the following manifest file represents a MAG consisting of contigs 
 Stage 3: Validate and submit the files
 ======================================
 
-Files are validated, uploaded and submitted using the
-`Webin command line submission interface <../../general-guide/webin-cli.html>`_.
+Files are validated, uploaded and submitted using the `Webin command line submission interface
+<../../general-guide/webin-cli.html>`_ (Webin-CLI).
+Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_ documentation for full
+information about the submission process.
 
-Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_ documentation for
-more information about the submission process.
+Brief examples of Webin-CLI commands follow.
+The tool has ``-submit`` and ``-validate`` options which are mutually exclusive.
+Full validation of your data and metadata is run regardless of which option you choose, but using just ``-validate``
+gives you the opportunity to check the validation of your assembly and information on any errors.
+You are therefore encouraged to make use of Webin-CLI validation as much as you need to before you are ready to submit
+for real.
+
+First, run the Webin-CLI validation command, specifying your credentials and the path to your manifest file:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+Second, run the Webin-CLI submission command:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+In both cases, your prospective submission will be validated in full, and the result of this reported to you.
+A successful validation results in a simple success message, while a successful submission will further result in the
+assigned accession number (see below) being reported at your command line.
+Meanwhile, a failed validation will provide direction to a report file where you can find a list of error messages
+explaining the reason for the failure, which you can address before re-attempting.
+
+For more information on how to install and use Webin-CLI, please refer to the `Webin-CLI Submission
+<../../general-guide/webin-cli.html>`_ page.
 
 
 Assigned accession numbers
@@ -300,7 +306,7 @@ are described here.
 Sample And Study Validation
 ---------------------------
 
-- Sample and study (BioProject) pair must be unique for an assembly (except primary metagenomes)
+- Sample and study (BioProject) pair must be unique for an assembly
 - Sample taxonomic classification must be species rank or below (or equivalent) within NCBI taxonomy.
 
 Assembly name validation
