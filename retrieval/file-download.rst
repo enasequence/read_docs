@@ -5,7 +5,7 @@ How to Download Data Files
 Providing users with the ability to download submitted data for further
 analysis purposes is a key part of ENA's mission.
 Files are therefore made available through a public FTP server.
-Here you can learn how this server is structure, and how to download read and
+Here you can learn how this server is structured, and how to download read and
 analysis files.
 
 
@@ -93,12 +93,12 @@ Using *Globus*
 
 Globus provides a more user-friendly, feature-rich directory interface for
 interacting with the FTP server.
-Files can be downloaded through `Globus`_ ebi#public endpoint from the
-'/gridftp/ena' subfolder:
+Files can be downloaded through `Globus`_ 'Shared EMBL-EBI public endpoint'
+endpoint from the '/gridftp/ena' subfolder:
 
 .. image:: images/file-download-globus.png
 
-.. _`Globus`: https://app.globus.org/file-manager?origin_id=6f70c1b4-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
+.. _`Globus`: https://app.globus.org/file-manager?origin_id=fd9c190c-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
 
 Using *enaBrowserTools*
 -----------------------
@@ -153,6 +153,11 @@ Please select the correct version for your operating system.
 The ascp command line client is distributed as part of the Aspera connect
 high-performance transfer browser plug-in.
 
+Public data download requires a public key authentication file. This is
+provided in the Aspera command line client download package as the
+'asperaweb_id_dsa.openssh' file. The location of this file varies between
+platforms.
+
 Following are some examples of how Aspera may be used to download ENA data:
 
 Unix
@@ -185,3 +190,30 @@ Windows
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
     era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ^
     local\target\directory
+
+
+Downloading Private Files
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+e.g. If you want to use aspera to download a non-public data file using datahub (dcc) authentication,
+provide the dcc username instead of era-fasp and you will be prompted for the password.
+
+::
+
+    ascp -QT -l 300m -P33001 \
+    dcc_name@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz \
+    local/target/directory
+
+
+Downloading Assembled and Annotated Sequence Data
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Files in public FTP folders can also be downloaded using Aspera.
+
+e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy/WYAA01.dat.gz
+
+::
+
+    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
+    fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wy/WYAA01.dat.gz local/target/directory
+

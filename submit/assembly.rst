@@ -57,26 +57,26 @@ The set of files required for genome assembly submissions are listed in the foll
 +--------------------+------------------------------------------+-------------------------------------+
 | Assembly Level     | File Requirements                        | Additional Information              |
 +====================+==========================================+=====================================+
-| Contig             | 1 Manifest file                          |                                     |
+| Contig             | 1 Manifest file                          | Defines essential metadata          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 Flat file                              | For annotated assemblies            |
+|                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 +--------------------+------------------------------------------+-------------------------------------+
-| Scaffold           | 1 Manifest file                          |                                     |
+| Scaffold           | 1 Manifest file                          | Defines essential metadata          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 Flat file                              | For annotated assemblies            |
+|                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 0-1 AGP file                             | For scaffold instructions from      |
 |                    |                                          | contigs                             |
 +--------------------+------------------------------------------+-------------------------------------+
-| Chromosome         | 1 Manifest file                          |                                     |
+| Chromosome         | 1 Manifest file                          | Defines essential metadata          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 FASTA file                             | For unannotated assemblies          |
+|                    | 0-1 FASTA files                          | For unannotated assemblies          |
 |                    +------------------------------------------+-------------------------------------+
-|                    | 1 Flat file                              | For annotated assemblies            |
+|                    | 0-1 EMBL flat files                      | For annotated assemblies            |
 |                    +------------------------------------------+-------------------------------------+
 |                    | 1 Chromosome list file                   | Indicate which sequences represent  |
 |                    |                                          | which ‘chromosomes’                 |
@@ -96,6 +96,11 @@ As all assemblies in ENA are submitted as 'analyses', for each assembly submissi
 a unique accession number that starts with ERZ. For most assemblies, this accession number is for 
 internal processing only and will not be visible in the browser. As a result, for most 
 assemblies you will receive additional post-processing accession numbers starting with GCA\_.
+
+In alignment with INSDC partners, `SARS-CoV-2 assemblies <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html>`_ 
+will not be assigned a GCA\_ accession. 
+For these assemblies, sequence accessions will continue to be assigned and the ERZ records 
+will also be available in the browser to provide a point of access for the submitted file(s).
 
 Please see individual submission guidelines for information on what accessions you will receive for 
 each assembly type.

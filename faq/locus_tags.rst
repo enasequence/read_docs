@@ -56,7 +56,7 @@ How Do I Use Locus Tags?
   qualifier on repeat_region and misc_features.
 | You should include the qualifier in each component of a gene, and it should
   have the same value for all components of a single gene. The feature itself
-  should resemble:
+  should resemble the following in the format <prefix>_<id>:
 
 ::
 

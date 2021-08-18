@@ -85,7 +85,7 @@ Marker Sequence Checklists
 | ITS rDNA               | ERT000009    | | For ITS rDNA region. This checklist allows generic                         |
 |                        |              | | annotation of the ITS components (18S rRNA, ITS1,                          |
 |                        |              | | 5.8S rRNA, ITS2 and 28S rRNA). For annotation of the                       |
-|                        |              | |  rRNA component only, please use the rRNA gene checklist.                  |
+|                        |              | | rRNA component only, please use the rRNA gene checklist.                   |
 +------------------------+--------------+------------------------------------------------------------------------------+
 | trnK-matK locus        | ERT000032    | | For complete or partial matK gene within the                               |
 |                        |              | | chloroplast trnK gene intron.                                              |
@@ -107,7 +107,7 @@ Marker Sequence Checklists
 |                        |              | | is not possible with this checklist.                                       |
 +------------------------+--------------+------------------------------------------------------------------------------+
 | D-Loop                 | ERT000034    | | For mitochondrial D-loop (control region) sequences.                       |
-|                        |              | |  All D-loops are considered partial.                                       |
+|                        |              | | All D-loops are considered partial.                                        |
 +------------------------+--------------+------------------------------------------------------------------------------+
 | | Intergenic           | ERT000035    | | For intergenic spacer (IGS) sequences between                              |
 | | Spacer, IGS          |              | | neighbouring genes (e.g. psbA-trnH IGS, 16S-23S rRNA                       |

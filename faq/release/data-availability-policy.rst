@@ -25,7 +25,7 @@ these data.  These are described below.
 |                  |                                          | | follow the submission database's        |
 |                  |                                          | | guidelines on how to extend the release |
 |                  |                                          | | of their data. Alternatively, please    |
-|                  |                                          | | `contact ena`_ at least ten  working    |
+|                  |                                          | | `contact ENA`_ at least ten  working    |
 |                  |                                          | | days before the currently recorded      |
 |                  |                                          | | release date.                           |
 +------------------+------------------------------------------+-------------------------------------------+
@@ -68,4 +68,4 @@ these data.  These are described below.
 |                  | | with the submitting institution.       |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
 
-.. _`contact ena`: https://www.ebi.ac.uk/ena/browser/support
+.. _`contact ENA`: https://www.ebi.ac.uk/ena/browser/support

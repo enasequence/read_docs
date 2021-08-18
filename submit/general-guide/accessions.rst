@@ -21,13 +21,11 @@ for ENA, 'D' for DDBJ, or 'S' for NCBI.
 +---------------------------------+----------------------------------+--------------------+
 | **Accession Type**              | **Accession Format**             | **Example**        |
 +---------------------------------+----------------------------------+--------------------+
-| Projects                        | PRJ(E|D|N)[A-Z][0-9]+            | PRJEB12345         |
+| | Projects                      | | PRJ(E|D|N)[A-Z][0-9]+          | | PRJEB12345       |
+| | Studies                       | | (E|D|S)RP[0-9]{6,}             | | ERP123456        |
 +---------------------------------+----------------------------------+--------------------+
-| Studies                         | (E|D|S)RP[0-9]{6,}               | ERP123456          |
-+---------------------------------+----------------------------------+--------------------+
-| BioSamples                      | SAM(E|D|N)[A-Z]?[0-9]+           | SAMEA123456        |
-+---------------------------------+----------------------------------+--------------------+
-| Samples                         | (E|D|S)RS[0-9]{6,}               | ERS123456          |
+| | BioSamples                    | | SAM(E|D|N)[A-Z]?[0-9]+         | | SAMEA123456      |
+| | Samples                       | | (E|D|S)RS[0-9]{6,}             | | ERS123456        |
 +---------------------------------+----------------------------------+--------------------+
 | Experiments                     | (E|D|S)RX[0-9]{6,}               | ERX123456          |
 +---------------------------------+----------------------------------+--------------------+
@@ -47,6 +45,22 @@ for ENA, 'D' for DDBJ, or 'S' for NCBI.
 |                                 | | [A-Z]{3}[0-9]{7}\\.[0-9]+      | | ABC1234567.1     |
 +---------------------------------+----------------------------------+--------------------+
 
+For Project and Sample registration, you will receive two accessions for each submission: a Project
+and a Study as well as Samples and BioSamples.
+
+Every Project in ENA has a secondary Study accession. Before ENA was combined as a single archive,
+it was a separate archive for raw data (ERA which used the Study accession) and constructed assemblies/sequences
+(EMBL-Bank which used the Project accession). The Project and Study in ENA have since been merged and
+you may find the terms used interchangeably for both types of accession numbers, as both can be used to access the
+same data in the browser. To remain compatible with the other INSDC partners services
+which remain as separate archives for raw data/assemblies/sequences, we continue to provide both accessions
+on registration.
+
+All Samples registered with the ENA are mirrored within the EMBL-EBI
+`BioSamples <https://www.ebi.ac.uk/biosamples/>`_ service. This is why all samples registered with ENA
+receive a BioSamples accession as well as a standard ENA Sample accession. All ENA registered samples can be
+viewed within `BioSamples <https://www.ebi.ac.uk/biosamples/>`_ using their BioSamples accession.
+
 How to cite your ENA study
 ==========================
 
@@ -65,3 +79,6 @@ considered accessions that could be used for publication:
 - Assemblies
 - BioSamples (in the context of associated data)
 - Assembled/Annotated Sequences
+
+You can now claim your ENA studies to your ORCID ID. Please see 
+`here <https://www.ebi.ac.uk/ena/browser/about/citing-ena>`_ for more information.

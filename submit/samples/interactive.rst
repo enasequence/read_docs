@@ -7,10 +7,8 @@ assemblies and various types of interpreted data. Samples add context to the dat
 annotation makes your data more searchable.
 
 All samples must conform to a checklist of values which depend on the type of sample.
-The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/submit/webin/sample-checklist>`_.
-Here you can select a checklist, customise its values, and view the allowed input for each field.
-You can then download it in spreadsheet form and upload it as described in Step 1, below.
-However, if you prefer to fill in a web form to make your sample submission, please read the full article that follows.
+The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_.
+Here you can select a checklist, review its mandatory and optional fields, and understand its allowed values.
 
 There are three steps to registering your sample(s).
 
@@ -19,7 +17,8 @@ There are three steps to registering your sample(s).
 Step 1: Select A Sample Checklist
 =================================
 
-Please see `Interactive Submission Options`_ for how to access this form.
+To access this form, log in to `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and in the
+'New Submission' tab select the sample registration option.
 
 ENA provides sample checklists which define a set of mandatory and recommended attributes for different types of samples.
 By declaring that you would like to register your samples using a specific checklist you are enabling the samples to be

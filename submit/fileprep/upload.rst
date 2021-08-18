@@ -14,9 +14,9 @@ Please note that this is not necessary if you are using Webin-CLI, as it
 handles the upload process for you.
 
 All upload methods described below will require you to have registered a
-Webin account, the ID for which resembles 'Webin-XXXXX'. Register an account
-or reset your password at the `Webin login page
-<https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+Webin account, the ID for which resembles 'Webin-XXXXX'. Always enter this with
+an upper-case 'W'. Register an account or reset your password at the `Webin
+login page <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
 
 
 Keep Local Copies
@@ -42,12 +42,14 @@ password at the `Webin login page
 There are a number of ways to accomplish the upload, detailed below:
 
 - `Using Webin File Uploader`_
-- `General Instructions For Uploading Files Using FTP Client`_
-- `Using FTP Command Line Client On Linux/Mac`_
-- `Using FTP Command Line Client On Windows`_
+- `Uploading Files Using Command Line FTP Client`_
 - `Using FileZilla On Windows`_
 - `Using Aspera ascp Command Line Program`_
 - `Using Windows File Explorer`_
+
+If you have problems with using these services, you may find help in the appendix:
+
+- `Appendix: Configuring Your Firewall For ENA Upload`_
 
 
 Using Webin File Uploader
@@ -55,18 +57,25 @@ Using Webin File Uploader
 
 Files can be uploaded using the Webin File Uploader, a Java web start
 application downloadable from
-`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_:
+`Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/>`_ or the below link.
+To use this program, follow the below instructions in video or text form:
 
-.. image:: ../images/webin_file_upload_01.png
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://www.youtube.com/embed/LjYmhWWGnhM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+|
 
 1.  `Download the Webin File Uploader
     <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
 2.  Launch the application (Mac users please see further instructions below),
-3.  Enter your Webin username in the ``Username`` field.
+3.  Enter your Webin username in the ``Username`` field, ensuring the 'W' is
+    upper-case.
 4.  Enter your Webin password in the ``Password`` field.
 5.  Browse into the local ``Upload Directory`` containing the data files you
     wish to upload using the ``...`` button.
-6.  Click 'okay' to see he list of all the files contained in the selected
+6.  Click 'okay' to see the list of all the files contained in the selected
     directory displayed in the Webin File Uploader window
 7.  Choose ``Overwrite`` option if you wish to replace any existing files which
     have been previously uploaded.
@@ -78,8 +87,8 @@ application downloadable from
 10. Click on the ``Upload`` button.
 
 
-Instructions For Mac Users
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Additional Instructions For Mac Users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When downloading the application the following dialog box will be displayed:
 
@@ -116,19 +125,19 @@ Now select the ``Open`` button. This will launch the the Webin File Uploader
 application.
 
 
-General Instructions For Uploading Files Using FTP Client
----------------------------------------------------------
+Uploading Files Using Command Line FTP Client
+---------------------------------------------
 
-1. Use your favourite ftp client. For example, ``lftp`` is a popular choice for
-   linux and Mac users.
-2. Use ``binary mode`` for file transfers.
-3. Use ``webin2.ebi.ac.uk`` as the target host.
-4. ``Login`` with your Webin username and password.
-5. ``Upload`` files to your private Webin upload area.
+This section explains how to upload files to us using a command line FTP
+client in Linux or Mac.
+The built in FTP tool for Windows command line does not support FTPS so Windows
+users are recommended to use an alternative:
 
+- `Using Webin File Uploader`_
+- `Using FileZilla On Windows`_
 
-Using FTP Command Line Client On Linux/Mac
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The below instructions describe how you may upload your files to us through
+a command line FTP client in Linux or Mac.
 
 1. Open a terminal and type ``lftp webin2.ebi.ac.uk -u Webin-xxxxx``, filling in your Webin username
 2. Enter your password when prompted
@@ -136,22 +145,7 @@ Using FTP Command Line Client On Linux/Mac
 4. Use ``mput <filename>`` command to upload files.
 5. Use ``bye`` command to exit the ftp client.
 
-
-Using FTP Command Line Client On Windows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. Use FTP command line client on Windows
-2. Start the command line interpreter: press Win-R -> type `cmd` -> press Enter
-3. Type ``ftp``
-4. Type ``open webin.ebi.ac.uk``
-5. Enter the username and password associated with your Webin submission
-   account.
-6. Type ``bin`` to use binary mode.
-7. Type ``ls`` command to check the content of your drop box.
-8. Type ``prompt`` to switch off confirmation for each file uploaded.
-9. Use ``mput`` command to upload files.
-10. Use ``bye`` command to exit the ftp client.
-11. Use ``exit`` command to exit the command line interpreter.
+Note that in your Webin username, the 'W' should be upper case.
 
 
 Using FileZilla On Windows
@@ -164,23 +158,27 @@ graphical interface.
    If you are not administrator of your computer then download the portable
    version of FileZilla.
 2. Use the binary mode: ``Transfer menu -> Transfer Type -> Binary``.
-3. Use ``webin2.ebi.ac.uk`` as the host.
-4. Enter your Webin username and password.
-5. Click ``Quickconnect``.
-6. Search for the file(s) you want to upload using the tree on the left panel.
-7. Create directories in your drop box (if necessary) using the tree on the
+3. Open the 'Site Manager' menu with the button at the top-left
+4. Use the 'New Site' option
+5. Enter details to match those in the screenshot, adding your own Webin
+   username and password:
+
+.. image:: ../images/filezilla-site-manager-settings.png
+
+6. Click 'Connect'
+7. Search for the file(s) you want to upload using the tree on the left panel.
+8. Create directories in your drop box (if necessary) using the tree on the
    right panel.
-8. Drag and drop the files you want to upload from the lower left panel to the
+9. Drag and drop the files you want to upload from the lower left panel to the
    lower right panel.
-9. Once your transfer is successful, close the application.
+10. Once your transfer is successful, close the application.
 
 
 Using Aspera ascp Command Line Program
 --------------------------------------
 
 Aspera is a commercial file transfer protocol that may provide better transfer
-speeds than FTP over long distances. For short distance file transfers we
-recommend the use of FTP.
+speeds than FTP.
 
 Download Aspera CLI from
 `here <https://downloads.asperasoft.com/en/downloads/62>`_.
@@ -262,6 +260,25 @@ password and click ``Log on``
     :align: center
 
 
+Appendix: Configuring Your Firewall For ENA Upload
+--------------------------------------------------
+
+While most users should not encounter problems in this area, it may sometimes be necessary to configure your firewall
+to permit upload of data to ENA.
+Users attempting to connect from an institutional network may find that their IT services department has placed
+restrictions on their ability to connect to FTP services.
+This information could be useful in getting our service whitelisted.
+
+FTP is used in passive mode and connection will be opened to one of the below ports:
+
+- 40000
+- 50000
+
+Access to port **21** is required for the following IP address ( webin2.ebi.ac.uk ):
+
+- 193.62.193.143
+
+
 File MD5 Checksums Value
 ========================
 
@@ -317,3 +334,4 @@ small patches of few Terabytes or less and expect that volumes would not exceed
 10 Terabytes under normal circumstances. Unexpected heavy use of the data
 upload areas may have an impact on other Webin users and we are grateful for
 users' attention to this aspect of our fair use policy.
+

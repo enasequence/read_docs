@@ -80,6 +80,10 @@ where the `XMLTYPE` is one of the following POST parameters:
 - `DATASET` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dataset.xsd))
 - `PROJECT` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd))
 
+You can include multiple records of the same type in the same submission as part of a `SET`. For example, by grouping `SAMPLE` records in a `<SAMPLE_SET></SAMPLE_SET>`.
+
+The maximum allowed size of a submitted XML file is 15MB. If your XML exceeds this size, please split your records into smaller XMLs and submit them across multiple submissions.
+
 Below is an example of a sequence read data submission to the Webin test service:
 
 ```
@@ -266,80 +270,6 @@ Below is an example of a submission XML used to cancel objects:
     <ACTIONS>
         <ACTION>
             <CANCEL target="TODO: object accession number"/>
-        </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-```
-
-### Submission XML: suppress objects
-
-Public objects may be suppressed by some brokers.
-
-To suppress objects, you must use the `SUPPRESS` action in the submission XML.
-
-The `SUPPRESS` action should point to the object that is being suppressed. Please
-note that `SUPPRESS` action will be propagated from studies to all associated
-experiments and analyses, and from experiments to all associated runs.
-
-It is possible to temporarily suppress an object by providing a `HoldUntilDate`.
-
-Below is an example of a submission XML used to permanently suppress objects:
-
-```
-<SUBMISSION>
-    <ACTIONS>
-        <ACTION>
-            <SUPPRESS target="TODO: object accession number"/>
-        </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-```
-
-Below is an example of a submission XML used to temporarily suppress an object
-until 1st of January 2019 after which the object will become public again:
-
-```
-<SUBMISSION>
-    <ACTIONS>
-        <ACTION>
-            <SUPPRESS target="TODO: object accession number"" HoldUntilDate="2019-01-01"/>
-        </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-```
-
-### Submission XML: kill objects
-
-Public objects may be killed by some brokers.
-
-To kill objects, you must use the `KILL` action in the submission XML.
-
-The `KILL` action should point to the object that is being killed. Please note
-that `KILL` action will be propagated from studies to all associated experiments
-and analyses, and from experiments to all associated runs.
-
-It is possible to temporarily kill an object by providing a `HoldUntilDate`.
-
-Below is an example of a submission XML used to permanently kill objects:
-
-```
-<SUBMISSION>
-    <ACTIONS>
-        <ACTION>
-            <KILL target="TODO: object accession number"/>
-        </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-```
-
-Below is an example of a submission XML used to temporarily kill an object
-until 1st of January 2019 after which the object will become public again:
-
-```
-<SUBMISSION>
-    <ACTIONS>
-        <ACTION>
-            <KILL target="TODO: object accession number"" HoldUntilDate="2019-01-01"/>
         </ACTION>
     </ACTIONS>
 </SUBMISSION>

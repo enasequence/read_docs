@@ -1,5 +1,12 @@
 # Webin Submissions Portal
 
+---
+
+> **_NOTE:_**  The Webin Submissions Portal is currently undergoing a major overhaul. As a result, this
+> page is outdated. It will be rewritten soon to explain new functionality and appearance
+
+---
+
 Webin submissions portal is a simple interactive web interface which supports:
 
 * Submission of XML metadata objects

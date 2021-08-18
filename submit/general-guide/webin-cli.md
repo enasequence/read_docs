@@ -1,5 +1,6 @@
 # Webin-CLI Submission
 
+
 ## Introduction
 
 Submissions to ENA can be made using the interactive Webin submission service, programmatic Webin submission
@@ -12,10 +13,12 @@ do not need to pre-upload your files when using Webin-CLI.
 
 Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 
+Webin-CLI is available as a [Docker image](#run-the-program-using-the-docker-image) and as a Java jar file.
 
-## Download the Program
 
-You can download Webin-CLI from its GitHub repository. We recommend always using the latest version:
+## Download the program as a Java jar file
+
+You can download Webin-CLI Java jar file from its GitHub repository. We recommend always using the latest version:
 
 - [ **Latest Webin-CLI Version** ](https://github.com/enasequence/webin-cli/releases/latest)
 
@@ -27,15 +30,19 @@ You should have version 1.8 or newer installed, which can be downloaded from Jav
 
 - [ **Download Java** ](https://java.com/en/download/)
 
-Webin-CLI has been tested against Oracle Java 8 Runtime Environment (JRE) version 1.8.0_202 .
-You are recommended to use this version.
+Webin-CLI has been tested against openjdk version 1.8.0_212. You are recommended to use equivalent or later version.
+
+Download openapi JDKs from the below links:
+
+https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+
 Download Oracle JREs from the below links:
 
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 - [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
 
 
-## Using the Program
+## Run the program as a Java jar file
 
 The  Webin command line submission interface is a self-executing Java jar file and is
 run using the `java` command:
@@ -59,6 +66,7 @@ On Windows a backward slash is used instead of a forward slash:
 `java -jar Downloads\webin-cli-1.7.3.jar <options>`
 
 The command line `<options>` are explained below.
+
 
 ### Video Guide: Getting Started With Webin-CLI in Windows 10
 
@@ -113,7 +121,7 @@ The following picture illustrates the stages of the submission process:
 ![Submission process](../images/webin-cli_01.png)
 
 
-## Stage 1: Pre-register Study and Sample
+### Stage 1: Pre-register Study and Sample
 
 Each submission must be associated with a pre-registered study and a sample.
 
@@ -121,13 +129,13 @@ Each submission must be associated with a pre-registered study and a sample.
 - [Register a Sample](../samples.html)
 
 
-## Stage 2: Prepare the Files
+### Stage 2: Prepare the Files
 
 The set of files that are part of the submission must be specified using a manifest file.
 The manifest file is specified using the `-manifest <filename>` option.
 
 
-### Manifest File Format
+#### Manifest File Format
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
 - Field name (first column): case insensitive field name   
@@ -172,7 +180,7 @@ FASTA   genome.fasta.gz
 ```
 
 
-### Manifest File Types
+#### Manifest File Types
 
 Please refer to the more detailed documentation for supported file types for each submission.
 
@@ -194,7 +202,7 @@ The following formats are supported for [read submissions](../reads/webin-cli.ht
 - FASTQ: fastq file
 
 
-#### Info File (for backward compability only)
+##### Info File (for backward compability only)
 
 You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 
@@ -210,7 +218,7 @@ FASTA   genome.fasta.gz
 ```
 
 
-## Stage 3: Validate and Submit Files
+### Stage 3: Validate and Submit Files
 
 You can validate your files using the `-validate` command line option. Note that
 the `-submit` option must be used to submit the validated files.
@@ -273,6 +281,30 @@ in the following file:
 `<context>/<name>/validate/webin-cli.report`
 
 
+## Run the program using the Docker image
+
+Webin-CLI is available as the `enasequence/webin-cli` Docker image.
+
+You can run the Webin-CLI docker image using `docker`:
+
+`docker run enasequence/webin-cli`
+
+or using `singularity`:
+
+`singularity run docker://enasequence/webin-cli`
+
+The required command line options are explained below. Please remember to mount local directories containing the files to submit so that they available to the running container.
+
+
+## Configuring Your Firewall For ENA Upload
+
+Some users may encounter problems connecting to the ENA FTP service, a necessary step in Webin-CLI submission.
+A possible solution to this is to ensure that your firewall is configured appropriately to allow you to connect to this
+service:
+
+- [Configuring Your Firewall For ENA Upload](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#appendix-configuring-your-firewall-for-ena-upload)
+
+
 ## Proxy Servers
 
 If your organisation uses a https proxy you can set the following Java properties to instruct
@@ -297,6 +329,7 @@ For example:
 ```
 java -Dftp.proxyHost=proxy.com -Dftp.proxyPort=8080 -jar webin-cli-<version>.jar <options>
 ```
+
 
 ### Using Aspera Instead of FTP to Upload Files
 

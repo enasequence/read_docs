@@ -24,7 +24,7 @@ flat file or conversion from another format, please see our page on
 
 We have some pre-prepared flat file templates available for use with common
 submission types available too, please see
-`Entry Upload Templates <flat-file-example.html>`_.
+`Entry Upload Templates <sequence-flatfile.html>`_.
 
 ::
 

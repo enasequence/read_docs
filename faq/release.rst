@@ -6,17 +6,24 @@ How Is Data Release Managed?
 ------------------------------
 Data release is controlled from the level of study objects.
 When a study is made public, all samples, experiments, runs and analyses associated with it are also made public.
+For an explanation of these terms and their relationships, please read the `Metadata Model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html>`_ page.
 
 
 Can I Advance/Postpone The Release Date?
 -------------------------------------
-You can edit the release date of a study from within your Webin account:
+You can edit the release date of a study from within your Webin account.
+
+First, log into `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
 In the 'Studies' tab, find the study you wish to change and click the pencil icon adjacent to its current release date.
 You can move the date to be sooner or later as required.
+When making the date later, the new date cannot be more than 2 years beyond the current date.
 
 .. image:: images/release_p01.png
 
 When you are ready to release your study, you should do it by changing the release day to the current day.
+
+Once the release date has elapsed, it will no longer be possible for you to affect the publicity of your data.
+See further down the page for information on this.
 
 
 I Released My Study, Why Can't I Find It In The Public Database?
@@ -30,8 +37,11 @@ If after 48 hours your data remain confidential, please contact our `helpdesk <h
 
 Can I Make My Study Partially Available?
 ----------------------------------------
-Unfortunately, this is not a service we provide.
+Whether you wish to make only parts of your submission available, or wish to make your submission available only
+to select users, this is unfortunately not a service we provide.
+Our policy is that submissions should be available in whole, to all users.
 If you need evidence of your submission for reviewers, forward them the email confirming your successful submission.
+If there are parts of your study which for some reason you no logner wish to release, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
 I Need To Remove My Confidential Study
@@ -43,7 +53,9 @@ Please be very clear about which accessions should be removed, especially if you
 
 I Need To Remove My Public Study
 --------------------------------
-If your study is public and needs to be removed from public view on a permanent or temporary basis, you must contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ and provide an explanation of the issue, along with the accession(s) to be suppressed.
+If your study is public and needs to be removed from public view on a permanent or temporary basis, you must contact our
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ and provide an explanation of the issue, along with the
+accession(s) to be suppressed.
 A curator will assess the request and carry it out if deemed suitable.
 Information about circumstances in which suppression will be considered can be found in our `Data Availability Policy <release/data-availability-policy.html>`_.
 Please note that data that is made public for even a short time may be used by downstream services which we do not control.

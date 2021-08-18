@@ -46,16 +46,16 @@ Each child project is released independently and they each have their own hold d
 .. code-block:: xml
 
     <PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-        <PROJECT center_name="" alias="">
-            <TITLE></TITLE>
-            <DESCRIPTION></DESCRIPTION>
+        <PROJECT center_name="" alias="TODO:alias">
+            <TITLE>TODO:Title_text_here</TITLE>
+            <DESCRIPTION>TODO:Description_text_here</DESCRIPTION>
             <UMBRELLA_PROJECT/>
             <RELATED_PROJECTS>
               <RELATED_PROJECT>
-                <CHILD_PROJECT accession=""/>
+                <CHILD_PROJECT accession="TODO:child_accession"/>
               </RELATED_PROJECT>
               <RELATED_PROJECT>
-                <CHILD_PROJECT accession=""/>
+                <CHILD_PROJECT accession="TODO:child_accession"/>
               </RELATED_PROJECT>
             </RELATED_PROJECTS>
         </PROJECT>
@@ -63,13 +63,12 @@ Each child project is released independently and they each have their own hold d
 
 Edit umbrella.xml to contain the following information:
 
-- Centre name
 - Alias (a unique, informative name for your project)
 - Title
 - Description
 - Child project accessions
 
-You can add more child projects by inserting more <RELATED_PROJECT> blocks, or you can remove a block if you only wish to add one project at this time.
+You can add more child projects by inserting more <RELATED_PROJECT> blocks, or you can remove a block from this example if you only wish to add one project at this time.
 
 When you are satisfied with the changes you have made to umbrella.xml you should run the following command from the directory in which both XML files are located:
 
@@ -90,7 +89,7 @@ When you are satisfied with the changes you have made to umbrella.xml you should
 Adding Children To An Umbrella
 ==============================
 
-If you have already created an umbrella study and want to add child studies to it, create the following XML files.
+If you have already created an umbrella study and want to add a child study to it, create the following XML files.
 
 **update.xml:**
 
@@ -106,7 +105,28 @@ If you have already created an umbrella study and want to add child studies to i
 
 **umbrella_modified.xml:**
 
-The file umbrella_modified.xml should be a copy of the XML already in existence for your umbrella study, except that it contains additional <CHILD_PROJECT> blocks to specify the accessions to be added.
+.. code-block:: xml
+
+    <PROJECT_SET xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <PROJECT center_name="" alias="TODO:alias">
+            <TITLE>TODO:Title_text_here</TITLE>
+            <DESCRIPTION>TODO:Description_text_here</DESCRIPTION>
+            <UMBRELLA_PROJECT/>
+            <RELATED_PROJECTS>
+              <RELATED_PROJECT>
+                <CHILD_PROJECT accession="TODO:child_accession"/>
+              </RELATED_PROJECT>
+            </RELATED_PROJECTS>
+        </PROJECT>
+    </PROJECT_SET>
+
+The file umbrella_modified.xml should look very similar to the umbrella.xml used during registration. 
+The 'TITLE', DESCRIPTION' and 'alias' should be the same. 
+This time, the 'RELATED PROJECTS' block should be made up of any new projects you would like to add to the umbrella.
+For example, to add a single project to your umbrella, you should include a single <CHILD_PROJECT> block specifying the project to be added. 
+You do not need to include the full list of exisiting child projects when updating your umbrella project, you only need to include new projects to be added.
+
+Please note that projects can not be removed from an umbrella by modifying this XML and if you need to remove any projects from your umbrella, please `contact us <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 When you are satisfied with the updates to your umbrella project XML file, submit via curl:
 

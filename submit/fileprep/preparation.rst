@@ -125,7 +125,7 @@ Improperly compressed files and incorrect MD5 values are two of the most common
 errors encountered when processing submitted read files. Often, this happens
 because the file upload was incomplete. When this occurs, you are automatically
 notified by email. Guidance on fixing such errors is given in our `common run
-submission errors <../faq/runs.html>`_ page.
+submission errors <../../faq/runs.html>`_ page.
 
 
 Next Steps

@@ -111,7 +111,7 @@ With Casava 1.8 the format of the '@' line has changed and we accept this patter
 ### Oxford Nanopore
 
 Oxford Nanopore native data must be submitted as a single tar.gz
-archive containing basecalled fast5 files from Metrichor or Albacore.
+archive containing basecalled fast5 files from Guppy, Metrichor, or Albacore.
 
 For Metrichor, an example directory structure for run named XYZ:
 

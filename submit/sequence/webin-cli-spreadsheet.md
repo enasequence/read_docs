@@ -67,27 +67,27 @@ from the [Webin submission portal](../general-guide/submissions-portal.html):
 
 - Step 1: Expand the 'Download spreadsheet template for annotated sequences' option from the 'Submit' page.
 
-![Download sequence template spreadsheet step_1](../images/webin_submit_annotated_sequences_01.png)
+![](../images/webin_submit_annotated_sequences_01.png)
 
 - Step 2: Press the 'Start' button.
 
-![Download sequence template spreadsheet step_2](../images/webin_submit_annotated_sequences_02.png)
+![](../images/webin_submit_annotated_sequences_02.png)
 
 - Step 3: Select the most appropriate checklist group.
 
-![Download sequence template spreadsheet step_3](../images/webin_submit_annotated_sequences_03.png)
+![](../images/webin_submit_annotated_sequences_03.png)
 
 - Step 4: Select the most appropriate checklist.
 
-![Download sequence template spreadsheet step_4](../images/webin_submit_annotated_sequences_04.png)
+![](../images/webin_submit_annotated_sequences_04.png)
 
 - Step 5: Select the checklist fields and click 'Next' at the botton of the page.
 
-![Download sequence template spreadsheet step_5](../images/webin_submit_annotated_sequences_05.png)
+![](../images/webin_submit_annotated_sequences_05.png)
 
 - Step 6: Click 'Download' button to download the spreadsheet template.
 
-![Download sequence template spreadsheet step_6](../images/webin_submit_annotated_sequences_06.png)
+![](../images/webin_submit_annotated_sequences_06.png)
 
 
 ## Stage 3: Validate and submit the files
