@@ -105,7 +105,7 @@ The set of files that are part of the submission are specified using a manifest 
 The manifest file is specified using the ``-manifest <filename>`` option.
 
 The files required for submission of a genome assembly depends on the assembly level. Compared to more complex genomes
-which can be submitted as contigs, scaffolds or chromosomes, MAGs are usually only submitted at one of two levels::
+which can be submitted as contigs, scaffolds or chromosomes, SAGs are usually only submitted at one of two levels:
 
 - `Contig assembly`_
 - `Chromosome assembly`_
@@ -269,7 +269,7 @@ are described here.
 Sample And Study Validation
 ---------------------------
 
-- Sample and study (BioProject) pair must be unique for an assembly (except primary metagenomes)
+- Sample and study (BioProject) pair must be unique for an assembly
 - Sample taxonomic classification must be species rank or below (or equivalent) within NCBI taxonomy.
 
 Assembly name validation

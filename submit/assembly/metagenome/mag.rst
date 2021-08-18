@@ -306,7 +306,7 @@ are described here.
 Sample And Study Validation
 ---------------------------
 
-- Sample and study (BioProject) pair must be unique for an assembly (except primary metagenomes)
+- Sample and study (BioProject) pair must be unique for an assembly
 - Sample taxonomic classification must be species rank or below (or equivalent) within NCBI taxonomy.
 
 Assembly name validation
