@@ -143,46 +143,14 @@ To submit 10x Genomics data where read indexes exist, you must convert to BAM
 or CRAM format. The supported tags are defined in the [SAM Optional Fields Specification](http://samtools.github.io/hts-specs/SAMtags.pdf)
 
 
-## Formats being deprecated
-
-### Complete Genomics native format
-
-The full Complete Genomics data package can be submitted including the ASM, LIB and MAP
-subfolders. Each data package should be submitted as a single experiment and run. Please
-note the data package must not be tarred or gzipped for submission.
-
-### SRF format
-
-The *_seq.txt files can be converted into SRF files using the illumina2srf utility available
-from the DNA Sequence Read Toolkit.
-
-Each Illumina lane should be submitted as a separate SRF file and runs should be demultiplexed
-prior SRF file generation.
-
-To produce a SRF submission file for a non-paired lane, change the working directory to the run
-folder and run:
-
-```
-illumina2srf -R -P -N <run>:%l:%t: -n %x:%y -o <center_name>_<run>_<lane>.srf s_<lane>_*_seq.txt
- ```
-
-The -R, -P options are used to exclude intensity, noise and signal data from the generated SRF files.
-These data series are no longer supported for new data submissions.
-
-The recommended format for the SRF file names is <center_name>_<run>_<lane>.srf, where <center_name>
-is the center name abbreviation assigned to all submitters, and the <run> and <lane> are the run and
-the lane identifiers.
-
-To produce a SRF submission file for paired lane, change the working directory to the run folder and run:
-
-```
-illumina2srf -R -P -N <run>:%l:%t: -n %x:%y -2 <cycle> -o <center_name>_<run>_<lane>.srf s_<lane>_*_seq.txt
-```
-
 ## Deprecated formats
 
 Read submissions are no longer accepted in the following formats:
 
+- SOLiD native format (support ended in 2010)
+- Illumina native format (support ended in 2010)
 - SOLiD csfasta/qual format (support ended in 2015)
 - Illumina qseq format (support ended in 2015)
 - Illumina scarf format (support ended in 2015)
+- SRF format (deprecated in 2015)
+- Complete Genomics native format (deprecated in 2021)
