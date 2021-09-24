@@ -43,12 +43,14 @@ These are described below, ranked from low to high, based on how much
 computational ability might be required:
 
 - `Using ENA Browser`_
-- `Using ENA FTP Downloader`_
+- `Using ENA File Downloader Command Line Tool`_
+- `Using ENA FTP Downloader GUI tool`_
 - `Using Globus`_
 - `Using enaBrowserTools`_
 - `Using wget`_
 - `Using FTP Client`_
 - `Using Aspera`_
+
 
 
 .. note::
@@ -76,20 +78,31 @@ links.
 For more information on how to explore a record in ENA, please visit our guide
 on `How to Explore an ENA Project <./ena-project.html>`_
 
-Using ENA FTP Downloader
-------------------------
+Using ENA File Downloader Command Line Tool
+---------------------------------------------
+The ENA File Downloader is a new Java based command line application. You can to
+submit one or more comma separated accessions, or a file with accessions that you
+want to download data for. This tool allows downloading of read and analysis files,
+ using FTP or Aspera. It has an easy to use interactive interface and can also create
+a script which can be run programatically or integrated with pipelines.
 
-The ENA FTP File Downloader is an application you can download from
+Download the latest version from
+`ENA Tools <http://ftp.ebi.ac.uk/pub/databases/ena/tools/ena-file-downloader.zip>`_.
+
+Using ENA FTP Downloader GUI Tool
+---------------------------------
+
+The ENA FTP Downloader is a Java GUI application you can download from
 `GitHub <https://github.com/enasequence/ena-ftp-downloader/releases>`_.
-Given an accession, this program will present a list of associated files you
+Given an accession, this program will present a list of associated read or analysis files you
 can download.
-Alternatively, you can provide a query from our Advanced Search API or Portal
-API to perform a bulk download of all files for a given set of criteria.
+Alternatively, you can provide a file report generated from our Advanced Search API (ENA Portal
+API) to perform a bulk download of all files for a given set of criteria.
 Learn more about these APIs from our guide on `How to Access ENA
 Programmatically <./programmatic-access.html>`_.
 
-Using *Globus*
---------------
+Using Globus
+------------
 
 Globus provides a more user-friendly, feature-rich directory interface for
 interacting with the FTP server.
@@ -100,8 +113,8 @@ endpoint from the '/gridftp/ena' subfolder:
 
 .. _`Globus`: https://app.globus.org/file-manager?origin_id=fd9c190c-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
 
-Using *enaBrowserTools*
------------------------
+Using enaBrowserTools
+---------------------
 
 enaBrowserTools is a set of Python-based utilities which can be found `here
 <https://github.com/enasequence/enaBrowserTools/releases>`_.
@@ -110,8 +123,8 @@ commands with the option to create more complex commands.
 Read more about this page in the `enaBrowserTools Guide
 <./programmatic-access/browser-tools.html>`_.
 
-Using *wget*
-------------
+Using wget
+----------
 
 *wget* is a simple command line tool, ubiquitously available in Linux and Mac
 releases.
@@ -144,7 +157,7 @@ Then, the 'get' command is used to specify the file of interest.
 At any time, you can use 'ls' to view the content of the current directory.
 The command 'pwd' can be used to identify what the current directory is.
 
-Using *Aspera*
+Using Aspera
 --------------
 
 Aspera ascp command line client can be downloaded from `Aspera
@@ -160,22 +173,12 @@ platforms.
 
 Following are some examples of how Aspera may be used to download ENA data:
 
-Unix
-^^^^
+Unix/Linux/Mac
+^^^^^^^^^^^^^^
 
 ::
 
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh \
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz \
-    local/target/directory
-
-
-Mac OSX
-^^^^^^^
-
-::
-
-    ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh \
     era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz \
     local/target/directory
 
@@ -210,10 +213,11 @@ Downloading Assembled and Annotated Sequence Data
 
 Files in public FTP folders can also be downloaded using Aspera.
 
-e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy/WYAA01.dat.gz
+e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wya/WYAA01.dat.gz
 
 ::
 
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
-    fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wy/WYAA01.dat.gz local/target/directory
+    fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wya/WYAA01.dat.gz local/target/directory
+
 
