@@ -83,7 +83,7 @@ Using ENA File Downloader Command Line Tool
 The ENA File Downloader is a new Java based command line application. You can to
 submit one or more comma separated accessions, or a file with accessions that you
 want to download data for. This tool allows downloading of read and analysis files,
- using FTP or Aspera. It has an easy to use interactive interface and can also create
+using FTP or Aspera. It has an easy to use interactive interface and can also create
 a script which can be run programatically or integrated with pipelines.
 
 Download the latest version from
