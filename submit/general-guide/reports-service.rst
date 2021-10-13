@@ -16,7 +16,7 @@ The service can be used to retrieve information about:
 - Analysis processing statuses
 - Assigned accessions
 
-The reports can also be conveniently explored using the `Webin Submissions Portal <submissions-portal.html>`_.
+The reports can also be conveniently explored using the `Webin Portal <submissions-portal.html>`_.
 
 
 Service URL
