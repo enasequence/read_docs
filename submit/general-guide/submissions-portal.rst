@@ -1,9 +1,9 @@
 ================================
-Webin Submissions Portal Reports
+Webin Portal Reports
 ================================
 
 
-The `Webin Submissions Portal (WSP) <https://www.ebi.ac.uk/ena/submit/webin/>`_ is ENA's convenient interface for
+The `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ is ENA's convenient interface for
 creating and reviewing submissions.
 This guide discusses it from the perspective of a user who wishes to review the content and status of their
 existing submissions.
