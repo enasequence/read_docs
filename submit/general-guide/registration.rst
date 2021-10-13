@@ -4,7 +4,7 @@ Register a Submission Account
 
 Before you can submit data to ENA you must register a Webin submission account.
 
-To do so, please navigate to the `Webin Submissions Portal (WSP) <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and
+To do so, please navigate to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and
 click the 'Register' button.
 You will be presented with the below interface:
 
