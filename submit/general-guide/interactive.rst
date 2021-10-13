@@ -7,7 +7,7 @@ Introduction
 ============
 
 
-This guide will introduce you to the Webin Submissions Portal (WSP) service, which allows you to submit data to ENA
+This guide will introduce you to the Webin Portal service, which allows you to submit data to ENA
 interactively through an ordinary web browser.
 
 
