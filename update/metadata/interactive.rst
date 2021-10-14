@@ -3,7 +3,7 @@ Updating Studies, Samples, Experiments and Runs Interactively
 =============================================================
 
 
-The `Webin Submissions Portal (WSP) <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
+The `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
 submitted objects.
 Access these existing objects by clicking the relevant tab after logging in to
 `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
@@ -33,7 +33,7 @@ Study Edits
 Some parts of the study object can be edited.
 These include the release date, title, description and publication references.
 
-1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Studies Report' button to be
+1. Log in to `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Studies Report' button to be
    presented with the below interface:
 
 .. image:: ../images/wsp_meta_update_01_study_edit_list.png
@@ -60,7 +60,7 @@ Sample Edits
 ============
 
 
-1. Log in to `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
+1. Log in to `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
    presented with a list of your registered samples:
 2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
 3. Your sample will be shown as an XML document which you can edit directly:
@@ -81,7 +81,7 @@ Experiment And Run Edits
 ========================
 
 
-In `WSP <https://www.ebi.ac.uk/ena/submit/webin/login>`_ experiments and runs are both listed in the 'Runs Report' page,
+In `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ experiments and runs are both listed in the 'Runs Report' page,
 where matched pairs of experiments and runs share a row in the table.
 Note that their are separate 'Edit' buttons for the two object types:
 
