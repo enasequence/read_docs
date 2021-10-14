@@ -79,7 +79,7 @@ You can always review your sample submissions within the interactive submission 
 Submission Options
 ==================
 
-Samples can be submitted one of two ways, using the Webin Submissions Portal interface or the programmatic interface.
+Samples can be submitted one of two ways, using the Webin Portal interface or the programmatic interface.
 For an overview of these, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 Find specific advice on registering studies using your preferred method below:
 
