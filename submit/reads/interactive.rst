@@ -9,21 +9,21 @@ Experiments are linked with one sample and one study, as shown in the metadata m
 .. image:: ../images/metadata_model_reads.png
    :align: center
 
-Before you register the run and experiment objects through the Webin Submissions Portal (WSP), you should have completed
+Before you register the run and experiment objects through the Webin Portal, you should have completed
 the following steps:
 
 - `Register a study <../study/interactive.html>`_
 - `Register a sample <../samples/interactive.html>`_
 - `Upload your read files <../fileprep/upload.html>`_
 
-To start your read submission, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin>`_.
+To start your read submission, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_.
 You will need to complete three steps, described below:
 
 1. Select and customise a read submission template spreadsheet
 2. Fill out the template spreadsheet
 3. Validate and submit the template spreadsheet
 
-If you are unsure, you are welcomed and encouraged to test out your submission through the Webin Submissions Portal
+If you are unsure, you are welcomed and encouraged to test out your submission through the Webin Portal
 `test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/>`_.
 All submissions to the test version are overwritten within 24 hours, so your submissions here are consequence-free.
 To be sure that you are in the test environment, always check for the 'wwwdev' URL.
@@ -35,7 +35,7 @@ Step 1: Select A Read Spreadsheet
 =================================
 
 
-To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
+To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
 'Submit Reads' button.
 
 1. Expand the 'Download spreadsheet template for Read submission' section by clicking it
@@ -91,7 +91,7 @@ Step 3: Submit The Template Spreadsheet
 =======================================
 
 
-Return to the 'Submit Reads' interface in `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_.
+Return to the 'Submit Reads' interface in `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_.
 This time, expand the 'Upload filled spreadsheet template for Read submission' section.
 
 Select the 'Browse' option or click-and-drag the file onto this section.
@@ -108,7 +108,7 @@ experiment and run accessions.
 Your submitted data files will then be entered into a processing pipeline which will check their validity before moving
 them to an archive.
 If there are file errors, these will be reported to account holders by the registered email address(es).
-You can always check the processing status of your submissions via the run reports available in WSP.
+You can always check the processing status of your submissions via the run reports available in Webin Portal.
 
-See `Webin Submissions Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+See `Webin Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
 about these submissions.
