@@ -15,7 +15,7 @@ Production and Test Services
 ============================
 
 
-There are two WSP services: one for test submissions and another for production (real) submissions.
+There are two Webin Portal services: one for test submissions and another for production (real) submissions.
 The test service allows you to trial the interface in a consequence-free manner.
 The test service is recreated from the full content of the production service every day at 03.00 GMT/BST.
 Therefore, any submissions made to the test service will be removed by the following day.
@@ -27,13 +27,13 @@ We advise and encourage that you trial your submissions using the Webin test ser
 service.
 
 
-What Can Be Submitted Through WSP?
+What Can Be Submitted Through Webin Portal?
 ==================================
 
 
-Some submissions can be done entirely through WSP, for example you could submit a study comprising only read data
+Some submissions can be done entirely through Webin Portal, for example you could submit a study comprising only read data
 without needing to use any of the other submission interfaces.
-However Some types of submission cannot be completed via WSP and must be done through our other submission routes.
+However Some types of submission cannot be completed via Webin Portal and must be done through our other submission routes.
 Usually, this is because some submission types are limited to our Webin-CLI tool, which has extensive pre-submission
 data validation capability built in and is able to flag up errors in your data before you submit it.
 Because of this, Webin-CLI is recommended for all circumstances in which it is an option.
