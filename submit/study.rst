@@ -38,7 +38,7 @@ of your submissions to ENA.
 Submission Options
 ==================
 
-Studies can be submitted one of two ways, using the Webin Submissions Portal interface or the programmatic interface.
+Studies can be submitted one of two ways, using the Webin Portal interface or the programmatic interface.
 For a general overview of these interfaces, please see the `General Guide on Submitting to ENA <general-guide.html>`_.
 Find specific advice on registering studies using your preferred method below:
 
