@@ -22,7 +22,7 @@ If in doubt, feel free to `contact the helpdesk <https://www.ebi.ac.uk/ena/brows
 Step 1: Acquire A Template Spreadsheet
 ======================================
 
-To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
+To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
 'Generate Annotated Sequence Spreadsheet' button.
 
 1. You will be presented with a set of checklist groups: select the appropriate one for your submission, by reference to
