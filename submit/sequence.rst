@@ -54,7 +54,7 @@ be unique to one of your sequences.
 
 Always make a note of any accessions you receive as these are the unique identifiers for each of your submissions to
 ENA.
-You can use the ERZ accession to retrieve the assigned sequence accessions from the `Webin Submissions Portal
+You can use the ERZ accession to retrieve the assigned sequence accessions from the `Webin Portal
 </general-guide/webin-cli.html>`_ or the `Webin Reports Service </general-guide/reports-service.html>`_.
 
 
@@ -182,5 +182,5 @@ After your sequences have been processed, you will be sent the assigned sequence
 files by email.
 Refer to the `Accessions`_ section above for an explanation of these.
 
-See `Webin Submissions Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+See `Webin Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
 about these submissions.
