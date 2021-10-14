@@ -248,7 +248,7 @@ Appendix: Correcting An MD5 Value
 If the MD5 value registered for your read file is incorrect, you can supply a corrected version.
 To do this:
 
-1. Log into the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_
+1. Log into the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_
 2. Go to the 'Run Files Report'
 3. Enter the erroneous run accession into the search field
 4. Identify the run, then select its 'Action' box and choose 'Edit run XML'
