@@ -18,7 +18,7 @@ the process of submitting your data:
   maximum control of the process.
 - **Programmatic Submissions** are completed by preparing your submissions as
   XML documents and either sending them to ENA using a program such as cURL or using 
-  the `Webin Submissions Portal <general-guide/submissions-portal.html>`_.
+  the `Webin Portal <general-guide/submissions-portal.html>`_.
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
