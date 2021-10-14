@@ -56,7 +56,7 @@ Using Webin File Uploader
 -------------------------
 
 Files can be uploaded using the Webin File Uploader, a Java web start application downloadable from
-`Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ or the below link.
+`Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ or the below link.
 To use this program, follow the below instructions in video or text format:
 
 .. raw:: html
