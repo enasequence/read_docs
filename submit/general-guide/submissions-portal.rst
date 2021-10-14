@@ -11,12 +11,12 @@ For advice on how to create submissions, please visit the general guide to `Inte
 This page does not deal with updating your submissions, please see
 `Interactive Metadata Update <../../update/metadata/interactive.html>`_ for advice on this.
 
-To access WSP, visit the link and log in with your standard Webin credentials (or create an account if you don't
+To access Webin Portal, visit the link and log in with your standard Webin credentials (or create an account if you don't
 already have one): https://www.ebi.ac.uk/ena/submit/webin/
 
 .. image:: ../images/wsp_reports_1_login.png
 
-WSP has a range of functionalities, listed below.
+Webin Portal has a range of functionalities, listed below.
 Those which are covered in this article are bolded:
 
 - Submission of XML metadata objects
@@ -46,7 +46,7 @@ Metadata reports are available for:
 - Reads (Experiments and Runs)
 - Analyses
 
-From the `WSP <https://www.ebi.ac.uk/ena/submit/webin/>`_ dashboard, find the section for the type of object you wish
+From the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ dashboard, find the section for the type of object you wish
 to review.
 The below image shows the reports view for samples.
 The interface is similar in look and functionality for all data types, but will vary in what attributes are shown.
@@ -72,7 +72,7 @@ When submitting data to ENA, it is often necessary to upload the data files in a
 Your account comes with its own FTP area for this reason.
 See `Preparing Files for Submission <../fileprep.html>`_ for information on this.
 
-You can  review the content of your directory through `WSP <https://www.ebi.ac.uk/ena/submit/webin/>`_ Unsubmitted
+You can  review the content of your directory through `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ Unsubmitted
 Files Report.
 Access this from the dashboard, under the 'Raw Reads' section:
 
@@ -89,9 +89,9 @@ Submitted Runs and Analyses
 ---------------------------
 
 For analyses and runs there are reports available on archival of their associated submitted files.
-Access these in `WSP <https://www.ebi.ac.uk/ena/submit/webin/>`_.
+Access these in `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_.
 These are the only two object types which have data files associated with them rather than just metadata.
-These can be accessed from the WSP dashboard, look for the buttons named:
+These can be accessed from the Webin Portal dashboard, look for the buttons named:
 
 - Run Files Report
 - Analysis Files Report
@@ -122,7 +122,7 @@ Processing Reports
 
 
 Reports on the post-archival processing of files submitted with runs and analyses are available through
-`WSP <https://www.ebi.ac.uk/ena/submit/webin/>`_.
+`Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_.
 From the dashboard, look for the buttons named:
 
 - Run Processing Report
