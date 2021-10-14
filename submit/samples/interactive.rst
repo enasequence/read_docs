@@ -9,14 +9,14 @@ Samples add context to the data associated with them, making your data more sear
 All samples must conform to a checklist of values which depend on the type of sample.
 The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
-There are three steps to registering your sample(s) through the Webin Submission Portal:
+There are three steps to registering your sample(s) through the Webin Portal:
 
 1. Select and customise a sample checklist
 2. Fill out a template spreadsheet
 3. Validate and submit the template spreadsheet
 
 If you are unsure, you can always try this process out consequence-free using the
-Webin Submissions Portal `test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/login>`_.
+Webin Portal `test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/login>`_.
 
 
 .. _Step 1:
@@ -25,7 +25,7 @@ Step 1: Select A Sample Checklist
 =================================
 
 
-To begin, log in to the `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
+To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
 'Register Samples' button.
 
 1. Click 'Download spreadsheet to register samples' to expand the checklist selection menu
@@ -75,7 +75,7 @@ Step 3: Validate And Submit Spreadsheet
 =======================================
 
 
-Return to the 'Register Samples' interface in `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_
+Return to the 'Register Samples' interface in `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_
 and this time expand the 'Upload filled spreadsheet to register samples' option.
 Use the 'Browse' button to find the spreadsheet you wish to submit, then click the 'Submit Completed Spreadsheet'
 button.
@@ -88,5 +88,5 @@ If there are errors with the information you have entered, these will be reporte
 Note that at this point you have not submitted any data, but you have laid the groundwork for this by providing sample
 metadata.
 
-See `Webin Submissions Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+See `Webin Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
 about these submissions.
