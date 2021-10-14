@@ -112,9 +112,9 @@ Always make a note of any accessions you receive as these are the unique identif
 your submissions to ENA.
 
 The ERZ accession can be used to access information on the progress of the internal processing of each assembly through
-the `Webin Submissions Portal (WSP) <general-guide/submissions-portal.html>`_.
+the `Webin Portal <general-guide/submissions-portal.html>`_.
 You can also use this service to see the assigned chromosome, contig, and scaffold accessions.
-Please follow the WSP link to learn more about this.
+Please follow the Webin Portal link to learn more about this.
 See individual submission guidelines for information on what accessions you will receive for
 each assembly type.
 
