@@ -24,7 +24,7 @@ the sequenced organism from another.
 For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
 together under the same genus name.
 
-When registering your samples using the interactive `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin>`_
+When registering your samples using the interactive `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_
 you will need to enter a valid species rank taxon in your template spreadsheet.
 
 Programmatic submitters will apply the taxonomic information to the sample object using the sample_name block:
