@@ -4,7 +4,7 @@ Register a Study Interactively
 
 To submit data into ENA you must first register a study to contain and manage it.
 Studies (also referred to as projects) can be registered through the
-`Webin Submissions Portal <../general-guide/interactive.html>`_.
+`Webin Portal <../general-guide/interactive.html>`_.
 Log in with your Webin credentials and select the 'Register Study' button to bring up the below interface:
 
 .. image:: ../images/wsp_study_registration.png
