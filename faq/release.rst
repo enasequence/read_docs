@@ -17,7 +17,7 @@ Can I Advance/Postpone The Release Date?
 You can edit the release date of a study from within your Webin account, provided it is confidential and has never been
 public.
 
-First, log into `Webin Submissions Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_.
+First, log into `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_.
 Click the 'Studies Report' button and find the study you wish to change the release date for.
 Use the pencil icon next to the study to bring up a dialog which will allow you to set a new release date.
 You can move the date to be sooner or later as required.
