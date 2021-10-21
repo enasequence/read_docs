@@ -244,7 +244,7 @@ returned to the submitter by the Webin command line submission interface (Webin-
 ERZ accessions **should not** be used to reference the assembly in publications.
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin
 submission service. For example, the submitter can retrieve the assigned genome assembly and sequence accessions from
-the `Webin submissions portal <../../general-guide/submissions-portal.html>`_ or from the `Webin reports service
+the `Webin Portal <../../general-guide/submissions-portal.html>`_ or from the `Webin reports service
 <../../general-guide/reports-service.html>`_ using the ERZ accession number.
 This accession should be used to refer to the assembly in any conversations with helpdesk staff.
 
@@ -256,7 +256,7 @@ For Environmental Single-cell Amplified Genome assemblies, long term stable acce
 - Sequence accession(s) assigned once the assembly has been fully processed by ENA.
 
 Submitters can retrieve the genome and sequence accession numbers from the
-`Webin submissions portal <../general-guide/submissions-portal.html>`_ or from the
+`Webin Portal <../general-guide/submissions-portal.html>`_ or from the
 `Webin reports service <../general-guide/reports-service.html>`_.
 These accession numbers are also sent to the submitters by e-mail.
 

@@ -197,7 +197,7 @@ The submission XML declares one or more Webin submission service actions. See th
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can then be submitted programmatically, using CURL on command line or
-using the [Webin submissions portal](../general-guide/submissions-portal.html).
+using the [Webin Portal](../general-guide/submissions-portal.html).
 
 ## Step 3: Submit the XMLs
 
@@ -227,10 +227,10 @@ After running the command above a receipt XML is returned. It will look like the
 </RECEIPT>
 ```
 
-### Submit the XMLs Using Webin submissions portal
+### Submit the XMLs Using Webin Portal
 
-XMLs can also be submitted interactively using the [Webin submissions portal](../general-guide/submissions-portal.html).
-Please refer to the [Webin submissions portal](../general-guide/submissions-portal.html) document for an example how
+XMLs can also be submitted interactively using the [Webin Portal](../general-guide/submissions-portal.html).
+Please refer to the [Webin Portal](../general-guide/submissions-portal.html) document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ### The Receipt XML
@@ -263,5 +263,5 @@ but this time using the production service. Simply change the part in the URL fr
 curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
-Similarly, if you are using the [Webin submissions portal](../general-guide/submissions-portal.html) change the URL from
+Similarly, if you are using the [Webin Portal](../general-guide/submissions-portal.html) change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.

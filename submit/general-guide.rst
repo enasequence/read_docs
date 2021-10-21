@@ -1,5 +1,5 @@
 ====================================
-General Guide on ENA Data Submission
+General Guide On ENA Data Submission
 ====================================
 
 Welcome to the general guide for the European Nucleotide Archive submission.
@@ -18,7 +18,7 @@ the process of submitting your data:
   maximum control of the process.
 - **Programmatic Submissions** are completed by preparing your submissions as
   XML documents and either sending them to ENA using a program such as cURL or using 
-  the `Webin Submissions Portal <general-guide/submissions-portal.html>`_.
+  the `Webin Portal <general-guide/submissions-portal.html>`_.
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
@@ -32,19 +32,16 @@ It is also recommended that you familiarise yourself with our `metadata model
 +------------------------+-------------+-----------+--------------+
 | Sample                 |      Y      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
-| Read data              |      Y      |     Y*    |       Y      |
+| Read data              |      Y      |     Y     |       Y      |
 +------------------------+-------------+-----------+--------------+
 | Genome Assembly        |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Transcriptome Assembly |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
-| Template Sequence      |      Y      |     Y     |       N      |
+| Template Sequence      |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Other Analyses         |      N      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
-
-\* Webin-CLI accepts read submission in FASTQ, BAM, or CRAM format.
-For other formats use either of the other submission routes.
 
 Before submitting to ENA it is important to familiarise yourself with
 the different options available for data submission. This general guide
@@ -52,8 +49,9 @@ will get you started in understanding how data can be submitted to ENA
 and how to keep track of the progress of your submission.
 
 
-Getting started
+Getting Started
 ===============
+
 
 .. toctree::
    :maxdepth: 1
@@ -63,8 +61,9 @@ Getting started
    general-guide/accessions
 
 
-Submission services
+Submission Services
 ===================
+
 
 .. toctree::
    :maxdepth: 1
@@ -74,8 +73,9 @@ Submission services
    general-guide/webin-cli
 
 
-Additional Services
-===================
+Submission Reports Services
+===========================
+
 
 .. toctree::
    :maxdepth: 1
