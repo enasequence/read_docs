@@ -6,7 +6,7 @@ Updating Studies, Samples, Experiments and Runs Interactively
 The `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
 submitted objects.
 Access these existing objects by clicking the relevant tab after logging in to
-`Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+`Webin <https://www.ebi.ac.uk/ena/submit/webin/login>`_.
 
 Note that under no circumstances can an object's own accession or alias attribute be edited.
 The names of submitted files are also not editable, though the associated MD5 value can be updated.
