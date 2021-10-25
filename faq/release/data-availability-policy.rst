@@ -6,8 +6,8 @@ While the INSDC databases hold public data, there are several levels of data ava
 these data.  These are described below.
 
 +------------------+------------------------------------------+-------------------------------------------+
-| **Status name**  | **Causes**                               | **Implications**                          |
-+------------------+------------------------------------------+-------------------------------------------+
+|   Status name    |   Causes                                 |   Implications                            |
++==================+==========================================+===========================================+
 | **Public**       | | Data are submitted with no request for | Data are fully available.                 |
 |                  | | confidential hold prior to publication |                                           |
 |                  | | or have reached an owner-agreed public |                                           |
@@ -25,14 +25,14 @@ these data.  These are described below.
 |                  |                                          | | follow the submission database's        |
 |                  |                                          | | guidelines on how to extend the release |
 |                  |                                          | | of their data. Alternatively, please    |
-|                  |                                          | | `contact ENA`_ at least ten  working    |
+|                  |                                          | | `contact ENA`_ at least ten working    |
 |                  |                                          | | days before the currently recorded      |
 |                  |                                          | | release date.                           |
 +------------------+------------------------------------------+-------------------------------------------+
 | **Suppressed**   | | (1) Data are found by the owner to be  | | Data are removed where possible from    |
 |                  | | incorrectly annotated or contaminated  | | direct search tools (such as text and   |
 |                  | | with no immediate opportunity on the   | | sequence similarity search) but remain  |
-|                  | | part of the owner to be updated.       | | available by accession number           |
+|                  | | part of the owner to be updated.       | | available by accession number.          |
 |                  | | (2) Data owners realise after          |                                           |
 |                  | | sequences have been released that they |                                           |
 |                  | | failed to request a confidential       |                                           |

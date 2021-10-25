@@ -143,7 +143,7 @@ the submitter by the Webin command line submission interface (Webin-CLI).
 ERZ accessions **should not** be used to reference the assembly in publications.
 The purpose of the ERZ accession number is for the submitter to be able to refer to their submission within the Webin
 submission service. For example, the submitter can retrieve the assigned sequence accessions from
-the `Webin submissions portal <../general-guide/submissions-portal.html>`_ or from the `Webin reports service
+the `Webin Portal <../general-guide/submissions-portal.html>`_ or from the `Webin reports service
 <../general-guide/reports-service.html>`_ using the ERZ accession number.
 Sequence accessions are sent to the user by email once the TSA has completed processing.
 The ERZ accession should be used to refer to the assembly in any conversations with helpdesk staff.

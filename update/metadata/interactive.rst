@@ -2,10 +2,14 @@
 Updating Studies, Samples, Experiments and Runs Interactively
 =============================================================
 
-The interactive submission interface supports some editing of your submitted objects.
-Access these existing objects by clicking the relevant tab after logging in to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
+
+The `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
+submitted objects.
+Access these existing objects by clicking the relevant tab after logging in to
+`Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_.
 
 Note that under no circumstances can an object's own accession or alias attribute be edited.
+The names of submitted files are also not editable, though the associated MD5 value can be updated.
 
 When editing the XML version of an object, you should in general leave the element tags unchanged.
 These are the capitalised words enclosed in '<>'.
@@ -15,6 +19,8 @@ For example, in the below XML snippet you should leave the words 'ELEMENT' uncha
 
     <ELEMENT>value</ELEMENT>
 
+For samples, there may sometimes be good reason to add, remove, or edit the element names.
+
 - 1: `Study Edits`_
 - 2: `Sample Edits`_
 - 3: `Experiment And Run Edits`_
@@ -23,61 +29,65 @@ For example, in the below XML snippet you should leave the words 'ELEMENT' uncha
 Study Edits
 ===========
 
+
 Some parts of the study object can be edited.
 These include the release date, title, description and publication references.
 
-.. image:: ../images/mod_05_p03.png
+1. Log in to `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Studies Report' button to be
+   presented with the below interface:
 
-1. Login to `Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and find the studies tab.
-2. Find the study in the list, or search for it by its accession.
-3. If your study is confidential you can change the release date by clicking on the pencil icon and navigating to the required date in the calendar.
-   To release the study simply select the current date/present day and set the following processes in motion:
+.. image:: ../images/wsp_meta_update_01_study_edit_list.png
 
-	- Moving relevant sequence data files to a public archive.
-	- Indexing and rendering the study and its objects so that they can be linked-to and visualised in the ENA browser.
-	- Mirroring to INSDC databases, who will then make the data available through their services.
+2. Find the study you wish to edit in the list, or search for it by accession/name
+3. If your study is confidential, you can change the release date by clicking the pencil icon and navigating to the
+   required date in the calendar. Read more on this in our `Data Release Policies FAQ <../../faq/release.html>`_
+4. For edits other than changing the release date, click the Action button and then the 'Edit study (project)' option
+   for a graphical interface or the 'Edit study (project) XML' option to work in XML format
 
-   Please allow up to 48 hours for newly released data to appear in the public database.
-   Read more about this in our `Data Release Policies FAQ <../../faq/release.html>`_
+.. image:: ../images/wsp_meta_update_02_study_edit_interface.png
 
-4. For edits besides changing the release date, click the 'Edit' button.
-
-.. image:: ../images/mod_05_p04.png
-
-5. The short name for the study will be visible in search outputs and overview pages whereas the descriptive title and abstract will be presented in the study's public page.
-6. You can add the PMID of any papers related to your data.
-   There will then be a link to the paper from your study's public page.
-7. Study attributes are optional tag-value pairs you can specify to add extra information or to make your study more searchable.
-   For example, you could add a 'DOI' tag with your paper's DOI as the value.
-8. Save your changes when you are satisfied with your updates, or click 'Cancel' to abandon them.
+5. Edit values in this interface as required: the short name for the study will be visible in search outputs and
+   overview pages whereas the descriptive title and abstract will be presented in the study's public page
+6. If you now wish to add a genome assembly with functional annotation to this study, start by checking the box for this
+   and then registering a `locus tag prefix <../..faq/locus_tags.html>`_ at the bottom of the page
+7. You can add papers by searching the PubMed ID; through integration with ePMC these papers will then be linked from
+   this study's page in the ENA Browser
+8. Add additional keywords as desired; for example you may add a DOI as shown above
+9. Save your changes when you are satisfied, or click 'Cancel' to abandon them
 
 
 Sample Edits
 ============
 
-To edit a sample, find it in the list (note the search box) and click the 'Edit' button next to it.
 
-.. image:: ../images/mod_05_p02.png
+1. Log in to `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Samples Report' button to be
+   presented with a list of your registered samples:
+2. To edit a sample, click its 'Action' button and select 'Edit sample XML'
+3. Your sample will be shown as an XML document which you can edit directly:
 
-Your sample will be shown as an XML document which you can edit directly.
-Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file.
-General XML errors and specific errors defined by us are prevented in this way.
-Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to remove an attribute which is required by the specified checklist.
+.. image:: ../images/wsp_meta_update_03_sample_edit.png
 
-.. image:: ../images/mod_05_p02_b.png
+4. Do not edit the attributes highlighted in red (accession, alias, and centre name details) as you will not be able to
+   save these changes
+5. Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file
+6. Changing the checklist attribute is allowed, but your sample must conform to the requirements of the new checklist
+7. Add new '<SAMPLE_ATTRIBUTE>' blocks are desired
 
-This method is useful for one-off edits but it is not feasible for editing many samples at once. For this you can use the `programmatic method <programmatic-sample.html>`_.
+Note that not all fields can be edited: the sample alias and accession are immutable, and you will not be allowed to
+remove an attribute which is required by the specified checklist.
 
 
 Experiment And Run Edits
 ========================
 
-Experiments and runs are both listed in the 'Runs' tab, where matched pairs of experiments and runs share a row in the table.
+
+In `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ experiments and runs are both listed in the 'Runs Report' page,
+where matched pairs of experiments and runs share a row in the table.
 Note that their are separate 'Edit' buttons for the two object types:
 
-.. image:: ../images/mod_05_p05.png
+.. image:: ../images/wsp_meta_update_04_read_edit.png
 
-Be sure to use the correct edit button for the object you wish to edit.
+Be sure to use the correct edit button for the object you wish to edit (see common examples of each below).
 When you click the edit button, you will be shown the relevant object in XML format.
 Locate the element you wish to change and make the required changes, then click 'Save'.
 You will not be able to save changes which invalidate the file.
@@ -85,6 +95,7 @@ You will not be able to save changes which invalidate the file.
 
 Common Experiment Updates
 -------------------------
+
 
 The experiment object provides important metadata about how your data was produced.
 Common updates might include:
@@ -100,6 +111,7 @@ All of the above can be achieved by editing the XML displayed when you click the
 
 Common Run Updates
 ------------------
+
 
 The most common run edit would be an MD5 update.
 You may need to do this if:

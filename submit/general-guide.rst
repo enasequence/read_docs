@@ -1,5 +1,5 @@
 ====================================
-General Guide on ENA Data Submission
+General Guide On ENA Data Submission
 ====================================
 
 Welcome to the general guide for the European Nucleotide Archive submission.
@@ -10,15 +10,15 @@ ENA allows submissions via three routes, each of which is appropriate for a
 different set of submission types. You may be required to use more than one in
 the process of submitting your data:
 
-- **Interactive Submissions** are completed by either filling out web forms directly 
-  in your browser or alternatively downloading spreadsheets that can be completed 
+- **Interactive Submissions** are completed by filling out web forms directly
+  in your browser and downloading template spreadsheets that can be completed
   off-line and uploaded to ENA. This is often the most accessible submission route.
 - **Command Line Submissions** use our bespoke Webin-CLI program. This
   validates your submissions entirely before you complete them, allowing you
   maximum control of the process.
 - **Programmatic Submissions** are completed by preparing your submissions as
-  XML documents and either sending them to ENA using a program such as cURL or using 
-  the `Webin Submissions Portal <general-guide/submissions-portal.html>`_.
+  XML documents and either sending them to ENA using a program such as cURL or using
+  the `Webin Portal <general-guide/submissions-portal.html>`_.
 
 The table below outlines what can be submitted through each submission route.
 It is also recommended that you familiarise yourself with our `metadata model
@@ -32,19 +32,16 @@ It is also recommended that you familiarise yourself with our `metadata model
 +------------------------+-------------+-----------+--------------+
 | Sample                 |      Y      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
-| Read data              |      Y      |     Y*    |       Y      |
+| Read data              |      Y      |     Y     |       Y      |
 +------------------------+-------------+-----------+--------------+
 | Genome Assembly        |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Transcriptome Assembly |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
-| Template Sequence      |      Y      |     Y     |       N      |
+| Template Sequence      |      N      |     Y     |       N      |
 +------------------------+-------------+-----------+--------------+
 | Other Analyses         |      N      |     N     |       Y      |
 +------------------------+-------------+-----------+--------------+
-
-\* Webin-CLI accepts read submission in FASTQ, BAM, or CRAM format.
-For other formats use either of the other submission routes.
 
 Before submitting to ENA it is important to familiarise yourself with
 the different options available for data submission. This general guide
@@ -52,8 +49,9 @@ will get you started in understanding how data can be submitted to ENA
 and how to keep track of the progress of your submission.
 
 
-Getting started
+Getting Started
 ===============
+
 
 .. toctree::
    :maxdepth: 1
@@ -63,8 +61,9 @@ Getting started
    general-guide/accessions
 
 
-Submission services
+Submission Services
 ===================
+
 
 .. toctree::
    :maxdepth: 1
@@ -74,8 +73,9 @@ Submission services
    general-guide/webin-cli
 
 
-Additional Services
-===================
+Submission Reports Services
+===========================
+
 
 .. toctree::
    :maxdepth: 1

@@ -2,81 +2,91 @@
 Register Samples Interactively
 ==============================
 
-Samples represent the source material that a sequencing library was produced from. A sample may be connected to reads,
-assemblies and various types of interpreted data. Samples add context to the data associated with them, and good sample
-annotation makes your data more searchable.
+Samples represent the source material that a sequencing library was produced from.
+A sample may be connected to reads, assemblies and various types of analysis data.
+Samples add context to the data associated with them, making your data more searchable and understandable.
 
 All samples must conform to a checklist of values which depend on the type of sample.
 The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_.
-Here you can select a checklist, review its mandatory and optional fields, and understand its allowed values.
 
-There are three steps to registering your sample(s).
+There are three steps to registering your sample(s) through the Webin Portal:
+
+1. Select and customise a sample checklist
+2. Fill out a template spreadsheet
+3. Validate and submit the template spreadsheet
+
+If you are unsure, you can always try this process out consequence-free using the
+Webin Portal `test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/login>`_.
+
 
 .. _Step 1:
 
 Step 1: Select A Sample Checklist
 =================================
 
-To access this form, log in to `Interactive Webin <https://www.ebi.ac.uk/ena/submit/sra/#home>`_ and in the
-'New Submission' tab select the sample registration option.
 
-ENA provides sample checklists which define a set of mandatory and recommended attributes for different types of samples.
-By declaring that you would like to register your samples using a specific checklist you are enabling the samples to be
-validated for correctness at submission time and are making it easier for other services to find and access the sample
-attribute information.
+To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
+'Register Samples' button.
 
-1. Click 'Select Checklist' to move on to the next page and select a checklist.
-2. If you have created your sample submission in a spreadsheet, click here to submit it, then go to `Step 3`_. Otherwise,
-   ignore this.
+1. Click 'Download spreadsheet to register samples' to expand the checklist selection menu
 
-.. image:: ../images/mod_03_p01_a.png
+2. You will be presented with groups of checklists: click a checklist group to explore its members, then click the most
+   appropriate one
 
-3. Find a checklist that suits your type of sample.
-4. Move on to `Step 2`_ to create the sample template.
+.. image:: ../images/wsp_sample_1_checklist_selection.png
 
-.. image:: ../images/mod_03_p01_b.png
+3. Next, you will be presented with lists of checklist attributes, grouped by whether they are mandatory, recommended,
+   or optional.
+   Expand each to see the range of attributes included in your checklist and their field requirements.
+   Optional fields will be deselected by default, while recommended ones will be selected, so review these carefully to
+   ensure all appropriate fields are selected.
+   Note the 'Add custom field' box to the top-left, which allows you to define additional attributes not included
+   in any checklist
 
-.. _Interactive Submission Options: ../general-guide/interactive.html
+4. Finally, click 'Next' and then the 'Download TSV Template' to get a spreadsheet based on your selections so far
+
+.. image:: ../images/wsp_sample_2_checklist_customisation.png
+
+
 .. _Step 2:
 
-Step 2: Select The Checklist Fields
-===================================
-
-.. image:: ../images/mod_03_p02_a.png
-
-1. Here, you can view the attributes in your chosen checklist. You can see which are optional and which are mandatory.
-2. You can add more attributes if there are important details not already covered by the checklist.
-3. The checklist can be downloaded in a format which you can edit as a spreadsheet. We recommend this since it allows
-   you to more easily register multiple samples in a single submission and is more durable than a web form.
-   See `Step 1`_ to submit your spreadsheet.
-4. Click next when you have finished customising your checklist.
-
-.. image:: ../images/mod_03_p02_b.png
+Step 2: Complete Template Spreadsheet
+=====================================
 
 
+Once you have downloaded the template spreadsheet, you should open it in an appropriate spreadsheet editing program,
+such as Microsoft Excel or Google Sheets.
+Consider the following tips as you complete your spreadsheet:
 
-5. In this form, enter any details which will be the same for all your Samples. They can be edited individually later.
-   Click next when you have finished.
+- Use the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to look up the requirements and
+  restrictions for each field
+- Do not edit the first line of the spreadsheet, which specifies the checklist in use
+- You can add custom fields by inserting new column headers
+- Do not edit the existing column names
+- Use only valid ASCII characters
+- When you come to submit the file must use one of the following extensions: .csv, .tsv, .tab, .txt
+
+Once you are satisfied with the content of your spreadsheet, be sure to save it then proceed to the next step.
+
 
 .. _Step 3:
 
-Step 3: Edit And Submit Samples
-===============================
+Step 3: Validate And Submit Spreadsheet
+=======================================
 
-.. image:: ../images/mod_03_p03.png
 
-This screen allows you to edit samples individually. It is also where you will be directed if you submit via spreadsheet.
+Return to the 'Register Samples' interface in `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_
+and this time expand the 'Upload filled spreadsheet to register samples' option.
+Use the 'Browse' button to find the spreadsheet you wish to submit, then click the 'Submit Completed Spreadsheet'
+button.
 
-1. You can add more samples to your submission here. They must use the same checklist.
-2. All your samples are listed here. The unique name is shown, along with an icon to indicate whether it is valid or not.
-   Click the red cross to delete a sample entirely.
-3. Use these buttons to move between samples.
-4. Provide descriptive names here. The Unique name cannot be changed after submission.
-5. A green tick indicates that the field's content is valid, while a red cross indicates it requires your attention. Hover
-   over the exclamation mark to see what should be entered.
-6. Click here to download all the data you have submitted so far. This is useful if you have to stop halfway through your
-   submission.
-7. When all samples are complete, click here to submit. Webin will deliver accessions.
+.. image:: ../images/wsp_sample_3_spreadsheet_upload.png
 
-The samples you have just registered are not yet associated with a study. When you submit data, you will refer it to a
-study and sample, thus indirectly linking the sample with a study. See our `Metadata Model <../general-guide/metadata.html>`_ for more information.
+At this point your samples will be validated and if accepted, accession numbers will be reported.
+If there are errors with the information you have entered, these will be reported to you.
+
+Note that at this point you have not submitted any data, but you have laid the groundwork for this by providing sample
+metadata.
+
+See `Webin Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+about these submissions.
