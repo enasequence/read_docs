@@ -53,56 +53,56 @@ Follow the links for specific guidance on each submission activity.
 .. image:: ../images/wsp_dashboard.png
 
 1 - Header Bar:
-  **Support:** Links to the ENA support form, where you can request assistance from our helpdesk
+  Support: Links to the ENA support form, where you can request assistance from our helpdesk
 
-  **Manage Account:** Update the information associated with your account, add contact information for people using
+  Manage Account: Update the information associated with your account, add contact information for people using
   the account, and change your centre name, a value which is immutably attached to all your submissions
 
 2 - Studies (Projects):
-  **`Register Study`_:** An interface to register new studies
+  `Register Study`_: An interface to register new studies
 
-  **Submit XMLs:** You can submit studies in XML format through this interface
+  Submit XMLs: You can submit studies in XML format through this interface
 
-  **`Studies Report`_:** Review and edit previously submitted studies, and change their release date
+  `Studies Report`_: Review and edit previously submitted studies, and change their release date
 
 3 - Samples:
-  **`Register samples`_:** Select and customise a sample checklist, download a template spreadsheet, then re-upload it
+  `Register samples`_: Select and customise a sample checklist, download a template spreadsheet, then re-upload it
   to this interface to register your samples
 
-  **`Register taxonomy`_:** If your submission uses taxa which are not known to the taxonomy database, you can request
+  `Register taxonomy`_: If your submission uses taxa which are not known to the taxonomy database, you can request
   their addition through this interface
 
-  **Submit XMLs:** You can submit samples in XML format through this interface
+  Submit XMLs: You can submit samples in XML format through this interface
 
-  **`Samples Report`_:** Review and edit previously submitted samples
+  `Samples Report`_: Review and edit previously submitted samples
 
 4 - Raw Reads (Experiments and Runs):
-  **`Submit reads`_:** Select a type of read data and download a template spreadsheet, then re-upload it to this
+  `Submit reads`_: Select a type of read data and download a template spreadsheet, then re-upload it to this
   interface to complete registration of your read data
 
-  **Submit XMLs:** You can submit experiments and runs in XML format through this interface
+  Submit XMLs: You can submit experiments and runs in XML format through this interface
 
-  **`Runs Report`_:** Review and edit previously submitted runs and experiments
+  `Runs Report`_: Review and edit previously submitted runs and experiments
 
-  **`Run Files Report`_:** Review status of files associated with previously submitted runs
+  `Run Files Report`_: Review status of files associated with previously submitted runs
 
-  **`Run Processing Report`_:** Review processing status of files associated with previously submitted runs
+  `Run Processing Report`_: Review processing status of files associated with previously submitted runs
 
-  **`Unsubmitted Files Report`_:** Before you can submit a run file here you must `upload it to your account's FTP area`_;
+  `Unsubmitted Files Report`_: Before you can submit a run file here you must `upload it to your account's FTP area`_;
   review the status of such unsubmitted files here
 
 5 - Data Analyses:
-  **`Create annotated sequence spreadsheet`_:** Short pieces of assembled and annotated sequence such as single genes
+  `Create annotated sequence spreadsheet`_: Short pieces of assembled and annotated sequence such as single genes
   and others can often be submitted using template spreadsheets; select and customise a template here and download a
   file to submit via Webin-CLI
 
-  **Submit XMLs:** You can submit some analysis types in XML format through this interface
+  Submit XMLs: You can submit some analysis types in XML format through this interface
 
-  **`Analyses Report`_:** Review and edit previously submitted analyses
+  `Analyses Report`_: Review and edit previously submitted analyses
 
-  **`Analysis File Report`_:** Review status of files associated with previously submitted analyses
+  `Analysis File Report`_: Review status of files associated with previously submitted analyses
 
-  **`Analysis Processing Report`_:** Review processing status of files associated with previously submitted analyses
+  `Analysis Processing Report`_: Review processing status of files associated with previously submitted analyses
 
 
 .. _Register study (project): ../study/interactive.html
