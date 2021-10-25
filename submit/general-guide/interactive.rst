@@ -105,11 +105,11 @@ Follow the links for specific guidance on each submission activity.
   `Analysis Processing Report`_: Review processing status of files associated with previously submitted analyses
 
 
-.. _Register study (project): ../study/interactive.html
+.. _Register Study: ../study/interactive.html
 .. _Register samples: ../samples/interactive.html
 .. _Register taxonomy: ../../faq/taxonomy_requests.html
 
-.. _Submit sequence reads and experiments: ../reads/interactive.html
+.. _Submit reads: ../reads/interactive.html
 .. _Create annotated sequence spreadsheet: ../sequence/interactive.html
 
 .. _upload it to your account's FTP area: ../fileprep/upload.html
