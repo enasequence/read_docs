@@ -228,3 +228,11 @@ full XML records resulting from the search:
 
 Like before, the XML records can provide details on additional metadata that isn't indexed for search as well as
 cross-reference links.
+
+Fetching Large Sets of Results
+------------------------------
+
+By default, the search interface limits the number of records output from a search to 100,000. If you would like to retrieve all records resulting from a search, even for large sets of results (e.g. >1 million) you can set the limit to 0 by adding ``"&limit=0"`` to your search query.
+
+Please note, when integrating ENA APIs into scripts, we do not recommend performing more than 10 searches at a time.
+
