@@ -25,7 +25,7 @@ these data.  These are described below.
 |                  |                                          | | follow the submission database's        |
 |                  |                                          | | guidelines on how to extend the release |
 |                  |                                          | | of their data. Alternatively, please    |
-|                  |                                          | | `contact ENA`_ at least ten working    |
+|                  |                                          | | `contact ENA`_ at least ten working     |
 |                  |                                          | | days before the currently recorded      |
 |                  |                                          | | release date.                           |
 +------------------+------------------------------------------+-------------------------------------------+
