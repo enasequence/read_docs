@@ -10,8 +10,8 @@ sequencing platform and library protocols.
 A run object represents a lane (or equivalent) on an sequencing machine
 and is used to attach sequence read data to experiments.
 
-The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_
-XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_
+The experiment XML format is defined by `SRA.experiment.xsd <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_
+XML Schema, and the run XML format is defined by `SRA.run.xsd <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
 
 Object relationships
