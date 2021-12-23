@@ -50,7 +50,7 @@ computational ability might be required:
 - `Using wget`_
 - `Using FTP Client`_
 - `Using Aspera`_
-
+- `Common Issues`_
 
 
 .. note::
@@ -220,4 +220,16 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
     fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wya/WYAA01.dat.gz local/target/directory
 
+Common Issues
+-------------
+Downloading more than 1M records
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+For downloading more than 1M records you need to use a non-browser client (like wget) because browser might crash due lack of memory for large downloads. You also need to include an additional query param "*limit=0*" in the URL.
 
+Slow FTP connection
+^^^^^^^^^^^^^^^^^^^
+Sometimes you may face slowness on our FTP due to high load or some ongoing maintenance. To overcome such issues it is recommended to use other download methods such as Aspera & Globus.
+
+FTP links not working in browser
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Modern web browsers no longer supports FTP links and ENA browser internally converts all ftp links to http for enabling downloads. So please don't copy download links from ENA to use it on web browsers. Although you can copy the dowload links and use them with FTP clients (like wget).
