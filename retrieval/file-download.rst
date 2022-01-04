@@ -222,14 +222,15 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
 
 Common Issues
 -------------
-Downloading more than 1M records
+Downloading more than 1 million records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-For downloading more than 1M records you need to use a non-browser client (like wget) because browser might crash due lack of memory for large downloads. You also need to include an additional query param "*limit=0*" in the URL.
+If you are putting a broad filter criteria which is returning for than a million records then for downloading them you need to use a non-browser client (like wget) because your web browser might crash due lack of memory for such large downloads. You also need to include an additional query param "*limit=0*" in the URL.
 
 Slow FTP connection
 ^^^^^^^^^^^^^^^^^^^
-Sometimes you may face slowness on our FTP due to high load or some ongoing maintenance. To overcome such issues it is recommended to use other download methods such as Aspera & Globus.
+Sometimes you may face slowness on our FTP due to high load or some ongoing maintenance. If it is happening continuously then please report it to us.
+Also to overcome such issues it is recommended to use other download methods such as Aspera & Globus.
 
 FTP links not working in browser
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Modern web browsers no longer supports FTP links and ENA browser internally converts all ftp links to http for enabling downloads. So please don't copy download links from ENA to use it on web browsers. Although you can copy the dowload links and use them with FTP clients (like wget).
+Modern web browsers no longer support FTP links and ENA Browser internally converts all ftp links to http for enabling downloads. You can copy the download links from ENA Browser and use them with FTP clients (like wget) but if you want to use them in web browsers then please replace ftp with http in the URL.
