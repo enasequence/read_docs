@@ -50,7 +50,7 @@ computational ability might be required:
 - `Using wget`_
 - `Using FTP Client`_
 - `Using Aspera`_
-
+- `Common Issues`_
 
 
 .. note::
@@ -220,4 +220,19 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
     ascp -QT -l 300m -P33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
     fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wya/WYAA01.dat.gz local/target/directory
 
+Common Issues
+-------------
+Downloading a large number of records
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If your search criteria is returning a large number of records (e.g.millions) then please consider using a non-browser client (like wget or curl). 
+NOTE: You need to include the additional parameter "*limit=0*" to obtain ALL matching records, as the default limit is 100,000.
 
+Slow FTP downloads
+^^^^^^^^^^^^^^^^^^^
+Sometimes you may experience slowness or incomplete files when downloading from our FTP servers due to high load or ongoing maintenance. If the issue persists, please report it at `here <https://www.ebi.ac.uk/ena/browser/support>`.
+You could also use other download methods such as Aspera or Globus, which might provide better performance than FTP.
+
+Deprecation of FTP support in web browsers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Most modern web browsers no longer support the FTP protocol. For this reason, on the ENA Browser links to files hosted on FTP are internally converted to http when clicked for enabling downloads. You can copy the download links from ENA Browser and use them with non-browser clients (like wget or curl). If you still want to download using a web browser then please replace ftp:// with http:// in the URL.
+e.g. ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR609/001/ERR6090701/ERR6090701_1.fastq.gz -> http://ftp.sra.ebi.ac.uk/vol1/fastq/ERR609/001/ERR6090701/ERR6090701_1.fastq.gz
