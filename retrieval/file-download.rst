@@ -222,15 +222,17 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
 
 Common Issues
 -------------
-Downloading more than 1 million records
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you are putting a broad filter criteria which is returning for than a million records then for downloading them you need to use a non-browser client (like wget) because your web browser might crash due lack of memory for such large downloads. You also need to include an additional query param "*limit=0*" in the URL.
+Downloading a large number of records
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If your search criteria is returning a large number of records (e.g.millions) then please consider using a non-browser client (like wget or curl). 
+NOTE: You need to include the additional parameter "*limit=0*" to obtain ALL matching records, as the default limit is 100,000.
 
-Slow FTP connection
+Slow FTP downloads
 ^^^^^^^^^^^^^^^^^^^
-Sometimes you may face slowness on our FTP due to high load or some ongoing maintenance. If it is happening continuously then please report it to us.
-Also to overcome such issues it is recommended to use other download methods such as Aspera & Globus.
+Sometimes you may experience slowness or incomplete files when downloading from our FTP servers due to high load or ongoing maintenance. If the issue persists, please report it at `here <https://www.ebi.ac.uk/ena/browser/support>`.
+You could also use other download methods such as Aspera or Globus, which might provide better performance than FTP.
 
-FTP links not working in browser
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Modern web browsers no longer support FTP links and ENA Browser internally converts all ftp links to http for enabling downloads. You can copy the download links from ENA Browser and use them with FTP clients (like wget) but if you want to use them in web browsers then please replace ftp with http in the URL.
+Deprecation of FTP support in web browsers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Most modern web browsers no longer support the FTP protocol. For this reason, on the ENA Browser links to files hosted on FTP are internally converted to http when clicked for enabling downloads. You can copy the download links from ENA Browser and use them with non-browser clients (like wget or curl). If you still want to download using a web browser then please replace ftp:// with http:// in the URL.
+e.g. ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR609/001/ERR6090701/ERR6090701_1.fastq.gz -> http://ftp.sra.ebi.ac.uk/vol1/fastq/ERR609/001/ERR6090701/ERR6090701_1.fastq.gz
