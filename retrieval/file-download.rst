@@ -189,7 +189,7 @@ Windows
 ::
 
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp" ^
-    -QT -l 300m -P33001 -i ^
+    -QT -l 300m -P 33001 -i ^
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
     era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ^
     local\target\directory
