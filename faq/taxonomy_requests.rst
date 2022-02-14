@@ -137,7 +137,7 @@ __________
 
 Higher organisms are treated similarly to prokaryotes, but the term 'sp.' is applied no matter which taxonomic rank is
 being used.
-If multiple strains/isolates/samples are identified to be from teh same unidentified or novel species, they should be
+If multiple strains/isolates/samples are identified to be from the same unidentified or novel species, they should be
 grouped as a single taxonomic name.
 For example, if three strains of *Candida* (ABC, DEF, and GHI) are identified as being from the same species, they
 should be given a single informal name to act as a placeholder.
