@@ -4,7 +4,8 @@ Brokering Data to ENA
 
 Data brokering is the act of submitting data to ENA on behalf of another person/institute. In many cases a centralised national brokering facility is the most efficient means of data management at large scale.
 
-In order to become a data broker, you must apply for brokering permissions to be added to your account. For more information, or to request a broker account, contact our [helpdesk](https://www.ebi.ac.uk/ena/browser/support), providing:
+In order to become a data broker, you must apply for brokering permissions to be added to your account. For more information, or to request a broker account, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_, providing:
+
 * some background: how you came to be a broker and who you are brokering on behalf of
 * expected data volume: how much and how frequently you expect to submit
 * broker names (both short, e.g. acryonym, and long): this will appear in our databases and your data files
@@ -15,6 +16,7 @@ Regular Accounts vs Broker Accounts
 Submitting via a regular account results in affiliations linked to your Webin account being propagated into submitted objects. You can update your webin account settings through the Webin Submissions Portal.
 
 As we expect that brokers will submit on behalf of others, having a broker account opens up some extra options to define the center name on a per-object basis:
+
 * interactive submission: a new 'center name' tab become available 
 * programmatic submission: define `center_name=` in each element of the submission (hint: wherever alias can be defined, center name can be defined). e.g. `<SAMPLE alias="sample_alias" center_name="centre_name">`
 * Webin-CLI and Webin-CLI-REST: 'authors' and 'address' fields can now be used. The author list can be a comma-separated list. Example:
@@ -32,13 +34,13 @@ The difference between the two submission account types is most apparent in our 
 
 ***Sample Display : regular account***
 
-[SAMEA8697319 on the ENA Browser](https://www.ebi.ac.uk/ena/browser/view/SAMEA8697319)
+`SAMEA8697319 on the ENA Browser <https://www.ebi.ac.uk/ena/browser/view/SAMEA8697319>`_
 
 .. image:: images/sample.non-broker.png
 
 ***Sample Display : broker account***
 
-[SAMEA9079967 on the ENA Browser](https://www.ebi.ac.uk/ena/browser/view/SAMEA9079967)
+`SAMEA9079967 on the ENA Browser <https://www.ebi.ac.uk/ena/browser/view/SAMEA9079967>`_
 
 .. image:: images/sample.broker.png
 
