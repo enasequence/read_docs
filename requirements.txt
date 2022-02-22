@@ -1,2 +1,1 @@
-docutils<0.18
-myst_parser
+docutils<0.17

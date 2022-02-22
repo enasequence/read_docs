@@ -34,13 +34,12 @@ Webin-CLI has been tested against openjdk version 1.8.0_212. You are recommended
 
 Download openapi JDKs from the below links:
 
-https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+[https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot)
 
 Download Oracle JREs from the below links:
 
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 - [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
 
 ## Run the program as a Java jar file
 
@@ -72,12 +71,12 @@ The command line `<options>` are explained below.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
     <iframe src="https://www.youtube.com/embed/ChCsqoq-r-Y" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
+</div></br>
 
 
 ## Command Line Options
 
-- `-context`: the   submission type:
+- `-context`: the submission type:
     - `-context genome`
     - `-context transcriptome`
     - `-context sequence`
@@ -97,7 +96,6 @@ files will not be archived.
 should be installed and path to executable "ascp" should be in PATH variable.
 - `-version`: prints the version number of the program and exists.
 - `-help`: detailed information about the different options.
-
 
 ## Submission Process
 
