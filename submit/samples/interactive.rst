@@ -58,7 +58,7 @@ Once you have downloaded the template spreadsheet, you should open it in an appr
 such as Microsoft Excel or Google Sheets.
 Consider the following tips as you complete your spreadsheet:
 
-- **Do not remove the first three lines of the spreadsheet**, which specify the checklist in use, field names and units row. Please retain all of these rows for a successful submission
+- **Do not remove the first three lines of the spreadsheet**, which specify the checklist in use, field names and units row. Please retain all of these rows for a successful ENA submission
 - **Enter data in row 4 onwards**. Use row 3 (#units) to specify units where required by the checklist
 - Use the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to look up the requirements and
   restrictions for each field
