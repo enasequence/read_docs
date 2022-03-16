@@ -58,7 +58,7 @@ Once you have downloaded the template spreadsheet, you should open it in an appr
 such as Microsoft Excel or Google Sheets.
 
 .. image:: ../images/wsp_sample_4_excel_spreadsheet.png
- :width: 2000
+ :width: 5000
 
 
 Consider the following tips as you complete your spreadsheet:
