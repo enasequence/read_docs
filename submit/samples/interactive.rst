@@ -57,8 +57,8 @@ Step 2: Complete Template Spreadsheet
 Once you have downloaded the template spreadsheet, you should open it in an appropriate spreadsheet editing program,
 such as Microsoft Excel or Google Sheets.
 
-
 .. image:: ../images/wsp_sample_4_excel_spreadsheet.png
+ :width: 2000
 
 
 Consider the following tips as you complete your spreadsheet:
