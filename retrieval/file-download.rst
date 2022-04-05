@@ -188,6 +188,12 @@ platforms.
 
 Following are some examples of how Aspera may be used to download ENA data:
 
+Note: Please add -L- to your aspera command to print logs to the terminal. If you face any issues, please provide the
+logs with your helpdesk ticket.
+
+e.g.
+ascp -QT -l 300m -P 33001 -L- -i path/to/a...
+
 Unix/Linux/Mac
 ^^^^^^^^^^^^^^
 
