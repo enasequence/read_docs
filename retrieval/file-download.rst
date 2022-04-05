@@ -114,7 +114,7 @@ endpoint from the '/gridftp/ena' subfolder:
 
 .. _`Globus`: https://app.globus.org/file-manager?origin_id=fd9c190c-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
 
-Globus also provides a command line interafce (CLI) which can be used without access to a grpahical user interface
+Globus also provides a command line interface (CLI) which can be used without access to a graphical user interface
 environment. See `here <https://docs.globus.org/cli/>`_ for details.
 
 To infer the Globus path for a file from the ftp path, do the following:
