@@ -114,6 +114,20 @@ endpoint from the '/gridftp/ena' subfolder:
 
 .. _`Globus`: https://app.globus.org/file-manager?origin_id=fd9c190c-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
 
+Globus also provides a command line interface (CLI) which can be used without access to a graphical user interface
+environment. See `here <https://docs.globus.org/cli/>`_ for details.
+
+To infer the Globus path for a file from the ftp path, do the following:
+
+e.g. ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
+
+Replace upto and including vol1 with /gridftp/ena
+
+i.e. the above becomes:
+
+/gridftp/ena/fastq/ERR164/ERR164407/ERR164407.fastq.gz
+
+
 Using enaBrowserTools
 ---------------------
 
@@ -174,6 +188,12 @@ platforms.
 
 Following are some examples of how Aspera may be used to download ENA data:
 
+Note: Please add -L- to your aspera command to print logs to the terminal. If you face any issues, please provide the
+logs with your helpdesk ticket.
+
+e.g.
+ascp -QT -l 300m -P 33001 -L- -i path/to/a...
+
 Unix/Linux/Mac
 ^^^^^^^^^^^^^^
 
@@ -225,7 +245,7 @@ Common Issues
 -------------
 Downloading a large number of records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If your search criteria is returning a large number of records (e.g.millions) then please consider using a non-browser client (like wget or curl). 
+If your search criteria is returning a large number of records (e.g.millions) then please consider using a non-browser client (like wget or curl).
 NOTE: You need to include the additional parameter "*limit=0*" to obtain ALL matching records, as the default limit is 100,000.
 
 Slow FTP downloads
