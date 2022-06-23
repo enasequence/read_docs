@@ -87,7 +87,7 @@ Archive-Generated Read Files
 In most cases ENA generates one or more FASTQ files for each run, which follow
 a specific format.
 For information on this format, and when it is not available, please see our
-page on `Archive Generated FASTQ Files <../faq/archive-generated-files.html>`_.
+page on `Archive Generated FASTQ Files <https://ena-docs.readthedocs.io/en/latest/faq/archive-generated-files.html?#archive-generated-files>`_.
 
 ENA archive-generated files are available in the 'fastq' directory, e.g.:
 
