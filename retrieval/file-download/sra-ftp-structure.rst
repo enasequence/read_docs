@@ -93,14 +93,14 @@ ENA archive-generated files are available in the 'fastq' directory, e.g.:
 
 ::
 
-    ftp://ftp.sra.ebi.ac.uk/vol1/fastq/<accession-prefix>/<full-accession>/
+    http://ftp.sra.ebi.ac.uk/vol1/fastq/<accession-prefix>/<last-digit-of-full-accession>/<full-accession>/
 
 
 Using ERR164407 as an example:
 
 ::
 
-    ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/
+    http://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/007/ERR164407/
 
 
 Navigating to this directory in your browser will reveal a file named
