@@ -278,7 +278,7 @@ One of the following commands will work, if you supply the correct filename:
     594934819a1571f805ff299807431da4  mbr_depth_05.bam
 
 
-Windows users should see the `Microsoft Support Article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_ on this subject.
+For Windows users, 3rd party tools can be found to calculate MD5 values.
 
 
 Appendix: Re-Uploading Your File
