@@ -149,6 +149,19 @@ A file can be downloaded with wget simply by specifying its location:
 
     $ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
 
+Using curl
+----------
+
+curl -o ERR164407.fastq.gz 'ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz'
+
+Downloading Private Files
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to use curl to download a non-public data file using datahub (dcc) authentication,
+provide the dcc username and password.
+
+e.g.
+curl -u dcc_metagenome:password  -o ERR9463971_2.fastq.gz 'ftp://ftp.dcc-private.ebi.ac.uk/vol1/fastq/ERR946/001/ERR9463971/ERR9463971_2.fastq.gz'
 
 Using FTP Client
 ----------------
