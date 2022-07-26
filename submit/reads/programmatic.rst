@@ -78,7 +78,7 @@ the example below this reference is made using an accession number:
     <STUDY_REF accession="ERP123456"/>
 
 Either an `accession` or a `refname` (alias) can be used in the reference. If you are using the
-`accession` attribute you can use both ERP amd PRJ accessions when referring
+`accession` attribute you can use both ERP and PRJ accessions when referring
 to studies.
 
 Experiment XML: associated with sample
