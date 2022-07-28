@@ -12,6 +12,7 @@ The V2 service runs through the programmatic submission route and has 3 endpoint
 These endpoints are further explained below:
 
 Service URL: https://www.ebi.ac.uk/ena/submit/webin-v2/
+
 +------------------------+-----------------------------------------------------------------------+
 | API Mapping            | Use                                                                   |
 +========================+=======================================================================+
@@ -47,11 +48,17 @@ When using curl, each XML file is submitted using the ‘-F’ option:
 where the file referenced can contain a combination of the datatypes documented below:
 
 ``SUBMISSION`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.submission.xsd>`_)
+
 ``STUDY`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd>`_)
+
 ``SAMPLE`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd>`_)
+
 ``EXPERIMENT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_)
+
 ``RUN`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_)
+
 ``ANALYSIS`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_)
+
 ``PROJECT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd>`_)
 
 You can include multiple records of the same type in the same submission as part of a ``SET``.
@@ -171,6 +178,7 @@ How to use the new API
 ======================
 
 The production service is available at - https://www.ebi.ac.uk/ena/submit/webin-v2/
+
 The test service is available at - https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/
 
 To submit XML files using this API, curl or ENA's swagger UI in the above links can be used. Users can also choose to
