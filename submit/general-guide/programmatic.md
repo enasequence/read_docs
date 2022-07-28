@@ -30,7 +30,7 @@ establising an automated submission pipeline.
 
 ## Webin Rest V2 API
 
-Programmatic submissions can also be made using the new Webin Rest V2 service. This has been developed to address issues such as timeout errors during submissions. The V2 API has been designed to accept submissions at 2 different endpoints, 1 synchronous and 1 asynchronous, depending on the scale of the submission. Please refer to the [Webin Rest V2 documentation](../programmatic-v2.html) to find out more.  
+Programmatic submissions can also be made using the new Webin Rest V2 service. This has been developed to address issues such as timeout errors during submissions. The V2 API has been designed to accept submissions at 2 different endpoints, 1 synchronous and 1 asynchronous, depending on the scale of the submission. Please refer to the [Webin Rest V2 documentation](./programmatic-v2.html) to find out more.  
 
 ## Upload data files
 
