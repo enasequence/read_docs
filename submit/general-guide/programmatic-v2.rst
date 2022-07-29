@@ -51,8 +51,8 @@ where the file referenced can contain a combination of the datatypes documented 
 | ``EXPERIMENT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_)
 | ``RUN`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_)
 | ``ANALYSIS`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_) 
-``PROJECT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd>`_)
-
+| ``PROJECT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd>`_)
+|
 You can include multiple records of the same type in the same submission as part of a ``SET``.
 For example, by grouping ``SAMPLE`` records in a ``<SAMPLE_SET></SAMPLE_SET>`` tag.
 
@@ -64,103 +64,103 @@ A ``PROJECT`` and ``SAMPLE`` object can be submitted in XML format like this:
 .. code-block:: xml
 
     <WEBIN>
-	  <SUBMISSION_SET>
-		<SUBMISSION>
-		  <ACTIONS>
-			<ACTION>
-			  <ADD/>
-			</ACTION>
-		  </ACTIONS>
-		</SUBMISSION>
-	  </SUBMISSION_SET>
-	  <PROJECT_SET>
-		 <PROJECT alias="gut_2022">
-		   <NAME>Human Gut Microbiota Study</NAME>
-		   <TITLE>Exploration of the diversity human gastric microbiota</TITLE>
-		   <DESCRIPTION>The genome sequences of gut microbes were obtained using... </DESCRIPTION>
-		   <SUBMISSION_PROJECT>
-			 <SEQUENCING_PROJECT/>
-		   </SUBMISSION_PROJECT>
-		   <PROJECT_LINKS>
-			 <PROJECT_LINK>
-			   <XREF_LINK>
-				 <DB>PUBMED</DB>
-				 <ID>25035323</ID>
-			   </XREF_LINK>
-			 </PROJECT_LINK>
-		   </PROJECT_LINKS>
-		 </PROJECT>
-	  </PROJECT_SET>
-	  <SAMPLE_SET>
-		<SAMPLE alias="stomach_microbiota" center_name="">
-		  <TITLE>human gastric microbiota, mucosal</TITLE>
-		  <SAMPLE_NAME>
-			<TAXON_ID>1284369</TAXON_ID>
-			<SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
-			<COMMON_NAME></COMMON_NAME>
-		  </SAMPLE_NAME>
-		  <SAMPLE_ATTRIBUTES>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>investigation type</TAG>
-			  <VALUE>mimarks-survey</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>sequencing method</TAG>
-			  <VALUE>pyrosequencing</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>collection date</TAG>
-			  <VALUE>2010</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>host body site</TAG>
-			  <VALUE>Mucosa of stomach</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>human-associated environmental package</TAG>
-			  <VALUE>human-associated</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>geographic location (latitude)</TAG>
-			  <VALUE>1.81</VALUE>
-			  <UNITS>DD</UNITS>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>geographic location (longitude)</TAG>
-			  <VALUE>-78.76</VALUE>
-			  <UNITS>DD</UNITS>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-		  <TAG>geographic location (country and/or sea)</TAG>
-			  <VALUE>Colombia</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>geographic location (region and locality)</TAG>
-			  <VALUE>Tumaco</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>environment (biome)</TAG>
-			  <VALUE>coast</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>environment (feature)</TAG>
-			  <VALUE>human-associated habitat</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>project name</TAG>
-			  <VALUE>Human microbiota</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>environment (material)</TAG>
-			  <VALUE>gastric biopsy</VALUE>
-			</SAMPLE_ATTRIBUTE>
-			<SAMPLE_ATTRIBUTE>
-			  <TAG>ENA-CHECKLIST</TAG>
-			  <VALUE>ERC000014</VALUE>
-			</SAMPLE_ATTRIBUTE>
-		  </SAMPLE_ATTRIBUTES>
-		</SAMPLE>
-	  </SAMPLE_SET>
+      <SUBMISSION_SET>
+        <SUBMISSION>
+	  <ACTIONS>
+	    <ACTION>
+	      <ADD/>
+	    </ACTION>
+	  </ACTIONS>
+	</SUBMISSION>
+      </SUBMISSION_SET>
+      <PROJECT_SET>
+        <PROJECT alias="gut_2022">
+	  <NAME>Human Gut Microbiota Study</NAME>
+	  <TITLE>Exploration of the diversity human gastric microbiota</TITLE>
+	  <DESCRIPTION>The genome sequences of gut microbes were obtained using... </DESCRIPTION>
+	  <SUBMISSION_PROJECT>
+	    <SEQUENCING_PROJECT/>
+	  </SUBMISSION_PROJECT>
+	  <PROJECT_LINKS>
+	    <PROJECT_LINK>
+	      <XREF_LINK>
+	        <DB>PUBMED</DB>
+		<ID>25035323</ID>
+	      </XREF_LINK>
+	    </PROJECT_LINK>
+	  </PROJECT_LINKS>
+	</PROJECT>
+      </PROJECT_SET>
+      <SAMPLE_SET>
+        <SAMPLE alias="stomach_microbiota" center_name="">
+	  <TITLE>human gastric microbiota, mucosal</TITLE>
+	  <SAMPLE_NAME>
+	    <TAXON_ID>1284369</TAXON_ID>
+	    <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
+	    <COMMON_NAME></COMMON_NAME>
+	  </SAMPLE_NAME>
+	  <SAMPLE_ATTRIBUTES>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>investigation type</TAG>
+	      <VALUE>mimarks-survey</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>sequencing method</TAG>
+	      <VALUE>pyrosequencing</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>collection date</TAG>
+	      <VALUE>2010</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>host body site</TAG>
+	      <VALUE>Mucosa of stomach</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>human-associated environmental package</TAG>
+	      <VALUE>human-associated</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>geographic location (latitude)</TAG>
+	      <VALUE>1.81</VALUE>
+	      <UNITS>DD</UNITS>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>geographic location (longitude)</TAG>
+	      <VALUE>-78.76</VALUE>
+	      <UNITS>DD</UNITS>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>geographic location (country and/or sea)</TAG>
+	      <VALUE>Colombia</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>geographic location (region and locality)</TAG>
+	      <VALUE>Tumaco</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>environment (biome)</TAG>
+	      <VALUE>coast</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>environment (feature)</TAG>
+	      <VALUE>human-associated habitat</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>project name</TAG>
+	      <VALUE>Human microbiota</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>environment (material)</TAG>
+	      <VALUE>gastric biopsy</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	    <SAMPLE_ATTRIBUTE>
+	      <TAG>ENA-CHECKLIST</TAG>
+	      <VALUE>ERC000014</VALUE>
+	    </SAMPLE_ATTRIBUTE>
+	  </SAMPLE_ATTRIBUTES>
+	</SAMPLE>
+      </SAMPLE_SET>
     </WEBIN>
 
 All the content from submission files can therefore be included within a ``<WEBIN>...</WEBIN>`` tag.
@@ -170,8 +170,8 @@ How to use the new API
 ======================
 
 | The production service is available at - https://www.ebi.ac.uk/ena/submit/webin-v2/
-The test service is available at - https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/
-
+| The test service is available at - https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/
+|
 To submit XML files using this API, curl or ENA's swagger UI in the above links can be used. Users can also choose to
 build a client that can consume these services.
 
