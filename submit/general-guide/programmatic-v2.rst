@@ -16,18 +16,19 @@ Service URL: https://www.ebi.ac.uk/ena/submit/webin-v2/
 +------------------------+--------------------------------------------------------------------------------------------------+
 | API Mapping            | Use                                                                                              |
 +========================+==================================================================================================+
-| /submit                | | Processes submitted XMLs and returns the submission result. This method supports XML files of  |
-|                        | | up to 15 MB. If the submission processing takes more than 1 minute, the submission will fail   |
-|                        | | with a timeout error and will not be persisted in ENA.                                         |
+| /submit                | | Processes submitted XMLs and returns the submission result. This method supports               |
+|                        | | XML files of up to 15 MB. If the submission processing takes more than 1 minute,               |
+|                        | | the submission will failwith a timeout error and will not be persisted in ENA.                 |
 +------------------------+--------------------------------------------------------------------------------------------------+
-| /submit/queue          | | Queues submitted XMLs for processing and returns a submission ID and submission polling links. |
-|                        | | The submission processing status and the receipt for the submission ID can be retrieved using  |
-|                        | | the poll method. This method supports XML files of up to 100 MB and allows submissions to be   |
-|                        | | made without the risk of timeout errors. Asynchronous submission processing runs behind the    |
-|                        | | scenes to process the submissions.                                                             |
+| /submit/queue          | | Queues submitted XMLs for processing and returns a submission ID and submission                |
+|                        | | polling links. The submission processing status and the receipt for the                        |
+|                        | | submission ID can be retrieved using the poll method. This method supports XML                 |
+|                        | | files of up to 100 MB and allows submissions to bemade without the risk of                     |
+|                        | | timeout errors. Asynchronous submission processing runs behind the scenes to                   |
+|                        | | process the submissions.                                                                       |
 +------------------------+--------------------------------------------------------------------------------------------------+
-| /submit/poll           | | Returns the submission processing status and receipt (if available) for a queued submission.   |
-|                        | |                                                                                                |
+| /submit/poll           | | Returns the submission processing status and receipt (if available) for a queued               |
+|                        | | submission.                                                                                    |
 +------------------------+--------------------------------------------------------------------------------------------------+
 
 =====================
@@ -49,7 +50,7 @@ where the file referenced can contain a combination of the datatypes documented 
 | ``SAMPLE`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd>`_)
 | ``EXPERIMENT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_)
 | ``RUN`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_)
-| ``ANALYSIS`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_)
+| ``ANALYSIS`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_) 
 ``PROJECT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd>`_)
 
 You can include multiple records of the same type in the same submission as part of a ``SET``.
