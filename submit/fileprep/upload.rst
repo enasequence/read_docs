@@ -67,7 +67,7 @@ To use this program, follow the below instructions in video or text format:
 |
 
 1.  `Download the Webin File Uploader
-    <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
+    <https://enasequence.github.io/sub-file-uploader/WebinUploader.jnlp>`_
 2.  Launch the application (Mac users please see further instructions below),
 3.  Enter your Webin username in the ``Username`` field, ensuring the 'W' is
     upper-case.
