@@ -124,10 +124,12 @@ will look like:
 </SUBMISSION>
 ```
 
-### Submission XML: submit studies with release date
+### Submission XML: Make submitted objects public at a given date
 
-If no release date is provided then submitted studies and any associated objects
-will be publicly released two months after the date of study submission.
+When `HOLD` action is provided with a date then all submitted studies,
+projects and samples will become immediately public on that date. Run, experiment
+and analysis objects will become public on the date when studies or projects
+they refer to are made public. 
 
 A release date can be provided for studies by using the `HOLD` action together with the `ADD` action:
 
@@ -147,6 +149,9 @@ A release date can be provided for studies by using the `HOLD` action together w
 The `HoldUntilDate` specifies the public release date of any studies submitted within the submission.
 This can be at most two years in the future.
 
+If the `HOLD` action is used without a date then the submitted studies, projects and samples will become public in two years
+time.
+
 ### Submission XML: make study public
 
 A study can be made immediately public by using `RELEASE` action with the study accession number:
@@ -161,9 +166,9 @@ A study can be made immediately public by using `RELEASE` action with the study 
 </SUBMISSION>
 ```
 
-### Submission XML: set study hold date
+### Submission XML: update release date
 
-You can update the release date of a study by specifying its accession alongside a new release date:
+You can update the release date of a study, project or sample by using the `HOLD` action with a new release date.:
 
 ```
 <SUBMISSION>
