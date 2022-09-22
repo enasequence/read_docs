@@ -180,6 +180,23 @@ It is not possible to suppress a public study by this method.
 
 The new release date must be not more than two years in the future.
 
+### Submission XML: Make submitted objects immediately public
+
+IF `RELEASE` action is provided without a target attribute then all submitted studies,
+projects and samples will become immediately public. 
+
+```
+<SUBMISSION>
+     <ACTIONS>
+         <ACTION>
+             <RELEASE/>
+         </ACTION>
+    </ACTIONS>
+</SUBMISSION>
+```
+
+Run, experiment and analysis objects will become public as long as the studies or projects they refer to are public.
+
 ### Submission XML: update existing objects
 
 The `MODIFY` action is used when updating existing objects. A corresponding submission XML
