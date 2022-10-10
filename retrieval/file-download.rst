@@ -188,33 +188,32 @@ The command 'pwd' can be used to identify what the current directory is.
 Using Aspera
 --------------
 
-Aspera ascp command line client can be downloaded from `Aspera
-<https://downloads.asperasoft.com/en/downloads/62>`_.
-Please select the correct version for your operating system.
-The ascp command line client is distributed as part of the Aspera connect
-high-performance transfer browser plug-in.
+The IBM Aspera 'ascp' command line client is distributed as part of various free IBM Aspera clients:
 
-Public data download requires a public key authentication file. This is
-provided in the Aspera command line client download package as the
-'asperaweb_id_dsa.openssh' file. The location of this file varies between
-platforms.
+- The `Aspera Command Line <https://github.com/IBM/aspera-cli>`_ Interface
+- The `IBM Aspera Connect Client <https://www.ibm.com/aspera/connect/>`_
+- The `IBM Aspera Desktop Client <https://www.ibm.com/products/aspera/downloads>`_
+
+Public data download requires a private key authentication file.
+This used to be provided together with Aspera command line client as the `aspera_tokenauth_id_dsa` file.
 
 Following are some examples of how Aspera may be used to download ENA data:
 
-Note: Please add -L- to your aspera command to print logs to the terminal. If you face any issues, please provide the
-logs with your helpdesk ticket.
+Note: Please add '-L-' to your aspera command to print logs to the terminal.
+If you face any issues, please provide the logs with your helpdesk ticket.
 
 e.g.
-ascp -QT -l 300m -P 33001 -L- -i path/to/a...
+ascp -L- -l 300m -P 33001 -i path/to/a...
 
 Unix/Linux/Mac
 ^^^^^^^^^^^^^^
 
 ::
 
-    ascp -QT -l 300m -P 33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh \
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz \
-    local/target/directory
+    ascp \
+    -i path/to/aspera/installation/etc/aspera_tokenauth_id_dsa \
+    -l 300m --mode=recv --host=fasp.sra.ebi.ac.uk -P 33001 --user=era-fasp \
+    vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz local/target/directory
 
 
 Windows
@@ -223,10 +222,9 @@ Windows
 ::
 
     "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp" ^
-    -QT -l 300m -P 33001 -i ^
-    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ^
-    local\target\directory
+    -i "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
+    -l 300m --mode=recv --host=fasp.sra.ebi.ac.uk -P 33001 --user=era-fasp ^
+    vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz local\target\directory    
 
 
 Downloading Private Files
@@ -234,12 +232,13 @@ Downloading Private Files
 
 e.g. If you want to use aspera to download a non-public data file using datahub (dcc) authentication,
 provide the dcc username instead of era-fasp and you will be prompted for the password.
+(or use environment variable `ASPERA_SCP_PASS`)
 
 ::
 
-    ascp -QT -l 300m -P 33001 \
-    dcc_name@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz \
-    local/target/directory
+    ascp \
+    -l 300m --mode=recv --host=fasp.sra.ebi.ac.uk -P 33001 --user=dcc_name \
+    vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz local/target/directory
 
 
 Downloading Assembled and Annotated Sequence Data
@@ -251,8 +250,50 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
 
 ::
 
-    ascp -QT -l 300m -P 33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
-    fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wya/WYAA01.dat.gz local/target/directory
+    ascp \
+    -i path/to/aspera/installation/etc/aspera_tokenauth_id_dsa \
+    -l 300m --mode=recv --host=fasp.ebi.ac.uk -P 33001 --user=fasp-ebi \
+    databases/ena/wgs/public/wya/WYAA01.dat.gz local/target/directory
+
+
+Using Aspera `ascli`
+--------------------
+
+A higher level command line tool can also be used: `ascli`
+
+Installation instructions `here <https://github.com/IBM/aspera-cli>`_.
+
+The easiest way to use it is to pre-configure the access through a configuration "preset":
+
+::
+
+    ascli conf preset update era \
+    --url=ssh://fasp.sra.ebi.ac.uk:33001 \
+    --username=era-fasp \
+    --ssh-keys=@ruby:Fasp::Installation.instance.bypass_keys.first \
+    --ts=@json:'{"target_rate_kbps":300000}'
+
+
+Then recall the configuration using parameter: '-Pera', or optionally, set it as default using: 'ascli conf preset set default server era'.
+
+Then transfer files easily with:
+
+::
+
+    ascli -Pera server download vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz --to-folder=local/target/directory
+
+All the command line arguments can also be used at once without configuration file.
+
+For private files, configure like this (and then use '-Pmypriv'):
+
+::
+
+    ascli conf preset update mypriv \
+    --url=ssh://fasp.sra.ebi.ac.uk:33001 \
+    --username=dcc_name \
+    --password=dcc_pass \
+    --ts=@json:'{"target_rate_kbps":300000}'
+
 
 Common Issues
 -------------
