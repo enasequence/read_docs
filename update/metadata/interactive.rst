@@ -39,7 +39,7 @@ These include the release date, title, description and publication references.
 .. image:: ../images/wsp_meta_update_01_study_edit_list.png
 
 2. Find the study you wish to edit in the list, or search for it by accession/name
-3. If your study is confidential, you can change the release date by clicking the pencil icon and navigating to the
+3. If your study is private, you can change the release date by clicking the pencil icon and navigating to the
    required date in the calendar. Read more on this in our `Data Release Policies FAQ <../../faq/release.html>`_
 4. For edits other than changing the release date, click the Action button and then the 'Edit study (project)' option
    for a graphical interface or the 'Edit study (project) XML' option to work in XML format
