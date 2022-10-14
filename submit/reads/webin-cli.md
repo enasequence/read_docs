@@ -23,6 +23,7 @@ A sequence read submission consists of:
    - CRAM file
    - Single Fastq file
    - Paired Fastq files
+   - Multi-fastq files
 
 ![Submission process](../images/webin-cli_01.png)
 
