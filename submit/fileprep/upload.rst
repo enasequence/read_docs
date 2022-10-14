@@ -317,7 +317,7 @@ The data upload areas are provided as a temporary place in which data are held
 while in transit. As such, they are neither intended nor suitable for any
 longer-term storage of data. Such storage is provided in ENA itself. Once in
 ENA, data can be released immediately following submission or can be held
-confidential prior to analysis and literature publication if required.
+private prior to analysis and literature publication if required.
 
 We expect any given data file to remain in a data upload area for no longer
 than 2 months before the instruction is given by the user to submit the file.
