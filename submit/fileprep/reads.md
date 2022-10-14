@@ -2,11 +2,24 @@
 
 ## Single cell read data
 
-Single cell read data must be submitted in the `BAM` or `CRAM` format using
+Single cell read data can be submitted in BAM, CRAM or multi-fastq format.
+
+### BAM/CRAM format
+
+Single cell read data can be submitted in the BAM or CRAM format using
 the following tags specified in the [SAM Optional Fields Specification](https://samtools.github.io/hts-specs/SAMtags.pdf):
 - CB: Cell identifier
 - CR: Cellular barcode sequence bases (uncorrected)
 - CY: Phred quality of the cellular barcode sequence in the CR tag
+
+### Multi-fastq format
+
+Multi-fastq data submissions can be made using the programmatic route or
+Webin-CLI. This is done by entering multiple file names and their 
+respective read_type qualifiers. For more information please see:
+
+- [Multi-fastq using Webin-CLI](../reads/webin-cli.html)
+- [Multi-fastq using the programmatic route](../reads/programmatic.html)
 
 ## Other read data
 
