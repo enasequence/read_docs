@@ -35,11 +35,13 @@ The manifest file is specified using the `-manifest <filename>` option.
 A sequence read submission consists of the following files:
 
 - 1 manifest file
-- 1 BAM file, 1 CRAM file, or 1-2 Fastq files
+- 1 BAM file, 1 CRAM file, 1-2 Fastq files or multiple fastq files
 
 ### Manifest file
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
+The manifest file has two columns and can be submitted in plain text format where the
+columns are separated by a tab (or any whitespace characters), or in JSON format where
+the columns are separated by a colon:
 - Field name (first column): case insensitive field name   
 - Field value (second column): field value
 
@@ -55,7 +57,9 @@ The following metadata fields are supported in the manifest file:
 - LIBRARY_SOURCE: [See permitted values](#source)
 - LIBRARY_SELECTION: [See permitted values](#selection)
 - LIBRARY_STRATEGY: [See permitted values](#strategy)
-- DESCRIPTION: free text library description (optional) 
+- DESCRIPTION: free text library description (optional)
+
+#### Text manifest file format
 
 The following file name fields are supported in the manifest file:
 
@@ -77,6 +81,66 @@ LIBRARY_STRATEGY WGS
 FASTQ read1.fastq.gz
 FASTQ read2.fastq.gz 
 ``` 
+
+#### JSON manifest file format
+
+The JSON manifest file format provides an option to prepare your submission
+in JSON. This can also be specifically used for more complex data types, such
+as multi-fastq submissions e.g. for single-cell data.. This is done by entering
+multiple file names and their respective read_type qualifiers.
+
+The read_type attribute supports the following values:
+
+- single
+- paired
+- cell_barcode
+- umi_barcode
+- feature_barcode
+- sample_barcode
+- saptial_barcode
+
+For example, the following manifest file represents a multi-fastq submission:
+
+```
+{
+ "study": TODO,
+ "sample": TODO,
+ "name": TODO,
+ "platform": "ILLUMINA",
+ "instrument": "Illumina MiSeq",
+ "insert_size": "390",
+ "libraryName": TODO,
+ "library-source": TODO,
+ "library_selection": TODO,
+ "libraryStrategy": TODO,
+ "fastq": [
+   {
+     "value": "single_cell_S1_L001_I1_001.fastq.gz",
+     "attributes": {
+       "read_type": "feature_barcode"
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R1_001.fastq.gz",
+     "attributes": {
+       "read_type": ["paired", "umi_barcode"]
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R2_001.fastq.gz",
+     "attributes": {
+       "read_type": "sample_barcode"
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R3_001.fastq.gz",
+     "attributes": {
+       "read_type": ["paired", "cell_barcode"]
+     }
+   }
+ ]
+}
+```
 
 ## Metadata validation
 
