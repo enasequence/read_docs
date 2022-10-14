@@ -62,9 +62,9 @@ sure to register locus tag prefixes during this stage.
 - `Register a Study <../study.html>`_
 
 It is also strongly recommended to submit the reads from which the assembly was assembled. When submitting the raw reads
-in a Single-Cell Amplification study, these should remain multiplexed in BAM format and
-be submitted to an **environmental** sample. This sample should use the most appropriate environmental checklist and an
-`environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic
+in a Single-Cell Amplification study, these should either be in multi-fastq format or remain multiplexed in BAM format, 
+and be submitted to an **environmental** sample. This sample should use the most appropriate environmental checklist and an
+`environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic 
 metagenome (tax id: 1169740)).
 
 - `Submitting Raw Reads <../reads.html>`_
