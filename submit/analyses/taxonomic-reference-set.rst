@@ -160,7 +160,9 @@ please `click here <../general-guide/webin-cli.html>`_.
 Webin-CLI includes ``-test`` and ``-validate`` options. ``-validate`` may be
 used to have the Webin-CLI validator run check your files without submitting.
 ``-test`` may be used to make your submission to our test server, which is
-wiped clean every 24 hours. Note that a newly submitted study cannot be
+wiped clean every day at 03.00 GMT/BST.
+
+Note that a newly submitted study cannot be
 referenced on the test server until 24 hours after its submission. You are
 advised to use these prior to submission to help identify problems with the
 files.
