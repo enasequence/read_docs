@@ -140,11 +140,15 @@ The manifest file is specified using the `-manifest <filename>` option.
 
 #### Manifest File Format
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
-- Field value (second column): field value
+The manifest file can be submitted as either a plain text file or a JSON file.
 
 The manifest file contains metadata fields and file name fields.
+
+##### Text Manifest File
+
+The text manifest file format has two columns separated by a tab (or any whitespace characters):
+- Field name (first column): case insensitive field name   
+- Field value (second column): field value
 
 Examples of metadata fields are study and sample references:
 
@@ -181,7 +185,58 @@ MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
 FASTA   genome.fasta.gz
 ```
+##### JSON Manifest File
 
+The JSON manifest file format provides an option to prepare your submission in JSON. This
+can also be specifically used for more complex data types, such as multi-fastq submissions
+e.g. for single-cell data.
+
+The manifest file has two columns separated by a colon:
+- Field name (first column): case insensitive field name
+- Field value (second column): field value
+
+For example, the following manifest file represents a multi-fastq submission for single-cell data:
+
+```
+{
+ "study": TODO,
+ "sample": TODO,
+ "name": TODO,
+ "platform": TODO,
+ "instrument": TODO,
+ "insert_size": TODO,
+ "libraryName": TODO,
+ "library-source": TODO,
+ "library_selection": TODO,
+ "libraryStrategy": TODO,
+ "fastq": [
+   {
+     "value": "single_cell_S1_L001_I1_001.fastq.gz",
+     "attributes": {
+       "read_type": "feature_barcode"
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R1_001.fastq.gz",
+     "attributes": {
+       "read_type": ["paired", "umi_barcode"]
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R2_001.fastq.gz",
+     "attributes": {
+       "read_type": "sample_barcode"
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R3_001.fastq.gz",
+     "attributes": {
+       "read_type": ["paired", "cell_barcode"]
+     }
+   }
+ ]
+}
+```
 
 #### Manifest File Types
 
