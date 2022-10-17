@@ -32,6 +32,10 @@ A sample object is submitted in XML format like this:
         <VALUE>Mucosa of stomach</VALUE>
       </SAMPLE_ATTRIBUTE>
       <SAMPLE_ATTRIBUTE>
+        <TAG>project name</TAG>
+        <VALUE>gut microbiome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
         <TAG>human-associated environmental package</TAG>
         <VALUE>human-associated</VALUE>
       </SAMPLE_ATTRIBUTE>
