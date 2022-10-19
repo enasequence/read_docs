@@ -14,7 +14,7 @@ these data.  These are described below.
 |                  | | release date.                          |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
 | **Confidential** | | Data owner requires and indicates that | | Data are not available publicly through |
-|                  | | confidentiality is required until a    | | any means. A release date is       |
+|                  | | confidentiality is required until a    | | any means. A release date is            |
 |                  | | release date or publication in the     | | recorded for the data, which are        |
 |                  | | literature, whichever comes earlier.   | | subsequently and automatically released |
 |                  |                                          | | as **Public** on **reaching this date** |
@@ -81,12 +81,12 @@ these data.  These are described below.
 |                  | | is expected to be extremely rare and   |                                           |
 |                  | | requires formal institutional contact  |                                           |
 |                  | | with the aggrieved institution.        |                                           |
-|                  | | 
-|                  | | (3) Human sequence data that was not 
-|                  | | consented for unrestricted-access.
-|                  | |                       
-|                  | | (4) Serious events such as malfeasance 
-|                  | | or outright fraud
+|                  | |                                        |                                           |
+|                  | | (3) Human sequence data that was not   |                                           | 
+|                  | | consented for unrestricted-access.     |                                           |
+|                  | |                                        |                                           |
+|                  | | (4) Serious events such as malfeasance |                                           | 
+|                  | | or outright fraud                      |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
 
 .. _`contact ENA`: https://www.ebi.ac.uk/ena/browser/support
