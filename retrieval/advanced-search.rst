@@ -17,8 +17,8 @@ search interface:
 
 - `Find Neanderthal Read Data`_
 - `Find Samples Based On Checklists`_
-- 'Find all sequences from the United Kindom between 1980 and 2020'_
-- 'Find all samples vouchered in the Zoological Museum, University of Copenhagen collections'_
+- `Find all sequences from the United Kindom between 1980 and 2020`_
+- `Find all samples vouchered in the Zoological Museum, University of Copenhagen collections`_
 
 Find Neanderthal Read Data
 --------------------------
