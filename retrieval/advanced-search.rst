@@ -223,7 +223,7 @@ in the Zoological Museum, University of Copenhagen collections.
 9. The voucher related information is provided in a Darwin Core structure with 3 components:
    ‘Institution code:Collection code:material_id’. So, to search for samples from a specific
    institution we need to input the correct institution code. To find the institution code you can
-   use the ENA Source Attribute Helper. We have typed ‘ZMUC\*’ in the box as ‘ZMUC’ is the
+   use the `ENA Source Attribute Helper <https://www.ebi.ac.uk/ena/sah/>`_. We have typed ‘ZMUC\*’ in the box as ‘ZMUC’ is the
    institution code for the Zoological Museum, University of Copenhagen collections and ‘\*’
    is the wild card that allows to search for any collection and specimen id within that institution
 
