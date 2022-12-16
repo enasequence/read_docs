@@ -149,42 +149,42 @@ United Kingdom between 1980 and 2020.
 
 5. Then enter 'United Kingdom' to search for sequences originating from samples collected in the UK.
 
-7. Notice the filter country="United Kingdom" has been added to the Query box.
+6. Notice the filter country="United Kingdom" has been added to the Query box.
 
-8. As we also wish to filter by collection date, we need to add this option to the search query.
+7. As we also wish to filter by collection date, we need to add this option to the search query.
    This field can be found in the 'Collection event information' category.
 
 .. image:: images/advanced-search-9.png
 
-9. Then we have selected ‘Collection date’ from the dropdown menu. To add a range of dates, we'll need to
+8. Then we have selected ‘Collection date’ from the dropdown menu. To add a range of dates, we'll need to
    provide 2 date filters, one limiting before a certain date and one limiting after a certain date.
 
-10. First select the ‘<=’ operator and type ‘1980-01-01’ in the box.
+9. First select the ‘<=’ operator and type ‘1980-01-01’ in the box.
 
-11. Then to add an upper limit, we click on the button '+Add rule', select again ‘Collection date’
+10. Then to add an upper limit, we click on the button '+Add rule', select again ‘Collection date’
     from the dropdown menu, select the ‘>=’ operator and type the date (‘2020-12-31’) in the box.
     We kept the ‘AND’ button on the right selected as we wish to display only samples that match
     both these criteria.
 
-12. Check the Query box and we can see that we have entered all the parameters we want,
+11. Check the Query box and we can see that we have entered all the parameters we want,
     so click ‘Next’ twice to get to the Fields selection step.
 
 .. image:: images/advanced-search-10.png
 
-13. Now click the ‘Manually select fields’ box.
+12. Now click the ‘Manually select fields’ box.
 
-14. You can use the ‘Available Fields’ box to choose any fields you wish to see included in the table
+13. You can use the ‘Available Fields’ box to choose any fields you wish to see included in the table
     of results. Not all of the fields will be relevant. In this search, we wish to have a list of all
     the sequence accessions within a specific date, so we selected the accession, description and the
     collections date. We have also selected the scientific name as this may be relevant information.
     If you skip this step you will still be shown a list of accessions with descriptions, by default.
 
-15. When you are satisfied with the fields you have chosen, click ‘Search’ to see the results of your
+14. When you are satisfied with the fields you have chosen, click ‘Search’ to see the results of your
     query.
 
 .. image:: images/advanced-search-11.png
 
-16. If you want to run the query programmatically, you can use the 'Copy Curl Request' button.
+15. If you want to run the query programmatically, you can use the 'Copy Curl Request' button.
 
 
 Find all samples vouchered in the Zoological Museum, University of Copenhagen collections
@@ -214,13 +214,13 @@ in the Zoological Museum, University of Copenhagen collections.
    different fields in sample metadata that represent the different types of material that is
    vouchered: ‘specimen voucher’, ‘culture collection’ and ‘bio material’.
 
-7. These fields are in the ‘Sampling information’ category, so you can click on the blue button
+6. These fields are in the ‘Sampling information’ category, so you can click on the blue button
    on the left, or use the ‘Type to filter query params’ box to search for those specific parameters
 
-8. In the above box we have selected the ‘Sampling information’ category and then chosen ‘Specimen
+7. In the above box we have selected the ‘Sampling information’ category and then chosen ‘Specimen
    voucher’ from the dropdown menu
 
-9. The voucher related information is provided in a Darwin Core structure with 3 components:
+8. The voucher related information is provided in a Darwin Core structure with 3 components:
    ‘Institution code:Collection code:material_id’. So, to search for samples from a specific
    institution we need to input the correct institution code. To find the institution code you can
    use the `ENA Source Attribute Helper <https://www.ebi.ac.uk/ena/sah/>`_. We have typed ‘ZMUC\*’ in the box as ‘ZMUC’ is the
