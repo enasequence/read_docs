@@ -382,6 +382,16 @@ So we can add this to our search:
 
    https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=(specimen_voucher="ZMB:*" OR bio_material="ZMB:*") AND tax_tree(6447)&fields=specimen_voucher,bio_material,scientific_name
 
+
+We can see from our search that sequences from Mollusc samples we've identified are within the 'Moll' collections
+which verifies that we are retrieving the right sequences. In future, we could even simplify the search to look within
+this collection:
+
+.. code-block:: bash
+
+   https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=(specimen_voucher="ZMB:Moll:*" OR bio_material="ZMB:Moll:*")&fields=specimen_voucher,bio_material,scientific_name
+
+
 For any sequences of interest from the search result, you can retrieve them by ID from the Browser API in either
 EMBL flat file or FASTA format:
 
@@ -405,10 +415,6 @@ flat file or FASTA format:
 
    https://www.ebi.ac.uk/ena/browser/api/embl/search?result=sequence&query=(specimen_voucher="ZMB:*" OR bio_material="ZMB:*") AND tax_tree(6447)
    https://www.ebi.ac.uk/ena/browser/api/fasta/search?result=sequence&query=(specimen_voucher="ZMB:*" OR bio_material="ZMB:*") AND tax_tree(6447)
-
-
-The XML records can provide details on additional metadata that isn't indexed for search as well as cross-reference
-links.
 
 
 Fetching Large Sets of Results
