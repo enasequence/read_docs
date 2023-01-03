@@ -35,31 +35,12 @@ Service URL: https://www.ebi.ac.uk/ena/submit/webin-v2/
 Submission XML Format
 =====================
 
-The type of each submitted XML file must be specified at time of submission.
+In contrast to the Webin REST V1 where individual data objects (submission, runs, samples, etc.)
+are submitted as separate files, in the V2 endpoint they are submitted as a single file in the request body. This file 
+must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
+In practise, the XMLs are enclosed within the ``<WEBIN>...</WEBIN>`` tag.
 
-When using curl, each XML file is submitted using the ‘-F’ option:
-
-.. code-block:: bash
-
-    -F "file=@FILENAME"
-
-where the file referenced can contain a combination of the datatypes documented below:
-
-| ``SUBMISSION`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.submission.xsd>`_)
-| ``STUDY`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd>`_)
-| ``SAMPLE`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd>`_)
-| ``EXPERIMENT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_)
-| ``RUN`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_)
-| ``ANALYSIS`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_) 
-| ``PROJECT`` (`XML Schema <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd>`_)
-|
-You can include multiple records of the same type in the same submission as part of a ``SET``.
-For example, by grouping ``SAMPLE`` records in a ``<SAMPLE_SET></SAMPLE_SET>`` tag.
-
-In contrast to the Webin REST version where individual data objects (submissions, runs, experiments, etc.)
-are submitted as separate files, in the V2 endpoints they are submitted as one single file which conforms to the
-`Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
-A ``PROJECT`` and ``SAMPLE`` object can be submitted in XML format like this:
+For example, a ``PROJECT`` and ``SAMPLE`` object are submitted like this:
 
 .. code-block:: xml
 
@@ -162,8 +143,6 @@ A ``PROJECT`` and ``SAMPLE`` object can be submitted in XML format like this:
 	</SAMPLE>
       </SAMPLE_SET>
     </WEBIN>
-
-All the content from submission files can therefore be included within a ``<WEBIN>...</WEBIN>`` tag.
 
 ======================
 How to use the new API
