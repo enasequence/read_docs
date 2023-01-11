@@ -71,7 +71,7 @@ However, single and paired reads are accepted as Fastq files that meet the follo
 - The first line for each read must start with '@'.
 - The base calls and quality scores must be separated by a line starting with '+'.
 - Paired read names must either use Casava 1.8 read names
-(regular expression: `^@([a-zA-Z0-9_-]+:[0-9]+:[a-zA-Z0-9_-]+:[0-9]+:[0-9]+:[0-9-]+:[0-9-]+) ([12]):[YN]:[0-9]*[02468]:[ACGTN]+$`)
+(regular expression: `^@(.+)( +|\\t+)([0-9]+):[YN]:[0-9]*[02468]($|:.*$)`
 or must end with `/1` or `/2` optionally followed by a space and a comment.    
 - The Fastq files must be compressed using gzip or bzip2.
 - The regular expression for bases is "^([ACGTNactgn.]*?)$”
