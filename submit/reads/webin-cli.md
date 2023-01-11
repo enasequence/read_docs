@@ -181,6 +181,7 @@ For example, the following manifest file represents a multi-fastq submission:
 - Illumina MiSeq
 - Illumina MiniSeq
 - Illumina NovaSeq 6000
+- NextSeq 1000
 - NextSeq 500
 - NextSeq 550
 - PacBio RS
