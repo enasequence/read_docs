@@ -296,6 +296,8 @@ For example, the following manifest file represents a multi-fastq submission:
 - Tethered Chromatin Conformation Capture: 
 - OTHER: Library strategy not listed.
 
+
+
 ## CRAM file validation
 
 ### Reference sequence validation
@@ -312,3 +314,8 @@ where `$HOME` is the home directory for the user executing the program.
  
 The cache for reference sequences is configured using the `REF_PATH` and `REF_CACHE` environmental 
 variables as in [samtools](http://www.htslib.org/doc/samtools.html).
+
+## Webin-CLI Validation
+
+When submitting data using the Webin command line interface, your files will be validated and uploaded to your private Webin file upload area in webin.ebi.ac.uk. Any validation error reports are written into the `<outputDir>/<context>/<name>/validate` directory. Read more about validation reports on the [Webin-CLI Submissions](../general-guide/webin-cli.html) section.
+
