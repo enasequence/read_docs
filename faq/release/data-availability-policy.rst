@@ -9,11 +9,11 @@ these data.  These are described below.
 |   Status name    |   Causes                                 |   Implications                            |
 +==================+==========================================+===========================================+
 | **Public**       | | Data are submitted with no request for | Data are fully available.                 |
-|                  | | confidential hold prior to publication |                                           |
+|                  | | private hold prior to publication      |                                           |
 |                  | | or have reached an owner-agreed public |                                           |
 |                  | | release date.                          |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
-| **Confidential** | | Data owner requires and indicates that | | Data are not available publicly through |
+| **Private**      | | Data owner requires and indicates that | | Data are not available publicly through |
 |                  | | confidentiality is required until a    | | any means. A release date is            |
 |                  | | release date or publication in the     | | recorded for the data, which are        |
 |                  | | literature, whichever comes earlier.   | | subsequently and automatically released |
@@ -48,7 +48,7 @@ these data.  These are described below.
 +------------------+------------------------------------------+-------------------------------------------+
 | **Temporarily**  | | Data owners realize after sequences    | | Data are removed where possible from    |
 | **Suppressed**   | | have been released that they failed to | | direct search tools (such as text and   |
-|                  | | request a confidential status, either  | | sequence similarity search) but remain  |
+|                  | | request a private status, either       | | sequence similarity search) but remain  |
 |                  | | at the the time of submission, or      | | available by accession number.          |
 |                  | | within the period between completion   | | Data will be re-released when published |
 |                  | | of submission processing and the date  | | or after a certain date.                |
