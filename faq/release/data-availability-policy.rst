@@ -13,7 +13,7 @@ these data.  These are described below.
 |                  | | or have reached an owner-agreed public |                                           |
 |                  | | release date.                          |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
-| **Confidential** | | Data owner requires and indicates that | | Data are not available publicly through |
+| **Private**      | | Data owner requires and indicates that | | Data are not available publicly through |
 |                  | | confidentiality is required until a    | | any means. A release date is            |
 |                  | | release date or publication in the     | | recorded for the data, which are        |
 |                  | | literature, whichever comes earlier.   | | subsequently and automatically released |
@@ -65,7 +65,7 @@ these data.  These are described below.
 |                  | | a new record with a new accession.     | | identifiers leads to a re-direct to new |
 |                  | |                                        | | records available under the new         |
 |                  | |                                        | | accession identifiers. In some cases,   |
-|.                 | |                                        | | the original accession is added to the  |
+|                  | |                                        | | the original accession is added to the  |
 |                  | |                                        | | new record as a secondary accession.    |
 +------------------+------------------------------------------+-------------------------------------------+
 | **Withdrawn**    | | (1) The submitter has requested a      | | Data are not directly available         |
