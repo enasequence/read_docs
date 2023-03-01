@@ -62,15 +62,3 @@ Typical reasons for updating experiment XMLs include:
 </EXPERIMENT_ATTRIBUTE>
 ```
 
-## Reasons for Updating Run XML
-
-Most common reason for updating run XMLs is to change the file `checksum`:
-
-```
-<FILE filename="mantis_religiosa_R1.fastq.gz" filetype="fastq"
-    checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
-```
-
-You may need to change the `checksum` attribute for a file
-when a file has failed to be archived because of a mismatch
-between the provided and computed MD5 checksums.
