@@ -394,7 +394,8 @@ java -Dftp.proxyHost=proxy.com -Dftp.proxyPort=8080 -jar webin-cli-<version>.jar
 By default the Webin command line interface will use FTP to upload files to the
 webin.ebi.ac.uk server. Alternatively, you may use the Aspera protocol by installing
 [Aspera Cli](https://downloads.asperasoft.com/en/downloads/62) and specifying the
-`-ascp` option.
+`-ascp` option. Aspera is a commercial file transfer protocol that may provide better 
+transfer speeds than FTP making it useful when uploading larger files.
 
 Please note that that the folder containing the `ascp` command line program
 must be included in the PATH variable. The `ascp` command can be found from
