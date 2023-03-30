@@ -52,8 +52,10 @@ in the notification email, as is the case above.
 Alternatively, if you used the graphical Webin File Uploader program, the MD5 will have been calculated automatically
 for you.
 
-The error could indicate a failure in the file transfer process as described, or it could be that the wrong MD5 value
-was registered in the first place.
+The error could indicate any of the following:
+1. A failure in the file transfer process as described
+2. The MD5 value was not registered in lower case letters
+3. The wrong MD5 value was registered in the first place
 
 
 The Solution
