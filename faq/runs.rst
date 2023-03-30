@@ -54,7 +54,7 @@ for you.
 
 The error could indicate any of the following:
 1. A failure in the file transfer process as described
-2. The MD5 value is not registered in lower case letters
+2. The MD5 value was not registered in lower case letters
 3. The wrong MD5 value was registered in the first place
 
 
