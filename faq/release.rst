@@ -49,7 +49,6 @@ Can I Make My Study Partially Available?
 Whether you wish to make only parts of your submission available, or wish to make your submission available only
 to select users, this is unfortunately not a service we provide.
 Our policy is that submissions should be available in whole, to all users.
-If you need evidence of your submission for reviewers, forward them the email confirming your successful submission.
 If there are parts of your study which for some reason you no longer wish to release, please contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
