@@ -2,7 +2,8 @@
 Spatiotemporal Metadata Standards
 =================================
 
-The `International Sequence Database Collaboration (INSDC) <https://www.insdc.org/>`_ has announced `further details <>`_ on
+The `International Sequence Database Collaboration (INSDC) <https://www.insdc.org/>`_ has announced
+`further details <https://www.insdc.org/news/insdc-spatiotemporal-metadata-missing-values-update-03-04-2023/>`_ on
 the new standards being introduced for reporting spatiotemporal metadata as part of our aim to make sequence data more
 findable, accessible, interoperable and reusable (FAIR). The ENA and its INSDC partners are set to introduce mandatory
 spatio-temporal information for all new samples **by the end of May 2023** unless a valid exemption is declared.
@@ -11,7 +12,9 @@ should be able to provide and where this can not,
 `suitable reporting options <https://www.insdc.org/submitting-standards/missing-value-reporting/>`_ are available.
 We look forward to seeing the positive impact this has on incoming data.
 
-Implementation plans are shared in the full `INSDC announcement <>`_ with ENA-specific details below.
+Implementation plans are shared in the full
+`INSDC announcement <https://www.insdc.org/news/insdc-spatiotemporal-metadata-missing-values-update-03-04-2023/>`_ with
+ENA-specific details below.
 
 
 Implementation in the ENA - with immediate effect
@@ -68,7 +71,7 @@ After May 2023, for sample registration, all checklists including the default ch
 
 Where you are unable to provide metadata to the nearest country and year, there are valid exceptions to this rule and
 a valid missing value will need to be provided following the INSDC
-`guidelines <https://www.insdc.org/submitting-standards/missing-value-reporting/>`_ for reporting missing metadata.
+`guidelines for reporting missing metadata <https://www.insdc.org/submitting-standards/missing-value-reporting/>`_.
 
 Please note that from this date, when submitting samples directly via BioSamples with the intention of linking these
 to ENA data, please ensure you provide these metadata in the BioSample or use a valid ENA standard when registering.
