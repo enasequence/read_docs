@@ -37,7 +37,7 @@ the end of May 2023:
 |                            | | interval. In case no exact time is available, the date/time can  |
 |                            | | be right truncated i.e. all of these are valid ISO8601 compliant |
 |                            | | times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10;           |
-|                            | |  2008-01-23; 2008-01; 2008. `Missing value reporting`_ is also   |
+|                            | | 2008-01-23; 2008-01; 2008. `Missing value reporting`_ is also    |
 |                            | | valid.                                                           |
 +----------------------------+--------------------------------------------------------------------+
 
