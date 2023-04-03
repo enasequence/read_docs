@@ -24,24 +24,22 @@ All sample checklists now recommend the following fields for reporting spatiotem
 Both fields are now included in sample checklist template spreadsheets by default but will not be mandated until
 the end of May 2023:
 
-+----------------------------------------------+----------------------------------------------------------+
-| Field name                                   | Field description                                        |
-+==============================================+==========================================================+
-| **Geographic location (country and/or sea)** | The location the sample was collected from with the      |
-|                                              | intention of sequencing as defined by the country or     |
-|                                              | sea. Country or sea names should be chosen from the      |
-|                                              | `INSDC controlled vocabulary`_.                          |
-|                                              | `Missing value reporting`_ is also valid.                |
-+----------------------------------------------+----------------------------------------------------------+
-| **collection date**                          | The date the sample was collected with the intention of  |
-|                                              | sequencing, either as an instance (single point in time) |
-|                                              | or interval. In case no exact time is available, the     |
-|                                              | date/time can be right truncated i.e. all of these are   |
-|                                              | valid ISO8601 compliant times:                           |
-|                                              | 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10;          |
-|                                              | 2008-01-23; 2008-01; 2008. `Missing value reporting`_ is |
-|                                              | also valid.                                              |
-+----------------------------------------------+----------------------------------------------------------+
++----------------------------+--------------------------------------------------------------------+
+| Field name                 | Field description                                                  |
++============================+====================================================================+
+| | **Geographic location**  | | The location the sample was collected from with the intention of |
+| | **(country and/or sea)** | | sequencing as defined by the country or sea. Country or sea      |
+|                            | | names should be chosen from the `INSDC controlled vocabulary`_.  |
+|                            | | `Missing value reporting`_ is also valid.                        |
++----------------------------+--------------------------------------------------------------------+
+| | **collection date**      | | The date the sample was collected with the intention of          |
+|                            | | sequencing, either as an instance (single point in time) or      |
+|                            | | interval. In case no exact time is available, the date/time can  |
+|                            | | be right truncated i.e. all of these are valid ISO8601 compliant |
+|                            | | times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10;           |
+|                            | |  2008-01-23; 2008-01; 2008. `Missing value reporting`_ is also   |
+|                            | | valid.                                                           |
++----------------------------+--------------------------------------------------------------------+
 
 .. _`INSDC controlled vocabulary`: https://www.insdc.org/submitting-standards/country-qualifier-vocabulary/
 .. _`Missing value reporting`: https://www.insdc.org/submitting-standards/missing-value-reporting/
