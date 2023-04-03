@@ -145,6 +145,7 @@ In this case, as you know the ocean and the year of collection, there is no reas
 You would report:
 
 **Geographic location (country and/or sea)** = Arctic Ocean
+
 **collection date**  = 2019
 
 
@@ -157,6 +158,7 @@ standard and you can report this as a reason that the metadata are missing.
 In this case, during initial sample registration you would report:
 
 **Geographic location (country and/or sea)**  = missing: data agreement-established pre-2023
+
 **collection date** = missing: data agreement-established pre-2023
 
 Where this complies with the agreement made (such as this example), submissions can be updated at a later date to
@@ -170,7 +172,9 @@ including the timezone. You should report the country as required but can also i
 For example:
 
 **Geographic location (country and/or sea)** = France
+
 **Geographic location (region and locality)** = Burgundy
+
 **collection date**  = 2023-01-05T17:22:05Z+01
 
 
@@ -185,6 +189,7 @@ could report the date in which you collected the control sample.
 In this case, you would report:
 
 **Geographic location (country and/or sea)** = missing: control sample
+
 **collection date** = 2020-05-25
 
 
