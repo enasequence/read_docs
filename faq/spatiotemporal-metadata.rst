@@ -31,7 +31,7 @@ the end of May 2023:
 | | **(country and/or sea)** | | sequencing as defined by the country or sea. Country or sea      |
 |                            | | names should be chosen from the `INSDC controlled vocabulary`_.  |
 |                            | | `Missing value reporting`_ is also valid.                        |
-+============================+====================================================================+
++----------------------------+--------------------------------------------------------------------+
 | | **collection date**      | | The date the sample was collected with the intention of          |
 |                            | | sequencing, either as an instance (single point in time) or      |
 |                            | | interval. In case no exact time is available, the date/time can  |
@@ -39,7 +39,7 @@ the end of May 2023:
 |                            | | times: 2008-01-23T19:23:10+00:00; 2008-01-23T19:23:10;           |
 |                            | |  2008-01-23; 2008-01; 2008. `Missing value reporting`_ is also   |
 |                            | | valid.                                                           |
-+============================+====================================================================+
++----------------------------+--------------------------------------------------------------------+
 
 .. _`INSDC controlled vocabulary`: https://www.insdc.org/submitting-standards/country-qualifier-vocabulary/
 .. _`Missing value reporting`: https://www.insdc.org/submitting-standards/missing-value-reporting/
