@@ -67,7 +67,7 @@ Consider the following tips as you complete your spreadsheet:
      - Pre-registered sample accession (ERSxxxxx)
      - BioSample accession (SAMEAxxxxx)
      - SRA samples accession (SRSxxxxx)
-     - Sample alias
+     - Sample alias 
 - Use only valid ASCII characters in filling out the spreadsheet
 - When you come to submit it, the file must use either a '.tsv' or '.tab' format
 - Before submitting, you must compress your spreadsheet with GZIP or BZIP2
