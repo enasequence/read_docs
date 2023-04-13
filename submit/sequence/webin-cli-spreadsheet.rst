@@ -59,7 +59,8 @@ Consider the following tips as you complete your spreadsheet:
   DNA characters A, C, T, G, as well as N
 - Do not modify the first two lines of the spreadsheet
 - Do not edit the column names
-- The 'Organism' field must match with the scientific name of a species-rank taxon in the NCBI Taxonomy database
+- The 'Organism' field must match with the scientific name of a species-rank taxon in the NCBI Taxonomy database or a
+  pre-registered sample accession (ERSxxxxx) can be included instead
   - See `tips for sample taxonomy <../../faq/taxonomy.html>`_ for help with how to identify an appropriate name
 - Use only valid ASCII characters in filling out the spreadsheet
 - When you come to submit it, the file must use either a '.tsv' or '.tab' format

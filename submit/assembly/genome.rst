@@ -116,10 +116,9 @@ The default assumption is that an assembly is contig-level, thus if a submission
 additional context, it is treated as a contig-level assembly
 
 This assembly level only requires information on the sequences and annotation (if any).
-You will receive an error if less than 2 or more than 1,000,000 sequences are submitted.
-If you have less than 2 sequences, then you  will need to submit at a higher assembly level.
-If you have more than 1,000,000 contigs in your submission, please
-`contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+You will receive an error if only 1 sequence or more than 1,000,000 sequences are submitted. If you do not have a
+minimum of 1 contig, then you will need to submit at a higher assembly level. If you have more than 1,000,000 contigs
+in your submission, please `contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Seen an example contig-level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_000003085
 
