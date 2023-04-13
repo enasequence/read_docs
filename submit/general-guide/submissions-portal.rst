@@ -30,7 +30,7 @@ Those which are covered in this article are bolded:
 - Registration of new taxa
 - **Reports on files which have been uploaded but not submitted**
 
-All reports are enabled by the `Webin Reports Service </reports-service.html>`_, an API.
+All reports are enabled by the `Webin Reports Service <reports-service.html>`_, an API.
 
 
 Metadata Reports

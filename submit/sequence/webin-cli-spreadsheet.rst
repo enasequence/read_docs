@@ -12,7 +12,7 @@ As mentioned there, you may prepare your submissions in a spreadsheet format in 
 that an appropriate checklist exists.
 Please browse the selection of available checklists to determine if this route is correct for you:
 
-- `List of Annotation Checklists <sequence/annotation-checklists.html>`_
+- `List of Annotation Checklists <annotation-checklists.html>`_
 
 If you are satisfied that there is an appropriate checklist, please read on to learn how you may download and complete a
 template.
@@ -26,7 +26,7 @@ To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/lo
 'Generate Annotated Sequence Spreadsheet' button.
 
 1. You will be presented with a set of checklist groups: select the appropriate one for your submission, by reference to
-   the `List of Annotation Checklists <sequence/annotation-checklists.html>`_ if needed
+   the `List of Annotation Checklists <annotation-checklists.html>`_ if needed
 2. Next, select the actual checklist you intend to use
 
 .. image:: ../images/wsp_sequence_1_select_checklist.png

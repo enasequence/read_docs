@@ -10,8 +10,8 @@ sequencing platform and library protocols.
 A run object represents a lane (or equivalent) on an sequencing machine
 and is used to attach sequence read data to experiments.
 
-The experiment XML format is defined by `SRA.experiment.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_
-XML Schema, and the run XML format is defined by `SRA.run.xsd <ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_
+The experiment XML format is defined by `SRA.experiment.xsd <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_
+XML Schema, and the run XML format is defined by `SRA.run.xsd <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_
 XML Schema.
 
 Object relationships
@@ -78,7 +78,7 @@ the example below this reference is made using an accession number:
     <STUDY_REF accession="ERP123456"/>
 
 Either an `accession` or a `refname` (alias) can be used in the reference. If you are using the
-`accession` attribute you can use both ERP amd PRJ accessions when referring
+`accession` attribute you can use both ERP and PRJ accessions when referring
 to studies.
 
 Experiment XML: associated with sample
@@ -192,12 +192,12 @@ Run XML:
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
                     <FILE filename="mantis_religiosa_R1.fastq.gz" filetype="fastq"
                         checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
-                    <FILE filename="antis_religiosa_R2.fastq.gz" filetype="fastq"
+                    <FILE filename="mantis_religiosa_R2.fastq.gz" filetype="fastq"
                         checksum_method="MD5" checksum="183d6a24e0c3704e993bebe75bbbd989"/>
                 </FILES>
             </DATA_BLOCK>
@@ -271,7 +271,7 @@ note that `filetype` has been set to `bam`.
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
                     <FILE filename="mantis_religiosa_R1.bam" filetype="bam"
@@ -291,7 +291,7 @@ note that `filetype` has been set to `cram`.
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
                     <FILE filename="mantis_religiosa_R1.cram" filetype="cram"
@@ -300,6 +300,41 @@ note that `filetype` has been set to `cram`.
             </DATA_BLOCK>
         </RUN>
     </RUN_SET>
+    
+Run XML: Multi-fastq
+--------------------
+
+Below is an example of a RUN XML when multi-fastq data is submitted. Please
+note that read_type qualifiers are required for each file.
+
+.. code-block:: xml
+
+    <DATA_BLOCK>
+        <FILES>
+            <FILE filename="single_cell_S1_L001_I1_001.fastq.gz"  
+                filetype="fastq" checksum_method="MD5"    
+                checksum="40d636c363e1a3a5232d3d1e2feb2c70">
+                    <READ_TYPE>feature_barcode</READ_TYPE>
+            </FILE>
+            <FILE filename="single_cell_S1_L001_R1_001.fastq.gz"
+                filetype="fastq" checksum_method="MD5"    
+                checksum="efdb826f2627c2ac449de5aaf2a61aab">
+                    <READ_TYPE>paired</READ_TYPE>
+                    <READ_TYPE>umi_barcode</READ_TYPE>
+            </FILE>
+            <FILE filename="single_cell_S1_L001_R2_001.fastq.gz"
+                filetype="fastq" checksum_method="MD5"    
+                checksum="4b68b447d43eea5b5e75e23cfb4da82e">
+                    <READ_TYPE>sample_barcode</READ_TYPE>
+            </FILE>
+            <FILE filename="single_cell_S1_L001_R3_001.fastq.gz"
+                filetype="fastq" checksum_method="MD5"    
+                checksum="977a3fded781e6141359b47d7c6177a1">
+                    <READ_TYPE>paired</READ_TYPE>
+                    <READ_TYPE>cell_barcode</READ_TYPE>
+            </FILE>
+        </FILES>
+    </DATA_BLOCK>
 
 Run XML: Oxford Nanopore
 ------------------------
@@ -312,10 +347,10 @@ run XML should look as follows:
 
     <RUN_SET>
         <RUN alias="run_mantis_religiosa" center_name="">
-            <EXPERIMENT_REF refname="exp_run_mantis_religiosa"/>
+            <EXPERIMENT_REF refname="exp_mantis_religiosa"/>
             <DATA_BLOCK>
                 <FILES>
-                    <FILE filename="exp_run_mantis_religiosa.tar.gz" filetype="OxfordNanopore_native"
+                    <FILE filename="mantis_religiosa.tar.gz" filetype="OxfordNanopore_native"
                         checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
                 </FILES>
             </DATA_BLOCK>

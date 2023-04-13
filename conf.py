@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'ENA Training Modules'
-copyright = u'2017-2018, European Nucleotide Archive (ENA). Licensed under the Apache License 2.0.'
+copyright = u'2017-2022, European Nucleotide Archive (ENA). Licensed under the Apache License 2.0.'
 author = u'The European Nucleotide Archive (ENA) team.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -168,4 +168,3 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
-

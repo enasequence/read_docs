@@ -263,7 +263,7 @@ Second, run the Webin-CLI submission command:
 
 ::
 
-    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -submit
 
 
 In both cases, your prospective submission will be validated in full, and the result of this reported to you.

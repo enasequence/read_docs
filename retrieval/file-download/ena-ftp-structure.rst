@@ -42,29 +42,34 @@ with some also available as FASTA.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/assembly/
 
 | **WGS**
-| Whole genome shotgun contig-level assembly, one multi-record flatfile and one multi-FASTA file per sequencing project
+| Whole genome shotgun contig-level assembly. Has for each sequencing project: the master record in EMBL flatfile format,
+| a gzipped file with all the sequences in flatfile format (e.g. AAAA02.dat.gz), and the same sequences in FASTA format (e.g. AAAA02.fasta.gz).
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/
 
 | **TSA**
-| Transcriptome shotgun assembly records, one multi-record flatfile and one multi-FASTA file per sequencing project
+| Transcriptome shotgun assembly records. Similar to WGS files.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/tsa/
 
+| **TLS**
+| Targeted locus study sequences. Similar to WGS & TSA files.
+| ftp://ftp.ebi.ac.uk/pub/databases/ena/tls/
+
 | **Sequence**
-| Generalised sequence category, organised by sequence type and taxon class
+| Generalised sequence category, organised by sequence type and taxonomic division.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/sequence/
+| Full snapshot of all public records: ftp://ftp.ebi.ac.uk/pub/databases/ena/sequence/con-std_latest
+| Daily incremental update files: ftp://ftp.ebi.ac.uk/pub/databases/ena/sequence/update
 
 | **Coding**
-| Protein-coding sequences, organised by sequence type and accession number
+| Protein-coding sequences, organised by sequence type and taxonomic division.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/coding/
+| Full snapshot of all public records from CON & STD type parent sequences: ftp://ftp.ebi.ac.uk/pub/databases/ena/coding/con-std_latest
+| Records from WGS/TSA/TLS set type parent sequences: ftp://ftp.ebi.ac.uk/pub/databases/ena/coding/wgs/public etc.
 
 | **Non-Coding**
-| Non-protein-coding sequences, organised by sequence type and accession number
+| Non-protein-coding sequences, organised by sequence type and taxonomic division. Similar file structure to Coding.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/non-coding/
 
 | **rRNA**
-| Ribosomal RNA sequences, organised by sequence type and accession number
+| Ribosomal RNA sequences, organised by sequence type and taxonomic division. Similar file structure to Coding.
 | ftp://ftp.ebi.ac.uk/pub/databases/ena/rRNA/
-
-| **TLS**
-| Targeted locus study sequences, one multi-record flatfile and one multi-FASTA file per sequencing project
-| ftp://ftp.ebi.ac.uk/pub/databases/ena/tls/

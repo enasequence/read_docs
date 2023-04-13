@@ -48,6 +48,7 @@ bottom of the page.
    :maxdepth: 1
 
    faq/release
+   faq/spatiotemporal-metadata
    faq/runs
    faq/taxonomy
    faq/taxonomy_requests
@@ -56,6 +57,7 @@ bottom of the page.
    faq/locus_tags
    faq/archive-generated-files
    faq/third_party_tools
+   faq/data_brokering
 
 
 Introductory Webinar

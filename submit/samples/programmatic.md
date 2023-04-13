@@ -32,6 +32,10 @@ A sample object is submitted in XML format like this:
         <VALUE>Mucosa of stomach</VALUE>
       </SAMPLE_ATTRIBUTE>
       <SAMPLE_ATTRIBUTE>
+        <TAG>project name</TAG>
+        <VALUE>gut microbiome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
         <TAG>human-associated environmental package</TAG>
         <VALUE>human-associated</VALUE>
       </SAMPLE_ATTRIBUTE>
@@ -76,7 +80,7 @@ A sample object is submitted in XML format like this:
 
 You can register one or more samples at the same time by using one `<SAMPLE></SAMPLE>` block for each sample.
 
-The sample XML format is defined by the [SRA.sample.xsd](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd) XML schema.
+The sample XML format is defined by the [SRA.sample.xsd](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd) XML schema.
 
 Most of the sample information comes in the form of `<TAG>` and `<VALUE>` pairs that belong in `<SAMPLE_ATTRIBUTE>`
 blocks. You can have any number of `<SAMPLE_ATTRIBUTE>` blocks in your samples.
