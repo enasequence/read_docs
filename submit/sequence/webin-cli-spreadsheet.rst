@@ -61,6 +61,13 @@ Consider the following tips as you complete your spreadsheet:
 - Do not edit the column names
 - The 'Organism' field must match with the scientific name of a species-rank taxon in the NCBI Taxonomy database
   - See `tips for sample taxonomy <../../faq/taxonomy.html>`_ for help with how to identify an appropriate name
+  OR
+  one of the following can be included instead:
+
+     - Pre-registered sample accession (ERSxxxxx)
+     - BioSample accession (SAMEAxxxxx)
+     - SRA samples accession (SRSxxxxx)
+     - Sample alias 
 - Use only valid ASCII characters in filling out the spreadsheet
 - When you come to submit it, the file must use either a '.tsv' or '.tab' format
 - Before submitting, you must compress your spreadsheet with GZIP or BZIP2

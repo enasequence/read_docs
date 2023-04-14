@@ -32,6 +32,11 @@ Please do this before attempting any of the guides shown below:
 
 - `Register a Study <study.html>`_
 
+There is also an option to link sequences to sample accessions in annotation checklists if preferred. However, this is
+not mandatory.
+
+- `Register a Sample <sample.html>`_
+
 .. note::
    This submission route is for sets of stand-alone targeted assembled and annotated sequences only.
    If you intend to submit an annotated **assembly** such as a genome, please follow the `assembly submission guidelines
@@ -50,7 +55,7 @@ This accession number is for internal processing only and will not be visible in
 this number in publications, etc.
 Furthermore, if your submission includes multiple sequences, the ERZ accession will not be unique to any one of them.
 Instead, you will receive additional post-processing accession numbers for your sequences via email, each of which will
-be unique to one of your sequences.
+be unique to one of your sequences. You may also link sample accessions to your sequences if needed.
 
 Always make a note of any accessions you receive as these are the unique identifiers for each of your submissions to
 ENA.
