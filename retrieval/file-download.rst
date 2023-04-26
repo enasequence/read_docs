@@ -107,8 +107,8 @@ Using Globus
 
 Globus provides a more user-friendly, feature-rich directory interface for
 interacting with the FTP server.
-Files can be downloaded through `Globus`_ 'Shared EMBL-EBI public endpoint'
-endpoint from the '/gridftp/ena' subfolder:
+Files can be downloaded through `Globus`_ 'EMBL-EBI Public Data'
+endpoint from the '/vol1' subfolder:
 
 .. image:: images/file-download-globus.png
 
@@ -121,12 +121,18 @@ To infer the Globus path for a file from the ftp path, do the following:
 
 e.g. ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
 
-Replace upto and including vol1 with /gridftp/ena
+Remove the ftp url from above
 
 i.e. the above becomes:
 
-/gridftp/ena/fastq/ERR164/ERR164407/ERR164407.fastq.gz
+/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
 
+Note : The below globus endpoints have been retired :
+
+EMBL-EBI Private endpoint
+EMBL-EBI Private endpoint 2
+EMBL-EBI Public endpoint
+Shared EMBL-EBI public endpoint
 
 Using enaBrowserTools
 ---------------------
