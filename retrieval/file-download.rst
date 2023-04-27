@@ -129,10 +129,10 @@ i.e. the above becomes:
 
 Note : The below globus endpoints have been retired :
 
-EMBL-EBI Private endpoint
-EMBL-EBI Private endpoint 2
-EMBL-EBI Public endpoint
-Shared EMBL-EBI public endpoint
+- EMBL-EBI Private endpoint
+- EMBL-EBI Private endpoint 2
+- EMBL-EBI Public endpoint
+- Shared EMBL-EBI public endpoint
 
 Using enaBrowserTools
 ---------------------
