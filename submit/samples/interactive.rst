@@ -56,15 +56,26 @@ Step 2: Complete Template Spreadsheet
 
 Once you have downloaded the template spreadsheet, you should open it in an appropriate spreadsheet editing program,
 such as Microsoft Excel or Google Sheets.
+
+.. image:: ../images/wsp_sample_4_excel_spreadsheet.png
+ :width: 5000
+
+
 Consider the following tips as you complete your spreadsheet:
 
+- **Do not remove the first three lines of the spreadsheet**, which specify the checklist in use, field names and units row. Please retain all of these rows for a successful submission
+- **Enter data in row 4 of the spreadsheet onwards**. Use row 3 (#units) to specify units where required by the checklist. Please retain this row even if no fields require it
 - Use the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_ to look up the requirements and
   restrictions for each field
-- Do not edit the first line of the spreadsheet, which specifies the checklist in use
+- For any mandatory terms you are not able to provide information on, please select an appropriate term from the `INSDC Missing Terms List <https://ena-docs.readthedocs.io/en/latest/submit/samples/missing-values.html?#insdc-missing-value-reporting-terms>`_
 - You can add custom fields by inserting new column headers
 - Do not edit the existing column names
 - Use only valid ASCII characters
 - When you come to submit the file must use one of the following extensions: .csv, .tsv, .tab, .txt
+
+
+
+
 
 Once you are satisfied with the content of your spreadsheet, be sure to save it then proceed to the next step.
 

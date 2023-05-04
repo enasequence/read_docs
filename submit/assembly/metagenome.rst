@@ -33,18 +33,19 @@ To best represent your data, please submit as many of the levels as you can that
 
 
 .. note::
-   Submissions of binned metagenomes or Metagenome-Assembled Genomes follow different rules as they are considered
-   derived assemblies.
+   Submissions of binned metagenomes or Metagenome-Assembled Genomes differ from regular assemblies as they are
+   considered derived assemblies.
 
-When it comes to submission of derived assemblies you will be asked to register additional 'virtual' samples for each
+When it comes to submission of derived assemblies you will be asked to register additional samples for each
 assembly (a **binned** sample or a **MAG** sample).
 
 .. image:: ../images/metadata_model_derivedanalysis.png
    :align: center
 
-This is because a binned assembly or MAG is not an assembly of the whole set of raw metagenomic data but in fact an
-assembly derived from a smaller subset of those data. These virtual samples represents the subset of that data and
-hold all metadata related to the taxonomy of that subset as well as methods used to derive it.
+This is because a binned assembly or MAG is not an assembly of all the data from the collected sample so linking to
+the environmental sample is misleading and causes incorrect taxonomy assignment. As a result, an additional
+sample needs registering to represent the subset of those data that were assembled. This sample will also hold all
+metadata related to the taxonomy of that subset as well as methods used to derive it.
 
-All derived assemblies from an environmental source require a virtual derived sample so please follow instructions
-carefully.
+All derived assemblies from an environmental source require an additional virtual derived sample so please follow
+instructions carefully.

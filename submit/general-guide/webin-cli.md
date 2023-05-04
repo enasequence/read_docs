@@ -34,13 +34,12 @@ Webin-CLI has been tested against openjdk version 1.8.0_212. You are recommended
 
 Download openapi JDKs from the below links:
 
-https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot
+[https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot)
 
 Download Oracle JREs from the below links:
 
 - [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 - [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
 
 ## Run the program as a Java jar file
 
@@ -72,12 +71,12 @@ The command line `<options>` are explained below.
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
     <iframe src="https://www.youtube.com/embed/ChCsqoq-r-Y" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
+</div></br>
 
 
 ## Command Line Options
 
-- `-context`: the   submission type:
+- `-context`: the submission type:
     - `-context genome`
     - `-context transcriptome`
     - `-context sequence`
@@ -97,7 +96,6 @@ files will not be archived.
 should be installed and path to executable "ascp" should be in PATH variable.
 - `-version`: prints the version number of the program and exists.
 - `-help`: detailed information about the different options.
-
 
 ## Submission Process
 
@@ -120,6 +118,11 @@ The following picture illustrates the stages of the submission process:
 
 ![Submission process](../images/webin-cli_01.png)
 
+Bulk submissions for reads, unannotated genome assemblies, targeted sequences and taxonomic reference data can be
+made with Webin-CLI using the following tool:
+
+[ **Webin-CLI Bulk Submissions Tool** ](https://github.com/enasequence/ena-bulk-webincli)
+
 
 ### Stage 1: Pre-register Study and Sample
 
@@ -137,11 +140,15 @@ The manifest file is specified using the `-manifest <filename>` option.
 
 #### Manifest File Format
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-- Field name (first column): case insensitive field name   
-- Field value (second column): field value
+The manifest file can be submitted as either a plain text file or a JSON file.
 
 The manifest file contains metadata fields and file name fields.
+
+##### Text Manifest File
+
+The text manifest file format has two columns separated by a tab (or any whitespace characters):
+- Field name (first column): case insensitive field name   
+- Field value (second column): field value
 
 Examples of metadata fields are study and sample references:
 
@@ -178,7 +185,58 @@ MINGAPLENGTH   TODO
 MOLECULETYPE   genomic DNA
 FASTA   genome.fasta.gz
 ```
+##### JSON Manifest File
 
+The JSON manifest file format provides an option to prepare your submission in JSON. This
+can also be specifically used for more complex data types, such as multi-fastq submissions
+e.g. for single-cell data.
+
+The manifest file has two columns separated by a colon:
+- Field name (first column): case insensitive field name
+- Field value (second column): field value
+
+For example, the following manifest file represents a multi-fastq submission for single-cell data:
+
+```
+{
+ "study": TODO,
+ "sample": TODO,
+ "name": TODO,
+ "platform": TODO,
+ "instrument": TODO,
+ "insert_size": TODO,
+ "libraryName": TODO,
+ "library-source": TODO,
+ "library_selection": TODO,
+ "libraryStrategy": TODO,
+ "fastq": [
+   {
+     "value": "single_cell_S1_L001_I1_001.fastq.gz",
+     "attributes": {
+       "read_type": "feature_barcode"
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R1_001.fastq.gz",
+     "attributes": {
+       "read_type": ["paired", "umi_barcode"]
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R2_001.fastq.gz",
+     "attributes": {
+       "read_type": "sample_barcode"
+     }
+   },
+   {
+     "value": "single_cell_S1_L001_R3_001.fastq.gz",
+     "attributes": {
+       "read_type": ["paired", "cell_barcode"]
+     }
+   }
+ ]
+}
+```
 
 #### Manifest File Types
 
@@ -336,7 +394,8 @@ java -Dftp.proxyHost=proxy.com -Dftp.proxyPort=8080 -jar webin-cli-<version>.jar
 By default the Webin command line interface will use FTP to upload files to the
 webin.ebi.ac.uk server. Alternatively, you may use the Aspera protocol by installing
 [Aspera Cli](https://downloads.asperasoft.com/en/downloads/62) and specifying the
-`-ascp` option.
+`-ascp` option. Aspera is a commercial file transfer protocol that may provide better 
+transfer speeds than FTP making it useful when uploading larger files.
 
 Please note that that the folder containing the `ascp` command line program
 must be included in the PATH variable. The `ascp` command can be found from

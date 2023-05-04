@@ -28,6 +28,10 @@ When you are using the test service the receipt XML will contain the following m
 It is advisable to first test your submissions using the Webin test service before
 establising an automated submission pipeline.
 
+## Webin Rest V2 API
+
+Programmatic submissions can also be made using the new Webin Rest V2 service. This has been developed to address issues such as timeout errors during submissions. The V2 API has been designed to accept submissions at 2 different endpoints, 1 synchronous and 1 asynchronous, depending on the scale of the submission. Please refer to the [Webin Rest V2 documentation](./programmatic-v2.html) to find out more.  
+
 ## Upload data files
 
 Data files must be uploaded into a submitter specific private Webin file upload area
@@ -69,16 +73,13 @@ When using curl each XML file is submitted using the '-F' option:
 
 where the `XMLTYPE` is one of the following POST parameters:
 
-- `SUBMISSION` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.submission.xsd))
-- `STUDY` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd))
-- `SAMPLE` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd))
-- `EXPERIMENT` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd))
-- `RUN` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd))
-- `ANALYSIS` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd))
-- `DAC` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dac.xsd))
-- `POLICY` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.policy.xsd))
-- `DATASET` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dataset.xsd))
-- `PROJECT` ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd))
+- `SUBMISSION` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.submission.xsd))
+- `STUDY` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd))
+- `SAMPLE` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd))
+- `EXPERIMENT` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd))
+- `RUN` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd))
+- `ANALYSIS` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd))
+- `PROJECT` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd))
 
 You can include multiple records of the same type in the same submission as part of a `SET`. For example, by grouping `SAMPLE` records in a `<SAMPLE_SET></SAMPLE_SET>`.
 
@@ -347,7 +348,7 @@ curl -u username:password -F "HOLD_DATE=31-11-2019"  -F "ACTION=ADD" "https://ww
 
 ## Receipt XML
 
-Once a submission has been processed a receipt XML ([XML Schema](ftp://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.receipt.xsd))
+Once a submission has been processed a receipt XML ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.receipt.xsd))
 is returned.
 
 To know if the submission was successful look in the first line of the `<RECEIPT>` block.

@@ -53,7 +53,7 @@ Flat File
 
 Annotated sequences can only be submitted in the `EMBL flat file format <./flat-file-example.html>`_.
 For the full range of features and qualifiers available for flat files and their expected content, please see
-`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.
+`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.  The complete flatfile manual is available `here <https://raw.githubusercontent.com/enasequence/read_docs/master/submit/fileprep/flatfile_user_manual.txt>`_.
 
 The feature table annotation must conform to the
 `INSDC Feature Table Definition <http://www.insdc.org/files/feature_table.html>`_.
@@ -82,7 +82,8 @@ mitochondrial chromosomes:
 
 Please read on for information on the content of the chromosome list file columns
 
-- **OBJECT_NAME** (first column): The unique sequence name.
+- **OBJECT_NAME** (first column): The unique sequence name, matching with the sequence name in your FASTA file ('>' line) 
+  or EMBL flat file ('AC * ' line).
 - **CHROMOSOME_NAME** (second column): The chromosome name. The value will appear as the /chromosome, /plasmid or /segment
   qualifier in the EMBL-Bank flat files. Names must:
 

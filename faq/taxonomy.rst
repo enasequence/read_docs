@@ -100,7 +100,7 @@ about it by using one of the following urls:
 
    www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
 
-For example, using curl or pasting the URL into your browser for "mixed culture" looks as follows:
+For example, using curl or pasting the URL into your browser for *Canis lupis familiaris* looks as follows:
 
 Link:
   https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/canis%20lupus%20familiaris

@@ -48,13 +48,8 @@ Each submission must be associated with a pre-registered study and environmental
 be the same sample used to submit your raw reads.
 
 When registering an environmental sample, please make sure the appropriate environmental checklist is chosen for
-this and an `environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ is used
+this and an `environmental taxon <../../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ is used
 (e.g. aquatic metagenome (tax id: 1169740)).
-
-If you do not intend to submit raw reads or a primary metagenome as part of your metagenome assembly
-submission, please see `here <../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
-for details on how to do this. If no data is associated with the environmental sample, it needs to be released manually
-in order to be available to the public.
 
 The methods for submitting metagenomic studies and samples follow the same process as any other study/sample submission.
 Follow the links for more information.
@@ -62,7 +57,7 @@ Follow the links for more information.
 - `Register a Study <../../study.html>`_
 - `Register a Sample <../../samples.html>`_
 
-It is strongly recommended to submit as well as reference any reads associated with the assembly being submitted.
+It is strongly recommended to submit and reference raw reads associated with the assembly being submitted.
 In order to reference the reads which were used to generate the assembly, please see the ``RUN_REF`` tag included in
 the manifest file below.
 
@@ -113,6 +108,7 @@ For example, the following manifest file represents a primary metagenome assembl
 
     STUDY   TODO
     SAMPLE   TODO
+    RUN_REF   TODO
     ASSEMBLYNAME   TODO
     ASSEMBLY_TYPE   primary metagenome
     COVERAGE   TODO
@@ -126,11 +122,40 @@ For example, the following manifest file represents a primary metagenome assembl
 Stage 3: Validate and submit the files
 ======================================
 
-Files are validated, uploaded and submitted using the
-`Webin command line submission interface <../../general-guide/webin-cli.html>`_.
+Files are validated, uploaded and submitted using the `Webin command line submission interface
+<../../general-guide/webin-cli.html>`_ (Webin-CLI).
+Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_ documentation for full
+information about the submission process.
 
-Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_ documentation for
-more information about the submission process.
+Brief examples of Webin-CLI commands follow.
+The tool has ``-submit`` and ``-validate`` options which are mutually exclusive.
+Full validation of your data and metadata is run regardless of which option you choose, but using just ``-validate``
+gives you the opportunity to check the validation of your assembly and information on any errors.
+You are therefore encouraged to make use of Webin-CLI validation as much as you need to before you are ready to submit
+for real.
+
+First, run the Webin-CLI validation command, specifying your credentials and the path to your manifest file:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+Second, run the Webin-CLI submission command:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+In both cases, your prospective submission will be validated in full, and the result of this reported to you.
+A successful validation results in a simple success message, while a successful submission will further result in the
+assigned accession number (see below) being reported at your command line.
+Meanwhile, a failed validation will provide direction to a report file where you can find a list of error messages
+explaining the reason for the failure, which you can address before re-attempting.
+
+For more information on how to install and use Webin-CLI, please refer to the `Webin-CLI Submission
+<../../general-guide/webin-cli.html>`_ page.
 
 
 Assigned accession numbers

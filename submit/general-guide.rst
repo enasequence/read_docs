@@ -10,14 +10,14 @@ ENA allows submissions via three routes, each of which is appropriate for a
 different set of submission types. You may be required to use more than one in
 the process of submitting your data:
 
-- **Interactive Submissions** are completed by either filling out web forms directly 
-  in your browser or alternatively downloading spreadsheets that can be completed 
+- **Interactive Submissions** are completed by filling out web forms directly
+  in your browser and downloading template spreadsheets that can be completed
   off-line and uploaded to ENA. This is often the most accessible submission route.
 - **Command Line Submissions** use our bespoke Webin-CLI program. This
   validates your submissions entirely before you complete them, allowing you
   maximum control of the process.
 - **Programmatic Submissions** are completed by preparing your submissions as
-  XML documents and either sending them to ENA using a program such as cURL or using 
+  XML documents and either sending them to ENA using a program such as cURL or using
   the `Webin Portal <general-guide/submissions-portal.html>`_.
 
 The table below outlines what can be submitted through each submission route.

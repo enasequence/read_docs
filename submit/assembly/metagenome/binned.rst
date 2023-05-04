@@ -23,7 +23,7 @@ A **binned metagenome** assembly submission encompasses anything from a set of c
 from a metagenomic source that has been identified as a single-taxon set.
 
 There is no limit to the number of bins that can be submitted as part of a metagenomic study as
-it is recognised that the number of bins produced can be upwards of 100 000. Please submit all derived
+it is recognised that the number of bins produced can be very large. Please submit all derived
 bins at this assembly level and not as Metagenome-Assembled Genomes unless they meet the required criteria.
 
 A binned metagenome assembly consists of:
@@ -66,15 +66,15 @@ submitting your binned metagenomes to help record your methods and make your dat
 Registering binned samples
 --------------------------
 
-Each **binned metagenome** assembly submission must be associated with a **binned** sample. This is because a bin is not an assembly
-of the whole set of raw data but an assembly derived from a smaller subset of those data. These virtual
-samples represents the subset of that data and hold all metadata related to the taxonomy of that subset as well as
-methods used to derive it.
+Each **binned metagenome** assembly submission must be associated with a **binned** sample. This is because a bin is
+not an assembly of all the data from the collected sample so linking to the environmental sample is misleading and
+causes incorrect taxonomy assignment. These **binned** samples represent the taxon sets derived from the environmental
+sample and hold all metadata related to the taxonomy of that subset as well as methods used to derive it.
 
 .. image:: ../../images/metadata_model_derivedanalysis.png
 
 These **binned** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_
-as it can be and use the specific `ENA binned metagenome <https://www.ebi.ac.uk/ena/browser/view/ERC000050>`_ checklist.
+as they can be and use the specific `ENA binned metagenome <https://www.ebi.ac.uk/ena/browser/view/ERC000050>`_ checklist.
 
 Please make sure these **binned** samples correctly reference the **environmental** sample that the bin was derived from.
 The **environmental** sample should be the same sample used to submit your raw reads and primary metagenomes.
@@ -152,6 +152,7 @@ For example, the following manifest file represents a binned metagenome assembly
 
    STUDY   TODO
    SAMPLE   TODO
+   RUN_REF   TODO
    ASSEMBLYNAME   TODO
    ASSEMBLY_TYPE   TODO
    COVERAGE   TODO
@@ -165,11 +166,41 @@ For example, the following manifest file represents a binned metagenome assembly
 Stage 3: Validate and submit the files
 ======================================
 
-Files are validated, uploaded and submitted using the
-`Webin command line submission interface <../../general-guide/webin-cli.html>`_.
+Files are validated, uploaded and submitted using the `Webin command line submission interface
+<../../general-guide/webin-cli.html>`_ (Webin-CLI).
+Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_ documentation for full
+information about the submission process.
 
-Please refer to the `Webin command line submission interface <../../general-guide/webin-cli.html>`_
-documentation for more information about the submission process.
+Brief examples of Webin-CLI commands follow.
+The tool has ``-submit`` and ``-validate`` options which are mutually exclusive.
+Full validation of your data and metadata is run regardless of which option you choose, but using just ``-validate``
+gives you the opportunity to check the validation of your assembly and information on any errors.
+You are therefore encouraged to make use of Webin-CLI validation as much as you need to before you are ready to submit
+for real.
+
+First, run the Webin-CLI validation command, specifying your credentials and the path to your manifest file:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+Second, run the Webin-CLI submission command:
+
+::
+
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+
+
+In both cases, your prospective submission will be validated in full, and the result of this reported to you.
+A successful validation results in a simple success message, while a successful submission will further result in the
+assigned accession number (see below) being reported at your command line.
+Meanwhile, a failed validation will provide direction to a report file where you can find a list of error messages
+explaining the reason for the failure, which you can address before re-attempting.
+
+For more information on how to install and use Webin-CLI, please refer to the `Webin-CLI Submission
+<../../general-guide/webin-cli.html>`_ page.
+
 
 Assigned accession numbers
 ==========================
