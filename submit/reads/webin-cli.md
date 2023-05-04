@@ -147,14 +147,21 @@ For example, the following manifest file represents a multi-fastq submission:
 <a name="platform"></a>
 ### Permitted values for platform
 
-- LS454: 454 technology use 1-color sequential flows
-- ILLUMINA: Illumina is 4-channel flowgram with 1-to-1 mapping between basecalls and flows
-- PACBIO_SMRT: PacificBiosciences platform type for the single molecule real time (SMRT) technology.
-- ION_TORRENT: Ion Torrent Personal Genome Machine (PGM) from Life Technologies.
+- BGISEQ: Sequencers based on DNBSEQ by MGI Tech.
 - CAPILLARY: Sequencers based on capillary electrophoresis technology manufactured by LifeTech (formerly Applied BioSciences).
+- DNBSEQ:  Uses DNA nanoballs(DNB) and regular array chips.
+- ELEMENT: Element Biosciences uses avidity sequencing: a polymerase inserts nucleotides, detected using fluorescence.
+- HELICOS: Helicos is similar to 454 technology - uses 1-color sequential flows.
+- ILLUMINA: 54 technology use 1-color sequential flows: 454 technology use 1-color sequential flows.
+- ION_TORRENT: Ion Torrent Personal Genome Machine (PGM) from Life Technologies. Directly translates chemically encoded information (A, C, G, T) into digital on semiconductor chip.
+- LS454: 454 technology use 1-color sequential flows.
 - OXFORD_NANOPORE: Oxford Nanopore platform type. nanopore-based electronic single molecule analysis.
-- BGISEQ
-- DNBSEQ
+- PACBIO_SMRT: PacificBiosciences platform type for the single molecule real time (SMRT) technology.
+- ULTIMA: Ultima Genomics platform type. Flowing one nucleotide at a time in order, iteratively.
+
+Deprecated:
+- ABI_SOLID: ABI is 4-channel flowgram with 1-to-1 mapping between basecalls and flows.
+- COMPLETE_GENOMICS: CompleteGenomics platform type. At present there is no instrument model. Single-tube long fragment read (stLFR) technology.
 
 <a name="instrument"></a>
 ### Permitted values for instrument
@@ -162,9 +169,28 @@ For example, the following manifest file represents a multi-fastq submission:
 - 454 GS
 - 454 GS 20
 - 454 GS FLX
-- 454 GS FLX+
 - 454 GS FLX Titanium
+- 454 GS FLX+
 - 454 GS Junior
+- AB 310 Genetic Analyzer
+- AB 3130 Genetic Analyzer
+- AB 3130xL Genetic Analyzer
+- AB 3500 Genetic Analyzer
+- AB 3500xL Genetic Analyzer
+- AB 3730 Genetic Analyzer
+- AB 3730xL Genetic Analyzer
+- AB 5500 Genetic Analyzer
+- AB 5500xl Genetic Analyzer
+- AB 5500xl-W Genetic Analysis System
+- BGISEQ-50
+- BGISEQ-500
+- DNBSEQ-G400
+- DNBSEQ-G400 FAST
+- DNBSEQ-G50
+- DNBSEQ-T7
+- Element AVITI
+- GridION
+- Helicos HeliScope
 - HiSeq X Five
 - HiSeq X Ten
 - Illumina Genome Analyzer
@@ -177,36 +203,44 @@ For example, the following manifest file represents a multi-fastq submission:
 - Illumina HiSeq 2500
 - Illumina HiSeq 3000
 - Illumina HiSeq 4000
-- Illumina iSeq 100
+- Illumina HiSeq X
 - Illumina MiSeq
 - Illumina MiniSeq
 - Illumina NovaSeq 6000
-- NextSeq 1000
-- NextSeq 500
-- NextSeq 550
-- PacBio RS
-- PacBio RS II
-- Sequel
+- Illumina NovaSeq X
+- Illumina iSeq 100
+- Ion GeneStudio S5
+- Ion GeneStudio S5 Plus
+- Ion GeneStudio S5 Prime
+- Ion Torrent Genexus
 - Ion Torrent PGM
 - Ion Torrent Proton
 - Ion Torrent S5
 - Ion Torrent S5 XL
-- AB 3730xL Genetic Analyzer
-- AB 3730 Genetic Analyzer
-- AB 3500xL Genetic Analyzer
-- AB 3500 Genetic Analyzer
-- AB 3130xL Genetic Analyzer
-- AB 3130 Genetic Analyzer
-- AB 310 Genetic Analyzer
+- MGISEQ-2000RS
 - MinION
-- GridION
+- NextSeq 1000
+- NextSeq 2000
+- NextSeq 500
+- NextSeq 550
+- PacBio RS
+- PacBio RS II
 - PromethION
-- BGISEQ-500
-- DNBSEQ-T7
-- DNBSEQ-G400
-- DNBSEQ-G50
-- DNBSEQ-G400 FAST
+- Sequel
+- Sequel II
+- Sequel IIe
+- UG 100
 - unspecified
+
+Deprecated:
+- Complete Genomics
+- AB SOLiD 3 Plus System
+- AB SOLiD 4 System
+- AB SOLiD 4hq System
+- AB SOLiD PI System
+- AB SOLiD System
+- AB SOLiD System 2.0
+- AB SOLiD System 3.0
 
 <a name="selection"></a>
 ### Permitted values for library selection
