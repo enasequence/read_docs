@@ -177,7 +177,7 @@ of the scientific name. These are searchable within the Tax Database using the s
        "taxId": "1477400",
        "scientificName": "marsupial metagenome",
        "displayName": "marsupial metagenome"
-       "binomial" : "true"
+       "binomial" : "false"
      }
 
 If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous metagenomic taxa. To view all
