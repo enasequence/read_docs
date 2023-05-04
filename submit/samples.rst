@@ -52,9 +52,9 @@ Taxonomy
 --------
 
 The most fundamental attribute to any sample is its taxonomic classification.
-This must be a species-rank taxon from the NCBI Taxonomy database.
-Please also make sure you are familiar with the `ENA's taxonomy services <../faq/taxonomy.html>`_
-and use the correct taxonomy to describe your samples.
+This must be a species-rank taxon from the NCBI Taxonomy database. Samples that are being registered for
+non-environmental assemblies must have a `binomial <../faq/taxonomy.rst#checking-a-taxon-is-binomial>`_ scientific name. Please also make sure you are familiar with
+the `ENA's taxonomy services <../faq/taxonomy.html>`_ and use the correct taxonomy to describe your samples.
 
 In particular, consider the `environmental taxonomy <../faq/taxonomy.html#environmental-taxonomic-classifications>`_
 options available to you when working with environmental samples.
