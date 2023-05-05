@@ -6,7 +6,7 @@ Analysis and Accessions
 ENA accepts different types of secondary analyses such as assemblies, assembled and annotated sequences and other
 analyses as ‘Analysis’ submissions.
 
-.. image:: submit/images/metadata_model_assembly.png
+.. image:: images/metadata_model_assembly.png
    :align: center
 
 For each submission, Webin will report an analysis accession number (ERZxxxxxx) which can be used to track the status
