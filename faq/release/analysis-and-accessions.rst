@@ -6,7 +6,7 @@ Analysis and Accessions
 ENA accepts different types of secondary analyses such as assemblies, assembled and annotated sequences and other
 analyses as ‘Analysis’ submissions.
 
-.. image:: images/metadata_model_assembly.png
+.. image:: submit/images/metadata_model_assembly.png
    :align: center
 
 For each submission, Webin will report an analysis accession number (ERZxxxxxx) which can be used to track the status
@@ -46,15 +46,15 @@ will be available publicly or not.
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | | `GCA_902751345 <https://   |
 | | on the assembly level         | |                                | |                | | www.ebi.ac.uk/ena/browser/ |
 | | submitted(Contig/chromosome)  | |                                | |                | | view/GCA_902751345>`_      |
-| |                               +------------------------------------+                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Contig accession               | |                | | `CADDJA01 <https://www.    |
 | |                               | |                                | |                | | ebi.ac.uk/ena/browser/view/|
 | |                               | |                                | |                | | CADDJA01>`_                |
-| |                               +------------------------------------+                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Chromosome accession           | |                | | `LR615885 <https://www.ebi.|
 | |                               | |                                | |                | | ac.uk/ena/browser/view/    |
 | |                               | |                                | |                | | LR615885>`_                |
-+---------------------------------+------------------------------------+----------------+------------------------------+
++---------------------------------+----------------------------------+------------------+------------------------------+
 | | **Primary Metagenome          | | Analysis accession             | |  Public        | | `ERZ1091679 <https://www.  |
 | | Assembly**                    | |                                | |                | | ebi.ac.uk/ena/browser/view/|
 | |                               | |                                | |                | | ERZ1091679>`_              |
@@ -70,15 +70,15 @@ will be available publicly or not.
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | | `GCA_947596155 <https://   |
 | | on the assembly level         | |                                | |                | | www.ebi.ac.uk/ena/browser/ |
 | | submitted(Contig/chromosome)  | |                                | |                | | view/GCA_947596155>`_      |
-| |                               +------------------------------------+                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Contig accession               | |                | | `CANQEY01 <https://www.    |
 | |                               | |                                | |                | | ebi.ac.uk/ena/browser/view/|
 | |                               | |                                | |                | | CANQEY01>`_                |
-| |                               +------------------------------------+                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Chromosome accession           | |                | | `OX384529 <https://www.ebi.|
 | |                               | |                                | |                | | ac.uk/ena/browser/view/    |
 | |                               | |                                | |                | | OX384529>`_                |
-+---------------------------------+----------------------------------+------------------+------------------------------+
++---------------------------------+----------------------------------+ |----------------+------------------------------+
 | | **Transcriptome/              | | Analysis accession             | | Confidential   | | ERZxxxxxx (in `Webin Portal|
 | | Metatranscriptome Assembly**  | |                                | |                | | <https://www.ebi.ac.uk/ena/|
 | |                               | |                                | |                | | submit/webin/login>`_)     |
