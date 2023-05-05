@@ -78,7 +78,7 @@ will be available publicly or not.
 | |                               | | Chromosome accession           | |                | | `OX384529 <https://www.ebi.|
 | |                               | |                                | |                | | ac.uk/ena/browser/view/    |
 | |                               | |                                | |                | | OX384529>`_                |
-+---------------------------------+----------------------------------+ |----------------+------------------------------+
++---------------------------------+----------------------------------+------------------+------------------------------+
 | | **Transcriptome/              | | Analysis accession             | | Confidential   | | ERZxxxxxx (in `Webin Portal|
 | | Metatranscriptome Assembly**  | |                                | |                | | <https://www.ebi.ac.uk/ena/|
 | |                               | |                                | |                | | submit/webin/login>`_)     |
