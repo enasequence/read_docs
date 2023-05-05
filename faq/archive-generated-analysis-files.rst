@@ -28,3 +28,4 @@ Archive-Generated Files
 Providing archive-generated FASTAs for analyses is a means of bringing some consistency to the data we provide.
 By imposing a level of uniformity on these files, we can ensure users know what to expect of them and may incorporate
 them into pipelines with minimal friction.
+
