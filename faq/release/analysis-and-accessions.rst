@@ -26,15 +26,15 @@ will be available publicly or not.
 | |                               | | Genome assembly accession      | |                | | `GCA_000002305 <https://   |
 | | Accessions are assigned based | | (excludes viruses)             | | Public         | | www.ebi.ac.uk/ena/browser/ |
 | | on the assembly level         | |                                | |                | | view/GCA_000002305.1>`_    |
-| | submitted(Contig/scaffold/    +------------------------------------+                +------------------------------+
+| | submitted(Contig/scaffold/    +----------------------------------+ |                +------------------------------+
 | | chromosome)                   | | Contig accession               | |                | | `AAWR02000000 <https://www.|
 | |                               | |                                | |                | | ebi.ac.uk/ena/browser/view/|
 | |                               | |                                | |                | | AAWR02000000>`_            |
-| |                               +----------------------------------| |                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Scaffold accession             | |                | | `LR607392 <https://www.ebi.|
 | |                               | |                                | |                | | ac.uk/ena/browser/view/    |
 | |                               | |                                | |                | | LR607392>`_                |
-| |                               +----------------------------------| |                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Chromosome accession           | |                | | `CM000377 <https://www.ebi.|
 | |                               | |                                | |                | | ac.uk/ena/browser/view/    |
 | |                               | |                                | |                | | CM000377.2>`_              |
