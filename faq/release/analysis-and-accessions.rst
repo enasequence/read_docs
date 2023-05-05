@@ -90,7 +90,7 @@ will be available publicly or not.
 | | **SARS-CoV-2 Assembly**       | | Analysis accession             | | Public         | | `ERZ1937728 <https://      |
 | |                               | |                                | |                | | www.ebi.ac.uk/ena/browser/ |
 | |                               | |                                | |                | | view/ERZ1937728>`_         |
-| |                               +----------------------------------| |                +------------------------------+
+| |                               +----------------------------------+ |                +------------------------------+
 | |                               | | Sequence accession             | |                | | `FR989630 <https:// www.ebi|
 | |                               | |                                | |                | | .ac.uk/ena/browser/view    |
 | |                               | |                                | |                | | /FR989630>`_               |
