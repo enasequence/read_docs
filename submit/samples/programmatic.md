@@ -160,6 +160,7 @@ Below is an example XML for submitting a sample. Change the XML by entering your
         <TAG>collection date</TAG>
         <VALUE>2010</VALUE>
       </SAMPLE_ATTRIBUTE>   
+    </SAMPLE_ATTRIBUTES> 
   </SAMPLE>
 </SAMPLE_SET>
 ```
