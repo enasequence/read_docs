@@ -1,5 +1,5 @@
 ========================
-Analysis and Accessions
+Analyses and Accessions
 ========================
 
 
