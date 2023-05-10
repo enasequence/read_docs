@@ -22,7 +22,7 @@ Submittable Organism Names
 ==========================
 
 
-Submitted organism names must be at 'species' rank, though not every species-rank name is submittable.
+Submitted organism names must be at 'species' rank.
 This rank type does not automatically mean the name is a published binomen (e.g. *Homo sapiens*): it is simply a rank,
 which differentiates the sequenced organism from another.
 For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
@@ -171,52 +171,23 @@ Environmental Samples
 ---------------------
 
 
-If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous metagenomic taxa.
-You should use one of these for this purpose: visit the `"metagenomes" tax node
-<https://www.ebi.ac.uk/ena/browser/view/Taxon:408169?show=tax-tree>`_, and use the arrow icons to expand the categories.
+If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous `metagenomic taxa <taxonomy.html#environmental-biome-level-taxonomy>`_.
+Use the most appropriate environmental name for your metagenome.
 
-.. image:: images/tax_p01.png
-   :align: center
-
-Use most appropriate environmental name for your metagenome.
-New names under this node are added only rarely and you should use the closest available choice.
+New names under this `node <https://www.ebi.ac.uk/ena/browser/view/Taxon:408169?show=tax-tree>`_ are added only rarely and you should use the closest available choice.
 Only request a new name of this type if you are unable to use anything listed.
 
-If you are submitting assembled/annotated sequences which are identified from homology alone with no prior culturing or
-isolation of the organism, this is considered an *environmental sample*.
-As an example, these may have been produced by 16S amplification of a metagenomic sample.
-Exceptions to this group include organisms which can be reliably recovered from their diseased host (e.g. endosymbionts,
-phyoplasmas) and organisms from samples which are readily identifiable by other means (e.g. cyanobacteria).
-Such organisms are not considered in the way described here.
+There are also a range of *uncultured* taxonomy IDs, which may be used if no other suitable taxonomy can be found.
 
-Environmental samples are usually prefixed with the term *uncultured* and are not allowed to have a species epithet.
 Some examples of basic organism names that can be used include:
 
-::
-
-    uncultured bacterium  (taxid:77133)
-    uncultured archaeon  (taxid:115547)
-    uncultured cyanobacterium  (taxid:1211)
-    uncultured prokaryote  (taxid:198431)
-    uncultured fungus  (taxid:175245)
-    uncultured eukaryote  (taxid:100272)
-
-More granular identification is preferred, up to genus level.
-For prokaryotes the format is:
-
-::
-
-    uncultured <Rank> sp.
-    uncultured Bacillus sp.
-    uncultured Thermococcus sp.
-
-For fungi, the 'sp.' is dropped:
-
-::
-
-    uncultured <Rank>
-    uncultured Glomus
-    uncultured Saccharomycetes
+- *uncultured bacterium  (taxid:77133)*
+- *uncultured archaeon  (taxid:115547)*
+- *uncultured cyanobacterium  (taxid:1211)*
+- *uncultured prokaryote  (taxid:198431)*
+- *uncultured fungus  (taxid:175245)*
+- *uncultured eukaryote  (taxid:100272)*
+- *uncultured marine microorganism  (taxid:415540)*
 
 
 Cyanobacteria

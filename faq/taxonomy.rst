@@ -19,10 +19,19 @@ Choosing the Right Taxonomy For Your Submission
 
 
 Submitted organism names must be at ‘species’ rank.
-This rank type does not automatically mean the name is a published binomen; it is simply a rank, which differentiates
-the sequenced organism from another.
+This rank type does not automatically mean the name is a published binomen (e.g. *Homo sapiens*): it is simply a rank,
+which differentiates the sequenced organism from another.
 For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
 together under the same genus name.
+
+.. tip::
+    A `binomial <taxonomy.rst#checking-a-taxon-is-binomial>`_ taxonomy ID should be used in most cases, and is highly reccommended.
+    A binomial taxonomy ID is **required** when submitting a 'clone or isolate' genome assembly. If your sample has been identified
+    to species-level rank, but is not yet a published binomen, a placeholder taxonomy ID may be used.
+    A `placeholder <taxonomy_requests.html#unidentified-novel-organisms>`_ taxon ID is classed as a binomial taxon ID for data submission purposes.
+
+If your sample cannot be identified using a binomial taxon ID, an environmental biome-level or organism-level
+taxonomy ID can be used.
 
 When registering your samples using the interactive `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_
 you will need to enter a valid species rank taxon in your template spreadsheet.
@@ -58,11 +67,13 @@ Link:
        "taxId": "159030",
        "scientificName": "Murraya koenigii",
        "displayName": "curry leaf"
+       "binomial" : "true"
      },
      {
        "taxId": "261786",
        "scientificName": "Helichrysum italicum",
        "displayName": "curry plant"
+       "binomial" : "true"
      }
    ]
 
@@ -81,6 +92,7 @@ Link:
        "scientificName" : "Canis lupus familiaris",
        "commonName" : "dog",
        "displayName" : "dog"
+       "binomial" : "true"
      }
    ]
 
@@ -90,7 +102,8 @@ Checking a taxon is submittable
 
 
 If you know the taxon you would like to use, you can check if it is submittable and find any additional information
-about it by using one of the following urls:
+about it, including if it is **binomial**, by using one of the following urls:
+
 
 .. code-block:: bash
 
@@ -99,6 +112,15 @@ about it by using one of the following urls:
    www.ebi.ac.uk/ena/taxonomy/rest/any-name/
 
    www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
+
+
+Checking a taxon is binomial
+****************************
+
+We recommend that you use a binomial taxonomy ID for your sample registration. A binomial sample taxon ID is **required**
+if you plan to submit 'clone or isolate' genome assembly data. If a suitable binomial taxonomy ID does not exist, you can
+request a `placeholder <taxonomy_requests.html#unidentified-novel-organisms>`_ taxon ID. For cases where your sample
+cannot be identified using a binomial taxonomy ID, an `environmental sample <#environmental-taxonomic-classifications>`_ can be registered.
 
 For example, using curl or pasting the URL into your browser for *Canis lupis familiaris* looks as follows:
 
@@ -120,6 +142,7 @@ Link:
       "geneticCode" : "1",
       "mitochondrialGeneticCode" : "2",
       "submittable" : "true"
+      "binomial" : "true"
      }
    ]
 
@@ -131,18 +154,20 @@ exploring our taxonomy services programmatically.
 Environmental Taxonomic Classifications
 =======================================
 
+Every sample object in ENA must have a taxonomic classification assigned to it. There are specific taxonomic IDs which
+may be used for environmental samples, which may be broadly classified into biome-level taxonomy IDs and organism-level
+taxonomy IDs.
+
 
 Environmental Biome-Level Taxonomy
 ----------------------------------
 
+Environmental biome-level samples can not be described with a single organism identifier because they represent an environment
+with an unknown variety and number of organisms. For this purpose there are entries in the Tax Database that apply exclusively to
+environmental biome-level samples.
 
-Every sample object in ENA must have a taxonomic classification assigned to it.
-Environmental samples can not be described with a single organism identifier because they represent an environment with
-an unknown variety and number of organisms.
-
-For this purpose there are entries in the Tax Database that apply exclusively to environmental samples.
-Taxa of this type can be immediately identified as they contain the term "metagenome" as part of the scientific name.
-These are searchable within the Tax Database using the same methods described above.
+Biome-level environmental taxa can be immediately identified as they contain the term "metagenome" as part
+of the scientific name. These are searchable within the Tax Database using the same methods described above.
 
 .. code-block:: bash
 
@@ -152,9 +177,11 @@ These are searchable within the Tax Database using the same methods described ab
        "taxId": "1477400",
        "scientificName": "marsupial metagenome",
        "displayName": "marsupial metagenome"
+       "binomial" : "false"
      }
 
-To view all environmental taxonomy available please visit the
+If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous metagenomic taxa. To view all
+environmental metagenome taxonomy available please visit the
 `"metagenomes" tax node <https://www.ebi.ac.uk/ena/browser/view/408169?show=tax-tree>`_.
 Click the arrows to expand lineages:
 
@@ -177,46 +204,46 @@ Only request a new term if you are sure you are unable to use anything in the li
 Environmental Organism-Level Taxonomy
 -------------------------------------
 
-
-If you are submitting sequences or assemblies that have been identified taxonomically from homology alone, with no
-culturing or isolation of the organism beforehand, then we also consider these as environmental samples.
-These samples should be registered with uncultured taxonomy to make it clear they were derived from an environmental
-source.
-
+If you are submitting assembled/annotated sequences which are identified taxonomically from homology alone with no prior
+culturing or isolation of the organism, this is considered an *environmental sample*.
+As an example, these may have been produced by 16S amplification of a metagenomic sample. These samples should be registered
+with a suitable taxonomy to make it clear they were derived from an environmental source.
 A typical use-case of this would be the submission of a single fully assembled genome from a mixed DNA sample (i.e.,
 from a metagenomic source).
-There are exceptions where this taxonomy should not be used: for example, organisms which can be reliably recovered from
-their diseased host (e.g., endosymbionts, phytoplasmas) and organisms from samples which are readily identifiable by
-other means (e.g., cyanobacteria); organisms such as these are not considered uncultured/environmental in the way
-described here.
+
+Exceptions to this group include organisms which can be reliably recovered from their diseased host (e.g. endosymbionts,
+phyoplasmas) and organisms from samples which are readily identifiable by other means (e.g. cyanobacteria).
+Such organisms are not considered in the way described here.
+
+The taxonomy used for environmental organism-level samples should have an identification which is as granular as possible.
+A general environmental record should also be registered to describe the biome that was originally sequenced.
+This biome-level environmental sample should also be referenced within the organism-level sample using the "sample
+derived from" attribute. The metadata structure for metagenomic submissions is described `here <../../submit/assembly/metagenome.html>`_.
 If you are unsure whether your sample should be
 registered as environmental, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for assistance.
 
-Environmental organism-level taxa are usually prefixed with the term uncultured and are not allowed to have a species
-epithet.
-Some examples of basic organism names that can be used include:
+When registering an environmental organism-level sample, more granular identification is preferred, up to genus level.
+A non-binomial genus-level taxonomy with a species epithet can be used, for example:
 
-- *uncultured bacterium  (taxid:77133)*
-- *uncultured archaeon  (taxid:115547)*
-- *uncultured cyanobacterium  (taxid:1211)*
-- *uncultured prokaryote  (taxid:198431)*
-- *uncultured fungus  (taxid:175245)*
-- *uncultured eukaryote  (taxid:100272)*
+::
 
-Where possible, you should register your samples with the most granular identification possible, up to Genus level.
-For example, for prokaryotes, the format is:
+    Escherichia sp.
+    Bacillus sp.
+    Thermococcus sp.
 
-uncultured \<Rank\> sp.
+For fungi, the 'sp.' is dropped:
 
-*e.g. uncultured Bacillus sp.*
+::
 
-For Fungi, the ‘sp.’ is dropped:
+    uncultured <Rank>
+    uncultured Glomus
+    uncultured Saccharomycetes
 
-uncultured \<Rank\>
+If a more granular identification can not be used, a Family or Order level taxon id may also be used, for example:
 
-*e.g., uncultured Glomus*
+::
 
-When registering samples that use uncultured taxonomy, a general environmental record should also be registered to
-describe the biome that was originally sequenced.
-This biome-level environmental sample should also be referenced within the organism-level sample using the "sample
-derived from" attribute.
+    Neisseriaceae bacterium  (taxid:2014784)
+    Spirochaetaceae bacterium  (taxid:1898206)
+    Pleosporales sp. enrichment culture  (taxid:1836897)
+    Filobasidium mucilaginum  (taxid:2877763)

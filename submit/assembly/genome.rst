@@ -64,6 +64,11 @@ When assemblies are updated they must be re-submitted with the same study and sa
 - `Register a Study <../study.html>`_
 - `Register a Sample <../samples.html>`_
 
+.. tip::
+    Check your sample has a submittable taxonomy.
+    Your sample must have a `binomial taxonomy <../../faq/taxonomy.html#checking-a-taxon-is-submittable>`_.
+    If the sample taxonomy is not **binomial**, then the genome assembly submission will fail validation.
+
 It is also strongly recommended to submit the reads from which the assembly was assembled.
 In order to reference the reads which were used to generate the assembly, please see the ``RUN_REF`` tag included in
 the manifest file below.
@@ -211,7 +216,7 @@ The following metadata fields are supported in the manifest file for genome cont
 
 Please see further below for validation rules affecting some of these fields.
 
-Various file name fields are supported in the manifest file. Note that all of these are optional, 
+Various file name fields are supported in the manifest file. Note that all of these are optional,
 though of course at least one must be provided, and some may only be relevant in the presence of
 other file types. The available fields are as follows:
 
