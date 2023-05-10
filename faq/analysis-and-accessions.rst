@@ -20,12 +20,12 @@ will be available publicly or not.
 | **Submission type**             | **Accessions**                   | **Final status** | **Examples**                 |
 +---------------------------------+----------------------------------+------------------+------------------------------+
 | | **Genome Assembly**           | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
-|                                 |                                  |                  | <https://www.ebi.ac.uk/ena/  |
-|                                 |                                  |                  | submit/webin/login>`_)       |
-|                                 +----------------------------------+------------------+------------------------------+
-|                                 | | Genome assembly accession      |                  | `GCA_000002305 <https://     |
-| | Accessions are assigned based | | (excludes viruses)             | | Public         |  www.ebi.ac.uk/ena/browser/  |
-| | on the `assembly level <https:|                                  |                  |  view/GCA_000002305.1>`_     |
+| |                               |                                  |                  | <https://www.ebi.ac.uk/ena/  |
+| |                               |                                  |                  | submit/webin/login>`_)       |
+| |                               +----------------------------------+------------------+------------------------------+
+| |                               | | Genome assembly accession      |                  | `GCA_000002305 <https://www. |
+| | Accessions are assigned based | | (excludes viruses)             | | Public         | ebi.ac.uk/ena/browser/      |
+| | on the `assembly level <https:|                                  |                  | view/GCA_000002305.1>`_      |
 | //ena-docs.readthedocs.io/en/   +----------------------------------+                  +------------------------------+
 | latest/submit/assembly.         | | Contig accession               |                  | `AAWR02000000 <https://www.  |
 | html#assembly-levels>`_         |                                  |                  | ebi.ac.uk/ena/browser/view/  |
@@ -39,10 +39,10 @@ will be available publicly or not.
 |                                 |                                  |                  | ac.uk/ena/browser/view/      |
 |                                 |                                  |                  | CM000377.2>`_                |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-| |**Metagenome-Assembled Genome**| | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
-| **(MAG)**                       | |                                |                  | <https://www.ebi.ac.uk/ena/  |
-|                                 | |                                |                  | submit/webin/login>`_)       |
-|                                 +----------------------------------+------------------+------------------------------+
+| | **Metagenome-Assembled **     | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
+|   **Genome(MAG)**               | |                                |                  | <https://www.ebi.ac.uk/ena/  |
+| |                               | |                                |                  | submit/webin/login>`_)       |
+| |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_902751345 <https://     |
 | | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
 | //ena-docs.readthedocs.io/en/   |                                  |                  | view/GCA_902751345>`_        |
@@ -66,7 +66,7 @@ will be available publicly or not.
 | | **Environmental Single-cell** | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
 | | **Amplified Genome Assembly** |                                  |                  | <https://www.ebi.ac.uk/ena/  |
 | | **(SAG)**                     |                                  |                  | submit/webin/login>`_)       |
-|                                 +----------------------------------+------------------+------------------------------+
+| |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_947596155 <https://     |
 | | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
 | //ena-docs.readthedocs.io/en/   |                                  |                  | view/GCA_947596155>`_        |
@@ -103,10 +103,10 @@ will be available publicly or not.
 |                                 |                                  |                  | .ac.uk/ena/browser/view/     |
 |                                 |                                  |                  | OX458330>`_                  |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-|   **Other Analyses**            | | Analysis accession             | | Public         | `ERZ295521 <https://         |
+|   **Other Analyses**            | | Analysis accession             | | Public         | |`ERZ295521 <https://         |
 |                                 |                                  |                  | www.ebi.ac.uk/ena/browser/   |
 |                                 |                                  |                  | view/ERZ295521>`_            |
-|                                 |                                  |                  | `ERZ000003 <https://www.ebi  |
+|                                 |                                  |                  | |`ERZ000003 <https://www.ebi  |
 |                                 |                                  |                  | .ac.uk/ena/browser/view      |
 |                                 |                                  |                  | /ERZ000003>`_                |
 +---------------------------------+----------------------------------+------------------+------------------------------+
