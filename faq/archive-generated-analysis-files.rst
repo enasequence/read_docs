@@ -5,7 +5,7 @@ Archive Generated Analysis Files
 Archive generated analysis files are generated for primary and binned metagenome assemblies. These submissions
 will not have a GCA (assembly accession) or sequence accessions but only ERZ accessions.
 
-Whenever possible, ENA provides access to two types of file for each analysis we present: the submitted file(s) and
+Whenever possible, ENA provides access to two types of files for each analysis we present: the submitted file(s) and
 archive generated file(s). Both are visible in the ENA Browser view under ‘Analysis Files’:
 
 .. image:: images/archive-generated-analysis-files.png
@@ -19,7 +19,7 @@ Submitted Files
 
 The submitted files for any given analysis are copies of the files originally provided to us by the submitter.
 These files always undergo validation appropriate to their format, and are presented as submitted with no automated
-curation. Formats are varied, and may be FASTA, but could also be others including BAM, CRAM, VCF, BED etc
+curation. Formats are varied, and may be FASTA, but could also be others including BAM, CRAM, VCF, BED etc.
 
 
 Archive-Generated Files
