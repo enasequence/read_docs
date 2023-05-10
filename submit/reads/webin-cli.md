@@ -313,6 +313,7 @@ Deprecated:
 - FINISHING: Sequencing intended to finish (close) gaps in existing coverage.
 - ChIP-Seq: ChIP-seq, Chromatin ImmunoPrecipitation, reveals binding sites of specific proteins, typically transcription factors (TFs) using antibodies to extract DNA fragments bound to the target protein.
 - MNase-Seq: Identifies well-positioned nucleosomes. uses Micrococcal Nuclease (MNase) is an endo-exonuclease that processively digests DNA until an obstruction, such as a nucleosome, is reached.
+- Ribo-Seq: Ribosome profiling (also named ribosome footprinting) uses specialized messenger RNA (mRNA) sequencing to determine which mRNAs are being actively translated and produces a “global snapshot” of all the ribosomes active in a cell at a particular moment, known as a translatome.
 - DNase-Hypersensitivity: Sequencing of hypersensitive sites, or segments of open chromatin that are more readily cleaved by DNaseI.
 - Bisulfite-Seq: MethylC-seq. Sequencing following treatment of DNA with bisulfite to convert cytosine residues to uracil depending on methylation status.
 - CTS: Concatenated Tag Sequencing
