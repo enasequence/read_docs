@@ -19,9 +19,9 @@ will be available publicly or not.
 +---------------------------------+----------------------------------+------------------+------------------------------+
 | **Submission type**             | **Accessions**                   | **Final status** | **Examples**                 |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-| | **Genome Assembly**           | | Analysis accession             | | Confidential   | | ERZxxxxxx (in `Webin Portal|
-| |                               | |                                | |                | | <https://www.ebi.ac.uk/ena/|
-| |                               | |                                | |                | | submit/webin/login>`_)     |
+| | **Genome Assembly**           | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
+| |                               | |                                | |                | <https://www.ebi.ac.uk/ena/  |
+| |                               | |                                | |                | submit/webin/login>`_)       |
 | |                               +----------------------------------+------------------+------------------------------+
 | |                               | | Genome assembly accession      | |                | | `GCA_000002305 <https://   |
 | | Accessions are assigned based | | (excludes viruses)             | | Public         | | www.ebi.ac.uk/ena/browser/ |
@@ -39,8 +39,8 @@ will be available publicly or not.
 | |                               | |                                | |                | | ac.uk/ena/browser/view/    |
 | |                               | |                                | |                | | CM000377.2>`_              |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-| | **Metagenome-Assembled Genome | | Analysis accession             | | Confidential   | | ERZxxxxxx (in `Webin Portal|
-| | (MAG)**                       | |                                | |                | | <https://www.ebi.ac.uk/ena/|
+| **Metagenome-Assembled Genome   | | Analysis accession             | | Confidential   | | ERZxxxxxx (in `Webin Portal|
+| (MAG)**                         | |                                | |                | | <https://www.ebi.ac.uk/ena/|
 | |                               | |                                | |                | | submit/webin/login>`_)     |
 | |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | | `GCA_902751345 <https://   |
