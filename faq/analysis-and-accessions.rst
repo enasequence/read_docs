@@ -41,8 +41,8 @@ will be available publicly or not.
 +---------------------------------+----------------------------------+------------------+------------------------------+
 | |**Metagenome-Assembled Genome**| | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
 | |**(MAG)**                      | |                                |                  | <https://www.ebi.ac.uk/ena/  |
-|                                 | |                                |                  | submit/webin/login>`_)       |
-|                                 +----------------------------------+------------------+------------------------------+
+| |                               | |                                |                  | submit/webin/login>`_)       |
+| |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_902751345 <https://     |
 | | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
 | //ena-docs.readthedocs.io/en/   |                                  |                  | view/GCA_902751345>`_        |
