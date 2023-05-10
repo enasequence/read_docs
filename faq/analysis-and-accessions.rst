@@ -30,7 +30,7 @@ will be available publicly or not.
 | latest/submit/assembly.         | | Contig accession               |                  | `AAWR02000000 <https://www.  |
 | html#assembly-levels>`_         |                                  |                  | ebi.ac.uk/ena/browser/view/  |
 | | submitted(Contig/scaffold/    |                                  |                  | AAWR02000000>`_              |
-| | chromosome)                     +----------------------------------+                  +------------------------------+
+| | chromosome)                   +----------------------------------+                  +------------------------------+
 |                                 | | Scaffold accession             |                  | `LR607392 <https://www.ebi.  |
 |                                 |                                  |                  | ac.uk/ena/browser/view/      |
 |                                 |                                  |                  | LR607392>`_                  |
