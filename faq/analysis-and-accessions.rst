@@ -24,7 +24,7 @@ will be available publicly or not.
 | |                               |                                  |                  | submit/webin/login>`_)       |
 | |                               +----------------------------------+------------------+------------------------------+
 | |                               | | Genome assembly accession      |                  | `GCA_000002305 <https://www. |
-| | Accessions are assigned based | | (excludes viruses)             | | Public         | ebi.ac.uk/ena/browser/      |
+| | Accessions are assigned based | | (excludes viruses)             | | Public         | ebi.ac.uk/ena/browser/       |
 | | on the `assembly level <https:|                                  |                  | view/GCA_000002305.1>`_      |
 | //ena-docs.readthedocs.io/en/   +----------------------------------+                  +------------------------------+
 | latest/submit/assembly.         | | Contig accession               |                  | `AAWR02000000 <https://www.  |
@@ -39,9 +39,9 @@ will be available publicly or not.
 |                                 |                                  |                  | ac.uk/ena/browser/view/      |
 |                                 |                                  |                  | CM000377.2>`_                |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-| | **Metagenome-Assembled **     | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
-|   **Genome(MAG)**               | |                                |                  | <https://www.ebi.ac.uk/ena/  |
-| |                               | |                                |                  | submit/webin/login>`_)       |
+| | **Metagenome-Assembled**      | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
+| | **Genome(MAG)**               |                                  |                  | <https://www.ebi.ac.uk/ena/  |
+| |                               |                                  |                  | submit/webin/login>`_)       |
 | |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_902751345 <https://     |
 | | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
@@ -87,7 +87,7 @@ will be available publicly or not.
 |                                 |                                  |                  | www.ebi.ac.uk/ena/browser/   |
 |                                 |                                  |                  | view/GAAJ01000000>`_         |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-| | **SARS-CoV-2 Assembly**       | | Analysis accession             | | Public         | `ERZ1937728 <https://        |
+|  **SARS-CoV-2 Assembly**        | | Analysis accession             | | Public         | `ERZ1937728 <https://        |
 |                                 |                                  |                  | www.ebi.ac.uk/ena/browser/   |
 |                                 |                                  |                  | view/ERZ1937728>`_           |
 |                                 +----------------------------------+                  +------------------------------+
@@ -95,7 +95,7 @@ will be available publicly or not.
 |                                 |                                  |                  | .ac.uk/ena/browser/view      |
 |                                 |                                  |                  | /FR989630>`_                 |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-| | **Targeted Sequences**        | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
+|  **Targeted Sequences**         | | Analysis accession             | | Confidential   | ERZxxxxxx (in `Webin Portal  |
 |                                 |                                  |                  | <https://www.ebi.ac.uk/ena/  |
 |                                 |                                  |                  | submit/webin/login>`_)       |
 |                                 +----------------------------------+------------------+------------------------------+
