@@ -44,8 +44,8 @@ will be available publicly or not.
 | |                               |                                  |                  | submit/webin/login>`_)       |
 | |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_902751345 <https://     |
-| | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
-|   //ena-docs.readthedocs.io/en/ |                                  |                  | view/GCA_902751345>`_        |
+| | on the `assembly level <https |                                  |                  | www.ebi.ac.uk/ena/browser/   |
+|   ://ena-docs.readthedocs.io/en/|                                  |                  | view/GCA_902751345>`_        |
 |   latest/submit/assembly.       +----------------------------------+                  +------------------------------+
 |   html#assembly-levels>`_       | | Contig accession               |                  | `CADDJA01 <https://www.      |
 | | submitted(Contig/chromosome)  |                                  |                  | ebi.ac.uk/ena/browser/view/  |
