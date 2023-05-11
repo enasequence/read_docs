@@ -25,8 +25,8 @@ will be available publicly or not.
 | |                               +----------------------------------+------------------+------------------------------+
 | |                               | | Genome assembly accession      |                  | `GCA_000002305 <https://www. |
 | | Accessions are assigned based | | (excludes viruses)             | | Public         | ebi.ac.uk/ena/browser/       |
-| | on the `assembly level <https:|                                  |                  | view/GCA_000002305.1>`_      |
-| //ena-docs.readthedocs.io/en/   +----------------------------------+                  +------------------------------+
+| | on the `assembly level <https |                                  |                  | view/GCA_000002305.1>`_      |
+| ://ena-docs.readthedocs.io/en/  +----------------------------------+                  +------------------------------+
 | latest/submit/assembly.         | | Contig accession               |                  | `AAWR02000000 <https://www.  |
 | html#assembly-levels>`_         |                                  |                  | ebi.ac.uk/ena/browser/view/  |
 | | submitted(Contig/scaffold/    |                                  |                  | AAWR02000000>`_              |
