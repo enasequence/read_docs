@@ -45,9 +45,9 @@ will be available publicly or not.
 | |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_902751345 <https://     |
 | | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
-| //ena-docs.readthedocs.io/en/   |                                  |                  | view/GCA_902751345>`_        |
-| latest/submit/assembly.         +----------------------------------+                  +------------------------------+
-| html#assembly-levels>`_         | | Contig accession               |                  | `CADDJA01 <https://www.      |
+|   //ena-docs.readthedocs.io/en/ |                                  |                  | view/GCA_902751345>`_        |
+|   latest/submit/assembly.       +----------------------------------+                  +------------------------------+
+|   html#assembly-levels>`_       | | Contig accession               |                  | `CADDJA01 <https://www.      |
 | | submitted(Contig/chromosome)  |                                  |                  | ebi.ac.uk/ena/browser/view/  |
 |                                 |                                  |                  | CADDJA01>`_                  |
 |                                 +----------------------------------+                  +------------------------------+
@@ -69,9 +69,9 @@ will be available publicly or not.
 | |                               +----------------------------------+------------------+------------------------------+
 | | Accessions are assigned based | | Genome assembly accession      | | Public         | `GCA_947596155 <https://     |
 | | on the `assembly level <https:|                                  |                  | www.ebi.ac.uk/ena/browser/   |
-| //ena-docs.readthedocs.io/en/   |                                  |                  | view/GCA_947596155>`_        |
-| latest/submit/assembly.         +----------------------------------+                  +------------------------------+
-| html#assembly-levels>`_         |   Contig accession               |                  | `CANQEY01 <https://www.      |
+|   //ena-docs.readthedocs.io/en/ |                                  |                  | view/GCA_947596155>`_        |
+|   latest/submit/assembly.       +----------------------------------+                  +------------------------------+
+|   html#assembly-levels>`_       |   Contig accession               |                  | `CANQEY01 <https://www.      |
 | | submitted(Contig/chromosome)  |                                  |                  | ebi.ac.uk/ena/browser/view/  |
 |                                 |                                  |                  | CANQEY01>`_                  |
 |                                 +----------------------------------+                  +------------------------------+
