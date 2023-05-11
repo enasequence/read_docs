@@ -103,10 +103,10 @@ will be available publicly or not.
 |                                 |                                  |                  | .ac.uk/ena/browser/view/     |
 |                                 |                                  |                  | OX458330>`_                  |
 +---------------------------------+----------------------------------+------------------+------------------------------+
-|   **Other Analyses**            | | Analysis accession             | | Public         | |`ERZ295521 <https://         |
+|   **Other Analyses**            | | Analysis accession             | | Public         | |`ERZ295521 <https://        |
 |                                 |                                  |                  | www.ebi.ac.uk/ena/browser/   |
 |                                 |                                  |                  | view/ERZ295521>`_            |
-|                                 |                                  |                  | |`ERZ000003 <https://www.ebi  |
+|                                 |                                  |                  | |`ERZ000003 <https://www.ebi |
 |                                 |                                  |                  | .ac.uk/ena/browser/view      |
 |                                 |                                  |                  | /ERZ000003>`_                |
 +---------------------------------+----------------------------------+------------------+------------------------------+
