@@ -300,6 +300,7 @@ Deprecated:
 - ssRNA-seq: Strand-specific RNA sequencing.
 - miRNA-Seq: Micro RNA sequencing strategy designed to capture post-transcriptional RNA elements and include non-coding functional elements. (see pubmed 21787409 for details)
 - ncRNA-Seq: Capture of other non-coding RNA types, including post-translation modification types such as snRNA (small nuclear RNA) or snoRNA (small nucleolar RNA), or expression regulation types such as siRNA (small interfering RNA) or piRNA/piwi/RNA (piwi-interacting RNA).
+- snRNA-seq: Single nucleus RNA sequencing is a method for profiling gene expression in cells which are difficult to isolate.
 - FL-cDNA: Full-length sequencing of cDNA templates
 - EST: Single pass sequencing of cDNA templates
 - Hi-C: Chromosome Conformation Capture technique where a biotin-labeled nucleotide is incorporated at the ligation junction, enabling selective purification of chimeric DNA ligation junctions followed by deep sequencing.
@@ -313,6 +314,9 @@ Deprecated:
 - FINISHING: Sequencing intended to finish (close) gaps in existing coverage.
 - ChIP-Seq: ChIP-seq, Chromatin ImmunoPrecipitation, reveals binding sites of specific proteins, typically transcription factors (TFs) using antibodies to extract DNA fragments bound to the target protein.
 - MNase-Seq: Identifies well-positioned nucleosomes. uses Micrococcal Nuclease (MNase) is an endo-exonuclease that processively digests DNA until an obstruction, such as a nucleosome, is reached.
+- NOMe-Seq: Nucleosome Occupancy and Methylome sequencing.
+- ChM-Seq: ChIPmentation combines chromatin immunoprecipitation with sequencing library preparation by Tn5 transposase (see pubmed 26280331 for details).
+- GBS: Genotyping by sequencing(GBS) is a method to discover single nucleotide polymorphisms for genotyping studies.
 - Ribo-Seq: Ribosome profiling (also named ribosome footprinting) uses specialized messenger RNA (mRNA) sequencing to determine which mRNAs are being actively translated and produces a “global snapshot” of all the ribosomes active in a cell at a particular moment, known as a translatome.
 - DNase-Hypersensitivity: Sequencing of hypersensitive sites, or segments of open chromatin that are more readily cleaved by DNaseI.
 - Bisulfite-Seq: MethylC-seq. Sequencing following treatment of DNA with bisulfite to convert cytosine residues to uracil depending on methylation status.
