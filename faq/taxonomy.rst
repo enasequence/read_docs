@@ -25,7 +25,7 @@ For example, unidentified strains of the same bacterial genus should be kept as 
 together under the same genus name.
 
 .. tip::
-    A `binomial <taxonomy.rst#checking-a-taxon-is-binomial>`_ taxonomy ID should be used in most cases, and is highly reccommended.
+    A `binomial <taxonomy.rst#checking-a-taxon-is-binomial>`_ taxonomy ID should be used in most cases, and is highly recommended.
     A binomial taxonomy ID is **required** when submitting a 'clone or isolate' genome assembly. If your sample has been identified
     to species-level rank, but is not yet a published binomen, a placeholder taxonomy ID may be used.
     A `placeholder <taxonomy_requests.html#unidentified-novel-organisms>`_ taxon ID is classed as a binomial taxon ID for data submission purposes.
