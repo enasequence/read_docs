@@ -168,3 +168,7 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
+
+# makes tabs possible in sphinx rst
+extensions = ['sphinx_tabs.tabs']
+sphinx_tabs_valid_builders = ['linkcheck']
