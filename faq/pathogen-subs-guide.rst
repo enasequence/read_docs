@@ -297,6 +297,7 @@ for permitted values.
          FASTA   genome.fasta.gz
          CHROMOSOME_LIST chromosome_list.txt
 
+
 Chromosome list file
 ''''''''''''''''''''
 
