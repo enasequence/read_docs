@@ -310,7 +310,7 @@ for permitted values.
 
 .. tabs::
 
-   .. group-tab:: Viruses
+   .. tab:: Viruses
 
       .. code-block:: xml
 
@@ -324,8 +324,7 @@ for permitted values.
 
          chr01   1 Multipartite
          chr02   2 Multipartite
-
-   .. group-tab:: Bacteria
+   .. tab:: Bacteria
 
       By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
       chromosome_location may be specified.
@@ -337,7 +336,7 @@ for permitted values.
          chr02   2 circular-Chromosome plasmid
          chr03   3 circular-Chromosome plasmid
 
-   .. group-tab:: Eukaryota
+   .. tab:: Eukaryota
 
       By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
       will be assumed to be linear, but it may also be specified.
