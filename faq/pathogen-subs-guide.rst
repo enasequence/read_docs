@@ -245,7 +245,7 @@ for permitted values.
 
 .. tabs::
 
-   .. code-tab:: Viruses
+   .. tab:: Viruses
 
       STUDY   TODO
       SAMPLE   TODO
@@ -260,7 +260,7 @@ for permitted values.
       RUN_REF optional
       FASTA   genome.fasta.gz
 
-   .. code-tab:: Bacteria
+   .. tab:: Bacteria
 
       STUDY   TODO
       SAMPLE   TODO
@@ -275,7 +275,7 @@ for permitted values.
       RUN_REF optional
       FLATFILE   genome.embl.gz
 
-   .. code-tab:: Eukaryota
+   .. tab:: Eukaryota
 
       STUDY   TODO
       SAMPLE   TODO
