@@ -247,7 +247,7 @@ for permitted values.
 
    .. group-tab:: Viruses
 
-      ::
+      .. code-block::
 
          STUDY   TODO
          SAMPLE   TODO
@@ -264,7 +264,7 @@ for permitted values.
 
    .. group-tab:: Bacteria
 
-      ::
+      .. code-block::
 
          STUDY   TODO
          SAMPLE   TODO
@@ -281,7 +281,7 @@ for permitted values.
 
    .. group-tab:: Eukaryota
 
-      ::
+      .. code-block::
 
          STUDY   TODO
          SAMPLE   TODO
@@ -314,15 +314,15 @@ for permitted values.
 
    .. group-tab:: Viruses
 
-      ::
+      .. code-block::
 
          chr01   1 Monopartite
 
-      ::
+      .. code-block::
 
          chr01   1 Linear-Monopartite viroid
 
-      ::
+      .. code-block::
 
          chr01   1 Multipartite
          chr02   2 Multipartite
@@ -333,7 +333,7 @@ for permitted values.
       chromosome_location may be specified.
       By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
 
-      ::
+      .. code-block::
 
          chr01   1 circular-Chromosome
          chr02   2 circular-Chromosome plasmid
@@ -344,7 +344,7 @@ for permitted values.
       By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
       will be assumed to be linear, but it may also be specified.
 
-      ::
+      .. code-block::
 
          chr01   1 Linear-Chromosome
          chr02   2 Linear-Chromosome
