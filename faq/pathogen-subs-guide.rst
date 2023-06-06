@@ -260,6 +260,7 @@ for permitted values.
       RUN_REF optional
       FASTA   genome.fasta.gz
 
+
    .. tab:: Bacteria
 
       STUDY   TODO
@@ -274,6 +275,7 @@ for permitted values.
       DESCRIPTION optional
       RUN_REF optional
       FLATFILE   genome.embl.gz
+
 
    .. tab:: Eukaryota
 
@@ -290,6 +292,7 @@ for permitted values.
       RUN_REF optional
       FASTA   genome.fasta.gz
       CHROMOSOME_LIST chromosome_list.txt
+
 
 
 Chromosome list file
