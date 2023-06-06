@@ -182,8 +182,11 @@ contact the `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 Pathogen checklists host fields:
 
 :host taxid: NCBI taxon id of the host, e.g. 9606
+
 :host health state: health status of the host at the time of sample collection
+
 :host scientific name: Scientific name of the natural (as opposed to laboratory) host to the organism from which sample was obtained.
+
 :lab_host: scientific name of the laboratory host used to propagate the source organism from which the sample was obtained. The EBI `cell line ontology <https://www.ebi.ac.uk/ols4/ontologies/clo>`_ may be used to find the name for the host cell line
 
 
@@ -242,60 +245,55 @@ for permitted values.
 
 .. tabs::
 
-   .. group-tab:: Viruses
+   .. code-tab:: Viruses
+
+      STUDY   TODO
+      SAMPLE   TODO
+      ASSEMBLYNAME   TODO
+      ASSEMBLY_TYPE clone or isolate
+      COVERAGE   TODO
+      PROGRAM   TODO
+      PLATFORM   TODO
+      MINGAPLENGTH   optional
+      MOLECULETYPE   viral cRNA
+      DESCRIPTION optional
+      RUN_REF optional
+      FASTA   genome.fasta.gz
 
 
-      .. code:: none
+   .. code-tab:: Bacteria
 
-         STUDY   TODO
-         SAMPLE   TODO
-         ASSEMBLYNAME   TODO
-         ASSEMBLY_TYPE clone or isolate
-         COVERAGE   TODO
-         PROGRAM   TODO
-         PLATFORM   TODO
-         MINGAPLENGTH   optional
-         MOLECULETYPE   viral cRNA
-         DESCRIPTION optional
-         RUN_REF optional
-         FASTA   genome.fasta.gz
-
-   .. group-tab:: Bacteria
+      STUDY   TODO
+      SAMPLE   TODO
+      ASSEMBLYNAME   TODO
+      ASSEMBLY_TYPE clone or isolate
+      COVERAGE   TODO
+      PROGRAM   TODO
+      PLATFORM   TODO
+      MINGAPLENGTH   optional
+      MOLECULETYPE   optional
+      DESCRIPTION optional
+      RUN_REF optional
+      FLATFILE   genome.embl.gz
 
 
-      .. code:: none
+   .. code-tab:: Eukaryota
 
-         STUDY   TODO
-         SAMPLE   TODO
-         ASSEMBLYNAME   TODO
-         ASSEMBLY_TYPE clone or isolate
-         COVERAGE   TODO
-         PROGRAM   TODO
-         PLATFORM   TODO
-         MINGAPLENGTH   optional
-         MOLECULETYPE   optional
-         DESCRIPTION optional
-         RUN_REF optional
-         FLATFILE   genome.embl.gz
+      STUDY   TODO
+      SAMPLE   TODO
+      ASSEMBLYNAME   TODO
+      ASSEMBLY_TYPE clone or isolate
+      COVERAGE   TODO
+      PROGRAM   TODO
+      PLATFORM   TODO
+      MINGAPLENGTH   optional
+      MOLECULETYPE   genomic DNA
+      DESCRIPTION optional
+      RUN_REF optional
+      FASTA   genome.fasta.gz
+      CHROMOSOME_LIST chromosome_list.txt
 
-   .. group-tab:: Eukaryota
 
-
-      .. code:: none
-
-         STUDY   TODO
-         SAMPLE   TODO
-         ASSEMBLYNAME   TODO
-         ASSEMBLY_TYPE clone or isolate
-         COVERAGE   TODO
-         PROGRAM   TODO
-         PLATFORM   TODO
-         MINGAPLENGTH   optional
-         MOLECULETYPE   genomic DNA
-         DESCRIPTION optional
-         RUN_REF optional
-         FASTA   genome.fasta.gz
-         CHROMOSOME_LIST chromosome_list.txt
 
 Chromosome list file
 ''''''''''''''''''''
@@ -312,39 +310,38 @@ for permitted values.
 
 .. tabs::
 
-   .. group-tab:: Viruses
+   .. tab:: Viruses
 
-      .. code:: none
+      .. code-block:: xml
 
          chr01   1 Monopartite
 
-      .. code:: none
+      .. code-block:: bash
 
          chr01   1 Linear-Monopartite viroid
 
-      .. code:: none
+      .. code-block:: python
 
          chr01   1 Multipartite
          chr02   2 Multipartite
-
-   .. group-tab:: Bacteria
+   .. tab:: Bacteria
 
       By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
       chromosome_location may be specified.
       By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
 
-      .. code:: none
+      .. code-block::
 
          chr01   1 circular-Chromosome
          chr02   2 circular-Chromosome plasmid
          chr03   3 circular-Chromosome plasmid
 
-   .. group-tab:: Eukaryota
+   .. tab:: Eukaryota
 
       By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
       will be assumed to be linear, but it may also be specified.
 
-      .. code:: none
+      .. code-block::
 
          chr01   1 Linear-Chromosome
          chr02   2 Linear-Chromosome
