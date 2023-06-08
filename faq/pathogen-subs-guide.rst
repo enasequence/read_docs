@@ -296,7 +296,7 @@ By default prokaryotic chromosomes and plasmids will be assumed to reside in the
 chromosome_location may be specified.
 By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
 
-.. code-block::
+.. code-block:: xml
 
    chr01   1 circular-Chromosome
    chr02   2 circular-Chromosome plasmid
@@ -308,7 +308,7 @@ Eukaryota
 By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
 will be assumed to be linear, but it may also be specified.
 
-.. code-block::
+.. code-block:: xml
 
    chr01   1 Linear-Chromosome
    chr02   2 Linear-Chromosome
