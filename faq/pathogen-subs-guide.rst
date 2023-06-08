@@ -9,7 +9,7 @@ General Pathogens Submissions Guide
 
 .. contents::
    :local:
-   :depth: 4
+   :depth: 3
 
 Introduction
 ~~~~~~~~~~~~
@@ -241,58 +241,23 @@ for permitted values.
 .. warning::
    Please note the examples below are indicative and do not describe any mandatory file format.
 
-**manifest.txt** examples
+**manifest.txt** example
 
-.. tabs::
+::
 
-   .. code-tab:: Viruses
-
-      STUDY   TODO
-      SAMPLE   TODO
-      ASSEMBLYNAME   TODO
-      ASSEMBLY_TYPE clone or isolate
-      COVERAGE   TODO
-      PROGRAM   TODO
-      PLATFORM   TODO
-      MINGAPLENGTH   optional
-      MOLECULETYPE   viral cRNA
-      DESCRIPTION optional
-      RUN_REF optional
-      FASTA   genome.fasta.gz
-
-
-   .. code-tab:: Bacteria
-
-      STUDY   TODO
-      SAMPLE   TODO
-      ASSEMBLYNAME   TODO
-      ASSEMBLY_TYPE clone or isolate
-      COVERAGE   TODO
-      PROGRAM   TODO
-      PLATFORM   TODO
-      MINGAPLENGTH   optional
-      MOLECULETYPE   optional
-      DESCRIPTION optional
-      RUN_REF optional
-      FLATFILE   genome.embl.gz
-
-
-   .. code-tab:: Eukaryota
-
-      STUDY   TODO
-      SAMPLE   TODO
-      ASSEMBLYNAME   TODO
-      ASSEMBLY_TYPE clone or isolate
-      COVERAGE   TODO
-      PROGRAM   TODO
-      PLATFORM   TODO
-      MINGAPLENGTH   optional
-      MOLECULETYPE   genomic DNA
-      DESCRIPTION optional
-      RUN_REF optional
-      FASTA   genome.fasta.gz
-      CHROMOSOME_LIST chromosome_list.txt
-
+   STUDY   TODO
+   SAMPLE   TODO
+   ASSEMBLYNAME   TODO
+   ASSEMBLY_TYPE clone or isolate
+   COVERAGE   TODO
+   PROGRAM   TODO
+   PLATFORM   TODO
+   MINGAPLENGTH   optional
+   MOLECULETYPE   viral cRNA
+   DESCRIPTION optional
+   RUN_REF optional
+   FASTA   genome.fasta.gz
+   CHROMOSOME_LIST chromosome_list.txt
 
 
 Chromosome list file
@@ -308,46 +273,48 @@ for permitted values.
 
 **chromosome_list.txt** examples
 
-.. tabs::
+Viruses
+--------
 
-   .. tab:: Viruses
+.. code-block:: xml
 
-      .. code-block:: xml
+   chr01   1 Monopartite
 
-         chr01   1 Monopartite
+.. code-block:: bash
 
-      .. code-block:: bash
+   chr01   1 Linear-Monopartite viroid
 
-         chr01   1 Linear-Monopartite viroid
+.. code-block:: python
 
-      .. code-block:: python
+   chr01   1 Multipartite
+   chr02   2 Multipartite
 
-         chr01   1 Multipartite
-         chr02   2 Multipartite
-   .. tab:: Bacteria
+Bacteria
+---------
 
-      By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
-      chromosome_location may be specified.
-      By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
+By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
+chromosome_location may be specified.
+By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
 
-      .. code-block::
+.. code-block::
 
-         chr01   1 circular-Chromosome
-         chr02   2 circular-Chromosome plasmid
-         chr03   3 circular-Chromosome plasmid
+   chr01   1 circular-Chromosome
+   chr02   2 circular-Chromosome plasmid
+   chr03   3 circular-Chromosome plasmid
 
-   .. tab:: Eukaryota
+Eukaryota
+---------
 
-      By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
-      will be assumed to be linear, but it may also be specified.
+By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
+will be assumed to be linear, but it may also be specified.
 
-      .. code-block::
+.. code-block::
 
-         chr01   1 Linear-Chromosome
-         chr02   2 Linear-Chromosome
-         chr03   3 Linear-Chromosome
-         chr04   4 Linear-Chromosome
-         chrMi   MIT Linear-Chromosome Mitochondrion
+   chr01   1 Linear-Chromosome
+   chr02   2 Linear-Chromosome
+   chr03   3 Linear-Chromosome
+   chr04   4 Linear-Chromosome
+   chrMi   MIT Linear-Chromosome Mitochondrion
 
 
 Webin-CLI submission
