@@ -97,7 +97,7 @@ The read_type attribute supports the following values:
 - umi_barcode
 - feature_barcode
 - sample_barcode
-- saptial_barcode
+- spatial_barcode
 
 For example, the following manifest file represents a multi-fastq submission:
 
