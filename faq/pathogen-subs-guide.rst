@@ -299,8 +299,8 @@ By default the chromosome topology will be assumed to be linear, so in this exam
 .. code-block:: xml
 
    chr01   1 circular-Chromosome
-   chr02   2 circular-Chromosome plasmid
-   chr03   3 circular-Chromosome plasmid
+   chr02   2 circular-plasmid
+   chr03   3 circular-plasmid
 
 Eukaryota
 ---------
