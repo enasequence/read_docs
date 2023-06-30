@@ -159,7 +159,7 @@ the right taxonomy for your pathogen submission.
 
 You can search for suitable taxon IDs and find more information about a taxon ID using the taxonomy API endpoints:
 
-.. code:: none
+::
 
    https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/
    https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/
