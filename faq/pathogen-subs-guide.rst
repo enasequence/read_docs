@@ -159,7 +159,7 @@ the right taxonomy for your pathogen submission.
 
 You can search for suitable taxon IDs and find more information about a taxon ID using the taxonomy API endpoints:
 
-.. code:: none
+::
 
    https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/
    https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/
@@ -299,8 +299,8 @@ By default the chromosome topology will be assumed to be linear, so in this exam
 .. code-block:: xml
 
    chr01   1 circular-Chromosome
-   chr02   2 circular-Chromosome plasmid
-   chr03   3 circular-Chromosome plasmid
+   chr02   2 circular-plasmid
+   chr03   3 circular-plasmid
 
 Eukaryota
 ---------
