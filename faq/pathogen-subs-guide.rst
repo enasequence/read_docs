@@ -273,48 +273,47 @@ for permitted values.
 
 **chromosome_list.txt** examples
 
-Viruses
---------
+.. tabs::
 
-.. code-block:: xml
+   .. tab:: Viruses
 
-   chr01   1 Monopartite
+      .. code:: none
 
-.. code-block:: bash
+         chr01   1 Monopartite
 
-   chr01   1 Linear-Monopartite viroid
+      .. code:: none
 
-.. code-block:: python
+         chr01   1 Linear-Monopartite viroid
 
-   chr01   1 Multipartite
-   chr02   2 Multipartite
+      .. code:: none
 
-Bacteria
----------
+         chr01   1 Multipartite
+         chr02   2 Multipartite
 
-By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
-chromosome_location may be specified.
-By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
+   .. tab:: Bacteria
 
-.. code-block:: xml
+      By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
+      chromosome_location may be specified.
+      By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
 
-   chr01   1 circular-Chromosome
-   chr02   2 circular-plasmid
-   chr03   3 circular-plasmid
+      .. code:: none
 
-Eukaryota
----------
+         chr01   1 circular-Chromosome
+         chr02   2 circular-Chromosome plasmid
+         chr03   3 circular-Chromosome plasmid
 
-By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
-will be assumed to be linear, but it may also be specified.
+   .. tab:: Eukaryota
 
-.. code-block:: xml
+      By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
+      will be assumed to be linear, but it may also be specified.
 
-   chr01   1 Linear-Chromosome
-   chr02   2 Linear-Chromosome
-   chr03   3 Linear-Chromosome
-   chr04   4 Linear-Chromosome
-   chrMi   MIT Linear-Chromosome Mitochondrion
+      .. code:: none
+
+         chr01   1 Linear-Chromosome
+         chr02   2 Linear-Chromosome
+         chr03   3 Linear-Chromosome
+         chr04   4 Linear-Chromosome
+         chrMi   MIT Linear-Chromosome Mitochondrion
 
 
 Webin-CLI submission
