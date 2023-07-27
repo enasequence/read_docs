@@ -337,9 +337,9 @@ be made public and accessible from the Pathogens Portal.
 
 For information about data release, please find more information at the following pages:
 
-`Data Release Policies <https://ena-docs.readthedocs.io/en/latest/faq/release.html>`_
+- `Data Release Policies <https://ena-docs.readthedocs.io/en/latest/faq/release.html>`_
 
-`Accession numbers <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html>`_
+- `Accession numbers <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html>`_
 
-`Citing and Orcid data claiming <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html#how-to-cite-your-ena-study>`_
+- `Citing and Orcid data claiming <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html#how-to-cite-your-ena-study>`_
 
