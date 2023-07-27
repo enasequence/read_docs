@@ -269,7 +269,7 @@ for permitted values.
 Note that ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of eukaryotes, prokaryotes, 
 and viruses, as well as organellar chromosomes and plasmids. All of these may be submitted within the same chromosome-level assembly.
 
-If your assembly is not complete, you can submit a **contig** or **scaffold** level assembly, which are described here: `Assembly levels <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
+If your assembly is not complete, you can submit a **contig** or **scaffold** level assembly. The `Assembly levels <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_ tutorial page explains the assembly levels recognised by ENA.
 
 **chromosome_list.txt** examples
 
