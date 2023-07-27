@@ -168,4 +168,4 @@ source_parsers = {
 
 source_suffix = ['.rst', '.md']
 
-extensions = ['sphinx_tabs.tabs']
+extensions = ['sphinx_tabs.tabs', 'myst_parser']
