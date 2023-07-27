@@ -263,9 +263,14 @@ for permitted values.
 Chromosome list file
 ''''''''''''''''''''
 
-The chromosome list file is an optional file for a complete assembly which describes the 'chromosomes' within
-the assembly. Chromosome in the context of ENA submissions means a range of complete replicons, as explained `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
-and is used when describing a completed assembly.
+The chromosome list file must be provided when the submission contains assembled chromosomes. 
+
+Note that ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of eukaryotes, prokaryotes, 
+and viruses, as well as organellar chromosomes and plasmids. All of these may be submitted within the same chromosome-level assembly.
+
+If your assembly is not complete, you can submit a **contig** or **scaffold** level assembly, which are described here:
+
+- `Assembly levels <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
 
 The chromosome list file is a tab separated file up to four columns. Each row describes each replicon unit within the assembly.
 Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
@@ -276,6 +281,9 @@ for permitted values.
 .. tabs::
 
    .. tab:: Viruses
+
+      The chromosome topology for viral sequences can be specified in the manifest file as **MOLECULETYPE** : ‘genomic DNA’, ‘genomic RNA’ or ‘viral cRNA’.
+      By default the chromosome topology will be assumed to be linear, therefore if the topology is cicrular, it must be specified.
 
       .. code:: none
 
@@ -293,8 +301,8 @@ for permitted values.
    .. tab:: Bacteria
 
       By default prokaryotic chromosomes and plasmids will be assumed to reside in the in the cytoplasm, however, the 'plasmid'
-      chromosome_location may be specified.
-      By default the chromosome topology will be assumed to be linear, so in this example the circular topology was specified.
+      **CHROMOSOME_LOCATION** may be specified.
+      By default the **TOPOLOGY** will be assumed to be linear, so in this example the circular topology was specified.
 
       .. code:: none
 
