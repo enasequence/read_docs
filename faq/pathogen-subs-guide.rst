@@ -263,18 +263,13 @@ for permitted values.
 Chromosome list file
 ''''''''''''''''''''
 
-The chromosome list file must be provided when the submission contains assembled chromosomes. 
+The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+for permitted values.
 
 Note that ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of eukaryotes, prokaryotes, 
 and viruses, as well as organellar chromosomes and plasmids. All of these may be submitted within the same chromosome-level assembly.
 
-If your assembly is not complete, you can submit a **contig** or **scaffold** level assembly, which are described here:
-
-- `Assembly levels <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
-
-The chromosome list file is a tab separated file up to four columns. Each row describes each replicon unit within the assembly.
-Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
-for permitted values.
+If your assembly is not complete, you can submit a **contig** or **scaffold** level assembly, which are described here: `Assembly levels <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_
 
 **chromosome_list.txt** examples
 
