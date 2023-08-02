@@ -2,12 +2,17 @@
 ENA Webin REST V2
 =================
 
-All 3 existing submission routes, interactive, programmatic and Webin-CLI, at the ENA utilise the WEBIN REST submission
-service. This can sometimes result in timeout errors during submission.
+All 3 existing submission routes, interactive, programmatic and Webin-CLI, at the ENA use the WEBIN REST version 1 (V1) submission
+service.  The Webin REST V1 submission endpoint may time out while the submission still is being processed. If this happens the submitter will not receive a submission receipt.
 
-To address such issues and improve the ENA submission services, the ENA WEBIN REST V2 service has been developed.
-The V2 service runs through the programmatic submission route and has 3 endpoints:
-2 submission endpoints (one synchronous and one asynchronous) and 1 polling endpoint to retrieve the submission receipt.
+The Webin REST version 2 (V2) prevents this error and has a number of other improvements.
+
+The Webin REST V2 API supports two types of submissions:
+
+- synchronous submissions that use an endpoint that returns a submission receipt
+- asynchronous submissions that use an endpoint that returns a submission accession that is used to poll for the submission receipt
+
+The synchronous submission endpoint timeouts gracefully so that the submission processing is terminated if the submission processing takes more than 1 minute. The asynchronous submission endpoint supports larger submissions and gracefully terminated the submission if the processing takes more than 10 minutes.
 
 These endpoints are further explained below:
 
