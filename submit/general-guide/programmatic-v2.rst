@@ -129,14 +129,14 @@ An example of the cURL command used for the poll endpoint to retrieve a receipt 
 
 
 =====================
-XML Submission
+Submission XML
 =====================
 
-The XMLs are submitted in the request body and the document must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
+The XMLs are submitted in the request body as a single document that must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
 
 The XMLs are enclosed within the ``<WEBIN>...</WEBIN>`` tag.
 
-For example, a submission with ``PROJECT`` and ``SAMPLE`` objects are submitted like this:
+For example, a submission with one ``SAMPLE`` object could be submitted like this (most sample attributes have been excluded for brevity):
 
 .. code-block:: xml
 
@@ -150,24 +150,6 @@ For example, a submission with ``PROJECT`` and ``SAMPLE`` objects are submitted 
 	  </ACTIONS>
 	</SUBMISSION>
       </SUBMISSION_SET>
-      <PROJECT_SET>
-        <PROJECT alias="gut_2022">
-	  <NAME>Human Gut Microbiota Study</NAME>
-	  <TITLE>Exploration of the diversity human gastric microbiota</TITLE>
-	  <DESCRIPTION>The genome sequences of gut microbes were obtained using... </DESCRIPTION>
-	  <SUBMISSION_PROJECT>
-	    <SEQUENCING_PROJECT/>
-	  </SUBMISSION_PROJECT>
-	  <PROJECT_LINKS>
-	    <PROJECT_LINK>
-	      <XREF_LINK>
-	        <DB>PUBMED</DB>
-		<ID>25035323</ID>
-	      </XREF_LINK>
-	    </PROJECT_LINK>
-	  </PROJECT_LINKS>
-	</PROJECT>
-      </PROJECT_SET>
       <SAMPLE_SET>
         <SAMPLE alias="stomach_microbiota" center_name="">
 	  <TITLE>human gastric microbiota, mucosal</TITLE>
@@ -182,54 +164,16 @@ For example, a submission with ``PROJECT`` and ``SAMPLE`` objects are submitted 
 	      <VALUE>mimarks-survey</VALUE>
 	    </SAMPLE_ATTRIBUTE>
 	    <SAMPLE_ATTRIBUTE>
-	      <TAG>sequencing method</TAG>
-	      <VALUE>pyrosequencing</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>collection date</TAG>
-	      <VALUE>2010</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
 	      <TAG>host body site</TAG>
 	      <VALUE>Mucosa of stomach</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>human-associated environmental package</TAG>
-	      <VALUE>human-associated</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>geographic location (latitude)</TAG>
-	      <VALUE>1.81</VALUE>
-	      <UNITS>DD</UNITS>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>geographic location (longitude)</TAG>
-	      <VALUE>-78.76</VALUE>
-	      <UNITS>DD</UNITS>
 	    </SAMPLE_ATTRIBUTE>
 	    <SAMPLE_ATTRIBUTE>
 	      <TAG>geographic location (country and/or sea)</TAG>
 	      <VALUE>Colombia</VALUE>
 	    </SAMPLE_ATTRIBUTE>
 	    <SAMPLE_ATTRIBUTE>
-	      <TAG>geographic location (region and locality)</TAG>
-	      <VALUE>Tumaco</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
 	      <TAG>environment (biome)</TAG>
 	      <VALUE>coast</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>environment (feature)</TAG>
-	      <VALUE>human-associated habitat</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>project name</TAG>
-	      <VALUE>Human microbiota</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>environment (material)</TAG>
-	      <VALUE>gastric biopsy</VALUE>
 	    </SAMPLE_ATTRIBUTE>
 	    <SAMPLE_ATTRIBUTE>
 	      <TAG>ENA-CHECKLIST</TAG>
@@ -245,24 +189,18 @@ For example, a submission with ``PROJECT`` and ``SAMPLE`` objects are submitted 
 Receipt XML
 ===========
 
-The ``success`` attribute in the first line of the receipt block will be ``true`` if the submission is successful
-and ``false`` if the submission is not successful.
+The ``success`` attribute in the RECEIPT element is ``true`` if the submission was successful and ``false`` if the submission was not successful.
 
-The receipt will also contain the accession numbers of the objects that you have submitted.
+The receipt also contains the accession numbers of the objects that you have submitted.
 
-An example of a successful sequence read data submission together with a project, sample, and experiment object:
+An example of a successful sample submission is shown below:
 
 .. code-block:: xml
 
     <RECEIPT receiptDate="2022-07-27T09:54:37.869+01:00" submissionFile="submission-EMBL-EBI_1658912077869.xml" success="true">
-         <EXPERIMENT accession="ERX9535365" alias="illumina-hiSeq" status="PRIVATE"/>
-         <RUN accession="ERR9994219" alias="paired-data" status="PRIVATE"/>
          <SAMPLE accession="ERS12520704" alias="gut-microbiota" status="PRIVATE" holdUntilDate="2024-07-12+01:00">
               <EXT_ID accession="SAMEA110422334" type="biosample"/>
          </SAMPLE>
-         <PROJECT accession="PRJEB55033" alias="comparative-analysis" status="PRIVATE" holdUntilDate="2024-07-12+01:00">
-              <EXT_ID accession="ERP139895" type="study"/>
-         </PROJECT>
          <SUBMISSION accession="ERA16500666" alias="SUBMISSION-27-07-2022-09:54:36:278"/>
          <MESSAGES>
               <INFO>All objects in this submission are set to private status (HOLD).</INFO>
@@ -271,7 +209,7 @@ An example of a successful sequence read data submission together with a project
          <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
 
-If the submission is not successful the Receipt XML will contain the error messages within the MESSAGES block:
+If the submission is not successful the ``success`` attribute in the RECEIPT element is ``false`` and the error messages are available in the MESSAGES block:
 
 .. code-block:: xml
 
