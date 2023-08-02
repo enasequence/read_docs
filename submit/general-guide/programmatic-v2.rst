@@ -140,13 +140,10 @@ For example, a submission with one sample object could be submitted like this:
 
     {
     "submission":{
+        "alias":"test-submission-1",
         "actions":[
             {
                 "type":"ADD"
-            },
-            {
-                "type":"HOLD",
-                "holdUntilDate":"2022-01-01"
             }
         ]
     },
@@ -167,6 +164,50 @@ For example, a submission with one sample object could be submitted like this:
     ]
     }
 
+===========
+Receipt JSON
+===========
+
+The ``success`` attribute in the receipt is ``true`` if the submission was successful and ``false`` if the submission was not successful.
+
+The receipt also contains the accession numbers of the objects that you have submitted.
+
+An example of a successful sample submission is shown below:
+
+.. code-block:: json
+
+    {
+    "success" : true,
+    "receiptDate" : "2022-01-01T17:05:01.114+01:00",
+    "samples" : [ {
+        "alias" : "test-sample-1",
+        "accession" : "ERS12520704",
+        "status" : "PUBLIC",
+        "externalAccession" : {
+        "id" : "SAMEA110422334",
+        "db" : "biosample"
+        }
+    } ],
+    "submission" : {
+        "alias" : "test-submission-1",
+        "accession" : "ERA16500666"
+    },
+    "messages" : { },
+    "actions" : [ "ADD" ]
+    }
+
+If the submission is not successful the ``success`` attribute in the RECEIPT element is ``false`` and the error messages are available in the MESSAGES block:
+
+.. code-block:: json
+
+    {
+    "success" : false,
+    "receiptDate" : "2022-01-01T17:05:01.114+01:00",
+    "messages" : { 
+      "error": [ "Error message displayed here" ]
+      }
+    }
+
 =====================
 Submission XML
 =====================
@@ -181,13 +222,10 @@ For example, a submission with one sample object could be submitted like this:
 
     <WEBIN>
       <SUBMISSION_SET>
-        <SUBMISSION>
+        <SUBMISSION alias="test-submission-1">
 	  <ACTIONS>
 	    <ACTION>
 	      <ADD/>
-	    </ACTION>
-            <ACTION>
-              <HOLD HoldUntilDate="2022-01-01"/>
 	    </ACTION>
 	  </ACTIONS>
 	</SUBMISSION>
@@ -197,7 +235,6 @@ For example, a submission with one sample object could be submitted like this:
 	  <TITLE>test</TITLE>
 	  <SAMPLE_NAME>
 	    <TAXON_ID>1284369</TAXON_ID>
-	    <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
 	  </SAMPLE_NAME>
 	  <SAMPLE_ATTRIBUTES>
 	    <SAMPLE_ATTRIBUTE>
@@ -222,24 +259,23 @@ An example of a successful sample submission is shown below:
 
 .. code-block:: xml
 
-    <RECEIPT receiptDate="2022-07-27T09:54:37.869+01:00" submissionFile="submission-EMBL-EBI_1658912077869.xml" success="true">
-         <SAMPLE accession="ERS12520704" alias="gut-microbiota" status="PRIVATE" holdUntilDate="2024-07-12+01:00">
+    <RECEIPT receiptDate="2022-01-01T17:05:01.114+01:00" success="true">
+         <SAMPLE accession="ERS12520704" alias="test-sample-1" status="PUBLIC">
               <EXT_ID accession="SAMEA110422334" type="biosample"/>
          </SAMPLE>
-         <SUBMISSION accession="ERA16500666" alias="SUBMISSION-27-07-2022-09:54:36:278"/>
+         <SUBMISSION accession="ERA16500666" alias="test-submission-1"/>
          <MESSAGES>
               <INFO>All objects in this submission are set to private status (HOLD).</INFO>
          </MESSAGES>
          <ACTIONS>ADD</ACTIONS>
-         <ACTIONS>HOLD</ACTIONS>
     </RECEIPT>
 
 If the submission is not successful the ``success`` attribute in the RECEIPT element is ``false`` and the error messages are available in the MESSAGES block:
 
 .. code-block:: xml
 
-    <RECEIPT receiptDate="2022-07-22T12:05:05.951+01:00" success="false">
+    <RECEIPT receiptDate="2022-01-01T17:05:01.114+01:00" success="false">
          <MESSAGES>
-              <ERROR>Error message displayed here.</ERROR>
+              <ERROR>Error message displayed here</ERROR>
          </MESSAGES>
     </RECEIPT>
