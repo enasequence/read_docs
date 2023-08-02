@@ -21,16 +21,14 @@ Service URL: https://www.ebi.ac.uk/ena/submit/webin-v2/
 +------------------------+--------------------------------------------------------------------------------------------------+
 | API Mapping            | Use                                                                                              |
 +========================+==================================================================================================+
-| /submit                | | Processes submitted XMLs and returns the submission result. This method supports               |
-|                        | | XML files of up to 15 MB. If the submission processing takes more than 1 minute,               |
-|                        | | the submission will failwith a timeout error and will not be persisted in ENA.                 |
+| /submit                | | Processes submissions and returns the submission receipt. This method supports                 |
+|                        | | XML or JSON documents of up to 15 MB. If the submission processing takes more than 1 minute    |
+|                        | | then the submission processing is gracefully terminated with a timeout error.                  |
 +------------------------+--------------------------------------------------------------------------------------------------+
-| /submit/queue          | | Queues submitted XMLs for processing and returns a submission ID and submission                |
-|                        | | polling links. The submission processing status and the receipt for the                        |
-|                        | | submission ID can be retrieved using the poll method. This method supports XML                 |
-|                        | | files of up to 100 MB and allows submissions to bemade without the risk of                     |
-|                        | | timeout errors. Asynchronous submission processing runs behind the scenes to                   |
-|                        | | process the submissions.                                                                       |
+| /submit/queue          | | Queues submissions for processing and returns a submission ID and a submission polling         |
+|                        | | link. The submission processing status and the receipt are retrieved for the submission ID     |
+|                        | | using the poll link. If the submission processing takes more than 10 minutes                   |
+|                        | | then the submission processing is gracefully terminated with a timeout error.                  |             
 +------------------------+--------------------------------------------------------------------------------------------------+
 | /submit/poll           | | Returns the submission processing status and receipt (if available) for a queued               |
 |                        | | submission.                                                                                    |
