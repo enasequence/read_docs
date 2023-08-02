@@ -34,16 +34,109 @@ Service URL: https://www.ebi.ac.uk/ena/submit/webin-v2/
 |                        | | submission.                                                                                    |
 +------------------------+--------------------------------------------------------------------------------------------------+
 
-=====================
-Submission XML Format
+========================
+How to use Webin REST V2
+========================
+
+In contrast to Webin REST V1 where individual objects (submission, runs, samples, etc.) are submitted 
+as separate files using multipart file upload, in Webin REST V2 they are submitted as a single file in the request body.
+Additionally, Webin REST V2 supports both JSON and XML formats while Webin REST V1 only supports the XML format.
+
+- The production service is available at: https://www.ebi.ac.uk/ena/submit/webin-v2/
+- The test service is available at: https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/
+
+The web API can be viewed and tested using the Swagger web interface accessible through the above links. Some users use cURL while others build their own API to access these endpoints.
+
+Synchronous Endpoint
+====================
+
+The synchronous submission endpoint processes the submitted XML or JSON document right away and returns a receipt in either XML or JSON document. Submitters with large or high-volume submissions are advised to use the asynchronous endpoint explained below.
+
+Below is an example of a submission to the Webin service using the synchronous endpoint in JSON and XML formats:
+
+.. code-block:: bash
+
+    curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit' \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -T 'submission file name'
+
+    curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit' \
+    -H 'Accept: application/xml' \
+    -H 'Content-Type: application/xml' \
+    -T 'submission file name'
+
+The JSON or XML submission document is in the file named 'submission file name' above. The Accept and Content-Type headers must match the document format in the 'submission file name'. 
+
+Asynchronous Endpoint
 =====================
 
-In contrast to the Webin REST V1 where individual data objects (submission, runs, samples, etc.)
-are submitted as separate files, in the V2 endpoint they are submitted as a single file in the request body. This file 
-must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
-In practise, the XMLs are enclosed within the ``<WEBIN>...</WEBIN>`` tag.
+When a submission is made using the asynchronous endpoint, it enters a pending state in a queue of submissions.
+This submission is processed once it reaches the front of this queue. The asynchronous submission endpoint supports
+larger and a higher volume of submissions than the synchronous endpoint.
 
-For example, a ``PROJECT`` and ``SAMPLE`` object are submitted like this:
+Below is an example of a sequence read data submission to the Webin service using the asynchronous endpoint:
+
+.. code-block:: bash
+
+  curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit/queue' \
+    -H 'Accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -T '{submission file name}'
+
+    curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit/queue' \
+    -H 'Accept: application/xml' \
+    -H 'Content-Type: application/xml' \
+    -T '{submission file name}'
+
+When the asynchronous endpoint is used, a JSON document is returned with a submission ID and a poll link:
+
+.. code-block:: json
+
+    {
+      "submissionId": "ERA12944374",
+      "submissionAccountId": "Webin-57176",
+      "_links": {
+        "poll": {
+          "href": "https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit/poll/ERA12944374"
+        }
+      }
+    }
+
+The poll endpoint and submission ID are used to retrieve the state of the submission and the JSON or XML receipt once
+the submission has been processed. If the submission is still in the queue, the endpoint returns HTTP status 202 without
+a response body. Once the submission is processed, the endpoint returns HTTP status 200 and the receipt in either JSON
+or XML format depending on the Accept header.
+
+An example of the cURL command used for the poll endpoint to retrieve a receipt JSON is shown below:
+
+.. code-block:: bash
+
+    curl -u username:password "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500666"
+
+    or
+
+    curl -u username:password "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500666" \
+    -H 'Accept: application/json'
+
+
+An example of the cURL command used for the poll endpoint to retrieve a receipt XML is shown below:
+
+.. code-block:: bash
+
+    curl -u username:password "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500666" \
+    -H 'Accept: application/xml'
+
+
+=====================
+XML Submission
+=====================
+
+The XMLs are submitted in the request body and the document must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
+
+The XMLs are enclosed within the ``<WEBIN>...</WEBIN>`` tag.
+
+For example, a submission with ``PROJECT`` and ``SAMPLE`` objects are submitted like this:
 
 .. code-block:: xml
 
@@ -147,90 +240,17 @@ For example, a ``PROJECT`` and ``SAMPLE`` object are submitted like this:
       </SAMPLE_SET>
     </WEBIN>
 
-======================
-How to use the new API
-======================
-
-| The production service is available at - https://www.ebi.ac.uk/ena/submit/webin-v2/
-| The test service is available at - https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/
-|
-To submit XML files using this API, curl or ENA's swagger UI in the above links can be used. Users can also choose to
-build a client that can consume these services.
-
-Synchronous Endpoint
-====================
-
-The synchronous submission route processes the submitted XML files right away and returns a `Receipt XML`_.
-This route is appropriate for small-scale submissions.
-
-Below is an example of a submission to the Webin service using the synchronous endpoint:
-
-.. code-block:: bash
-
-    curl -u username:password -F "file=@ENA_objects.xml" "https://www.ebi.ac.uk/ena/submit/webin-v2/submit"
-
-If submission attempts using the synchronous route do return timeout errors, then your submission might be too large
-and can instead be queued for submission using the asynchronous endpoint.
-
-Asynchronous Endpoint
-=====================
-
-When a submission is made using the asynchronous endpoint, it enters a pending state in a queue of submissions.
-This submission is then accepted and processed for accessions when it reaches first in the queue.
-
-The asynchronous submission route is catered for users with large-scale submissions or automated pipelines for
-submissions, such as brokers.
-
-Below is an example of a sequence read data submission to the Webin service using the asynchronous endpoint:
-
-.. code-block:: bash
-
-    curl -u username:password -F "file=@ENA_objects.xml" "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/queue"
-
-When the asynchronous endpoint is used, the submission returns a submission ID:
-
-.. code-block:: xml
-
-    {
-     "submissionId": "ERA16500607",
-     "submissionAccountId": "Webin-12345",
-     "links": [
-       {
-         "rel": "poll-json",
-         "href": "http://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500607?mediaType=json"
-       },
-       {
-         "rel": "poll-xml",
-         "href": "http://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500607?mediaType = xml"
-       }
-     ]
-    }
-
-The ‘polling’ endpoint and submission ID can then be used to retrieve a receipt XML containing the relevant object
-accessions when the submission is complete.
-
-An example of the cURL command used for the polling endpoint to retrieve a receipt XML is shown below:
-
-.. code-block:: bash
-
-    curl -u username:password "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500666"
-
-If the submission is still in the queue, it will return an HTTP status of 202, if successful it will return a status of
-200 and the receipt XML.
 
 ===========
 Receipt XML
 ===========
 
-Once a submission has been processed a receipt XML is returned either immediately (synchronous endpoint) or
-after polling (asynchronous endpoint).
-
-The ``success`` attribute in the first line of the receipt block will equal ``true`` if the submission is successful
+The ``success`` attribute in the first line of the receipt block will be ``true`` if the submission is successful
 and ``false`` if the submission is not successful.
 
 The receipt will also contain the accession numbers of the objects that you have submitted.
 
-An example of a successful sequence read data submission together with a project, sample and experiment object:
+An example of a successful sequence read data submission together with a project, sample, and experiment object:
 
 .. code-block:: xml
 
