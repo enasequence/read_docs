@@ -127,16 +127,55 @@ An example of the cURL command used for the poll endpoint to retrieve a receipt 
     curl -u username:password "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500666" \
     -H 'Accept: application/xml'
 
+=====================
+Submission JSON
+=====================
+
+The JSON is submitted in the request body as a single document.
+
+For example, a submission with one sample object could be submitted like this:
+
+
+.. code-block:: json
+
+    {
+    "submission":{
+        "actions":[
+            {
+                "type":"ADD"
+            },
+            {
+                "type":"HOLD",
+                "holdUntilDate":"2022-01-01"
+            }
+        ]
+    },
+    "samples":[
+        {
+            "alias":"test-sample-1",
+            "title":"test",
+            "organism":{
+                "taxonId":"1284369"
+            },
+            "attributes":[
+                {
+                "tag":"test",
+                "value":"value"
+                }
+            ]
+        }
+    ]
+    }
 
 =====================
 Submission XML
 =====================
 
-The XMLs are submitted in the request body as a single document that must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
+The XML is submitted in the request body as a single document that must conform to the `Webin XML format <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.webin.xsd>`_.
 
 The XMLs are enclosed within the ``<WEBIN>...</WEBIN>`` tag.
 
-For example, a submission with one ``SAMPLE`` object could be submitted like this (most sample attributes have been excluded for brevity):
+For example, a submission with one sample object could be submitted like this:
 
 .. code-block:: xml
 
@@ -147,37 +186,23 @@ For example, a submission with one ``SAMPLE`` object could be submitted like thi
 	    <ACTION>
 	      <ADD/>
 	    </ACTION>
+            <ACTION>
+              <HOLD HoldUntilDate="2022-01-01"/>
+	    </ACTION>
 	  </ACTIONS>
 	</SUBMISSION>
       </SUBMISSION_SET>
       <SAMPLE_SET>
-        <SAMPLE alias="stomach_microbiota" center_name="">
-	  <TITLE>human gastric microbiota, mucosal</TITLE>
+        <SAMPLE alias="test-sample-1">
+	  <TITLE>test</TITLE>
 	  <SAMPLE_NAME>
 	    <TAXON_ID>1284369</TAXON_ID>
 	    <SCIENTIFIC_NAME>stomach metagenome</SCIENTIFIC_NAME>
-	    <COMMON_NAME></COMMON_NAME>
 	  </SAMPLE_NAME>
 	  <SAMPLE_ATTRIBUTES>
 	    <SAMPLE_ATTRIBUTE>
-	      <TAG>investigation type</TAG>
-	      <VALUE>mimarks-survey</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>host body site</TAG>
-	      <VALUE>Mucosa of stomach</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>geographic location (country and/or sea)</TAG>
-	      <VALUE>Colombia</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>environment (biome)</TAG>
-	      <VALUE>coast</VALUE>
-	    </SAMPLE_ATTRIBUTE>
-	    <SAMPLE_ATTRIBUTE>
-	      <TAG>ENA-CHECKLIST</TAG>
-	      <VALUE>ERC000014</VALUE>
+	      <TAG>test</TAG>
+	      <VALUE>value</VALUE>
 	    </SAMPLE_ATTRIBUTE>
 	  </SAMPLE_ATTRIBUTES>
 	</SAMPLE>
