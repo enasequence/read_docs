@@ -218,8 +218,7 @@ For submission of targeted sequences, please refer to the `targeted sequence sub
 For genome assembly submission, Webin-CLI (command line interface) needs to be used. The guide for downloading
 and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
 
-.. tip::
-   **A note on assembly levels**
+.. admonition:: A note on assembly levels
 
    This guide includes chromosome list file examples which are used for a **chromosome** level assembly. Note that
    ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of
@@ -227,7 +226,7 @@ and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/g
    within the same chromosome-level assembly.
 
    If your assembly is not completed, you can submit a **contig** or **scaffold**
-   level assembly. Please refer to the explainer about Assembly levels `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_.
+   level assembly. Please refer to the explainer about assembly levels `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_.
 
 
 Prepare files
@@ -318,7 +317,7 @@ for permitted values.
          chr04   4 Linear-Chromosome
          chrMi   MIT Linear-Chromosome Mitochondrion
 
-If there are sequences that are associated with a specific chromosome, but order and orientation is unknowm, you can also add sn
+If there are sequences that are associated with a specific chromosome, but order and orientation is unknowm, you can also add an
 `unlocalised list file <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#unlocalised-list-file>`_ to the
 submission. Alternatively, an `AGP file <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#agp-file>`_ may also be
 submitted to define unplaced sequences.
