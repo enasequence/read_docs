@@ -26,6 +26,7 @@ us at ena-path-collabs@ebi.ac.uk.
 .. tip::
 
   **Looking for something else?**
+
   For pathogen-specific submissions guidance, please refer to these guides:
 
   - `ENA SARS-CoV-2 submissions guide <https://ena-covid19-docs.readthedocs.io/en/latest/index.html>`_
@@ -219,6 +220,7 @@ and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/g
 
 .. tip::
    **A note on assembly levels**
+
    This guide includes chromosome list file examples which are used for a **chromosome** level assembly. Note that
    ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of
    eukaryotes, prokaryotes, and viruses, as well as organellar chromosomes and plasmids. All of these may be submitted
@@ -305,7 +307,7 @@ for permitted values.
 
    .. tab:: Eukaryota
 
-      By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome topology
+      By default eukaryotic chromosomes will be assumed to reside in the nucleus. By default the chromosome **TOPOLOGY**
       will be assumed to be linear, but it may also be specified.
 
       .. code:: none
