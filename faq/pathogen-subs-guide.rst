@@ -26,7 +26,7 @@ us at ena-path-collabs@ebi.ac.uk.
 .. tip::
 
   **Looking for something else?**
-  For pathogen specific submissions guidance, please refer to these guides:
+  For pathogen-specific submissions guidance, please refer to these guides:
 
   - `ENA SARS-CoV-2 submissions guide <https://ena-covid19-docs.readthedocs.io/en/latest/index.html>`_
   - `Monkeypox virus ENA submissions Guidance <https://docs.google.com/viewer?url=https://github.com/enasequence/ena-content-dataflow/raw/master/docs/Monkeypox%20virus%20ENA%20Submission%20Guidance.pdf>`_
@@ -209,15 +209,24 @@ the library description. This can be, for example, the name and/or URL to a spec
 Submit Assembled Sequences
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The instructions below provide a quick guide to submitting a completed isolate pathogen genome assembly.
+This type of submission is classed as 'clone or isolate' **ASSEMBLY_TYPE** for the ENA submissions services. For submission of
+other types of nucleotide assembly data, please see the submission options `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#submission-options>`_.
+For submission of targeted sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
 
-The instructions here provide tips for submitting microbial pathogen assemblies. For genome assembly submission,
-Webin-CLI (command line interface) needs to be used. The guide for downloading and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
+For genome assembly submission, Webin-CLI (command line interface) needs to be used. The guide for downloading
+and using Webin-CLI is `here <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/webin-cli.html#webin-cli-submission>`_.
 
 .. tip::
-   For submission of targeted sequences, please refer to the `targeted sequence submissions guide <https://ena-docs.readthedocs.io/en/latest/submit/sequence.html#how-to-submit-targeted-sequences>`_.
+   **A note on assembly levels**
+   This guide includes chromosome list file examples which are used for a **chromosome** level assembly. Note that
+   ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of
+   eukaryotes, prokaryotes, and viruses, as well as organellar chromosomes and plasmids. All of these may be submitted
+   within the same chromosome-level assembly.
 
-For a pathogen assembly, in most cases, a **'clone or isolate'** assembly submission will be used. For other types of
-data, please review the `submission options <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#submission-options>`_.
+   If your assembly is not completed, you can submit a **contig** or **scaffold**
+   level assembly. Please refer to the explainer about Assembly levels `here <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_.
+
 
 Prepare files
 `````````````
@@ -225,7 +234,7 @@ Prepare files
 Assembly file
 '''''''''''''
 
-The accepted format for unannotated genome assembly is **fasta** and for annotated genome assembly, the accepted format is **embl flat file**
+The accepted format for unannotated genome assembly is **fasta** OR for annotated genome assembly, the accepted format is **embl flat file**
 Please refer to the `Accepted genome assembly data formats guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#accepted-genome-assembly-data-formats>`_
 for information about preparing these files.
 
@@ -238,10 +247,7 @@ assembly, including the study and sample it is linked to.
 Please refer to the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
 for permitted values.
 
-.. warning::
-   Please note the examples below are indicative and do not describe any mandatory file format.
-
-**manifest.txt** example
+For example, the following manifest file represents a genome assembly consisting of contigs provided in one fasta file:
 
 ::
 
@@ -253,11 +259,11 @@ for permitted values.
    PROGRAM   TODO
    PLATFORM   TODO
    MINGAPLENGTH   optional
-   MOLECULETYPE   viral cRNA
+   MOLECULETYPE   genomic DNA
    DESCRIPTION optional
    RUN_REF optional
    FASTA   genome.fasta.gz
-   CHROMOSOME_LIST chromosome_list.txt
+
 
 
 Chromosome list file
@@ -266,19 +272,11 @@ Chromosome list file
 The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
 for permitted values.
 
-Note that ‘chromosome’ should here be understood as a general term for a range of complete replicons, including chromosomes of eukaryotes, prokaryotes, 
-and viruses, as well as organellar chromosomes and plasmids. All of these may be submitted within the same chromosome-level assembly.
-
-If your assembly is not complete, you can submit a **contig** or **scaffold** level assembly. The `Assembly levels <https://ena-docs.readthedocs.io/en/latest/submit/assembly.html#assembly-levels>`_ tutorial page explains the assembly levels recognised by ENA.
-
-**chromosome_list.txt** examples
-
 .. tabs::
 
    .. tab:: Viruses
 
-      The chromosome topology for viral sequences can be specified in the manifest file as **MOLECULETYPE** : ‘genomic DNA’, ‘genomic RNA’ or ‘viral cRNA’.
-      By default the chromosome topology will be assumed to be linear, therefore if the topology is cicrular, it must be specified.
+      By default the chromosome **TOPOLOGY** will be assumed to be linear, therefore if the topology is circular, it must be specified.
 
       .. code:: none
 
@@ -286,7 +284,7 @@ If your assembly is not complete, you can submit a **contig** or **scaffold** le
 
       .. code:: none
 
-         chr01   1 Linear-Monopartite viroid
+         chr01   1 circular-Monopartite viroid
 
       .. code:: none
 
@@ -318,12 +316,18 @@ If your assembly is not complete, you can submit a **contig** or **scaffold** le
          chr04   4 Linear-Chromosome
          chrMi   MIT Linear-Chromosome Mitochondrion
 
+If there are sequences that are associated with a specific chromosome, but order and orientation is unknowm, you can also add sn
+`unlocalised list file <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#unlocalised-list-file>`_ to the
+submission. Alternatively, an `AGP file <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#agp-file>`_ may also be
+submitted to define unplaced sequences.
+
 
 Webin-CLI submission
 ````````````````````
 
-When you have prepared your assembly files and you are ready for submission, you can test the submission using the Webin-CLI ``-validate`` flag.
-When you are ready to submit the assembly, you can use the ``-submit`` flag.
+When you have prepared your files, including the assembly, the manifest file and any additional files for higher assemblies,
+You can validate and test your submission using the Webin-CLI ``-validate`` flag. When you are ready to submit the assembly,
+you can use the ``-submit`` flag.
 
 **Webin-CLI validate command:**
 
