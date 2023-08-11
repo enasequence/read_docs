@@ -112,3 +112,11 @@ CRAM Reference Registry:
    :maxdepth: 1
 
    programmatic-access/cram-reference-cache
+
+Rate Limits
+===========
+In order to ensure a smooth and fair user experience, we have implemented rate limits on our services.
+
+It helps us in maintaining optimal performance and preventing overload on our servers. By regulating the number of requests from individual users, we can ensure that everyone gets a consistent and responsive experience. It also acts as a protective measure against malicious activities such as DDoS attacks and brute-force attempts.
+
+At present we have kept the limit at **50 requests per second** which we think should be sufficient for most of the use-cases. If the requests breach this limit then it will be rejected with error **"Too Many Requests" (HTTP status code 429)**.
