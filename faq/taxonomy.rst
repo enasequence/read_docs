@@ -218,7 +218,7 @@ Such organisms are not considered in the way described here.
 The taxonomy used for environmental organism-level samples should have an identification which is as granular as possible.
 A general environmental record should also be registered to describe the biome that was originally sequenced.
 This biome-level environmental sample should also be referenced within the organism-level sample using the "sample
-derived from" attribute. The metadata structure for metagenomic submissions is described `here <../../submit/assembly/metagenome.html>`_.
+derived from" attribute. The metadata structure for metagenomic submissions is described `here <../../assembly/metagenome.html>`_.
 If you are unsure whether your sample should be
 registered as environmental, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for assistance.
 
