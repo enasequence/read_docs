@@ -115,7 +115,7 @@ CRAM Reference Registry:
 
 Rate Limits
 ===========
-In order to ensure a smooth and fair user experience, we have implemented rate limits on our RESTful APIs.
+In order to ensure a smooth and fair user experience, we have implemented rate limits on our data discovery and retrieval RESTful APIs.
 
 It helps us in maintaining optimal performance and preventing overload on our servers. By regulating the number of requests from individual users, we can ensure that everyone gets a consistent and responsive experience. It also acts as a protective measure against malicious activities such as DDoS attacks and brute-force attempts.
 
