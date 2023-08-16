@@ -148,7 +148,7 @@ XML in a separate file to tell ENA what actions you would like to take for your 
 ```
 
 The submission XML declares one or more Webin submission service actions. See the general guide on 
-[Programmatic Submission](../general-guide/programmatic.html>) for more information.
+[Programmatic Submission](../general-guide/programmatic.html) for more information.
 
 In this case the action is `<ADD/>` which is used to submit new objects.
 
