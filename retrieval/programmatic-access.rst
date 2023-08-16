@@ -115,8 +115,8 @@ CRAM Reference Registry:
 
 Rate Limits
 ===========
-In order to ensure a smooth and fair user experience, we have implemented rate limits on our services.
+In order to ensure a smooth and fair user experience, we have implemented rate limits on our RESTful APIs.
 
 It helps us in maintaining optimal performance and preventing overload on our servers. By regulating the number of requests from individual users, we can ensure that everyone gets a consistent and responsive experience. It also acts as a protective measure against malicious activities such as DDoS attacks and brute-force attempts.
 
-At present we have set the upper limit at **50 requests per second** which we think should be sufficient for most use-cases. If the number of requests breaches this limit then the subsequent requests may be rejected with the error "Too Many Requests" (HTTP status code 429).
+At present we have set the upper limit at **50 requests per second** which we think should be sufficient for most of the use-cases. If the requests breach this limit then it will be rejected with error **"Too Many Requests" (HTTP status code 429)**.
