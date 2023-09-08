@@ -34,9 +34,9 @@ Frequently Used Checklists
 |                        |              | | submitting a single exon.                                                  |
 +------------------------+--------------+------------------------------------------------------------------------------+
 | Single CDS mRNA        | ERT000006    | | For complete or partial single coding sequence (CDS)                       |
-|                        |              | | derived from mRNA (via cDNA). Do NOT use for submission                    |
-|                        |              | | of VIRTUAL transcripts (TSA or Unigene clusters)                           |
-|                        |              | | - use TSA CDS Annotated checklist.                                         |
+|                        |              | | derived from mRNA (via cDNA).                                              |
+|                        |              | |                                                                            |
+|                        |              | |                                                                            |
 +------------------------+--------------+------------------------------------------------------------------------------+
 | MHC gene 1 exon        | ERT000030    | | For partial MHC class I or II antigens containing                          |
 |                        |              | | one exon ONLY.                                                             |

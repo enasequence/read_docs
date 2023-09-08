@@ -48,6 +48,7 @@ bottom of the page.
    :maxdepth: 1
 
    faq/release
+   faq/spatiotemporal-metadata
    faq/runs
    faq/taxonomy
    faq/taxonomy_requests

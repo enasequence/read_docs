@@ -10,6 +10,8 @@ In order to become a data broker, you must apply for brokering permissions to be
 * expected data volume: how much and how frequently you expect to submit
 * broker names (both short, e.g. acryonym, and long): this will appear in our databases and your data files
 
+We also strongly advise subscribing to our `ENA-announce mailing list <https://listserver.ebi.ac.uk/mailman/listinfo/ena-announce>`_, to be kept informed about the latest updates to our services.
+
 Regular Accounts vs Broker Accounts
 ===================================
 
@@ -56,3 +58,12 @@ The list of account contacts, along with the owner of the account, will be defin
 Location
 ========
 The address provided within the Webin account is used to populate the `RL` lines within EMBL files, during assembly submission. Again if you have a broker account, you can specify the address by providing this in the manifest files. If not provided, then it is automatically retrieved from the Webin account.
+
+Broker Responsibility
+=====================
+Since data brokers submit data on behalf of data owners, they have certain responsibilities that need to be taken into account:
+
+* Maintaining data and metadata records
+* Maintaining the release date of data
+
+Data brokers cannot suppress data once it has been publicly released. This is because data at this point has been exchanged with INSDC partners who need to be notified of any suppressions. Suppression/cancellation requests also need to be assessed by the ENA and should have valid reasons. For any data suppression/cancellation requests, please contact the `ENA helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_. 

@@ -52,8 +52,10 @@ in the notification email, as is the case above.
 Alternatively, if you used the graphical Webin File Uploader program, the MD5 will have been calculated automatically
 for you.
 
-The error could indicate a failure in the file transfer process as described, or it could be that the wrong MD5 value
-was registered in the first place.
+The error could indicate any of the following:
+1. A failure in the file transfer process as described
+2. The MD5 value was not registered in lower case letters
+3. The wrong MD5 value was registered in the first place
 
 
 The Solution
@@ -278,7 +280,7 @@ One of the following commands will work, if you supply the correct filename:
     594934819a1571f805ff299807431da4  mbr_depth_05.bam
 
 
-Windows users should see the `Microsoft Support Article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_ on this subject.
+For Windows users, 3rd party tools can be found to calculate MD5 values.
 
 
 Appendix: Re-Uploading Your File

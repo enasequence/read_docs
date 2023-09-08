@@ -107,12 +107,32 @@ Using Globus
 
 Globus provides a more user-friendly, feature-rich directory interface for
 interacting with the FTP server.
-Files can be downloaded through `Globus`_ 'Shared EMBL-EBI public endpoint'
-endpoint from the '/gridftp/ena' subfolder:
+Files can be downloaded through `Globus`_ 'EMBL-EBI Public Data'
+endpoint from the '/vol1' subfolder:
 
 .. image:: images/file-download-globus.png
 
 .. _`Globus`: https://app.globus.org/file-manager?origin_id=fd9c190c-b824-11e9-98d7-0a63aa6b37da&origin_path=%2Fgridftp%2Fena%2F
+
+Globus also provides a command line interface (CLI) which can be used without access to a graphical user interface
+environment. See `here <https://docs.globus.org/cli/>`_ for details.
+
+To infer the Globus path for a file from the ftp path, do the following:
+
+e.g. ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
+
+Remove the ftp url from above
+
+i.e. the above becomes:
+
+/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
+
+Note : The below globus endpoints have been retired :
+
+- EMBL-EBI Private endpoint
+- EMBL-EBI Private endpoint 2
+- EMBL-EBI Public endpoint
+- Shared EMBL-EBI public endpoint
 
 Using enaBrowserTools
 ---------------------
@@ -135,6 +155,19 @@ A file can be downloaded with wget simply by specifying its location:
 
     $ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz
 
+Using curl
+----------
+
+curl -o ERR164407.fastq.gz 'ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz'
+
+Downloading Private Files
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want to use curl to download a non-public data file using datahub (dcc) authentication,
+provide the dcc username and password.
+
+e.g.
+curl -u dcc_metagenome:password  -o ERR9463971_2.fastq.gz 'ftp://ftp.dcc-private.ebi.ac.uk/vol1/fastq/ERR946/001/ERR9463971/ERR9463971_2.fastq.gz'
 
 Using FTP Client
 ----------------
@@ -161,27 +194,35 @@ The command 'pwd' can be used to identify what the current directory is.
 Using Aspera
 --------------
 
-Aspera ascp command line client can be downloaded from `Aspera
-<https://downloads.asperasoft.com/en/downloads/62>`_.
-Please select the correct version for your operating system.
-The ascp command line client is distributed as part of the Aspera connect
-high-performance transfer browser plug-in.
+The IBM Aspera 'ascp' command line client is distributed as part of various free IBM Aspera clients:
 
-Public data download requires a public key authentication file. This is
-provided in the Aspera command line client download package as the
-'asperaweb_id_dsa.openssh' file. The location of this file varies between
-platforms.
+- The `Aspera Command Line <https://github.com/IBM/aspera-cli>`_ Interface
+- The `IBM Aspera Connect Client <https://www.ibm.com/aspera/connect/>`_
+- The `IBM Aspera Desktop Client <https://www.ibm.com/products/aspera/downloads>`_
+
+Public data download requires a private key authentication file.
+This used to be provided together with Aspera command line client as the `etc/aspera_tokenauth_id_dsa` or
+the 'etc/asperaweb_id_dsa.openssh' file. In the examples below this is referred to as <auth_file_path>.
 
 Following are some examples of how Aspera may be used to download ENA data:
+Your local download destination path is referred to as <dest_path> in the examples below.
+
+Note: Please add '-L-' to your aspera command to print logs to the terminal.
+If you face any issues, please provide the logs with your helpdesk ticket.
+
+e.g.
+ascp -T -l 300m -P 33001 -L- -i path/to/a...
 
 Unix/Linux/Mac
 ^^^^^^^^^^^^^^
 
 ::
 
-    ascp -QT -l 300m -P 33001 -i path/to/aspera/installation/etc/asperaweb_id_dsa.openssh \
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz \
-    local/target/directory
+    ascp -T -l 300m -P 33001 -i <auth_file_path> era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz <dest_path>
+
+    or
+
+    ascp -T -i <auth_file_path> -l 300m --mode=recv --host=fasp.sra.ebi.ac.uk -P 33001 --user=era-fasp vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz <dest_path>
 
 
 Windows
@@ -189,24 +230,27 @@ Windows
 
 ::
 
-    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\bin\ascp" ^
-    -QT -l 300m -P 33001 -i ^
-    "%userprofile%\AppData\Local\Programs\Aspera\Aspera Connect\etc\asperaweb_id_dsa.openssh" ^
-    era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz ^
-    local\target\directory
+    "<path_to_aspera_installation>\bin\ascp" -T -l 300m -P 33001 -i "<auth_file_path>" era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz <dest_path>
+
+     or
+
+    "<path_to_aspera_installation>\bin\ascp" -T --mode=recv --host=fasp.sra.ebi.ac.uk -P 33001 --user=era-fasp vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz <dest_path>
 
 
 Downloading Private Files
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 e.g. If you want to use aspera to download a non-public data file using datahub (dcc) authentication,
-provide the dcc username instead of era-fasp and you will be prompted for the password.
+provide the ENA datahub username (dcc_*) instead of era-fasp and you will be prompted for the password.
+(or use environment variable `ASPERA_SCP_PASS`)
 
 ::
 
-    ascp -QT -l 300m -P 33001 \
-    dcc_name@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz \
-    local/target/directory
+    ascp -T -l 300m -P 33001 dcc_name@fasp.sra.ebi.ac.uk:/vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz <dest_path>
+
+    or
+
+    ascp -T -l 300m --mode=recv --host=fasp.sra.ebi.ac.uk -P 33001 --user=dcc_name vol1/fastq/ERR327/009/ERR3278169/ERR3278169_1.fastq.gz <dest_path>
 
 
 Downloading Assembled and Annotated Sequence Data
@@ -218,22 +262,57 @@ e.g. a WGS sequence set like ftp://ftp.ebi.ac.uk/pub/databases/ena/wgs/public/wy
 
 ::
 
-    ascp -QT -l 300m -P 33001 -i path/to/aspera/installation/asperaweb_id_dsa.openssh /
-    fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wya/WYAA01.dat.gz local/target/directory
+    ascp -T -l 300m -P 33001 -i <auth_file_path> fasp-ebi@fasp.ebi.ac.uk:databases/ena/wgs/public/wya/WYAA01.dat.gz <dest_path>
 
+    or
+
+    ascp -i <auth_file_path> -l 300m --mode=recv --host=fasp.ebi.ac.uk -P 33001 --user=fasp-ebi databases/ena/wgs/public/wya/WYAA01.dat.gz <dest_path>
+
+Using Aspera `ascli`
+--------------------
+
+A higher level command line tool can also be used: `ascli`
+
+Installation instructions `here <https://github.com/IBM/aspera-cli>`_.
+
+The easiest way to use it is to pre-configure the access through a configuration "preset":
+
+::
+
+    ascli conf preset update era --url=ssh://fasp.sra.ebi.ac.uk:33001 --username=era-fasp --ssh-keys=@ruby:Fasp::Installation.instance.bypass_keys.first --ts=@json:'{"target_rate_kbps":300000}'
+
+
+Then recall the configuration using parameter: '-Pera', or optionally, set it as default using: 'ascli conf preset set default server era'.
+
+Then transfer files easily with:
+
+::
+
+    ascli -Pera server download vol1/fastq/ERR164/ERR164407/ERR164407.fastq.gz --to-folder=<dest_path>
+
+All the command line arguments can also be used at once without configuration file.
+
+For private files, configure like this (and then use '-Pmypriv'):
+
+::
+
+    ascli conf preset update mypriv --url=ssh://fasp.sra.ebi.ac.uk:33001 --username=dcc_name --password=dcc_pass --ts=@json:'{"target_rate_kbps":300000}'
 Common Issues
 -------------
 Downloading a large number of records
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If your search criteria is returning a large number of records (e.g.millions) then please consider using a non-browser client (like wget or curl). 
+
+If your search criteria is returning a large number of records (e.g.millions) then please consider using a non-browser client (like wget or curl).
 NOTE: You need to include the additional parameter "*limit=0*" to obtain ALL matching records, as the default limit is 100,000.
 
 Slow FTP downloads
 ^^^^^^^^^^^^^^^^^^^
+
 Sometimes you may experience slowness or incomplete files when downloading from our FTP servers due to high load or ongoing maintenance. If the issue persists, please report it at `here <https://www.ebi.ac.uk/ena/browser/support>`.
 You could also use other download methods such as Aspera or Globus, which might provide better performance than FTP.
 
 Deprecation of FTP support in web browsers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Most modern web browsers no longer support the FTP protocol. For this reason, on the ENA Browser links to files hosted on FTP are internally converted to http when clicked for enabling downloads. You can copy the download links from ENA Browser and use them with non-browser clients (like wget or curl). If you still want to download using a web browser then please replace ftp:// with http:// in the URL.
 e.g. ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR609/001/ERR6090701/ERR6090701_1.fastq.gz -> http://ftp.sra.ebi.ac.uk/vol1/fastq/ERR609/001/ERR6090701/ERR6090701_1.fastq.gz

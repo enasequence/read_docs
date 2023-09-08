@@ -2,11 +2,24 @@
 
 ## Single cell read data
 
-Single cell read data must be submitted in the `BAM` or `CRAM` format using
+Single cell read data can be submitted in BAM, CRAM or multi-fastq format.
+
+### BAM/CRAM format
+
+Single cell read data can be submitted in the BAM or CRAM format using
 the following tags specified in the [SAM Optional Fields Specification](https://samtools.github.io/hts-specs/SAMtags.pdf):
 - CB: Cell identifier
 - CR: Cellular barcode sequence bases (uncorrected)
 - CY: Phred quality of the cellular barcode sequence in the CR tag
+
+### Multi-fastq format
+
+Multi-fastq data submissions can be made using the programmatic route or
+Webin-CLI. This is done by entering multiple file names and their 
+respective read_type qualifiers. For more information please see:
+
+- [Multi-fastq using Webin-CLI](../reads/webin-cli.html)
+- [Multi-fastq using the programmatic route](../reads/programmatic.html)
 
 ## Other read data
 
@@ -71,8 +84,9 @@ However, single and paired reads are accepted as Fastq files that meet the follo
 - The first line for each read must start with '@'.
 - The base calls and quality scores must be separated by a line starting with '+'.
 - Paired read names must either use Casava 1.8 read names
-(regular expression: `^@([a-zA-Z0-9_-]+:[0-9]+:[a-zA-Z0-9_-]+:[0-9]+:[0-9]+:[0-9-]+:[0-9-]+) ([12]):[YN]:[0-9]*[02468]:[ACGTN]+$`)
-or must end with `/1` or `/2` optionally followed by a space and a comment.    
+(regular expression: `^@(.+)( +|\\t+)([0-9]+):[YN]:[0-9]*[02468]($|:.*$)`
+or must end with `/1` or `/2` optionally followed by a space and a comment.
+- Read names must not exceed a length of 256 characters.    
 - The Fastq files must be compressed using gzip or bzip2.
 - The regular expression for bases is "^([ACGTNactgn.]*?)$”
 

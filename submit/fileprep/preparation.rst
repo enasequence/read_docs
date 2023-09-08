@@ -14,7 +14,7 @@ how to do below.
 Most files uploaded to the ENA FTP server need to:
 
   1. Be compressed
-  2. Have their MD5 checksum registered
+  2. Have their MD5 checksum registered in lower case letters
 
 
 Step 1: Compress The File Using gzip Or bzip2
@@ -67,7 +67,8 @@ string. This string is unique to the file and functions like a fingerprint: if
 the contents of the file change in any way the MD5 checksum will change as well.
 The file name can change without affecting the MD5 value because the calculation
 is done on the contents of the file only. You must provide the MD5 value for
-your files so that we can be sure they transferred successfully and completely.
+your files in lower case letters so that we can be sure they transferred successfully
+and completely.
 
 Calculating and registering an MD5 value is not necessary if you are using
 Webin-CLI, as the program handles this for you behind the scenes.
@@ -151,7 +152,7 @@ The data upload areas are provided as a temporary place in which data are held
 while in transit. As such, they are neither intended nor suitable for any
 longer-term storage of data. Such storage is provided in ENA itself. Once in
 ENA, data can be released immediately following submission or can be held
-confidential prior to analysis and literature publication if required.
+private prior to analysis and literature publication if required.
 
 We expect any given data file to remain in a data upload area for no longer
 than 2 months before the instruction is given by the user to submit the file.

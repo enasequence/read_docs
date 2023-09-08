@@ -67,7 +67,7 @@ To use this program, follow the below instructions in video or text format:
 |
 
 1.  `Download the Webin File Uploader
-    <http://www.ebi.ac.uk/ena/upload/WebinUploader.jnlp>`_
+    <https://enasequence.github.io/sub-file-uploader/WebinUploader.jnlp>`_
 2.  Launch the application (Mac users please see further instructions below),
 3.  Enter your Webin username in the ``Username`` field, ensuring the 'W' is
     upper-case.
@@ -317,7 +317,7 @@ The data upload areas are provided as a temporary place in which data are held
 while in transit. As such, they are neither intended nor suitable for any
 longer-term storage of data. Such storage is provided in ENA itself. Once in
 ENA, data can be released immediately following submission or can be held
-confidential prior to analysis and literature publication if required.
+private prior to analysis and literature publication if required.
 
 We expect any given data file to remain in a data upload area for no longer
 than 2 months before the instruction is given by the user to submit the file.
