@@ -3,7 +3,7 @@
 ## Introduction
 
 Sequence read data can be submitted to the European Nucleotide Archive (ENA) 
-using the [Webin command line submission interface](../general-guide/webin-cli.html) with `-context reads` option. 
+using the [Webin command line submission interface](../general-guide/webin-cli) with `-context reads` option. 
  
 A sequence read submission consists of:
 - General experiment information
