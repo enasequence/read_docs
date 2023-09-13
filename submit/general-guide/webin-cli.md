@@ -128,8 +128,8 @@ made with Webin-CLI using the following tool:
 
 Each submission must be associated with a pre-registered study and a sample.
 
-- [Register a Study](../study)
-- [Register a Sample](../samples)
+- [Register a Study](../study.html)
+- [Register a Sample](../samples.html)
 
 
 ### Stage 2: Prepare the Files
@@ -247,13 +247,13 @@ Sequence based submission support the following formats:
 - FASTA: Sequences in fasta format
 - FLATFILE: Sequences in EMBL-Bank flat file format
 
-The following additional formats are supported for [genome assembly submissions](../assembly):
+The following additional formats are supported for [genome assembly submissions](../assembly.html):
 
 - AGP: Sequences in [AGP format](https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/)
 - CHROMOSOME_LIST: list of chromosomes
 - UNLOCALISED_LIST: list of unlocalised sequences
 
-The following formats are supported for [read submissions](../reads/webin-cli):
+The following formats are supported for [read submissions](../reads/webin-cli.html):
 
 - BAM: BAM file
 - CRAM: CRAM file
@@ -360,7 +360,7 @@ Some users may encounter problems connecting to the ENA FTP service, a necessary
 A possible solution to this is to ensure that your firewall is configured appropriately to allow you to connect to this
 service:
 
-- [Configuring Your Firewall For ENA Upload](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload#appendix-configuring-your-firewall-for-ena-upload)
+- [Configuring Your Firewall For ENA Upload](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#appendix-configuring-your-firewall-for-ena-upload)
 
 
 ## Proxy Servers
