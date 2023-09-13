@@ -138,7 +138,7 @@ The scientific name and common name are optional and will automatically be fille
 
 Taxon IDs are drawn from the NCBI Taxonomy database.
 If you aren't sure which taxon you need to use, or aren't sure of its taxon ID, you can learn how to find this out in
-the [Tips for Sample Taxonomy](../../faq/taxonomy) FAQ page.
+the [Tips for Sample Taxonomy](../../faq/taxonomy.html) FAQ page.
 
 In the above example, the sample source is environmental (`stomach metagenome`) and represents an unknown variety and quantity of organisms.
 Note that metagenomes use specific environmental terms.
@@ -185,7 +185,7 @@ The submission XML declares one or more Webin submission service actions.
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can be submitted programmatically, using CURL on command line or
-using the [Webin Portal](../general-guide/submissions-portal).
+using the [Webin Portal](../general-guide/submissions-portal.html).
 
 ## Submit the XMLs using CURL
 
@@ -217,8 +217,8 @@ After running the command above a receipt XML is returned. It will look like the
 
 ## Submit the XMLs using Webin Portal
 
-XMLs can also be submitted interactively using the [Webin Portal](../general-guide/submissions-portal).
-Please refer to the [Webin Portal](../general-guide/submissions-portal) document for an example how
+XMLs can also be submitted interactively using the [Webin Portal](../general-guide/submissions-portal.html).
+Please refer to the [Webin Portal](../general-guide/submissions-portal.html) document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ## The Receipt XML
@@ -270,5 +270,5 @@ but this time using the production service. Simply change the part in the URL fr
 curl -u username:password -F "SUBMISSION=@submission.xml" -F "SAMPLE=@sample.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
-Similarly, if you are using the [Webin Portal](../general-guide/submissions-portal) change the URL from
+Similarly, if you are using the [Webin Portal](../general-guide/submissions-portal.html) change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
