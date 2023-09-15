@@ -1,5 +1,5 @@
 =============================================================
-Updating Studies, Samples, Experiments, Runs and Analyses Interactively
+Updating Studies, Samples, Experiments and Runs Interactively
 =============================================================
 
 
@@ -24,7 +24,6 @@ For samples, there may sometimes be good reason to add, remove, or edit the elem
 - 1: `Study Edits`_
 - 2: `Sample Edits`_
 - 3: `Experiment And Run Edits`_
-- 4: `Analysis Edits`
 
 
 Study Edits
@@ -40,7 +39,7 @@ These include the release date, title, description and publication references.
 .. image:: ../images/wsp_meta_update_01_study_edit_list.png
 
 2. Find the study you wish to edit in the list, or search for it by accession/name
-3. If your study is private, you can change the release date by clicking the pencil icon and navigating to the
+3. If your study is confidential, you can change the release date by clicking the pencil icon and navigating to the
    required date in the calendar. Read more on this in our `Data Release Policies FAQ <../../faq/release.html>`_
 4. For edits other than changing the release date, click the Action button and then the 'Edit study (project)' option
    for a graphical interface or the 'Edit study (project) XML' option to work in XML format
@@ -104,7 +103,7 @@ Common updates might include:
 - Changing the library descriptor where a mistake has been made e.g. the library source could be
   listed as 'GENOMIC' when in fact it is 'METAGENOMIC'
 - Changing the <SAMPLE_DESCRIPTOR> where the experiment is pointing at the wrong sample
-- Changing the <STUDY_REF> where the experiment is pointing at the wrong study
+- Changing the <STUDY_REF> where the experiment is pointing a the wrong study
 - Adding new <EXPERIMENT_ATTRIBUTE> elements to provide additional information about your experiment
 
 All of the above can be achieved by editing the XML displayed when you click the 'Edit' button.
@@ -125,21 +124,3 @@ Find the <FILE> element's 'checksum' attribute and correct the 32-digit value.
 It is not possible to replace the uploaded file in this way; entering a new filename will not be accepted.
 If the submitted file has passed validation and been archived, it cannot be replaced.
 If the submitted file has failed validation, it must be replaced with an identically-named, corrected file.
-
-
-Analysis Edits
-============
-
-
-1. Log in to `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Analyses Report' button to be
-   presented with a list of analysis accessions generated for your assembly or sequence submissions
-2. To edit an analysis, click its 'Action' button and select 'Edit analysis XML'
-3. Your analysis will be shown as an XML document which you can edit directly:
-
-.. image:: ../images/wsp_meta_update_05_analysis_edit.png
-
-4. Do not edit the attributes displayed in blue (accession, alias, centre name, checksum, checksum method, file name and file type  details) as you will not be able to
-   save these changes
-5. Make changes as required and click the 'Save' button; your changes will not be saved if they invalidate the file
-6. Click on 'Cancel' if you would like to abandon your changes
-7. The most common analysis edit would be to change the <PRIMARY_ID> and <SECONDARY_ID> where the analysis is pointing at the wrong study

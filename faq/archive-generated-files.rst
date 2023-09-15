@@ -1,5 +1,5 @@
 =============================
-Archive Generated Run Files
+Archive Generated FASTQ Files
 =============================
 
 Whenever possible, ENA provides access to two types of file for each run we
