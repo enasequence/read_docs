@@ -78,7 +78,7 @@ the example below this reference is made using an accession number:
     <STUDY_REF accession="ERP123456"/>
 
 Either an `accession` or a `refname` (alias) can be used in the reference. If you are using the
-`accession` attribute you can use both ERP and PRJ accessions when referring
+`accession` attribute you can use both ERP amd PRJ accessions when referring
 to studies.
 
 Experiment XML: associated with sample
@@ -300,41 +300,6 @@ note that `filetype` has been set to `cram`.
             </DATA_BLOCK>
         </RUN>
     </RUN_SET>
-    
-Run XML: Multi-fastq
---------------------
-
-Below is an example of a RUN XML when multi-fastq data is submitted. Please
-note that read_type qualifiers are required for each file.
-
-.. code-block:: xml
-
-    <DATA_BLOCK>
-        <FILES>
-            <FILE filename="single_cell_S1_L001_I1_001.fastq.gz"  
-                filetype="fastq" checksum_method="MD5"    
-                checksum="40d636c363e1a3a5232d3d1e2feb2c70">
-                    <READ_TYPE>feature_barcode</READ_TYPE>
-            </FILE>
-            <FILE filename="single_cell_S1_L001_R1_001.fastq.gz"
-                filetype="fastq" checksum_method="MD5"    
-                checksum="efdb826f2627c2ac449de5aaf2a61aab">
-                    <READ_TYPE>paired</READ_TYPE>
-                    <READ_TYPE>umi_barcode</READ_TYPE>
-            </FILE>
-            <FILE filename="single_cell_S1_L001_R2_001.fastq.gz"
-                filetype="fastq" checksum_method="MD5"    
-                checksum="4b68b447d43eea5b5e75e23cfb4da82e">
-                    <READ_TYPE>sample_barcode</READ_TYPE>
-            </FILE>
-            <FILE filename="single_cell_S1_L001_R3_001.fastq.gz"
-                filetype="fastq" checksum_method="MD5"    
-                checksum="977a3fded781e6141359b47d7c6177a1">
-                    <READ_TYPE>paired</READ_TYPE>
-                    <READ_TYPE>cell_barcode</READ_TYPE>
-            </FILE>
-        </FILES>
-    </DATA_BLOCK>
 
 Run XML: Oxford Nanopore
 ------------------------

@@ -14,7 +14,7 @@ For an explanation of these terms and their relationships, please read the
 Can I Advance/Postpone The Release Date?
 ----------------------------------------
 
-You can edit the release date of a study from within your Webin account, provided it is private and has never been
+You can edit the release date of a study from within your Webin account, provided it is confidential and has never been
 public.
 
 First, log into `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_.
@@ -39,7 +39,7 @@ It will take four days for it to be visible in GenBank.
 Please take this into consideration if you have a strict deadline by which your data must be public.
 Note that the processes which are taking place in this time are automated, and we are not able to intervene in order to
 expedite the release of your data.
-If after 48 hours your data remain private, please contact our
+If after 48 hours your data remain confidential, please contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
@@ -49,11 +49,12 @@ Can I Make My Study Partially Available?
 Whether you wish to make only parts of your submission available, or wish to make your submission available only
 to select users, this is unfortunately not a service we provide.
 Our policy is that submissions should be available in whole, to all users.
+If you need evidence of your submission for reviewers, forward them the email confirming your successful submission.
 If there are parts of your study which for some reason you no longer wish to release, please contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
-I Need To Remove My Private Study
+I Need To Remove My Confidential Study
 --------------------------------------
 
 If you have registered objects in the database which you wish to have removed, we can cancel them if they are not yet
@@ -69,8 +70,7 @@ I Need To Remove My Public Study
 
 If your study is public and needs to be removed from public view on a permanent or temporary basis, you must contact our
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ and provide an explanation of the issue, along with the
-accession(s) to be suppressed. If your study needs to be re-released, you must provide a new release date as well, in
-order to temporarily suppress the study.
+accession(s) to be suppressed.
 A curator will assess the request and carry it out if deemed suitable.
 Information about circumstances in which suppression will be considered can be found in our
 `Data Availability Policy <release/data-availability-policy.html>`_.

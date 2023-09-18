@@ -74,8 +74,7 @@ Consider the following tips as you complete your spreadsheet:
   - If you created subdirectories for your files, include this full path in the file name field
 
 - The MD5 fields should be filled with file MD5 values, which are 32-digit hexadecimal numbers.
-  The MD5 value is a fingerprint value for the file which allows us to verify that it was uploaded successfully. The values
-  should be filled in lower case letters.
+  The MD5 value is a fingerprint value for the file which allows us to verify that it was uploaded successfully.
   In Linux and Mac, you can generate this value from the command line by running the command 'md5' or 'md5sum' on the
   file, while Microsoft has a `support article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_
   on performing this activity for Windows.
