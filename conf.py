@@ -161,12 +161,15 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-from recommonmark.parser import CommonMarkParser
+#from recommonmark.parser import CommonMarkParser
+#
+#source_parsers = {
+#    '.md': CommonMarkParser,
+#}
 
-source_parsers = {
-    '.md': CommonMarkParser,
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
 }
-
-source_suffix = ['.rst', '.md']
 
 extensions = ['sphinx_tabs.tabs','myst_parser']
