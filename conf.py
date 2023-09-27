@@ -30,6 +30,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+extensions = ['sphinx_tabs.tabs', 'myst_parser']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -82,6 +83,10 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
+# Jasmine addition: please note that the theme is now specified in the requirements file as sphinx_rtd_theme
+# Jasmine addition: please note that any docs breaking could be due to a required package changing 
+# Jasmine addition: it is highly reccommended to pin requirments - see https://docs.readthedocs.io/en/stable/guides/reproducible-builds.html 
+
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
 # remove if causing issues. forces globaltoc.html
@@ -160,12 +165,8 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-from recommonmark.parser import CommonMarkParser
-
-source_parsers = {
-    '.md': CommonMarkParser,
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
 }
 
-source_suffix = ['.rst', '.md']
-
-extensions = ['sphinx_tabs.tabs', 'myst_parser']
