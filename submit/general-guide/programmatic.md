@@ -28,10 +28,6 @@ When you are using the test service the receipt XML will contain the following m
 It is advisable to first test your submissions using the Webin test service before
 establising an automated submission pipeline.
 
-## Webin Rest V2 API
-
-Programmatic submissions can also be made using the new Webin Rest V2 service. This has been developed to address issues such as timeout errors during submissions. The V2 API has been designed to accept submissions at 2 different endpoints, 1 synchronous and 1 asynchronous, depending on the scale of the submission. Please refer to the [Webin Rest V2 documentation](./programmatic-v2.html) to find out more.  
-
 ## Upload data files
 
 Data files must be uploaded into a submitter specific private Webin file upload area
@@ -79,6 +75,9 @@ where the `XMLTYPE` is one of the following POST parameters:
 - `EXPERIMENT` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd))
 - `RUN` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd))
 - `ANALYSIS` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd))
+- `DAC` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dac.xsd))
+- `POLICY` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.policy.xsd))
+- `DATASET` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/EGA.dataset.xsd))
 - `PROJECT` ([XML Schema](https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/ENA.project.xsd))
 
 You can include multiple records of the same type in the same submission as part of a `SET`. For example, by grouping `SAMPLE` records in a `<SAMPLE_SET></SAMPLE_SET>`.
@@ -125,12 +124,10 @@ will look like:
 </SUBMISSION>
 ```
 
-### Submission XML: Make submitted objects public at a given date
+### Submission XML: submit studies with release date
 
-When `HOLD` action is provided with a date then all submitted studies,
-projects and samples will become immediately public on that date. Run, experiment
-and analysis objects will become public on the date when studies or projects
-they refer to are made public. 
+If no release date is provided then submitted studies and any associated objects
+will be publicly released two months after the date of study submission.
 
 A release date can be provided for studies by using the `HOLD` action together with the `ADD` action:
 
@@ -150,9 +147,6 @@ A release date can be provided for studies by using the `HOLD` action together w
 The `HoldUntilDate` specifies the public release date of any studies submitted within the submission.
 This can be at most two years in the future.
 
-If the `HOLD` action is used without a date then the submitted studies, projects and samples will become public in two years
-time.
-
 ### Submission XML: make study public
 
 A study can be made immediately public by using `RELEASE` action with the study accession number:
@@ -167,9 +161,9 @@ A study can be made immediately public by using `RELEASE` action with the study 
 </SUBMISSION>
 ```
 
-### Submission XML: update release date
+### Submission XML: set study hold date
 
-You can update the release date of a study, project or sample by using the `HOLD` action with a new release date.:
+You can update the release date of a study by specifying its accession alongside a new release date:
 
 ```
 <SUBMISSION>
@@ -185,23 +179,6 @@ This applies only to non-public studies.
 It is not possible to suppress a public study by this method.
 
 The new release date must be not more than two years in the future.
-
-### Submission XML: Make submitted objects immediately public
-
-IF `RELEASE` action is provided without a target attribute then all submitted studies,
-projects and samples will become immediately public. 
-
-```
-<SUBMISSION>
-     <ACTIONS>
-         <ACTION>
-             <RELEASE/>
-         </ACTION>
-    </ACTIONS>
-</SUBMISSION>
-```
-
-Run, experiment and analysis objects will become public as long as the studies or projects they refer to are public.
 
 ### Submission XML: update existing objects
 

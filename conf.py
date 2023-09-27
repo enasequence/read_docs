@@ -30,6 +30,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -82,7 +83,9 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
+
 html_theme = 'sphinx_rtd_theme'
+
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
 # remove if causing issues. forces globaltoc.html
@@ -168,5 +171,3 @@ source_parsers = {
 }
 
 source_suffix = ['.rst', '.md']
-
-extensions = ['sphinx_tabs.tabs', 'myst_parser']

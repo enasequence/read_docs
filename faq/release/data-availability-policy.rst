@@ -9,12 +9,12 @@ these data.  These are described below.
 |   Status name    |   Causes                                 |   Implications                            |
 +==================+==========================================+===========================================+
 | **Public**       | | Data are submitted with no request for | Data are fully available.                 |
-|                  | | private hold prior to publication      |                                           |
+|                  | | confidential hold prior to publication |                                           |
 |                  | | or have reached an owner-agreed public |                                           |
 |                  | | release date.                          |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
-| **Private**      | | Data owner requires and indicates that | | Data are not available publicly through |
-|                  | | confidentiality is required until a    | | any means. A release date is            |
+| **Confidential** | | Data owner requires and indicates that | | Data are not available publicly through |
+|                  | | confidentiality is required until a    | | any means. A data release date is       |
 |                  | | release date or publication in the     | | recorded for the data, which are        |
 |                  | | literature, whichever comes earlier.   | | subsequently and automatically released |
 |                  |                                          | | as **Public** on **reaching this date** |
@@ -29,64 +29,43 @@ these data.  These are described below.
 |                  |                                          | | days before the currently recorded      |
 |                  |                                          | | release date.                           |
 +------------------+------------------------------------------+-------------------------------------------+
-| **Permanently**  | | Data are found to be incorrect with no | | Data are removed where possible from    |
-| **Suppressed**   | | immediate opportunity on the part of   | | direct search tools (such as text and   |
-|                  | | part of the owner to be updated.       | | sequence similarity search) but remain  |
-|                  | | Possible causes include:               | | available by accession number.          |
-|                  | |                                        | | Permanently Suppressed data is not      |
-|                  | |  • incorrect annotation                | | expected to be re-released.             |
-|                  | |  • incorrect source metadata           |                                           |
-|                  | |  • incorrect sequence                  |                                           |
-|                  | |  • poor quality sequence               |                                           |
-|                  | |  • incorrect or misidentified source   |                                           |
-|                  | |    organism                            |                                           |
-|                  | |  • sample mix-up                       |                                           |
-|                  | |  • sequence misassembly                |                                           |
-|                  | |  • sequence contamination              |                                           |
-|                  | |  • unallowed submission type           |                                           |
-|                  | |  • erroneous submission                |                                           |
-+------------------+------------------------------------------+-------------------------------------------+
-| **Temporarily**  | | Data owners realize after sequences    | | Data are removed where possible from    |
-| **Suppressed**   | | have been released that they failed to | | direct search tools (such as text and   |
-|                  | | request a private status, either       | | sequence similarity search) but remain  |
-|                  | | at the the time of submission, or      | | available by accession number.          |
-|                  | | within the period between completion   | | Data will be re-released when published |
-|                  | | of submission processing and the date  | | or after a certain date.                |
-|                  | | on which the submission is normally    |                                           |
-|                  | | made available to the public (this time|                                           |
-|                  | | period can vary among the INSDC        |                                           |
-|                  | | members).                              |                                           |
+| **Suppressed**   | | (1) Data are found by the owner to be  | | Data are removed where possible from    |
+|                  | | incorrectly annotated or contaminated  | | direct search tools (such as text and   |
+|                  | | with no immediate opportunity on the   | | sequence similarity search) but remain  |
+|                  | | part of the owner to be updated.       | | available by accession number.          |
+|                  | | (2) Data owners realise after          |                                           |
+|                  | | sequences have been released that they |                                           |
+|                  | | failed to request a confidential       |                                           |
+|                  | | status, either at the time of          |                                           |
+|                  | | submission, or within the period       |                                           |
+|                  | | between completion of submission       |                                           |
+|                  | | processing and the date on which the   |                                           |
+|                  | | submission is normally made available  |                                           |
+|                  | | to the public (this time period can    |                                           |
+|                  | | vary among the INSDC members).         |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
 | **Replaced**     | | Data owners generate new data under    | | Data are removed where possible from    |
 |                  | | new accession identifiers that         | | direct search tools (such as text and   |
-|                  | | directly replace existing data; if     | | sequence similarity search) but remain  |
-|                  | | possible, updates should be made to the| | available by accession number. Where    |
-|                  | | existing accession instead of creating | | possible, look-up by original accession |
-|                  | | a new record with a new accession.     | | identifiers leads to a re-direct to new |
-|                  | |                                        | | records available under the new         |
-|                  | |                                        | | accession identifiers. In some cases,   |
-|.                 | |                                        | | the original accession is added to the  |
-|                  | |                                        | | new record as a secondary accession.    |
+|                  | | directly replace existing data; this   | | sequence similarity search) but remain  |
+|                  | | is expected to be rare since           | | available by accession number. Where    |
+|                  | | replacement data normally use the      | | possible, look-up by original accession |
+|                  | | existing accession identifiers for the | | identifiers leads to a re-direct to new |
+|                  | | records that they replace.             | | records available under the new         |
+|                  | |                                        | | accession identifiers.                  |
 +------------------+------------------------------------------+-------------------------------------------+
-| **Withdrawn**    | | (1) The submitter has requested a      | | Data are not directly available         |
-|                  | | **Private** status or an extension to  | | publicly from INSDC partners through    |
-|                  | | an existing release date, but the ENA, | | **any means**. However, because the data|
-|                  | | or their submissions collaborator, has | | will have been distributed previously   |
-|                  | | failed to apply the appropriate        | | as **Public**, the INSDC partners cannot|
-|                  | | release date correctly.                | | exercise any control on the resultant   |
-|                  | |                                        | | use of the data by third parties.       |
+| **Killed**       | | (1) The submitter has requested a      | | Data are not directly available         |
+|                  | | **Confidential** status or an          | | publicly from INSDC partners through    |
+|                  | | extension to an existing release date, | | any means. However, because the data    |
+|                  | | but the ENA, or their submissions      | | will have been distributed previously   |
+|                  | | brokering collaborator, has failed to  | | as Public, the INSDC partners cannot    |
+|                  | | apply the appropriate release date     | | exercise any control on the resultant   |
+|                  | | correctly.                             | | use of the data by third parties.       |
 |                  | | (2) Data are found to have been        |                                           |
 |                  | | submitted to the databases without the |                                           |
 |                  | | permission of the rightful owner; this |                                           |
 |                  | | is expected to be extremely rare and   |                                           |
 |                  | | requires formal institutional contact  |                                           |
-|                  | | with the aggrieved institution.        |                                           |
-|                  | |                                        |                                           |
-|                  | | (3) Human sequence data that was not   |                                           | 
-|                  | | consented for unrestricted-access.     |                                           |
-|                  | |                                        |                                           |
-|                  | | (4) Serious events such as malfeasance |                                           | 
-|                  | | or outright fraud                      |                                           |
+|                  | | with the submitting institution.       |                                           |
 +------------------+------------------------------------------+-------------------------------------------+
 
 .. _`contact ENA`: https://www.ebi.ac.uk/ena/browser/support
