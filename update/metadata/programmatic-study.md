@@ -18,6 +18,6 @@ assigned accession number for the correct study to be updated.
 
 Detailed advice on how to programmatically update studies using XML 
 including instructions for retrieving previously submitted Study XMLs can be 
-found in [Programmatic Submission Options](../../submit/general-guide/programmatic.html).
+found in [Programmatic Submission Options](../../submit/general-guide/programmatic).
 Study XMLs can also be manually edited using the 
-[Webin Portal](../../submit/general-guide/submissions-portal.html).
+[Webin Portal](../../submit/general-guide/submissions-portal).
