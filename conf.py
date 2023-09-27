@@ -169,4 +169,4 @@ texinfo_documents = [
 
 source_suffix = ['.rst', '.md']
 
-extensions = ['sphinx_tabs.tabs', 'myst_parser']
+extensions = ['sphinx_tabs.tabs']
