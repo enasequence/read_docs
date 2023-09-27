@@ -83,6 +83,7 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
+html_theme = 'sphinx-rtd-theme'
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
 # remove if causing issues. forces globaltoc.html
