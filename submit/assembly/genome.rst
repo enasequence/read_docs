@@ -64,11 +64,6 @@ When assemblies are updated they must be re-submitted with the same study and sa
 - `Register a Study <../study.html>`_
 - `Register a Sample <../samples.html>`_
 
-.. tip::
-    Check your sample has a submittable taxonomy.
-    Your sample must have a `binomial taxonomy <../../faq/taxonomy.html#checking-a-taxon-is-submittable>`_.
-    If the sample taxonomy is not **binomial**, then the genome assembly submission will fail validation.
-
 It is also strongly recommended to submit the reads from which the assembly was assembled.
 In order to reference the reads which were used to generate the assembly, please see the ``RUN_REF`` tag included in
 the manifest file below.
@@ -121,9 +116,10 @@ The default assumption is that an assembly is contig-level, thus if a submission
 additional context, it is treated as a contig-level assembly
 
 This assembly level only requires information on the sequences and annotation (if any).
-You will receive an error if only 1 sequence or more than 1,000,000 sequences are submitted. If you do not have a
-minimum of 2 contigs, then you will need to submit at a higher assembly level. If you have more than 1,000,000 contigs
-in your submission, please `contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+You will receive an error if less than 2 or more than 1,000,000 sequences are submitted.
+If you have less than 2 sequences, then you  will need to submit at a higher assembly level.
+If you have more than 1,000,000 contigs in your submission, please
+`contact the helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Seen an example contig-level assembly at: https://www.ebi.ac.uk/ena/browser/view/GCA_000003085
 
@@ -216,7 +212,7 @@ The following metadata fields are supported in the manifest file for genome cont
 
 Please see further below for validation rules affecting some of these fields.
 
-Various file name fields are supported in the manifest file. Note that all of these are optional,
+Various file name fields are supported in the manifest file. Note that all of these are optional, 
 though of course at least one must be provided, and some may only be relevant in the presence of
 other file types. The available fields are as follows:
 
