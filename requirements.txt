@@ -1,4 +1,4 @@
 sphinx_rtd_theme==1.1.1
 docutils<0.17
-sphinx-tabs
-myst_parser
+sphinx-tabs==3.4.1
+myst_parser==2.0.0
