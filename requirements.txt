@@ -1,1 +1,5 @@
-docutils<0.17
+sphinx<7
+sphinx_rtd_theme
+docutils
+sphinx-tabs
+myst_parser
