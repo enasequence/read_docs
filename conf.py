@@ -32,7 +32,6 @@
 # ones.
 extensions = ['sphinx_tabs.tabs', 'myst_parser']
 
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -82,11 +81,11 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-#
-# html_theme = 'alabaster'
-# Jasmine addition: please note that the theme is now specified in the requirements file as sphinx_rtd_theme
-# Jasmine addition: please note that any docs breaking could be due to a required package changing
-# Jasmine addition: it is reccommended to pin requirments - see https://docs.readthedocs.io/en/stable/guides/rep>
+
+# please note that the theme is now specified in the requirements file as sphinx_rtd_theme
+# please note that any docs breaking could be due to a required package changing
+# it is reccommended to pin requirments - see https://docs.readthedocs.io/en/stable/guides/rep>
+
 html_theme = "sphinx_rtd_theme"
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
@@ -174,5 +173,3 @@ texinfo_documents = [
 #}
 
 source_suffix = ['.rst', '.md']
-
-extensions = ['sphinx_tabs.tabs', 'myst_parser']

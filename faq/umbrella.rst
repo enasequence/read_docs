@@ -10,50 +10,12 @@ Please note that umbrella studies can only be created and updated from the comma
 
 Decide which of the following scenarios best describes your need and follow the relevant guidance:
 
-- I would like to register an umbrella study so I can add child projects in the future: `Create an Umbrella Study`_
 - I have existing studies I would like to group together under an umbrella: `Grouping Studies Under An Umbrella`_
 - I have an umbrella already and would like to add child studies to it: `Adding Children To An Umbrella`_
 
-In either case, you will need to create two XML files, then submit them to us with a `curl command
-<../submit/study/programmatic.html#submit-the-xmls-using-curl>`_.
+In either case, you will need to create two XML files, then submit them to us with a curl command.
 If you wish to test your submission, specify the URL of the test service in your curl command: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/
 
-
-Create an Umbrella Study
-========================
-
-To register an umbrella study, you will need to create two XML files.
-
-**submission.xml:**
-
-.. code-block:: xml
-
-   <SUBMISSION>   
-      <ACTIONS>
-         <ACTION>
-            <ADD/>
-         </ACTION>
-         <ACTION>
-            <HOLD HoldUntilDate="TODO: release date"/>
-         </ACTION>
-      </ACTIONS>
-   </SUBMISSION>
-  
-It is good practice to provide a release date for an umbrella project which does not have any child projects associated to it yet.
-Any child projects added to the umbrella will have their own release dates independent of the umbrella project.
-
-**umbrella_project.xml:**
-
-.. code-block:: xml
-
-    <PROJECT_SET>
-        <PROJECT center_name="" alias="TODO:alias">
-            <TITLE>TODO:Title_text_here</TITLE>
-            <DESCRIPTION>TODO:Description_text_here</DESCRIPTION>
-            <UMBRELLA_PROJECT/>
-        </PROJECT>
-    </PROJECT_SET>
-    
 
 Grouping Studies Under An Umbrella
 ==================================
