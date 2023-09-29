@@ -32,6 +32,10 @@ A sample object is submitted in XML format like this:
         <VALUE>Mucosa of stomach</VALUE>
       </SAMPLE_ATTRIBUTE>
       <SAMPLE_ATTRIBUTE>
+        <TAG>project name</TAG>
+        <VALUE>gut microbiome</VALUE>
+      </SAMPLE_ATTRIBUTE>
+      <SAMPLE_ATTRIBUTE>
         <TAG>human-associated environmental package</TAG>
         <VALUE>human-associated</VALUE>
       </SAMPLE_ATTRIBUTE>
@@ -156,6 +160,7 @@ Below is an example XML for submitting a sample. Change the XML by entering your
         <TAG>collection date</TAG>
         <VALUE>2010</VALUE>
       </SAMPLE_ATTRIBUTE>   
+    </SAMPLE_ATTRIBUTES> 
   </SAMPLE>
 </SAMPLE_SET>
 ```

@@ -48,7 +48,7 @@ Each submission must be associated with a pre-registered study and environmental
 be the same sample used to submit your raw reads.
 
 When registering an environmental sample, please make sure the appropriate environmental checklist is chosen for
-this and an `environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ is used
+this and an `environmental taxon <../../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ is used
 (e.g. aquatic metagenome (tax id: 1169740)).
 
 The methods for submitting metagenomic studies and samples follow the same process as any other study/sample submission.

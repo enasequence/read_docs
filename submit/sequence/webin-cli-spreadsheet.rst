@@ -12,7 +12,7 @@ As mentioned there, you may prepare your submissions in a spreadsheet format in 
 that an appropriate checklist exists.
 Please browse the selection of available checklists to determine if this route is correct for you:
 
-- `List of Annotation Checklists <sequence/annotation-checklists.html>`_
+- `List of Annotation Checklists <annotation-checklists.html>`_
 
 If you are satisfied that there is an appropriate checklist, please read on to learn how you may download and complete a
 template.
@@ -26,7 +26,7 @@ To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/lo
 'Generate Annotated Sequence Spreadsheet' button.
 
 1. You will be presented with a set of checklist groups: select the appropriate one for your submission, by reference to
-   the `List of Annotation Checklists <sequence/annotation-checklists.html>`_ if needed
+   the `List of Annotation Checklists <annotation-checklists.html>`_ if needed
 2. Next, select the actual checklist you intend to use
 
 .. image:: ../images/wsp_sequence_1_select_checklist.png
@@ -61,6 +61,13 @@ Consider the following tips as you complete your spreadsheet:
 - Do not edit the column names
 - The 'Organism' field must match with the scientific name of a species-rank taxon in the NCBI Taxonomy database
   - See `tips for sample taxonomy <../../faq/taxonomy.html>`_ for help with how to identify an appropriate name
+  OR
+  one of the following can be included instead:
+
+     - Pre-registered sample accession (ERSxxxxx)
+     - BioSample accession (SAMEAxxxxx)
+     - SRA samples accession (SRSxxxxx)
+     - Sample alias 
 - Use only valid ASCII characters in filling out the spreadsheet
 - When you come to submit it, the file must use either a '.tsv' or '.tab' format
 - Before submitting, you must compress your spreadsheet with GZIP or BZIP2

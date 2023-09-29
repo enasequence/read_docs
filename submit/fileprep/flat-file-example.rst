@@ -20,7 +20,7 @@ changes see `here <feature-table-updates.html>`_.
 
 For a list of third party tools which may help with the creation of your
 flat file or conversion from another format, please see our page on
-`Third Party Tools <../faq/third_party_tools.html>`_.
+`Third Party Tools <../../faq/third_party_tools.html>`_.
 
 We have some pre-prepared flat file templates available for use with common
 submission types available too, please see
