@@ -35,7 +35,7 @@ heard from users of them that they have been valuable.
   detail. DOI: https://doi.org/10.1093/bioinformatics/btaa209
 
 `ENA upload cli <https://github.com/usegalaxy-eu/ena-upload-cli>`_
-  This command line tool (CLI) allows easy submission of data and respective 
+  Command line tool (CLI) allowing easy submission of data and respective 
   metadata to the European Nucleotide Archive (ENA) using tabular files or an 
   excel spreadsheet. The tool allows programatic submission of all ENA objects 
   (study, sample, run and experiment) without the need of logging in to the 
