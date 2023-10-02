@@ -178,4 +178,3 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-source_suffix = ['.rst', '.md']
