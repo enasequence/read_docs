@@ -167,9 +167,15 @@ texinfo_documents = [
 
 # Jasmine addition: test use recommonmarkparser to parse .md files, remove if causing issues
 #from recommonmark.parser import CommonMarkParser
-#
+#  
 #source_parsers = {
 #    '.md': CommonMarkParser,
 #}
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
 
 source_suffix = ['.rst', '.md']
