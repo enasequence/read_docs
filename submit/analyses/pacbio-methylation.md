@@ -9,7 +9,7 @@ To submit an analysis programmatically, two XML files must be generated to descr
 
 These are then submitted to ENA through the secure HTTPS protocol using POST multipart/form-data 
 according to RFC1867. Please see the general guide on 
-[Programmatic Submission](../general-guide/programmatic.html) for more information.
+[Programmatic Submission](../general-guide/programmatic) for more information.
 
 ## Step 1: Create Analysis XML
 
@@ -88,7 +88,7 @@ and `<RUN_REF>` elements. Again, either an accession or alias can be used in the
 
 #### Upload Data Files
 
-Please [upload](../fileprep/upload.html) all data files required for submission.
+Please [upload](../fileprep/upload) all data files required for submission.
 
 Once the analysis has been submitted, all the data files described in the analysis XML will be moved 
 from the Webin upload area into the archive.
@@ -163,12 +163,12 @@ XML in a separate file to tell ENA what actions you would like to take for your 
 ```
 
 The submission XML declares one or more Webin submission service actions. See the general guide on 
-[Programmatic Submission](../general-guide/programmatic.html>) for more information.
+[Programmatic Submission](../general-guide/programmatic) for more information.
 
 In this case the action is `<ADD/>` which is used to submit new objects.
 
 The XMLs can then be submitted programmatically, using CURL on command line or
-using the [Webin Portal](../general-guide/submissions-portal.html).
+using the [Webin Portal](../general-guide/submissions-portal).
 
 ## Step 3: Submit the XMLs
 
@@ -200,8 +200,8 @@ After running the command above a receipt XML is returned. It will look like the
 
 ### Submit the XMLs Using Webin Portal
 
-XMLs can also be submitted interactively using the [Webin Portal](../general-guide/submissions-portal.html).
-Please refer to the [Webin Portal](../general-guide/submissions-portal.html) document for an example how
+XMLs can also be submitted interactively using the [Webin Portal](../general-guide/submissions-portal).
+Please refer to the [Webin Portal](../general-guide/submissions-portal) document for an example how
 to submit a study using XML. Other types of XMLs can be submitted using the same approach.
 
 ### The Receipt XML
@@ -234,5 +234,5 @@ but this time using the production service. Simply change the part in the URL fr
 curl -u username:password -F "SUBMISSION=@submission.xml" -F "ANALYSIS=@analysis.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 ```
 
-Similarly, if you are using the [Webin Portal](../general-guide/submissions-portal.html) change the URL from
+Similarly, if you are using the [Webin Portal](../general-guide/submissions-portal) change the URL from
 `wwwdev.ebi.ac.uk` to `www.ebi.ac.uk`.
