@@ -138,7 +138,7 @@ The scientific name and common name are optional and will automatically be fille
 
 Taxon IDs are drawn from the NCBI Taxonomy database.
 If you aren't sure which taxon you need to use, or aren't sure of its taxon ID, you can learn how to find this out in
-the [Tips for Sample Taxonomy](../../faq/taxonomy.html) FAQ page.
+the [Tips for Sample Taxonomy](../../faq/taxonomy) FAQ page.
 
 In the above example, the sample source is environmental (`stomach metagenome`) and represents an unknown variety and quantity of organisms.
 Note that metagenomes use specific environmental terms.
