@@ -115,7 +115,7 @@ Please read on for information on the content of the chromosome list file column
    - Topology is not a separate column but can be specified as a modifier to the chromosome type
    - Options are 'linear' or 'circular', default is linear
    - Must not conflict with any value specified in flat file
-   - Contigs, scaffolds and transcriptome sequences are always linear: entering 'circular' here will be overriden
+   - Contigs, scaffolds and transcriptome sequences are always linear: entering 'circular' here will be overridden
 
 - **CHROMOSOME_LOCATION** (optional fourth column): By default eukaryotic chromosomes will be assumed to reside in the
   nucleus and prokaryotic chromosomes and plasmids in the cytoplasm. Allowed values:

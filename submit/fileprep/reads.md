@@ -30,7 +30,7 @@ However, please note that a variety of other data formats are supported as well.
 
 Reads for different samples should be submitted using separate files. The
 only exception is when a `BAM` or `CRAM` file contains reads for a large
-number of samples intented to be always analysed together. In this case
+number of samples intended to be always analysed together. In this case
 the sample associated with the read file should describe the sample
 group while the `BAM` or `CRAM` file should identify the sample
 for each read.

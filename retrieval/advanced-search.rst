@@ -67,7 +67,7 @@ Locate all read data submitted for Neanderthals
 
 11. You can use the 'Available Fields' box to choose any fields you wish to see
     included in the table of results. Not all of these will always be relevant.
-    For this serach, we have selected the FASTQ Files preset, but if you skip
+    For this search, we have selected the FASTQ Files preset, but if you skip
     this step you will still be shown a list of accessions with descriptions,
     by default
 

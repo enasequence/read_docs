@@ -85,7 +85,7 @@ todo_include_todos = False
 # html_theme = 'alabaster'
 # Jasmine addition: please note that the theme is now specified in the requirements file as sphinx_rtd_theme
 # Jasmine addition: please note that any docs breaking could be due to a required package changing
-# Jasmine addition: it is reccommended to pin requirments - see https://docs.readthedocs.io/en/stable/guides/rep>
+# Jasmine addition: it is recommended to pin requirements - see https://docs.readthedocs.io/en/stable/guides/rep>
 html_theme = "sphinx_rtd_theme"
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page

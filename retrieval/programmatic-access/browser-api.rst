@@ -3,7 +3,7 @@ How to Download Records using the ENA Browser API
 =================================================
 
 The `ENA Browser API <https://www.ebi.ac.uk/ena/browser/api/>`_ can be used to download ENA Records in EMBL flat file,
-fasta or XML format dependant on the record type.
+fasta or XML format dependent on the record type.
 
 +-----------------------+-------------------------------------------------+
 | **File Format**       | **Available Record Types**                      |

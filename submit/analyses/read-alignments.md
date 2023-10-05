@@ -27,7 +27,7 @@ Here is an example of a  read alignment analysis XML:
     <ANALYSIS alias="AD0370_C_alignment">
         <TITLE>The Anopheles gambiae 1000 Genomes Project - Phase 1 - Alignment - Crosses</TITLE>
         <DESCRIPTION>Sequence alignments from the AR3 data release from the Anopheles 1000 genomes
-            project. Aligments are in bam format and are presented for each of the 80 A. gambiae
+            project. Alignments are in bam format and are presented for each of the 80 A. gambiae
             specimens comprising parents and progeny of four crosses.</DESCRIPTION>
         <STUDY_REF accession="ERP020641"/>
         <SAMPLE_REF accession="ERS150992"/>
@@ -138,7 +138,7 @@ create subdirectories and upload your files there.
 
 You should then describe these data files in your analysis XML with the `<FILE>` element.
 
-To descibe files required for submission, the analysis object has a `<FILES>` block. 
+To describe files required for submission, the analysis object has a `<FILES>` block. 
 This submits the data files into the archive.
 
 For example:

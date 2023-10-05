@@ -174,7 +174,7 @@ recommended or optional metadata that was required during registration of that s
 metadata of samples to make it easier to interpret and search across them.
 
 These checklists are developed with the help of research communities themselves to encourage submitters to provide at
-least the minimum information for their samples to be findable and re-usable for further research.
+least the minimum information for their samples to be findable and reusable for further research.
 You can see the full list of checklists `here <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
 If you want to search for a particular type of sample (e.g. a soil sample), you can search across the archive by

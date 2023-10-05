@@ -186,7 +186,7 @@ Large-Scale Data Checklists
 |                        |              | | location in the genome is mapped.                                          |
 +------------------------+--------------+------------------------------------------------------------------------------+
 | | Genome Survey        | ERT000024    | | For submission of Genome Survey Sequences (GSS). These                     |
-| | Sequence (GSS)       |              | | are short DNA sequences which inlude: random single                        |
+| | Sequence (GSS)       |              | | are short DNA sequences which include: random single                        |
 |                        |              | | pass genome survey sequences, single pass reads from                       |
 |                        |              | | cosmid/BAC/YAC ends (may be chromosome specific), exon                     |
 |                        |              | | trapped genomic sequences, Alu PCR sequences and                           |

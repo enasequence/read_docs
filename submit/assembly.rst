@@ -8,7 +8,7 @@ Introduction
 
 
 To submit genome or transcriptome assemblies to ENA you must also provide some metadata to 
-describe your research project. This helps make your data re-useable and searchable.
+describe your research project. This helps make your data reusable and searchable.
 
 .. image:: images/metadata_model_assembly.png
    :align: center
