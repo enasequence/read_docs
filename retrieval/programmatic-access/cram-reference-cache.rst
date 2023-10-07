@@ -100,6 +100,7 @@ If you wish SAMTools to cache retrieved sequences in addition to caching them in
 **REF_PATH** and **REF_CACHE** environment variables:
 
 .. code-block:: bash
+
    export REF_PATH=<dir>/%2s/%2s/%s:http://<hostname>:<port>/ena/cram/md5/%s
    export REF_CACHE=/<dir>/%2s/%2s/%s
 
@@ -129,6 +130,7 @@ where **<hostname>** and **<port>** are the ones used by the Squid server.
 Execute the following command to test the cache:
 
 .. code-block:: bash
+
    curl -v http://<hostname>:<port>/ena/cram/md5/9aff30af7b14df874594c8ed07b279ba | md5
 
 The computed md5 checksum should match the requested entry.  The cache status of the request can be determined by
