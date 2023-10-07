@@ -164,9 +164,9 @@ For example, a submission with one sample object could be submitted like this:
     ]
     }
 
-===========
+============
 Receipt JSON
-===========
+============
 
 The ``success`` attribute in the receipt is ``true`` if the submission was successful and ``false`` if the submission was not successful.
 

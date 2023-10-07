@@ -28,7 +28,7 @@ service.
 
 
 What Can Be Submitted Through Webin Portal?
-==================================
+===========================================
 
 
 Some submissions can be done entirely through Webin Portal, for example you could submit a study comprising only read data
