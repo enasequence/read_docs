@@ -3,7 +3,7 @@
 The main difference between programmatically creating new experiment and runs
 and updating existing ones is that the `MODIFY` action should be used instead of the `ADD` action:
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>
@@ -28,7 +28,7 @@ Typical reasons for updating experiment XMLs include:
 
 - Change the library descriptor:
 
-```
+```xml
 <LIBRARY_DESCRIPTOR>
    <LIBRARY_NAME/>
    <LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY>
@@ -43,19 +43,19 @@ Typical reasons for updating experiment XMLs include:
 
 - Move the experiment to a different study by changing the `STUDY_REF`:
 
-```
+```xml
     <STUDY_REF accession="..."/>
 ```
 
 - Associate the experiment with a different sample by changing the `SAMPLE_DESCRIPTOR`:
 
-```
+```xml
     <SAMPLE_DESCRIPTOR accession=".."/>
 ```
 
 - Include more information in experiment attributes:
 
-```
+```xml
 <EXPERIMENT_ATTRIBUTE>
    <TAG>library preparation date</TAG>
    <VALUE>2010-08</VALUE>
@@ -65,7 +65,7 @@ Typical reasons for updating experiment XMLs include:
 ## Reasons for Updating Run XML
 Most common reason for updating run XMLs is to change the file checksum:
 
-```
+```xml
 <FILE filename="mantis_religiosa_R1.fastq.gz" filetype="fastq"
     checksum_method="MD5" checksum="9b8932f85caa54e687eba62fca3edce2"/>
 ```

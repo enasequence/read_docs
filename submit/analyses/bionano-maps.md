@@ -59,13 +59,13 @@ Optical maps must be associated with a study and a sample.
 An analysis points to the study it is part of using the `<STUDY_REF>` element.
 This can be done either by using an accession:
 
-```
+```xml
 <STUDY_REF accession="ERP123456"/>
 ```
 
 or a name within the submitter's account:
 
-```
+```xml
 <STUDY_REF refname="mantis_religiosa"/>
 ```
 
@@ -100,7 +100,7 @@ This submits the data files into the archive.
 
 For example:
 
-```
+```xml
 <FILES>
     <FILE filename="Euclidium_syriacum.Run-01.bnx.gz" filetype="BioNano_native" 
 	checksum_method="MD5" checksum="ff9dd3a61d88092cb74ff8227ed725aa"/>
@@ -110,14 +110,14 @@ For example:
 If the files are uploaded to the root directory
 then simply enter the file name in the Analysis XML when referring to it:
 
-```
+```xml
 <FILE filename="a.bnx" ... />
 ```
 
 If the files are uploaded into a subdirectory (e.g. `mantis_religiosa`) then prefix the file name
 with the name of the subdirectory:
 
-```
+```xml
 <FILE filename="mantis_religiosa/a.bnx" ... />
 ```
 
@@ -136,7 +136,7 @@ For full details of the BioNano data files please refer to [Bionano Solve](https
 All other metadata used to describe the analysis can be provided using `ANALYSIS_ATTRIBUTE` elements in
 the XML:
 
-```
+```xml
     <ANALYSIS_ATTRIBUTE>
        <TAG>library preparation date</TAG>
        <VALUE>2010-08</VALUE>
@@ -148,7 +148,7 @@ the XML:
 Once you have created your analysis XML, you need an accompanying submission 
 XML in a separate file to tell ENA what actions you would like to take for your submission.
 
-```
+```xml
 <SUBMISSION>
    <ACTIONS>
       <ACTION>
@@ -181,7 +181,7 @@ Please provide your Webin submission account credentials using the `username` an
 
 After running the command above a receipt XML is returned. It will look like the one below:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <RECEIPT receiptDate="2017-08-11T15:07:36.746+01:00" submissionFile="sub.xml" success="true">
    <ANALYSIS accession="ERZ0151578" alias="08-1736" status="PRIVATE"/>
@@ -215,7 +215,7 @@ contain the accession numbers of the objects that you have submitted.
 
 Note the message in the receipt:
 
-```
+```xml
 <INFO>This submission is a TEST submission and will be discarded within 24 hours</INFO>
 ```
 
