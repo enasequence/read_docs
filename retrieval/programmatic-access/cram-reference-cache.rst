@@ -146,7 +146,7 @@ and can be one of the following:
 +-----------------+---------------------------------------------------------------------+
 | TCP_HIT/200     | | The requested object is available in the Squid disk cache.        |
 +-----------------+---------------------------------------------------------------------+
-| TCP_MEM_HIT/200 |	The requested object is available in the Squid memory cache.        |
+| TCP_MEM_HIT/200 | | The requested object is available in the Squid memory cache.      |
 +-----------------+---------------------------------------------------------------------+
 
 9. Shut down Squid.
