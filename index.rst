@@ -53,7 +53,7 @@ bottom of the page.
    faq/taxonomy
    faq/taxonomy_requests
    faq/metagenomes
-   faq/missing-values
+   submit/samples/missing-values
    faq/locus_tags
    faq/archive-generated-files
    faq/third_party_tools
