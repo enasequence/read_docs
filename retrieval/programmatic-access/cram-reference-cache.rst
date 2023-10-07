@@ -123,6 +123,7 @@ CRAMTools can be instructed to use the Squid cache by defining the following Jav
 .. code-block:: bash
 
    java -DREF_URL_TEMPLATE=http://<hostname>:<port>/ena/cram/md5/%s
+
 where **<hostname>** and **<port>** are the ones used by the Squid server.
 
 8. Testing Squid.
