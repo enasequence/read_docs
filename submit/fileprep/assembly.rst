@@ -61,6 +61,11 @@ The feature table annotation must conform to the
 Some tools to help you create flat files are described in our
 `Third Party Tools page <https://ena-docs.readthedocs.io/en/latest/faq/third_party_tools.html>`_.
 
+.. toctree::
+   :maxdepth: 1
+
+   ./flat-file-example
+   ./flatfile_user_manual
 
 Chromosome List File
 ====================
