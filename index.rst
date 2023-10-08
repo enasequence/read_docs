@@ -58,6 +58,11 @@ bottom of the page.
    faq/archive-generated-files
    faq/third_party_tools
    faq/data_brokering
+   faq/analysis-and-accessions
+   faq/archive-generated-analysis-files
+   faq/pathogen-subs-guide
+   faq/release/data-availability-policy
+   faq/umbrella
 
 
 Introductory Webinar
