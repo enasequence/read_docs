@@ -34,7 +34,6 @@ Service URL: https://www.ebi.ac.uk/ena/submit/webin-v2/
 |                        | | submission.                                                                                    |
 +------------------------+--------------------------------------------------------------------------------------------------+
 
-========================
 How to use Webin REST V2
 ========================
 
@@ -48,7 +47,7 @@ Additionally, Webin REST V2 supports both JSON and XML formats while Webin REST 
 The web API can be viewed and tested using the Swagger web interface accessible through the above links. Some users use cURL while others build their own API to access these endpoints.
 
 Synchronous Endpoint
-====================
+--------------------
 
 The synchronous submission endpoint processes the submitted XML or JSON document right away and returns a receipt in either XML or JSON document. Submitters with large or high-volume submissions are advised to use the asynchronous endpoint explained below.
 
@@ -69,7 +68,7 @@ Below is an example of a submission to the Webin service using the synchronous e
 The JSON or XML submission document is in the file named 'submission file name' above. The Accept and Content-Type headers must match the document format in the 'submission file name'. 
 
 Asynchronous Endpoint
-=====================
+---------------------
 
 When a submission is made using the asynchronous endpoint, it enters a pending state in a queue of submissions.
 This submission is processed once it reaches the front of this queue. The asynchronous submission endpoint supports
@@ -127,7 +126,6 @@ An example of the cURL command used for the poll endpoint to retrieve a receipt 
     curl -u username:password "https://www.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA16500666" \
     -H 'Accept: application/xml'
 
-=====================
 Submission JSON
 =====================
 
@@ -164,7 +162,6 @@ For example, a submission with one sample object could be submitted like this:
     ]
     }
 
-============
 Receipt JSON
 ============
 
@@ -208,7 +205,6 @@ If the submission is not successful the ``success`` attribute in the RECEIPT ele
       }
     }
 
-=====================
 Submission XML
 =====================
 
@@ -247,7 +243,6 @@ For example, a submission with one sample object could be submitted like this:
     </WEBIN>
 
 
-===========
 Receipt XML
 ===========
 

@@ -71,6 +71,7 @@ Submission Services
    general-guide/interactive
    general-guide/programmatic
    general-guide/webin-cli
+   general-guide/programmatic-v2
 
 
 Submission Reports Services
