@@ -53,7 +53,7 @@ Flat File
 
 Annotated sequences can only be submitted in the `EMBL flat file format <./flat-file-example.html>`_.
 For the full range of features and qualifiers available for flat files and their expected content, please see
-`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.  The complete flatfile manual is available `here <https://raw.githubusercontent.com/enasequence/read_docs/master/submit/fileprep/flatfile_user_manual.txt>`_.
+`WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.  The complete flatfile manual is available `here <./flatfile_user_manual.html>`_.
 
 The feature table annotation must conform to the
 `INSDC Feature Table Definition <http://www.insdc.org/files/feature_table.html>`_.
