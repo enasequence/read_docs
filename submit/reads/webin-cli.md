@@ -151,12 +151,16 @@ For example, the following manifest file represents a multi-fastq submission:
 - CAPILLARY: Sequencers based on capillary electrophoresis technology manufactured by LifeTech (formerly Applied BioSciences).
 - DNBSEQ:  Uses DNA nanoballs(DNB) and regular array chips.
 - ELEMENT: Element Biosciences uses avidity sequencing: a polymerase inserts nucleotides, detected using fluorescence.
+- GENAPSYS: Chip based electronic sensing of polymerase extension reaction.
+- GENEMIND: Genemind Platform, a single-molecule gene sequencer.
 - HELICOS: Helicos is similar to 454 technology - uses 1-color sequential flows.
 - ILLUMINA: 54 technology use 1-color sequential flows: 454 technology use 1-color sequential flows.
 - ION_TORRENT: Ion Torrent Personal Genome Machine (PGM) from Life Technologies. Directly translates chemically encoded information (A, C, G, T) into digital on semiconductor chip.
 - LS454: 454 technology use 1-color sequential flows.
 - OXFORD_NANOPORE: Oxford Nanopore platform type. nanopore-based electronic single molecule analysis.
 - PACBIO_SMRT: PacificBiosciences platform type for the single molecule real time (SMRT) technology.
+- TAPESTRI: Tapestri Platform single-cell DNA genotyping using pre-configured or custom gene panels.
+- VELA_DIAGNOSTICS: VELA NGS platform measures the hydrogen ions that are generated during the incorporation of nucleotides in the DNA sequencing reaction.
 - ULTIMA: Ultima Genomics platform type. Flowing one nucleotide at a time in order, iteratively.
 
 Deprecated:
@@ -189,6 +193,12 @@ Deprecated:
 - DNBSEQ-G50
 - DNBSEQ-T7
 - Element AVITI
+- FASTASeq 300
+- GENIUS
+- GS111
+- Genapsys Sequencer
+- GenoCare 1600
+- GenoLab M
 - GridION
 - Helicos HeliScope
 - HiSeq X Five
@@ -223,12 +233,16 @@ Deprecated:
 - NextSeq 2000
 - NextSeq 500
 - NextSeq 550
+- Onso
 - PacBio RS
 - PacBio RS II
 - PromethION
+- Revio
+- Sentosa SQ301
 - Sequel
 - Sequel II
 - Sequel IIe
+- Tapestri
 - UG 100
 - unspecified
 
