@@ -71,6 +71,18 @@ For examples and tutorials on how to use the ENA taxonomy services, please see t
    programmatic-access/taxon-api
    programmatic-access/taxon-based-search
 
+Simplify Queries by Using the Tags on Samples, Taxonomy and Other Records
+=========================================================================
+
+The tags are controlled textual annotations on objects. There are already programmatically created by the ENA team making use of appropriate metadata property values.
+
+The purpose of these is to make searching and filtering much easier.
+
+.. toctree::
+   :maxdepth: 1
+
+   programmatic-access/tag_querying.rst
+
 Sequence similarity search
 ==========================
 
