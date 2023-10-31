@@ -2,9 +2,9 @@ General Pathogens Submissions Guide
 ==================================
 
 .. image:: images/pathogens_logo_1.png
- :width: 400
- :alt: Pathogens Portal logo
- :align: center
+   :width: 400
+   :alt: Pathogens Portal logo
+   :align: center
 
 
 
@@ -175,7 +175,7 @@ in the checklists. If you specify the strain with both, this will make your stra
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
 
-Sample host
+Sample Host
 '''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
@@ -272,8 +272,9 @@ For example, the following manifest file represents a genome assembly consisting
 Chromosome list file
 ''''''''''''''''''''
 
-The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
-for permitted values.
+The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated
+file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+for permitted values. Here are some examples for different organisms:
 
 .. tabs::
 
@@ -358,14 +359,14 @@ can be created and given their own identifiers, and reference can be made back t
 its top-level sample identifier.
 
 .. image:: images/linked_samples.png
- :width: 600
- :alt: diagram showing BioSample relationships and data types
- :align: center
+   :width: 600
+   :alt: diagram showing BioSample relationships and data types
+   :align: center
 
 Steps
 `````
 
-Please contact ena-path-collabs@ebi.ac.uk (or BioSamples) for technical support with any of the following steps.
+Please contact us at cohort-dataflow@ebi.ac.uk should you need any support with any of the following steps.
 
 1. Create the top-level sample
 '''''''''''''''''''''''''''''''''''
@@ -382,7 +383,6 @@ Top-level Sample records can be created in BioSamples using their uploader tool:
 Please note you can use different samples for different data types and for different time points. Please also be advised
 that EGA and ENA are the only archives which integrate the BioSample records into their metadata models. For data deposited
 at other archives, additional BioSample records may need to be created (in BioSamples) to represent those data.
-Please contact us at:  cohort-dataflow@ebi.ac.uk should you need any support with this.
 
 - For pathogen nucleotide records (raw reads or assembly data), please refer to the ENA sample submissions guide [link?]
 - For sensitive human nucleotide records and human clinical epidemiological data which requires controlled access, please
