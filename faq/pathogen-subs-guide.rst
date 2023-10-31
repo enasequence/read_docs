@@ -438,12 +438,13 @@ Please contact ena-path-collabs@ebi.ac.uk (or BioSamples) for technical support 
 '''''''''''''''''''''''''''''
 
 While the BioSamples database is key to capturing the linking of data types on participant level, the
-`Cohort Browser <https://www.pathogensportal.org/cohorts>`_ presents a range of study-level information about each cohort.
-Similar to a shop window, it enhances the findability of the datasets and as an integral part of the Pathogens Portal, and
-serves as the primary entry point into cohort data.
+`Pathogens Portal Cohort Browser <https://www.pathogensportal.org/cohorts>`_ presents a range of study-level information about a cohort.
+Similar to a shop window, a cohort browser enhances the findability of the datasets and is an integral part of the Pathogens Portal,
+serving as the primary entry point into cohort data. The linked data types included in the cohort will also be indicated under the 'Type of data'
+column within the Cohort Browser.
 
-For your cohort to display within a cohort browser, please contact us to check which metadata will be needed for your dataset.
-As a basic guide, the following information will be needed to describe the cohort:
+As a general guide, the following information will be needed to describe the cohort.
+also includes some additional fields:
 
 - Cohort acronym/link to webpage
 - Cohort title
@@ -453,10 +454,8 @@ As a basic guide, the following information will be needed to describe the cohor
 - Territory/country
 - Enrollment period
 
-Please find the form `here <https://docs.google.com/spreadsheets/d/1LuyPhv1J5t2FU7JE2XjW9n__PjGTxeBoA38PXpN8sG8/edit#gid=0>`_
-for suggested complete cohort metadata. The linked data types included in the cohort will be indicated under the 'Type of data'
-column within the cohort browser.
-
+There are additional metadata fields listed in the form `here <https://docs.google.com/spreadsheets/d/1LuyPhv1J5t2FU7JE2XjW9n__PjGTxeBoA38PXpN8sG8/edit#gid=0>`_
+Please contact us at cohort-dataflow@ebi.ac.uk in order to check that your cohort metadata will be compatible with our browser.
 
 Data Release and Citing
 ~~~~~~~~~~~~~~~~~~~~~~~
