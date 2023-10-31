@@ -384,12 +384,12 @@ Please note you can use different samples for different data types and for diffe
 that EGA and ENA are the only archives which integrate the BioSample records into their metadata models. For data deposited
 at other archives, additional BioSample records may need to be created (in BioSamples) to represent those data.
 
-- For pathogen nucleotide records (raw reads or assembly data), please refer to the ENA sample submissions guide [link?]
+- For pathogen nucleotide records (raw reads or assembly data), please refer to the ENA `Sample Registration Guide <../submit/samples.html>`_.
 - For sensitive human nucleotide records and human clinical epidemiological data which requires controlled access, please
-  contact the EGA (European Genome Phenome Archive) to start a submission.
-- For expression data, please use ArrayExpress/Biostudies
-- For other types of biological data, or if you are not sure which archive to use, please use the EBI submissions wizard
-  which can direct you to a resource to deposit your data: https://www.ebi.ac.uk/submission/
+  contact the `EGA (European Genome Phenome Archive) <https://ega-archive.org/>`_ to start a submission.
+- For expression data, please use `ArrayExpress/Biostudies <https://www.ebi.ac.uk/biostudies/arrayexpress>`_
+- For other types of biological data, or if you are not sure which archive to use, please use the `EBI submissions wizard <https://www.ebi.ac.uk/submission/>`_
+  which can direct you to a resource to deposit your data.
 
 3. Link together the samples using BioSamples
 ''''''''''''''''''''
