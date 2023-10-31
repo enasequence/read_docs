@@ -365,20 +365,22 @@ its top-level sample identifier.
 
 Steps
 `````
-
-Please contact us at cohort-dataflow@ebi.ac.uk should you need any support with any of the following steps.
+The steps detailed here provide an overview of how to create a dataset record including multiple linked data types, to appear in the
+`Pathogens Portal Cohort Browser <https://www.pathogensportal.org/cohorts>`_.
+Before starting a submission, we strongly advise you to contact us at cohort-dataflow@ebi.ac.uk if you are planning to submit a
+linked cohort dataset, including some details about your study, and we can provide support with the following steps.
 
 1. Create the top-level sample
-'''''''''''''''''''''''''''''''''''
+''''''''''''''''''''''''''''''
 
-Top-level samples representing each case or patient can be created in the BioSamples archive. This is represented by sample H1
-in the diargam aboce. For a human sample, these can contain minimal, non-identifying metadata about the patient (e.g. gender,
-organism, disease). See an example `here <https://www.ebi.ac.uk/biosamples/samples/SAMEA12928716>`_.
+Top-level samples representing each case or patient can be created in the `BioSamples Archive <https://www.ebi.ac.uk/biosamples/>`_.
+This is represented by sample H1 in the diagram above. For a human sample, these can contain minimal, non-identifying metadata about
+the patient (e.g. gender, organism, disease). See an example `here <https://www.ebi.ac.uk/biosamples/samples/SAMEA12928716>`_.
 
-Top-level Sample records can be created in BioSamples using their uploader tool: https://www.ebi.ac.uk/biosamples/docs/cookbook/upload_files
+Top-level Sample records can be created in BioSamples using the `BioSamples uploader tool <https://www.ebi.ac.uk/biosamples/docs/cookbook/upload_files>`_.
 
 2. Create the child samples in EBI data resources
-''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''''''''''''''
 
 Please note you can use different samples for different data types and for different time points. Please also be advised
 that EGA and ENA are the only archives which integrate the BioSample records into their metadata models. For data deposited
@@ -392,21 +394,23 @@ at other archives, additional BioSample records may need to be created (in BioSa
   which can direct you to a resource to deposit your data.
 
 3. Link together the samples using BioSamples
-''''''''''''''''''''
+''''''''''''''''''''''''''''''''''''''''''''''
 
 Link your samples created from other EBI resources to the top-level sample using the ‘derived from’ curation on
 BioSamples. The derived from relationship is used as follows:
 
-Source sample - derived from - Target sample
+**Source sample** - *derived from* - **Target sample**
 
-[Child sample accession] - derived from - [Parent sample accession]
+**Child sample accession** - *derived from* - **Parent sample accession**
 
 e.g. for the `EMC study <https://www.ebi.ac.uk/about/news/updates-from-data-resources/pathogens-portal-linked-dataset/>`_:
 
-[T/B-Cell/Antibody profile/ENA viral sample accession] - derived from - [Top level patient sample accession]
+**[T/B-Cell/Antibody profile/ENA viral sample accession]** - *derived from* - **[Top level patient sample accession]**
 
 A JSON file curation object (see example below) containing the relationship attribute should be created and submitted
 via curl to BioSamples (see instructions `here <https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object>`_)
+Please contact ena-path-collabs@ebi.ac.uk (or BioSamples) for technical support with sample linking using BioSamples.
+
 
 .. code-block:: JSON
 
@@ -431,11 +435,11 @@ via curl to BioSamples (see instructions `here <https://www.ebi.ac.uk/biosamples
 
 
 4. Submit the cohort metadata
-''''''''''''''''''''
+'''''''''''''''''''''''''''''
 
 While the BioSamples database is key to capturing the linking of data types on participant level, the
 `Cohort Browser <https://www.pathogensportal.org/cohorts>`_ presents a range of study-level information about each cohort.
-Similar to a shop window, it enhances the findability of the datasets and as an integral part of the Pathogens Portal,
+Similar to a shop window, it enhances the findability of the datasets and as an integral part of the Pathogens Portal, and
 serves as the primary entry point into cohort data.
 
 For your cohort to display within a cohort browser, please contact us to check which metadata will be needed for your dataset.
