@@ -398,9 +398,11 @@ Link your samples created from other EBI resources to the top-level sample using
 BioSamples. The derived from relationship is used as follows:
 
 Source sample - derived from - Target sample
+
 [Child sample accession] - derived from - [Parent sample accession]
 
 e.g. for the `EMC study <https://www.ebi.ac.uk/about/news/updates-from-data-resources/pathogens-portal-linked-dataset/>`_:
+
 [T/B-Cell/Antibody profile/ENA viral sample accession] - derived from - [Top level patient sample accession]
 
 A JSON file curation object (see example below) containing the relationship attribute should be created and submitted
