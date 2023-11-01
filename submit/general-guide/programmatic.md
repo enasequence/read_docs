@@ -26,7 +26,7 @@ When you are using the test service the receipt XML will contain the following m
 ```
 
 It is advisable to first test your submissions using the Webin test service before
-establising an automated submission pipeline.
+establishing an automated submission pipeline.
 
 ## Webin Rest V2 API
 
@@ -301,9 +301,9 @@ Below is an example of a submission XML used to cancel objects:
 ### Submission XML: request a receipt XML
 
 The `RECEIPT` action can be used to request a receipt XML issued as a result of an `ADD` action
-that contains all the issued accession numbers. This is expecially useful in cases where the
+that contains all the issued accession numbers. This is especially useful in cases where the
 submission request times out before it has as completed. The submission process will continue
-neverthless and the issued accession numbers can be later requested using the `RECEIPT` action.
+nevertheless and the issued accession numbers can be later requested using the `RECEIPT` action.
 
 ```
 SUBMISSION_SET>

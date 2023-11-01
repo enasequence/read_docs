@@ -196,8 +196,8 @@ of the entry. Each entry belongs to exactly one data class.
   PAT            Patent
   EST            Expressed Sequence Tag
   GSS            Genome Survey Sequence
-  HTC            High Thoughput CDNA sequencing
-  HTG            High Thoughput Genome sequencing
+  HTC            High Throughput CDNA sequencing
+  HTG            High Throughput Genome sequencing
   WGS            Whole Genome Shotgun
   TSA            Transcriptome Shotgun Assembly
   STS            Sequence Tagged Site

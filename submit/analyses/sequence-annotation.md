@@ -94,7 +94,7 @@ create subdirectories and upload your files there.
 
 You should then describe these data files in your analysis XML with the `<FILE>` element.
 
-To descibe files required for submission, the analysis object has a `<FILES>` block. 
+To describe files required for submission, the analysis object has a `<FILES>` block. 
 This submits the data files into the archive.
 
 For example:

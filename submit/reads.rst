@@ -6,7 +6,7 @@ Introduction
 ============
 
 To submit raw read sequencing data to ENA you must also provide some metadata to describe your sequencing project.
-This helps make your data re-useable and searchable.
+This helps make your data reusable and searchable.
 
 .. image:: images/metadata_model_reads.png
    :align: center

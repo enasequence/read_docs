@@ -260,7 +260,7 @@ The following formats are supported for [read submissions](../reads/webin-cli):
 - FASTQ: fastq file
 
 
-##### Info File (for backward compability only)
+##### Info File (for backward compatibility only)
 
 You can also provide the metadata fields in a separate info file. The info file has the same format as the manifest file.
 

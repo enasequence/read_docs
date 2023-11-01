@@ -162,7 +162,7 @@ The file umbrella_modified.xml should look very similar to the umbrella.xml used
 The 'TITLE', DESCRIPTION' and 'alias' should be the same. 
 This time, the 'RELATED PROJECTS' block should be made up of any new projects you would like to add to the umbrella.
 For example, to add a single project to your umbrella, you should include a single <CHILD_PROJECT> block specifying the project to be added. 
-You do not need to include the full list of exisiting child projects when updating your umbrella project, you only need to include new projects to be added.
+You do not need to include the full list of existing child projects when updating your umbrella project, you only need to include new projects to be added.
 
 Please note that projects can not be removed from an umbrella by modifying this XML and if you need to remove any projects from your umbrella, please `contact us <https://www.ebi.ac.uk/ena/browser/support>`_.
 

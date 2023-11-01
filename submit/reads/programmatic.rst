@@ -24,7 +24,7 @@ Both run and experiment are associated with other objects.
 An experiment is part of a study. Studies are used to group together experiments to
 allow them to be cited together in a publication.
 
-An experiment is assocated with a sample. It is common to have multiple libraries
+An experiment is associated with a sample. It is common to have multiple libraries
 and sequencing experiments for a single sample. Experiments point to samples to
 allow sharing of sample information between multiple experiments.
 
