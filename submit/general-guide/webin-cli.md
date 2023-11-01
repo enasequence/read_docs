@@ -197,7 +197,7 @@ The manifest file has two columns separated by a colon:
 
 For example, the following manifest file represents a multi-fastq submission for single-cell data:
 
-```
+```json
 {
  "study": "TODO",
  "sample": "TODO",

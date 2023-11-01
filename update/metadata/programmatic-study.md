@@ -3,7 +3,7 @@
 The main difference between programmatically creating new studies and updating existing ones
 is that the `MODIFY` action should be used instead of the `ADD` action:
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>

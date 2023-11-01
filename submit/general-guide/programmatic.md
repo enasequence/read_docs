@@ -115,7 +115,7 @@ The most commonly used submission actions are listed below.
 The `ADD` action is used when submitting new objects. A corresponding submission XML
 will look like:
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>
@@ -134,7 +134,7 @@ they refer to are made public.
 
 A release date can be provided for studies by using the `HOLD` action together with the `ADD` action:
 
-```
+```xml
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
@@ -157,7 +157,7 @@ time.
 
 A study can be made immediately public by using `RELEASE` action with the study accession number:
 
-```
+```xml
 <SUBMISSION>
     <ACTIONS>
          <ACTION>
@@ -171,7 +171,7 @@ A study can be made immediately public by using `RELEASE` action with the study 
 
 You can update the release date of a study, project or sample by using the `HOLD` action with a new release date.:
 
-```
+```xml
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
@@ -191,7 +191,7 @@ The new release date must be not more than two years in the future.
 IF `RELEASE` action is provided without a target attribute then all submitted studies,
 projects and samples will become immediately public. 
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>
@@ -208,7 +208,7 @@ Run, experiment and analysis objects will become public as long as the studies o
 The `MODIFY` action is used when updating existing objects. A corresponding submission XML
 will look like:
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>
@@ -229,7 +229,7 @@ in the initial submission.
 
 Below is an extract of an study XML which contains an accession number:
 
-```
+```xml
 <STUDY accession="ERP000011">
    ...       
 </STUDY>
@@ -237,7 +237,7 @@ Below is an extract of an study XML which contains an accession number:
 
 Below is an extract of an study XML which contains an alias:
 
-```
+```xml
 <STUDY alias="study1">
    ...       
 </STUDY>
@@ -248,7 +248,7 @@ Below is an extract of an study XML which contains an alias:
 The `VALIDATE` action is used when validating a submission without actually creating or
 updating any objects. It can be used together with the `ADD` action (default):
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>
@@ -263,7 +263,7 @@ updating any objects. It can be used together with the `ADD` action (default):
 
 Or with the `MODIFY` action:
 
-```
+```xml
 <SUBMISSION>
      <ACTIONS>
          <ACTION>
@@ -288,7 +288,7 @@ that the `CANCEL` action will be propagated from studies to all associated exper
 
 Below is an example of a submission XML used to cancel objects:
 
-```
+```xml
 <SUBMISSION>
     <ACTIONS>
         <ACTION>
@@ -305,8 +305,8 @@ that contains all the issued accession numbers. This is expecially useful in cas
 submission request times out before it has as completed. The submission process will continue
 neverthless and the issued accession numbers can be later requested using the `RECEIPT` action.
 
-```
-SUBMISSION_SET>
+```xml
+<SUBMISSION_SET>
     <SUBMISSION>
         <ACTIONS>
             <ACTION>
@@ -364,7 +364,7 @@ publication.
 
 An example of a successful run submission:
 
-```
+```xml
 <RECEIPT receiptDate="2014-12-02T16:06:20.871Z" success="true">
     <RUN accession="ERR049536" alias="run_1" status="PRIVATE"/>
     <SUBMISSION accession="ERA390457" alias="submission_1"/>
@@ -378,7 +378,7 @@ within the `RUN` block.
 If the submission was not successful the Receipt XML will contain the error messages within
 the `MESSAGES` block:
 
-```
+```xml
 <RECEIPT receiptDate="2014-12-02T16:06:20.871Z" success="false">
    ...
    <MESSAGES>
