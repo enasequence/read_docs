@@ -297,6 +297,7 @@ For private files, configure like this (and then use '-Pmypriv'):
 ::
 
     ascli conf preset update mypriv --url=ssh://fasp.sra.ebi.ac.uk:33001 --username=dcc_name --password=dcc_pass --ts=@json:'{"target_rate_kbps":300000}'
+
 Common Issues
 -------------
 Downloading a large number of records

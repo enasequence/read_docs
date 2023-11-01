@@ -63,7 +63,8 @@ release = u'1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+# 2023-10-08 explicitly set to address warning
+language = 'en_GB'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -106,7 +107,8 @@ html_sidebars = { '**': ['globaltoc.html','localtoc.html', 'relations.html', 'so
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+# 2023-10-08: Results in warning if not commented out `WARNING: html_static_path entry '_static' does not exist`
+# html_static_path = ['_static']
 
 
 # -- Options for HTMLHelp output ------------------------------------------
@@ -178,3 +180,4 @@ source_suffix = {
     '.md': 'markdown',
 }
 
+myst_heading_anchors = 2

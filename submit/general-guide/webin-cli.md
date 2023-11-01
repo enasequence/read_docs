@@ -34,12 +34,12 @@ Webin-CLI has been tested against openjdk version 1.8.0_212. You are recommended
 
 Download openapi JDKs from the below links:
 
-[https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot)
+[https://adoptium.net/en-GB/marketplace/?version=8&arch=any&os=any](https://adoptium.net/en-GB/marketplace/?version=8&arch=any&os=any)
 
 Download Oracle JREs from the below links:
 
-- [ **Latest JRE Version** ](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
-- [ Older JRE Versions ](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+- [ **Latest JRE Version** ](https://www.oracle.com/java/technologies/downloads/#java8)
+- [ Older JRE Versions ](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html)
 
 ## Run the program as a Java jar file
 
