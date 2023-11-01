@@ -26,6 +26,9 @@ Therefore, any submissions made to the test service will be removed by the follo
 We advise and encourage that you trial your submissions using the Webin test service before using the production
 service.
 
+Note that when creating a new webin account, test submissions will fail until the test service has been recreated (at 03.00 GMT/BST).
+This is because certain account details are only copied from the production service to the test service at this time.
+Submissions made to the test service before this time will result in an error, for example: "Missing center name."
 
 What Can Be Submitted Through Webin Portal?
 ==================================
