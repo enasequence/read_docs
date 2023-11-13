@@ -18,9 +18,9 @@ assigned accession number for the correct object to be updated.
 
 Detailed advice on how to programmatically update XMLs
 including instructions for retrieving previously submitted XMLs can be
-found in [Programmatic Submission Options](../../submit/general-guide/programmatic.html).
+found in [Programmatic Submission Options](../../submit/general-guide/programmatic.md).
 Experiment and run XMLs can also be manually edited using the
-[Webin Portal](../../submit/general-guide/submissions-portal.html).
+[Webin Portal](../../submit/general-guide/submissions-portal.rst).
 
 ## Reasons for Updating Experiment XML
 

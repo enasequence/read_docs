@@ -260,7 +260,7 @@ To do this:
 7. Remove the 'checksum' value for the errored file(s) and enter the correct value. The checksum is shown in the pink
    box:
 
-.. images:: images/run_errors_md5_edit.png
+.. image:: images/run_errors_md5_edit.png
 
 8. When editing the checksum value, change only the 32-digit string: do not remove the quotation marks, the word
    'checksum', or any other parts of the XML

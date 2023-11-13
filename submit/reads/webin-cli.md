@@ -352,5 +352,5 @@ variables as in [samtools](http://www.htslib.org/doc/samtools.html).
 
 ## Webin-CLI Validation
 
-When submitting data using the Webin command line interface, your files will be validated and uploaded to your private Webin file upload area in webin.ebi.ac.uk. Any validation error reports are written into the `<outputDir>/<context>/<name>/validate` directory. Read more about validation reports on the [Webin-CLI Submissions](../general-guide/webin-cli.html) section.
+When submitting data using the Webin command line interface, your files will be validated and uploaded to your private Webin file upload area in webin.ebi.ac.uk. Any validation error reports are written into the `<outputDir>/<context>/<name>/validate` directory. Read more about validation reports on the [Webin-CLI Submissions](../general-guide/webin-cli.md) section.
 

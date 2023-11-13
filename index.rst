@@ -53,11 +53,16 @@ bottom of the page.
    faq/taxonomy
    faq/taxonomy_requests
    faq/metagenomes
-   faq/missing-values
+   submit/samples/missing-values
    faq/locus_tags
    faq/archive-generated-files
    faq/third_party_tools
    faq/data_brokering
+   faq/analysis-and-accessions
+   faq/archive-generated-analysis-files
+   faq/pathogen-subs-guide
+   faq/release/data-availability-policy
+   faq/umbrella
 
 
 Introductory Webinar

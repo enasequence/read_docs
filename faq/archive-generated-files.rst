@@ -1,6 +1,6 @@
-=============================
+===========================
 Archive Generated Run Files
-=============================
+===========================
 
 Whenever possible, ENA provides access to two types of file for each run we
 present: the submitted file(s) and archive-generated file(s). Both are visible

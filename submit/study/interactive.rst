@@ -27,8 +27,6 @@ Once registration is complete, you will be assigned accession numbers.
 You may return to the dashboard and select the 'Studies Report' button to review registered studies.
 
 
-.. _Locus Tag Prefixes
-
 Locus Tag Prefixes
 ==================
 

@@ -23,7 +23,6 @@ to be uploaded, and finally, how to carry out the actual upload.
 
    fileprep/reads
    fileprep/assembly
-   fileprep/flat-file-example
    fileprep/sequence-flatfile
 
 

@@ -1,6 +1,6 @@
-=============================================================
+=======================================================================
 Updating Studies, Samples, Experiments, Runs and Analyses Interactively
-=============================================================
+=======================================================================
 
 
 The `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/>`_ allows you to edit some of your
@@ -128,7 +128,7 @@ If the submitted file has failed validation, it must be replaced with an identic
 
 
 Analysis Edits
-============
+==============
 
 
 1. Log in to `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the 'Analyses Report' button to be

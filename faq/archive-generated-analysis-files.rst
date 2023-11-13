@@ -1,6 +1,6 @@
-=============================
+================================
 Archive Generated Analysis Files
-=============================
+================================
 
 Archive generated analysis files are generated for primary and binned metagenome assemblies. These submissions
 will not have a GCA (assembly accession) or sequence accessions but only ERZ accessions.
