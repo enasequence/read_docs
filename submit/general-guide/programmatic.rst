@@ -5,7 +5,7 @@ Programmatic Submission
 Introduction
 ============
 
-Submissions of different types can be made programmatically using XML or JSON file formats.
+Submissions of different data objects can be made programmatically using XML or JSON file formats.
 
 A receipt XML/JSON with accession numbers is provided upon successful submission. Any
 validation or other errors will be written in the receipt as well.
@@ -68,7 +68,7 @@ Webin REST V2 API
 =================
 
 Programmatic submissions can be made using the Webin Rest V2 service. This has been developed
-to address issues such as timeout errors during submissions. The `Webin REST V1 <programmatic-v1.html>`_ submission
+to address issues such as timeout errors during submissions. The `Webin REST V1 <webin-v1.html>`_ submission
 endpoint may time out while the submission still is being processed. If this happens the submitter will not
 receive a submission receipt.The Webin REST version 2 (V2) prevents this error and has a number of
 other improvements.
@@ -108,7 +108,7 @@ How to use Webin REST V2
 In contrast to Webin REST V1 where individual objects (submission, runs, samples, etc.) are submitted as separate files
 using multipart file upload, in Webin REST V2 they are submitted as a single file in the request body.
 Additionally, Webin REST V2 supports both JSON and XML formats while Webin REST V1 only supports the XML format.
-Please refer to the `Webin Rest V1 documentation <programmatic-v1.html>`_ to find out more.
+Please refer to the `Webin Rest V1 documentation <webin-v1.html>`_ to find out more.
 
 Webin REST V2 accepts submissions to the production and test servers.
 
@@ -133,7 +133,7 @@ where the file referenced can contain a combination of the datatypes documented 
 
 - ```SUBMISSION`` <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.submission.xsd>`_
 - ```STUDY`` <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.study.xsd>`_
-- ```SAMPLE``<https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd>`_
+- ```SAMPLE`` <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.sample.xsd>`_
 - ```EXPERIMENT`` <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.experiment.xsd>`_
 - ```RUN`` <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.run.xsd>`_
 - ```ANALYSIS`` <https://ftp.ebi.ac.uk/pub/databases/ena/doc/xsd/sra_1_5/SRA.analysis.xsd>`_
@@ -174,7 +174,7 @@ For example, a ``PROJECT`` and ``SAMPLE`` object can be submitted like this:
             },
             "projects": [
                 {
-			        "alias": "comparative-analysis",
+		    "alias": "comparative-analysis",
                     "name": "Human Gut Microbiota Study",
                     "title": "Exploration of the diversity human gastric microbiota",
                     "description": "The genome sequences of gut microbes were obtained using...",
