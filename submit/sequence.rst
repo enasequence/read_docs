@@ -70,7 +70,7 @@ Submission Options
 
 
 There are two ways in which targeted sequences can be submitted: all targeted sequences can be submitted in the
-`EMBL flat file format </fileprep/flat-file-example.html>`_.
+`EMBL flat file format </en/latest/submit/fileprep/flat-file-example.html>`_.
 Alternatively, for commonly submitted types of sequence there are checklists which can be used for submission instead.
 In checklist-based submission, you provide a spreadsheet of pre-defined attributes for each sequence, and our pipeline
 automatically creates flat files based on these.
