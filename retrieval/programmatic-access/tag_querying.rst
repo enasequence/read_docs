@@ -87,7 +87,7 @@ table, to see what they apply to.
    * - pathogen:priority
      - pathogen
      - priority
-     - 
+     - A pathogen that has beem identified by WHO to pose a serious threat to humans.
      - 
    * - pathogen:bacterium
      - pathogen
@@ -196,7 +196,7 @@ table, to see what they apply to.
      - 
    * - datahub:faang
      - datahub
-     - Faang
+     - faang
      - Is a `Functional Annotation of ANimal Genomes project (FAANG) <https://data.faang.org/home>`_ sample and present in that datahub
      - 
    * - datahub:metagenome
@@ -244,12 +244,41 @@ table, to see what they apply to.
 How are the Tags Created?
 -------------------------
 
-The tags are typically assigned by automatic processes analysing the user supplied metadata around an object. 
-
-For example, the identification of “marine” sample records is systematically assessed by a combination of geo-coordinates and taxonomic evidence. We can further qualify such identification by a level of confidence which is dictated by a combination of the evidence available on the record to support said assertion. 
+The tags are typically assigned by automatic processes analysing the user supplied metadata around an object.
 
 This is an evolving and continuously improving process, where the algorithms and the rule-sets used for classification can be updated as new insights are obtained and thus results in the assigned tags being regularly refreshed. The flexibility of this system allows for new classifications to be easily created allowing the definition of new, high-level contextual groupings for ENA data making the process of discovery more intuitive for certain user communities.
 
+^^^^^^^^
+pathogen
+^^^^^^^^
+The pathogen tags are identified based on tax IDs. The different types of pathogens have a maintained list of tax ids, all records associated with the tax ID or a tax ID in that lineage get the pathogen tag.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+coastal_brackish, freshwater, marine, terrestrial
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The identification of coastal_brackish, freshwater, marine and terrestrial sample records are systematically assessed by a combination of geo-coordinates and/or taxonomic evidence. Taxonomic information is taken from WoRMS, and 4 shapefiles are used for the coordinates:
+
+* coastal_brackish: Longhurst shapefile downloaded from https://www.marineregions.org/
+* freshwater: WWF’s Global 200 g200_fw_category shapefile: https://www.worldwildlife.org/publications/global-200
+* marine: OpenStreetmap’s water polygons shapefile: https://osmdata.openstreetmap.de/data/water-polygons.html
+* terrestrial: OpenStreetmap’s land polygons shapefile: https://osmdata.openstreetmap.de/data/land-polygons.html
+
+We further qualify such identification by a level of confidence which is dictated by a combination of the evidence available on the record to support said assertion. 
+
+^^^^^^^
+datahub
+^^^^^^^
+The datahub tag is assigned based on whether the record belongs to a datahub maintained by ENA.
+
+^^^^
+xref
+^^^^
+xref tags are based on external data resources, and are added if requested by the submitting group. Currently xref:worms tags are available on taxons; xref:arrayexpress, xref:europepmc, xref:pubmed on studies; xref:unieuk on sequences.
+
+^^^^^^^
+covid19
+^^^^^^^
+The record is related to the study PRJEB39908, PRJEB40349, PRJEB40770, or one of their child studies.
 
 -------------
 Miscellaneous
