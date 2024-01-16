@@ -19,8 +19,7 @@ This will take effect from 31-Jan-2024.
 ## Introduction
 [Please read this background about sample level checklists](../sample_checklist_introduction.md) and GSC MIxS.
 
-A growing proportion of ENA's sample level checklists are from MIxS, currently the MIxS are 22 of the 52 sample checklists. Most of the other sources of ENA’s checklists are legacy. 
-
+A growing proportion of ENA's sample level checklists are from MIxS, currently the MIxS are 22 of the 52 sample checklists. Most of the other sources of ENA’s checklists are legacy.
 
 ## Four New MIxS Derived Checklists in ENA
 
