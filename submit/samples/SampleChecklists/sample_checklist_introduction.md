@@ -8,7 +8,7 @@ The [Genome Standards Consortium(GSC)](http://www.gensc.org//pages/projects/mixs
 * Sometimes a required pattern for the value, ranging from an integer to free text.
 
 ## Working together on Improving Standards
-As outline above, ENA collaborates with [GSC](http://www.gensc.org//pages/projects/mixs-gsc-project.html), [INSDC](https://www.insdc.org/) and other standards bodies to help meet our increasingly diverse user needs and increase interoperability. The sequence technologies continue to evolve at pace and scientists apply them to help investigate basic biology, disease and biodiversity.
+As outlined above, ENA collaborates with [GSC](http://www.gensc.org//pages/projects/mixs-gsc-project.html), [INSDC](https://www.insdc.org/) and other standards bodies to help meet our increasingly diverse user needs and increase interoperability. The sequence technologies continue to evolve at pace and scientists apply them to help investigate basic biology, disease and biodiversity.
 
 There are some considerations with these standards especially in that the actual implementation varies in different organisations. Generally we try to minimise the differences to increase interoperability. Here are some examples:
 * In ENA, we use the **long term name**(called "title" in GSC MIxS) rather than the **short term name**. This is because some of the short names are ambiguous abbreviations, so the longer names provide more clarity. 
