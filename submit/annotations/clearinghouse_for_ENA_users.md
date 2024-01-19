@@ -1,0 +1,104 @@
+# Clearinghouse for ENA Users
+
+<!-- TOC -->
+* [Clearinghouse for ENA Users](#clearinghouse-for-ena-users)
+  * [Purpose of this document](#purpose-of-this-document)
+  * [Introduction](#introduction)
+    * [Further Reading](#further-reading)
+    * [The Relevancy to ENA](#the-relevancy-to-ena)
+  * [Example use cases](#example-use-cases)
+  * [Making use of the Extra Annotation in Clearinghouse](#making-use-of-the-extra-annotation-in-clearinghouse)
+  * [Programmatic Querying of Clearinghouse](#programmatic-querying-of-clearinghouse)
+  * [How is using the Clearinghouse Different from Updating Records in ENA/Biosamples?](#how-is-using-the-clearinghouse-different-from-updating-records-in-enabiosamples-)
+  * [Appendix:](#appendix)
+    * [1. A template bash script for submission](#1-a-template-bash-script-for-submission)
+<!-- TOC -->
+
+## Purpose of this document
+This document's purpose is to provide a little guidance to submitting annotations to the ELIXIR ClearingHouse, to make it easier for people to submit date to it. 
+It is a supplement the API document. Please do read the API document too. The API document is the source of truth and will be more frequently updated than this document.
+
+## Introduction
+The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample and sequence records available in ELIXIR data resources -namely Biosamples and the European Nucleotide Archive (ENA). The overall aim is to make metadata more FAIR and improve its quality.
+
+Curations submitted to Clearinghouse will present alongside the record, without the original archived metadata being changed. This allows the scientific community to enhance existing metadata records, for example to add information gleaned from paper supplements, or propose improved attributes that previously did not conform to standards/ontologies, without modifying the original record (often) submitted by a different user.
+
+### Further Reading
+The Clearinghouse allows seamless exchange of contextual data  between ELIXIR data resources.
+For more background information see https://elixir-europe.org/internal-projects/commissioned-services/establishment-data-clearinghouse
+
+The SWAGGER API to the Clearinghouse :  https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html
+
+### The Relevancy to ENA
+The Clearinghouse is deliberately set up to allow metadata to be added to records from different archives. ENA staff have been amongst the most enthusiastic users and metadata annotators, although wider enthusiasm is increasing.
+
+
+
+ 
+## Example use cases
+BY-COVID use case
+BlueCloud use case
+For the BlueCloud project creating a blue partition is a required objective. This needs samples to be identified as belonging to the blue partition i.e. the domain: marine and or freshwater. To achieve this we are determining if samples are marine, marine and terrestrial, terrestrial (inc. freshwater) and specifically if freshwater and with a degree of confidence.
+Sample input information we are using: geographic location, taxonomy and environment_biome
+We are pushing certain annotations available that have been confidently predicted, such as for the economic exclusive zone(EEZ).
+
+## Making use of the Extra Annotation in Clearinghouse
+
+If annotation is on ENA record objects like the sample identifier, the annotation automatically becomes visible in the ENA browser.
+
+Figure: screenshots of Clearinghouse annotations in ENA browser a) The EEZ-name derived from the latitude and longitude b) Pathogen annotation? (TBD by Zahra Waheed )
+
+## Programmatic Querying of Clearinghouse
+
+The SWAGGER API to the Clearinghouse allows one to do many types of query programmatically, and particularly see the documentation PDF. 
+E.G. you could query using an Biosamples ID (this is what ENA uses for samples too) to see what extra annotation exists.
+E.G. querying for all records that have a particular geographic annotation. 
+
+No account is needed for read access of the Clearinghouse API.
+Obviously if you are querying ENA objects then it may be useful to first query ENA programmatic API. Tip: the ENA advanced search is often useful in creating the queries needed for the ENA API. 
+Programmatic Submission to Clearinghouse
+
+Think carefully about what you want to do and why. Also decide which ENA record object do you wish to annotate, to date much of the extra annotations have been to the bio-sample id.
+
+See the SWAGGER API documentation for the technical details.
+
+Essentially:
+* Register for  either an AAP or LifeScience ID, if you don’t already have one. Suggest that you get credentials for both test and production
+* Generate a bearer token 
+* For some test records generate JSON conforming to the Clearinghouse JSON format 
+* Test submitting to these to the test instance of the Clearinghouse 
+* Examine retrieving those from the test instance of the Clearinghouse 
+* Generate JSON annotations conforming to the Clearinghouse JSON format for all the records:
+* Submit these to the production instance of the Clearinghouse 
+* Log and examine the logs for an error and resubmit if necessary. (tip: in my submission scripts,  the small percentage of failures were timeouts, so I did a try/exception, wait and retry automatically in the submission scripts.)
+* Examine retrieving a selection of those from the production instance of the Clearinghouse
+
+## How is using the Clearinghouse Different from Updating Records in ENA/Biosamples? 
+
+It is important to differentiate the curations submitted via the ELIXIR Clearinghouse and archive-based metadata updates. 
+
+An ENA/Biosamples record update modifies the original public record, while a curation submitted to the Clearinghouse presents alongside the original record instead.
+
+Only the original submitter/owner of an ENA/Biosample record can update this directly, while curations for a particular record can be submitted to the Clearinghouse by any user.
+
+An ENA/Biosamples record update requires Webin authentication, while curation submission/modification requires either AAP or LifeScience ID authentication instead.
+As ENA/Biosamples record updates modify the original record, the modifications will appear in EBI-based data portals (e.g. the Pathogens Portal, Early Cause, COVID-19 Data Portal) and be exchanged with other INSDC nodes. Curations submitted via Clearinghouse only present in the ENA browser and do not feed into other INSDC sites nor data portals.
+
+ENA/Biosamples record update = performed only by original submitter (incl. broker), modifies the original record in ENA/Biosamples database, requires webin credentials, record updates will feed through to associated data portals
+
+Clearinghouse = curation (i.e ‘updates’) submission can be performed by anyone (as long as sufficient evidence is provided for how that curation was generated), no modification to original record in ENA/Biosamples database, curations associated with more details (e.g. provider name, timestamp, assertion method/evidence), webin credentials not required (but bearer token is), curations do not appear in data portals
+
+The Link between Biosamples & ENA
+BioSamples stores and supplies descriptions and metadata about biological samples used in research and development by academia and industry. 
+
+When new samples are submitted to ENA, the samples will be automatically registered with BioSamples and a BioSamples ID generated for each sample. The BioSamples will store the core subset of the sample related metadata. Extra sample related metadata will be stored elsewhere in ENA. When you query ENA you will be able to search across the core and many of the other metadata fields.
+
+A key reason for BioSamples and not ENA being the primary store of sequence related samples is that increasing other types of ‘omics or imaging are also performed on the same sample. One can thus be able to unambiguously access different types of experimental readout on the same samples. 
+
+
+
+
+
+## Appendix:
+### 1. [A template bash script for submission](clearinghouse_submission_template.sh)
+
