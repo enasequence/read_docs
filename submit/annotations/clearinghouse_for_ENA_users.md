@@ -10,6 +10,7 @@
   * [Making use of the Extra Annotation in Clearinghouse](#making-use-of-the-extra-annotation-in-clearinghouse)
   * [Programmatic Querying of Clearinghouse](#programmatic-querying-of-clearinghouse)
   * [How is using the Clearinghouse Different from Updating Records in ENA/Biosamples?](#how-is-using-the-clearinghouse-different-from-updating-records-in-enabiosamples-)
+  * [The Link between Biosamples & ENA](#the-link-between-biosamples--ena)
   * [Appendix:](#appendix)
     * [1. A template bash script for submission](#1-a-template-bash-script-for-submission)
 <!-- TOC -->
@@ -36,22 +37,27 @@ The Clearinghouse is deliberately set up to allow metadata to be added to record
 
  
 ## Example use cases
-BY-COVID use case
-BlueCloud use case
-For the BlueCloud project creating a blue partition is a required objective. This needs samples to be identified as belonging to the blue partition i.e. the domain: marine and or freshwater. To achieve this we are determining if samples are marine, marine and terrestrial, terrestrial (inc. freshwater) and specifically if freshwater and with a degree of confidence.
-Sample input information we are using: geographic location, taxonomy and environment_biome
-We are pushing certain annotations available that have been confidently predicted, such as for the economic exclusive zone(EEZ).
+| Project                             | Clearinghouse usage                                                                                                                                                                                                                                                    | ENA members involved  | External groups involved              |
+|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|---------------------------------------|
+| BY-COVID                            | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiTPlan to identify ‘model’ curations to present on COVID-19 Data Portal, at the sample level</ul>                                                                                                           | Zahra, Nadim          | The Arctic University of Norway (UiT) |
+| <p style="color:blue">BlueCloud</p> | <ul><li>Extra metadata around geographical determination (using GPS and taxonomy) And from GPS  <li>e.g.  EEZ and high sea<li>0.5 million records annotated</ul>                                                                                                       | Peter, Stéphane, Lili | WoRMS                                 |
+| BiCIKL                              | <ul><li>Expanding on metadata available mostly for sequences  Updating taxonomic identifications of sequence data, deriving from the Unite pipelines</li>  <li>Potential for further updates (e.g. specimen voucher info) coming from other groups (e.g. Museums)</ul> | Joana                 | PlutoF                                |
+| MGnify                              | Expanding on metadata from literature Assignment of biomes via machine learning?                                                                                                                                                                                       | Josie                 |                                       |
+| DToL                                | None yet - question of its use for adding quality scores to assemblies                                                                                                                                                                                                 | Josie, Joana          | Sanger                                |
+
+
 
 ## Making use of the Extra Annotation in Clearinghouse
 
 If annotation is on ENA record objects like the sample identifier, the annotation automatically becomes visible in the ENA browser.
 
 Figure: screenshots of Clearinghouse annotations in ENA browser a) The EEZ-name derived from the latitude and longitude b) Pathogen annotation? (TBD by Zahra Waheed )
+![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
 
 ## Programmatic Querying of Clearinghouse
 
 The SWAGGER API to the Clearinghouse allows one to do many types of query programmatically, and particularly see the documentation PDF. 
-E.G. you could query using an Biosamples ID (this is what ENA uses for samples too) to see what extra annotation exists.
+E.G. you could query using a Biosamples ID (this is what ENA uses for samples too) to see what extra annotation exists.
 E.G. querying for all records that have a particular geographic annotation. 
 
 No account is needed for read access of the Clearinghouse API.
@@ -88,7 +94,7 @@ ENA/Biosamples record update = performed only by original submitter (incl. broke
 
 Clearinghouse = curation (i.e ‘updates’) submission can be performed by anyone (as long as sufficient evidence is provided for how that curation was generated), no modification to original record in ENA/Biosamples database, curations associated with more details (e.g. provider name, timestamp, assertion method/evidence), webin credentials not required (but bearer token is), curations do not appear in data portals
 
-The Link between Biosamples & ENA
+## The Link between Biosamples & ENA
 BioSamples stores and supplies descriptions and metadata about biological samples used in research and development by academia and industry. 
 
 When new samples are submitted to ENA, the samples will be automatically registered with BioSamples and a BioSamples ID generated for each sample. The BioSamples will store the core subset of the sample related metadata. Extra sample related metadata will be stored elsewhere in ENA. When you query ENA you will be able to search across the core and many of the other metadata fields.
