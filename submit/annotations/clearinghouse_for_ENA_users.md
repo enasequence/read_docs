@@ -16,17 +16,21 @@
 <!-- TOC -->
 
 ## Purpose of this document
-This document's purpose is to provide a little guidance to submitting annotations to the ELIXIR ClearingHouse, to make it easier for people to submit date to it. 
-It is a supplement the API document. Please do read the API document too. The API document is the source of truth and will be more frequently updated than this document.
+This document's purpose is to provide a little guidance to submitting annotations to the ELIXIR ClearingHouse, to make it easier for people to submit data to it. 
+It is a supplement to the API document (here: https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv), which contains more technical information regarding usage of the Clearinghouse API, so please ensure you read both before starting. The API document is the source of truth and will be more frequently updated than this one.
 
 ## Introduction
-The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample and sequence records available in ELIXIR data resources -namely Biosamples and the European Nucleotide Archive (ENA). The overall aim is to make metadata more FAIR and improve its quality.
+The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample and sequence records available in ELIXIR data resources - namely Biosamples and the European Nucleotide Archive (ENA), as well as the wider International Nucleotide Sequence Database Collaboration (INSDC) databases. The overall aim is to make metadata more FAIR and improve its quality.
 
 Curations submitted to Clearinghouse will present alongside the record, without the original archived metadata being changed. This allows the scientific community to enhance existing metadata records, for example to add information gleaned from paper supplements, or propose improved attributes that previously did not conform to standards/ontologies, without modifying the original record (often) submitted by a different user.
 
-### Further Reading
-The Clearinghouse allows seamless exchange of contextual data  between ELIXIR data resources.
-For more background information see https://elixir-europe.org/internal-projects/commissioned-services/establishment-data-clearinghouse
+### Background
+The Clearinghouse was developed as part of an ELIXIR project to:
+- strengthen collaborations between ELIXIR resources
+- improve the quality and impact of metadata, and
+- build more sustainable data resources
+It was initially developed to support records in the marine domain, but has since expanded to cover multiple project types, see below.
+For more information see https://elixir-europe.org/internal-projects/commissioned-services/establishment-data-clearinghouse
 
 The SWAGGER API to the Clearinghouse :  https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html
 
