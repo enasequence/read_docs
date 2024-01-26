@@ -16,7 +16,7 @@
 <!-- TOC -->
 
 ## Purpose of this document
-This document's purpose is to provide a little guidance to submitting annotations to the ELIXIR ClearingHouse, to make it easier for people to submit data to it. 
+This document's purpose is to provide a little guidance to submitting curations to the ELIXIR Clearinghouse, to make it easier for people to submit data to it. 
 It is a supplement to the API document (here: https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv), which contains more technical information regarding usage of the Clearinghouse API, so please ensure you read both before starting. The API document is the source of truth and will be more frequently updated than this one.
 
 ## Introduction
@@ -35,7 +35,7 @@ For more information see https://elixir-europe.org/internal-projects/commissione
 The SWAGGER API to the Clearinghouse :  https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html
 
 ### The Relevancy to ENA
-The Clearinghouse is deliberately set up to allow metadata to be added to records from different archives. ENA staff have been amongst the most enthusiastic users and metadata annotators, although wider enthusiasm is increasing.
+The Clearinghouse is deliberately set up to allow submission of new/updated metadata related to records originating from different archives. ENA staff have been amongst the most enthusiastic users and metadata annotators, and have supported other external groups to submit these metadata curations. Wider enthusiasm is also increasing.
 
 
 
@@ -43,11 +43,11 @@ The Clearinghouse is deliberately set up to allow metadata to be added to record
 ## Example use cases
 | Project                             | Clearinghouse usage                                                                                                                                                                                                                                                    | ENA members involved  | External groups involved              |
 |-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|---------------------------------------|
-| BY-COVID                            | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiTPlan to identify ‘model’ curations to present on COVID-19 Data Portal, at the sample level</ul>                                                                                                           | Zahra, Nadim          | The Arctic University of Norway (UiT) |
-| <p style="color:blue">BlueCloud</p> | <ul><li>Extra metadata around geographical determination (using GPS and taxonomy) And from GPS  <li>e.g.  EEZ and high sea<li>0.5 million records annotated</ul>                                                                                                       | Peter, Stéphane, Lili | WoRMS                                 |
-| BiCIKL                              | <ul><li>Expanding on metadata available mostly for sequences  Updating taxonomic identifications of sequence data, deriving from the Unite pipelines</li>  <li>Potential for further updates (e.g. specimen voucher info) coming from other groups (e.g. Museums)</ul> | Joana                 | PlutoF                                |
-| MGnify                              | Expanding on metadata from literature Assignment of biomes via machine learning?                                                                                                                                                                                       | Josie                 |                                       |
-| DToL                                | None yet - question of its use for adding quality scores to assemblies                                                                                                                                                                                                 | Josie, Joana          | Sanger                                |
+| BY-COVID (beyond-COVID)                            | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiT <li>appropriate curations presenting alongside records in ENA Browser </ul>                                                                                                           | Zahra Waheed, Nadim Rahman          | The Arctic University of Norway (UiT) |
+| <p style="color:blue">BlueCloud</p> | <ul><li>Extra metadata around geographical determination (using GPS and taxonomy) and from GPS  <li>e.g.  EEZ and high sea<li>0.5 million records curated</ul>                                                                                                       | Peter Woollard, Stéphane Pesant, Lili Meszaros | WoRMS                                 |
+| BiCIKL                              | <ul><li>Expanding on metadata available mostly for sequences  <li>Updating taxonomic identifications of sequence data, deriving from the Unite pipelines</li>  <li>Potential for further updates (e.g. specimen voucher info) coming from other groups (e.g. Museums)</ul> | Joana Pauperio                | PlutoF                                |
+| MGnify                              | <li>Expanding on metadata from literature Assignment of biomes via machine learning? TBC                                                                                                                                                                                      | Josephine Burgin                |                                       |
+| DToL (Darwin Tree of Life Project)                                   | <li>None yet - considering using Clearinghouse to add quality scores to assemblies                                                                                                                                                                                                 | Josephine Burgin, Joana Pauperio          | Sanger                                |
 
 
 
