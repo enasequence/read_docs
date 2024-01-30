@@ -16,7 +16,7 @@
 <!-- TOC -->
 
 ## Purpose of this document
-This document's purpose is to provide a little guidance to submitting curations to the ELIXIR Clearinghouse, to make it easier for people to submit data to it. 
+This document's purpose is to provide additional information about the ELIXIR Clearinghouse, to make it easier for ENA (and non-ENA) users to submit data to it. 
 <br>
 <br>
 It is a supplement to the API document [here](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv), which contains more technical information regarding usage of the Clearinghouse API, so please ensure you read both before starting. The API document is the source of truth and will be more frequently updated than this one.    
@@ -78,22 +78,26 @@ For **any** sample related metadata curations, cases where both attribute name a
 
 
 
-## Tips for programmatically querying Clearinghouse data
+## Programmatically querying Clearinghouse data
 
-The SWAGGER API to the Clearinghouse allows one to do many types of query programmatically, and particularly see the documentation PDF. 
-E.G. you could query using a Biosamples ID (this is what ENA uses for samples too) to see what extra annotation exists.
-E.G. querying for all records that have a particular geographic annotation. 
+The Swagger API to the Clearinghouse ([here](https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/)) allows one to do many types of query programmatically in production and [development](https://wwwdev.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/). This includes adding, modifying and removing curations, as well as querying the existing metadata in Clearinghouse, eg:
+- querying via the ENA Sample ID (SAMEA####) - also known as 'recordID' to view all metadata curations associated to that sample
+- querying all records submitted by a particular group ('providerName')
 
 No account is needed for read access of the Clearinghouse API.
-Obviously if you are querying ENA objects then it may be useful to first query ENA programmatic API. Tip: the ENA advanced search is often useful in creating the queries needed for the ENA API. 
-Programmatic Submission to Clearinghouse
+
+For more information please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
+ 
+You may find it useful to first obtain ENA accessions for Clearinghouse queries via the ENA's own [Advanced Search API](https://docs.google.com/document/d/1CwoY84MuZ3SdKYocqssumghBF88PWxUZ/edit) or [browser based Advanced Search](https://www.ebi.ac.uk/ena/browser/advanced-search)
+
+
 
 Think carefully about what you want to do and why. Also decide which ENA record object do you wish to annotate, to date much of the extra annotations have been to the bio-sample id.
 
-See the SWAGGER API documentation for the technical details.
+
 
 Essentially:
-* Register for  either an AAP or LifeScience ID, if you don’t already have one. Suggest that you get credentials for both test and production
+* Register for either an AAP or LifeScience ID, if you don’t already have one. Suggest that you get credentials for both test and production
 * Generate a bearer token 
 * For some test records generate JSON conforming to the Clearinghouse JSON format 
 * Test submitting to these to the test instance of the Clearinghouse 
@@ -107,23 +111,10 @@ Essentially:
 
 It is important to differentiate between the curations submitted via the ELIXIR Clearinghouse and ENA-based metadata updates. 
 
-<li>An ENA record update modifies the original public record, while a curation submitted to the Clearinghouse presents alongside the original record instead
-
-<li>Only the original submitter of an ENA record can update this directly, while curations for a particular record can be submitted to the Clearinghouse by *any user* (as long as sufficient evidence is provided for how that curation was generated)
-
-<li>An ENA record update requires Webin authentication, while curation submission/modification requires either AAP or LifeScience ID authentication instead
- 
-<li>As ENA record updates modify the original record, the modifications will propagate to EBI-based data portals (such as the Pathogens Portal, Early Cause, COVID-19 Data Portal) and be exchanged with other INSDC nodes. Curations submitted via Clearinghouse only present in the ENA browser and do not feed into other INSDC sites nor data portals.
-
-
-## The Link between Biosamples & ENA
-BioSamples stores and supplies descriptions and metadata about biological samples used in research and development by academia and industry. 
-
-When new samples are submitted to ENA, the samples will be automatically registered with BioSamples and a BioSamples ID generated for each sample. The BioSamples will store the core subset of the sample related metadata. Extra sample related metadata will be stored elsewhere in ENA. When you query ENA you will be able to search across the core and many of the other metadata fields.
-
-A key reason for BioSamples and not ENA being the primary store of sequence related samples is that increasing other types of ‘omics or imaging are also performed on the same sample. One can thus be able to unambiguously access different types of experimental readout on the same samples. 
-
-
+* An ENA record update modifies the original public record, while a curation submitted to the Clearinghouse presents alongside the original record instead
+* Only the original submitter of an ENA record can update this directly, while curations for a particular record can be submitted to the Clearinghouse by *any user* (as long as sufficient evidence is provided for how that curation was generated)
+* An ENA record update requires Webin authentication, while curation submission/modification requires either AAP or LifeScience ID authentication instead
+* As ENA record updates modify the original record, the modifications will propagate to EBI-based data portals (such as the Pathogens Portal, Early Cause, COVID-19 Data Portal) and be exchanged with other INSDC nodes. Curations submitted via Clearinghouse only present in the ENA browser and do not feed into other INSDC sites nor data portals.
 
 
 
