@@ -53,9 +53,11 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 
 <br>
 
-## Making use of the Extra Annotation in Clearinghouse
+## Curation objects
+### Example curation objects
+### What happens to curations after they have been submitted to Clearinghouse?
 
-If annotation is on ENA record objects like the sample identifier, the annotation automatically becomes visible in the ENA browser.
+Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. For public records, automatically becomes visible in the ENA browser.
 
 Figure: screenshots of Clearinghouse annotations in ENA browser a) The EEZ-name derived from the latitude and longitude b) Pathogen annotation? (TBD by Zahra Waheed )
 ![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
