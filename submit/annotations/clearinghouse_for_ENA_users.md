@@ -78,13 +78,18 @@ For **any** sample related metadata curations, cases where both attribute name a
 
 
 
-## Programmatically querying Clearinghouse data
+## Tips for programmatically querying Clearinghouse data 
 
 The Swagger API to the Clearinghouse ([here](https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/)) allows one to do many types of query programmatically in production and [development](https://wwwdev.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/). This includes adding, modifying and removing curations, as well as querying the existing metadata in Clearinghouse, eg:
 - querying via the ENA Sample ID (SAMEA####) - also known as 'recordID' to view all metadata curations associated to that sample
 - querying all records submitted by a particular group ('providerName')
 
+
 No account is needed for read access of the Clearinghouse API.
+Obviously if you are querying ENA objects then it may be useful to first query ENA programmatic API. Tip: the ENA advanced search is often useful in creating the queries needed for the ENA API. 
+
+Currently more complex querying would require you to process the JSON output with the allowable queries.
+
 
 For more information please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
  
@@ -94,6 +99,7 @@ You may find it useful to first obtain ENA accessions for Clearinghouse queries 
 
 Think carefully about what you want to do and why. Also decide which ENA record object do you wish to annotate, to date much of the extra annotations have been to the bio-sample id.
 
+No account is needed for read access of the Clearinghouse API.
 
 
 Essentially:
