@@ -85,29 +85,27 @@ The Swagger API to the Clearinghouse ([here](https://www.ebi.ac.uk/ena/clearingh
 - querying all records submitted by a particular group ('providerName')
 
 
-No account is needed for read access of the Clearinghouse API.
-Obviously if you are querying ENA objects then it may be useful to first query ENA programmatic API. Tip: the ENA advanced search is often useful in creating the queries needed for the ENA API. 
+No account is needed for read access of the Clearinghouse API. 
+For more technical information on queries please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
+<br>
+<br>
+You may find it useful to first obtain ENA accessions for Clearinghouse queries via the ENA's own [Advanced Search API](https://docs.google.com/document/d/1CwoY84MuZ3SdKYocqssumghBF88PWxUZ/edit) or [browser based Advanced Search](https://www.ebi.ac.uk/ena/browser/advanced-search).
+
 
 Currently more complex querying would require you to process the JSON output with the allowable queries.
 
-
-For more information please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
- 
-You may find it useful to first obtain ENA accessions for Clearinghouse queries via the ENA's own [Advanced Search API](https://docs.google.com/document/d/1CwoY84MuZ3SdKYocqssumghBF88PWxUZ/edit) or [browser based Advanced Search](https://www.ebi.ac.uk/ena/browser/advanced-search)
 
 
 
 Think carefully about what you want to do and why. Also decide which ENA record object do you wish to annotate, to date much of the extra annotations have been to the bio-sample id.
 
-No account is needed for read access of the Clearinghouse API.
-
 
 Essentially:
-* Register for either an AAP or LifeScience ID, if you don’t already have one. Suggest that you get credentials for both test and production
+* Register for either an AAP or LifeScience ID, if you do not already have one. We suggest that you obtain credentials for both test and production
 * Generate a bearer token 
 * For some test records generate JSON conforming to the Clearinghouse JSON format 
-* Test submitting to these to the test instance of the Clearinghouse 
-* Examine retrieving those from the test instance of the Clearinghouse 
+* Test submit these to the test instance of the Clearinghouse 
+* Explore retrieving these from the test instance of the Clearinghouse 
 * Generate JSON annotations conforming to the Clearinghouse JSON format for all the records:
 * Submit these to the production instance of the Clearinghouse 
 * Log and examine the logs for an error and resubmit if necessary. (tip: in my submission scripts,  the small percentage of failures were timeouts, so I did a try/exception, wait and retry automatically in the submission scripts.)
