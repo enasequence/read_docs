@@ -78,7 +78,7 @@ For **any** sample related metadata curations, cases where both attribute name a
 
 
 
-## Programmatic Querying of Clearinghouse
+## Tips for programmatically querying Clearinghouse data
 
 The SWAGGER API to the Clearinghouse allows one to do many types of query programmatically, and particularly see the documentation PDF. 
 E.G. you could query using a Biosamples ID (this is what ENA uses for samples too) to see what extra annotation exists.
@@ -103,17 +103,17 @@ Essentially:
 * Log and examine the logs for an error and resubmit if necessary. (tip: in my submission scripts,  the small percentage of failures were timeouts, so I did a try/exception, wait and retry automatically in the submission scripts.)
 * Examine retrieving a selection of those from the production instance of the Clearinghouse
 
-## How is using the Clearinghouse Different from Updating Records in ENA or Biosamples?
+## How is using the Clearinghouse Different from Updating Records in ENA?
 
 It is important to differentiate between the curations submitted via the ELIXIR Clearinghouse and ENA-based metadata updates. 
 
-<li>An ENA/Biosamples record update modifies the original public record, while a curation submitted to the Clearinghouse presents alongside the original record instead
+<li>An ENA record update modifies the original public record, while a curation submitted to the Clearinghouse presents alongside the original record instead
 
-<li>Only the original submitter of an ENA/Biosample record can update this directly, while curations for a particular record can be submitted to the Clearinghouse by *any user* (as long as sufficient evidence is provided for how that curation was generated)
+<li>Only the original submitter of an ENA record can update this directly, while curations for a particular record can be submitted to the Clearinghouse by *any user* (as long as sufficient evidence is provided for how that curation was generated)
 
-<li>An ENA/Biosamples record update requires Webin authentication, while curation submission/modification requires either AAP or LifeScience ID authentication instead
+<li>An ENA record update requires Webin authentication, while curation submission/modification requires either AAP or LifeScience ID authentication instead
  
-<li>As ENA/Biosamples record updates modify the original record, the modifications will appear in EBI-based data portals (such as the Pathogens Portal, Early Cause, COVID-19 Data Portal) and be exchanged with other INSDC nodes. Curations submitted via Clearinghouse only present in the ENA browser and do not feed into other INSDC sites nor data portals.
+<li>As ENA record updates modify the original record, the modifications will propagate to EBI-based data portals (such as the Pathogens Portal, Early Cause, COVID-19 Data Portal) and be exchanged with other INSDC nodes. Curations submitted via Clearinghouse only present in the ENA browser and do not feed into other INSDC sites nor data portals.
 
 
 ## The Link between Biosamples & ENA
