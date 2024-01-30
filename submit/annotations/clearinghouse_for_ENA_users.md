@@ -22,7 +22,7 @@ This document's purpose is to provide a little guidance to submitting curations 
 It is a supplement to the API document [here](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv), which contains more technical information regarding usage of the Clearinghouse API, so please ensure you read both before starting. The API document is the source of truth and will be more frequently updated than this one.    
 
 ## Introduction
-The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample and sequence records available in the European Nucleotide Archive (ENA) (and by extension, as the wider International Nucleotide Sequence Database Collaboration (INSDC) databases). The overall aim is to make metadata more FAIR and improve its quality.
+The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample, sequence, run/experiment and study records available in the European Nucleotide Archive (ENA) (and by extension, as the wider International Nucleotide Sequence Database Collaboration (INSDC) databases). The overall aim is to make metadata more FAIR and improve its quality.
 
 Curations submitted to Clearinghouse will present alongside the record, **without the original archived metadata being changed**. This allows the scientific community to enhance existing metadata records, for example to add information gleaned from paper supplements, or propose improved attributes that previously did not conform to standards/ontologies, without modifying the original record (often) submitted by a different user.
 
@@ -55,7 +55,7 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 
 ## Curation objects
 ### Examples
-
+Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. Below are some examples from different projects.
 #### *Marine Metagenome Sample Curation:*
 ![Environmental metagenome curation example](./env_curation.png)
 <br>
@@ -63,14 +63,14 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 ![SARS-CoV-2 curation example](./covid_curation.png)
 <br>
 <br>
-### What happens to curations after they have been submitted to Clearinghouse?
+### What happens to curations after submission to Clearinghouse?
 
-Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. For public records, the curations will automatically become visible alongside the record in the ENA browser, as below:
+For all public ENA/INSDC records, curations associated to them will automatically become visible alongside the record in the ENA browser, as below:
 
 <EEZ example>
 <pathogen example>
 
-For sample related metadata curations, any cases where both field name and value have been validated as ENA Checklist Compliant, will take priority for display and appear at the top of the 3rd Party Curations table in the browser.
+For sample related metadata curations, any cases where both field name and value have been validated as ENA Checklist Compliant will take priority for display and appear at the top of the 3rd Party Curations table in the browser.
 
 Figure: screenshots of Clearinghouse annotations in ENA browser a) The EEZ-name derived from the latitude and longitude b) Pathogen annotation? (TBD by Zahra Waheed )
 ![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
