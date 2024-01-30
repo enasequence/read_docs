@@ -84,9 +84,9 @@ Essentially:
 * Log and examine the logs for an error and resubmit if necessary. (tip: in my submission scripts,  the small percentage of failures were timeouts, so I did a try/exception, wait and retry automatically in the submission scripts.)
 * Examine retrieving a selection of those from the production instance of the Clearinghouse
 
-## How is using the Clearinghouse Different from Updating Records in ENA/Biosamples? 
+## How is using the Clearinghouse Different from Updating Records in ENA or Biosamples?
 
-It is important to differentiate between the curations submitted via the ELIXIR Clearinghouse and archive-based metadata updates. 
+It is important to differentiate between the curations submitted via the ELIXIR Clearinghouse and ENA-based metadata updates. 
 
 <li>An ENA/Biosamples record update modifies the original public record, while a curation submitted to the Clearinghouse presents alongside the original record instead
 
