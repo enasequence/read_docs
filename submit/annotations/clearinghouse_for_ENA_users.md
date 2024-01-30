@@ -55,6 +55,9 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 
 ## Curation objects
 ### Example curation objects
+<same EEZ example>
+<pathogen example>
+ 
 ### What happens to curations after they have been submitted to Clearinghouse?
 
 Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. For public records, the curations will automatically become visible alongside the record in the ENA browser, as below:
@@ -62,7 +65,7 @@ Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be
 <EEZ example>
 <pathogen example>
 
-For sample related curations (those where both field name and value have been validated as ENA Checklist Compliant) will take priority for display and appear at the top of the 3rd Party Curations table in the browser.
+For sample related metadata curations, any cases where both field name and value have been validated as ENA Checklist Compliant, will take priority for display and appear at the top of the 3rd Party Curations table in the browser.
 
 Figure: screenshots of Clearinghouse annotations in ENA browser a) The EEZ-name derived from the latitude and longitude b) Pathogen annotation? (TBD by Zahra Waheed )
 ![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
