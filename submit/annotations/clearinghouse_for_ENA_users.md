@@ -54,10 +54,15 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 <br>
 
 ## Curation objects
-### Example curation objects
-<same EEZ example>
-<pathogen example>
- 
+### Examples
+
+#### *Marine Metagenome Sample Curation:*
+![Environmental metagenome curation example](./env_curation.png)
+<br>
+#### *SARS-CoV-2 Sequence Curation:*
+![SARS-CoV-2 curation example](./covid_curation.png)
+<br>
+<br>
 ### What happens to curations after they have been submitted to Clearinghouse?
 
 Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. For public records, the curations will automatically become visible alongside the record in the ENA browser, as below:
