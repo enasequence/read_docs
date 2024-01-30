@@ -17,12 +17,14 @@
 
 ## Purpose of this document
 This document's purpose is to provide a little guidance to submitting curations to the ELIXIR Clearinghouse, to make it easier for people to submit data to it. 
-It is a supplement to the API document (here: https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv), which contains more technical information regarding usage of the Clearinghouse API, so please ensure you read both before starting. The API document is the source of truth and will be more frequently updated than this one.
+<br>
+<br>
+It is a supplement to the API document [here](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv), which contains more technical information regarding usage of the Clearinghouse API, so please ensure you read both before starting. The API document is the source of truth and will be more frequently updated than this one.    
 
 ## Introduction
-The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample and sequence records available in ELIXIR data resources - namely Biosamples and the European Nucleotide Archive (ENA), as well as the wider International Nucleotide Sequence Database Collaboration (INSDC) databases. The overall aim is to make metadata more FAIR and improve its quality.
+The ELIXIR Clearinghouse enables extension, correction and improvement of publicly available annotations on sample and sequence records available in the European Nucleotide Archive (ENA) (and by extension, as the wider International Nucleotide Sequence Database Collaboration (INSDC) databases). The overall aim is to make metadata more FAIR and improve its quality.
 
-Curations submitted to Clearinghouse will present alongside the record, without the original archived metadata being changed. This allows the scientific community to enhance existing metadata records, for example to add information gleaned from paper supplements, or propose improved attributes that previously did not conform to standards/ontologies, without modifying the original record (often) submitted by a different user.
+Curations submitted to Clearinghouse will present alongside the record, **without the original archived metadata being changed**. This allows the scientific community to enhance existing metadata records, for example to add information gleaned from paper supplements, or propose improved attributes that previously did not conform to standards/ontologies, without modifying the original record (often) submitted by a different user.
 
 ### Background
 The Clearinghouse was developed as part of an ELIXIR project to:
@@ -30,12 +32,11 @@ The Clearinghouse was developed as part of an ELIXIR project to:
 - improve the quality and impact of metadata, and
 - build more sustainable data resources
 It was initially developed to support records in the marine domain, but has since expanded to cover multiple project types, see below.
-For more information see https://elixir-europe.org/internal-projects/commissioned-services/establishment-data-clearinghouse
+For more information please see https://elixir-europe.org/internal-projects/commissioned-services/establishment-data-clearinghouse
 
-The SWAGGER API to the Clearinghouse :  https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html
 
 ### The Relevancy to ENA
-The Clearinghouse is deliberately set up to allow submission of new/updated metadata related to records originating from different archives. ENA staff have been amongst the most enthusiastic users and metadata annotators, and have supported other external groups to submit these metadata curations. Wider enthusiasm is also increasing.
+The Clearinghouse is deliberately set up to allow submission of new or updated metadata (related to INSDC records) originating from different sources. ENA staff have been amongst the most enthusiastic users and annotators, but have also supported other groups to submit these metadata curations. Wider enthusiasm is also growing.
 
 
 
@@ -46,7 +47,7 @@ The Clearinghouse is deliberately set up to allow submission of new/updated meta
 | BY-COVID (beyond-COVID)                            | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiT <li>appropriate curations presenting alongside records in ENA Browser </ul>                                                                                                           | Zahra Waheed, Nadim Rahman          | The Arctic University of Norway (UiT) |
 | <p style="color:blue">BlueCloud</p> | <ul><li>Extra metadata around geographical determination (using GPS and taxonomy) and from GPS  <li>e.g.  EEZ and high sea<li>0.5 million records curated</ul>                                                                                                       | Peter Woollard, Stéphane Pesant, Lili Meszaros | WoRMS                                 |
 | BiCIKL                              | <ul><li>Expanding on metadata available mostly for sequences  <li>Updating taxonomic identifications of sequence data, deriving from the Unite pipelines</li>  <li>Potential for further updates (e.g. specimen voucher info) coming from other groups (e.g. Museums)</ul> | Joana Pauperio                | PlutoF                                |
-| MGnify                              | <li>Expanding on metadata from literature Assignment of biomes via machine learning? TBC                                                                                                                                                                                      | Josephine Burgin                |                                       |
+| MGnify                              | <li>Expanding on metadata from literature - assignment of biomes via machine learning? TBC                                                                                                                                                                                      | Josephine Burgin                |                                       |
 | DToL (Darwin Tree of Life Project)                                   | <li>None yet - considering using Clearinghouse to add quality scores to assemblies                                                                                                                                                                                                 | Josephine Burgin, Joana Pauperio          | Sanger                                |
 
 
