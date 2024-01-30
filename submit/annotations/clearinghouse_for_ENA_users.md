@@ -67,13 +67,16 @@ Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be
 
 For all public ENA/INSDC records, curations associated to them will automatically become visible alongside the record in the ENA browser, as below:
 
-<EEZ example>
-<pathogen example>
-
-For sample related metadata curations, any cases where both field name and value have been validated as ENA Checklist Compliant will take priority for display and appear at the top of the 3rd Party Curations table in the browser.
-
-Figure: screenshots of Clearinghouse annotations in ENA browser a) The EEZ-name derived from the latitude and longitude b) Pathogen annotation? (TBD by Zahra Waheed )
+#### *Marine Metagenome Sample Curation:*
 ![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
+<br>
+<br>
+For **any** sample related metadata curations, cases where both attribute name and value have been validated to be compliant with ENA Checklist fields will take priority for display, and appear at the top of the 3rd Party Curations table in the browser, see below:
+
+#### *SARS-CoV-2 Sequence Curation:*
+![SARS-CoV-2 curation example](./covid_curation_browser.png)
+
+
 
 ## Programmatic Querying of Clearinghouse
 
