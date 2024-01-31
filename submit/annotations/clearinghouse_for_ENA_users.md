@@ -71,7 +71,7 @@ For all public ENA/INSDC records, curations associated to them will automaticall
 ![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
 <br>
 <br>
-For **any** sample related metadata curations, cases where both attribute name and value have been validated to be compliant with ENA Checklist fields will take priority for display, and appear at the top of the 3rd Party Curations table in the browser, see below:
+For **any** sample related metadata curations, cases where both attribute name and value have been validated to be compliant with ENA Checklist fields will take priority for display, and appear at the top of the 3rd Party Curations table in the browser. See below:
 
 #### *SARS-CoV-2 Sequence Curation:*
 ![SARS-CoV-2 curation example](./covid_curation_browser.png)
