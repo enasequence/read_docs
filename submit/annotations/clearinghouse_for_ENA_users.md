@@ -78,18 +78,19 @@ For **any** sample related metadata curations, cases where both attribute name a
 
 
 
-## Tips for programmatically querying Clearinghouse data 
+## Programmatically querying Clearinghouse data 
 
 The Swagger API to the Clearinghouse ([here](https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/)) allows one to do many types of query programmatically in production and [development](https://wwwdev.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/). This includes adding, modifying and removing curations, as well as querying the existing metadata in Clearinghouse, eg:
-- querying via the ENA Sample ID (SAMEA####) - also known as 'recordID' to view all metadata curations associated to that sample
+- querying via the ENA Sample ID (SAMEA####) - also known as 'recordID' to view all metadata curations associated to that sample. To date the highest proportion of Clearinghouse curations are associated to the sample record
 - querying all records submitted by a particular group ('providerName')
-
-
+<br>
 No account is needed for read access of the Clearinghouse API. 
+<br>
+You may find it useful to first obtain ENA accessions for Clearinghouse queries via the ENA's own [Advanced Search API](https://docs.google.com/document/d/1CwoY84MuZ3SdKYocqssumghBF88PWxUZ/edit) or [browser based Advanced Search](https://www.ebi.ac.uk/ena/browser/advanced-search).
 For more technical information on queries please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
 <br>
 <br>
-You may find it useful to first obtain ENA accessions for Clearinghouse queries via the ENA's own [Advanced Search API](https://docs.google.com/document/d/1CwoY84MuZ3SdKYocqssumghBF88PWxUZ/edit) or [browser based Advanced Search](https://www.ebi.ac.uk/ena/browser/advanced-search).
+
 
 
 Currently more complex querying would require you to process the JSON output with the allowable queries.
@@ -97,19 +98,22 @@ Currently more complex querying would require you to process the JSON output wit
 
 
 
-Think carefully about what you want to do and why. Also decide which ENA record object do you wish to annotate, to date much of the extra annotations have been to the bio-sample id.
 
 
+### Tips for querying and submitting Clearinghouse data
+Think carefully about what you want to do and why. Also decide which ENA record object you wish to curate, and whether you have sufficient evidence for these curations.
+<br>
+<br>
 Essentially:
 * Register for either an AAP or LifeScience ID, if you do not already have one. We suggest that you obtain credentials for both test and production
 * Generate a bearer token 
-* For some test records generate JSON conforming to the Clearinghouse JSON format 
+* Start by generating JSON files conforming to the Clearinghouse JSON format for a few test records
 * Test submit these to the test instance of the Clearinghouse 
-* Explore retrieving these from the test instance of the Clearinghouse 
-* Generate JSON annotations conforming to the Clearinghouse JSON format for all the records:
+* Explore retrieving these from the test instance of the Clearinghouse (e.g. to check curations are in the expected format)
+* Then generate JSON annotations conforming to the Clearinghouse JSON format for all your curation records
 * Submit these to the production instance of the Clearinghouse 
-* Log and examine the logs for an error and resubmit if necessary. (tip: in my submission scripts,  the small percentage of failures were timeouts, so I did a try/exception, wait and retry automatically in the submission scripts.)
-* Examine retrieving a selection of those from the production instance of the Clearinghouse
+* Log and examine the logs for an error and resubmit if necessary. (note: a small percentage of failures can be due timeouts, so a try/exception block in the submission scripts to wait and retry automatically can be useful)
+* Explore retrieving a selection of those from the production instance of the Clearinghouse
 
 ## How is using the Clearinghouse Different from Updating Records in ENA?
 
