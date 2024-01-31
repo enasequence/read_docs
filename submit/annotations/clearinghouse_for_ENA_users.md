@@ -87,18 +87,12 @@ The Swagger API to the Clearinghouse ([here](https://www.ebi.ac.uk/ena/clearingh
 No account is needed for read access of the Clearinghouse API. 
 <br>
 You may find it useful to first obtain ENA accessions for Clearinghouse queries via the ENA's own [Advanced Search API](https://docs.google.com/document/d/1CwoY84MuZ3SdKYocqssumghBF88PWxUZ/edit) or [browser based Advanced Search](https://www.ebi.ac.uk/ena/browser/advanced-search).
-For more technical information on queries please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
+
+Currently more complex querying of Clearinghouse data would require you to bulk download the curations from the API and process the output further.
+
+For more technical information please refer to the [API documentation](https://docs.google.com/document/d/1y1a4xQwCddntDkmY3qq1XvxtMUZAtW0h3RhEMo3Gtho/edit#heading=h.1ksv4uv).
 <br>
 <br>
-
-
-
-Currently more complex querying would require you to process the JSON output with the allowable queries.
-
-
-
-
-
 
 ### Tips for querying and submitting Clearinghouse data
 Think carefully about what you want to do and why. If you are submitting curations, decide which ENA record object you wish to curate based on the existing emtadata for that record. Also consider whether you have sufficient evidence for these curations.
