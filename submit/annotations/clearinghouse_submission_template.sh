@@ -78,7 +78,7 @@ function submit_2_clearinghouse () {
   export bearer="Authorization: Bearer $bearerkey"
   #echo $bearer
   # -T is needed for big files -d @ is slightly faster and puts it into memory
-  cmd=`echo curl -X POST \"${url}\" -H \"accept: */*\"  -H \"Content-Type: application/json\"   -H \"${bearer}\"  -d @${curation_json_file}`
+  cmd=`curl -X POST \"${url}\" -H \"accept: */*\"  -H \"Content-Type: application/json\"   -H \"${bearer}\"  -d @${curation_json_file}`
   #could not get to both see the command and execute it, so doing the dirty way via a new file
   echo $cmd
   echo $cmd > run_me.sh
