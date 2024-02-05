@@ -6,7 +6,7 @@
   * [Introduction](#introduction)
     * [Background](#background)
     * [The Relevancy to ENA](#the-relevancy-to-ena)
-  * [Example use cases](#example-use-cases)
+  * [Example Use Cases of Projects Using or Intending to Use the ClearingHouse](#example-use-cases-of-projects-using-or-intending-to-use-the-clearinghouse)
   * [Curation objects](#curation-objects)
     * [Examples](#examples)
       * [*Marine Metagenome Sample Curation:*](#marine-metagenome-sample-curation)
@@ -45,7 +45,7 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 
 
  
-## Example use cases
+## Example Use Cases of Projects Using or Intending to Use the ClearingHouse
 | Project                             | Clearinghouse usage                                                                                                                                                                                                                                                        | ENA members involved                           | External groups involved              |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|---------------------------------------|
 | BY-COVID (beyond-COVID)             | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiT <li>appropriate curations presenting alongside records in ENA Browser </ul>                                                                                                                                  | Zahra Waheed, Nadim Rahman                     | The Arctic University of Norway (UiT) |
@@ -61,9 +61,11 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 ### Examples
 Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. Below are some examples from different projects.
 #### *Marine Metagenome Sample Curation:*
+The following is third party annotation on https://www.ebi.ac.uk/ena/browser/view/SAMN08012645
 ![Environmental metagenome curation example](./env_curation.png)
 <br>
 #### *SARS-CoV-2 Sequence Curation:*
+The following is third party annotation on https://www.ebi.ac.uk/ena/browser/view/OM635134
 ![SARS-CoV-2 curation example](./covid_curation.png)
 <br>
 <br>
