@@ -258,8 +258,5 @@ Miscellaneous
 The tags are all less than 21 Unicode characters in length.
 
 N.B. The tags described in this page are not to be confused with Locus Tags.
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/sample_checklist_docs
