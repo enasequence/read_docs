@@ -24,7 +24,7 @@ The purpose of these is to make searching and filtering much easier. In ENA they
 Examples:
 
 * Find all pathogenic samples by using the “pathogen” tag (this is used to drive the data coverage of the `Pathogens Portal <https://www.pathogensportal.org>`_.)
-* Use “marine:high_confidence” tag to find all samples that are highly likely to be from the marine environment.
+* Use "marine:high_confidence” tag to find all samples that are highly likely to be from the marine environment.
 * Find all records in ENA data that have a corresponding record cross-referenced to the `WoRMS - World Register of Marine Species <https://www.marinespecies.org/>`_, by searching “xref:worms”.
 
 The tagging system has proved useful in determining the object membership of certain domain specific data portals such as Pathogens Portal. Conversely they can also be used to easily obtain vignettes of data from which to build a new data portal rapidly.
@@ -52,14 +52,13 @@ Table of Object High Level Tags
    :header: "high level tag", "description", "object type"
    :widths: 20, 300, 50
 
-   "pathogen", "The sample has been automatically determined to belong to the Pathogens Portal", "assembly; sample; sequence; study; secondary_study; taxonomy"
-   "coastal_brackish", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from either a coastal or brackish environment.", "read_run; sample; taxonomy"
-   "freshwater", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from a freshwater environment.", "read_run; sample; taxonomy"
-   "marine", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from a marine environment.", "read_run; sample; taxonomy"
-   "terrestrial", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from a terrestrial environment.", "read_run; sample; taxonomy"
-   "datahub", "The sample has been automatically determined to belong to a Data Hub. Currently tags have been generated for `Pathogen <https://www.pathogensportal.org/datahubs>`_", "analysis; read_run; sample; secondary_study"
+   "pathogen", "The sample has been determined to belong to the Pathogens Portal", "assembly; sample; sequence; study; secondary_study; taxonomy"
+   "coastal_brackish", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from either a coastal or brackish environment.", "read_run; sample; taxonomy"
+   "freshwater", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a freshwater environment.", "read_run; sample; taxonomy"
+   "marine", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a marine environment.", "read_run; sample; taxonomy"
+   "terrestrial", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a terrestrial environment.", "read_run; sample; taxonomy"
    "xref", "The sample has been referenced in an external to the EMBL-EBI repository. Currently tags have been generated for WORMS and UniEUK.",	"Depends on how the user submitted"
-   "covid19", "The sample has been automatically determined to belong to the COVID19 portal.",	"analysis; read_run; sample; sequence; study"
+   "covid19", "The sample has been determined to belong to the COVID19 portal.",	"analysis; read_run; sample; sequence; study"
 
 
 
@@ -122,17 +121,17 @@ table, to see what they apply to.
    * - coastal_brackish:high_confidence
      - coastal_brackish
      - high_confidence
-     - strong evidence that the object is “coastal or brackish” environment associated.
+     - Strong evidence that the object is “coastal or brackish” environment associated.
      - 
    * - coastal_brackish:medium_confidence
      - coastal_brackish
      - medium_confidence
-     - moderate  evidence that the object is “coastal or brackish” environment associated.
+     - Moderate  evidence that the object is “coastal or brackish” environment associated.
      - 
    * - coastal_brackish:low_confidence
      - coastal_brackish
      - low_confidence
-     - weak evidence that the object is “coastal or brackish” environment associated.
+     - Weak evidence that the object is “coastal or brackish” environment associated.
      -
    * - freshwater
      - freshwater
@@ -147,19 +146,19 @@ table, to see what they apply to.
    * - freshwater:medium_confidence
      - freshwater
      - medium_confidence
-     - moderate  evidence that the object is freshwater environment associated.
+     - Moderate  evidence that the object is freshwater environment associated.
      - 
    * - freshwater:low_confidence
      - freshwater
      - low_confidence
-     - weak  evidence that the object is freshwater environment associated.
+     - Weak  evidence that the object is freshwater environment associated.
      - 
    * - marine
      - marine
      - 
      - Some evidence that it is “marine” environment assosciated
      - There will likely be other low level tags to provide context.
-   * -  marine:high_confidence
+   * - marine:high_confidence
      - marine
      - high_confidence
      - Strong evidence that the object is marine environment associated.
@@ -167,37 +166,32 @@ table, to see what they apply to.
    * - marine:medium_confidence
      - marine
      - medium_confidence
-     - moderate  evidence that the object is marine environment associated.
+     - Moderate  evidence that the object is marine environment associated.
      - 
-   * -  marine:low_confidence
+   * - marine:low_confidence
      - marine
      - low_confidence
-     - weak  evidence that the object is marine environment associated.
+     - Weak  evidence that the object is marine environment associated.
      - 
    * -  terrestrial
      - terrestrial
      - 
      - Some evidence that it is terrestrial(land) environment associated.
      - There will likely be other low level tags to provide context.
-   * -  terrestrial:high_confidence
+   * - terrestrial:high_confidence
      - terrestrial
      - high_confidence
      - Strong evidence that the object is terrestrial(land) environment associated.
      - 
-   * -  terrestrial:medium_confidence
+   * - terrestrial:medium_confidence
      - terrestrial
      - medium_confidence
-     - moderate  evidence that the object is terrestrial(land) environment associated.
+     - Moderate  evidence that the object is terrestrial(land) environment associated.
      -
    * - terrestrial:low_confidence
      - terrestrial
      - low_confidence
-     - weak evidence that the object is terrestrial(land) environment associated.
-     - 
-   * - datahub:metagenome
-     - datahub
-     - metagenome
-     - Is a metagenome and present in that Data Hub.
+     - Weak evidence that the object is terrestrial(land) environment associated.
      - 
    * - xref:arrayexpress
      - xref
@@ -207,13 +201,13 @@ table, to see what they apply to.
    * - xref:europepmc
      - xref
      - europepmc
-     - Object associated with a `European PubmedCentral <https://europepmc.org>`_ record
-     - A xref is available that links to European PubmedCentral
+     - Object associated with a `Europe PMC <https://europepmc.org>`_ record
+     - A xref is available that links to Europe PMC
    * - xref:pubmed
      - xref
      - pubmed
-     - Object associated with an `NCBI Pubmed <https://pubmed.ncbi.nlm.nih.gov>`_ record
-     - A xref is available that links to NCBI Pubmed
+     - Object associated with a `PubMed <https://pubmed.ncbi.nlm.nih.gov>`_ record
+     - A xref is available that links to PubMed
    * - xref:worms
      - xref
      - worms
@@ -222,8 +216,8 @@ table, to see what they apply to.
    * - xref:unieuk
      - xref
      - unieuk
-     - Object associated with a `UNIEUK /(Universal taxonomic framework and integrated reference gene databases for Eukaryotic biology, ecology, and evolution ) <https://unieuk.net>`_ record
-     - A xref is available that links to UNIEUK
+     - Object associated with a `UniEuk (Universal taxonomic framework and integrated reference gene databases for Eukaryotic biology, ecology, and evolution ) <https://unieuk.net>`_ record
+     - A xref is available that links to UniEuk
    * - covid19
      - 
      - covid19
@@ -239,14 +233,14 @@ table, to see what they apply to.
 How are the Tags Created?
 -------------------------
 
-The tags are typically assigned by automatic processes analysing the user supplied metadata around an object.
+The tags are typically assigned by automated processes analysing the user supplied metadata around an object.
 
 This is an evolving and continuously improving process, where the algorithms and the rule-sets used for classification can be updated as new insights are obtained and thus results in the assigned tags being regularly refreshed. The flexibility of this system allows for new classifications to be easily created allowing the definition of new, high-level contextual groupings for ENA data making the process of discovery more intuitive for certain user communities.
 
 ^^^^^^^^
 pathogen
 ^^^^^^^^
-The pathogen tags are identified based on tax IDs. The different types of pathogens have a maintained list of tax ids, all records associated with the tax ID or a tax ID in that lineage get the pathogen tag.
+The pathogen tags are identified based on NCBI taxonomy IDs. The different types of pathogens have a maintained list of taxonomy IDs, all records associated with the taxonomy ID or a taxonomy ID in that lineage get the pathogen tag.
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 coastal_brackish, freshwater, marine, terrestrial
@@ -258,22 +252,17 @@ The identification of coastal_brackish, freshwater, marine and terrestrial sampl
 * marine: OpenStreetmap’s water polygons shapefile: https://osmdata.openstreetmap.de/data/water-polygons.html
 * terrestrial: OpenStreetmap’s land polygons shapefile: https://osmdata.openstreetmap.de/data/land-polygons.html
 
-We further qualify such identification by a level of confidence which is dictated by a combination of the evidence available on the record to support said assertion. 
-
-^^^^^^^
-datahub
-^^^^^^^
-The datahub tag is assigned based on whether the record belongs to a Data Hub maintained by ENA.
+We further qualify such identification by a level of confidence which is dictated by a combination of the evidence available on the record to support said assertion.
 
 ^^^^
 xref
 ^^^^
-xref tags are based on external data resources, and are added if requested by the submitting group. Currently xref:worms tags are available on taxons; xref:arrayexpress, xref:europepmc, xref:pubmed on studies; xref:unieuk on sequences.
+xref (Cross Reference) tags are based on external data resources that have provided mappings between their records and ENA records. A tag for a specific external resource can be enabled on request. Currently xref:worms tags are available on taxons; xref:arrayexpress, xref:europepmc, xref:pubmed on studies; xref:unieuk on sequences.
 
 ^^^^^^^
 covid19
 ^^^^^^^
-The record is related to the study PRJEB39908, PRJEB40349, PRJEB40770, or one of their child studies.
+The record is related to COVID-19 data, as indicated by it being included under the COVID-19 specific umbrella studies PRJEB39908, PRJEB40349, PRJEB40770, or one of their child studies.
 
 -------------
 Miscellaneous
