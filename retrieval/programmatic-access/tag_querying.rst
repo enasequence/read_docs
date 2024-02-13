@@ -57,7 +57,7 @@ Table of Object High Level Tags
    "freshwater", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from a freshwater environment.", "read_run; sample; taxonomy"
    "marine", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from a marine environment.", "read_run; sample; taxonomy"
    "terrestrial", "The sample has been automatically determined by evaluation of GPS and other parameters to have some evidence of being collected from a terrestrial environment.", "read_run; sample; taxonomy"
-   "datahub", "The sample has been automatically determined to belong to a datahub. Currently tags have been generated for `FAANG <https://data.faang.org/home>`_ and `Pathogen <https://www.pathogensportal.org/datahubs.>`_", "analysis; read_run; sample; secondary_study"
+   "datahub", "The sample has been automatically determined to belong to a Data Hub. Currently tags have been generated for `Pathogen <https://www.pathogensportal.org/datahubs>`_", "analysis; read_run; sample; secondary_study"
    "xref", "The sample has been referenced in an external to the EMBL-EBI repository. Currently tags have been generated for WORMS and UniEUK.",	"Depends on how the user submitted"
    "covid19", "The sample has been automatically determined to belong to the COVID19 portal.",	"analysis; read_run; sample; sequence; study"
 
@@ -87,7 +87,7 @@ table, to see what they apply to.
    * - pathogen:priority
      - pathogen
      - priority
-     - A pathogen that has beem identified by WHO to pose a serious threat to humans.
+     - A pathogen that has been identified by WHO to pose a serious threat to humans.
      - 
    * - pathogen:bacterium
      - pathogen
@@ -194,15 +194,10 @@ table, to see what they apply to.
      - low_confidence
      - weak evidence that the object is terrestrial(land) environment associated.
      - 
-   * - datahub:faang
-     - datahub
-     - faang
-     - Is a `Functional Annotation of ANimal Genomes project (FAANG) <https://data.faang.org/home>`_ sample and present in that datahub
-     - 
    * - datahub:metagenome
      - datahub
      - metagenome
-     - Is a metagenome and present in that datahub
+     - Is a metagenome and present in that Data Hub.
      - 
    * - xref:arrayexpress
      - xref
@@ -268,7 +263,7 @@ We further qualify such identification by a level of confidence which is dictate
 ^^^^^^^
 datahub
 ^^^^^^^
-The datahub tag is assigned based on whether the record belongs to a datahub maintained by ENA.
+The datahub tag is assigned based on whether the record belongs to a Data Hub maintained by ENA.
 
 ^^^^
 xref
