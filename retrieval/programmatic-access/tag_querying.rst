@@ -24,7 +24,7 @@ The purpose of these is to make searching and filtering much easier. In ENA they
 Examples:
 
 * Find all pathogenic samples by using the “pathogen” tag (this is used to drive the data coverage of the `Pathogens Portal <https://www.pathogensportal.org>`_.)
-* Use "marine:high_confidence” tag to find all samples that are highly likely to be from the marine environment.
+* Use “marine:high_confidence” tag to find all samples that are highly likely to be from the marine environment.
 * Find all records in ENA data that have a corresponding record cross-referenced to the `WoRMS - World Register of Marine Species <https://www.marinespecies.org/>`_, by searching “xref:worms”.
 
 The tagging system has proved useful in determining the object membership of certain domain specific data portals such as Pathogens Portal. Conversely they can also be used to easily obtain vignettes of data from which to build a new data portal rapidly.
@@ -52,13 +52,14 @@ Table of Object High Level Tags
    :header: "high level tag", "description", "object type"
    :widths: 20, 300, 50
 
-   "pathogen", "The sample has been determined to belong to the Pathogens Portal", "assembly; sample; sequence; study; secondary_study; taxonomy"
-   "coastal_brackish", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from either a coastal or brackish environment.", "read_run; sample; taxonomy"
-   "freshwater", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a freshwater environment.", "read_run; sample; taxonomy"
-   "marine", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a marine environment.", "read_run; sample; taxonomy"
-   "terrestrial", "The sample has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a terrestrial environment.", "read_run; sample; taxonomy"
-   "xref", "The sample has been referenced in an external to the EMBL-EBI repository. Currently tags have been generated for WORMS and UniEUK.",	"Depends on how the user submitted"
-   "covid19", "The sample has been determined to belong to the COVID19 portal.",	"analysis; read_run; sample; sequence; study"
+   "pathogen", "The record has been determined to be from a pathogenic source", "assembly; sample; sequence; study; secondary_study; taxonomy"
+   "coastal_brackish", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from either a coastal or brackish environment.", "read_run; sample; taxonomy"
+   "freshwater", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a freshwater environment.", "read_run; sample; taxonomy"
+   "marine", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a marine environment.", "read_run; sample; taxonomy"
+   "terrestrial", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a terrestrial environment.", "read_run; sample; taxonomy"
+   "datahub", "The record has been determined to belong to a Data Hub maintained by ENA.", "analysis; read_run; sample; secondary_study"
+   "xref", "The record has been referenced in an external to the EMBL-EBI repository. Currently tags have been generated for WoRMS, UniEUK, PubMed, Europe PMC and ArrayExpress.",	"Depends on how the user submitted"
+   "covid19", "The record has been determined to be COVID-19 related based on taxonomy or belonging to COVID-19 specific umbrella studies, or one of their child studies.",	"analysis; read_run; sample; sequence; study"
 
 
 
@@ -245,7 +246,7 @@ The pathogen tags are identified based on NCBI taxonomy IDs. The different types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 coastal_brackish, freshwater, marine, terrestrial
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The identification of coastal_brackish, freshwater, marine and terrestrial sample records are systematically assessed by a combination of geo-coordinates and/or taxonomic evidence. Taxonomic information is taken from WoRMS, and 4 shapefiles are used for the coordinates:
+The identification of coastal_brackish, freshwater, marine and terrestrial sample records are systematically assessed by a combination of geo-coordinates and/or taxonomic evidence. Taxonomic information is taken from `WoRMS <https://www.marinespecies.org/>`_, and 4 shapefiles are used for the coordinates:
 
 * coastal_brackish: Longhurst shapefile downloaded from https://www.marineregions.org/
 * freshwater: WWF’s Global 200 g200_fw_category shapefile: https://www.worldwildlife.org/publications/global-200
@@ -258,6 +259,11 @@ We further qualify such identification by a level of confidence which is dictate
 xref
 ^^^^
 xref (Cross Reference) tags are based on external data resources that have provided mappings between their records and ENA records. A tag for a specific external resource can be enabled on request. Currently xref:worms tags are available on taxons; xref:arrayexpress, xref:europepmc, xref:pubmed on studies; xref:unieuk on sequences.
+
+^^^^^^^
+datahub
+^^^^^^^
+The datahub tag is assigned based on whether the record belongs to a Data Hub maintained by ENA.
 
 ^^^^^^^
 covid19
