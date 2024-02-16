@@ -57,7 +57,7 @@ Table of Object High Level Tags
    "freshwater", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a freshwater environment.", "read_run; sample; taxonomy"
    "marine", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a marine environment.", "read_run; sample; taxonomy"
    "terrestrial", "The record has been determined by evaluation of GPS and other parameters to have some evidence of being collected from a terrestrial environment.", "read_run; sample; taxonomy"
-   "datahub", "The record has been determined to belong to a Data Hub maintained by ENA.", "analysis; read_run; sample; secondary_study"
+   "datahub", "The record has been determined to have been shared with an ENA Data Hub.", "analysis; read_run; sample; secondary_study"
    "xref", "The record has been referenced in an external to the EMBL-EBI repository. Currently tags have been generated for WoRMS, UniEUK, PubMed, Europe PMC and ArrayExpress.",	"Depends on how the user submitted"
    "covid19", "The record has been determined to be COVID-19 related based on taxonomy or belonging to COVID-19 specific umbrella studies, or one of their child studies.",	"analysis; read_run; sample; sequence; study"
 
@@ -263,7 +263,7 @@ xref (Cross Reference) tags are based on external data resources that have provi
 ^^^^^^^
 datahub
 ^^^^^^^
-The datahub tag is assigned based on whether the record belongs to a Data Hub maintained by ENA.
+The datahub tag is assigned based on whether the record has been shared with an ENA Data Hub.
 
 ^^^^^^^
 covid19
