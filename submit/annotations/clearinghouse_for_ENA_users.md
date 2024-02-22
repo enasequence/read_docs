@@ -4,13 +4,17 @@
 * [Clearinghouse for ENA Users](#clearinghouse-for-ena-users)
   * [Purpose of this document](#purpose-of-this-document)
   * [Introduction](#introduction)
-    * [Further Reading](#further-reading)
+    * [Background](#background)
     * [The Relevancy to ENA](#the-relevancy-to-ena)
-  * [Example use cases](#example-use-cases)
-  * [Making use of the Extra Annotation in Clearinghouse](#making-use-of-the-extra-annotation-in-clearinghouse)
-  * [Programmatic Querying of Clearinghouse](#programmatic-querying-of-clearinghouse)
-  * [How is using the Clearinghouse Different from Updating Records in ENA/Biosamples?](#how-is-using-the-clearinghouse-different-from-updating-records-in-enabiosamples-)
-  * [The Link between Biosamples & ENA](#the-link-between-biosamples--ena)
+  * [Example Use Cases of Projects Using or Intending to Use the ClearingHouse](#example-use-cases-of-projects-using-or-intending-to-use-the-clearinghouse)
+  * [Curation objects](#curation-objects)
+    * [Examples](#examples)
+      * [*Marine Metagenome Sample Curation:*](#marine-metagenome-sample-curation)
+      * [*Marine Metagenome Sample Curation:*](#marine-metagenome-sample-curation-1)
+      * [*SARS-CoV-2 Sequence Curation:*](#sars-cov-2-sequence-curation)
+  * [Programmatically querying Clearinghouse data](#programmatically-querying-clearinghouse-data-)
+    * [Tips for querying and submitting Clearinghouse data](#tips-for-querying-and-submitting-clearinghouse-data)
+  * [How is using the Clearinghouse Different from Updating Records in ENA?](#how-is-using-the-clearinghouse-different-from-updating-records-in-ena)
   * [Appendix:](#appendix)
     * [1. A template bash script for submission](#1-a-template-bash-script-for-submission)
 <!-- TOC -->
@@ -41,14 +45,14 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 
 
  
-## Example use cases
-| Project                             | Clearinghouse usage                                                                                                                                                                                                                                                    | ENA members involved  | External groups involved              |
-|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|---------------------------------------|
-| BY-COVID (beyond-COVID)                            | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiT <li>appropriate curations presenting alongside records in ENA Browser </ul>                                                                                                           | Zahra Waheed, Nadim Rahman          | The Arctic University of Norway (UiT) |
-| <p style="color:blue">BlueCloud</p> | <ul><li>Extra metadata around geographical determination (using GPS and taxonomy) and from GPS  <li>e.g.  EEZ and high sea<li>0.5 million records curated</ul>                                                                                                       | Peter Woollard, Stéphane Pesant, Lili Meszaros | WoRMS                                 |
-| BiCIKL                              | <ul><li>Expanding on metadata available mostly for sequences  <li>Updating taxonomic identifications of sequence data, deriving from the Unite pipelines</li>  <li>Potential for further updates (e.g. specimen voucher info) coming from other groups (e.g. Museums)</ul> | Joana Pauperio                | PlutoF                                |
-| MGnify                              | <li>Expanding on metadata from literature - assignment of biomes via machine learning? TBC                                                                                                                                                                                      | Josephine Burgin                |                                       |
-| DToL (Darwin Tree of Life Project)                                   | <li>None yet - considering using Clearinghouse to add quality scores to assemblies                                                                                                                                                                                                 | Josephine Burgin, Joana Pauperio          | Sanger                                |
+## Example Use Cases of Projects Using or Intending to Use the ClearingHouse
+| Project                             | Clearinghouse usage                                                                                                                                                                                                                                                        | ENA members involved                           | External groups involved              |
+|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|---------------------------------------|
+| BY-COVID (beyond-COVID)             | <ul><li>27,566,814 SARS-CoV-2 curations pushed through by UiT <li>appropriate curations presenting alongside records in ENA Browser </ul>                                                                                                                                  | Zahra Waheed, Nadim Rahman                     | The Arctic University of Norway (UiT) |
+| <p style="color:blue">BlueCloud</p> | <ul><li>Extra metadata around geographical determination (using GPS and taxonomy) and from GPS  <li>e.g.  EEZ and high sea<li>0.5 million records curated</ul>                                                                                                             | Peter Woollard, Stéphane Pesant, Lili Meszaros | WoRMS                                 |
+| BiCIKL                              | <ul><li>Expanding on metadata available mostly for sequences  <li>Updating taxonomic identifications of sequence data, deriving from the Unite pipelines</li>  <li>Potential for further updates (e.g. specimen voucher info) coming from other groups (e.g. Museums)</ul> | Joana Pauperio                                 | PlutoF                                |
+| MGnify                              | <li>Expanding on metadata from literature - assignment of biomes via machine learning? TBC                                                                                                                                                                                 | Josephine Burgin                               |                                       |
+| DToL (Darwin Tree of Life Project)  | <li>None yet - considering using Clearinghouse to add quality scores to assemblies                                                                                                                                                                                         | Josephine Burgin, Joana Pauperio               | Sanger                                |
 
 
 <br>
@@ -57,9 +61,11 @@ The Clearinghouse is deliberately set up to allow submission of new or updated m
 ### Examples
 Curations associated to an ENA Sample, Study, Run/Experiment and Sequence can be submitted to Clearinghouse. Below are some examples from different projects.
 #### *Marine Metagenome Sample Curation:*
+The following is third party annotation on https://www.ebi.ac.uk/ena/browser/view/SAMN08012645
 ![Environmental metagenome curation example](./env_curation.png)
 <br>
 #### *SARS-CoV-2 Sequence Curation:*
+The following is third party annotation on https://www.ebi.ac.uk/ena/browser/view/OM635134
 ![SARS-CoV-2 curation example](./covid_curation.png)
 <br>
 <br>
