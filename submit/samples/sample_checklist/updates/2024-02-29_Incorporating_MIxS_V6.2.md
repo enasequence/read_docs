@@ -1,11 +1,15 @@
 # ENA Checklists Update Incorporating MIxS V6.2
-Checklists Updated: January 2024
+Checklists Updated: February 2024
 <!-- TOC -->
 * [ENA Checklists Update Incorporating MIxS V6.2](#ena-checklists-update-incorporating-mixs-v62)
   * [Summary of ENA Checklists after the MIxS v6.2 Update](#summary-of-ena-checklists-after-the-mixs-v62-update)
   * [Introduction](#introduction)
   * [Four New MIxS Derived Checklists in ENA](#four-new-mixs-derived-checklists-in-ena)
   * [Fifteen existing MIxS checklists in ENA have had new checklists terms added](#fifteen-existing-mixs-checklists-in-ena-have-had-new-checklists-terms-added)
+  * [General changes reflecting INSDC or specifically ENA needs, where Different to MIxS](#general-changes-reflecting-insdc-or-specifically-ena-needs-where-different-to-mixs)
+    * [Additional Controlled Value Terms being allowed](#additional-controlled-value-terms-being-allowed)
+    * [ENA uses separate fields rather than a single combined ones in Certain cases](#ena-uses-separate-fields-rather-than-a-single-combined-ones-in-certain-cases)
+  * [Minor Changes to non-MIxS checklists](#minor-changes-to-non-mixs-checklists)
 * [Summary Tables of Terms counts and Terms added Existing Checklist](#summary-tables-of-terms-counts-and-terms-added-existing-checklist)
   * [Summary Table of Terms ( all sample based )](#summary-table-of-terms--all-sample-based-)
   * [Table of Terms added to which checklist ( all sample based )](#table-of-terms-added-to-which-checklist--all-sample-based-)
