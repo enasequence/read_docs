@@ -72,3 +72,19 @@ The ‘Assembly Statistics’ shows all details of the assembly being viewed.
 
 .. image:: images/assembly-statistics.png
    :align: center
+
+View and Download Files
+-----------------------
+
+This section explains how to view and download assembly and sequence files from the ENA browser. This only applies to
+publicly available data. The ‘View’ option displays and the ‘Download’ option downloads the files that are being
+accessed. For example, the options shown in the navigation box below have the following functions:
+
+- **XML** - Displays/downloads the file containing all the assembly attributes displayed in XML format.
+- **WGS Set EMBL** - If an assembly contains contigs, downloads the assembly’s WGS contig set in embl (flat file)
+  format.
+- **WGS Set FASTA** - If an assembly contains contigs, downloads the assembly’s WGS contig set in fasta format.
+- **All Seq EMBL** - Downloads all sequences in the assembly including all contigs, scaffolds and chromosomes as
+  applicable in embl (flat file) format.
+- **All Seq FASTA** - Downloads all sequences in the assembly including all contigs, scaffolds and chromosomes as
+  applicable in fasta format.
