@@ -18,38 +18,54 @@ accepted missing value reporting terms.
 INSDC Missing Value Reporting Terms
 ===================================
 
-+----------------------------+------------------------------+-----------------------------------------------+
-| **INSDC term (top level)** | **INSDC term (lower level)** | **Definition**                                |
-+----------------------------+------------------------------+-----------------------------------------------+
-| not applicable             |                              | | information is inappropriate to report, can |
-|                            |                              | | indicate that the standard itself fails to  |
-|                            |                              | | model or represent the information          |
-|                            |                              | | appropriately                               |
-+----------------------------+------------------------------+-----------------------------------------------+
-| missing                    | not collected                | | information of an expected format was not   |
-|                            |                              | | given because it has not been collected     |
-|                            +------------------------------+-----------------------------------------------+
-|                            | not provided                 | | information of an expected format was not   |
-|                            |                              | | given, a value may be given at the later    |
-|                            |                              | | stage                                       |
-|                            +------------------------------+-----------------------------------------------+
-|                            | restricted access            | | information exists but can not be released  |
-|                            |                              | | openly because of privacy concerns          |
-+----------------------------+------------------------------+-----------------------------------------------+
++----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| **INSDC term (top level)** | **INSDC term (lower level)** | **Definition**                                | **INSDC term (reporting level)** |  **Definition**                                   |
++----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| not applicable             |                              | | information is inappropriate to report, can | control sample                   | | Information is not applicable as the sample     |
+|                            |                              | | indicate that the standard itself fails to  |                                  | | represents a negative control sample            |
+|                            |                              | | model or represent the information          |                                  | | collected in a lab                              |
+|                            |                              | | appropriately                               +----------------------------------+---------------------------------------------------+
+|                            |                              | |                                             | sample group                     | | Information is not applicable as the sample     |
+|                            |                              | |                                             |                                  | | represents a group of samples that do not       |
+|                            |                              | |                                             |                                  | | have a single origin. E.g. for co-assembly or   |
+|                            |                              | |                                             |                                  | | transcriptome assembly.                         |
++----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| missing                    | not collected                | | information of an expected format was not   | synthetic construct              | | Information does not exist as the sample        |
+|                            |                              | | given because it has not been collected     |                                  | | represents an ab-initio synthetic construct.    |
+|                            |                              | |                                             +----------------------------------+---------------------------------------------------+
+|                            |                              | |                                             | lab stock                        | | Information was not collected as the sample     |
+|                            |                              | |                                             |                                  | | represents a cultured cell line or model        |
+|                            |                              | |                                             |                                  | | organism under long-term lab control.           |
+|                            |                              | |                                             +----------------------------------+---------------------------------------------------+
+|                            |                              | |                                             | third party data                 | | Information does not exist as the metadata      |
+|                            |                              | |                                             |                                  | | was not collected or reported in records        |
+|                            |                              | |                                             |                                  | | predating the 2023 agreement. For use in        |
+|                            |                              | |                                             |                                  | | Third Party data submissions.                   |
+|                            +------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+|                            | not provided                 | | information of an expected format was not   | data agreement established       | | Data agreements were established before the     |
+|                            |                              | | given, a value may be given at the later    | pre-2023                         | | 2023 INSDC standard and metadata can not be     |
+|                            |                              | | stage                                       |                                  | | provided. A value may be given at a later stage |
+|                            +------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+|                            | restricted access            | | information exists but can not be released  | endangered species               | | Information can not be reported as the target   |
+|                            |                              | | openly because of privacy concerns          |                                  | | organism is endangered e.g. on the IUCN red-    |
+|                            |                              | |                                             |                                  | | list                                            |
+|                            |                              | |                                             +----------------------------------+---------------------------------------------------+
+|                            |                              | |                                             | human-identifiable               | | Information can not be reported as the          |
+|                            |                              | |                                             |                                  | | metadata would make the sample human-           |
+|                            |                              | |                                             |                                  | | identifiable.                                   |
++----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+
 
 Usage of INSDC Missing Value Reporting Terms
 ============================================
 
-Please use the above standardised missing value vocabulary **only if a true value of an expected format for a**
-**mandatory field is missing**. If a true value is missing for a **recommended** or an **optional** field, then these fields
-should not be used for reporting at all. For any use cases, we discourage the usage of the top level term 'missing'
-and encourage to use a lower level term with a higher granularity to declare the reason for the absence of a true
-value.
+Please use the above standardised missing value vocabulary **only if a true value of an expected format for a mandatory field is missing**. If a true value is missing for a **recommended** or an **optional** field, then these fields should not be used for reporting at all. When reporting a missing mandatory field, the eight granular **‘reporting level’** terms need to be preceded with the term  *missing:* to declare both the absence of a true value as well as the reason.
 
 Example of usage:
+-----------------
 
-Checklist: `GSC MIxS soil <https://www.ebi.ac.uk/ena/browser/view/ERC000022>`_
+**geographic location (country and/or sea)**: *missing: data agreement-established pre-2023*
 
-geographic location (elevation): not collected
+**collection date**:  *missing: control sample*
 
-geographic location (country and/or sea): restricted access
+**geographic location (country and/or sea)**:  *missing: human-identifiable*
