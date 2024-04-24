@@ -17,7 +17,7 @@ follow the instructions:
 
 - `Error: Invalid File Checksum`_
 - `Error: Number Of Lines Is Not A Multiple Of Four`_
-- `Error: File Integrity Check Failed`_
+- `Error: Invalid File Content`_
 - `Error: Missing File`_
 
 A couple of general-purpose solutions are described too:
@@ -144,75 +144,46 @@ If it is not divisible by four, you should discover why, correct your file and r
     See the `Appendix: Correcting An MD5 Value`_ for information on how to do this.
 
 
-Error: File Integrity Check Failed
-==================================
+Error: Invalid File Content
+===========================
 
-You will know this error has occurred if you receive an email resembling the below:
+If an invalid file content error occurs, you will receive an email with the below message:
 
 ::
 
-    FILE_NAME         | ERROR                                                                                   | MD5                              | FILE_SIZE  | DATE                 | RUN_ID/ANALYSIS_ID
-    UK/BR1-20_2.fq.gz | File integrity check failed, Can't unzip file                                           | ef7e73ed95f64355d7bf7d48636b704f | 3801612790 | 22-DEC-2016 04:08:41 | ERR0757927
-    cetbiorep1.bam    | File integrity check failed, File cannot be read using samtools                         | cecfa479356456cb6770986a6141bc44 | 800838646  | 24-MAY-2016 03:02:08 | ERR0332189
-    frger.cram        | File integrity check failed, Can't count number of records in the file using cram tools | 807a0f61da013916c1ca5f60b9b42526 | 2347399950 | 11-JAN-2017 14:59:49 | ERR363314
+    FILE_NAME                | ERROR        | MD5                              | FILE_SIZE | DATE                 | RUN_ID/ANALYSIS_ID
+    UFMG-CM-Y030_R1.fastq.gz | Invalid file content | 2da9b9c9bb8833c14b103e0de123829c | 137298909 | 13-JUN-2020 12:51:29 | ERR2299965
 
 
 The Problem
 -----------
 
-Submitted files are checked to confirm they can be unpacked.
-The specifics of how this is done depends on the file type, e.g. gzipped FASTQ files are checked with gunzip, while BAM
-files are checked with SAMtools.
+Submitted files content has not been validated. There are two possible reasons for this happening:
 
-Unpacking will fail for one of two reasons: either the uploaded file was corrupt to begin with, or the upload procedure
-did not complete fully and a corrupted file was received.
+- There was an error on the EBI server causing the run to display this error
+- The content of the read file submission does not meet our validation standard
 
 
 The Solution
 ------------
 
-You should start by confirming the integrity of your local copy of the file.
-Find instruction on how to do this by referring to the relevant subsection for your file type below.
+First please wait 1 week for the files to be processed. Sometimes run processing may be affected by an error on the ENA server and you will receive the error email before the processing is completed.
+If, after 1 week, the run record is still failing, you can check and update the file content, and then update your run file.
+Please refer to our guide for `Accepted Read Data Formats <../submit/fileprep/reads.html`_.
+If you can not find a problem with your read file content, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
-If the file unpacks correctly, most likely corruption occurred during upload: reupload it to your submission directory.
-See `Appendix: Re-Uploading Your File`_ for information on how to do this.
+Updating a run file
+^^^^^^^^^^^^^^^^^^^
+In order to update the run file with changed content, you will need to re-register the MD5 value, and then re-upload the new file.
+Please see `Appendix: Correcting An MD5 Value`_ for information on how to do update the MD5 value.
 
-If the file is identified as having errors, remake the file and upload this.
-Be sure to check that the MD5 value hasn't changed: you will need to re-register a correct value if it has.
-To do so, see `Appendix: Correcting An MD5 Value`_ for information on how to do this.
-
-
-FASTQ Files
-^^^^^^^^^^^
-
-Our pipeline performs the following check on gzipped FASTQ files to validate them:
-
-.. code-block:: bash
-
-    $ zcat BR1-20_2.fq.gz > /dev/null 2>&1
-    $ echo $?
-
-This will attempt to read the content of the file and print an exit code.
-If this value is 1 or higher, there is a problem with the file.
-You can try this on your local file to check its validity, then upload a corrected version.
-See `Appendix: Re-Uploading Your File`_ for information on how to do this.
-
-
-BAM Files
-^^^^^^^^^
-
-The check performed on BAM files is as follows:
-
-.. code-block:: bash
-
-    $ samtools view cetbiorep1.bam > /dev/null 2>&1
-    $ echo $?
-
-This command attempts to view the BAM file and output the exit code of this procedure.
-If the code is 1 or higher, there is a problem with the file.
-Try this check on your local file and then upload a corrected version.
-See `Appendix: Re-Uploading Your File`_ for information on how to do this.
-
+Note that if you uploaded the original file to a subdirectory in your submission area, you must also upload the new
+file to this subdirectory.
+The processing pipeline expects to see the file for your run in the originally specified location, so this must be
+maintained.
+You can check what path the pipeline is expecting to see by referring to the 'FILE_NAME' field of the error message:
+this will contain the full path.
+See `Appendix: Re-Uploading Your File`_ for information on how to correctly upload your file.
 
 Error: Missing File
 ===================
