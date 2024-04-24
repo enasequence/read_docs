@@ -160,22 +160,23 @@ The Problem
 
 Submitted files content has not been validated. There are two possible reasons for this happening:
 
-- There was an error on the EBI server causing the run to display this error
+- There was an error on the EBI server causing the error to be reported
 - The content of the read file submission does not meet our validation standard
 
 
 The Solution
 ------------
 
-First please wait 1 week for the files to be processed. Sometimes run processing may be affected by an error on the ENA server and you will receive the error email before the processing is completed.
-If, after 1 week, the run record is still failing, you can check and update the file content, and then update your run file.
-Please refer to our guide for `Accepted Read Data Formats <../submit/fileprep/reads.html`_.
-If you can not find a problem with your read file content, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+First please wait 1 week for the files to be processed. 
+Sometimes run processing may be affected by an error on the ENA server and you will receive the error email before the run processing is completed.
+
+If, after 1 week, the run record is still failing, you can check and update the file content, and then re-upload your run file.
+Please refer to our guide for `Accepted Read Data Formats <../submit/fileprep/reads.html>`_ to help identify your issue.
+
+If you cannot find a problem with your read file contents, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Updating a run file
 ^^^^^^^^^^^^^^^^^^^
-In order to update the run file with changed content, you will need to re-register the MD5 value, and then re-upload the new file.
-Please see `Appendix: Correcting An MD5 Value`_ for information on how to do update the MD5 value.
 
 Note that if you uploaded the original file to a subdirectory in your submission area, you must also upload the new
 file to this subdirectory.
@@ -184,6 +185,12 @@ maintained.
 You can check what path the pipeline is expecting to see by referring to the 'FILE_NAME' field of the error message:
 this will contain the full path.
 See `Appendix: Re-Uploading Your File`_ for information on how to correctly upload your file.
+
+.. note::
+
+    If you reformat your file and then reupload it, you will also need to re-register the checksum.
+    See the `Appendix: Correcting An MD5 Value`_ for information on how to do this.
+
 
 Error: Missing File
 ===================
