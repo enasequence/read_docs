@@ -110,8 +110,8 @@ Data submissions to the ENA require that you register a study to contextualise a
 this can be found in our `Study Registration Guide <https://ena-docs.readthedocs.io/en/latest/submit/study.html>`_.
 Please ensure you describe your study adequately, as well as provide an informative title.
 
-Your  studies can now be claimed using your ORCID ID and/or assigned a DOI. Please see `here <https://ena-browser-docs.readthedocs.io/en/latest/about/citing-ena.html#orcid-data-claiming>`_
-and `here <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html#doi-issuing>`_ for more information on these options.
+Your  studies can now be claimed using your ORCID ID and/or assigned a DOI. Please see `here (ORCID)<https://ena-browser-docs.readthedocs.io/en/latest/about/citing-ena.html#orcid-data-claiming>`_
+and `here (DOI)<https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html#doi-issuing>`_ for more information on these options.
 
 Register Samples
 ````````````````
@@ -131,7 +131,7 @@ Sample checklists
 '''''''''''''''''
 The following Sample checklists contain  **mandatory**, *recommended* and optional metadata fields (``<SAMPLE_ATTRIBUTE>``),
 with a description for each field, to help with sample metadata completion.
-The checklists were agreed by the Genomic Standards Consortium (GSC). In addition to the core checklist for each life domain,
+The checklists are agreed by the Genomic Standards Consortium (GSC). In addition to the core checklist for each life domain,
 the GSC also provides checklist `extensions <https://www.gensc.org/pages/standards/extensions.html>`_ which may have the
 metadata field you are looking for.
 

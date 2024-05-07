@@ -1,6 +1,8 @@
 Submit Linked Cohort Data
 =========================
 
+This guide includes information about how to submit linked cohort datasets for displaying in the EBIs Pathogens Portal.
+
 Introduction
 ````````````
 Infectious disease plays out as an intricate set of molecular interactions between the systems of both pathogen and infected host.
@@ -66,8 +68,8 @@ e.g. for the `EMC study <https://www.ebi.ac.uk/about/news/updates-from-data-reso
 
 **[T/B-Cell/Antibody profile/ENA viral sample accession]** - *derived from* - **[Top level patient sample accession]**
 
-A JSON file curation object (see example below) containing the relationship attribute should be created and submitted
-via curl to BioSamples (see instructions `here <https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object>`_)
+A JSON file curation object (see example below) containing the relationship attribute with the source and target sample
+should be created and submitted via curl to BioSamples (see instructions `here <https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object>`_)
 Please contact ena-path-collabs@ebi.ac.uk (or BioSamples) for technical support with sample linking using BioSamples.
 
 
@@ -98,11 +100,14 @@ Please contact ena-path-collabs@ebi.ac.uk (or BioSamples) for technical support 
 
 While the BioSamples database is key to capturing the linking of data types on participant level, the
 `Cohort Browser <https://www.pathogensportal.org/cohorts>`_ presents a range of study-level information about each cohort.
-Similar to a shop window, it enhances the findability of the datasets and as an integral part of the Pathogens Portal, and
-serves as the primary entry point into cohort data.
+This metadata is an integral part of the Pathogens Portal, enhancing the findability of a cohort dataset, and this serves
+as the primary entry point into cohort data. The linked data types included in the cohort will be indicated under the
+'Type of data' column within the cohort browser.
+
+s an integral part of the Pathogens Portal, and serves as the primary entry point into cohort data.
 
 For your cohort to display within a cohort browser, please contact us to check which metadata will be needed for your dataset.
-As a basic guide, the following information will be needed to describe the cohort:
+As a guide, the following information will be needed to describe the cohort:
 
 - Cohort acronym/link to webpage
 - Cohort title
@@ -113,5 +118,5 @@ As a basic guide, the following information will be needed to describe the cohor
 - Enrollment period
 
 Please find the form `here <https://docs.google.com/spreadsheets/d/1LuyPhv1J5t2FU7JE2XjW9n__PjGTxeBoA38PXpN8sG8/edit#gid=0>`_
-for suggested complete cohort metadata. The linked data types included in the cohort will be indicated under the 'Type of data'
-column within the cohort browser.
+for a more complete version of the suggested metadata. Please get in touch with us at x if you would like to add your cohort
+metadata to the Pathogens Portal Cohort Browser.
