@@ -160,7 +160,7 @@ The Problem
 
 Submitted files content has not been validated. There are two possible reasons for this happening:
 
-- There was an error on the EBI server causing the error to be reported
+- There was a delay during the processing of your run files causing the error to be reported
 - The content of the read file submission does not meet our validation standard
 
 
@@ -168,7 +168,7 @@ The Solution
 ------------
 
 First please wait 1 week for the files to be processed. 
-Sometimes run processing may be affected by an error on the ENA server and you will receive the error email before the run processing is completed.
+Sometimes your Run records may be affected by a delay in processing your submission, and you will receive the error email before the run processing is completed.
 
 If, after 1 week, the run record is still failing, you can check and update the file content, and then re-upload your run file.
 Please refer to our guide for `Accepted Read Data Formats <../submit/fileprep/reads.html>`_ to help identify your issue.
