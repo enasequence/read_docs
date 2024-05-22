@@ -108,6 +108,7 @@ html_sidebars = { '**': ['globaltoc.html','localtoc.html', 'relations.html', 'so
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_logo = 'ENA_Logo_notagline_white.png'
 
 # -- Options for HTMLHelp output ------------------------------------------
 
