@@ -45,7 +45,7 @@ templates_path = ['_templates']
 master_doc = 'index'
 
 # General information about the project.
-project = u'ENA Training Modules'
+project = u'ENA User Documentation'
 copyright = u'2017-2022, European Nucleotide Archive (ENA). Licensed under the Apache License 2.0.'
 author = u'The European Nucleotide Archive (ENA) team.'
 
