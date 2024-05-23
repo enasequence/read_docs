@@ -58,7 +58,6 @@ bottom of the page.
    faq/archive-generated-files
    faq/third_party_tools
    faq/data_brokering
-   faq/pathogen-subs-guide
 
 
 .. toctree::
