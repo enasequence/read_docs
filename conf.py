@@ -45,7 +45,7 @@ templates_path = ['_templates']
 master_doc = 'index'
 
 # General information about the project.
-project = u'ENA User Documentation'
+project = u'ENA Documentation'
 copyright = u'2017-2022, European Nucleotide Archive (ENA). Licensed under the Apache License 2.0.'
 author = u'The European Nucleotide Archive (ENA) team.'
 
@@ -108,7 +108,7 @@ html_sidebars = { '**': ['globaltoc.html','localtoc.html', 'relations.html', 'so
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_logo = 'ENA_Logo_notagline_white.png'
+html_logo = 'ENA_Logo_tagline_white.png'
 
 # -- Options for HTMLHelp output ------------------------------------------
 

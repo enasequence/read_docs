@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-======================
-ENA User Documentation
-======================
+=================
+ENA Documentation
+=================
 
 Welcome to the guidelines for submission and retrieval for the European Nucleotide Archive.
 Please use the links to find instructions specific to
