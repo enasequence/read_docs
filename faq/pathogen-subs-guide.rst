@@ -51,11 +51,14 @@ button and complete the registration form.
 
 The ENA Metadata Model
 ``````````````````````
-Before submitting data to ENA, it is important to familiarise yourself with the `ENA metadata model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html#the-ena-metadata-model>`_
-and what parts of your research project can be represented by which metadata objects. This will determine what you need to submit.
+Before submitting data to ENA, it is important to familiarise yourself with the ENA Metadata Model, to determine what parts of
+your dataset can be represented by which ENA object. This will determine what you need to submit.
 
+- ENA Documentation: `ENA metadata model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html#the-ena-metadata-model>`_
+- Tweetorial:
 
 .. raw:: html
+   :align: center
 
 
     <embed>
