@@ -29,6 +29,8 @@ Once the page has fully loaded, the project should look like this:
 .. image:: images/project-record.png
    :align: center
 
+.. _nav box:
+
 The Navigation Box
 ==================
 
