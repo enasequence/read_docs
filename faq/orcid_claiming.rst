@@ -29,7 +29,7 @@ centrally by the EBI search service, so clicking the button will direct you to t
 
 From here, click on the 'Claim to ORCID' button at the top of the search results. This will open a login prompt for
 you to authenticate your ORCID account, or if you are already logged in, it will link the record to your ORCID ID.
-If you go to `<https://orcid.org/>` and log in, you should see the record listed there as a 'Data set' type record.
+If you go to `https://orcid.org <https://orcid.org/>`_ and log in, you should see the record listed there as a 'Data set' type record.
 
 .. tip::
     Sorting your list of works by 'Type' ascending will bring 'Data set' records to the top.
