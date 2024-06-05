@@ -58,6 +58,7 @@ bottom of the page.
    faq/archive-generated-files
    faq/third_party_tools
    faq/data_brokering
+   faq/orcid-claiming
 
 
 Introductory Webinar
