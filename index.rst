@@ -44,6 +44,12 @@ bottom of the page.
    update/sequence
 
 .. toctree::
+   :caption: Elixir Clearinghouse(third party) Annotation Submissions & Updates
+   :maxdepth: 1
+
+   submit/annotations
+
+.. toctree::
    :caption: Tips and FAQs
    :maxdepth: 1
 
