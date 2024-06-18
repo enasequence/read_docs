@@ -13,7 +13,7 @@ the general assembly metadata.
 
 
 *\*To maximise the speed of processing, sequence updates to SARS-CoV-2 assemblies are no longer versioned. This means that any such update will result in completely new sequence and ERZ assembly accessions.  
-In exceptional cases we may be able to retain versioning for a SARS-CoV-2 sequence. Please contact us via: virus-dataflow@ebi.ac.uk to discuss this.*
+In exceptional cases we may be able to maintain versioning for a SARS-CoV-2 sequence. Please contact us via: virus-dataflow@ebi.ac.uk to discuss this.*
 
 
 Study and sample reference must be maintained:
