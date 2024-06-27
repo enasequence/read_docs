@@ -2,13 +2,19 @@
 Updating Assemblies
 ===================
 
-Updates to assemblies can be performed through `Webin-CLI <../submit/general-guide/webin-cli.html>`_, and result in the
+Updates to assemblies can be performed through `Webin-CLI <../submit/general-guide/webin-cli.html>`_,  and for all except SARS-CoV-2 assemblies*, result in the
 creation of a new version of the assembly.
 
 Updates to assemblies are performed in very similar fashion to submission of assemblies.
 It is therefore sufficient to follow the guidance in the `assembly submission <../submit/assembly.html>`_ pages, while
 considering the below factors. Note that this information applies only to updating the sequence and annotation, not
-the general assembly metadata.
+the general assembly metadata.  
+
+
+
+*\*To maximise the speed of processing, sequence updates to SARS-CoV-2 assemblies are no longer versioned. This means that any such update will result in completely new sequence and ERZ assembly accessions.  
+In exceptional cases we may be able to maintain versioning for a SARS-CoV-2 sequence. Please contact us via: virus-dataflow@ebi.ac.uk to discuss this.*
+
 
 Study and sample reference must be maintained:
   To submit an assembly update, make sure you reference the same study and
