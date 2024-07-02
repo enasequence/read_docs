@@ -18,8 +18,8 @@ Multi-fastq data submissions can be made using the programmatic route or
 Webin-CLI. This is done by entering multiple file names and their 
 respective read_type qualifiers. For more information please see:
 
-- [Multi-fastq using Webin-CLI](../reads/webin-cli.html)
-- [Multi-fastq using the programmatic route](../reads/programmatic.html)
+- [Multi-fastq using Webin-CLI](../reads/webin-cli.md)
+- [Multi-fastq using the programmatic route](../reads/programmatic.rst)
 
 ## Other read data
 
