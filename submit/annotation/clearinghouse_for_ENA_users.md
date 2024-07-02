@@ -127,5 +127,5 @@ It is important to differentiate between the curations submitted via the ELIXIR 
 
 
 ## Appendix:
-### 1. [A template bash script for submission](clearinghouse_submission_template.sh)
+### 1. {doc}`A template bash script for submission </submit/annotation/clearinghouse_submission_template>`
 

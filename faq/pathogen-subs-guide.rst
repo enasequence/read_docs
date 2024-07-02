@@ -2,8 +2,9 @@ General Pathogens Submissions Guide
 ==================================
 
 .. image:: images/pathogens_logo_1.png
- :width: 400
- :align: center
+   :width: 400
+   :alt: Pathogens Portal logo
+   :align: center
 
 
 
@@ -15,8 +16,9 @@ Introduction
 ~~~~~~~~~~~~
 
 
-This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
-. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the `Pathogens Portal <https://www.ebi.ac.uk/ena/pathogens/v2/>`_.
+This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_.
+All public `INSDC <https://www.insdc.org/>`_ pathogen data (except for SARS-Cov-2) will be made available to browse
+using the `Pathogens Portal <https://www.ebi.ac.uk/ena/pathogens/v2/>`_.
 
 Please see below for a specific guide for submitting pathogen related data. The guide frequently refers to the
 `ENA Training Modules <https://ena-docs.readthedocs.io/en/latest/index.html>`_,
@@ -34,7 +36,7 @@ us at ena-path-collabs@ebi.ac.uk.
 
   For small-scale SARS-CoV-2 viral data submissions, with no prior knowledge of ENA submission routes, we have developed a
   drag and drop submissions tool. Please complete the `form <https://www.covid19dataportal.org/submit-data/viral-sequence-form>`_
-  if you would like to submit your data using this route.
+  on the `COVID-19 Data Portal <https://www.covid19dataportal.org/>`_ if you would like to submit COVID-19 data using this route.
 
 
 Getting Started
@@ -49,11 +51,14 @@ button and complete the registration form.
 
 The ENA Metadata Model
 ``````````````````````
-Before submitting data to ENA, it is important to familiarise yourself with the `ENA metadata model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html#the-ena-metadata-model>`_
-and what parts of your research project can be represented by which metadata objects. This will determine what you need to submit.
+Before submitting data to ENA, it is important to familiarise yourself with the ENA Metadata Model, to determine what parts of
+your dataset can be represented by which ENA object. This will determine what you need to submit.
 
+- ENA Documentation: `ENA metadata model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html#the-ena-metadata-model>`_
+- Tweetorial:
 
 .. raw:: html
+   :align: center
 
 
     <embed>
@@ -108,8 +113,8 @@ Data submissions to the ENA require that you register a study to contextualise a
 this can be found in our `Study Registration Guide <https://ena-docs.readthedocs.io/en/latest/submit/study.html>`_.
 Please ensure you describe your study adequately, as well as provide an informative title.
 
-Your  studies can now be claimed using your ORCID ID and/or assigned a DOI. Please see `here <https://ena-browser-docs.readthedocs.io/en/latest/about/citing-ena.html#orcid-data-claiming>`_
-and `here <https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html#doi-issuing>`_ for more information on these options.
+Your  studies can now be claimed using your ORCID ID and/or assigned a DOI. Please see `here (ORCID)<https://ena-browser-docs.readthedocs.io/en/latest/about/citing-ena.html#orcid-data-claiming>`_
+and `here (DOI)<https://ena-browser-docs.readthedocs.io/en/latest/help_and_guides/sars-cov-2-submissions.html#doi-issuing>`_ for more information on these options.
 
 Register Samples
 ````````````````
@@ -129,7 +134,7 @@ Sample checklists
 '''''''''''''''''
 The following Sample checklists contain  **mandatory**, *recommended* and optional metadata fields (``<SAMPLE_ATTRIBUTE>``),
 with a description for each field, to help with sample metadata completion.
-The checklists were agreed by the Genomic Standards Consortium (GSC). In addition to the core checklist for each life domain,
+The checklists are agreed by the Genomic Standards Consortium (GSC). In addition to the core checklist for each life domain,
 the GSC also provides checklist `extensions <https://www.gensc.org/pages/standards/extensions.html>`_ which may have the
 metadata field you are looking for.
 
@@ -173,7 +178,7 @@ in the checklists. If you specify the strain with both, this will make your stra
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
 
-Sample host
+Sample Host
 '''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
@@ -270,8 +275,9 @@ For example, the following manifest file represents a genome assembly consisting
 Chromosome list file
 ''''''''''''''''''''
 
-The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
-for permitted values.
+The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated
+file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+for permitted values. Here are some examples for different organisms:
 
 .. tabs::
 
@@ -347,7 +353,7 @@ For information about data release, please find more information at the followin
 
 - `Data Release Policies <https://ena-docs.readthedocs.io/en/latest/faq/release.html>`_
 
-- `Accession numbers <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html>`_
+- `Accession Numbers <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html>`_
 
-- `Citing and Orcid data claiming <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html#how-to-cite-your-ena-study>`_
+- `Citing and Orcid Data Claiming <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/accessions.html#how-to-cite-your-ena-study>`_
 

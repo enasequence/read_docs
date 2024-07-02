@@ -3,9 +3,9 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-=============================
-ENA: Guidelines and Tutorials
-=============================
+=================
+ENA Documentation
+=================
 
 Welcome to the guidelines for submission and retrieval for the European Nucleotide Archive.
 Please use the links to find instructions specific to
@@ -30,6 +30,7 @@ bottom of the page.
    :maxdepth: 1
 
    retrieval/general-guide
+   faq/analysis-and-accessions.rst
    retrieval/ena-project
    retrieval/file-download
    retrieval/advanced-search
@@ -56,9 +57,19 @@ bottom of the page.
    faq/missing-values
    faq/locus_tags
    faq/archive-generated-files
+   faq/archive-generated-analysis-files
    faq/third_party_tools
    faq/data_brokering
    faq/orcid-claiming
+
+
+.. toctree::
+   :caption: Additional Guides
+   :maxdepth: 1
+
+   faq/pathogen-subs-guide
+   faq/cohort-subs-guide
+   submit/annotation/clearinghouse_for_ENA_users
 
 
 Introductory Webinar
@@ -69,9 +80,11 @@ Introductory Webinar
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://www.youtube.com/embed/p2-mE45Ezyk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
-
 .. Extra
 .. *****
+
+
+
 
 .. * :ref:`genindex`
 .. * :ref:`modindex`
