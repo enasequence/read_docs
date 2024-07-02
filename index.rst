@@ -30,6 +30,7 @@ bottom of the page.
    :maxdepth: 1
 
    retrieval/general-guide
+   faq/analysis-and-accessions.rst
    retrieval/ena-project
    retrieval/file-download
    retrieval/advanced-search
@@ -56,6 +57,7 @@ bottom of the page.
    faq/missing-values
    faq/locus_tags
    faq/archive-generated-files
+   faq/archive-generated-analysis-files
    faq/third_party_tools
    faq/data_brokering
    faq/orcid-claiming
