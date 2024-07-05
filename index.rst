@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 =============================
-ENA: Guidelines and Tutorials
+ENA Documentation
 =============================
 
 Welcome to the guidelines for submission and retrieval for the European Nucleotide Archive.
@@ -56,6 +56,8 @@ bottom of the page.
    faq/missing-values
    faq/locus_tags
    faq/archive-generated-files
+   faq/archive-generated-analysis-files
+   faq/analysis-and-accessions.rst
    faq/third_party_tools
    faq/data_brokering
    faq/orcid-claiming
