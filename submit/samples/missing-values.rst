@@ -41,12 +41,12 @@ INSDC Missing Value Reporting Terms
 |                            |                              | |                                             |                                  | | was not collected or reported in records        |
 |                            |                              | |                                             |                                  | | predating the 2023 agreement. For use in        |
 |                            |                              | |                                             |                                  | | Third Party data submissions.                   |
-|                            +------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
-|                            | not provided                 | | information of an expected format was not   | data agreement established       | | Data agreements were established before the     |
+|----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| missing                    | not provided                 | | information of an expected format was not   | data agreement established       | | Data agreements were established before the     |
 |                            |                              | | given, a value may be given at the later    | pre-2023                         | | 2023 INSDC standard and metadata can not be     |
 |                            |                              | | stage                                       |                                  | | provided. A value may be given at a later stage |
-|                            +------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
-|                            | restricted access            | | information exists but can not be released  | endangered species               | | Information can not be reported as the target   |
+|----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| missing                    | restricted access            | | information exists but can not be released  | endangered species               | | Information can not be reported as the target   |
 |                            |                              | | openly because of privacy concerns          |                                  | | organism is endangered e.g. on the IUCN red-    |
 |                            |                              | |                                             |                                  | | list                                            |
 |                            |                              | |                                             +----------------------------------+---------------------------------------------------+
