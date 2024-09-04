@@ -8,10 +8,10 @@ Introduction
 Within ENA, raw reads are represented as ‘run’ and ‘experiment’ submission objects.
 
 - **Experiment**: The experiment submission holds metadata that describe the methods used to sequence the sample,
-including library and instrument details.
+  including library and instrument details.
 
 - **Run**: A run is part of an experiment and refers to data files containing sequence reads. The run submission holds
-information about the raw read files generated in a run of sequencing as well as their location on an FTP server.
+  information about the raw read files generated in a run of sequencing as well as their location on an FTP server.
 
 When submitting read data interactively, one Run is always linked with one Experiment object. Experiments are
 linked with one Sample and one Study.
@@ -19,23 +19,25 @@ linked with one Sample and one Study.
 .. image:: ../images/metadata_model_reads.png
    :align: center
 
-If you are not yet familiar with the ENA metadata model, please see here for some more information. To submit raw read
-sequencing data to ENA you must also provide some metadata to describe the biological material which was sequenced.
-This helps make your data re-useable and searchable. A raw read submission references ENA Sample and Study objects,
-and you must submit these before you can submit your read data.
+If you are not yet familiar with the ENA metadata model, please see :doc:`here <../general-guide/metadata>`_ for some
+more information. To submit raw read sequencing data to ENA you must also provide some metadata to describe the biological
+material which was sequenced. This helps make your data re-useable and searchable. A raw read submission references ENA
+Sample and Study objects, and you must submit these before you can submit your read data.
 
 To archive your read data interactively at the ENA, you will need to complete the following steps:
 
-**1. Register a Study**, see :doc:`How to Register a Study <../study/interactive>`
-**2. Register Samples**, see :doc:`How to Register a Sample <../samples/interactive>`
-**3. Upload read files**
+- **Register a Study**, see :doc:`How to Register a Study <../study/interactive>`
+
+- **Register Samples**, see :doc:`How to Register a Sample <../samples/interactive>`
+
+- **Upload read files**
 
 First check to make sure your reads are in the correct format, as detailed in :doc:`Accepted Read Data Formats <https:../fileprep/reads>`.
 Next, :doc:`Prepare Files for Upload <../fileprep/preparation>`.
 Finally, :doc:`Upload your read files <../fileprep/upload>` to your
 Webin file upload area.
 
-**4. Submit your read records** (detailed here in Steps A-C)
+- **Submit your read records** (detailed here in Steps 1-3)
 
 To start your read submission, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_.
 You will need to complete three steps, described below:
@@ -50,7 +52,7 @@ All submissions to the test version are overwritten within 24 hours, so your sub
 To be sure that you are in the test environment, always check for the 'wwwdev' URL.
 
 
-Step A: Select A Read Spreadsheet
+Step 1: Select A Read Spreadsheet
 =================================
 
 
@@ -72,7 +74,7 @@ To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/lo
 6. Click 'Download TSV Template' to acquire a copy of your customised template spreadsheet
 
 
-Step B: Complete The Template Spreadsheet
+Step 2: Complete The Template Spreadsheet
 =========================================
 
 
@@ -104,7 +106,7 @@ Consider the following tips as you complete your spreadsheet:
 Once you are satisfied that your spreadsheet content is complete, save the file and move on to the final step.
 
 
-Step C: Submit The Template Spreadsheet
+Step 3: Submit The Template Spreadsheet
 =======================================
 
 
