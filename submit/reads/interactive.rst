@@ -33,7 +33,9 @@ To archive your read data interactively at the ENA, you will need to complete th
 - **Upload read files**
 
 First check to make sure your reads are in the correct format, as detailed in :doc:`Accepted Read Data Formats <https:../fileprep/reads>`.
+
 Next, :doc:`Prepare Files for Upload <../fileprep/preparation>`.
+
 Finally, :doc:`Upload your read files <../fileprep/upload>` to your
 Webin file upload area.
 
@@ -42,9 +44,9 @@ Webin file upload area.
 To start your read submission, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_.
 You will need to complete three steps, described below:
 
-A. Select and customise a read submission template spreadsheet
-B. Fill out the template spreadsheet
-C. Validate and submit the template spreadsheet
+1. Select and customise a read submission template spreadsheet
+2. Fill out the template spreadsheet
+3. Validate and submit the template spreadsheet
 
 If you are unsure, you are welcomed and encouraged to test out your submission through the Webin Portal
 `test version <https://wwwdev.ebi.ac.uk/ena/submit/webin/>`_.
