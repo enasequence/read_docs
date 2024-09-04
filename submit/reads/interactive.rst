@@ -19,7 +19,7 @@ linked with one Sample and one Study.
 .. image:: ../images/metadata_model_reads.png
    :align: center
 
-If you are not yet familiar with the ENA metadata model, please see :doc:`here <../general-guide/metadata>`_ for some
+If you are not yet familiar with the ENA metadata model, please see :doc:`here <../general-guide/metadata>` for some
 more information. To submit raw read sequencing data to ENA you must also provide some metadata to describe the biological
 material which was sequenced. This helps make your data re-useable and searchable. A raw read submission references ENA
 Sample and Study objects, and you must submit these before you can submit your read data.
