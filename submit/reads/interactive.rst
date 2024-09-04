@@ -2,8 +2,6 @@
 Submit Raw Reads Interactively
 ==============================
 
-Introduction
-============
 
 Within ENA, raw reads are represented as ‘run’ and ‘experiment’ submission objects.
 
@@ -23,6 +21,9 @@ If you are not yet familiar with the ENA metadata model, please see :doc:`here <
 more information. To submit raw read sequencing data to ENA you must also provide some metadata to describe the biological
 material which was sequenced. This helps make your data re-useable and searchable. A raw read submission references ENA
 Sample and Study objects, and you must submit these before you can submit your read data.
+
+Step 0: Prepare the submission
+==============================
 
 To archive your read data interactively at the ENA, you will need to complete the following steps:
 

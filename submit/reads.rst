@@ -26,16 +26,16 @@ your read data. Please see:
 - `Register a study <study.html>`_
 - `Register a sample <samples.html>`_
 
-.. caution:: Accessions Report
+Accessions Report
+=================
 
-   Once the raw reads are registered, Webin will report two unique accession numbers for each read submission.
-   The first starts with ERR and is called the Run accession.
-   The other starts with ERX and is called the Experiment accession.
+Once the raw reads are registered, Webin will report two unique accession numbers for each read submission.
+The first starts with ERR and is called the Run accession.
+The other starts with ERX and is called the Experiment accession.
 
-   Always make a note of any accessions you receive as these are the unique identifiers for each of your submissions to
-   ENA.
-   You can always review your read submissions within the
-   `interactive submission interface <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/submissions-portal.html>`_.
+Always make a note of any accessions you receive as these are the unique identifiers for each of your submissions to
+ENA.
+You can always review your read submissions within the :doc:`interactive submission interface <./general-guide/submissions-portal.html>`.
 
 
 Submission Options
