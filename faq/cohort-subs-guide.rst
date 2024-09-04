@@ -1,5 +1,5 @@
-Submit Multi-Omic Cohort Datasets
-=================================
+How to Submit Multi-Omic Cohort Datasets
+========================================
 
 This guide includes information about how to submit a multi-omic dataset to be displayed as an entry in the `Pathogens
 Portal Cohort browser <https://www.pathogensportal.org/cohorts?activeTab=Browser>`_.
@@ -32,18 +32,17 @@ for data in multiple databases:
 
 Steps
 `````
-The steps detailed here provide an overview of how to create a multi-omic dataset record.
-Before starting a submission, we strongly advise you to contact us at cohort-dataflow@ebi.ac.uk if you are planning to submit a
-linked cohort dataset, including some details about your study, and we can give guidance on your sample structure, and how
-to complete the data submissions. The Samples structure will be be created in the `BioSamples Archive <https://www.ebi.ac.uk/biosamples/>`_
-, which is a resource at the EBI (European Bioinformatics Institute).
+The steps below provide an overview of creating a multi-omic dataset. Before starting a submission, we strongly advise
+you to contact us at cohort-dataflow@ebi.ac.uk if you are planning to submit a linked cohort dataset, including some
+details about your study, and we can give guidance on your sample structure, and how to complete the data submissions.
 
-1. Create the top-level Sample
-''''''''''''''''''''''''''''''
+1. Create the top-level BioSample
+'''''''''''''''''''''''''''''''''
 
-The first step is to create top-level Samples. These Samples will represent each case or patient in the study.
-This is represented by Sample #1 in the diagram. If this is a human sample, this can contain minimal, non-identifying metadata about
-the patient (e.g. gender, organism, disease). See an example `here <https://www.ebi.ac.uk/biosamples/samples/SAMEA12928716>`_.
+The first step is to create top-level Samples using the `BioSamples Archive <https://www.ebi.ac.uk/biosamples/>`_.
+These Samples will represent each case or patient in the study. This is represented by Sample #1 in the diagram.
+If this is a human sample, this can contain minimal, non-identifying metadata about the patient (e.g. gender,
+organism, disease). See an example `here <https://www.ebi.ac.uk/biosamples/samples/SAMEA12928716>`_.
 
 Top-level Sample records can be created in BioSamples using the `BioSamples uploader tool <https://www.ebi.ac.uk/biosamples/docs/cookbook/upload_files>`_.
 
@@ -55,12 +54,13 @@ Top-level Sample records can be created in BioSamples using the `BioSamples uplo
 2. Submit Pathogen Sequence data to the ENA
 '''''''''''''''''''''''''''''''''''''''''''
 
-The next step is to submit your pathogen nucleotide records (raw reads or assembly data) to the ENA.
+The next step is to submit your nucleotide records (raw reads or assembly data) to the ENA.
 The :doc:`Pathogen Submissions Guide <faq/pathogen-subs-guide>` provides a quick introduction to the ENA and tips for
 Pathogen data submissions.
+Otherwise, please refer to the :doc:`ENA General Submissions Guide <../submit/general-guide>`.
 
 
-2. Create the child Samples in additional database resources
+3. Submit other data types to appropriate database resources
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The next step is to create your datasets in the correct database for the data type. The `EBI submissions wizard
@@ -71,16 +71,19 @@ We can reccommend the following database resources for common data types:
   contact the `EGA (European Genome Phenome Archive) <https://ega-archive.org/>`_ to start a submission.
 - For expression data, or uncategorsied datasets, please use `ArrayExpress/BioStudies <https://www.ebi.ac.uk/biostudies/arrayexpress>`_
 
+4. Create the child BioSamples for linking
+''''''''''''''''''''''''''''''''''''''''''
+
 After the datasets have been submitted in the appropriate databases, the required child Samples for linking can be created.
 The child samples will represent their relationship to the top-level Sample. Different samples can be used for different
 data types **and** for different time points. Please contact us if you have any doubts about setting up your sample structure.
 
 
-3. Link together the samples using BioSamples
+5. Link together the samples using BioSamples
 ''''''''''''''''''''''''''''''''''''''''''''''
 
-Link your samples created from other EBI resources to the top-level sample using the ‘derived from’ curation
-on biosamples: https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object
+Link your samples created from other EBI resources to the top-level sample using a
+`BioSamples ‘derived from’ curation <https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object> `_.
 
 Link your samples created from other EBI resources to the top-level sample using the ‘derived from’ curation on
 BioSamples. The derived from relationship is used as follows, where the Source is the child Sample, and the Target is
@@ -90,7 +93,7 @@ the top-level Sample:
 
 **Child sample accession** - *derived from* - **Parent sample accession**
 
-For example, in the first linked dataset, the `EMC study <https://www.ebi.ac.uk/about/news/updates-from-data-resources/pathogens-portal-linked-dataset/>`_,
+For example, in the first linked dataset, the `Erasmus Medical Cemter (EMC) study <https://www.infectious-diseases-toolkit.org/showcase/linked-cohort-data>`_,
 the BioSamples relationship is as follows:
 
 **[T/B-Cell/Antibody profile/ENA viral sample accession]** - *derived from* - **[Top level patient sample accession]**
@@ -120,11 +123,10 @@ JSON curation:
 
 ..
 
-There is also a `python script<https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object>`_
-which can be used to create the sample relationships. Please contact ena-path-collabs@ebi.ac.uk for technical support
-with any questions related to sample linking using BioSamples.
+Please contact ena-path-collabs@ebi.ac.uk for technical support with any questions related to sample
+linking using BioSamples.
 
-4. Submit the cohort metadata
+6. Submit the cohort metadata
 '''''''''''''''''''''''''''''
 
 While the BioSamples database is key to capturing the linking of data types on participant level, the
