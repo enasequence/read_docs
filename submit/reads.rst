@@ -13,6 +13,7 @@ material which was sequenced. This helps make your data re-useable and searchabl
    :align: center
 
 Within ENA, raw reads are represented as ‘run’ and ‘experiment’ submission objects.
+
 - **Experiment**: The experiment submission holds metadata that describe the methods used to sequence the sample,
   including library and instrument details.
 
