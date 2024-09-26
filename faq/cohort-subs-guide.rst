@@ -83,7 +83,7 @@ data types **and** for different time points. Please contact us if you have any 
 ''''''''''''''''''''''''''''''''''''''''''''''
 
 Link your samples created from other EBI resources to the top-level sample using a
-`BioSamples ‘derived from’ curation <https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object> `_.
+`BioSamples derived from curation <https://www.ebi.ac.uk/biosamples/docs/references/api/submit#_submit_curation_object> `_.
 
 Link your samples created from other EBI resources to the top-level sample using the ‘derived from’ curation on
 BioSamples. The derived from relationship is used as follows, where the Source is the child Sample, and the Target is
