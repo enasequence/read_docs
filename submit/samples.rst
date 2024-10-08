@@ -47,6 +47,9 @@ Please only use the **ENA default sample** checklist if you have been advised th
 If you cannot provide a value for a mandatory field within a checklist, please use one of the
 `INDSC accepted terms <samples/missing-values.html>`_ for missing value reporting.
 
+.. note::
+   As per January 2025, the sample validation service will be replaced by validation via the `BioSamples Database (BSD) <https://www.ebi.ac.uk/biosamples/>`_.
+   The only difference for the user will be the error messages; Please see a `summary table here <samples/sample_checklist/sample_checklist_errors.md>`_
 
 Taxonomy
 --------
