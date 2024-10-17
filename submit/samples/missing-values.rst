@@ -21,17 +21,17 @@ INSDC Missing Value Reporting Terms
 +----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
 | **INSDC term (top level)** | **INSDC term (lower level)** | **Definition**                                | **INSDC term (reporting level)** |  **Definition**                                   |
 +============================+==============================+===============================================+==================================+===================================================+
-| not applicable             |                              |   information is inappropriate to report, can | control sample                   |   Information is not applicable as the sample     |
-|                            |                              |   indicate that the standard itself fails to  |                                  |   represents a negative control sample            |
-|                            |                              |   model or represent the information          |                                  |   collected in a lab                              |
-|                            |                              |   appropriately                               +----------------------------------+---------------------------------------------------+
+| not applicable             |                              | information is inappropriate to report, can   | control sample                   |   Information is not applicable as the sample     |
+|                            |                              | indicate that the standard itself fails to    |                                  |   represents a negative control sample            |
+|                            |                              | model or represent the information            |                                  |   collected in a lab                              |
+|                            |                              | appropriately                                 +----------------------------------+---------------------------------------------------+
 |                            |                              |                                               | sample group                     |   Information is not applicable as the sample     |
 |                            |                              |                                               |                                  |   represents a group of samples that do not       |
 |                            |                              |                                               |                                  |   have a single origin. E.g. for co-assembly or   |
 |                            |                              |                                               |                                  |   transcriptome assembly.                         |
 +----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
-| missing                    | not collected                |   information of an expected format was not   | synthetic construct              |   Information does not exist as the sample        |
-|                            |                              |   given because it has not been collected     |                                  |   represents an ab-initio synthetic construct.    |
+| missing                    | not collected                | information of an expected format was not     | synthetic construct              |   Information does not exist as the sample        |
+|                            |                              | given because it has not been collected       |                                  |   represents an ab-initio synthetic construct.    |
 |                            |                              |                                               +----------------------------------+---------------------------------------------------+
 |                            |                              |                                               | lab stock                        |   Information was not collected as the sample     |
 |                            |                              |                                               |                                  |   represents a cultured cell line or model        |
@@ -41,13 +41,13 @@ INSDC Missing Value Reporting Terms
 |                            |                              |                                               |                                  |   was not collected or reported in records        |
 |                            |                              |                                               |                                  |   predating the 2023 agreement. For use in        |
 |                            |                              |                                               |                                  |   Third Party data submissions.                   |
-|----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
-| missing                    | not provided                 |   information of an expected format was not   | data agreement established       |   Data agreements were established before the     |
-|                            |                              |   given, a value may be given at the later    | pre-2023                         |   2023 INSDC standard and metadata can not be     |
-|                            |                              |   stage                                       |                                  |   provided. A value may be given at a later stage |
-|----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
-| missing                    | restricted access            |   information exists but can not be released  | endangered species               |   Information can not be reported as the target   |
-|                            |                              |   openly because of privacy concerns          |                                  |   organism is endangered e.g. on the IUCN red-    |
++----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| missing                    | not provided                 | information of an expected format was not     | data agreement established       |   Data agreements were established before the     |
+|                            |                              | given, a value may be given at the later      | pre-2023                         |   2023 INSDC standard and metadata can not be     |
+|                            |                              | stage                                         |                                  |   provided. A value may be given at a later stage |
++----------------------------+------------------------------+-----------------------------------------------+----------------------------------+---------------------------------------------------+
+| missing                    | restricted access            | information exists but can not be released    | endangered species               |   Information can not be reported as the target   |
+|                            |                              | openly because of privacy concerns            |                                  |   organism is endangered e.g. on the IUCN red-    |
 |                            |                              |                                               |                                  |   list                                            |
 |                            |                              |                                               +----------------------------------+---------------------------------------------------+
 |                            |                              |                                               | human-identifiable               |   Information can not be reported as the          |
