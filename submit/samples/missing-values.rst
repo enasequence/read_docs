@@ -60,13 +60,10 @@ Usage of INSDC Missing Value Reporting Terms
 ============================================
 
 Please use the above standardised missing value vocabulary **only if a true value of an expected format for a mandatory field is missing**. If a true value is missing for a **recommended** or an **optional** field, then these fields should not be used for reporting at all. When reporting a missing mandatory field, the eight granular **‘reporting level’** terms need to be preceded with the term  *missing:* to declare both the absence of a true value as well as the reason.
-*not applicable* is only ever used as top level term, its reporting level terms ought to be prefixed by *missing:*.
+*not applicable* is only ever used as a top level term, its reporting level terms ought to be prefixed by *missing:*
 
-Example of usage:
------------------
-
-**geographic location (country and/or sea)**: *missing: data agreement-established pre-2023*
-
-**collection date**:  *missing: control sample*
-
-**geographic location (country and/or sea)**:  *missing: human-identifiable*
+Examples of Usage:
+------------------
+- **geographic location (country and/or sea)**: *missing: data agreement-established pre-2023*
+- **collection date**:  *missing: control sample*
+- **geographic location (country and/or sea)**:  *missing: human-identifiable*
