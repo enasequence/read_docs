@@ -64,6 +64,6 @@ Please use the above standardised missing value vocabulary **only if a true valu
 
 Examples of Usage:
 ------------------
-- **geographic location (country and/or sea)**: *missing: data agreement-established pre-2023*
+- **geographic location (country and/or sea)**: *missing: data agreement established pre-2023*
 - **collection date**:  *missing: control sample*
 - **geographic location (country and/or sea)**:  *missing: human-identifiable*
