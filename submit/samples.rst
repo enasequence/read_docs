@@ -48,8 +48,8 @@ If you cannot provide a value for a mandatory field within a checklist, please u
 `INDSC accepted terms <samples/missing-values.html>`_ for missing value reporting.
 
 .. note::
-   As per January 2025, the sample validation service will be replaced by validation via the `BioSamples Database (BSD) <https://www.ebi.ac.uk/biosamples/>`_.
-   The only difference for the user will be the error messages; Please see a `summary table here <samples/sample_checklist/sample_checklist_errors.md>`_
+   From January 2025, the sample validation service will be replaced by validation via the `BioSamples Database (BSD) <https://www.ebi.ac.uk/biosamples/>`_.
+   Checklists will still be submitted in the same manner as you previously have done; please see a `summary table here <samples/sample_checklist/sample_checklist_errors.md>`_
 
 Taxonomy
 --------
