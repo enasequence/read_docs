@@ -1,8 +1,7 @@
 # Sample validation errors
 
 When you submit your samples and select to validate them against a checklist, you may get errors in your receipt based
-on the validation. As per January 2025, these errors are going to be deprecated, in favour of sample validation via the
-[BioSamples Database (BSD)](https://www.ebi.ac.uk/biosamples/). While the validation will be the same, error messages 
+on the validation. As per January 2025, these errors are going to be deprecated. While the validation will be the same, error messages 
 will differ between the previous XML schema validation and the new JSON schema validation.
 
 Below is a table, compiling the comparison of all the possible errors related to checklist validation:
