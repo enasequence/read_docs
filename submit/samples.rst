@@ -88,3 +88,4 @@ Find specific advice on registering studies using your preferred method below:
 
    samples/interactive
    samples/programmatic
+   samples/sample_checklist
