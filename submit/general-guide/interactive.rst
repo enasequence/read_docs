@@ -33,7 +33,7 @@ What Can Be Submitted Through Webin Portal?
 
 Some submissions can be done entirely through Webin Portal, for example you could submit a study comprising only read data
 without needing to use any of the other submission interfaces.
-However Some types of submission cannot be completed via Webin Portal and must be done through our other submission routes.
+However, some types of submission cannot be completed via Webin Portal and must be done through our other submission routes.
 Usually, this is because some submission types are limited to our Webin-CLI tool, which has extensive pre-submission
 data validation capability built in and is able to flag up errors in your data before you submit it.
 Because of this, Webin-CLI is recommended for all circumstances in which it is an option.
