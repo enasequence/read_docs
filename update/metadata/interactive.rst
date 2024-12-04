@@ -24,7 +24,7 @@ For samples, there may sometimes be good reason to add, remove, or edit the elem
 - 1: `Study Edits`_
 - 2: `Sample Edits`_
 - 3: `Experiment And Run Edits`_
-- 4: `Analysis Edits`
+- 4: `Analysis Edits`_
 
 
 Study Edits
