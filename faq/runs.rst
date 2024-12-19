@@ -161,7 +161,7 @@ The Problem
 Submitted files content has not been validated. There are two possible reasons for this happening:
 
 - There was a delay during the processing of your run files causing the error to be reported
-- The content of the read file submission does not meet our validation standard
+- The content of the read file submission does not meet our validation standard (e.g. empty file with zero reads)
 
 
 The Solution
