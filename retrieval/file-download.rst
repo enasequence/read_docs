@@ -213,6 +213,8 @@ If you face any issues, please provide the logs with your helpdesk ticket.
 e.g.
 ascp -T -l 300m -P 33001 -L- -i path/to/a...
 
+Reference - `<https://embl.service-now.com/kb?id=kb_article_view&sys_kb_id=4cc60cf8c398a610bf313dfc0501314c#mcetoc_1idpn4k0to>`_
+
 Unix/Linux/Mac
 ^^^^^^^^^^^^^^
 
