@@ -235,8 +235,8 @@ To do this:
 5. You will be presented with the run in XML format: find the ``<FILE>`` elements
 6. There may be one or more ``<FILE>`` elements, e.g. if you have submitted paired FASTQ files. Find the relevant one by
    reference to its 'filename' value
-7. Remove the 'checksum' value for the errored file(s) and enter the correct value. The checksum is shown in the pink
-   box:
+7. Remove the 'checksum' value for the errored file(s) and enter the correct value. The checksum is highlighted in pink
+   in the image shown below:
 
 .. image:: images/run_errors_md5_edit.png
 
