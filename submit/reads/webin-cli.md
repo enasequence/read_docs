@@ -38,7 +38,7 @@ A sequence read submission consists of the following files:
 - 1 BAM file, 1 CRAM file, 1-2 Fastq files or multiple fastq files
 
 > [!TIP]
-> Read names must not exceed a length of 256 characters. For more information on file format, see `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format>`_.
+> Read names must not exceed a length of 256 characters. For more information on file format, see [here](https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format).
 
 
 ### Manifest file
