@@ -105,11 +105,8 @@ State of publicity will be the same:
   and you should allow at least a week after successful submission for your
   update to be apparent.
 
-Allow 30 minutes after original submission:
-  If the update is submitted less than 30 minutes after the original
-  submission, it will fail after submission.
-  This is a failsafe to prevent duplicate submissions, but does occasionally
-  inconvenience some genuine use cases.
+Allow 24 hours after original submission:
+ Please submit any update at least 24 hours after the original submission, to avoid any issues in processing and delays in publication.
 
 Metagenomic Assemblies:
   Primary and binned metagenome assemblies cannot be updated.
