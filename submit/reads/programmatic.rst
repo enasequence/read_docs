@@ -138,6 +138,10 @@ with the name of the subdirectory:
 
     <FILE filename="mantis_religiosa/mantis_religiosa_R1.fastq.gz" ... />
 
+.. tip::
+    Read names must not exceed a length of 256 characters. For more information on file format, see `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format>`_.
+
+
 Create the Run and Experiment XML
 =================================
 

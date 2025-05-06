@@ -28,6 +28,9 @@ If you are unsure, you are welcomed and encouraged to test out your submission t
 All submissions to the test version are overwritten within 24 hours, so your submissions here are consequence-free.
 To be sure that you are in the test environment, always check for the 'wwwdev' URL.
 
+.. tip::
+    Read names must not exceed a length of 256 characters. For more information on file format, see `here <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html#fastq-format>`_.
+
 
 .. _Step 1:
 
