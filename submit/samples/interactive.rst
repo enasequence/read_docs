@@ -71,7 +71,7 @@ Consider the following tips as you complete your spreadsheet:
 - You can add custom fields by inserting new column headers
 - Do not edit the existing column names
 - Use only valid ASCII characters
-- When you come to submit the file must use one of the following extensions: .csv, .tsv, .tab, .txt
+- When you come to submit the file must use one of the following extensions: .tsv, .tab
 
 
 
