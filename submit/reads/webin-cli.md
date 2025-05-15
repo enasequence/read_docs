@@ -315,6 +315,7 @@ Deprecated:
 - WGA: Whole Genome Amplification followed by random sequencing. (see pubmed 1631067,8962113 for details)
 - WXS: Random sequencing of exonic regions selected from the genome. (see pubmed 20111037 for details)
 - RNA-Seq: Random sequencing of whole transcriptome, also known as Whole Transcriptome Shotgun Sequencing, or WTSS). (see pubmed 18611170 for details)
+- snRNA-seq: Single nucleus RNA sequencing is a method for profiling gene expression in cells which are difficult to isolate.
 - ssRNA-seq: Strand-specific RNA sequencing.
 - miRNA-Seq: Micro RNA sequencing strategy designed to capture post-transcriptional RNA elements and include non-coding functional elements. (see pubmed 21787409 for details)
 - ncRNA-Seq: Capture of other non-coding RNA types, including post-translation modification types such as snRNA (small nuclear RNA) or snoRNA (small nucleolar RNA), or expression regulation types such as siRNA (small interfering RNA) or piRNA/piwi/RNA (piwi-interacting RNA).
@@ -323,7 +324,7 @@ Deprecated:
 - Hi-C: Chromosome Conformation Capture technique where a biotin-labeled nucleotide is incorporated at the ligation junction, enabling selective purification of chimeric DNA ligation junctions followed by deep sequencing.
 - ATAC-seq: Assay for Transposase-Accessible Chromatin (ATAC) strategy is used to study genome-wide chromatin accessibility. alternative method to DNase-seq that uses an engineered Tn5 transposase to cleave DNA and to integrate primer DNA sequences into the cleaved genomic DNA.
 - WCS: Random sequencing of a whole chromosome or other replicon isolated from a genome.
-- RAD-Seq: 
+- RAD-Seq: Restriction site associated DNA markers.
 - CLONE: Genomic clone based (hierarchical) sequencing.
 - POOLCLONE: Shotgun of pooled clones (usually BACs and Fosmids).
 - AMPLICON: Sequencing of overlapping or distinct PCR or RT-PCR products. For example, metagenomic community profiling using SSU rRNA.
@@ -335,9 +336,12 @@ Deprecated:
 - DNase-Hypersensitivity: Sequencing of hypersensitive sites, or segments of open chromatin that are more readily cleaved by DNaseI.
 - Bisulfite-Seq: MethylC-seq. Sequencing following treatment of DNA with bisulfite to convert cytosine residues to uracil depending on methylation status.
 - CTS: Concatenated Tag Sequencing
+- ChM-Seq: ChIPmentation combines chromatin immunoprecipitation with sequencing library preparation by Tn5 transposase (see pubmed 26280331 for details)
+- GBS: Genotyping by sequencing is a method to discover single nucleotide polymorphisms for genotyping studies.
 - MRE-Seq: Methylation-Sensitive Restriction Enzyme Sequencing.
 - MeDIP-Seq: Methylated DNA Immunoprecipitation Sequencing.
 - MBD-Seq: Methyl CpG Binding Domain Sequencing.
+- NOMe-Seq: Nucleosome Occupancy and Methylome sequencing.
 - Tn-Seq: Quantitatively determine fitness of bacterial genes based on how many times a purposely seeded transposon gets inserted into each gene of a colony after some time.
 - VALIDATION: CGHub special request: Independent experiment to re-evaluate putative variants.
 - FAIRE-seq: Formaldehyde Assisted Isolation of Regulatory Elements. Reveals regions of open chromatin.
@@ -346,7 +350,7 @@ Deprecated:
 - ChIA-PET: Direct sequencing of proximity-ligated chromatin immunoprecipitates.
 - Synthetic-Long-Read: binning and barcoding of large DNA fragments to facilitate assembly of the fragment
 - Targeted-Capture: Enrichment of a targeted subset of loci.
-- Tethered Chromatin Conformation Capture: 
+- Tethered Chromatin Conformation Capture: Tethered Chromatin Conformation Capture.
 - OTHER: Library strategy not listed.
 
 
