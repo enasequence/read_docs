@@ -1,0 +1,47 @@
+===============================
+Sample Checklist System Changes
+===============================
+
+Introduction
+============
+
+At ENA we have been increasing the integration with `BioSamples <https://www.ebi.ac.uk/biosamples/>`_. Any sample metadata submitted to ENA, is now automatically being submitted into BioSamples. This has many advantages and some disadvantages, notably the submission metadata requirements are more exacting, with less automatic curation.
+
+This is all part of modernising ENA's metadata infrastructure to make it more consistent and maintainable. We have been discovering and trying to resolve many of the inevitable inconsistencies decades of operation. Some inconsistencies are being raised to standards bodies(especially GSC MIxS). The overall aim is to increase the findability and interoperability of your valuable scientific data for the wider scientific community.
+
+For those interested, the submission validation is using `bioschema.org <http://bioschemas.org>`_ which will also allow us in the future to validate ontology terms etc.
+
+Major Changes
+=============
+
+.. csv-table:: Table: Major Changes as of 2025
+   :header: "Entity","What", "Comment", "Examples"
+   :widths: 8, 10, 15, 40
+
+   "Checklists", "Version of checklists are now implemented", "Please always use the latest version of the checklist for submission. The versioning allows us to more easily accommodate changes to checklists and values.","For the *GSC MIxS soil* checklist we have the following versions: ERC000022:**1.0**, ERC000022:**1.1**, ERC000022:**1.2**"
+   "Checklists","Biosamples is the source of truth of ENA checklists","We are endeavouring to keep the checklists up to date in ENA","please see the section below: **How to Query Bioportal for your Checklist**"
+   "Field Names","Are case sensitive ",  "previously it was case insensitive. There are currently 62 field names with upper case characters.", "16S recovery software, Chlorophyll Sensor, Citation, DNA concentration, downward PAR, Event Date/Time End, Event Date/Time Start, Event Label, extreme_unusual_properties/Al saturation, extreme_unusual_properties/Al saturation method, Further Details, GAL, GAL_sample_id, host HIV status, host storage container pH, HRT, IHMC medication code, instrument for DNA concentration measurement, Is the sequenced pathogen host associated?, Last Update Date, Latitude End, Latitude Start, lineage:swl (required for H1N1 viruses), Longitude End, Longitude Start, MAG coverage software, Marine Region, Nitrate Sensor, number of standard tRNAs extracted, OTU classification approach, OTU database, OTU sequence comparison approach, Oxygen Sensor, pH, pH method, pH regimen, Pipeline/UUID, pooled DNA extract total, PPCG ID, PPCG sample ID, Protocol Label, rooting medium pH, Salinity Sensor, Sample Status, sample unique ID, sample volume or weight for DNA extraction, Sampling Campaign, Sampling Platform, Sampling Site, Sampling Station, soil pH, soil_taxonomic/FAO classification, source of UViGs, surface moisture pH, tRNA extraction software, tumor grading (OBI_0600002), UViG assembly quality, was the PDX model humanised?, water pH, WGA amplification approach, WGA amplification kit, WHO/OIE/FAO clade (required for HPAI H5N1 viruses)"
+   "Field Names", "Underscore and spaces are critical", "For legacy reasons use of underscores are inconsistent. There are 35 field names containing underscores, **collected_by** is the most significant.", "bio_material, cell_line, cell_type, collected_by, culture_collection, culture_or_strain_id, dev_stage, disease_site, donor_id, environmental_sample, extreme_unusual_properties/Al saturation, extreme_unusual_properties/Al saturation method, extreme_unusual_properties/heavy metals, extreme_unusual_properties/heavy metals method, GAL_sample_id, identified_by, identifier_affiliation, isolation_source, lab_host, lat_lon, mating_type, passage_history, serovar_in-silico, soil_taxonomic/FAO classification, soil_taxonomic/local classification, soil_taxonomic/local classification method, specimen_id, specimen_voucher, sub_group, sub_species, sub_strain, sub_type, subject_id, tissue_lib, tissue_type, tumor grading (OBI_0600002)"
+   "Values","Are case sensitive where there is a controlled list.",  "previously the submission was case insensitive", ""
+
+
+How to Query Bioportal for your Checklist
+=========================================
+
+Introduction
+------------
+
+Bioportal maintains the ENA(and other checklists) in a database with an API. Currently there is limited documentation on this. An easy way to query this is from a linux/unix/MacOS command line, using the excellent `jq tool <https://jqlang.org/>`_.
+
+The easiest way to see the  `available checklists is via ENA <https://www.ebi.ac.uk/ena/browser/checklists>`_. For the up to date details though, please see the BioPortal version, as they may not be full synchronised.
+Details that may change for example are field_names or allowable values.
+
+.. csv-table:: Table: Some typical queries of Checklists in BioPortal
+   :escape: £
+   :header: "Entity","URL", "Command line", "Comments"
+   :widths: 8, 10, 15, 40
+
+   "Checklists available","https://www.ebi.ac.uk/biosamples/schema-store/api/v2/schemas/list","curl -s 'https://www.ebi.ac.uk/biosamples/schema-store/api/v2/schemas/list' | jq -r '._embedded.schemas | to_entries[]' | jq -r '[.value.accession, .value.name] | @tsv' |  grep '^ERC' | sort -u","The first few: ERC000011	ENA default sample checklist, ERC000012	GSC MIxS air, ERC000013	GSC MIxS host associated"
+   "Details of a checklist","https://wwwdev.ebi.ac.uk/biosamples/schema-store/registry/schemas/ERC000022"," curl -s 'https://wwwdev.ebi.ac.uk/biosamples/schema-store/registry/schemas/ERC000022'  | jq","You will see the full Bioschema JSON file"
+   "All fields in a checklist","https://www.ebi.ac.uk/biosamples/schema-store/registry/schemas/ERC000053","curl -s 'https://www.ebi.ac.uk/biosamples/schema-store/registry/schemas/ERC000053'  | jq -r '.properties.characteristics.properties | keys[]'  | sort","An alphabetically sorted list of field_names in the latest version of the checklist",
+   "All the allowable values for a field_name","https://www.ebi.ac.uk/biosamples/schema-store/api/v2/fields?size=1000","curl -s 'https://www.ebi.ac.uk/biosamples/schema-store/api/v2/fields?size=1000' |  jq '._embedded.fields[]' | jq 'select(.label==£"£geographic location (country and/or sea)£"£)' | jq -s 'sort_by(.lastModifiedDate) | reverse' | jq '.[0]' | jq -r '.choices | .[]'","Get a list of all of the acceptable countries, oceans, seas and missing values"
