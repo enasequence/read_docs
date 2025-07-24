@@ -7,7 +7,7 @@ Introduction
 
 At ENA we have been increasing the integration with `BioSamples <https://www.ebi.ac.uk/biosamples/>`_. Any sample metadata submitted to ENA, is now automatically being submitted into BioSamples. This has many advantages and some disadvantages, notably the submission metadata requirements are more exacting, with less automatic curation.
 
-This is all part of modernising ENA's metadata infrastructure to make it more consistent and maintainable. We have been discovering and trying to resolve many of the inevitable inconsistencies decades of operation. Some inconsistencies are being raised to standards bodies(especially GSC MIxS). The overall aim is to increase the findability and interoperability of your valuable scientific data for the wider scientific community.
+This is all part of modernising ENA's metadata infrastructure to make it more consistent and maintainable. We have been discovering and trying to resolve many of the inevitable inconsistencies in decades of operation. Some inconsistencies are being raised to standards bodies (such as GSC MIxS). The overall aim is to increase the findability and interoperability of your valuable scientific data for the wider scientific community.
 
 For those interested, the submission validation is using `bioschema.org <http://bioschemas.org>`_ which will also allow us in the future to validate ontology terms etc.
 
@@ -31,9 +31,9 @@ How to Query Bioportal for your Checklist
 Introduction
 ------------
 
-Bioportal maintains the ENA(and other checklists) in a database with an API. Currently there is limited documentation on this. An easy way to query this is from a linux/unix/MacOS command line, using the excellent `jq tool <https://jqlang.org/>`_.
+Bioportal maintains the ENA (and other checklists) in a database with an API. Currently there is limited documentation on this. An easy way to query this is from a linux/unix/MacOS command line, using the `jq tool <https://jqlang.org/>`_.
 
-The easiest way to see the  `available checklists is via ENA <https://www.ebi.ac.uk/ena/browser/checklists>`_. For the up to date details though, please see the BioPortal version, as they may not be full synchronised.
+The easiest way to see the  `available checklists is via ENA <https://www.ebi.ac.uk/ena/browser/checklists>`_. For the up to date details though, please see the BioPortal version, as they may not be fully synchronised.
 Details that may change for example are field_names or allowable values.
 
 .. csv-table:: Table: Some typical queries of Checklists in BioPortal
