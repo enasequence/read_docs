@@ -275,7 +275,7 @@ FTP is used in passive mode and connection will be opened to one of the below po
 
 Access to port **21** is required for the following IP address ( webin2.ebi.ac.uk ):
 
-- 193.62.193.143
+- 193.62.193.163
 
 
 File MD5 Checksums Value
