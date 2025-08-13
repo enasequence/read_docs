@@ -498,7 +498,7 @@ Below is an example of a submission to the Webin service using the synchronous e
 
       .. code:: none
 
-         curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit' \
+         curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/submit' \
          -H 'Accept: application/json' \
          -H 'Content-Type: application/json' \
          -T 'submission file name'
@@ -507,7 +507,7 @@ Below is an example of a submission to the Webin service using the synchronous e
 
       .. code:: none
 
-         curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit' \
+         curl -u username:password -X POST 'https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/submit' \
          -H 'Accept: application/xml' \
          -H 'Content-Type: application/xml' \
          -T 'submission file name'
@@ -530,7 +530,7 @@ Below is an example of a sequence read data submission to the Webin service usin
 
       .. code:: none
 
-         curl -u username:password -X POST ''https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit/queue' \
+         curl -u username:password -X POST ''https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/submit/queue' \
          -H 'Accept: application/json' \
          -H 'Content-Type: application/json' \
          -T 'submission file name'
@@ -539,7 +539,7 @@ Below is an example of a sequence read data submission to the Webin service usin
 
       .. code:: none
 
-         curl -u username:password -X POST ''https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit/queue' \
+         curl -u username:password -X POST ''https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/submit/queue' \
          -H 'Accept: application/xml' \
          -H 'Content-Type: application/xml' \
          -T 'submission file name'
@@ -553,7 +553,7 @@ When the asynchronous endpoint is used, a JSON document is returned with a submi
     "submissionAccountId": "Webin-xxxx",
     "_links": {
         "poll": {
-        "href": "https://wwwdev.ebi.ac.uk/ena/dev/submit/webin-v2/submit/poll/ERA12944374"
+        "href": "https://wwwdev.ebi.ac.uk/ena/submit/webin-v2/submit/poll/ERA12944374"
         }
      }
     }
