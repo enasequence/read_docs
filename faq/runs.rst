@@ -301,3 +301,7 @@ There are various options for doing this, described at the linked page.
 If using a command line solution: Once you are connected to the FTP server, use the ``ls`` command to view the content
 of the directory and the ``cd <directory-name>`` command to move into the required location.
 Once you arrive in the desired directory, proceed to upload the files.
+
+.. note::
+
+    If runs fail due to a user error, and not addressed within 180 days, they will automatically get cancelled.
