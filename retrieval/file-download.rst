@@ -287,7 +287,7 @@ The easiest way to use it is to pre-configure the access through a configuration
 
 ::
 
-    ascli conf preset update era --url=ssh://fasp.sra.ebi.ac.uk:33001 --username=era-fasp --ssh-keys=@ruby:Fasp::Installation.instance.bypass_keys.first --ts=@json:'{"target_rate_kbps":300000}'
+    ascli conf preset update era --url=ssh://fasp.sra.ebi.ac.uk:33001 --username=era-fasp --ssh-keys=~/.aspera/sdk/aspera_bypass_rsa.pem --ts.target_rate_kbps=300000
 
 
 Then recall the configuration using parameter: '-Pera', or optionally, set it as default using: 'ascli conf preset set default server era'.
@@ -305,6 +305,7 @@ For private files, configure like this (and then use '-Pmypriv'):
 ::
 
     ascli conf preset update mypriv --url=ssh://fasp.sra.ebi.ac.uk:33001 --username=dcc_name --password=dcc_pass --ts=@json:'{"target_rate_kbps":300000}'
+
 Common Issues
 -------------
 Downloading a large number of records
