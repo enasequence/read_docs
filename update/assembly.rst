@@ -92,10 +92,15 @@ Taxonomy changes require our assistance:
   If the taxon you wish to use does not exist in the taxonomy database, you
   will need to `request its addition <../faq/taxonomy_requests.html>`_.
 
+.. tip::
+  The project accession and sample accession associated 
+  with an assembly cannot be changed after submission. Please make
+  sure you link your assembly to the correct project and sample during submission.
+
 Contact us for other metadata updates:
   The advice given here pertains to updating the sequence and annotation (if
   applicable) of your assembly.
-  If you wish to change the assembly metadata values, such as the coverage,
+  If you wish to change the assembly metadata values,
   please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 State of publicity will be the same:
