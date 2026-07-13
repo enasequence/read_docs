@@ -11,6 +11,8 @@ Log in with your Webin credentials and select the 'Register Study' button to bri
 
 Fill out the form to describe your study: most of these values can be `edited later <../../update/metadata.html>`_
 if needed.
+**The fields 'Short descriptive study title' and 'Detailed study abstract' in the form msy meet the minimum INSDC 
+requirements where the number of characters is more than 20 and less than 250.**
 This study will eventually be the entry point into your data, so provide a sufficiently detailed abstract that users can
 get a good overview of your work.
 If you will be submitting a genome assembly which includes functional annotation please see the `Locus Tag Prefixes`_
