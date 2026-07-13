@@ -53,6 +53,9 @@ It can be a short acronym but it should be meaningful and memorable in some way.
 Within the `<DESCRIPTION></DESCRIPTION>` block add an abstract detailing the project including any information that may be 
 useful for someone to interpret your project correctly. Within the `<TITLE></TITLE>` block add a descriptive title. 
 
+**The fields 'DESCRIPTION' and 'TITLE' in the XML must meet the minimum INSDC requirements where the number of characters is 
+more than 20 and less than 250.**
+
 ## Create the Submission XML
 
 To submit a study or any other object(s), you need an accompanying submission XML in a separate file. 
