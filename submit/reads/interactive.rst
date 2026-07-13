@@ -84,7 +84,7 @@ Consider the following tips as you complete your spreadsheet:
   on performing this activity for Windows.
 - Do not edit the existing column names
 - Use only valid ASCII characters
-- When you come to submit the file you must use one of the following extensions: .csv, .tsv, .tab, .txt
+- When you come to submit the file you must use one of the following extensions: .tsv, .tab
 
 Once you are satisfied that your spreadsheet content is complete, save the file and move on to the final step.
 
