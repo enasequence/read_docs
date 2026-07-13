@@ -13,6 +13,8 @@ Fill out the form to describe your study: most of these values can be `edited la
 if needed.
 This study will eventually be the entry point into your data, so provide a sufficiently detailed abstract that users can
 get a good overview of your work.
+**The fields 'DESCRIPTION' and 'TITLE' in the XML must meet the minimum INSDC requirements where the number of characters is 
+more than 20 and less than 250.**
 If you will be submitting a genome assembly which includes functional annotation please see the `Locus Tag Prefixes`_
 section below.
 
