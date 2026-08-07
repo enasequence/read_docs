@@ -2,8 +2,9 @@ General Pathogens Submissions Guide
 ==================================
 
 .. image:: images/pathogens_logo_1.png
- :width: 400
- :align: center
+  :width: 400
+  :alt: Pathogens Portal logo
+  :align: center
 
 
 
@@ -15,19 +16,22 @@ Introduction
 ~~~~~~~~~~~~
 
 
-This guide provides general information and help for submitting pathogen sequence data to the `European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_
-. All public `INSDC <https://www.insdc.org/>`_ pathogen data will be made available to browse using the `Pathogens Portal <https://www.ebi.ac.uk/ena/pathogens/v2/>`_.
+This guide provides general information and help for submitting pathogen sequence data to the
+`European Nucleotide Archive (ENA) <https://www.ebi.ac.uk/ena/browser/home>`_. The ENA is a partner of the `INSDC
+<https://www.insdc.org/>`_ (International Nucleotide Sequence Database Collaboration), and provides an entry point for
+INSDC data. All public pathogen data is made available by the ENA to explore and browse via
+the `Pathogens Portal <https://www.pathogensportal.org/>`_.
 
-Please see below for a specific guide for submitting pathogen related data. The guide frequently refers to the
-`ENA Training Modules <https://ena-docs.readthedocs.io/en/latest/index.html>`_,
-our general ENA submissions guide. If you have any queries or require assistance with your submission please contact
-us at ena-path-collabs@ebi.ac.uk.
+This is a walk-through guide for submitting pathogen-related raw read files and assembled 'clone or isolate' genomes.
+The guide frequently refers to our `ENA Data Submission <https://ena-docs.readthedocs.io/en/latest/index.html>`_ pages.
+If your pathgoen dataset is not raw reads or a genome, or you have any other queries about archiving your data at the
+ENA, you can also contact us at ena-path-collabs@ebi.ac.uk.
 
 .. tip::
 
-  **Looking for something else?**
+  **Are you submitting SARS-CoV-2 or Monkeypox virus data?**
 
-  For pathogen-specific submissions guidance, please refer to these guides:
+  We have tailored support for SARS-CoV-2 and Monkeypox virus data submissions here:
 
   - `ENA SARS-CoV-2 submissions guide <https://ena-covid19-docs.readthedocs.io/en/latest/index.html>`_
   - `Monkeypox virus ENA submissions Guidance <https://docs.google.com/viewer?url=https://github.com/enasequence/ena-content-dataflow/raw/master/docs/Monkeypox%20virus%20ENA%20Submission%20Guidance.pdf>`_
@@ -51,15 +55,6 @@ The ENA Metadata Model
 ``````````````````````
 Before submitting data to ENA, it is important to familiarise yourself with the `ENA metadata model <https://ena-docs.readthedocs.io/en/latest/submit/general-guide/metadata.html#the-ena-metadata-model>`_
 and what parts of your research project can be represented by which metadata objects. This will determine what you need to submit.
-
-
-.. raw:: html
-
-
-    <embed>
-        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1/8<br><br>The ENA would like to introduce you to our very first TWEETORIAL! For this <a href="https://twitter.com/hashtag/tweetorial?src=hash&amp;ref_src=twsrc%5Etfw">#tweetorial</a>, we will be explaining the ENA Metadata Model. When submitting data to the ENA, you need to register additional metadata so your submission is in accordance with FAIR data principles. <a href="https://t.co/m45ENIrlIM">pic.twitter.com/m45ENIrlIM</a></p>&mdash; European Nucleotide Archive (ENA) (@ENASequence) <a href="https://twitter.com/ENASequence/status/1514229572425994245?ref_src=twsrc%5Etfw">April 13, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </embed>
-
 
 
 ENA Submission routes
@@ -173,7 +168,7 @@ in the checklists. If you specify the strain with both, this will make your stra
 The `ENA taxonomy API <https://www.ebi.ac.uk/ena/taxonomy/rest/>`_ interface may also be used.
 
 
-Sample host
+Sample Host
 '''''''''''
 
 Every pathogen checklist includes host attribute fields which can be used to describe the host. Here is provided some guidance on filling the host fields.
@@ -235,8 +230,9 @@ Prepare files
 Assembly file
 '''''''''''''
 
-The accepted format for unannotated genome assembly is **fasta** OR for annotated genome assembly, the accepted format is **embl flat file**
-Please refer to the `Accepted genome assembly data formats guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#accepted-genome-assembly-data-formats>`_
+The accepted format for unannotated genome assembly is **fasta**. For annotated genome assemblies, the accepted format
+is **embl flat file**. Please refer to `Accepted Genome Assembly Data Formats
+<https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#accepted-genome-assembly-data-formats>`_
 for information about preparing these files.
 
 
@@ -244,8 +240,8 @@ Manifest file
 '''''''''''''
 
 The manifest file is a tab-separated .txt file for Webin-CLI assembly submission. It specifies metadata about the
-assembly, including the study and sample it is linked to.
-Please refer to the `assembly manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
+assembly, including the Study and Sample it is linked to.
+Please refer to the `Clone or isolate genome manifest file guide <https://ena-docs.readthedocs.io/en/latest/submit/assembly/genome.html#manifest-files>`_
 for permitted values.
 
 For example, the following manifest file represents a genome assembly consisting of contigs provided in one fasta file:
@@ -270,7 +266,9 @@ For example, the following manifest file represents a genome assembly consisting
 Chromosome list file
 ''''''''''''''''''''
 
-The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab separated file up to four columns. Each row describes each replicon unit within the assembly. Please refer to the `chromosome list file guide <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
+The **chromosome list file** must be provided when the submission contains assembled chromosomes. This is a tab
+separated file up to four columns. Each row describes each replicon unit within the assembly. Please refer to
+`Accepted Genome Assembly Data Formats <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/assembly.html#chromosome-list-file>`_
 for permitted values.
 
 .. tabs::
