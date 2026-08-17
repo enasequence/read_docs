@@ -26,49 +26,62 @@ You need a registered locus tag prefix only if you are submitting an assembly **
 unannotated assemblies do not require one.
 
 Prefixes are registered against a study in the Webin Portal.
-See `Locus Tag Prefixes <../submit/general-guide/locus-tags.html#how-do-i-register-a-locus-tag-prefix>`_ for the registration steps, the formatting rules
-the prefix must follow, and how to use the tags in your flat file.
+See `How Do I Register A Locus Tag Prefix?
+<../submit/general-guide/locus-tags.html#how-do-i-register-a-locus-tag-prefix>`_ for the registration steps, the
+formatting rules the prefix must follow, and how to use the tags in your flat file.
 
 What Can I Submit From A Metagenomics Study?
 --------------------------------------------
 
-Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are often many queries regarding how these assemblies are submitted in order to make the quality of the assembly and original source of data as clear as possible.
+A metagenomics study assembles sequencing data sampled from an entire biome, down to the individual species living in
+that environment.
+ENA accepts submissions at each stage of that process, and recognises distinct assembly levels so that the quality of
+an assembly and the origin of its data stay clear.
 
-The following image illustrates the stages of a metagenome assembly study and what is submittable to each of the metagenome assembly levels in ENA:
+The image below shows the stages of a metagenome assembly study and what is submittable at each level:
 
 .. image:: images/metagenomes.png
 
-Please see `Metagenome Assembly Submissions <../submit/assembly/metagenome.html>`_ for more information on how to submit your metagenome assemblies to ENA.
+See `Metagenome Assembly Submissions <../submit/assembly/metagenome.html>`_ for how to submit each level.
 
-What is defined as a MAG within ENA?
+
+What Is Defined As A MAG Within ENA?
 ------------------------------------
 
-Within ENA, a MAG is described as a single-taxon assembly based on one or more binned metagenomes asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
+A MAG is a single-taxon assembly, based on one or more binned metagenomes, asserted to be a close representation of an
+actual individual genome — either matching an existing isolate or representing a novel one.
 
-There should only be one MAG submitted for each species within a biome. This can be determined using a de-replication step or by choosing the highest quality representative genome for each predicted species.
+Submit **one MAG per species per biome**.
+Where you have several candidates for the same species, use a de-replication step or pick the highest quality
+representative genome.
 
-MAG assemblies are registered within ENA in the same domain as cultured isolate genome assemblies which means that these genome assemblies are searchable alongside cultured isolates and are used by the same downstream processes. As an environmental sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone to contamination, ENA requests that only the highest quality unique-taxon submissions are submitted as MAGs. This means only the highest quality sequences and most accurate annotated features are used within these downstream services to keep them as relevant and informative as possible.
+MAGs are registered in the same domain as cultured isolate genome assemblies, which means they are searchable alongside
+cultured isolates and feed the same downstream services.
+Because an environmental sample can contain many duplicate genomes of the same organism, and because MAGs are more
+prone to contamination, ENA requests that only the highest quality unique-taxon assemblies are submitted as MAGs.
 
-How is the quality of a metagenomic assembly defined?
+
+How Is The Quality Of A Metagenomic Assembly Defined?
 -----------------------------------------------------
 
-When binned and MAG samples are registered with ENA, three quality measures are recorded which together determine the overall quality of a metagenome derived assembly. These three measures follow the data standards defined by the Genomic Standards Consortium (GSC) in the 2018 publication `Bowers et al. (2017) <https://www.nature.com/articles/nbt.3893>`_.
+By three measures recorded on the sample when a binned or MAG sample is registered, following the data standards of the
+Genomic Standards Consortium (GSC) published in `Bowers et al. (2017) <https://www.nature.com/articles/nbt.3893>`_:
 
-The three attributes in the sample checklists that contribute to the overall quality are as follows:
+1. **Assembly quality** — a written description of the assembly, chosen from three options.
+2. **Completeness score** — the ratio of observed single-copy marker genes to total single-copy marker genes in the
+   chosen marker gene set (%).
+3. **Contamination score** — the ratio of observed single-copy marker genes in two or more copies to total single-copy
+   marker genes in the chosen marker gene set (%).
 
-1. **Assembly Quality** - a written description of the quality of an assembly (one of a choice of 3 options).
-2. **Completeness Score** - the ratio of observed single-copy marker genes to total single-copy marker genes in chosen marker gene set (%).
-3. **Contamination Score** - the ratio of observed single-copy marker genes in ≥2 copies to total single-copy marker genes in chosen marker gene set (%).
+Complete these fields accurately: together they make the overall quality of an assembly searchable in ENA.
+The thresholds are as follows.
 
-It is essential you complete these fields accurately so that the overall quality of an assembly is searchable within ENA. If you wish to search for binned metagenomes or MAGs by overall quality, the thresholds for these standards are outlined below.
+**Finished assembly**
 
-**Finished Assembly**
-
-Any assembly where the assembly quality is defined as: "Single contiguous sequence without gaps or ambiguities with a consensus error rate equivalent to Q50 or better".
+Any assembly whose assembly quality is described as "Single contiguous sequence without gaps or ambiguities with a
+consensus error rate equivalent to Q50 or better".
 
 **High-quality draft**
-
-An assembly with the following criteria:
 
 +---------------------+------------------------------------------------------------------------------------+
 | Attribute           | Value                                                                              |
@@ -83,8 +96,6 @@ An assembly with the following criteria:
 
 **Medium-quality draft**
 
-An assembly with the following criteria:
-
 +---------------------+--------------------------------------------------------------------------------------+
 | Attribute           | Value                                                                                |
 +---------------------+--------------------------------------------------------------------------------------+
@@ -98,8 +109,6 @@ An assembly with the following criteria:
 
 **Low-quality draft**
 
-An assembly with the following criteria:
-
 +---------------------+--------------------------------------------------------------------------------------+
 | Attribute           | Value                                                                                |
 +---------------------+--------------------------------------------------------------------------------------+
@@ -111,70 +120,80 @@ An assembly with the following criteria:
 | contamination score | <10%                                                                                 |
 +---------------------+--------------------------------------------------------------------------------------+
 
-It is useful to bear in mind these quality thresholds when assembling and submitting metagenomic assemblies.
 
-How do I navigate through a metagenomics study?
+How Do I Navigate Through A Metagenomics Study?
 -----------------------------------------------
 
-When submitting metagenomic samples it is important to enter the “sample derived from” field correctly.
+Through the ``sample derived from`` attribute, which is why it is important to complete it correctly when registering
+metagenomic samples.
 
-This field is used to correctly trace back your data through the assembly stages to its environmental biome-level origin. Users viewing the data can then also utilise the “sample derived from” attribute to navigate through the assemblies making your methods clear and reproducible.
+It traces your data back through the assembly stages to its environmental biome-level origin, and lets anyone viewing
+the data follow the same path, making your methods clear and reproducible.
 
-It is important to note that you can access all the assembly layers from the study itself. However, these assemblies do not associate with each other. To look for associated metadata for these assemblies and which assemblies are derived from which, you should refer to the samples.
+Note that although every assembly layer is reachable from the study itself, the assemblies do not link to one another.
+To find which assembly derives from which, and the metadata that goes with them, look at the samples rather than the
+study.
 
-How do I register samples for co-assemblies?
+
+How Do I Register Samples For Co-Assemblies?
 --------------------------------------------
 
-When registering co-assemblies, you should reference multiple samples (or reads) in the “sample derived from” field. These can be formatted as one of the following:
+Reference all the source samples or reads in the ``sample derived from`` field, in one of two forms.
 
-**A comma separated list**:
+**A comma-separated list**, with no spaces:
 
-This should not contain spaces.
+::
 
-e.g.  formatted as
+    ERSxxxxxx,ERSxxxxxx
+    ERRxxxxxx,ERRxxxxxx
 
-ERSxxxxxx,ERSxxxxxx
+**A range**, where the assembly derives from many samples. Separate the first and last accession with a hyphen and no
+spaces, keep the accession format consistent across the range, and make sure every accession in the range was used in
+that assembly:
 
-or
+::
 
-ERRxxxxxx,ERRxxxxxx
+    ERSxxxxxx-ERSxxxxxx
+    ERRxxxxxx-ERRxxxxxx
 
-**A range**:
-
-This should be in the case where the assembly was derived from many samples and should be formatted with a ‘-‘ character between two accession without any spaces. The accession format should be consistent within the range and all accessions referenced within the range should have been used in that assembly.
-
-e.g. formatted as
-
-ERSxxxxxx-ERSxxxxxx
-
-or
-
-ERRxxxxxx-ERRxxxxxx
-
-If you wish to submit a primary assembly which is co-assembled from raw reads, please inform the ENA `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+If you want to submit a primary assembly co-assembled from raw reads, tell the ENA
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ first.
 
 
-How do I submit uncultured virus genomes (UViGs)?
+How Do I Submit Uncultured Virus Genomes (UViGs)?
 -------------------------------------------------
 
-The method used for submission of uncultured virus genomes depends on the methods used to identify these genomes.
+It depends on how the virus genomes were identified, and in both cases the checklist differs from the standard route.
 
-If the virus genome was derived from a study where the entire biome of environmental data was sequenced together and then binned by taxonomy, then please submit with the same methods as those outlined in the `metagenome assembly <../submit/assembly/metagenome.html>`_ submission guidelines. This is with the exception of the use of the **GSC MIMAGS** checklist. For virus genomes, the `GSC MIUVIGS <https://www.ebi.ac.uk/ena/browser/view/ERC000049>`_ checklist should be utilised for each virus assembly.
+**Binned from a whole-biome study** — follow the
+`metagenome assembly <../submit/assembly/metagenome.html>`_ submission guidelines, but use the
+`GSC MIUVIGS <https://www.ebi.ac.uk/ena/browser/view/ERC000049>`_ checklist for each virus assembly instead of
+**GSC MIMAGS**.
 
-If the virus genome was derived from a study using single-cell amplification techniques, then please submit with the same methods as those outlined in the `environmental single-cell amplified genome assembly <../submit/assembly/environmental-sag.html>`_ submission guidelines. This is with the exception of the use of the **GSC MISAGS** checklist. For virus genomes, the `GSC MIUVIGS <https://www.ebi.ac.uk/ena/browser/view/ERC000049>`_ checklist should be utilised for each virus assembly.
+**Derived by single-cell amplification** — follow the
+`environmental single-cell amplified genome assembly <../submit/assembly/environmental-sag.html>`_ submission
+guidelines, but again use the `GSC MIUVIGS <https://www.ebi.ac.uk/ena/browser/view/ERC000049>`_ checklist instead of
+**GSC MISAGS**.
 
-How do I submit metagenome assemblies without raw data or primary assemblies to point to?
------------------------------------------------------------------------------------------
 
-It is recommended to submit all levels of metagenomic assembly where possible. However, there are exceptions where this can not be done. For example, if you have assembled bacteria from a metagenome derived from a human host, your raw data may be contaminated with human DNA which you do not have the permission to make publicly available.
+How Do I Submit Metagenome Assemblies Without Raw Data Or Primary Assemblies To Point To?
+------------------------------------------------------------------------------------------
 
-In cases where it is not possible to provide raw data or a primary metagenome, environmental samples should still be registered. However, as the registered **environmental** samples do not have any data associated with them, they need to be manually released to become available to the public.
+Register the environmental samples anyway, and release them manually.
 
-If you have not submitted raw reads or primary assemblies, sample release can be done in advance of your study release without the risk of any data files being prematurely released. However, if you do not wish to have your sample *metadata* publicly available before your study is released, this option is not suitable and it is recommended to make a note of the Study release date and release these samples during the same time of the study release.
+ENA recommends submitting all levels of metagenomic assembly where possible, but there are cases where you cannot.
+For example, bacteria assembled from a metagenome taken from a human host may leave raw data contaminated with human
+DNA that you have no permission to make public.
 
-To manually release your environmental samples, first you need to prepare a submission XML file containing all your **environmental** sample accessions in a block of ACTION tags.
+Where raw data or a primary metagenome cannot be provided, the environmental samples still need to be registered.
+Because those samples have no data attached, they will not be released automatically and must be released manually.
 
-An example of a submission XML for the release of three environmental samples is below:
+Sample release can be done ahead of the study release without risking premature release of any data files, since there
+are none.
+If you do not want the sample *metadata* public before the study is released, note the study release date and release
+these samples at the same time instead.
+
+To release them, prepare a submission XML containing each **environmental** sample accession in its own ACTION block:
 
 .. code-block:: xml
 
@@ -192,15 +211,13 @@ An example of a submission XML for the release of three environmental samples is
         </ACTIONS>
     </SUBMISSION>
 
-These samples can then be released programmatically through the secure HTTPS protocol using a tool such as curl.
-
-Below is an example of a environmental sample release command:
+Submit it over HTTPS with a tool such as curl:
 
 .. code-block:: bash
 
     curl -u username:password -F "SUBMISSION=@submission.xml" "https://www.ebi.ac.uk/ena/submit/drop-box/submit/"
 
-If your release is successful you should receive a receipt like the one below:
+A successful release returns a receipt like this:
 
 .. code-block:: xml
 
