@@ -64,7 +64,7 @@ sure to register locus tag prefixes during this stage.
 It is also strongly recommended to submit the reads from which the assembly was assembled. When submitting the raw reads
 in a Single-Cell Amplification study, these should either be in multi-fastq format or remain multiplexed in BAM format, 
 and be submitted to an **environmental** sample. This sample should use the most appropriate environmental checklist and an
-`environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic 
+`environmental taxon <../../faq/taxonomy.html#biome-level-taxonomy>`_ (e.g. aquatic 
 metagenome (tax id: 1169740)).
 
 - `Submitting Raw Reads <../reads.html>`_
@@ -85,7 +85,7 @@ hold all metadata related to the taxonomy of that subset as well as methods used
 
 .. image:: ../images/metadata_model_derivedanalysis.png
 
-**SAG** samples should be as `specific in taxonomy <../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_ as
+**SAG** samples should be as `specific in taxonomy <../../faq/taxonomy.html#organism-level-taxonomy>`_ as
 they can be and use the specific `GSC MISAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000048>`_ checklist.
 
 Please make sure these **SAG** samples correctly reference the **environmental** sample  that the SAG was derived from.

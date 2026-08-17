@@ -2,37 +2,27 @@
 Submission Errors and Troubleshooting
 =====================================
 
-# TODO: Change the intro to Q&A format
 
-When you submit read data to ENA, we store and accession your files within `Runs <../submit/general-guide/metadata.html>`_.
-As part of the submission process, read data files must be uploaded to your Webin account's FTP directory.
-After you complete the submission, several validation procedures are applied to the file(s).
-If validation is successful files are archived, otherwise all account contacts are notified of the error(s).
+How Does ENA Validate My Submitted Files?
+-----------------------------------------
 
-The errors discussed here typically do not require you to repeat the submission in its entirety.
-It is usually sufficient to upload a corrected version of the file, possibly updating its MD5 value.
-Once you correct your submission, it can take 24 hours or longer for this to be registered and for the error
-notifications to cease.
+When you submit read data, your files are stored and accessioned within
+`Runs <../submit/general-guide/metadata.html#metadata-model>`_.
+The files must first be uploaded to your Webin account's upload area; after you complete the submission, several
+validation procedures are applied to them.
+If validation succeeds the files are archived, and if it fails all account contacts are notified of the errors.
 
-The common error types are described here; if you have been notified of an error, please find it in this list and
-follow the instructions:
+Most of the errors below do not require you to repeat the whole submission — uploading a corrected file, and updating
+its MD5 value where it changed, is usually enough.
+After you correct a submission it can take 24 hours or longer for the fix to register and for the error notifications
+to stop.
 
-- `Why Did I Get An 'Invalid File Checksum' Error?`_
-- `Why Did I Get A 'Number Of Lines Is Not A Multiple Of Four' Error?`_
-- `Why Did I Get An 'Invalid File Content' Error?`_
-- `Why Did I Get A 'Missing File' Error?`_
-
-A couple of general-purpose solutions are described too:
-
-- `How Do I Correct An MD5 Value?`_
-- `How Do I Re-Upload A File?`_
-
-If your problem is not described on this page, or you are not clear on the solution, please contact us through our
+If your error is not described on this page, contact ENA through the
 `support form <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
 Why Did I Get An 'Invalid File Checksum' Error?
-===============================================
+-----------------------------------------------
 
 If this error occurs, you will receive an email containing something similar to the below:
 
@@ -42,12 +32,9 @@ If this error occurs, you will receive an email containing something similar to 
     mbr_depth_05.bam | Invalid file checksum | 594934819a1571f805ff299807431da4 | 895557023 | 20-DEC-2016 14:02:50 | ERR1766300
 
 
-The Problem
------------
-
 The checksum is a means of checking a file has been uploaded in its entirety.
 It is a 32-character string calculated from the file, and is unique to that file.
-We recalculate the MD5sum after you complete your submission and confirm that it matches the value you registered.
+ENA recalculates the MD5sum after you complete your submission and confirm that it matches the value you registered.
 Therefore, if the upload procedure fails to deliver the full file, this will be evident from the checksum.
 You may have calculated this value previously and included it in your submission: you can see the value you registered
 in the notification email, as is the case above.
@@ -61,9 +48,6 @@ The error could indicate any of the following:
 3. The wrong MD5 value was registered in the first place
 
 
-The Solution
-------------
-
 Depending on the cause of the error, there are two possible solutions.
 
 Please see `How Do I Correct An MD5 Value?`_ for instructions on calculating the MD5 value of your local copy of the file and comparing it with the value originally registered.
@@ -73,7 +57,7 @@ If the values match, the file is likely corrupted. If they do not match, the reg
 In either case, refer to the relevant section below for instructions on how to resolve the issue.
 
 Corrupted File: Upload Again
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you recalculate the MD5 value of you file locally and it matches the value you registered, it is likely the file
 upload was incomplete or corrupt.
@@ -83,7 +67,7 @@ Once this is done, the file should be automatically accepted within 24 hours wit
 Please see `How Do I Re-Upload A File?`_ for information on how to replace the uploaded file.
 
 Wrong MD5 Value Registered: Register a New One
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you recalculate the MD5 value of your local file and it does not match the value you registered, this will be the
 root of the problem.
@@ -92,11 +76,11 @@ You will need to re-register the MD5 value.
 Please see `How Do I Correct An MD5 Value?`_ for information on how to do this.
 
 If you have many runs to update, you may wish to do this programmatically, by submitting corrected XML versions of your runs.
-View our pages on `Programmatic Run Updates <../update/metadata/programmatic-read.html>`_ to learn more about this.
+See `Reasons for Updating Run XML <../update/metadata/programmatic-read.html#reasons-for-updating-run-xml>`_.
 
 
 Why Did I Get A 'Number Of Lines Is Not A Multiple Of Four' Error?
-==================================================================
+------------------------------------------------------------------
 
 You will receive an email resembling the below if this error occurs:
 
@@ -105,9 +89,6 @@ You will receive an email resembling the below if this error occurs:
     FILE_NAME            | ERROR                                                                            | MD5                              | FILE_SIZE  | DATE                 | RUN_ID/ANALYSIS_ID
     SOC9/MCONS1_R1.fq.gz | File content missing or malformed, Number of lines in fastq is not multiple of 4 | c2f8455c1a024cfb96a6c91f5d71f534 | 1358349886 | 01-DEC-2016 03:12:35 | ERR1755094
 
-
-The Problem
------------
 
 This error is specific to FASTQ files: each read record in such a file should comprise exactly four lines, none of which
 should be blank.
@@ -126,10 +107,7 @@ If your file does not match this format it may have started incorrectly formatte
 upload process.
 
 
-The Solution
-------------
-
-You can replicate the check we run on your file locally from the command line:
+You can replicate the check you run on your file locally from the command line:
 
 .. code-block:: bash
 
@@ -149,7 +127,7 @@ If it is not divisible by four, you should discover why, correct your file and r
 
 
 Why Did I Get An 'Invalid File Content' Error?
-==============================================
+----------------------------------------------
 
 If an invalid file content error occurs, you will receive an email with the below message:
 
@@ -159,28 +137,22 @@ If an invalid file content error occurs, you will receive an email with the belo
     UFMG-CM-Y030_R1.fastq.gz | Invalid file content | 2da9b9c9bb8833c14b103e0de123829c | 137298909 | 13-JUN-2020 12:51:29 | ERR2299965
 
 
-The Problem
------------
-
 Submitted files content has not been validated. There are two possible reasons for this happening:
 
 - There was a delay during the processing of your run files causing the error to be reported
-- The content of the read file submission does not meet our validation standard
+- The content of the read file submission does not meet ENA's validation standard
 
-
-The Solution
-------------
 
 First please wait 1 week for the files to be processed. 
 Sometimes your Run records may be affected by a delay in processing your submission, and you will receive the error email before the run processing is completed.
 
 If, after 1 week, the run record is still failing, you can check and update the file content, and then re-upload your run file.
-Please refer to our guide for `Accepted Read Data Formats <../submit/fileprep/reads.html>`_ to help identify your issue.
+Please refer to the guide to `Accepted Read Data Formats <../submit/fileprep/reads.html>`_ to help identify your issue.
 
-If you cannot find a problem with your read file contents, please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+If you cannot find a problem with your read file contents, please contact the ENA `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 Updating a run file
-^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~
 
 Note that if you uploaded the original file to a subdirectory in your submission area, you must also upload the new
 file to this subdirectory.
@@ -197,16 +169,16 @@ See `How Do I Re-Upload A File?`_ for information on how to correctly upload you
 
 
 Read Name Problems In FASTQ Files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Two properties of the read names themselves are a frequent cause of this error:
 
-- **Read names which are too long.** Very long read names are rejected. Where your names encode a large amount of
-  information, shorten them and record that information in the run or experiment metadata instead.
+- **Read names which are too long.** A read name may be at most **256 characters**. Where your names encode a large
+  amount of information, shorten them and record that information in the run or experiment metadata instead.
 - **Read names which are not unique.** The same read name must not occur more than once within a file.
 
-If you cannot tell which applies, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ with the run
-accession and we can check the processing logs for the specific reason the file was rejected.
+If you cannot tell which applies, contact the ENA `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ with the run
+accession and ENA can check the processing logs for the specific reason the file was rejected.
 
 Correcting this is not a matter of re-uploading the file.
 The failed runs and experiments must first be cancelled, after which the corrected files can be submitted against the
@@ -218,7 +190,7 @@ See `Removing and Suppressing Data <suppression.html>`_ for how to request the c
 
 
 Why Did I Get A 'Missing File' Error?
-=====================================
+-------------------------------------
 
 If a missing file error occurs, you will receive the below message:
 
@@ -228,14 +200,8 @@ If a missing file error occurs, you will receive the below message:
     UFMG-CM-Y030_R1.fastq.gz | Missing file | 2da9b9c9bb8833c14b103e0de123829c | 137298909 | 13-JUN-2020 12:51:29 | ERR2299965
 
 
-The Problem
------------
-
 Submitted files occasionally go missing and must either be replaced or resubmitted.
 
-
-The Solution
-------------
 
 You should reupload the file to your submission area.
 Note that if you uploaded the original file to a subdirectory in your submission area, you must also upload the new
@@ -248,7 +214,7 @@ See `How Do I Re-Upload A File?`_ for information on how to correctly upload you
 
 
 How Do I Correct An MD5 Value?
-==============================
+------------------------------
 
 If the MD5 value registered for your read file is incorrect, you can supply a corrected version.
 To do this:
@@ -287,7 +253,7 @@ For Windows users, 3rd party tools can be found to calculate MD5 values.
 
 
 How Do I Re-Upload A File?
-==========================
+--------------------------
 
 If your error requires a new version of the file be uploaded, you have two options for this.
 You should first consider whether your file was originally uploaded to a sub-directory.
@@ -311,16 +277,16 @@ uploaded file.
 If you need to update the MD5 value, please refer to `How Do I Correct An MD5 Value?`_.
 
 If Your File Is Not In A Subdirectory
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please view our guidance on the `Webin File Uploader <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#using-webin-file-uploader>`_.
+Please view the guidance on the `Webin File Uploader <../submit/fileprep/upload.html#using-webin-file-uploader>`_.
 This will conveniently allow you to upload your file to the top level of your submission directory.
 
 
 If Your File Is In A Subdirectory
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will need to upload your file using `FTP Client <https://ena-docs.readthedocs.io/en/latest/submit/fileprep/upload.html#general-instructions-for-uploading-files-using-ftp-client>`_.
+You will need to upload your file using `FTP Client <../submit/fileprep/upload.html#uploading-files-using-command-line-ftp-client>`_.
 There are various options for doing this, described at the linked page.
 
 If using a command line solution: Once you are connected to the FTP server, use the ``ls`` command to view the content

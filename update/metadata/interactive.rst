@@ -128,7 +128,7 @@ You do not need to cancel and resubmit the run.
 The same corrections can be made programmatically by submitting an updated experiment XML; see
 `Updating Read Objects Programmatically <programmatic-read.html>`_.
 
-The change takes effect immediately, but the public ENA Browser may take a couple of days to show the new association.
+The change takes effect immediately, but the public ENA Browser can take up to 48 hours to show the new association.
 
 
 Common Run Updates

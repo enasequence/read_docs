@@ -1,42 +1,43 @@
-========================
+===============
 Sample Taxonomy
-========================
+===============
 
-# TODO: Change the intro to Q&A format
 
-The classification system for source biological organisms for all INSDC records is the NCBI Taxonomy and is available
-from the `ENA browser <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606>`_.
-The ENA team work alongside taxonomists at NCBI to ensure that all ENA records display the accepted organism name and
-classification hierarchy.
-NCBI Taxonomy covers the complete tree of life and also includes other types, such as synthetic constructs and
-environmental samples.
-However, it is an incomplete classification system in that it only considers taxa for data that are represented in INSDC
-records.
-Users should note that taxa are only displayed if at least one associated ENA record is available.
+Which Taxonomy Database Does ENA Use?
+-------------------------------------
+
+NCBI Taxonomy, which classifies the source organism of every INSDC record and is browsable through the
+`ENA browser <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606>`_.
+ENA works alongside taxonomists at NCBI so that all ENA records display the accepted organism name and classification
+hierarchy.
+
+It covers the complete tree of life, and also synthetic constructs and environmental samples.
+It is not exhaustive, however: it only holds taxa for data represented in INSDC records, and a taxon is only displayed
+once at least one associated ENA record exists.
 
 
 Which Taxonomy Should I Use For My Samples?
 -------------------------------------------
 
-Submitted organism names must be at ‘species’ rank.
-This rank type does not automatically mean the name is a published binomen (e.g. *Homo sapiens*): it is simply a rank,
-which differentiates the sequenced organism from another.
-For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
-together under the same genus name.
+Submitted organism names must be at **species rank**.
+This does not mean the name has to be a published binomen such as *Homo sapiens*: species is a rank, and its purpose
+here is to distinguish the sequenced organism from another.
+Unidentified strains of the same bacterial genus should therefore be kept as separate species rather than binned
+together under the genus name.
 
 .. tip::
-    A `binomial <taxonomy.html#checking-a-taxon-is-binomial>`_ taxonomy ID should be used in most cases, and is highly recommended.
-    A binomial taxonomy ID is **required** when submitting a 'clone or isolate' genome assembly. If your sample has been identified
-    to species-level rank, but is not yet a published binomen, a placeholder taxonomy ID may be used.
-    A `placeholder <../submit/samples/taxonomy-requests.html#unidentified-novel-organisms>`_ taxon ID is classed as a binomial taxon ID for data submission purposes.
+   A `binomial <#how-do-i-check-whether-a-taxon-can-be-used>`_ taxon ID should be used in most cases, and is
+   **required** when submitting a 'clone or isolate' genome assembly.
+   If your sample has been identified to species rank but is not yet a published binomen, a
+   `placeholder <../submit/samples/taxonomy-requests.html#unidentified-novel-organisms>`_ taxon ID may be requested,
+   and counts as binomial for submission purposes.
 
-If your sample cannot be identified using a binomial taxon ID, an environmental biome-level or organism-level
-taxonomy ID can be used.
+If your sample cannot be identified to a binomial taxon, register it as an
+`environmental sample <#what-taxonomy-should-i-use-for-environmental-samples>`_ instead.
 
-When registering your samples using the interactive `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_
-you will need to enter a valid species rank taxon in your template spreadsheet.
-
-Programmatic submitters will apply the taxonomic information to the sample object using the sample_name block:
+When registering samples through the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_ you enter a valid
+species-rank taxon in the template spreadsheet.
+Programmatic submitters supply it in the sample XML:
 
 .. code-block:: xml
 
@@ -47,183 +48,79 @@ Programmatic submitters will apply the taxonomic information to the sample objec
     </SAMPLE_NAME>
 
 
-If you do not know the scientific name or the common name that you would like to use for your submission but you
-have an idea, you can use this *suggest* endpoint for the ENA taxonomy service:
+How Do I Check Whether A Taxon Can Be Used?
+-------------------------------------------
+
+Look it up through the ENA taxonomy REST service, which reports whether a taxon is ``submittable`` and whether it is
+``binomial``.
+
+Four endpoints are available, depending on what you know:
+
+- ``suggest-for-submission/`` — you have an idea of the name, including a common name such as 'dog'
+- ``scientific-name/`` — you know the exact scientific name
+- ``any-name/`` — you have any name, formal or informal
+- ``tax-id/`` — you already have the taxon ID
+
+For example:
 
 .. code-block:: bash
 
-   www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/
+   curl "https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/curry"
 
-For example, using curl or pasting the URL in the browser for "curry" looks as follows:
+Only taxa returned as ``"submittable": "true"`` can be used to register a sample.
 
-Link:
-  http://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/curry
-
-.. code-block:: bash
-
-   > curl "http://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/curry"
-   [
-     {
-       "taxId": "159030",
-       "scientificName": "Murraya koenigii",
-       "displayName": "curry leaf"
-       "binomial" : "true"
-     },
-     {
-       "taxId": "261786",
-       "scientificName": "Helichrysum italicum",
-       "displayName": "curry plant"
-       "binomial" : "true"
-     }
-   ]
-
-As shown, some species have common names ("displayName") in addition to their scientific name.
-This makes it possible to search for such names with common English names like 'dog' or 'human':
-
-Link:
-  https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/dog
-
-.. code-block:: bash
-
-   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/dog"
-   [
-     {
-       "taxId" : "9615",
-       "scientificName" : "Canis lupus familiaris",
-       "commonName" : "dog",
-       "displayName" : "dog"
-       "binomial" : "true"
-     }
-   ]
-
-
-Checking a taxon is submittable
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-If you know the taxon you would like to use, you can check if it is submittable and find any additional information
-about it, including if it is **binomial**, by using one of the following urls:
-
-
-.. code-block:: bash
-
-   www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/
-
-   www.ebi.ac.uk/ena/taxonomy/rest/any-name/
-
-   www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
-
-
-Checking a taxon is binomial
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-We recommend that you use a binomial taxonomy ID for your sample registration. A binomial sample taxon ID is **required**
-if you plan to submit 'clone or isolate' genome assembly data. If a suitable binomial taxonomy ID does not exist, you can
-request a `placeholder <../submit/samples/taxonomy-requests.html#unidentified-novel-organisms>`_ taxon ID. For cases where your sample
-cannot be identified using a binomial taxonomy ID, an `environmental sample <#what-taxonomy-should-i-use-for-environmental-samples>`_ can be registered.
-
-For example, using curl or pasting the URL into your browser for *Canis lupis familiaris* looks as follows:
-
-Link:
-  https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/canis%20lupus%20familiaris
-
-.. code-block:: bash
-
-   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/canis%20lupus%20familiaris"
-   [
-     {
-      "taxId" : "9615",
-      "scientificName" : "Canis lupus familiaris",
-      "commonName" : "dog",
-      "formalName" : "true",
-      "rank" : "subspecies",
-      "division" : "MAM",
-      "lineage" : "Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia; Eutheria; Laurasiatheria; Carnivora; Caniformia; Canidae; Canis; ",
-      "geneticCode" : "1",
-      "mitochondrialGeneticCode" : "2",
-      "submittable" : "true"
-      "binomial" : "true"
-     }
-   ]
-
-
-Please see our `guide on exploring taxonomy <../retrieval/programmatic-access/taxon-api.html>`_ for more advice on
-exploring our taxonomy services programmatically.
+See `Programmatically Accessing Taxonomic Information <../retrieval/programmatic-access/taxon-api.html>`_ for the full
+responses, the XML and lineage endpoints, and bulk download options.
 
 
 What Taxonomy Should I Use For Environmental Samples?
 -----------------------------------------------------
 
-Every sample object in ENA must have a taxonomic classification assigned to it. There are specific taxonomic IDs which
-may be used for environmental samples, which may be broadly classified into biome-level taxonomy IDs and organism-level
-taxonomy IDs.
+Every ENA sample must carry a taxonomic classification, and environmental material is covered by two distinct kinds of
+taxon: **biome-level** and **organism-level**.
+
+Which applies depends on what the sample represents.
+A sample standing for a whole environment takes a biome-level taxon; a single organism identified from that environment
+by homology alone takes an organism-level taxon.
 
 
-Environmental Biome-Level Taxonomy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Biome-level taxonomy
+~~~~~~~~~~~~~~~~~~~~
 
-Environmental biome-level samples can not be described with a single organism identifier because they represent an environment
-with an unknown variety and number of organisms. For this purpose there are entries in the Tax Database that apply exclusively to
-environmental biome-level samples.
+Biome-level samples cannot be described by a single organism identifier, because they represent an environment
+containing an unknown variety and number of organisms.
+The taxonomy database holds entries used exclusively for these.
 
-Biome-level environmental taxa can be immediately identified as they contain the term "metagenome" as part
-of the scientific name. These are searchable within the Tax Database using the same methods described above.
+They are recognisable by the word **metagenome** in the scientific name, and are searchable through the same endpoints
+as any other taxon:
 
 .. code-block:: bash
 
    curl "https://www.ebi.ac.uk/ena/taxonomy/rest/suggest-for-submission/marsupial%20meta"
-   [
-     {
-       "taxId": "1477400",
-       "scientificName": "marsupial metagenome",
-       "displayName": "marsupial metagenome"
-       "binomial" : "false"
-     }
 
-If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous metagenomic taxa. To view all
-environmental metagenome taxonomy available please visit the
-`"metagenomes" tax node <https://www.ebi.ac.uk/ena/browser/view/408169?show=tax-tree>`_.
-Click the arrows to expand lineages:
+To see everything available, browse the
+`"metagenomes" tax node <https://www.ebi.ac.uk/ena/browser/view/408169?show=tax-tree>`_ and expand the lineages:
 
 .. image:: images/tax_p01.png
    :align: center
 
-The metagenomic term that is used to describe the biome is also the scientific name of the chosen taxon and can be used
-to find the tax ID in the same methods described above.
-For example, you can find the tax ID for *termite fungus garden metagenome* here:
-
-.. code-block:: bash
-
-   www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/termite fungus garden metagenome
-
-Please note that new metagenome taxonomic records are rarely added, particularly those that add granularity.
-Please use the closest available choice, even if this is a less granular option.
-Only request a new term if you are sure you are unable to use anything in the lists available.
+Note that new metagenome taxa are rarely added, particularly more granular ones.
+Use the closest available choice even if it is less specific than you would like, and request a new term only if
+nothing existing can be made to fit.
 
 
-Environmental Organism-Level Taxonomy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Organism-level taxonomy
+~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are submitting assembled/annotated sequences which are identified taxonomically from homology alone with no prior
-culturing or isolation of the organism, this is considered an *environmental sample*.
-As an example, these may have been produced by 16S amplification of a metagenomic sample. These samples should be registered
-with a suitable taxonomy to make it clear they were derived from an environmental source.
-A typical use-case of this would be the submission of a single fully assembled genome from a mixed DNA sample (i.e.,
-from a metagenomic source).
+Use an organism-level environmental taxon when you are submitting assembled or annotated sequences identified
+taxonomically **from homology alone**, with no prior culturing or isolation — sequences produced by 16S amplification
+of a metagenomic sample, for example, or a single genome assembled from a mixed DNA sample.
 
-Exceptions to this group include organisms which can be reliably recovered from their diseased host (e.g. endosymbionts,
-phyoplasmas) and organisms from samples which are readily identifiable by other means (e.g. cyanobacteria).
-Such organisms are not considered in the way described here.
+Organisms that can be reliably recovered from a diseased host, such as endosymbionts and phytoplasmas, and organisms
+readily identifiable by other means, such as cyanobacteria, are **not** treated this way.
 
-The taxonomy used for environmental organism-level samples should have an identification which is as granular as possible.
-A general environmental record should also be registered to describe the biome that was originally sequenced.
-This biome-level environmental sample should also be referenced within the organism-level sample using the "sample
-derived from" attribute. The metadata structure for metagenomic submissions is described `here <../../assembly/metagenome.html>`_.
-If you are unsure whether your sample should be
-registered as environmental, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for assistance.
-
-When registering an environmental organism-level sample, more granular identification is preferred, up to genus level.
-A non-binomial genus-level taxonomy with a species epithet can be used, for example:
+Identify the organism as granularly as you can, up to genus level.
+A non-binomial genus-level name with a species epithet is acceptable:
 
 ::
 
@@ -239,7 +136,7 @@ For fungi, the 'sp.' is dropped:
     uncultured Glomus
     uncultured Saccharomycetes
 
-If a more granular identification can not be used, a Family or Order level taxon id may also be used, for example:
+Where no more granular identification is possible, a family- or order-level taxon may be used:
 
 ::
 
@@ -247,6 +144,13 @@ If a more granular identification can not be used, a Family or Order level taxon
     Spirochaetaceae bacterium  (taxid:1898206)
     Pleosporales sp. enrichment culture  (taxid:1836897)
     Filobasidium mucilaginum  (taxid:2877763)
+
+Alongside the organism-level sample, register a biome-level sample describing the environment that was sequenced, and
+reference it from the organism-level sample using the 'sample derived from' attribute.
+See `Metagenome Assembly Submissions <../submit/assembly/metagenome.html>`_ for how the two fit together.
+
+If you are unsure whether your sample should be registered as environmental, contact the ENA
+`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
 Do I Need To Request A New Taxon?
@@ -261,13 +165,9 @@ Searching for your name in the taxonomy database returns the entry it is a synon
 Request a new taxon only where no existing entry covers your organism.
 If an entry exists but is wrong, that is a correction rather than a new request.
 
-Note that submitted organism names must be at **species rank**. This does not mean the name has to be a published
-binomen: it is a rank, distinguishing the sequenced organism from another. Unidentified strains of the same bacterial
-genus should be kept as separate species rather than binned together under the genus name.
-
 
 My Organism Is Unidentified Or Only Known To Genus Level — What Do I Use?
---------------------------------------------------------------------------
+-------------------------------------------------------------------------
 
 A genome submission requires a submittable name at species rank.
 Genus-level names such as ``Genus sp.`` on their own, and uncultured names which are not present in NCBI Taxonomy,
@@ -278,13 +178,14 @@ the form ``<Genus> sp. <identifier>``, where the identifier is unique to the cul
 least three characters, such as ``Bacillus sp. ABC123``.
 The informal name can be updated to a formal one once the species is described and published.
 
-Naming rules differ by organism category, and there are separate conventions for prokaryotes, eukaryotes, environmental
-samples, cyanobacteria, synthetic sequences, viruses and endosymbionts.
-See `Requesting New Taxon IDs <../submit/samples/taxonomy-requests.html>`_.
+Naming rules differ by organism category, with separate conventions for prokaryotes, eukaryotes, environmental samples,
+cyanobacteria, synthetic sequences, viruses and endosymbionts.
+See `naming rules for unidentified and novel organisms
+<../submit/samples/taxonomy-requests.html#unidentified-novel-organisms>`_.
 
 
 How Do I Request A New Taxon Name?
-------------------------------------
+----------------------------------
 
 Requests are made through the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_ using the 'Register taxonomy'
 option, not by email to the helpdesk.
@@ -301,12 +202,12 @@ For the full process and the naming rules for each organism category, see
 An Existing Taxon Is Wrong — Can It Be Corrected?
 -------------------------------------------------
 
-
+Yes.
 Where an entry already exists but is incorrect, request a correction rather than a new taxon.
-This covers a misspelled or outdated scientific name, a synonym which should be recorded against an existing entry,
-two entries which describe the same organism and should be merged, and an incorrect lineage placement.
+This covers a misspelled or outdated scientific name, a synonym that should be recorded against an existing entry, two
+entries describing the same organism that should be merged, and an incorrect lineage placement.
 
-Send the request through the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_ or our
+Send the request through the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_ or the ENA
 `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_, and include:
 
 - the taxon ID and current name of the affected entry;
@@ -315,5 +216,5 @@ Send the request through the `Webin Portal <https://www.ebi.ac.uk/ena/submit/web
 
 Corrections are reviewed by ENA staff and passed to the NCBI Taxonomy curators, who maintain the database on behalf of
 all INSDC partners.
-Because the change is made externally, corrections take longer to complete than the addition of a new name, and the
-outcome is decided by the taxonomy curators rather than by ENA.
+Because the change is made externally, corrections take longer than adding a new name, and the outcome is decided by
+the taxonomy curators rather than by ENA.

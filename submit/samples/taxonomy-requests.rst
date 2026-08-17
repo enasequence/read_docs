@@ -149,7 +149,7 @@ Environmental Samples
 ---------------------
 
 
-If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous `metagenomic taxa <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_.
+If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous `metagenomic taxa <../../faq/taxonomy.html#biome-level-taxonomy>`_.
 Use the most appropriate environmental name for your metagenome.
 
 New names under this `node <https://www.ebi.ac.uk/ena/browser/view/Taxon:408169?show=tax-tree>`_ are added only rarely and you should use the closest available choice.

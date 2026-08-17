@@ -18,7 +18,7 @@ date has expired. The default for a newly registered study is to have a hold
 date two months after the submission date. You can change this date at will 
 should you need to release the data or delay its publication further. However,
 you will no longer have this option once the data are public. Read more on our
-`data release policies FAQ <../../latest/faq/release.html>`_.
+`Data Release Policies FAQ <../faq/release.html>`_.
 
 Have a look at an `example <https://www.ebi.ac.uk/ena/browser/view/PRJEB1234>`_
 of a study in the ENA browser.

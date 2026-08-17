@@ -67,6 +67,21 @@ Simply append the common name to the URL:
 
 Please note that not all taxa have a common name.
 
+If you already have the taxon ID, look it up directly:
+
+.. code-block:: bash
+
+   www.ebi.ac.uk/ena/taxonomy/rest/tax-id/
+
+.. code-block:: bash
+
+   > curl "https://www.ebi.ac.uk/ena/taxonomy/rest/tax-id/9615"
+
+All of these endpoints report a ``submittable`` field, and a ``binomial`` field where relevant. Only taxa returned as
+``"submittable": "true"`` can be used to register a sample; see
+`Sample Taxonomy <../../faq/taxonomy.html#how-do-i-check-whether-a-taxon-can-be-used>`_ for how this affects your
+submission.
+
 If you do not know the scientific name or the common name but you have an idea, you can use the *suggest* endpoint:
 
 .. code-block:: bash
