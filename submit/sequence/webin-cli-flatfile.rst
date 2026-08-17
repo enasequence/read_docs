@@ -63,7 +63,7 @@ Flat File Preparation Resources
 There are various tools which can help you with the preparation of your flat file, some of which are listed in our
 `Third Party Tools page <../fileprep/third-party-tools.html>`_.
 
-`Entry Upload Templates <../fileprep/sequence_flatfile.html>`_
+`Entry Upload Templates <../fileprep/sequence-flatfile.html>`_
   Some flat file templates are provided at the linked page which may help with the preparation of your submissions.
   These are different from the spreadsheet-based templates available from the Webin Portal, described
   elsewhere in this documentation, as these ones still require you to prepare your sequence records in flat file format.

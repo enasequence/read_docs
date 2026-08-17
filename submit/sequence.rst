@@ -35,7 +35,7 @@ Please do this before attempting any of the guides shown below:
 There is also an option to link sequences to sample accessions in annotation checklists if preferred. However, this is
 not mandatory.
 
-- `Register a Sample <sample.html>`_
+- `Register a Sample <samples.html>`_
 
 .. note::
    This submission route is for sets of stand-alone targeted assembled and annotated sequences only.
@@ -60,7 +60,7 @@ be unique to one of your sequences. You may also link sample accessions to your 
 Always make a note of any accessions you receive as these are the unique identifiers for each of your submissions to
 ENA.
 You can use the ERZ accession to retrieve the assigned sequence accessions from the `Webin Portal
-</general-guide/webin-cli.html>`_ or the `Webin Reports Service </general-guide/reports-service.html>`_.
+<general-guide/webin-cli.html>`_ or the `Webin Reports Service <general-guide/reports-service.html>`_.
 
 
 .. _Submission Options:
@@ -70,7 +70,7 @@ Submission Options
 
 
 There are two ways in which targeted sequences can be submitted: all targeted sequences can be submitted in the
-`EMBL flat file format </fileprep/flat-file-example.html>`_.
+`EMBL flat file format <fileprep/flat-file-example.html>`_.
 Alternatively, for commonly submitted types of sequence there are checklists which can be used for submission instead.
 In checklist-based submission, you provide a spreadsheet of pre-defined attributes for each sequence, and our pipeline
 automatically creates flat files based on these.
@@ -110,7 +110,7 @@ To complete you submission you will need:
 
 In addition, you will need to have our Webin-CLI tool available on the machine from which you will submit your data.
 For information on what this tool is and how to get started with it, including an instructional video for Windows
-users, please refer to the `Webin-CLI general guide </general-guide/webin-cli.html>`_.
+users, please refer to the `Webin-CLI general guide <general-guide/webin-cli.html>`_.
 The linked page provides extensive detail on Webin-CLI and its use, but the information below should be enough to
 complete your submission provided you are already able to run Webin-CLI.
 
@@ -157,7 +157,7 @@ Step 2: Validate And Submit Files
 _________________________________
 
 Once you have successfully prepared your manifest file, you should be prepared to complete your submission.
-Please refer to the `Webin-CLI general guide </general-guide/webin-cli.html>`_ if you do not have this program set up.
+Please refer to the `Webin-CLI general guide <general-guide/webin-cli.html>`_ if you do not have this program set up.
 
 Webin-CLI has 'submission' and 'validation-only' modes.
 Both of these will run the full validation suite on your submission, but only the submission mode will submit your file.
@@ -187,5 +187,5 @@ After your sequences have been processed, you will be sent the assigned sequence
 files by email.
 Refer to the `Accessions`_ section above for an explanation of these.
 
-See `Webin Portal Reports <../general-guide/submissions-portal.html>`_ for advice on retrieving information
+See `Webin Portal Reports <general-guide/submissions-portal.html>`_ for advice on retrieving information
 about these submissions.

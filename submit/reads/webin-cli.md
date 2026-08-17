@@ -54,13 +54,13 @@ The following metadata fields are supported in the manifest file:
 - STUDY: Study accession or unique name (alias) 
 - SAMPLE: Sample accession or unique name (alias)
 - NAME: Unique experiment name
-- PLATFORM: [See permitted values](#platform). Not needed if INSTRUMENT is provided.
-- INSTRUMENT: [See permitted values](#instrument)
+- PLATFORM: [See permitted values](#permitted-values-for-platform). Not needed if INSTRUMENT is provided.
+- INSTRUMENT: [See permitted values](#permitted-values-for-instrument)
 - INSERT_SIZE: Insert size for paired reads
 - LIBRARY_NAME: Library name (optional)
-- LIBRARY_SOURCE: [See permitted values](#source)
-- LIBRARY_SELECTION: [See permitted values](#selection)
-- LIBRARY_STRATEGY: [See permitted values](#strategy)
+- LIBRARY_SOURCE: [See permitted values](#permitted-values-for-library-source)
+- LIBRARY_SELECTION: [See permitted values](#permitted-values-for-library-selection)
+- LIBRARY_STRATEGY: [See permitted values](#permitted-values-for-library-strategy)
 - DESCRIPTION: free text library description (optional)
 
 #### Text manifest file format

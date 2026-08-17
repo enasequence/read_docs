@@ -32,6 +32,11 @@
 # ones.
 extensions = ['sphinx_tabs.tabs', 'myst_parser']
 
+# Generate anchors for Markdown headings (h1-h4) so the hand-written tables of
+# contents in .md pages resolve. MyST uses GitHub-compatible slugs, so these
+# TOCs work both on GitHub and in the built docs.
+myst_heading_anchors = 4
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 

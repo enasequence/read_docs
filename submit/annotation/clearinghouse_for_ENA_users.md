@@ -10,13 +10,15 @@
   * [Curation objects](#curation-objects)
     * [Examples](#examples)
       * [*Marine Metagenome Sample Curation:*](#marine-metagenome-sample-curation)
-      * [*Marine Metagenome Sample Curation:*](#marine-metagenome-sample-curation-1)
       * [*SARS-CoV-2 Sequence Curation:*](#sars-cov-2-sequence-curation)
-  * [Programmatically querying Clearinghouse data](#programmatically-querying-clearinghouse-data-)
+    * [What happens to curations after submission to Clearinghouse?](#what-happens-to-curations-after-submission-to-clearinghouse)
+      * [*Marine Metagenome Sample Curation:*](#marine-metagenome-curation-outcome)
+      * [*SARS-CoV-2 Sequence Curation:*](#sars-cov-2-curation-outcome)
+  * [Programmatically querying Clearinghouse data](#programmatically-querying-clearinghouse-data)
     * [Tips for querying and submitting Clearinghouse data](#tips-for-querying-and-submitting-clearinghouse-data)
   * [How is using the Clearinghouse Different from Updating Records in ENA?](#how-is-using-the-clearinghouse-different-from-updating-records-in-ena)
   * [Appendix:](#appendix)
-    * [1. A template bash script for submission](#1-a-template-bash-script-for-submission)
+    * [1. A template bash script for submission](#a-template-bash-script-for-submission)
 <!-- TOC -->
 
 ## Purpose of this document
@@ -73,18 +75,20 @@ The following is third party annotation on https://www.ebi.ac.uk/ena/browser/vie
 
 For all public ENA/INSDC records, curations associated to them will automatically become visible alongside the record in the ENA browser, as below:
 
+(marine-metagenome-curation-outcome)=
 #### *Marine Metagenome Sample Curation:*
 ![The EEZ-name derived from the latitude and longitude](./Image_Biosample_3rdPartyCuration.png)
 <br>
 <br>
 For **any** sample related metadata curations, cases where both attribute name and value have been validated to be compliant with ENA Checklist fields will take priority for display, and appear at the top of the 3rd Party Curations table in the browser. See below:
 
+(sars-cov-2-curation-outcome)=
 #### *SARS-CoV-2 Sequence Curation:*
 ![SARS-CoV-2 curation example](./covid_curation_browser.png)
 
 
 
-## Programmatically querying Clearinghouse data 
+## Programmatically querying Clearinghouse data
 
 The Swagger API to the Clearinghouse ([here](https://www.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/)) allows one to do many types of query programmatically in production and [development](https://wwwdev.ebi.ac.uk/ena/clearinghouse/api/swagger-ui/index.html#/). This includes adding, modifying and removing curations, as well as querying the existing metadata in Clearinghouse, eg:
 - querying via the ENA Sample ID (SAMEA####) - also known as 'recordID' to view all metadata curations associated to that sample. To date the highest proportion of Clearinghouse curations are associated to the sample record
@@ -127,5 +131,6 @@ It is important to differentiate between the curations submitted via the ELIXIR 
 
 
 ## Appendix:
+(a-template-bash-script-for-submission)=
 ### 1. {doc}`A template bash script for submission </submit/annotation/clearinghouse_submission_template>`
 
