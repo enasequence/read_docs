@@ -1,6 +1,8 @@
-============================
-Common Run Submission Errors
-============================
+=====================================
+Submission Errors and Troubleshooting
+=====================================
+
+# TODO: Change the intro to Q&A format
 
 When you submit read data to ENA, we store and accession your files within `Runs <../submit/general-guide/metadata.html>`_.
 As part of the submission process, read data files must be uploaded to your Webin account's FTP directory.
@@ -15,22 +17,22 @@ notifications to cease.
 The common error types are described here; if you have been notified of an error, please find it in this list and
 follow the instructions:
 
-- `Error: Invalid File Checksum`_
-- `Error: Number Of Lines Is Not A Multiple Of Four`_
-- `Error: Invalid File Content`_
-- `Error: Missing File`_
+- `Why Did I Get An 'Invalid File Checksum' Error?`_
+- `Why Did I Get A 'Number Of Lines Is Not A Multiple Of Four' Error?`_
+- `Why Did I Get An 'Invalid File Content' Error?`_
+- `Why Did I Get A 'Missing File' Error?`_
 
 A couple of general-purpose solutions are described too:
 
-- `Appendix: Correcting An MD5 Value`_
-- `Appendix: Re-Uploading Your File`_
+- `How Do I Correct An MD5 Value?`_
+- `How Do I Re-Upload A File?`_
 
 If your problem is not described on this page, or you are not clear on the solution, please contact us through our
 `support form <https://www.ebi.ac.uk/ena/browser/support>`_.
 
 
-Error: Invalid File Checksum
-============================
+Why Did I Get An 'Invalid File Checksum' Error?
+===============================================
 
 If this error occurs, you will receive an email containing something similar to the below:
 
@@ -53,6 +55,7 @@ Alternatively, if you used the graphical Webin File Uploader program, the MD5 wi
 for you.
 
 The error could indicate any of the following:
+
 1. A failure in the file transfer process as described
 2. The MD5 value was not registered in lower case letters
 3. The wrong MD5 value was registered in the first place
@@ -61,12 +64,13 @@ The error could indicate any of the following:
 The Solution
 ------------
 
-Depending on the exact cause of the error, there are two possible solutions.
-Please see `Appendix: Correcting An MD5 Value`_ for information on how you can calculate the MD5 value of your local
-copy of the file and determine whether it matches the originally registered value.
-If they match, you are looking at a corrupted file error.
-If they do not match, you are dealing with an incorrectly registered value.
-In either case, please refer to the relevant section below.
+Depending on the cause of the error, there are two possible solutions.
+
+Please see `How Do I Correct An MD5 Value?`_ for instructions on calculating the MD5 value of your local copy of the file and comparing it with the value originally registered.
+
+If the values match, the file is likely corrupted. If they do not match, the registered MD5 value is incorrect.
+
+In either case, refer to the relevant section below for instructions on how to resolve the issue.
 
 Corrupted File: Upload Again
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -76,7 +80,7 @@ upload was incomplete or corrupt.
 You therefore need to reupload the file.
 Once this is done, the file should be automatically accepted within 24 hours with no further action taken.
 
-Please see `Appendix: Re-Uploading Your File`_ for information on how to replace the uploaded file.
+Please see `How Do I Re-Upload A File?`_ for information on how to replace the uploaded file.
 
 Wrong MD5 Value Registered: Register a New One
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -85,14 +89,14 @@ If you recalculate the MD5 value of your local file and it does not match the va
 root of the problem.
 
 You will need to re-register the MD5 value.
-Please see `Appendix: Correcting An MD5 Value`_ for information on how to do this.
+Please see `How Do I Correct An MD5 Value?`_ for information on how to do this.
 
 If you have many runs to update, you may wish to do this programmatically, by submitting corrected XML versions of your runs.
 View our pages on `Programmatic Run Updates <../update/metadata/programmatic-read.html>`_ to learn more about this.
 
 
-Error: Number Of Lines Is Not A Multiple Of Four
-================================================
+Why Did I Get A 'Number Of Lines Is Not A Multiple Of Four' Error?
+==================================================================
 
 You will receive an email resembling the below if this error occurs:
 
@@ -141,11 +145,11 @@ If it is not divisible by four, you should discover why, correct your file and r
 .. note::
 
     If you reformat your file and then reupload it, you will also need to re-register the checksum.
-    See the `Appendix: Correcting An MD5 Value`_ for information on how to do this.
+    See the `How Do I Correct An MD5 Value?`_ for information on how to do this.
 
 
-Error: Invalid File Content
-===========================
+Why Did I Get An 'Invalid File Content' Error?
+==============================================
 
 If an invalid file content error occurs, you will receive an email with the below message:
 
@@ -184,16 +188,37 @@ The processing pipeline expects to see the file for your run in the originally s
 maintained.
 You can check what path the pipeline is expecting to see by referring to the 'FILE_NAME' field of the error message:
 this will contain the full path.
-See `Appendix: Re-Uploading Your File`_ for information on how to correctly upload your file.
+See `How Do I Re-Upload A File?`_ for information on how to correctly upload your file.
 
 .. note::
 
     If you reformat your file and then reupload it, you will also need to re-register the checksum.
-    See the `Appendix: Correcting An MD5 Value`_ for information on how to do this.
+    See the `How Do I Correct An MD5 Value?`_ for information on how to do this.
 
 
-Error: Missing File
-===================
+Read Name Problems In FASTQ Files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Two properties of the read names themselves are a frequent cause of this error:
+
+- **Read names which are too long.** Very long read names are rejected. Where your names encode a large amount of
+  information, shorten them and record that information in the run or experiment metadata instead.
+- **Read names which are not unique.** The same read name must not occur more than once within a file.
+
+If you cannot tell which applies, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ with the run
+accession and we can check the processing logs for the specific reason the file was rejected.
+
+Correcting this is not a matter of re-uploading the file.
+The failed runs and experiments must first be cancelled, after which the corrected files can be submitted against the
+**same study and sample accessions**.
+Use new experiment and run aliases which do not clash with the cancelled submission; the file names themselves can be
+reused.
+The corrected submission will receive new run and experiment accessions.
+See `Removing and Suppressing Data <suppression.html>`_ for how to request the cancellation.
+
+
+Why Did I Get A 'Missing File' Error?
+=====================================
 
 If a missing file error occurs, you will receive the below message:
 
@@ -219,11 +244,11 @@ The processing pipeline expects to see the file for your run in the originally s
 maintained.
 You can check what path the pipeline is expecting to see by referring to the 'FILE_NAME' field of the error message:
 this will contain the full path.
-See `Appendix: Re-Uploading Your File`_ for information on how to correctly upload your file.
+See `How Do I Re-Upload A File?`_ for information on how to correctly upload your file.
 
 
-Appendix: Correcting An MD5 Value
-=================================
+How Do I Correct An MD5 Value?
+==============================
 
 If the MD5 value registered for your read file is incorrect, you can supply a corrected version.
 To do this:
@@ -261,8 +286,8 @@ One of the following commands will work, if you supply the correct filename:
 For Windows users, 3rd party tools can be found to calculate MD5 values.
 
 
-Appendix: Re-Uploading Your File
-================================
+How Do I Re-Upload A File?
+==========================
 
 If your error requires a new version of the file be uploaded, you have two options for this.
 You should first consider whether your file was originally uploaded to a sub-directory.
@@ -283,7 +308,7 @@ Having determined this, refer to the relevant section below.
 
 In either case, you may need to update the MD5 value if the originally registered value was correct for the originally
 uploaded file.
-If you need to update the MD5 value, please refer to `Appendix: Correcting An MD5 Value`_.
+If you need to update the MD5 value, please refer to `How Do I Correct An MD5 Value?`_.
 
 If Your File Is Not In A Subdirectory
 -------------------------------------

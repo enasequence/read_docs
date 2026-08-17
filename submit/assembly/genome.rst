@@ -82,7 +82,7 @@ Register locus tag prefixes
 This is only required if you are submitting an annotated assembly. Otherwise, please proceed to Stage 2.
 
 Locus tag prefixes should be registered with your study.
-See `here <../../faq/locus_tags.html>`_ for information on locus tags.
+See `here <../general-guide/locus-tags.html>`_ for information on locus tags.
 Briefly, locus tag prefixes must:
 
 - Start with a letter

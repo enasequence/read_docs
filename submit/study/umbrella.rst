@@ -15,7 +15,7 @@ Decide which of the following scenarios best describes your need and follow the 
 - I have an umbrella already and would like to add child studies to it: `Adding Children To An Umbrella`_
 
 In either case, you will need to create two XML files, then submit them to us with a `curl command
-<../submit/study/programmatic.html#submit-the-xmls-using-curl>`_.
+<programmatic.html#submit-the-xmls-using-curl>`_.
 If you wish to test your submission, specify the URL of the test service in your curl command: https://wwwdev.ebi.ac.uk/ena/submit/drop-box/submit/
 
 
@@ -178,6 +178,20 @@ When you are satisfied with the updates to your umbrella project XML file, submi
 | You will receive a receipt in XML form.
   Note the 'success' attribute in this receipt, which will read true or false to indicate whether your submission was accepted.
   If the submission failed, there will be specific error messages to advise you of the problem.
+
+
+Removing An Incorrect Umbrella Link
+===================================
+
+Projects cannot be unlinked by modifying the umbrella XML: the ``MODIFY`` action only adds child projects.
+To remove a link, `contact us <https://www.ebi.ac.uk/ena/browser/support>`_ with the accessions of both projects and
+state which relationship should be removed.
+
+This applies equally where a project has been attached to the wrong parent, the wrong child, or the wrong umbrella.
+Be explicit about direction, since 'remove the link between PRJEBxxxxx and PRJEByyyyy' does not say which is the parent.
+
+Where the relationship involves a project owned by another submitter, or a project held at another INSDC archive, we
+may need to confirm the change with the other party before it can be made.
 
 
 Releasing Umbrella Studies

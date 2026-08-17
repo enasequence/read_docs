@@ -25,6 +25,7 @@ to be uploaded, and finally, how to carry out the actual upload.
    fileprep/assembly
    fileprep/flat-file-example
    fileprep/sequence-flatfile
+   fileprep/third-party-tools
 
 
 .. toctree::

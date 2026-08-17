@@ -124,7 +124,16 @@ With Casava 1.8 the format of the '@' line has changed and we accept this patter
 
 ### Oxford Nanopore
 
-Oxford Nanopore native data must be submitted as a single tar.gz
+Submit Oxford Nanopore read data in `FASTQ` format. `BAM` is also accepted, for
+either aligned or unaligned reads.
+
+**POD5 is not currently supported.** ENA cannot accept submissions in POD5 while
+its longer-term approach to Oxford Nanopore native formats is under review.
+Convert your data to `FASTQ` (or `BAM`) to submit it now. To be notified if this
+position changes, subscribe to the
+[ena-announce mailing list](https://listserver.ebi.ac.uk/mailman/listinfo/ena-announce).
+
+Native `fast5` data must be submitted as a single tar.gz
 archive containing basecalled fast5 files from Guppy, Metrichor, or Albacore.
 
 For Metrichor, an example directory structure for run named XYZ:

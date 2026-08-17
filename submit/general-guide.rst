@@ -59,6 +59,10 @@ Getting Started
    general-guide/registration
    general-guide/metadata
    general-guide/accessions
+   general-guide/analysis-accessions
+   general-guide/locus-tags
+   general-guide/data-brokering
+   general-guide/orcid-claiming
 
 
 Submission Services

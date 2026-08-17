@@ -23,3 +23,28 @@ contacts.
 It is therefore advisable to add new members of your team to this account if they are likely to participate in
 submission activities.
 
+
+
+Collaborating On Submissions
+============================
+
+How you organise accounts depends on who needs to submit and who needs access.
+
+**Within a single lab or research group**, use one Webin account and add the people involved as contacts, via
+'Home' > 'Manage Account'.
+The account owner and the added contacts are listed as contacts on public submissions.
+
+Note that permissions cannot be divided within an account: everyone with access to a Webin account has access to all of
+that account's submissions, and access cannot be restricted to particular studies.
+ENA does not provide general-purpose group accounts.
+Where different people must have access to different data, register separate Webin accounts and submit the relevant
+data from each.
+
+**Across independent labs**, each lab keeps its own Webin account and its own studies.
+Related studies can then be grouped under an `umbrella study <../study/umbrella.html>`_ managed from one account.
+Umbrella links are added from the parent downwards: the owner of the umbrella can add public child studies owned by
+other Webin accounts, but the owner of a child study cannot link it upwards into someone else's umbrella.
+
+**Broker accounts** are intended for institutions and organisations submitting data on behalf of multiple users, labs
+or projects, rather than for a group submitting its own data.
+See `Brokering Data to ENA <data-brokering.html>`_.

@@ -1,6 +1,34 @@
-=============================
-Metagenome Submission Queries
-=============================
+=======================
+Assemblies and Analyses
+=======================
+
+Which Accessions Will My Submission Receive, And Which Become Public?
+-----------------------------------------------------------------------
+
+Every analysis submission — genome assembly, MAG, environmental SAG, transcriptome or targeted sequence — receives an
+analysis accession (ERZ...) that tracks post-submission processing. **The ERZ accession is not the one to search by**,
+and may never be released.
+
+Once processing completes the submission receives its public accessions: **a GCA accession for a genome assembly, and
+contig, scaffold or chromosome accessions for the sequences themselves.**
+These are what become publicly searchable.
+
+For the full table of which accessions each submission type receives and their final status, see
+`Analyses and Accessions <../submit/general-guide/analysis-accessions.html>`_.
+
+
+What Are Locus Tags And When Do I Need One?
+----------------------------------------------
+
+Locus tags are unique identifiers for the genes in an annotated assembly.
+You need a registered locus tag prefix only if you are submitting an assembly **with functional annotation**;
+unannotated assemblies do not require one.
+
+Prefixes are registered against a study in the Webin Portal.
+See `Locus Tag Prefixes <../submit/general-guide/locus-tags.html>`_ for the registration steps, the formatting rules
+the prefix must follow, and how to use the tags in your flat file.
+
+# TODO: Add question header, it's missing here
 
 Metagenomic studies involve assembling sequencing data sampled from an entire biome all the way down to the individual species that were living in that environment. As a result, there are often many queries regarding how these assemblies are submitted in order to make the quality of the assembly and original source of data as clear as possible.
 
@@ -11,7 +39,7 @@ The following image illustrates the stages of a metagenome assembly study and wh
 Please see `here <..submit/assembly/metagenome.html>`_ for more information on how to submit your metagenome assemblies to ENA.
 
 What is defined as a MAG within ENA?
-====================================
+------------------------------------
 
 Within ENA, a MAG is described as a single-taxon assembly based on one or more binned metagenomes asserted to be a close representation to an actual individual genome (that could match an already existing isolate or represent a novel isolate).
 
@@ -20,7 +48,7 @@ There should only be one MAG submitted for each species within a biome. This can
 MAG assemblies are registered within ENA in the same domain as cultured isolate genome assemblies which means that these genome assemblies are searchable alongside cultured isolates and are used by the same downstream processes. As an environmental sample can contain many duplicate genomes of the same organism and as MAG assemblies are more prone to contamination, we request only the highest quality unique-taxon submissions are submitted as MAGs. This means only the highest quality sequences and most accurate annotated features are used within these downstream services to keep them as relevant and informative as possible.
 
 How is the quality of a metagenomic assembly defined?
-=====================================================
+-----------------------------------------------------
 
 When binned and MAG samples are registered with ENA, three quality measures are recorded which together determine the overall quality of a metagenome derived assembly. These three measures follow the data standards defined by the Genomic Standards Consortium (GSC) in the 2018 publication `here <https://www.nature.com/articles/nbt.3893>`_.
 
@@ -84,7 +112,7 @@ An assembly with the following criteria:
 It is useful to bear in mind these quality thresholds when assembling and submitting metagenomic assemblies.
 
 How do I navigate through a metagenomics study?
-===============================================
+-----------------------------------------------
 
 When submitting metagenomic samples it is important to enter the “sample derived from” field correctly.
 
@@ -93,7 +121,7 @@ This field is used to correctly trace back your data through the assembly stages
 It is important to note that you can access all the assembly layers from the study itself. However, these assemblies do not associate with each other. To look for associated metadata for these assemblies and which assemblies are derived from which, you should refer to the samples.
 
 How do I register samples for co-assemblies?
-============================================
+--------------------------------------------
 
 When registering co-assemblies, you should reference multiple samples (or reads) in the “sample derived from” field. These can be formatted as one of the following:
 
@@ -125,7 +153,7 @@ If you wish to submit a primary assembly which is co-assembled from raw reads, p
 
 
 How do I submit uncultured virus genomes (UViGs)?
-=================================================
+-------------------------------------------------
 
 The method used for submission of uncultured virus genomes depends on the methods used to identify these genomes.
 
@@ -134,7 +162,7 @@ If the virus genome was derived from a study where the entire biome of environme
 If the virus genome was derived from a study using single-cell amplification techniques, then please submit with the same methods as those outlined in the `environmental single-cell amplified genome assembly <../submit/assembly/environmental-sag.html>`_ submission guidelines. This is with the exception of the use of the **GSC MISAGS** checklist. For virus genomes, the `GSC MIUVIGS <https://www.ebi.ac.uk/ena/browser/view/ERC000049>`_ checklist should be utilised for each virus assembly.
 
 How do I submit metagenome assemblies without raw data or primary assemblies to point to?
-=========================================================================================
+-----------------------------------------------------------------------------------------
 
 It is recommended to submit all levels of metagenomic assembly where possible. However, there are exceptions where this can not be done. For example, if you have assembled bacteria from a metagenome derived from a human host, your raw data may be contaminated with human DNA which you do not have the permission to make publicly available.
 

@@ -127,9 +127,18 @@ browser to provide a point of access for the submitted file(s).
 Submission Options
 ==================
 
-Genome and transcriptome assemblies can only be submitted using the 
-Webin-CLI submission interface. For an overview of how to use this, please 
+Genome and transcriptome assemblies can only be submitted using the
+Webin-CLI submission interface. For an overview of how to use this, please
 see the documentation on `Webin-CLI Submission <general-guide/webin-cli.html>`_.
+
+.. note::
+   Copying your files into the Webin upload area, by FTP or by any other means, does **not** submit an assembly.
+   The upload area only stages the files; the submission itself must be made with Webin-CLI, which performs the
+   validation and processing the assembly route requires.
+
+   To confirm that an assembly has been submitted successfully, log in to the
+   `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`__ and open the 'Analyses Report'.
+   The assigned GCA and contig accessions are shown in the analysis processing report.
 
 .. toctree::
    :maxdepth: 1

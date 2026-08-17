@@ -40,9 +40,35 @@ metadata possible.
    update your samples.
    It is important to take time to choose the correct checklist and metadata when you first register your samples.
 
-If you can not find a suitable checklist for your sample data type - please first contact our
-`helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ for advice.
-Please only use the **ENA default sample** checklist if you have been advised that there are no other suitable options.
+Choosing A Checklist
+~~~~~~~~~~~~~~~~~~~~
+
+Choose the checklist based on the **biological material, organism or environment your samples came from**, not on the
+type of study or the sequencing you intend to perform.
+There is no separate checklist for each study type: there is no dedicated 16S amplicon sheet, for example, and the
+metadata you are asked for depends entirely on the checklist you select.
+
+Browse the `full range of checklists <https://www.ebi.ac.uk/ena/browser/checklists>`_ and pick the most specific one
+that fits.
+Some examples:
+
+- Faecal or gut metabarcoding samples taken from an animal host fit a **MIxS host-associated** checklist.
+- A fungal isolate for targeted sequencing fits the **parasite-associated** checklist if the isolate is parasitic, and
+  the general **microbe** checklist otherwise.
+- Cultured microbial isolates, cell-line material, and whole-genome sequencing of museum or tissue-bank specimens
+  frequently have no more specific checklist, and the **ENA default sample** checklist (ERC000011) is appropriate.
+
+Use the **ENA default sample** checklist only where no more specific checklist applies.
+If you are unsure which checklist fits, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ with the
+organism or environment your samples came from, and we can advise which checklist to use and which of your existing
+metadata columns can be included as additional attributes.
+
+Note that geographic location and collection date are mandatory for many checklists under ENA's
+`spatio-temporal metadata standards <../faq/sample-metadata.html#what-spatiotemporal-metadata-is-mandatory>`_, in addition to the fields the checklist
+itself requires.
+
+Once your samples are registered, submit the associated data through the relevant route: the read submission templates
+for sequencing reads, or Webin-CLI for targeted sequences and assemblies.
 
 If you cannot provide a value for a mandatory field within a checklist, please use one of the
 `INDSC accepted terms <samples/missing-values.html>`_ for missing value reporting.
@@ -58,14 +84,14 @@ Taxonomy
 
 The most fundamental attribute to any sample is its taxonomic classification.
 This must be a species-rank taxon from the NCBI Taxonomy database. Samples that are being registered for
-non-environmental assemblies must have a `binomial <../faq/taxonomy.rst#checking-a-taxon-is-binomial>`_ scientific name. Please also make sure you are familiar with
+non-environmental assemblies must have a `binomial <../faq/taxonomy.html#checking-a-taxon-is-binomial>`_ scientific name. Please also make sure you are familiar with
 the `ENA's taxonomy services <../faq/taxonomy.html>`_ and use the correct taxonomy to describe your samples.
 
-In particular, consider the `environmental taxonomy <../faq/taxonomy.html#environmental-taxonomic-classifications>`_
+In particular, consider the `environmental taxonomy <../faq/taxonomy.html#what-taxonomy-should-i-use-for-environmental-samples>`_
 options available to you when working with environmental samples.
 
 If no appropriate taxon exists in the taxonomy database you can request the addition of one by creating a
-`taxonomy request <../faq/taxonomy_requests.html>`_.
+`taxonomy request <../faq/taxonomy.html#how-do-i-request-a-new-taxon-name>`_.
 
 
 Accessions
@@ -93,3 +119,4 @@ Find specific advice on registering studies using your preferred method below:
 
    samples/interactive
    samples/programmatic
+   samples/taxonomy-requests

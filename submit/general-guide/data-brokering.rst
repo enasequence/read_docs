@@ -38,13 +38,13 @@ The difference between the two submission account types is most apparent in our 
 
 `SAMEA8697319 on the ENA Browser <https://www.ebi.ac.uk/ena/browser/view/SAMEA8697319>`_
 
-.. image:: images/sample.non-broker.png
+.. image:: ../images/sample.non-broker.png
 
 ***Sample Display : broker account***
 
 `SAMEA9079967 on the ENA Browser <https://www.ebi.ac.uk/ena/browser/view/SAMEA9079967>`_
 
-.. image:: images/sample.broker.png
+.. image:: ../images/sample.broker.png
 
 
 Authorship

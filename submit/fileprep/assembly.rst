@@ -59,7 +59,7 @@ The feature table annotation must conform to the
 `INSDC Feature Table Definition <http://www.insdc.org/files/feature_table.html>`_.
 
 Some tools to help you create flat files are described in our
-`Third Party Tools page <https://ena-docs.readthedocs.io/en/latest/faq/third_party_tools.html>`_.
+`Third Party Tools page <third-party-tools.html>`_.
 
 
 Chromosome List File

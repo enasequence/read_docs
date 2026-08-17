@@ -4,42 +4,20 @@ Requesting New Taxon IDs
 
 
 All submissions to INSDC databases must be classified against the NCBI Taxonomy database.
-Entries in the Taxonomy database have integer taxon IDs and are visible in the ENA browser alongside their full lineage
-and available data (e.g. human Tax ID is `9606 <https://www.ebi.ac.uk/ena/browser/view/Taxon:9606?show=tax-tree>`_).
-This database covers the complete tree of life, as well as viruses, synthetic constructs and metagenomic taxa.
-However, it is incomplete in that it only considers taxa which are already represented in INSDC records.
-In addition, taxa are only displayed if at least one public INSDC record is available.
+Where no existing entry covers your organism, you can request that a new taxon be added.
+This page describes how to make a request and the naming rules that apply to each category of organism.
 
-Below you will find information on what taxon names are submittable.
-Following this is a guide to creating taxon requests, including domain-specific advice on how names for different
-species should be formed.
-
-- `Submittable Organism Names`_
-- `Creating Taxon Requests`_
-
-
-Submittable Organism Names
-==========================
-
-
-Submitted organism names must be at 'species' rank.
-This rank type does not automatically mean the name is a published binomen (e.g. *Homo sapiens*): it is simply a rank,
-which differentiates the sequenced organism from another.
-For example, unidentified strains of the same bacterial genus should be kept as separate species, rather than binned
-together under the same genus name.
-
-To check for the availability of a name, please refer to the advice in the `Tips for Sample Taxonomy <taxonomy.html>`_
-section.
-
-If the name is not already available, you will need to request its addition, the process for which is described below.
-
-
-Creating Taxon Requests
-=======================
+Before requesting a new taxon, check whether one already exists: see
+`Do I need to request a new taxon? <../../faq/taxonomy.html#do-i-need-to-request-a-new-taxon>`_.
 
 
 If you wish to request a new taxon name visit the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin>`_
 and choose the 'Register taxonomy' option.
+
+.. note::
+   New taxon names should be requested through the 'Register taxonomy' option in the Webin Portal rather than by
+   email.
+   If you have emailed a request to the helpdesk and had no response, please resubmit it through the Webin Portal.
 
 The 'Register using form' option allows you to enter names one-by-one along with a category and description.
 The proposed names are automatically checked against the taxonomy database and only those not already present will be
@@ -92,7 +70,7 @@ feedback on a name.
 
 
 Prokaryotes
-___________
+***********
 
 
 If the genus is known but the species is novel or unidentified, please use the following format, where *identifier* is
@@ -132,7 +110,7 @@ to us.
 
 
 Eukaryotes
-__________
+**********
 
 
 Higher organisms are treated similarly to prokaryotes, but the term 'sp.' is applied no matter which taxonomic rank is
@@ -171,7 +149,7 @@ Environmental Samples
 ---------------------
 
 
-If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous `metagenomic taxa <taxonomy.html#environmental-biome-level-taxonomy>`_.
+If you are submitting a metagenomic sample (e.g. for metagenomic reads) there are numerous `metagenomic taxa <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_.
 Use the most appropriate environmental name for your metagenome.
 
 New names under this `node <https://www.ebi.ac.uk/ena/browser/view/Taxon:408169?show=tax-tree>`_ are added only rarely and you should use the closest available choice.

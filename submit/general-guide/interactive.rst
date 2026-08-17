@@ -107,7 +107,7 @@ Follow the links for specific guidance on each submission activity.
 
 .. _Register Study: ../study/interactive.html
 .. _Register samples: ../samples/interactive.html
-.. _Register taxonomy: ../../faq/taxonomy_requests.html
+.. _Register taxonomy: ../../submit/samples/taxonomy-requests.html
 
 .. _Submit reads: ../reads/interactive.html
 .. _Create annotated sequence spreadsheet: ../sequence/interactive.html

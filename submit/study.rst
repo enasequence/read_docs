@@ -47,3 +47,4 @@ Find specific advice on registering studies using your preferred method below:
 
    study/interactive
    study/programmatic
+   study/umbrella

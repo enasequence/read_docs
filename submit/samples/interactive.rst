@@ -72,6 +72,11 @@ Consider the following tips as you complete your spreadsheet:
 - Do not edit the existing column names
 - Use only valid ASCII characters
 - When you come to submit the file must use one of the following extensions: .tsv, .tab
+- **Save the file as tab-separated**, or failing that comma-separated. Semicolons are not accepted as column
+  separators and are a common cause of submissions failing with missing mandatory fields
+- Before submitting, reopen the file in a spreadsheet program and check that every row has the same number of columns
+  and that the columns are still aligned with their headers. A single misaligned row will be reported as missing or
+  invalid metadata rather than as a formatting problem
 
 
 

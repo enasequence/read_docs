@@ -71,7 +71,7 @@ metagenome (tax id: 1169740)).
 
 If you do not intend to submit raw reads as part of your SAG submission, please make sure you have registered
 **environmental** samples anyway. These will represents the original sequenced biomaterial that your SAG was derived from.
-You will also need to follow `these guidelines <../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
+You will also need to follow `these guidelines <../../faq/assemblies-analyses.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
 for details on how to release your **environmental** samples. If no data is associated with a sample, it needs to be
 released manually in order to be available to the public.
 
