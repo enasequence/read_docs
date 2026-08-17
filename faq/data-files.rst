@@ -45,7 +45,6 @@ Oxford Nanopore native formats is under review.
 Submit Oxford Nanopore reads as **FASTQ** instead.
 BAM is also accepted, for either aligned or unaligned reads.
 
-Native ``fast5`` data are still accepted, as a single ``tar.gz`` archive of basecalled fast5 files.
 See `Oxford Nanopore <../submit/fileprep/reads.html#oxford-nanopore>`_.
 
 To be told if this position changes, subscribe to the
