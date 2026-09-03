@@ -64,7 +64,8 @@ Should I Request A Broker Account?
 ----------------------------------
 
 Broker accounts are for institutions and organisations submitting data **on behalf of other people** — multiple users,
-labs or studies that are not your own.
+labs or studies that are not your own. Public data submitted by broker accounts list both the broker name (data broker) and 
+centre name (data owner) associated with the submission.
 If your group is submitting its own data, you do not need one: adding contacts to a regular account covers a single
 group (see `Can Several People In My Group Submit Under The Same Account?`_), and an umbrella study covers a
 collaboration across labs (see `How Do Independent Labs Collaborate On One Study?`_).
