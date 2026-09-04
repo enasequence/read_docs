@@ -20,10 +20,21 @@ Both appear together in the ENA Browser, under 'Submitted files' and 'Generated 
 What Files Does ENA Generate For My Runs?
 -----------------------------------------
 
-FASTQ files, whatever format you submitted in.
+FASTQ files.
+
 A paired submission produces ``<run_accession>_1.fastq.gz`` and ``<run_accession>_2.fastq.gz``; an unpaired one
 produces ``<run_accession>.fastq.gz``.
-Oxford Nanopore and PacBio submissions also produce ``_consensus`` and ``_subreads`` files where applicable.
+Oxford Nanopore and PacBio consensus reads also produce a ``<run_accession>_consensus.fastq.gz`` file, and PacBio
+subreads a ``<run_accession>_subreads.fastq.gz`` file.
+
+Note, however, that generated FASTQs will not be available for the following submissions:
+
+- BAM/CRAM files containing @PG:longranger
+- BAM/CRAM files containing @PG:cellranger
+- BAM/CRAM files containing CB:Z,CR:Z,CY:Z,RX:Z,QX:Z tags
+- Complete Genomics native (data folder) submissions
+- PacBio native (HDF5) submissions
+- ONT native format submissions
 
 The read headers in generated FASTQ files are rewritten to a standard form built from the run accession and the spot
 index, so they will not match the read names you submitted.

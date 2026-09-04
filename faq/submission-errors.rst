@@ -255,7 +255,8 @@ For Windows users, 3rd party tools can be found to calculate MD5 values.
 How Do I Re-Upload A File?
 --------------------------
 
-If your error requires a new version of the file be uploaded, you have two options for this.
+If your error requires a new version of the file be uploaded, how you do this depends on where the original file was
+placed in your Webin upload area.
 You should first consider whether your file was originally uploaded to a sub-directory.
 You can tell by referring to the original error message, looking out for the 'FILE_NAME' column.
 The below error describes a file which was uploaded to a subdirectory:
@@ -279,19 +280,21 @@ If you need to update the MD5 value, please refer to `How Do I Correct An MD5 Va
 If Your File Is Not In A Subdirectory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please view the guidance on the `Webin File Uploader <../submit/fileprep/upload.html#using-webin-file-uploader>`_.
-This will conveniently allow you to upload your file to the top level of your submission directory.
+Upload the replacement file to the top level of your Webin upload area, using any of the methods described in
+`Uploading Files To ENA <../submit/fileprep/upload.html#file-upload-options>`_.
 
 
 If Your File Is In A Subdirectory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will need to upload your file using `FTP Client <../submit/fileprep/upload.html#uploading-files-using-command-line-ftp-client>`_.
-There are various options for doing this, described at the linked page.
+Upload the replacement file into that same subdirectory, using any of the methods described in
+`Uploading Files To ENA <../submit/fileprep/upload.html#file-upload-options>`_.
 
-If using a command line solution: Once you are connected to the FTP server, use the ``ls`` command to view the content
+If using a command line FTP client: once you are connected to the server, use the ``ls`` command to view the content
 of the directory and the ``cd <directory-name>`` command to move into the required location.
 Once you arrive in the desired directory, proceed to upload the files.
+A graphical client such as FileZilla lets you navigate to the subdirectory in its remote-site panel before transferring
+the file.
 
 .. note::
 
