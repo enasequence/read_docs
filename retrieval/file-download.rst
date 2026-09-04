@@ -32,6 +32,7 @@ Their content and structures are described in detail at the below pages:
 
    file-download/sra-ftp-structure
    file-download/ena-ftp-structure
+   file-download/archive-generated-files
 
 
 Downloading Files

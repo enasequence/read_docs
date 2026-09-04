@@ -6,7 +6,7 @@ Analyses and Accessions
 ENA accepts different types of secondary analyses such as assemblies, assembled and annotated sequences and other
 analyses as ‘Analysis’ submissions.
 
-.. image:: images/metadata_model_assembly.png
+.. image:: ../images/metadata_model_assembly.png
    :align: center
 
 For each submission, Webin will report an analysis accession number (ERZxxxxxx) which can be used to track the status
@@ -14,6 +14,12 @@ of any post-submission processing. This may or may not be later released with yo
 also receive post-processing accession numbers. This section lists the various submissions that are considered as
 ‘Analyses’, their respective accession numbers that will be generated depending on the submission type and if they
 will be available publicly or not.
+
+.. note::
+   If your project is public but you cannot find your assembly or analysis, you may be searching by an ERZ accession
+   rather than by the public accession issued for it. See
+   `My Study Is Public, But The Browser Says There Is No Public Data Associated With It
+   <../../faq/release.html#my-study-is-public-but-the-browser-says-there-is-no-public-data-associated-with-it>`_.
 
 
 +---------------------------------+-----------------------------+------------------+------------------------------+

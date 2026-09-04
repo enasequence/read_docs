@@ -66,7 +66,7 @@ When assemblies are updated they must be re-submitted with the same study and sa
 
 .. tip::
     Check your sample has a submittable taxonomy.
-    Your sample must have a `binomial taxonomy <../../faq/taxonomy.html#checking-a-taxon-is-submittable>`_.
+    Your sample must have a `binomial taxonomy <../../faq/taxonomy.html#how-do-i-check-whether-a-taxon-can-be-used>`_.
     If the sample taxonomy is not **binomial**, then the genome assembly submission will fail validation.
 
 It is also strongly recommended to submit the reads from which the assembly was assembled.
@@ -82,7 +82,7 @@ Register locus tag prefixes
 This is only required if you are submitting an annotated assembly. Otherwise, please proceed to Stage 2.
 
 Locus tag prefixes should be registered with your study.
-See `here <../../faq/locus_tags.html>`_ for information on locus tags.
+See `here <../general-guide/locus-tags.html>`_ for information on locus tags.
 Briefly, locus tag prefixes must:
 
 - Start with a letter

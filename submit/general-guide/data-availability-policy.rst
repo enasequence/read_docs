@@ -3,7 +3,13 @@ Data Availability Policy
 ========================
 
 While the INSDC databases hold public data, there are several levels of data availability which control access to
-these data.  These are described below.
+these data. Each status below records why data are in that state and what it means for anyone trying to access them.
+
+For a short summary of what each status means in practice, see
+`What Do The Data Availability Statuses Mean? <../../faq/release.html#what-do-the-data-availability-statuses-mean>`_.
+
+While the INSDC databases hold public data, there are several levels of data availability which control access to
+these data:
 
 +------------------+------------------------------------------+-------------------------------------------+
 |   Status name    |   Causes                                 |   Implications                            |

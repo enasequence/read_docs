@@ -100,7 +100,7 @@ hold all metadata related to the taxonomy of that subset as well as methods used
 
 .. image:: ../../images/metadata_model_derivedanalysis.png
 
-**MAG** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_
+**MAG** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#organism-level-taxonomy>`_
 as they can be and use the specific `GSC MIMAGS <https://www.ebi.ac.uk/ena/browser/view/ERC000047>`_ checklist.
 
 Please make sure these **MAG** samples correctly reference the sample they were derived from, e.g. a **binned**
@@ -121,8 +121,8 @@ You should also reference the source sample in the description:
    and reference this within your **MAG** sample.
    Registering an **environmental** sample follows the same method as regular sample registration.
    Make sure to use the most appropriate environmental checklist and an
-   `environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic metagenome (tax id: 1169740)).
-   Please also see `here <../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
+   `environmental taxon <../../../faq/taxonomy.html#biome-level-taxonomy>`_ (e.g. aquatic metagenome (tax id: 1169740)).
+   Please also see `here <../../../faq/assemblies-analyses.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
    for details on how to release these samples. If no data is associated with the **environmental** sample, it needs to be
    released manually in order to be available to the public.
 

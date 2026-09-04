@@ -19,7 +19,7 @@ How to claim a record
 Upon visiting a claimable record on the ENA browser (`example <https://www.ebi.ac.uk/ena/browser/view/SAMEA8078409>`_),
 an 'ORCID Data Claims' item will appear in :ref:`the navigation box <nav box>`.
 
-.. image:: images/orcid-nav-box.png
+.. image:: ../images/orcid-nav-box.png
    :align: center
 
 Clicking 'Show' will reveal the ORCID menu where you can see which ORCID IDs have already claimed the record, along with
@@ -27,7 +27,7 @@ a 'Claim to ORCID' button to allow your to claim the record to your own ID. ORCI
 centrally by the `EBI search service <https://www.ebi.ac.uk/ebisearch/about>`_, so clicking the button will direct you to
 this service with your record pre-selected.
 
-.. image:: images/orcid-ebi-search.png
+.. image:: ../images/orcid-ebi-search.png
    :align: center
 
 From here, click on the 'Claim to ORCID' button at the top of the search results. This will open a login prompt for
@@ -42,7 +42,7 @@ you can control visibility, and unlink the record from your ORCID ID.
 .. tip::
     Sorting your list of works by 'Type' ascending will bring 'Data set' records to the top.
 
-.. image:: images/orcid-claimed-records.png
+.. image:: ../images/orcid-claimed-records.png
    :align: center
 
 

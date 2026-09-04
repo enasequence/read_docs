@@ -116,7 +116,7 @@ as a query we get:
 .. admonition:: Why are we we using host_tax_id instead of scientific_name?
 
    Here, we are searching for samples of the *microbiome within a host* not samples of the *host genome itself*.
-   Microbiome samples use `biome-level metagenome taxonomy <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_
+   Microbiome samples use `biome-level metagenome taxonomy <../../faq/taxonomy.html#biome-level-taxonomy>`_
    and should include the host taxonomy in the metadata like in this example. You can also perform searches using this biome-level
    taxonomy to find microbiome data. See `here <taxon-based-search.html>`_ for our guide on performing taxonomy-based searches.
 

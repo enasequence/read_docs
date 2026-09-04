@@ -73,7 +73,7 @@ sample and hold all metadata related to the taxonomy of that subset as well as m
 
 .. image:: ../../images/metadata_model_derivedanalysis.png
 
-These **binned** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#environmental-organism-level-taxonomy>`_
+These **binned** samples should be as `specific in taxonomy <../../../faq/taxonomy.html#organism-level-taxonomy>`_
 as they can be and use the specific `ENA binned metagenome <https://www.ebi.ac.uk/ena/browser/view/ERC000050>`_ checklist.
 
 Please make sure these **binned** samples correctly reference the **environmental** sample that the bin was derived from.
@@ -96,8 +96,8 @@ OR
    please still register an **environmental** sample to show the source of the data and reference this within your **binned** sample.
    Registering an **environmental** sample follows the same method as regular sample registration.
    Make sure to use the most appropriate environmental checklist and an
-   `environmental taxon <../../faq/taxonomy.html#environmental-biome-level-taxonomy>`_ (e.g. aquatic metagenome (tax id: 1169740)).
-   Please also see `here <../../faq/metagenomes.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
+   `environmental taxon <../../../faq/taxonomy.html#biome-level-taxonomy>`_ (e.g. aquatic metagenome (tax id: 1169740)).
+   Please also see `here <../../../faq/assemblies-analyses.html#how-do-i-submit-metagenome-assemblies-without-raw-data-or-primary-assemblies-to-point-to>`_
    for details on how to release these samples. If no data is associated with the **environmental** sample, it needs to be
    released manually in order to be available to the public.
 

@@ -61,7 +61,7 @@ Flat File Preparation Resources
 
 
 There are various tools which can help you with the preparation of your flat file, some of which are listed in our
-`Third Party Tools page <../../faq/third_party_tools.html>`_.
+`Third Party Tools page <../fileprep/third-party-tools.html>`_.
 
 `Entry Upload Templates <../fileprep/sequence_flatfile.html>`_
   Some flat file templates are provided at the linked page which may help with the preparation of your submissions.
@@ -83,9 +83,9 @@ There are various tools which can help you with the preparation of your flat fil
 `EMBLmyGFF3 <https://github.com/NBISweden/EMBLmyGFF3>`_
   If you have your annotation in GFF3 format already, this tool created by staff at NBI Sweden can be used to convert
   to EMBL flat file format.
-  Read more in the `Third Party Tools page <../../faq/third_party_tools.html>`_.
+  Read more in the `Third Party Tools page <../fileprep/third-party-tools.html>`_.
 
 `annonex2embl <https://github.com/michaelgruenstaeudl/annonex2embl>`_
   For multiple sequence alignments in NEXUS format with annotation, this tool is available for conversion to
   EMBL flat file format.
-  Read more in the `Third Party Tools page <../../faq/third_party_tools.html>`_.
+  Read more in the `Third Party Tools page <../fileprep/third-party-tools.html>`_.

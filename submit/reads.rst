@@ -58,3 +58,17 @@ For an overview of these, please see the `General Guide on Submitting to ENA <ge
 
   Webin-CLI is recommended for read submissions because it provides the best pre-submission validation, however note
   that in the read context it is only usable for data in FASTQ, BAM, or CRAM formats
+
+
+Adding Reads To An Existing Study
+=================================
+
+You can submit further reads to a study you already own at any time, whether that study is private or public.
+
+There is no need to edit the study first.
+Submit the reads as normal, referencing the existing study accession and the relevant sample accessions.
+If the study is already public, the newly submitted reads and their sample records will become public once submission
+processing completes; see `Data Release Policies <../faq/release.html>`_.
+
+If the submission is rejected, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ with the study
+accession and the exact error message.

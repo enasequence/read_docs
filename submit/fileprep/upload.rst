@@ -52,6 +52,24 @@ If you have problems with using these services, you may find help in the appendi
 - `Appendix: Configuring Your Firewall For ENA Upload`_
 
 
+Upload Authentication Failures
+------------------------------
+
+If you can log in to the Webin Portal in your browser but FTP, Aspera or Webin-CLI uploads fail to authenticate, the
+cause is usually the network path rather than your credentials.
+Work through the following before contacting us:
+
+1. Retry the upload. Transfer and storage problems at ENA are occasionally transient.
+2. Try `Aspera <#using-aspera-ascp-command-line-program>`_ instead of FTP, or FTP instead of Aspera.
+3. Try to log in and upload from a machine outside your institutional or HPC network. If the upload works from
+   elsewhere but not from your institution, the restriction is on your network, and the
+   `Appendix: Configuring Your Firewall For ENA Upload`_ has the ports and addresses your IT department needs to
+   permit.
+
+If access from your network is not the problem, contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_
+with the exact error message and any transfer logs, so the issue can be passed to the transfer service team.
+
+
 Using Webin File Uploader
 -------------------------
 
@@ -300,7 +318,7 @@ All files are subjected to a format check done by Webin. This does not occur
 until after you formally submit the files. You will generally be notified of
 this by email, and may be required to correct and reupload the file.
 Advice on this can be found in our `Common Run Submission Errors FAQ
-<../../faq/runs.html>`_
+<../../faq/submission-errors.html>`_
 
 
 Fair Use Policy

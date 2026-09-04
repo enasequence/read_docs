@@ -44,6 +44,28 @@ Chromosomes may be added:
   chromosome-level assembly, in which case there are not yet any chromosome
   names to maintain.
 
+Sequences other than chromosomes may be removed:
+  Removing sequence is acceptable where the sequences being removed are not
+  chromosomes and the chromosome set is otherwise unchanged.
+  This is the normal route for removing contamination, or for dropping
+  scaffolds and non-chromosomal contigs from a later version.
+
+  Removing a chromosome is a different case, and cannot simply be submitted:
+  contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_ first.
+  We may need to enable the update before you submit it, and to suppress the
+  removed chromosome from the previous version afterwards.
+
+If chromosome names change, keep the object names stable:
+  Where you are renaming chromosomes, keep the object names in the chromosome
+  list file the same as in the previous version, so that each sequence can
+  still be mapped to the correct existing accession.
+
+Submit the update in the same format as the original:
+  If the original assembly was submitted as an EMBL flat file, submit the
+  update as a flat file.
+  Where the original was submitted as FASTA, a FASTA update carrying the same
+  metadata is expected.
+
 Annotation status must be maintained:
   If your assembly was previously submitted with annotation and you are
   updating the assembly you can do this following the above factors, i.e.
@@ -90,7 +112,7 @@ Taxonomy changes require our assistance:
   This process will require first that the sample taxonomy be correct, so you
   are welcome to `update your sample first <metadata/interactive.html>`_.
   If the taxon you wish to use does not exist in the taxonomy database, you
-  will need to `request its addition <../faq/taxonomy_requests.html>`_.
+  will need to `request its addition <../faq/taxonomy.html#how-do-i-request-a-new-taxon-name>`_.
 
 .. tip::
   The project accession and sample accession associated 
@@ -101,7 +123,17 @@ Contact us for other metadata updates:
   The advice given here pertains to updating the sequence and annotation (if
   applicable) of your assembly.
   If you wish to change the assembly metadata values,
-  please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_.
+  please contact our `helpdesk <https://www.ebi.ac.uk/ena/browser/support>`_
+  with the assembly accession or accessions affected and the exact change
+  required.
+  This route covers values such as the assembly name and description, and
+  sequencing kit information.
+
+  It also covers refreshing an assembly after a linked record has changed.
+  If you have corrected the organism name or taxon on the linked sample, tell
+  us that it has been updated, so that the relevant pipeline can be run and the
+  associated assembly or WGS record refreshed to match.
+  Allow a few days after reprocessing for the change to be reflected publicly.
 
 State of publicity will be the same:
   If the original assembly is already public, then the update will be made

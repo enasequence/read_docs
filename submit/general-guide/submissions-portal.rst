@@ -110,7 +110,7 @@ The below image shows the file report interface for runs; the interface for anal
 
 Where archiving failure has occurred, you will also be informed of email, with information about the errors.
 If your runs have failed archiving, you can often fix this yourself using information available in the
-`Common Run Submission Errors FAQ <../../faq/runs.html>`_.
+`Common Run Submission Errors FAQ <../../faq/submission-errors.html>`_.
 
 The information shown in this interface (for runs and analyses) deals with the archival of files, while the below
 section deals with the processing of files.

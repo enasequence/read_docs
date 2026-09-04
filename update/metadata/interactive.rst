@@ -50,7 +50,7 @@ These include the release date, title, description and publication references.
 5. Edit values in this interface as required: the short name for the study will be visible in search outputs and
    overview pages whereas the descriptive title and abstract will be presented in the study's public page
 6. If you now wish to add a genome assembly with functional annotation to this study, start by checking the box for this
-   and then registering a `locus tag prefix <../..faq/locus_tags.html>`_ at the bottom of the page
+   and then registering a `locus tag prefix <../../submit/general-guide/locus-tags.html>`_ at the bottom of the page
 7. You can add papers by searching the PubMed ID; through integration with ePMC these papers will then be linked from
    this study's page in the ENA Browser
 8. Add additional keywords as desired; for example you may add a DOI as shown above
@@ -108,6 +108,27 @@ Common updates might include:
 - Adding new <EXPERIMENT_ATTRIBUTE> elements to provide additional information about your experiment
 
 All of the above can be achieved by editing the XML displayed when you click the 'Edit' button.
+
+
+Correcting Runs Linked To The Wrong Study Or Sample
+---------------------------------------------------
+
+
+Runs which reference the wrong study or the wrong sample are corrected on the **experiment**, not on the run: it is the
+experiment that carries both references.
+You do not need to cancel and resubmit the run.
+
+1. Log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`__ and open the 'Runs Report'
+2. Find the affected run and open its 'Action' menu
+3. Choose the option to edit the **experiment** XML
+4. To move the run to a different study, change the accession in the <STUDY_REF> element. To attach it to a different
+   sample, change the accession in the <SAMPLE_DESCRIPTOR> element
+5. Save your changes
+
+The same corrections can be made programmatically by submitting an updated experiment XML; see
+`Updating Read Objects Programmatically <programmatic-read.html>`_.
+
+The change takes effect immediately, but the public ENA Browser can take up to 48 hours to show the new association.
 
 
 Common Run Updates

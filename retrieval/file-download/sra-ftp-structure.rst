@@ -36,7 +36,7 @@ For most reads presented by ENA, there are three kinds of file available:
   standardised format (`learn more about this format`_)
 - *SRA files* are in a format designed to work with NCBI's `SRA Toolkit`_
 
-.. _`learn more about this format` : ../faq/archive-generated-files.html
+.. _`learn more about this format` : archive-generated-files.html#run-files
 .. _`SRA Toolkit` : https://www.ncbi.nlm.nih.gov/books/NBK158900/
 
 Each of the three file types has its own directory on the FTP server.
@@ -87,7 +87,7 @@ Archive-Generated Read Files
 In most cases ENA generates one or more FASTQ files for each run, which follow
 a specific format.
 For information on this format, and when it is not available, please see our
-page on `Archive Generated FASTQ Files <https://ena-docs.readthedocs.io/en/latest/faq/archive-generated-files.html?#archive-generated-files>`_.
+page on `Archive-Generated Files <archive-generated-files.html#run-files>`_.
 
 ENA archive-generated files are available in the 'fastq' directory, e.g.:
 
