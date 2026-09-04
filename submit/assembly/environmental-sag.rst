@@ -154,6 +154,7 @@ Manifest file
 -------------
 
 The manifest file has two columns separated by a tab (or any whitespace characters):
+
 - Field name (first column): case insensitive field name
 - Field value (second column): field value
 
@@ -303,6 +304,7 @@ Sequence validation
 -------------------
 
 Sequences must:
+
 - have unique names within an assembly
 - be at least 20bp long
 - not have terminal Ns
