@@ -384,6 +384,7 @@ Assembly Updates
 ================
 
 Assembly updates must:
+
 - use the same sample and study pair as was used in the initial assembly submission
 - not remove any chromosomes
 - use a unique 'ASSEMBLY_NAME' value in the manifest file

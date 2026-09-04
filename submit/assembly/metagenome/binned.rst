@@ -226,6 +226,7 @@ Assembly name validation
 ------------------------
 
 Assembly names must:
+
 - match the pattern: ^\[A-Za-z0-9\]\[A-Za-z0-9 _#\-\.]*$
 - not be longer than 50 characters
 - not include the taxonomic name of the organism assembled
@@ -234,6 +235,7 @@ Sequence validation
 -------------------
 
 Sequences must:
+
 - have unique names within an assembly
 - be at least 20bp long
 - not have terminal Ns
