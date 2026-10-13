@@ -31,7 +31,7 @@ There are three submission routes, and which you can use depends on the data typ
 
 Raw reads can be submitted by any of the three.
 See `Submission Options <../submit/reads.html#submission-options>`_ for reads, or
-`Getting Started <../submit/general-guide.html#getting-started>`_ for the matrix of which route applies to each
+`General Guide On ENA Data Submission <../submit/general-guide.html>`_ for the matrix of which route applies to each
 data type.
 
 
