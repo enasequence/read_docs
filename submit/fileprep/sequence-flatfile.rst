@@ -597,7 +597,7 @@ rDNA Region (ITS And rRNA Features)
 ===================================
 
 The ITS/rDNA region can be submitted using an `annotation checklist
-<https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_ but this provides all
+<../sequence/annotation-checklists.html>`_ but this provides all
 details within a single misc_RNA feature. If you wish to add individual feature
 annotation for each rRNA and ITS, you will need to generate the file yourself.
 This section provides a skeleton for that.
@@ -664,7 +664,7 @@ Precursor mRNA
 ==============
 
 Precursor mRNA can be submitted using an `annotation checklist
-<https://www.ebi.ac.uk/ena/submit/annotation-checklists>`_ called "Single-CDS
+<../sequence/annotation-checklists.html>`_ called "Single-CDS
 mRNA" but this does not annotation of features that arise from processing of the
 transcript, such as sig_peptide or mat_peptide features. To add these, you will
 need to prepare the file yourself with the template below.
