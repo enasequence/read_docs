@@ -110,19 +110,19 @@ Follow the links for specific guidance on each submission activity.
 .. _Register taxonomy: ../../submit/samples/taxonomy-requests.html
 
 .. _Submit reads: ../reads/interactive.html
-.. _Create annotated sequence spreadsheet: ../sequence/interactive.html
+.. _Create annotated sequence spreadsheet: ../sequence/webin-cli-spreadsheet.html
 
 .. _upload it to your account's FTP area: ../fileprep/upload.html
 
-.. _Studies Report: /reports-service.html
-.. _Samples Report: /reports-service.html
-.. _Runs Report: /reports-service.html
-.. _Run Files Report: /reports-service.html
-.. _Run Processing Report: /reports-service.html
-.. _Unsubmitted Files Report: /reports-service.html
-.. _Analyses Report: /reports-service.html
-.. _Analysis File Report: /reports-service.html
-.. _Analysis Processing Report: /reports-service.html
+.. _Studies Report: submissions-portal.html#metadata-reports
+.. _Samples Report: submissions-portal.html#metadata-reports
+.. _Runs Report: submissions-portal.html#metadata-reports
+.. _Run Files Report: submissions-portal.html#submitted-runs-and-analyses
+.. _Run Processing Report: submissions-portal.html#processing-reports
+.. _Unsubmitted Files Report: submissions-portal.html#unsubmitted-files
+.. _Analyses Report: submissions-portal.html#metadata-reports
+.. _Analysis File Report: submissions-portal.html#submitted-runs-and-analyses
+.. _Analysis Processing Report: submissions-portal.html#processing-reports
 
 Each of these links will interfaces which provide further information on how to complete the described action.
 Interactive submission is recommended for registration of your Study and Samples and for small scale Read submissions.

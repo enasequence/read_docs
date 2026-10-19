@@ -56,7 +56,7 @@ For the full range of features and qualifiers available for flat files and their
 `WebFeat <https://www.ebi.ac.uk/ena/WebFeat/>`_.  The complete flatfile manual is available `here <https://raw.githubusercontent.com/enasequence/read_docs/master/submit/fileprep/flatfile_user_manual.txt>`_.
 
 The feature table annotation must conform to the
-`INSDC Feature Table Definition <http://www.insdc.org/files/feature_table.html>`_.
+`INSDC Feature Table Definition <https://www.insdc.org/submitting-standards/feature-table/>`_.
 
 Some tools to help you create flat files are described in our
 `Third Party Tools page <third-party-tools.html>`_.

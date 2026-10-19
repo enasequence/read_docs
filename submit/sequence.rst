@@ -35,7 +35,7 @@ Please do this before attempting any of the guides shown below:
 There is also an option to link sequences to sample accessions in annotation checklists if preferred. However, this is
 not mandatory.
 
-- `Register a Sample <sample.html>`_
+- `Register a Sample <samples.html>`_
 
 .. note::
    This submission route is for sets of stand-alone targeted assembled and annotated sequences only.
@@ -70,7 +70,7 @@ Submission Options
 
 
 There are two ways in which targeted sequences can be submitted: all targeted sequences can be submitted in the
-`EMBL flat file format </fileprep/flat-file-example.html>`_.
+`EMBL flat file format <fileprep/flat-file-example.html>`_.
 Alternatively, for commonly submitted types of sequence there are checklists which can be used for submission instead.
 In checklist-based submission, you provide a spreadsheet of pre-defined attributes for each sequence, and our pipeline
 automatically creates flat files based on these.
