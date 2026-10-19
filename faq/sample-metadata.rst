@@ -41,7 +41,7 @@ All ENA sample checklists, including the default checklist, require **Geographic
 |                            | | valid.                                                           |
 +----------------------------+--------------------------------------------------------------------+
 
-.. _`INSDC controlled vocabulary`: https://www.insdc.org/submitting-standards/country-qualifier-vocabulary/
+.. _`INSDC controlled vocabulary`: https://www.insdc.org/submitting-standards/insdc-controlled-vocabularies/
 .. _`Missing value reporting`: https://www.insdc.org/submitting-standards/missing-value-reporting/
 
 The requirement follows an
