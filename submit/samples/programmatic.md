@@ -114,7 +114,7 @@ If you do not define a checklist then the samples will be validated against the 
 fields but contains many optional attributes that can help you to annotate your samples
 to the highest possible standard.
 
-You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/submit/checklists). For example, the
+You can find all the sample checklists [here](http://www.ebi.ac.uk/ena/browser/checklists). For example, the
 checklist [ERC000014](https://www.ebi.ac.uk/ena/browser/view/ERC000014) represents the
 GSC MIxS annotation standard for human associated source samples.
 
