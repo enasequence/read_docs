@@ -345,9 +345,6 @@ Prepare the manifest
 Create a plain text, tab-separated manifest. Replace every value in angle
 brackets with your own value.
 
-.. The PDF names the study field STUDY_ID in this table but uses STUDY in
-   both manifest examples. Both forms have been retained as written.
-
 .. list-table::
    :header-rows: 1
    :widths: 25 75
@@ -356,7 +353,7 @@ brackets with your own value.
      - Value to provide
    * - ``NAME``
      - A name for the annotation submission.
-   * - ``STUDY_ID``
+   * - ``STUDY``
      - The study accession for the annotation.
    * - ``ANALYSIS_TYPE``
      - ``DECOUPLED_ANNOTATION``.
