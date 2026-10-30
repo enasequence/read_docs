@@ -300,7 +300,7 @@ end = the biological end coordinate + the length of the sequence.
    a CDS from 4900 to 200, whereas the prose and embedded GFF3 snippet use
    a 15000-base sequence and coordinates 14700 to 15600.
 
-.. figure:: ../images/gff3-circular-sequence.png
+.. figure:: images/gff3-circular-sequence.png
    :alt: Original two-panel figure showing a circular sequence with a CDS
          crossing the origin and a GFF3 snippet using coordinates 14700 to 15600.
    :width: 700px
