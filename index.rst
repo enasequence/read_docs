@@ -24,6 +24,7 @@ bottom of the page.
    submit/assembly
    submit/sequence
    submit/analyses
+   submit/gff3
    submit/pathogens
 
 .. toctree::
