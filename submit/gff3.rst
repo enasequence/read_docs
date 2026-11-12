@@ -477,3 +477,5 @@ and biological.
    * - Incorrect attribute parsing
      - Check case-sensitive attribute names and percent-encode reserved
        characters inside values.
+   * - Gencode and SO have nomenclature differences
+     - scaffold in col3 can be replaced by SO terms such a “region” or “ “supercontig” 
