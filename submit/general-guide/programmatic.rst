@@ -483,6 +483,21 @@ The center_name attribute defines the submitting institution. The center name is
 account details except for broker accounts. Brokers should provide a center name which reflects the institute where the
 data was generated. For brokers, the broker_name field is automatically assigned at time of submission.
 
+Submitting Locus Tags programmatically to a study
+=================================================
+
+Locus Tags can be submitted programmatically to a study by XML or similarly for JSON:
+
+.. code:: XML
+
+  <SUBMISSION_PROJECT>
+      <SEQUENCING_PROJECT>
+        <LOCUS_TAG_PREFIX>TESTTAG101</LOCUS_TAG_PREFIX>
+      </SEQUENCING_PROJECT>
+  </SUBMISSION_PROJECT>
+
+Please see :doc:`locus tag guidelines <locus-tags>` for information about the locus-tags.
+
 Synchronous Endpoint
 ====================
 
