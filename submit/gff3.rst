@@ -237,7 +237,7 @@ Peptide sequences
 If you supply peptide sequences after ``##FASTA``, make each peptide identifier
 match the corresponding CDS ``protein_id``, if present, or the CDS ``ID``.
 Supplied peptides should match the conceptual translation unless a supported
-translation exception applies.
+translation exception applies (see "other Annotation Cases" for the controlled vocabulary).
 
 Preparing your GFF3 file
 ------------------------
@@ -330,6 +330,13 @@ Use the following conventions where applicable.
    * - Atypical interval order
      - Use ``part`` to specify interval order where coordinate sorting is
        insufficient.
+   * - Exceptions
+     - Some features have extra biological validations on them. The **exception=<controlled_value>**
+       in col 9, typically allows one of these values: 
+       ribosomal_slippage, trans_splicing, low-quality sequence region, heterogeneous population sequenced
+       RNA editing, reasons given in citation, rearrangement required for product, 
+       annotated by transcript or proteomic data and circular_RNA
+
 
 Submitting with Webin CLI
 -------------------------
@@ -427,7 +434,8 @@ Common errors
 -------------
 
 Use the validation report to identify the affected record and field. The checks
-below summarise common problems to resolve before resubmitting.
+below summarise common problems to resolve before resubmitting. The validation checks are a mixture of GFF3 syntactical 
+and biological.
 
 .. list-table::
    :header-rows: 1
@@ -448,6 +456,15 @@ below summarise common problems to resolve before resubmitting.
      - Check the coordinate system, inclusive end coordinate and sequence
        length. Use origin-spanning coordinates only for a sequence recorded
        as circular.
+   * - CDS_LENGTH < 25 bps
+     - Evaluate if it is a likely biologically valid short CDS_LENGTH. If so: 
+       1) annotate just the ‘“cds” feature’s col 9
+       2) You will need to have **exception=** and either: **experiment=** or **inference=**
+       where exception=<controlled values> , experiment=<free text>  and inference=<free text>.
+       The following are several examples:
+       1) **exception=annotated by transcript or proteomic data;experiment=RNA-Seq;**
+       2) **exception=reasons given in citation;inference=from rat orthologue;**
+       N.B. short CDS_LENGTHS are also allowed for partials. (If the CDS first or last segment of the CDS group has **partial=start** or **partial=end**, the CDS_LENGTH check is skipped.)
    * - Broken feature relationships
      - Make every ``Parent`` resolve to an ``ID``. Use one parent per row and
        reserve repeated IDs for intervals of one feature.
