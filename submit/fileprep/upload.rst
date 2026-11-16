@@ -295,6 +295,109 @@ Access to port **21** is required for the following IP address ( webin2.ebi.ac.u
 
 - 193.62.193.143
 
+Removing or Replacing Uploaded Files
+===================================
+
+If you upload an incorrect, incomplete or invalid file, you can remove it
+from your private Webin upload area or replace it with a corrected version.
+
+Keep a local copy of any files you still need. The upload area is temporary
+storage and is not backed up. Under the `Fair Use Policy`_, files remaining
+there for more than two months may be deleted by ENA.
+
+Removing an Unwanted File
+-------------------------
+
+You can use FileZilla or a command-line FTP client to remove an uploaded
+file, regardless of which method you originally used to upload it.
+
+Using FileZilla
+~~~~~~~~~~~~~~
+
+1. Connect to your Webin upload area as described in
+   `Using FileZilla On Windows`_.
+2. In the **Remote site** panel on the right, open the directory containing
+   the unwanted file.
+3. Right-click the file, select **Delete**, and confirm.
+4. Refresh the remote directory listing to check that the file has been
+   removed.
+
+Using a Command-Line FTP Client
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Connect as described in `Uploading Files Using Command Line FTP Client`_.
+Within the ``lftp`` session, navigate to the remote directory and remove
+the specified file:
+
+.. code-block:: text
+
+   ls
+   cd directory-name
+   ls
+   rm incorrect-file.fastq.gz
+   rels
+
+Replace the example directory and filename with your own. Omit the ``cd``
+command if the file is in the top-level directory. The ``rels`` command
+refreshes the remote directory listing.
+
+.. warning::
+
+   Check the directory and filename before running ``rm``. This command
+   deletes the remote copy of the file.
+
+Replacing a File
+----------------
+
+Correct the file locally, then follow the instructions for your upload
+method below.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Upload method
+     - How to replace the file
+   * - Webin File Uploader
+     - Select **Overwrite** and upload the corrected file to the same
+       destination. If using **Upload Tree**, preserve the original
+       directory structure.
+   * - Command-line FTP client
+     - Navigate to the remote directory, remove the incorrect file using
+       ``rm``, then upload the corrected file using
+       ``put /local/path/filename.fastq.gz``.
+   * - FileZilla
+     - Upload the corrected file into the same remote directory and select
+       **Overwrite** if prompted.
+   * - Aspera ``ascp``
+     - Remove the incorrect remote file using FileZilla or the
+       command-line FTP instructions above, then upload the corrected
+       file using ``ascp`` to the required destination.
+   * - Windows File Explorer
+     - If your existing FTP connection supports deletion, select the
+       remote file and choose **Delete**, then copy the corrected file
+       into that folder. Otherwise, use FileZilla.
+
+Files Referenced by an Existing Submission
+-----------------------------------------
+
+If the file is referenced by a submitted run that failed validation,
+consult `Submission Errors and Troubleshooting
+<../../faq/submission-errors.html>`_ before replacing it. Some errors
+require cancellation and a corrected submission rather than replacement
+of the uploaded file.
+
+Where re-uploading is the prescribed solution, retain the original
+filename and subdirectory. If the corrected file has a different MD5
+checksum, update the registered value as described in
+`How Do I Correct An MD5 Value?
+<../../faq/submission-errors.html#how-do-i-correct-an-md5-value>`_.
+
+.. note::
+
+   Deleting a file from the upload area does not cancel a submission or
+   remove archived data. To remove submission records, follow
+   `Removing and Suppressing Data <../../faq/suppression.html>`_.
 
 File MD5 Checksums Value
 ========================
