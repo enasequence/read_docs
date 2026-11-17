@@ -9,6 +9,9 @@ Samples add context to the data associated with them, making your data more sear
 All samples must conform to a checklist of values which depend on the type of sample.
 The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
+There are around fifty sample checklists, designed for a plethora of sampling scenarious from different types of water, sediment or laboratory animals.
+The aim of each is to help you provide the appropriate metadata for the scenario and make your data more useful to the scientific ecosystem and potentially your own analysis. The GSC MIxs based sample checklists are the most FAIR and recommended where practical. You can use the "missing" vocabulary if necessary for some mandatory fields where you are unable to provide that. 
+
 There are three steps to registering your sample(s) through the Webin Portal:
 
 1. Select and customise a sample checklist
