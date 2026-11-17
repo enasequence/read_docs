@@ -6,11 +6,10 @@ Samples represent the source material that a sequencing library was produced fro
 A sample may be connected to reads, assemblies and various types of analysis data.
 Samples add context to the data associated with them, making your data more searchable and understandable.
 
-All samples must conform to a checklist of values which depend on the type of sample.
-The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_.
+All samples must conform to a checklist of values which depend on the type of sample. There are small core of metadata values that are mandatory across all checklists and the rest context specific. The easiest way to view the available checklists is the `sample checklist portal <https://www.ebi.ac.uk/ena/browser/checklists>`_.
 
-There are around fifty sample checklists, designed for a plethora of sampling scenarious from different types of water, sediment or laboratory animals.
-The aim of each is to help you provide the appropriate metadata for the scenario and make your data more useful to the scientific ecosystem and potentially your own analysis. The GSC MIxs based sample checklists are the most FAIR and recommended where practical. You can use the "missing" vocabulary if necessary for some mandatory fields where you are unable to provide that. 
+There are around fifty different sample checklists, designed for a plethora of sampling scenarios: water, sediment, human microbiomes to laboratory animals.
+The aim of each is to help you provide appropriate metadata for the scenario and make your data more useful (**FAIR**) to the scientific ecosystem and potentially your own analysis. The **GSC MIxS** based sample checklists are the most FAIR and recommended wherever practical. FYI: You can use the **missing** vocabulary if necessary for some mandatory fields, if you are unable to provide those details. 
 
 There are three steps to registering your sample(s) through the Webin Portal:
 
@@ -29,24 +28,24 @@ Step 1: Select A Sample Checklist
 
 
 To begin, log in to the `Webin Portal <https://www.ebi.ac.uk/ena/submit/webin/login>`_ and select the
-'Register Samples' button.
+*'Register Samples'* button.
 
-1. Click 'Download spreadsheet to register samples' to expand the checklist selection menu
+1. Click *'Download spreadsheet to register samples'* to expand the checklist selection menu
 
-2. You will be presented with groups of checklists: click a checklist group to explore its members, then click the most
+2. You will be presented with groups of checklists: click a **checklist group** to explore its members, then click the most
    appropriate one
 
 .. image:: ../images/wsp_sample_1_checklist_selection.png
 
-3. Next, you will be presented with lists of checklist attributes, grouped by whether they are mandatory, recommended,
-   or optional.
+3. Next, you will be presented with lists of checklist attributes, grouped by whether they are **mandatory**, **recommended**,
+   or **optional**.
    Expand each to see the range of attributes included in your checklist and their field requirements.
    Optional fields will be deselected by default, while recommended ones will be selected, so review these carefully to
    ensure all appropriate fields are selected.
-   Note the 'Add custom field' box to the top-left, which allows you to define additional attributes not included
+   Note the *'Add custom field'* box to the top-left, which allows you to define additional attributes not included
    in any checklist
 
-4. Finally, click 'Next' and then the 'Download TSV Template' to get a spreadsheet based on your selections so far
+4. Finally, click *'Next'* and then the *'Download TSV Template'* to get a spreadsheet based on your selections so far
 
 .. image:: ../images/wsp_sample_2_checklist_customisation.png
 
