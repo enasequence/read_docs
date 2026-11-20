@@ -61,7 +61,7 @@ It is strongly recommended to submit and reference raw reads associated with the
 In order to reference the reads which were used to generate the assembly, please see the ``RUN_REF`` tag included in
 the manifest file below.
 
-- `Submit raw reads <../reads.html>`_
+- `Submit raw reads <../../reads.html>`_
 
 Stage 2: Prepare the files
 ==========================

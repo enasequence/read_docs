@@ -80,7 +80,7 @@ Consider the following tips as you complete your spreadsheet:
   The MD5 value is a fingerprint value for the file which allows us to verify that it was uploaded successfully. The values
   should be filled in lower case letters.
   In Linux and Mac, you can generate this value from the command line by running the command 'md5' or 'md5sum' on the
-  file, while Microsoft has a `support article <https://support.microsoft.com/en-gb/help/889768/how-to-compute-the-md5-or-sha-1-cryptographic-hash-values-for-a-file>`_
+  file, while Microsoft has a `support article <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash?view=powershell-7.7>`_
   on performing this activity for Windows.
 - Do not edit the existing column names
 - Use only valid ASCII characters

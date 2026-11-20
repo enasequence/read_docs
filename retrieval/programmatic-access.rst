@@ -90,7 +90,7 @@ EBI's central NCBI BLAST service can be accessed via
 `REST and SOAP <https://www.ebi.ac.uk/seqdb/confluence/display/JDSAT/Job+Dispatcher+Sequence+Analysis+Tools+Home>`_.
 
 For usage details and parameter options, see the
-`NCBI BLAST+ documentation <https://www.ebi.ac.uk/seqdb/confluence/pages/viewpage.action?pageId=94147939>`_.
+`NCBI BLAST+ documentation <https://www.ncbi.nlm.nih.gov/books/NBK279690/>`_.
 
 
 Access the CRAM Reference Registry
