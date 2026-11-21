@@ -195,10 +195,6 @@ Manifest Files
 --------------
 
 The manifest file describes your assembly, including metadata and file names.
-It is a plain text file with two columns separated by a tab (or any whitespace characters):
-
-- Field name (first column): case insensitive field name
-- Field value (second column): field value
 
 The following metadata fields are supported in the manifest file for genome context:
 
@@ -226,20 +222,89 @@ other file types. The available fields are as follows:
 - CHROMOSOME_LIST: list of chromosomes
 - UNLOCALISED_LIST: list of unlocalised sequences
 
-For example, the following manifest file represents a genome assembly consisting of contigs provided in one fasta file:
+.. tabs::
 
-::
+   .. tab:: Text manifest
 
-    STUDY           TODO
-    SAMPLE          TODO
-    ASSEMBLYNAME    TODO
-    ASSEMBLY_TYPE   clone or isolate
-    COVERAGE        TODO
-    PROGRAM         TODO
-    PLATFORM        TODO
-    MINGAPLENGTH    TODO
-    MOLECULETYPE    genomic DNA
-    FASTA           genome.fasta.gz
+      Each text manifest describes one submission. It is a plain text file with two columns separated by a tab (or any whitespace characters):
+
+      - Field name (first column): case insensitive field name
+      - Field value (second column): field value
+
+      .. code:: none
+
+         STUDY PRJEB123456
+         SAMPLE SAMEA123456
+         ASSEMBLYNAME isolate-001
+         ASSEMBLY_TYPE clone or isolate
+         COVERAGE TODO
+         PROGRAM TODO
+         PLATFORM TODO
+         MINGAPLENGTH 10
+         MOLECULETYPE genomic DNA
+         FASTA genome.fasta.gz
+
+   .. tab:: JSON manifest
+
+      The JSON manifest below describes one submission. File paths are supplied in file objects using the ``value`` tag.
+
+      .. code:: none
+
+         {
+           "study": "PRJEB123456",
+           "sample": "SAMEA123456",
+           "assemblyname": "isolate-001",
+           "assembly_type": "clone or isolate",
+           "coverage": "TODO",
+           "program": "TODO",
+           "platform": "TODO",
+           "mingaplength": "10",
+           "moleculetype": "genomic DNA",
+           "fasta": {
+             "value": "genome.fasta.gz"
+           }
+         }
+
+   .. tab:: Bulk JSON manifest
+
+      The JSON manifest below describes two submissions; an unannotated genome in FASTA file format with chromosomes listed in a chromosome list file, and an annotated genome in EMBL flatfile format. 
+      Each object carries its own required metadata and file references.
+
+      .. code:: none
+
+         [
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123451",
+             "assemblyname": "genomes-001",
+             "assembly_type": "clone or isolate",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "genome_1.fasta.gz"
+             },
+            "chromosome_list": {
+            "value": "chrlist.txt.gz"
+           }
+           },
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123452",
+             "assemblyname": "genomes-002",
+             "assembly_type": "clone or isolate",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "flatfile": {
+               "value": "annotated_genome_2.embl.gz"
+             }
+           }
+         ]
 
 
 Stage 3: Validate And Submit The Files
