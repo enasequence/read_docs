@@ -405,3 +405,10 @@ the `cli/bin` directory of the downloaded and expanded Aspera Cli archive file.
 - After Minor or Major releases, submitters will be asked to migrate to use this (or higher) version after a transition period.
 - After a Minor release, we will give two weeks notice for submitters to migrate to the new (or higher) version.
 - After a Major release, we will give at least two months notice for submitters to migrate to the new (or higher) version.
+
+
+```{toctree}
+:maxdepth: 1
+
+webin-cli/bulk-submissions
+```
