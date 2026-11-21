@@ -80,7 +80,7 @@ You can search across the ENA browser in a number of ways:
 - `cross-reference search <https://www.ebi.ac.uk/ena/browser/xref>`_
 - `advanced search <https://www.ebi.ac.uk/ena/browser/advanced-search>`_
 
-The advanced search in the browser provides a simple interface for building more complex search queries that can be saved and run again with `Rulespace <https://www.ebi.ac.uk/ena/browser/rulespace>`_. See our step by step guide on how to use the advanced search for examples on how to build queries and how to use Rulespace:
+The advanced search in the browser provides a simple interface for building more complex search queries that can be saved and run again with `Rulespace <./advanced-search.html#rulespace>`_. See our step by step guide on how to use the advanced search for examples on how to build queries and how to use Rulespace:
 
 .. toctree::
    :maxdepth: 1
