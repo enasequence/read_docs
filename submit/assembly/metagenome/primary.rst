@@ -77,11 +77,6 @@ A primary metagenome assembly submission consists of the following files:
 Manifest file
 -------------
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-
-- Field name (first column): case insensitive field name
-- Field value (second column): field value
-
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
@@ -102,21 +97,99 @@ The following file name fields are supported in the manifest file for a primary 
 
 - FASTA: sequences in fasta format
 
-For example, the following manifest file represents a primary metagenome assembly consisting of contigs provided in one fasta file:
+For example, the following manifest file represents primary metagenome assembly consisting of contigs provided in a fasta file:
 
-::
+.. tabs::
 
-    STUDY   TODO
-    SAMPLE   TODO
-    RUN_REF   TODO
-    ASSEMBLYNAME   TODO
-    ASSEMBLY_TYPE   primary metagenome
-    COVERAGE   TODO
-    PROGRAM   TODO
-    PLATFORM   TODO
-    MINGAPLENGTH   TODO
-    MOLECULETYPE   genomic DNA
-    FASTA   primary_metagenome.fasta.gz
+   .. tab:: Text manifest
+
+      Each text manifest describes one submission. The manifest file has two columns separated by a tab (or any whitespace characters):
+
+      - Field name (first column): case insensitive field name
+      - Field value (second column): field value
+
+      .. code:: none
+
+         STUDY PRJEB123456
+         SAMPLE SAMEA123456
+         ASSEMBLYNAME primary-metagenomes-001
+         ASSEMBLY_TYPE primary metagenome
+         COVERAGE TODO
+         PROGRAM TODO
+         PLATFORM TODO
+         MINGAPLENGTH 10
+         MOLECULETYPE genomic DNA
+         FASTA primary_metagenome.fasta.gz
+         RUN_REF ERR123456
+
+   .. tab:: JSON manifest
+
+      Each JSON object below describes one submission. File paths are supplied in file objects using the ``value`` property.
+
+      .. code:: none
+
+         {
+           "study": "PRJEB123456",
+           "sample": "SAMEA123456",
+           "assemblyname": "primary-metagenomes-001",
+           "assembly_type": "primary metagenome",
+           "coverage": "TODO",
+           "program": "TODO",
+           "platform": "TODO",
+           "mingaplength": "10",
+           "moleculetype": "genomic DNA",
+           "fasta": {
+             "value": "primary_metagenome.fasta.gz"
+           },
+           "run_ref": "ERR123456"
+         }
+
+   .. tab:: Bulk JSON manifest
+
+      The top-level JSON array below describes two submissions. Each object carries its own required metadata and file references.
+
+      Each object must reference its appropriate environmental sample.
+
+      Replace the illustrative accessions, names, metadata placeholders and file paths with values for your own data.
+
+      See :doc:`Bulk Submissions with Webin-CLI <../../general-guide/webin-cli/bulk-submissions>`
+      for the shared validation and submission workflow.
+
+      .. code:: none
+
+         [
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123456",
+             "assemblyname": "primary-metagenomes-001",
+             "assembly_type": "primary metagenome",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "primary_metagenome_1.fasta.gz"
+             },
+             "run_ref": "ERR123456"
+           },
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA12345",
+             "assemblyname": "primary-metagenomes-002",
+             "assembly_type": "primary metagenome",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "primary_metagenome_2.fasta.gz"
+             },
+             "run_ref": "ERR12345"
+           }
+         ]
+
 
 
 Stage 3: Validate and submit the files
@@ -138,14 +211,14 @@ First, run the Webin-CLI validation command, specifying your credentials and the
 
 ::
 
-    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.json -validate
 
 
 Second, run the Webin-CLI submission command:
 
 ::
 
-    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.txt -validate
+    webin-cli -username Webin-XXXXX -password YYYYYYY -context genome -manifest manifest.json -submit
 
 
 In both cases, your prospective submission will be validated in full, and the result of this reported to you.
