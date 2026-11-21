@@ -113,12 +113,12 @@ For example, the following manifest file represents metatranscriptome assembly s
 
          STUDY PRJEB123456
          SAMPLE SAMEA123456
-         ASSEMBLYNAME transcriptome-001
-         ASSEMBLY_TYPE isolate
+         ASSEMBLYNAME metatranscriptome-001
+         ASSEMBLY_TYPE metatranscriptome
          PROGRAM TODO
          PLATFORM TODO
          RUN_REF ERR123456
-         FASTA transcriptome.fasta.gz
+         FASTA metatranscriptome.fasta.gz
 
    .. tab:: JSON manifest
 
@@ -129,13 +129,13 @@ For example, the following manifest file represents metatranscriptome assembly s
          {
            "study": "PRJEB123456",
            "sample": "SAMEA123456",
-           "assemblyname": "transcriptome-001",
-           "assembly_type": "isolate",
+           "assemblyname": "metatranscriptome-001",
+           "assembly_type": "metatranscriptome",
            "program": "TODO",
            "platform": "TODO",
            "run_ref": "ERR123456",
            "fasta": {
-             "value": "transcriptome.fasta.gz"
+             "value": "metatranscriptome.fasta.gz"
            }
          }
 
@@ -149,25 +149,25 @@ For example, the following manifest file represents metatranscriptome assembly s
            {
              "study": "PRJEB123456",
              "sample": "SAMEA123451",
-             "assemblyname": "transcriptomes-001",
-             "assembly_type": "isolate",
+             "assemblyname": "metatranscriptomes-001",
+             "assembly_type": "metatranscriptome",
              "program": "TODO",
              "platform": "TODO",
              "run_ref": "ERR123456",
              "fasta": {
-               "value": "transcriptome_1.fasta.gz"
+               "value": "metatranscriptome_1.fasta.gz"
              }
            },
            {
              "study": "PRJEB123456",
              "sample": "SAMEA123452",
-             "assemblyname": "transcriptomes-002",
-             "assembly_type": "isolate",
+             "assemblyname": "metatranscriptomes-002",
+             "assembly_type": "metatranscriptome",
              "program": "TODO",
              "platform": "TODO",
              "run_ref": "ERR123456",
              "fasta": {
-               "value": "transcriptome_2.fasta.gz"
+               "value": "metatranscriptome_2.fasta.gz"
              }
            }
          ]
