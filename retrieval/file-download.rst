@@ -119,7 +119,7 @@ endpoint from the '/vol1' subfolder:
 .. _`EMBL-EBI Public Data`: https://app.globus.org/file-manager?origin_id=47772002-3e5b-4fd3-b97c-18cee38d6df2
 
 Globus also provides many integration tools e.g. `GLobus CLI <https://docs.globus.org/cli/>`_,
-`Globus Connect Personal <docs.globus.org/globus-connect-personal/>`_,
+`Globus Connect Personal <https://docs.globus.org/globus-connect-personal/>`_,
 `Trasnfer API <https://docs.globus.org/api/transfer/>`_ and
 `Python <https://globus-sdk-python.readthedocs.io/en/stable/>`_
 & `Javascript <https://github.com/globus/globus-sdk-javascript#readme>`_ SDK's
