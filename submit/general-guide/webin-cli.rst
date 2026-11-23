@@ -78,6 +78,7 @@ Command Line Options
    -  ``-context transcriptome``
    -  ``-context sequence``
    -  ``-context reads``
+   -  ``-context annotation``
 
 -  ``-userName``: the Webin submission account name.
 -  ``-password``: the Webin submission account password.
@@ -104,15 +105,18 @@ following types of submissions are supported:
 
 -  genome assemblies
 -  transcriptome assemblies
--  annotated sequences
+-  sequences
 -  reads
+-  annotations
+
 
 The type of the submission is specified using the ``-context`` command line option:
 
 -  ``-context genome``
 -  ``-context transcriptome``
 -  ``-context sequence``
--  ``-context reads``
+-  ``-context reads`` 
+-  ``-context annotation``
 
 The following picture illustrates the stages of the submission process:
 
