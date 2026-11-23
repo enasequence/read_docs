@@ -82,11 +82,6 @@ Transcriptome assemblies should be of a high enough quality to fulfil the follow
 Manifest file
 -------------
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-
-- Field name (first column): case insensitive field name
-- Field value (second column): field value
-
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
@@ -102,17 +97,81 @@ The following file name fields are supported in the manifest file:
 - FASTA: sequences in fasta format
 - FLATFILE: sequences in `EMBL-Bank flat file format <../fileprep/flat-file-example.html>`_
 
-For example, the following manifest file represents a metatranscriptome assembly provided in one fasta file:
+For example, the following manifest file represents metatranscriptome assembly submission provided in fasta file format:
 
-::
+.. tabs::
 
-    STUDY   TODO
-    SAMPLE  TODO
-    ASSEMBLYNAME    TODO
-    ASSEMBLY_TYPE metatranscriptome
-    PROGRAM TODO
-    PLATFORM    TODO
-    FASTA   metatranscriptome.fasta.gz
+   .. tab:: Text manifest
+
+      Each text manifest describes one submission. The manifest file has two columns separated by a tab (or any whitespace characters):
+
+      - Field name (first column): case insensitive field name
+      - Field value (second column): field value
+
+
+      .. code:: none
+
+         STUDY PRJEB123456
+         SAMPLE SAMEA123456
+         ASSEMBLYNAME metatranscriptome-001
+         ASSEMBLY_TYPE metatranscriptome
+         PROGRAM TODO
+         PLATFORM TODO
+         RUN_REF ERR123456
+         FASTA metatranscriptome.fasta.gz
+
+   .. tab:: JSON manifest
+
+      The JSON manifest below describes one submission. File paths are supplied in file objects using the ``value`` tag.
+
+      .. code:: none
+
+         {
+           "study": "PRJEB123456",
+           "sample": "SAMEA123456",
+           "assemblyname": "metatranscriptome-001",
+           "assembly_type": "metatranscriptome",
+           "program": "TODO",
+           "platform": "TODO",
+           "run_ref": "ERR123456",
+           "fasta": {
+             "value": "metatranscriptome.fasta.gz"
+           }
+         }
+
+   .. tab:: Bulk JSON manifest
+
+      The JSON manifest below describes two submissions. Each object carries its own required metadata and file references.
+
+      .. code:: none
+
+         [
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123451",
+             "assemblyname": "metatranscriptomes-001",
+             "assembly_type": "metatranscriptome",
+             "program": "TODO",
+             "platform": "TODO",
+             "run_ref": "ERR123456",
+             "fasta": {
+               "value": "metatranscriptome_1.fasta.gz"
+             }
+           },
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123452",
+             "assemblyname": "metatranscriptomes-002",
+             "assembly_type": "metatranscriptome",
+             "program": "TODO",
+             "platform": "TODO",
+             "run_ref": "ERR123456",
+             "fasta": {
+               "value": "metatranscriptome_2.fasta.gz"
+             }
+           }
+         ]
+
 
 
 Fasta file

@@ -187,11 +187,6 @@ For example, the chromosome list file must refer to the chromosome sequences usi
 Manifest file
 -------------
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-
-- Field name (first column): case insensitive field name
-- Field value (second column): field value
-
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
@@ -215,21 +210,98 @@ The following file name fields are supported in the manifest file:
 - AGP: sequences in `AGP format <https://www.ncbi.nlm.nih.gov/assembly/agp/AGP_Specification/>`_
 - CHROMOSOME_LIST: list of chromosomes
 
-For example, the following manifest file represents a MAG consisting of contigs provided in one FASTA file:
+For example, the following manifest file represents MAG consisting of chromsomes submitted using a FASTA file and a chromsome list file:
 
-::
+.. tabs::
 
-    STUDY   TODO
-    SAMPLE   TODO
-    RUN_REF   TODO
-    ASSEMBLYNAME   TODO
-    ASSEMBLY_TYPE   TODO
-    COVERAGE   TODO
-    PROGRAM   TODO
-    PLATFORM   TODO
-    MINGAPLENGTH   TODO
-    MOLECULETYPE   genomic DNA
-    FASTA   metagenome_assembled_genome.fasta.gz
+   .. tab:: Text manifest
+
+      Each text manifest describes one submission. The manifest file has two columns separated by a tab (or any whitespace characters):
+
+      - Field name (first column): case insensitive field name
+      - Field value (second column): field value
+
+      .. code:: none
+
+         STUDY PRJEB123456
+         SAMPLE SAMEA123456
+         ASSEMBLYNAME mags-001
+         ASSEMBLY_TYPE Metagenome-Assembled Genome (MAG)
+         COVERAGE TODO
+         PROGRAM TODO
+         PLATFORM TODO
+         MINGAPLENGTH 10
+         MOLECULETYPE genomic DNA
+         FASTA metagenome_assembled_genome.fasta.gz
+         CHROMOSOME_LIST chrlist.txt.gz
+         RUN_REF ERR123456
+
+   .. tab:: JSON manifest
+
+      The JSON manifest below describes one submission. File paths are supplied in file objects using the ``value`` tag.
+
+      .. code:: none
+
+         {
+           "study": "PRJEB123456",
+           "sample": "SAMEA123456",
+           "assemblyname": "mags-001",
+           "assembly_type": "Metagenome-Assembled Genome (MAG)",
+           "coverage": "TODO",
+           "program": "TODO",
+           "platform": "TODO",
+           "mingaplength": "10",
+           "moleculetype": "genomic DNA",
+           "fasta": {
+             "value": "metagenome_assembled_genome.fasta.gz"
+           },
+            "chromosome_list": {
+            "value": "chrlist.txt.gz"
+            },
+           "run_ref": "ERR123456"
+         }
+
+   .. tab:: Bulk JSON manifest
+
+      The JSON manifest below describes two submissions, a contig level MAG and a chromsome level MAG. Each object carries its own required metadata and file references.
+
+      .. code:: none
+
+         [
+           {
+             "study": "PRJEB123456",
+             "sample": "ERS123451",
+             "assemblyname": "mags-001",
+             "assembly_type": "Metagenome-Assembled Genome (MAG)",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "metagenome_assembled_genome_1.fasta.gz"
+             },
+             "run_ref": "ERR123456"
+           },
+           {
+             "study": "PRJEB123456",
+             "sample": "ERS123452",
+             "assemblyname": "mags-002",
+             "assembly_type": "Metagenome-Assembled Genome (MAG)",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "metagenome_assembled_genome_2.fasta.gz"
+             },
+             "chromosome_list": {
+             "value": "chrlist.txt.gz"
+             },
+             "run_ref": "ERR123456"
+           }
+         ]
 
 
 Stage 3: Validate and submit the files

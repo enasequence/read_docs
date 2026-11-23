@@ -121,11 +121,6 @@ A binned metagenome assembly submission consists of the following files:
 Manifest file
 -------------
 
-The manifest file has two columns separated by a tab (or any whitespace characters):
-
-- Field name (first column): case insensitive field name
-- Field value (second column): field value
-
 The following metadata fields are supported in the manifest file:
 
 - STUDY: Study accession or unique name (alias)
@@ -148,19 +143,90 @@ The following file name fields are supported in the manifest file:
 
 For example, the following manifest file represents a binned metagenome assembly consisting of contigs provided in one fasta file:
 
-::
+.. tabs::
 
-   STUDY   TODO
-   SAMPLE   TODO
-   RUN_REF   TODO
-   ASSEMBLYNAME   TODO
-   ASSEMBLY_TYPE   TODO
-   COVERAGE   TODO
-   PROGRAM   TODO
-   PLATFORM   TODO
-   MINGAPLENGTH   TODO
-   MOLECULETYPE   genomic DNA
-   FASTA   binned_metagenome.fasta.gz
+   .. tab:: Text manifest
+
+      Each text manifest describes one submission. The manifest file has two columns separated by a tab (or any whitespace characters):
+
+      - Field name (first column): case insensitive field name
+      - Field value (second column): field value
+
+      .. code:: none
+
+         STUDY PRJEB123456
+         SAMPLE SAMEA123456
+         ASSEMBLYNAME binned-metagenomes-001
+         ASSEMBLY_TYPE binned metagenome
+         COVERAGE TODO
+         PROGRAM TODO
+         PLATFORM TODO
+         MINGAPLENGTH 10
+         MOLECULETYPE genomic DNA
+         FASTA binned_metagenome.fasta.gz
+         RUN_REF ERR123456
+
+   .. tab:: JSON manifest
+
+      The JSON object below describes one submission. File paths are supplied in file objects using the ``value`` tag.
+
+      .. code:: none
+
+         {
+           "study": "PRJEB123456",
+           "sample": "SAMEA123456",
+           "assemblyname": "binned-metagenomes-001",
+           "assembly_type": "binned metagenome",
+           "coverage": "TODO",
+           "program": "TODO",
+           "platform": "TODO",
+           "mingaplength": "10",
+           "moleculetype": "genomic DNA",
+           "fasta": {
+             "value": "binned_metagenome.fasta.gz"
+           },
+           "run_ref": "ERR123456"
+         }
+
+   .. tab:: Bulk JSON manifest
+
+      The JSON below describes two submissions. Each object carries its own required metadata and file references.
+
+      .. code:: none
+
+         [
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123451",
+             "assemblyname": "binned-metagenomes-001",
+             "assembly_type": "binned metagenome",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "binned_metagenome_1.fasta.gz"
+             },
+             "run_ref": "ERR123456"
+           },
+           {
+             "study": "PRJEB123456",
+             "sample": "SAMEA123452",
+             "assemblyname": "binned-metagenomes-002",
+             "assembly_type": "binned metagenome",
+             "coverage": "TODO",
+             "program": "TODO",
+             "platform": "TODO",
+             "mingaplength": "10",
+             "moleculetype": "genomic DNA",
+             "fasta": {
+               "value": "binned_metagenome_2.fasta.gz"
+             },
+             "run_ref": "ERR123456"
+           }
+         ]
+
 
 
 Stage 3: Validate and submit the files
