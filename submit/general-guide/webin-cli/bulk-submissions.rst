@@ -128,47 +128,6 @@ Examples
            }
          ]
 
-   .. tab:: Both
-
-      .. code:: none
-
-         [
-           {
-             "study": "PRJEB123456",
-             "sample": "SAMEA123456",
-             "name": "bulk-reads-paired-001",
-             "platform": "TODO",
-             "instrument": "TODO",
-             "insert_size": "TODO",
-             "library_name": "amplicon-library-001",
-             "library_source": "TODO",
-             "library_selection": "TODO",
-             "library_strategy": "TODO",
-             "fastq": [
-               {
-                 "value": "read_file_R1.fastq.gz",
-                 "attributes": {"read_type": ["paired"]}
-               },
-               {
-                 "value": "read_file_R2.fastq.gz",
-                 "attributes": {"read_type": ["paired"]}
-               }
-             ]
-           },
-         {
-             "study": "PRJEB123456",
-             "sample": "SAMEA123456",
-             "assemblyname": "TODO",
-             "platform": "TODO",
-             "assembly_type": "clone or isolate",
-             "run_ref": "ERR123456",
-             "program": "TODO",
-             "coverage": "TODO",
-             "moleculetype": "TODO",
-             "fasta": {"value": "genome_1.fasta.gz"}
-           }
-         ]
-
 Validate the Bulk Manifest
 --------------------------
 
