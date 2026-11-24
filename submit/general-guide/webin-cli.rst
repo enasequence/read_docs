@@ -17,6 +17,12 @@ Webin-CLI is the only way to submit assembled genomes and transcriptomes.
 Webin-CLI is available as a `Docker image <run-the-program-using-the-docker-image_>`_ and as a Java
 jar file.
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   webin-cli/bulk-submissions
+
 Download the program as a Java jar file
 ---------------------------------------
 
@@ -188,8 +194,9 @@ Examples of metadata fields are study and sample references:
 
       The JSON manifest describes one submission. The manifest file has two columns separated by a colon:
 
-      -Field name (first column): case insensitive field name
-      -Field value (second column): field value
+      - Field name (first column): case-insensitive field name
+
+      - Field value (second column): field value
 
       This can also be specifically used for more complex data types, such as multi-fastq submissions e.g. for single-cell data.
       The following example describes a multi-FASTQ submission.
@@ -285,20 +292,6 @@ Examples of metadata fields are study and sample references:
              "fastq": {
                "value": "run.fastq.gz",
                "attributes": {"read_type": ["single"]}
-             }
-           },
-           {
-             "study": "PRJEB123456",
-             "sample": "SAMEA12345",
-             "assemblyname": "genomes-002",
-             "assembly_type": "clone or isolate",
-             "coverage": "TODO",
-             "program": "TODO",
-             "platform": "TODO",
-             "mingaplength": "10",
-             "moleculetype": "genomic DNA",
-             "flatfile": {
-               "value": "genome_assembly.fasta.gz"
              }
            }
          ]
