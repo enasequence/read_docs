@@ -293,7 +293,7 @@ Examples of metadata fields are study and sample references:
                "value": "run.fastq.gz",
                "attributes": {"read_type": ["single"]}
              }
-           },
+           }
          ]
 
 
