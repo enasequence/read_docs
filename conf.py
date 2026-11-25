@@ -83,10 +83,12 @@ todo_include_todos = False
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
-# Jasmine addition: please note that the theme is now specified in the requirements file as sphinx_rtd_theme
-# Jasmine addition: please note that any docs breaking could be due to a required package changing
-# Jasmine addition: it is reccommended to pin requirments - see https://docs.readthedocs.io/en/stable/guides/rep>
 html_theme = "sphinx_rtd_theme"
+html_theme_options = {
+    "navigation_depth": 5,
+    "includehidden": True,
+    "collapse_navigation": False,
+}
 
 # marc addition: from http://stackoverflow.com/questions/18969093/how-to-include-the-toctree-in-the-sidebar-of-each-page
 # remove if causing issues. forces globaltoc.html
