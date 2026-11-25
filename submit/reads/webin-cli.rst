@@ -64,7 +64,7 @@ The following metadata fields are supported in the manifest file:
 -  STUDY: Study accession or unique name (alias)
 -  SAMPLE: Sample accession or unique name (alias)
 -  NAME: Unique experiment name
--  PLATFORM: `See permitted values <platform_>`_. Not needed if INSTRUMENT is provided.
+-  PLATFORM: `See permitted values <platform_>`_. You can omit PLATFORM if you provide a specific instrument model. If you set INSTRUMENT to unspecified, you must include PLATFORM.
 -  INSTRUMENT: `See permitted values <instrument_>`_
 -  INSERT_SIZE: Insert size for paired reads
 -  LIBRARY_NAME: Library name (optional)
@@ -353,7 +353,7 @@ Permitted values for instrument
 -  Sequel IIe
 -  Tapestri
 -  UG 100
--  unspecified
+-  `unspecified` (requires `PLATFORM`)
 
 Deprecated:
 
