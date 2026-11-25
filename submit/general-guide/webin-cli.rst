@@ -128,10 +128,9 @@ The following picture illustrates the stages of the submission process:
 
 |Submission process|
 
-Bulk submissions for reads, unannotated genome assemblies, targeted sequences and taxonomic
-reference data can be made with Webin-CLI using the following tool:
+Bulk submissions can be made with Webin-CLI using the following guide:
 
-`Webin-CLI Bulk Submissions Tool <https://github.com/enasequence/ena-bulk-webincli>`__
+:doc:`Bulk Submissions with Webin-CLI <webin-cli/bulk-submissions>`.
 
 Stage 1: Pre-register Study and Sample
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
