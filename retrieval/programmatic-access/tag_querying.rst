@@ -1,7 +1,6 @@
 ========================
 Text Tags On ENA Objects
 ========================
-
 .. contents:: Table of Contents
    :local:
    :depth: 2
@@ -10,16 +9,17 @@ Text Tags On ENA Objects
 
 What are tags and why are they useful?
 --------------------------------------
+Tags are controlled textual annotations added to ENA records to make searching and filtering easier.
+They can help identify records for a data portal, such as the `Pathogens Portal <https://www.pathogensportal.org>`_, or select data associated with a particular environment or external resource.
 
-Tags are controlled textual annotations added to ENA records to make searching and filtering easier. They can help identify records for a data portal, such as the `Pathogens Portal <https://www.pathogensportal.org>`_, or select data associated with a particular environment or external resource.
+A record can have zero or multiple tags. Tags can also have child tags that provide more specific classifications.
+For example, pathogen:bacterium identifies a record classified in the bacterium pathogen group.
 
-A record can have zero or multiple tags. Tags can also have child tags that provide more specific classifications. For example, pathogen:bacterium identifies a record classified in the bacterium pathogen group.
-
-Tags are assigned using taxonomy, study membership, ENA Data Hub metadata, structured sample data, WoRMS cross-references, metagenome metadata and geographic information. Cross-reference tags are based on external data resources, as described in `Cross-reference tags`_.
+Tags can be assigned based on taxonomic properties, ENA Data Hub metadata, geographic information, etc.
+Cross-reference tags are based on external data resources, as described in `Cross-reference tags`_.
 
 What tags are available?
 ------------------------
-
 .. list-table:: Available tags
    :widths: 20 35 45
    :header-rows: 1
@@ -41,17 +41,16 @@ What tags are available?
      - Membership of an ENA Data Hub.
    * - env_tax
      - marine, brackish, freshwater, terrestrial
-     - Environmental classifications derived from WoRMS or metagenome metadata.
+     - Environmental classifications derived from WoRMS (World Register of Marine Species) or metagenome metadata.
    * - env_geo
      - marine, coastal, freshwater, terrestrial
      - Environmental classifications derived from geographic location.
    * - structured_data
-     - Structured data types
-     - Structured data present in a sample's BioSamples record.
+     - amr, amr_curated_data_cabbage
+     - Samples with corresponding BioSamples AMR antibiograms.
 
-Tags by Data Class
+Tags by data class
 ------------------
-
 The following table shows which tags are assigned to each type of ENA record.
 Cross-reference tags are listed separately under `Cross-reference tags`_.
 
@@ -78,65 +77,50 @@ Cross-reference tags are listed separately under `Cross-reference tags`_.
    * - study
      - pathogen, covid19
 
-How are the Tags Created?
+How are the tags created?
 -------------------------
-
-Tags are assigned automatically from record metadata and reference data. The
-classification rules and reference sources can change, and tags are refreshed
-to reflect these updates.
+Tags are assigned automatically from record metadata and reference data.
+The classification rules and reference sources can change, and tags are refreshed to reflect these updates.
 
 pathogen
 ^^^^^^^^
-
-Pathogen tags are based on maintained lists of taxonomy IDs. Records associated
-with a listed taxon or one of its descendants receive the corresponding tag.
-The pathogen child tags are bacterium, fungus, helminth, protozoan, virus and
-priority. The virus tag has a further child tag, arbovirus.
+Pathogen tags are based on maintained lists of taxonomy IDs.
+Records associated with a listed taxon or one of its descendants receive the corresponding tag.
+The pathogen child tags are bacterium, fungus, helminth, protozoan, virus and priority.
+The virus tag has a further child tag, arbovirus.
 
 covid19
 ^^^^^^^
-
-A record receives the covid19 tag when either of the following conditions
-is true:
+A record receives the covid19 tag when either of the following conditions is true:
 
 * It is associated with SARS-CoV-2 taxonomy ID 2697049.
 * It belongs to a component study of one of the COVID-19 umbrella studies: PRJEB39908, PRJEB40349 or PRJEB40770.
 
 covid19_host
 ^^^^^^^^^^^^
-
-A record receives the covid19_host tag when both of the following conditions
-are true:
+A record receives the covid19_host tag when both of the following conditions are true:
 
 * It is in the descendant taxonomy of all eukaryotes, rooted at taxonomy ID 2759.
 * It belongs to a component study of one of the COVID-19 host umbrella studies: PRJEB40771 or PRJEB40772.
 
 datahub
 ^^^^^^^
+Data hub tags identify records shared with an ENA Data Hub.
+The tag uses the data hub's display name when available, or its identifier otherwise.
 
-Data hub tags identify records shared with an ENA Data Hub. The tag uses the
-data hub's display name when available, or its identifier otherwise.
-
-Only data hubs with a display name that does not start with ``dcc`` are shown
-in the browser.
+Only data hubs with a display name that do not start with *dcc* are shown in the browser.
 
 env_tax
 ^^^^^^^
+Taxonomy-derived environmental tags use environmental information associated with the organism in
+`WoRMS <https://www.marinespecies.org/>`_ and metagenome metadata.
 
-Taxonomy-derived environmental tags use environmental information associated
-with the organism in `WoRMS <https://www.marinespecies.org/>`_ and metagenome
-metadata. WoRMS information is checked first; information from closely related
-taxa may also be used.
-
-The possible child tags are marine, brackish, freshwater and
-terrestrial.
+The possible child tags are marine, brackish, freshwater and terrestrial.
 
 env_geo
 ^^^^^^^
-
-Geography-derived environmental tags are assigned by comparing a record's
-geographic coordinates with maps of marine, coastal, freshwater and terrestrial
-areas.
+Geography-derived environmental tags are assigned by comparing a record's geographic coordinates with maps of
+marine, coastal, freshwater and terrestrial areas.
 
 .. list-table:: Geographic tag sources
    :widths: 25 75
@@ -156,22 +140,16 @@ areas.
 
 structured_data
 ^^^^^^^^^^^^^^^
-
-Structured data tags identify samples with structured data in BioSamples.
-Tag values use lower-case text, with spaces and hyphens replaced by underscores.
+Samples with corresponding BioSamples AMR antibiograms.
 
 Cross-reference tags
 --------------------
-
 Cross-reference (xref) tags are based on external data resources that provide
 mappings between their records and ENA records. A tag for a specific external
 resource can be enabled on request.
 
-Cross-reference tags identify the external resource and record using the format
-xref:resource:ID. For example, xref:UniEuk:49054 links to UniEuk record 49054.
-WoRMS cross-references link taxon records to WoRMS; environmental information
-from WoRMS is also used to assign env_tax tags. The table below lists the
-resource prefixes.
+Cross-reference tags identify the external resource and record using the format xref:resource:ID. For example,
+xref:UniEuk:49054 links to UniEuk record 49054. The table below lists the resource prefixes.
 
 .. list-table:: Cross-reference tags
    :widths: 30 45 25
@@ -198,5 +176,4 @@ resource prefixes.
 
 Miscellaneous
 -------------
-
 The tags described on this page are distinct from locus tags.
